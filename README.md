@@ -1,0 +1,2 @@
+# QGIS Processing Algorithms for LUCIS
+LUCIS stands for Land-Use Conflict Identification Strategy. It is a GIS-based land use modeling framework that was originally developed and implemented using ArcGIS ModelBuilder. The intention of the QGIS processing algorithms presented in this repo is to allow planners and analysts to create LUCIS models with QGIS. We also provide you documentations and tutorials to guide you through the process of land use modeling. 
