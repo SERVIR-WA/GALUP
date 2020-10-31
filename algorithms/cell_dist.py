@@ -151,7 +151,7 @@ class RasterCellDistance(QgsProcessingAlgorithm):
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import LUCISOpenQGISUtils
+        from .loqlib import LUCISOpenQGISUtils
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         raster_path = raster_lyr.dataProvider().dataSourceUri()

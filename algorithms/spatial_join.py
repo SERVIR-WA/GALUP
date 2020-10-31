@@ -124,7 +124,7 @@ class SpatialJoin(QgsProcessingAlgorithm):
         keep_all = self.parameterAsBoolean(parameters, self.KEEP_ALL, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import LUCISOpenQGISUtils
+        from .loqlib import LUCISOpenQGISUtils
         process_util = LUCISOpenQGISUtils()
 
         aggs = (tuple(item.strip().split()) for item in columns_agg.split(";"))

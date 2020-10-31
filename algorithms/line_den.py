@@ -130,7 +130,7 @@ class LineDensity(QgsProcessingAlgorithm):
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import LUCISOpenQGISUtils
+        from .loqlib import LUCISOpenQGISUtils
 
         source_gdf = LUCISOpenQGISUtils.vector_to_gdf(source_lyr)
         line_gdf = LUCISOpenQGISUtils.vector_to_gdf(line_lyr)

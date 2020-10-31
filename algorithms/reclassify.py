@@ -106,7 +106,7 @@ class Reclassify(QgsProcessingAlgorithm):
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import (LUCISOpenQGISUtils,
+        from .loqlib import (LUCISOpenQGISUtils,
                             StringParameterNumberList,
                             StringParameterIntervalList,
                             StringParameterCategoryList)

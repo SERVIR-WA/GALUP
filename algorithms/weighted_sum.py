@@ -100,7 +100,7 @@ class SelectByLocation(QgsProcessingAlgorithm):
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import LUCISOpenQGISUtils, StringParameterNumberList
+        from .loqlib import LUCISOpenQGISUtils, StringParameterNumberList
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         weights = StringParameterNumberList('weights', weights).as_number_list

@@ -118,7 +118,7 @@ class LineDistance(QgsProcessingAlgorithm):
         output_shp = self.parameterAsFileOutput(parameters, self.OUTPUT,
                                                 context)
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from loqlib import LUCISOpenQGISUtils
+        from .loqlib import LUCISOpenQGISUtils
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         line_gdf = LUCISOpenQGISUtils.vector_to_gdf(line_lyr)
