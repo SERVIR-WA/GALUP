@@ -133,7 +133,5 @@ class Reclassify(QgsProcessingAlgorithm):
         nodata = float(nodata)
         output = rescale.reclassify(input_gdf, input_clm, re_dict,
                                     output_clm, nodata)
-
         output.to_file(output_file)
-
         return {self.OUTPUT: output_file}
