@@ -8,7 +8,7 @@ from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterVectorDestination,
                        QgsProcessingParameterEnum,
                        QgsProcessingParameterString)
-from pylusat import density, base
+from pylusat import base, density
 
 
 class PointDensity(QgsProcessingAlgorithm):
@@ -115,22 +115,27 @@ class PointDensity(QgsProcessingAlgorithm):
         input_lyr = self.parameterAsVectorLayer(parameters, self.INPUT, context)
         point_lyr = self.parameterAsVectorLayer(parameters, self.POINT, context)
         pop_clm = self.parameterAsString(parameters, self.POP_COLUMN, context)
-        search_radius = self.parameterAsDouble(parameters, self.SEARCH_RADIUS,
+        search_radius = self.parameterAsDouble(parameters,
+                                               self.SEARCH_RADIUS,
                                                context)
         area_unit = self.area_unit[self.parameterAsEnum(parameters,
                                                         self.AREA_UNIT,
                                                         context)][0]
-        output_clm = self.parameterAsString(parameters, self.OUTPUT_COLUMN,
+        output_clm = self.parameterAsString(parameters,
+                                            self.OUTPUT_COLUMN,
                                             context)
         output_shp = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from .loqlib import LUCISOpenQGISUtils
+        from loqlib import LUCISOpenQGISUtils
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         point_gdf = LUCISOpenQGISUtils.vector_to_gdf(point_lyr)
-        search_radius = (f'{search_radius} '
-                         f'{base.GeoDataFrameManager(input_gdf).geom_unit_id}')
+        if search_radius:
+            search_radius = (
+                f'{search_radius} '
+                f'{base.GeoDataFrameManager(input_gdf).geom_unit_name}'
+            )
         input_gdf[output_clm] = density.of_point(input_gdf, point_gdf, pop_clm,
                                                  search_radius, area_unit)
         input_gdf.to_file(output_shp)

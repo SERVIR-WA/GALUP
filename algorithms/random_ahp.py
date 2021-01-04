@@ -127,7 +127,7 @@ class RandomAHP(QgsProcessingAlgorithm):
         op = self.OP_OPTION[self.parameterAsEnum(parameters, self.OP, context)]
         output_shp = self.parameterAsFileOutput(parameters, self.OUTPUT,
                                                 context)
-        feedback.pushInfo(target_shp)
+
         target_gdf = gpd.read_file(target_shp[1:-1])
         join_gdf = gpd.read_file(join_shp[1:-1])
         # output = spatial_join(target_gdf, join_gdf, op, col,

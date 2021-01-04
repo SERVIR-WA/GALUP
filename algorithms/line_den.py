@@ -15,7 +15,7 @@ class LineDensity(QgsProcessingAlgorithm):
     LINE = "LINE"
     CELL_SIZE = "CELL_SIZE"
     SEARCH_RADIUS = "SEARCH_RADIUS"
-    AREAL_UNIT = "AREAL_UNIT"
+    AREA_UNIT = "AREAL_UNIT"
     OUTPUT_COLUMN = 'OUTPUT_COLUMN'
     OUTPUT = "OUTPUT"
 
@@ -47,7 +47,7 @@ class LineDensity(QgsProcessingAlgorithm):
 
     def __init__(self):
         super().__init__()
-        self.areal_unit = (
+        self.area_unit = (
             ('Square meters', self.tr('Square meters')),
             ('Square kilometers', self.tr('Square kilometers')),
             ('Hectares', self.tr('Hectares')),
@@ -98,9 +98,9 @@ class LineDensity(QgsProcessingAlgorithm):
         self.addParameter(search_radius)
         self.addParameter(
             QgsProcessingParameterEnum(
-                self.AREAL_UNIT,
-                self.tr('Areal unit (for density value)'),
-                options=[u[1] for u in self.areal_unit],
+                self.AREA_UNIT,
+                self.tr('Area unit (for density value)'),
+                options=[u[1] for u in self.area_unit],
                 defaultValue=0
             )
         )
@@ -121,22 +121,28 @@ class LineDensity(QgsProcessingAlgorithm):
         source_lyr = self.parameterAsVectorLayer(parameters, self.INPUT, context)
         line_lyr = self.parameterAsVectorLayer(parameters, self.LINE, context)
         cell_size = self.parameterAsDouble(parameters, self.CELL_SIZE, context)
-        search_radius = self.parameterAsDouble(parameters, self.SEARCH_RADIUS,
+        search_radius = self.parameterAsDouble(parameters,
+                                               self.SEARCH_RADIUS,
                                                context)
-        areal_unit = self.areal_unit[self.parameterAsEnum(parameters,
-                                                          self.AREAL_UNIT,
-                                                          context)][0]
+        area_unit = self.area_unit[self.parameterAsEnum(parameters,
+                                                        self.AREA_UNIT,
+                                                        context)][0]
         output_clm = self.parameterAsString(parameters, self.OUTPUT_COLUMN, context)
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from .loqlib import LUCISOpenQGISUtils
+        from loqlib import LUCISOpenQGISUtils
 
         source_gdf = LUCISOpenQGISUtils.vector_to_gdf(source_lyr)
         line_gdf = LUCISOpenQGISUtils.vector_to_gdf(line_lyr)
-        search_radius = (f'{search_radius} '
-                         f'{base.GeoDataFrameManager(source_gdf).geom_unit_id}')
+        
+        if search_radius:
+            search_radius = (
+                f'{search_radius} '
+                f'{base.GeoDataFrameManager(source_gdf).geom_unit_name}'
+            )
+
         source_gdf[output_clm] = density.of_line(source_gdf, line_gdf, cell_size,
-                                                 search_radius, areal_unit)
+                                                 search_radius, area_unit)
         source_gdf.to_file(output_file)
         return {self.OUTPUT: output_file}

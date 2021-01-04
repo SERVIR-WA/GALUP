@@ -106,12 +106,13 @@ class Reclassify(QgsProcessingAlgorithm):
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from .loqlib import (LUCISOpenQGISUtils,
+        from loqlib import (LUCISOpenQGISUtils,
                             StringParameterNumberList,
                             StringParameterIntervalList,
                             StringParameterCategoryList)
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
+
         try:
             re_key = StringParameterIntervalList(input_clm,
                                                  old_val).as_tuple_list
@@ -132,5 +133,7 @@ class Reclassify(QgsProcessingAlgorithm):
         nodata = float(nodata)
         output = rescale.reclassify(input_gdf, input_clm, re_dict,
                                     output_clm, nodata)
+
         output.to_file(output_file)
+
         return {self.OUTPUT: output_file}

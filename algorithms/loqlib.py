@@ -165,8 +165,19 @@ class LUCISOpenQGISUtils:
 
     @classmethod
     def vector_to_gdf(cls, qgis_vector_lyr: QgsVectorLayer) -> gpd.GeoDataFrame:
-        feature_list = [feature.attributes() + [feature.geometry().asWkt()]
-                        for feature in qgis_vector_lyr.getFeatures()]
+
+        def _catch_null(attribute):
+            try:
+                if attribute.isNull():
+                    return None
+            except AttributeError:
+                return attribute
+
+        feature_list = [
+            [_catch_null(attr) for attr in feature.attributes()] +
+            [feature.geometry().asWkt()]
+            for feature in qgis_vector_lyr.getFeatures()
+        ]
 
         columns = [field.name() for field in qgis_vector_lyr.fields()]
         columns.append('geometry')

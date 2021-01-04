@@ -159,7 +159,7 @@ class InverseDistanceWeighting(QgsProcessingAlgorithm):
                                                   context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from .loqlib import LUCISOpenQGISUtils
+        from loqlib import LUCISOpenQGISUtils
 
         feedback.pushInfo(str(search_radius))
 

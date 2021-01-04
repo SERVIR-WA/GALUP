@@ -1,3 +1,5 @@
+import sys
+import os
 from PyQt5.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterFeatureSource,
@@ -6,8 +8,6 @@ from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterNumber,
                        QgsProcessingParameterString,
                        QgsProcessingParameterVectorDestination)
-import sys
-import os
 from pylusat import distance
 
 
@@ -40,29 +40,34 @@ class RasterCellDistance(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         html_doc = '''
-        Calculate distance to raster cells.
         <p>Calculate distance for each feature in the input data to its \
         nearest cell with the specified value in the raster layer. You must \
         make sure that the specified value is valid, i.e., it exists in the \
         raster layer.</p>
+        
         <h3>Input</h3>
         <p>Input vector layer.</p>
+        
         <h3>Raster</h3>
         <p>Input raster layer.</p>
+        
         <h3>Cell Value</h3>
         <p>The value of cells, to which distances are calculated.</p>
+        
         <h3>No Data</h3>
         <p>Value should be considered as "no data" in the raster layer.</p>
+        
         <h3>Distance Method</h3>
         <p>Choose between \
-        <a href="https://en.wikipedia.org/w/index.php?title=Euclidean_distance&oldid=976383156">Euclidean Distance</a> \
-        or \
-        <a href/="vhttps://en.wikipedia.org/w/index.php?title=Taxicab_geometry&oldid=960454083">Manhattan Distance</a>.</p>
-        <h3>Outp..ut Data Format</h3>
-        <p>Choose between <i>integer</i> or <i>float</i> (default) \
-        output value.</p>
+        <a href="https://www.wikiwand.com/en/Euclidean_distance">Euclidean Distance</a> or \
+        <a href="https://www.wikiwand.com/en/Taxicab_geometry">Manhattan Distance</a>.</p>
+        
+        <h3>Output Data Format</h3>
+        <p>Choose between <i>integer</i> or <i>float</i> (default) output value.</p>
+        
         <h3>Output Column Name</h3>
         <p>Name of the column storing distances in the output layer.</p>
+        
         <h3>Output</h3>
         <p>Output vector layer</p>
         '''
@@ -141,23 +146,36 @@ class RasterCellDistance(QgsProcessingAlgorithm):
         )
 
     def processAlgorithm(self, parameters, context, feedback):
-        input_lyr = self.parameterAsVectorLayer(parameters, self.INPUT, context)
-        raster_lyr = self.parameterAsRasterLayer(parameters, self.RASTER, context)
+        input_lyr = self.parameterAsVectorLayer(
+            parameters, self.INPUT, context
+        )
+        raster_lyr = self.parameterAsRasterLayer(
+            parameters, self.RASTER, context
+        )
         value = self.parameterAsInt(parameters, self.VALUE, context)
         nodata = parameters[self.NODATA]
-        method = self.method[self.parameterAsEnum(parameters, self.METHOD, context)][0]
-        data_type = self.parameterAsEnum(parameters, self.DATA_TYPE, context)
-        output_clm = self.parameterAsString(parameters, self.OUTPUT_COLUMN, context)
-        output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
+        method = self.method[self.parameterAsEnum(
+            parameters, self.METHOD, context)
+        ][0]
+        data_type = self.parameterAsEnum(
+            parameters, self.DATA_TYPE, context
+        )
+        output_clm = self.parameterAsString(
+            parameters, self.OUTPUT_COLUMN, context
+        )
+        output_file = self.parameterAsOutputLayer(
+            parameters, self.OUTPUT, context
+        )
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-        from .loqlib import LUCISOpenQGISUtils
+        from loqlib import LUCISOpenQGISUtils
 
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         raster_path = raster_lyr.dataProvider().dataSourceUri()
         data_type = int if data_type == 0 else float
 
-        input_gdf[output_clm] = distance.to_cell(input_gdf, raster_path, value,
-                                                 nodata, method, data_type)
+        input_gdf[output_clm] = distance.to_cell(
+            input_gdf, raster_path, value, nodata, method, data_type
+        )
         output = input_gdf.to_file(output_file)
         return {self.OUTPUT: output}
