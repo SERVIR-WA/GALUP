@@ -7,7 +7,7 @@ from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterString)
 import sys
 import os
-from pylusat import rescale
+import pandas as pd
 
 
 class Reclassify(QgsProcessingAlgorithm):
@@ -131,7 +131,68 @@ class Reclassify(QgsProcessingAlgorithm):
                                                  new_val).as_category_list
         re_dict = dict(zip(re_key, re_val))
         nodata = float(nodata)
-        output = rescale.reclassify(input_gdf, input_clm, re_dict,
+
+        def reclassify(input_df, input_col, reclassify_def, output_col, nodata=1):
+            """
+            Reclassify values in an existing column based on key-value pairs provided
+            in a dictionary.
+
+            The function can handle both categorical and interval definitions. For
+            interval definition, the keys of the dictionary should be a tuple of two
+            numbers corresponding to the start and end of each interval. The intervals
+            are right closed.
+
+            Parameters
+            ----------
+            input_df : DataFrame or GeoDataFrame
+                Input DataFrame with the column need to be reclassified.
+            input_col : str
+                The name of the input column containing the old values.
+            reclassify_def : dict
+                The dictionary consists of definitions to convert old values to new
+                values.
+            output_col: str
+                The name of the output column.
+            nodata : int or float, optional
+                The value used to fill the nodata records.
+            Returns
+            -------
+            input_df : DataFrame or GeoDataFrame
+                The output DataFrame with the reclassified values.
+
+            """
+            key_type = set(map(type, [*reclassify_def]))
+            value_type = set(map(type, reclassify_def.values()))
+            if len(value_type) > 1:
+                raise ValueError("Values of the reclassify dictionary must be "
+                                 "exclusively of integer, string, or float.")
+            if key_type == {tuple}:
+                # get the lowest interval and its corresponding remapped value
+                lowest_interval, lowest_new = next(iter(reclassify_def.items()))
+                intervals = pd.IntervalIndex.from_tuples([*reclassify_def])
+                output_sr = (
+                    pd.cut(input_df[input_col], intervals).cat.rename_categories(
+                        {pd.Interval(*k): reclassify_def[k]
+                         for k in reclassify_def.keys()}
+                    )
+                )
+                output_sr = output_sr.astype(value_type)
+                output_sr.loc[input_df[input_col] == lowest_interval[0]] = lowest_new
+                if output_sr.isna().values.any():
+                    output_sr.fillna(nodata, inplace=True)
+
+            elif key_type == {int} or key_type == {str} or key_type == {float}:
+                output_sr = input_df[input_col].map(reclassify_def)
+                if output_sr.isna().values.any():
+                    output_sr.fillna(nodata, inplace=True)
+            else:
+                raise ValueError("Keys of the reclassify dictionary must be "
+                                 "exclusively of string, number, or tuple of two "
+                                 "numbers.")
+            input_df[output_col] = output_sr
+            return input_df
+
+        output = reclassify(input_gdf, input_clm, re_dict,
                                     output_clm, nodata)
         output.to_file(output_file)
         return {self.OUTPUT: output_file}
