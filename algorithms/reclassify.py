@@ -37,9 +37,37 @@ class Reclassify(QgsProcessingAlgorithm):
         return self.tr("Reclassify Field")
 
     def shortHelpString(self):
-        return self.tr("Reclassify a field in the input table.\n"
-                       "Reclassify an existing field based on predefined "
-                       "rules and store the translated values in a new field.")
+        html_doc = '''
+        <p>Reclassify a field in the input table based on predefined rules \
+        and store the translated values in a new field.</p>
+        
+        <h3>Input layer</h3>
+        <p>Input vector layer</p>
+        
+        <h3>Field to reclassify</h3>
+        <p>Transform specific values or ranges of values in a field to \
+        specified classes, i.e. reclassifying values 5 as 100 or \
+        values 1 to 5 as 100</p>
+        
+        <h3>Old values</h3>
+        <p>Old values could be specific values or ranges of values. \
+        Specific values or ranges of values should be separated by comma, \
+        i.e., for specific values: 1, 2, for ranges of values: 1-5, 6-10.</p>
+        
+        <h3>New values</h3>
+        <p>New values should correspond to Old specific values \
+        or Old ranges of values</p>
+        
+        <h3>No data value</h3>
+        <p>Value should be considered as "no data" in the vector layer.</p>
+        
+        <h3>Output column name</h3>
+        <p>Name of the column storing reclassified new values</p>
+        
+        <h3>Output layer</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return Reclassify()
