@@ -20,7 +20,7 @@ LUPMIS<sup>plus</sup> is a GIS-based, open-source land use planning framework. I
 14. Weighted Sum of Columns
 15. Zonal Statistics
 
-## [Install](install_instruction.md)
+## [Install](tutorials/0-install_instruction.md)
 
 ## Requirements
 
