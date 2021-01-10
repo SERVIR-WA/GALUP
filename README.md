@@ -20,6 +20,8 @@ LUPMIS<sup>plus</sup> is a GIS-based, open-source land use planning framework. I
 14. Weighted Sum of Columns
 15. Zonal Statistics
 
+## [Install](install_instruction.md)
+
 ## Requirements
 
 1. [QGIS 3.10](https://qgis.org/en/site/index.html): A Free and Open Source Geographic Information System.
