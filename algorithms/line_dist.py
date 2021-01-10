@@ -1,7 +1,7 @@
 from PyQt5.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterFileDestination,
+                       QgsProcessingParameterVectorDestination,
                        QgsProcessingParameterEnum,
                        QgsProcessingParameterNumber,
                        QgsProcessingParameterString)
@@ -101,10 +101,9 @@ class LineDistance(QgsProcessingAlgorithm):
             )
         )
         self.addParameter(
-            QgsProcessingParameterFileDestination(
+            QgsProcessingParameterVectorDestination(
                 self.OUTPUT,
-                self.tr('Output shapefile'),
-                'Shapefile (*.shp)'
+                self.tr('Output layer')
             )
         )
 
@@ -115,8 +114,8 @@ class LineDistance(QgsProcessingAlgorithm):
         method = self.method[self.parameterAsEnum(parameters, self.METHOD, context)][0]
         data_type = self.parameterAsEnum(parameters, self.DATA_TYPE, context)
         output_clm = self.parameterAsString(parameters, self.OUTPUT_COLUMN, context)
-        output_shp = self.parameterAsFileOutput(parameters, self.OUTPUT,
-                                                context)
+        output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT,
+                                                  context)
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
         from loqlib import LUCISOpenQGISUtils
 
@@ -124,9 +123,9 @@ class LineDistance(QgsProcessingAlgorithm):
         line_gdf = LUCISOpenQGISUtils.vector_to_gdf(line_lyr)
         data_type = int if data_type == 0 else float
 
-        input_gdf[output_clm] = distance.to_line(input_gdf, line_gdf,
-                                                 cell_size, method
-                                                 ).astype(data_type)
-        input_gdf.to_file(output_shp)
+        input_gdf[output_clm] = distance.to_line(
+            input_gdf, line_gdf, cell_size, method
+        ).astype(data_type)
 
-        return {self.OUTPUT: output_shp}
+        input_gdf.to_file(output_file)
+        return {self.OUTPUT: output_file}
