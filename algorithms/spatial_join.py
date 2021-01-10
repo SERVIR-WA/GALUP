@@ -1,7 +1,7 @@
 from PyQt5.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterFileDestination,
+                       QgsProcessingParameterVectorDestination,
                        QgsProcessingParameterBoolean,
                        QgsProcessingParameterEnum,
                        QgsProcessingParameterString)
@@ -107,10 +107,9 @@ class SpatialJoin(QgsProcessingAlgorithm):
             )
         )
         self.addParameter(
-            QgsProcessingParameterFileDestination(
+            QgsProcessingParameterVectorDestination(
                 self.OUTPUT,
-                self.tr('Output shapefile'),
-                'Shapefile (*.shp)'
+                self.tr('Output layer')
             )
         )
 
@@ -118,25 +117,25 @@ class SpatialJoin(QgsProcessingAlgorithm):
         target = self.parameterAsVectorLayer(parameters, self.TARGET, context)
         join = self.parameterAsVectorLayer(parameters, self.JOIN, context)
         op = self.op[self.parameterAsEnum(parameters, self.OP, context)][0]
-
         columns_agg = self.parameterAsString(parameters, self.COLUMNS_AGG, context)
         how = self.how[self.parameterAsEnum(parameters, self.HOW, context)][0]
         keep_all = self.parameterAsBoolean(parameters, self.KEEP_ALL, context)
+        output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
         from loqlib import LUCISOpenQGISUtils
+
         process_util = LUCISOpenQGISUtils()
 
         aggs = (tuple(item.strip().split()) for item in columns_agg.split(";"))
+
         for column, statistic in aggs:
             process_util.to_agg_dict(column, statistic)
-
-        output_shp = self.parameterAsFileOutput(parameters, self.OUTPUT, context)
 
         target_gdf = LUCISOpenQGISUtils.vector_to_gdf(target)
         join_gdf = LUCISOpenQGISUtils.vector_to_gdf(join)
         output = geotools.spatial_join(target_gdf, join_gdf, op,
-                                       process_util.agg_dict, how, keep_all)
-        output.to_file(output_shp)
-
-        return {self.OUTPUT: output_shp}
+                                       process_util.agg_dict,
+                                       how, keep_all)
+        output.to_file(output_file)
+        return {self.OUTPUT: output_file}
