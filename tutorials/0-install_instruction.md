@@ -2,7 +2,7 @@
 
 ## Install QGIS
 
-1. **Step 1 - Download**: 
+**Step 1 - Download**: 
 
 * Go to the [https://qgis.org/en/site/](https://qgis.org/en/site/) and follow the instruction below to download the right version of *QGIS (3.8.10)*.
 
@@ -17,7 +17,7 @@
 ![download_github1](../images/download_github1.png)
 ![download_github2](../images/download_github2.png)
 
-1. **Step 2 - Install**: 
+**Step 2 - Install**: 
 
 * Double-click the *QGIS (3.8.10)* installation file you just downloaded from last step, follow the instructions to install the application on your computer.
 
@@ -33,7 +33,7 @@ for the second question.
 ![ins_pylusat5](../images/ins_pylusat5.png)
   * Press Enter key and wait the installation to be completed.
 
-1. **Step 3 - Open the software**: 
+**Step 3 - Open the software**: 
 
 * Open the QGIS 3.10 folder on the desktop and double click the *QGIS Desktop 3.10.8* file. 
 ![QGIS_Script_add0](../images/QGIS_Script_add0.png)
