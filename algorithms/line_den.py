@@ -37,10 +37,34 @@ class LineDensity(QgsProcessingAlgorithm):
         return self.tr("Density of Line Features")
 
     def shortHelpString(self):
-        return self.tr("Calculate density of line features.\n"
-                       "Calculate density of line features within the "
-                       "specified search radius of each input polygon "
-                       "features.")
+        html_doc = '''
+        <p>Calculate density of line features within the specified search \
+        radius of each input polygon features.</p>
+        
+        <h3>Input Layer</h3>
+        <p>Input vector layer.</p>
+
+        <h3>Line Layer</h3>
+        <p>Input line layer.</p>
+
+        <h3>Cell Size for Rasterizing Line Features</h3>
+        <p>The size of cells, to which the line features are rasterized.</p>
+
+        <h3>Search Radius</h3>
+        <p>The search radius created around the polygons to calculate the density. \
+        The default set is 0, which means the calculating area is the area of each \
+        polygon feature. Units need to be specified.</p>
+
+        <h3>Areal Unint</h3>
+        <p>The desired area units of the output density values.</p>
+
+        <h3>Output Column Name</h3>
+        <p>Name of the column storing distances in the output layer.</p>
+
+        <h3>Output</h3>
+        <p>Output vector layer.</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return LineDensity()

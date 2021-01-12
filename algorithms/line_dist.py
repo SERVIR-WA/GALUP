@@ -37,9 +37,35 @@ class LineDistance(QgsProcessingAlgorithm):
         return self.tr("Distance to Line Features")
 
     def shortHelpString(self):
-        return self.tr("Calculate distance to line features.\n"
-                       "Calculate distance for each feature in the input data "
-                       "to its nearest neighbor in the line layer.")
+        html_doc = '''
+        <p>Calculate distance for each feature in the input data to \
+        its nearest neighbor in the line layer.<p>
+        
+        <h3>Input Layer</h3>
+        <p>Input vector layer.</p>
+
+        <h3>Line Layer</h3>
+        <p>Input line layer.</p>
+
+        <h3>Cell Size for Rasterizing Line Features</h3>
+        <p>The size of cells, to which the line features are rasterized.</p>
+
+        <h3>Distance Method</h3>
+        <p>Choose between
+        <a href="https://www.wikiwand.com/en/Euclidean_distance">Euclidean Distance</a> or
+        <a href="https://www.wikiwand.com/en/Taxicab_geometry">Manhattan Distance</a>.</p>
+
+        <h3>Output Data Type</h3>
+        <p>Choose between <i>integer</i> or <i>float</i> (default) \
+        output value.</p>
+
+        <h3>Output Column Name</h3>
+        <p>Name of the column storing distances in the output layer.</p>
+
+        <h3>Output</h3>
+        <p>Output vector layer.</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return LineDistance()

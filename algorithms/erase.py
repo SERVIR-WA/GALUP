@@ -31,31 +31,16 @@ class Erase(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         html_doc = '''
-        Calculate distance to raster cells.
-        <p>Calculate distance for each feature in the input data to its \
-        nearest cell with the specified value in the raster layer. You must \
-        make sure that the specified value is valid, i.e., it exists in the \
-        raster layer.</p>
-        <h3>Input</h3>
+        <p>Erase the part in input layer that overlaps with the erase layer.<p>
+        
+        <h3>Input Layer</h3>
         <p>Input vector layer.</p>
-        <h3>Raster</h3>
-        <p>Input raster layer.</p>
-        <h3>Cell Value</h3>
-        <p>The value of cells, to which distances are calculated.</p>
-        <h3>No Data</h3>
-        <p>Value should be considered as "no data" in the raster layer.</p>
-        <h3>Distance Method</h3>
-        <p>Choose between \
-        <a href="https://en.wikipedia.org/w/index.php?title=Euclidean_distance&oldid=976383156">Euclidean Distance</a> \
-        or \
-        <a href/="vhttps://en.wikipedia.org/w/index.php?title=Taxicab_geometry&oldid=960454083">Manhattan Distance</a>.</p>
-        <h3>Outp..ut Data Format</h3>
-        <p>Choose between <i>integer</i> or <i>float</i> (default) \
-        output value.</p>
-        <h3>Output Column Name</h3>
-        <p>Name of the column storing distances in the output layer.</p>
+
+        <h3>Erase Layer</h3>
+        <p>The features to be used to erase coincident features in the input.</p>
+
         <h3>Output</h3>
-        <p>Output vector layer</p>
+        <p>Output vector layer.</p>
         '''
         return html_doc
 

@@ -41,14 +41,41 @@ class InverseDistanceWeighting(QgsProcessingAlgorithm):
         return self.tr("Inverse Distance Weighting")
 
     def shortHelpString(self):
-        return self.tr("Inverse distance weighting (IDW)\n"
-                       "This function implements an `IDW interpolation"
-                       "<https://en.wikipedia.org/wiki/Inverse_distance_weighting>`. "
-                       "The power parameter dictates how fast the influence "
-                       "to a given location by its nearby objects decays. "
-                       "`idw_cv`, a k-fold cross validation method is offered "
-                       "to determine the most appropriate value of the "
-                       "`power` parameter.")
+        html_doc = '''
+        <p>This function implements an `IDW interpolation`. The power parameter \
+        dictates how fast the influence to a given location by its nearby objects decays. `idw_cv`, a k-fold cross validation method is offered to determine the most appropriate value of the `power` parameter.</p>
+        
+        <h3>Input Layer</h3>
+        <p>Input vector layer, to which will be assigned the interpolated value.</p>
+
+        <h3>Interpolation Layer</h3>
+        <p>The input features containing the values to be interpolated.</p>
+
+        <h3>Power Parameter for Interpolation</h3>
+        <p>The exponent of distance.</p>
+        <p>Controls the significance of surrounding points on the interpolated value. \
+        A higher power results in less influence from distant points. It can be any real \
+        number greater than 0, but the most reasonable results will be obtained using \
+        values from 0.5 to 3. The default is 2.</p>
+
+        <h3>Number of Neighbors</h3>
+        <p>An integer value specifying the number of nearest input sample points to be \
+        used to perform interpolation. The default is 12 points.</p>
+
+        <h3>Search Radius</h3>
+        <p>Maximum distance used to find neighbors. If not provided, the function will \
+        search for all neighbors specified by Number of Neighbors.</p>
+
+        <h3>Output Data Type</h3>
+        <p>Choose between <i>integer</i> or <i>float</i> (default) output value.</p>
+
+        <h3>Output Field Name</h3>
+        <p>Name of the column storing distances in the output layer.</p>
+
+        <h3>Output Layer</h3>
+        <p>Output vector layer.</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return InverseDistanceWeighting()
