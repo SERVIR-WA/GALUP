@@ -48,8 +48,45 @@ class SelectByLocation(QgsProcessingAlgorithm):
         return self.tr("Select by Location")
 
     def shortHelpString(self):
-        return self.tr("Select part of the input Layer based on its "
-                       "relationship with the selection layer.")
+        html_doc = '''
+        <p>Select part of the input Layer based on its relationship with \
+        the selection layer.</p>
+
+        <h3>Input layer</h3>
+        <p>The features that will be evaluated against the Selection \
+        features parameter. The selection will be applied to these Input \
+        features.</p>
+
+        <h3>Selection layer</h3>
+        <p>The features in the Input layer will be selected based on their \
+        relationship to the features from this layer.</p>
+
+        <h3>Join option (geometric predicate)</h3>
+        <p>Defines the criteria used to match rows. The match options are:
+
+        Intersect—The features in the Selection features will be matched \
+        if they intersect a Input feature. This is the default. Specify \
+        a distance in the Search Radius parameter.
+
+        Contains—The features in the Selection features will be matched if \
+        a Input feature contains them. For this option, the Input features \
+        cannot be points, and the Input features can only be polygons \
+        when the Selection features are also polygons.
+
+        Within—The features in the Selection features will be matched if \
+        a Input feature is within them. It is opposite to Contains. For \
+        this option, the Selection features can only be polygons when the \
+        Input features are also polygons. Point can be a Selection feature \
+        only if point a is Input feature.</p>
+
+        <h3>Buffer distance for selection feature</h3>
+        <p>Creates buffers using the buffer distance around the Selection \
+        layer</p>
+
+        <h3>Output layer</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return SelectByLocation()

@@ -37,8 +37,90 @@ class SpatialJoin(QgsProcessingAlgorithm):
         return self.tr("Spatial Join")
 
     def shortHelpString(self):
-        return self.tr("Join attributes from the join features to the target "
-                       "features based on specified spatial relationship.")
+        html_doc = '''
+        <p>Join attributes from the join features to the target features based \
+        on specified spatial relationship.</p>
+
+        <h3>Target layer</h3>
+        <p>Attributes of the target features and the attributes from the \
+        joined features are transferred to the output feature class. However, \
+        a subset of attributes can be defined in the field map parameter.</p>
+
+        <h3>Join layer</h3>
+        <p>The attributes from the join features are joined to the attributes \
+        of the target features.</p>
+
+        <h3>Join option</h3>
+        <p>Defines the criteria used to match rows. The match options are:
+
+        Intersect—The features in the join features will be matched if they \
+        intersect a target feature. This is the default. Specify a distance in \
+        the Search Radius parameter.
+
+        Contains—The features in the join features will be matched if a target \
+        feature contains them. The target features must be polygons or \
+        polylines. For this option, the target features cannot be points, and \
+        the join features can only be polygons when the target features are \
+        also polygons.
+
+        Within—The features in the join features will be matched if a target \
+        feature is within them. It is opposite to Contains. For this option, \
+        the target features can only be polygons when the join features are \
+        also polygons. Point can be join feature only if point is target.</p>
+
+        <h3>Columns to join</h3>
+        <p>A new feature class containing the attributes of join features, i.e.\
+        ,"<clm_name> <func>" e.g., "bldg_value sum". The types of function \
+        defaults to ['first'], other valid functions are ['last', 'sum', \
+        'mean', 'median', 'max', 'min','std', 'var', 'count', 'size'].
+
+        First—Use the columns' first value.
+
+        Last—Use the columns' last value..
+
+        Sum—Calculate the total of the columns' values.
+
+        Mean—Calculate the mean (average) of the columns' values.
+
+        Median—Calculate the median (middle) of the columns' values.
+
+        Min—Use the minimum value of all columns' values.
+
+        Max—Use the maximum value of all columns' values.
+
+        Std(Standard deviation)—Use the standard deviation classification method \
+        on all columns' values.
+
+        Count—Find the number of records included in the calculation.</p>
+
+        <h3>Join type</h3>
+        <p>Determines how joins between the target features and join features \
+        will be handled in the output feature class if multiple join features \
+        are found that have the same spatial relationship with a single target \
+        feature.
+
+        Join one to one—If multiple join features are found that have the same \
+        spatial relationship with a single target feature, the attributes from \
+        the multiple join features will be aggregated. For example, if a point \
+        target feature is found within two separate polygon join features, the \
+        attributes from the two polygons will be aggregated before being \
+        transferred to the output point feature class. If one polygon has an \
+        attribute value of 3 and the other has a value of 7, and a Sum merge \
+        rule is specified, the aggregated value in the output feature class \
+        will be 10.
+
+        Join one to many—If multiple join features are found that have the same \
+        spatial relationship with a single target feature, the output feature \
+        class will contain multiple copies (records) of the target feature. For \
+        example, if a single point target feature is found within two separate \
+        polygon join features, the output feature class will contain two copies \
+        of the target feature: one record with the attributes of one polygon, \
+        and another record with the attributes of the other polygon.</p>
+
+        <h3>Output shapefile</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return SpatialJoin()

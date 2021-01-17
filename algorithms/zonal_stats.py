@@ -35,15 +35,70 @@ class ZonalStats(QgsProcessingAlgorithm):
         return self.tr('Zonal Statistics')
 
     def shortHelpString(self):
-        return self.tr(
-            """Compute specified statistics for each zonal feature.\n
-            Compute various types of statistics of the values in the raster 
-            layer using the input layer's geometries as boundaries.\n
-            The types of stats defaults to ['count', 'min', 'max', 'mean'].\n 
-            Other valid stats are ['sum', 'std', 'median', 'majority', 
-            'minority', 'unique', 'range', 'nodata', 'nan'].
-            """.strip()
-        )
+        html_doc = '''
+        <p>Calculate statistics on values of raster within the zones of \
+        another dataset.</p>
+
+        <h3>Input layer</h3>
+        <p>Dataset that defines the zones and sets boundaries according \
+        to its geometries. The zones are only  defined by a vector layer.\
+            </p>
+
+        <h3>Raster layer</h3>
+        <p>Raster that contains the values on which to calculate a \
+        statistic.</p>
+
+        <h3>Types of statistics</h3>
+        <p>Statistic type to be calculate. 
+ 
+        The types of statistics defaults to ['count', 'min', 'max', \
+        'mean'].Other valid statistics are ['sum', 'std', 'median', \
+        'majority','minority', 'unique', 'range', 'nodata', 'nan'].
+
+        Count—Count the number of cells have value, no data would not be \
+        counted.
+
+        Min(Minimum)—Determines the smallest value of all cells in the \
+        value raster that belong to the same zone as the output cell.
+
+        Max(Maximum)—Determines the largest value of all cells in the \
+        value raster that belong to the same zone as the output cell.
+
+        Mean—Calculates the average of all cells in the value raster that \
+        belong to the same zone as the output cell.
+
+        Sum—Calculates the total value of all cells in the value raster \
+        that belong to the same zone as the output cell.
+
+        Std(Standard deviation)—Calculates the standard deviation of all \
+        cells in the value raster that belong to the same zone as the \
+        output cell.
+
+        Median—Determines the median value of all cells in the value \
+        raster that belong to the same zone as the output cell.
+
+        Majority—Determines the value that occurs most often of all \
+        cells in the value raster that belong to the same zone as the \
+        output cell.
+
+        Minority—Determines the value that occurs least often of all \
+        cells in the value raster that belong to the same zone as the \
+        output cell.
+
+        Unique—Count the number of unique value in cells.
+
+        Range—Calculates the difference between the largest and smallest \
+        value of all cells in the value raster that belong to the same \
+        zone as the output cell.</p>
+
+        <h3>No data value</h3>
+        <p>Value should be considered as "no data" in the raster layer.\
+        </p>
+
+        <h3>Output layer</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return ZonalStats()
