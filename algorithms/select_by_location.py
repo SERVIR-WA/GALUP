@@ -43,8 +43,40 @@ class SelectByLocation(QgsProcessingAlgorithm):
         return self.tr("Select by Location")
 
     def shortHelpString(self):
-        return self.tr("Select part of the input Layer based on its "
-                       "relationship with the selecting layer.")
+        html_doc = '''
+        <p>Select part of the input Layer based on its spatial relationship \
+        with the selecting layer.</p>
+        <h3>Input layer</h3>
+        <p>The features that will be evaluated against the Selection \
+        features parameter. The selection will be applied to these Input \
+        features.</p>
+        <h3>Selection layer</h3>
+        <p>The features in the Input layer will be selected based on their \
+        relationship to the features from this layer.</p>
+        <h3>Join option (geometric predicate)</h3>
+        <p>Defines the criteria used to match rows. The match options are:</p>
+        <ul>
+        <li><b>Intersect</b>: The features in the Selection features will be \
+        matched if they intersect a Input feature. This is the default. </li>
+        <li><b>Contains</b>: The features in the Selection features will be \
+        matched if a Input feature contains them. For this option, the Input \
+        features cannot be points, and the Input features can only be \
+        polygons when the Selection features are also polygons.</li>
+        <li><b>Within</b>: The features in the Selection features will be \
+        matched if a Input feature is within them. It is opposite to Contains.\
+        For this option, the Selection features can only be polygons when the \
+        Input features are also polygons. Point can be a Selection feature \
+        only if point a is Input feature.</li>
+        <li><b>Within a distance<b>: </li>
+        </ul>
+        <h3>Within a distance from selection features</h3>
+        <p>The distance used to search for input features around any \
+        selection feature</p>
+        <h3>Output layer</h3>
+        <p>Output vector layer</p>
+        '''
+        return self.tr(html_doc)
+
 
     def createInstance(self):
         return SelectByLocation()
