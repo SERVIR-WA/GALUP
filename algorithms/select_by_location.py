@@ -6,8 +6,8 @@ from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterVectorDestination,
                        QgsProcessingParameterDistance,
                        QgsProcessingParameterEnum)
-# from pylusat import geotools
-import geopandas as gpd
+from pylusat import geotools
+
 
 class SelectByLocation(QgsProcessingAlgorithm):
     INPUT = "INPUT"
@@ -101,45 +101,9 @@ class SelectByLocation(QgsProcessingAlgorithm):
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
         from loqlib import LUCISOpenQGISUtils
 
-        def select_by_location(input_gdf, select_gdf,
-                               op='intersects', within_dist=0):
-            """
-            Select part of the input GeoDataFrame based on its relationship with the
-            selecting GeoDataFrame.
-
-            Parameters
-            ----------
-            input_gdf : GeoDataFrame
-                The input GeoDataFrame.
-            select_gdf : GeoDataFrame
-                The selecting GeoDataFrame.
-            op : string, default 'intersection'
-                Binary predicate, one of {'intersects', 'contains', 'within',
-                'within a distance'}. See
-                http://shapely.readthedocs.io/en/latest/manual.html#binary-predicates.
-            within_dist : int, default 0
-                Search distance around the select_gdf. This parameter is only
-                useful when op is set to be "within a distance".
-            Returns
-            -------
-            output : GeoDataFrame
-                The selected features from the input GeoDataFrame.
-            """
-            ops = ['intersects', 'contains', 'within', 'within a distance']
-            assert op in ops, 'invalid op parameter,'
-            if op == 'within a distance' and within_dist:
-                select_gdf[select_gdf.geometry.name] = select_gdf.buffer(within_dist)
-                op = 'within'
-            output_gdf = input_gdf.loc[
-                         input_gdf.index.to_series().isin(
-                             gpd.sjoin(input_gdf, select_gdf, how='inner', op=op).index.values
-                         ), :
-                         ]
-            output_gdf = output_gdf.rename_axis(None, axis=1)
-            return output_gdf.copy()
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         select_gdf = LUCISOpenQGISUtils.vector_to_gdf(select_lyr)
-        output = select_by_location(input_gdf, select_gdf,
+        output = geotools.select_by_location(input_gdf, select_gdf,
                                              op, within_dist)
         if not output.empty:
             output.to_file(output_file)

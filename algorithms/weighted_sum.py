@@ -47,11 +47,27 @@ class SelectByLocation(QgsProcessingAlgorithm):
         return self.tr("Weighted Sum of Fields")
 
     def shortHelpString(self):
-        return self.tr("Calculate a weighted sum over a set of existing "
-                       "fields within the input layer.\n"
-                       "The number of fields (second parameter) must equal to "
-                       "the number of weights (third parameter).\n"
-                       "Weights should be separated by comma.")
+        html_doc = '''
+        <p>Calculate a weighted sum over a set of existing fields within the \
+        input layer.</p>
+
+        <h3>Input layer</h3>
+        <p>Vecter layer being weighted</p>
+
+        <h3>Fields</h3>
+        <p>The field to use for weighting.
+
+        The number of fields (second parameter) must equal to the number of weights \
+        (third parameter).</p>
+
+        <h3>Weights</h3>
+        <p>The weight value by which to multiply the fields. It can be any positive \
+        or negative decimal value. Weights should be separated by comma.</p>
+
+        <h3>Output field</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return SelectByLocation()

@@ -39,18 +39,43 @@ class LinearRescale(QgsProcessingAlgorithm):
         return self.tr("Rescale Field Linearly")
 
     def shortHelpString(self):
-        return self.tr("Rescale a field linearly.\n"
-                       "If Start is greater than end, the rescaling is in the "
-                       "same direction as values in the input field, i.e., "
-                       "smaller (bigger) values in the input field correspond "
-                       "to smaller (bigger) values in the output. If argument "
-                       "Start is less than end, the rescaling is in the "
-                       "reverse direction as values in the input field. The "
-                       "start and end of the input input do not necessarily "
-                       "to be the minimum and maximum of the input field. "
-                       "Values beyond the specified bound will be assigned to "
-                       "Output minimum and Output maximum, depending on which "
-                       "side they are on.")
+        html_doc = '''
+        <p>Rescale values in a field into a new bound.</p>
+
+        <h3>Input layer</h3>
+        <p>Input vector layer.</p>
+
+        <h3>Field to rescale</h3>
+        <p>Transform values in a field to a specified continuous \
+        scale, i.e., on a 1 to 9 scale</p>
+
+        <h3>Start/End value for rescaling</h3>
+        <p>If Start is less than end, the rescaling is in the \
+        same direction as values in the input field, i.e., \
+        smaller (bigger) values in the input field correspond to \
+        smaller (bigger) values in the output.
+
+        If argument Start is greater than end, the rescaling is \
+        in the reverse direction as values in the input field, \
+        i.e., smaller (bigger) values in the input field correspond \
+        to bigger (smaller) values in the output.</p>
+
+
+        <h3>New minimum/maximum</h3>
+        <p>Values beyond the specified bound will be assigned to \
+        Output minimum and Output maximum, depending on which side \
+        they are on, i.e., when start value is less than end, values \
+        smaller than start value will be recorded as Output minimum</p>
+
+
+        <h3>Output field name</h3>
+        <p>Name the rescaled field in Input table.</p>
+
+
+        <h3>Output layer</h3>
+        <p>Output vector layer</p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return LinearRescale()
