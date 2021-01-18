@@ -6,15 +6,14 @@ from qgis.core import (QgsProcessing, QgsProcessingAlgorithm,
                        QgsProcessingParameterVectorDestination,
                        QgsProcessingParameterDistance,
                        QgsProcessingParameterEnum)
-from pylusat import geotools
-
+# from pylusat import geotools
+import geopandas as gpd
 
 class SelectByLocation(QgsProcessingAlgorithm):
     INPUT = "INPUT"
     SELECT = "SELECT"
     OP = "OP"
-    HOW = "HOW"
-    BUFFER = "BUFFER"
+    DIST = "DIST"
     OUTPUT = "OUTPUT"
 
     def tr(self, string, context=''):
@@ -33,12 +32,8 @@ class SelectByLocation(QgsProcessingAlgorithm):
         self.op_option = (
             ('Intersects', self.tr('Intersects')),
             ('Contains', self.tr('Contains')),
-            ('Within', self.tr('Within'))
-        )
-        self.how_option = (
-            ('Inner', self.tr('Inner')),
-            ('Left', self.tr('Left')),
-            ('Right', self.tr('Right'))
+            ('Within', self.tr('Within')),
+            ('Within a distance', self.tr('Within a distance'))
         )
 
     def name(self):
@@ -49,7 +44,7 @@ class SelectByLocation(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         return self.tr("Select part of the input Layer based on its "
-                       "relationship with the selection layer.")
+                       "relationship with the selecting layer.")
 
     def createInstance(self):
         return SelectByLocation()
@@ -77,21 +72,17 @@ class SelectByLocation(QgsProcessingAlgorithm):
                 defaultValue=0
             )
         )
-        self.addParameter(
-            QgsProcessingParameterEnum(
-                self.HOW,
-                self.tr('Join option (attribute merge)'),
-                options=[h[1] for h in self.how_option],
-                defaultValue=0
-            )
+        within_dist = QgsProcessingParameterDistance(
+            self.DIST,
+            self.tr('Within distance of selecting feature'),
+            parentParameterName=self.SELECT
         )
-        self.addParameter(
-            QgsProcessingParameterDistance(
-                self.BUFFER,
-                self.tr('Buffer distance for selection feature'),
-                parentParameterName=self.SELECT
-            )
-        )
+        within_dist.setMetadata({
+            'widget_wrapper': {
+                'decimals': 3
+            }
+        })
+        self.addParameter(within_dist)
         self.addParameter(
             QgsProcessingParameterVectorDestination(
                 self.OUTPUT,
@@ -104,17 +95,55 @@ class SelectByLocation(QgsProcessingAlgorithm):
         select_lyr = self.parameterAsVectorLayer(parameters, self.SELECT, context)
         op = self.op_option[self.parameterAsEnum(parameters, self.OP,
                                                  context)][0].lower()
-        how = self.how_option[self.parameterAsEnum(parameters, self.HOW,
-                                                   context)][0].lower()
-        buffer = self.parameterAsDouble(parameters, self.BUFFER, context)
-        output_shp = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
+        within_dist = self.parameterAsDouble(parameters, self.DIST, context)
+        output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
         sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
         from loqlib import LUCISOpenQGISUtils
 
+        def select_by_location(input_gdf, select_gdf,
+                               op='intersects', within_dist=0):
+            """
+            Select part of the input GeoDataFrame based on its relationship with the
+            selecting GeoDataFrame.
+
+            Parameters
+            ----------
+            input_gdf : GeoDataFrame
+                The input GeoDataFrame.
+            select_gdf : GeoDataFrame
+                The selecting GeoDataFrame.
+            op : string, default 'intersection'
+                Binary predicate, one of {'intersects', 'contains', 'within',
+                'within a distance'}. See
+                http://shapely.readthedocs.io/en/latest/manual.html#binary-predicates.
+            within_dist : int, default 0
+                Search distance around the select_gdf. This parameter is only
+                useful when op is set to be "within a distance".
+            Returns
+            -------
+            output : GeoDataFrame
+                The selected features from the input GeoDataFrame.
+            """
+            ops = ['intersects', 'contains', 'within', 'within a distance']
+            assert op in ops, 'invalid op parameter,'
+            if op == 'within a distance' and within_dist:
+                select_gdf[select_gdf.geometry.name] = select_gdf.buffer(within_dist)
+                op = 'within'
+            output_gdf = input_gdf.loc[
+                         input_gdf.index.to_series().isin(
+                             gpd.sjoin(input_gdf, select_gdf, how='inner', op=op).index.values
+                         ), :
+                         ]
+            output_gdf = output_gdf.rename_axis(None, axis=1)
+            return output_gdf.copy()
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         select_gdf = LUCISOpenQGISUtils.vector_to_gdf(select_lyr)
-        output = geotools.select_by_location(input_gdf, select_gdf, how,
-                                             op, buffer)
-        output.to_file(output_shp)
-        return {self.OUTPUT: output_shp}
+        output = select_by_location(input_gdf, select_gdf,
+                                             op, within_dist)
+        if not output.empty:
+            output.to_file(output_file)
+            return {self.OUTPUT: output_file}
+        else:
+            feedback.pushInfo('No features in input layer met the specified '
+                              'spatial relationship. No output generated.')
