@@ -1,0 +1,469 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="script:linearrescale_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:linearrescale" name="alg_id"/>
+      <Option type="QString" value="Rescale Field Linearly(BC)" name="component_description"/>
+      <Option type="double" value="562.4943511775978" name="component_pos_x"/>
+      <Option type="double" value="570.2926034609492" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:linearrescale_1" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="END">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:pointdistance_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_BC" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MAX">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="9" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MIN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="DistLCR" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="START">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="36100" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:linearrescale_2">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:linearrescale" name="alg_id"/>
+      <Option type="QString" value="Rescale Field Linearly(MC)" name="component_description"/>
+      <Option type="double" value="903.157779868469" name="component_pos_x"/>
+      <Option type="double" value="774.3679545788754" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:linearrescale_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="END">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:pointdistance_2" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_MC" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MAX">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="9" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MIN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="DistMCR" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="START">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="42000" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:linearrescale_3">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:linearrescale" name="alg_id"/>
+      <Option type="QString" value="Rescale Field Linearly(SC1)" name="component_description"/>
+      <Option type="double" value="1221.7175129804093" name="component_pos_x"/>
+      <Option type="double" value="976.2118456093319" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:linearrescale_3" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="END">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:pointdistance_3" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_SC1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MAX">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="9" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_MIN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="DistSCR" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="START">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="18500" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:pointdistance_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:pointdistance" name="alg_id"/>
+      <Option type="QString" value="Distance to Point Features(BC)" name="component_description"/>
+      <Option type="double" value="436.6630036233083" name="component_pos_x"/>
+      <Option type="double" value="461.5536251785061" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:pointdistance_1" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATA_TYPE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="citiespolygon" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_BC" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="POINT">
+          <Option type="Map">
+            <Option type="QString" value="bigcity" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:pointdistance_2">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:pointdistance" name="alg_id"/>
+      <Option type="QString" value="Distance to Point Features(MC)" name="component_description"/>
+      <Option type="double" value="724.4324535344048" name="component_pos_x"/>
+      <Option type="double" value="665.1177796059053" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:pointdistance_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATA_TYPE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:linearrescale_1" name="child_id"/>
+            <Option type="QString" value="Rescaled" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_MC" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="POINT">
+          <Option type="Map">
+            <Option type="QString" value="middlecity" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:pointdistance_3">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:pointdistance" name="alg_id"/>
+      <Option type="QString" value="Distance to Point Features(SC1)" name="component_description"/>
+      <Option type="double" value="1062.9680901585498" name="component_pos_x"/>
+      <Option type="double" value="869.8440107574227" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:pointdistance_3" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATA_TYPE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:linearrescale_2" name="child_id"/>
+            <Option type="QString" value="Rescaled" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="Dis_to_SC1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="POINT">
+          <Option type="Map">
+            <Option type="QString" value="smallcity1" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:weightedsum_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:weightedsum" name="alg_id"/>
+      <Option type="QString" value="Weighted Sum of Fields" name="component_description"/>
+      <Option type="double" value="1374.2943208926474" name="component_pos_x"/>
+      <Option type="double" value="1082.031666098529" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:weightedsum_1" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="rcrp_market">
+          <Option type="QString" value="script:weightedsum_1" name="child_id"/>
+          <Option type="QString" value="rcrp_market" name="component_description"/>
+          <Option type="double" value="1574.2943208926474" name="component_pos_x"/>
+          <Option type="double" value="1158.9581595770578" name="component_pos_y"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" value="false" name="mandatory"/>
+          <Option type="QString" value="rcrp_market" name="name"/>
+          <Option type="QString" value="WeightedSum" name="output_name"/>
+        </Option>
+      </Option>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="DistLCR;DistMCR;DistSCR" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="script:linearrescale_3" name="child_id"/>
+            <Option type="QString" value="Rescaled" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="rcrp_market" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="WEIGHTS">
+          <Option type="Map">
+            <Option type="QString" value="WeightsbyCityLevel" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="modelVariables"/>
+  <Option type="QString" value="Row Crops" name="model_group"/>
+  <Option type="QString" value="Market" name="model_name"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="WeightsbyCityLevel">
+      <Option type="QString" value="0.5,0.3,0.2" name="default"/>
+      <Option type="QString" value="Weights by City Level" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="bool" value="false" name="multiline"/>
+      <Option type="QString" value="WeightsbyCityLevel" name="name"/>
+      <Option type="QString" value="string" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="bigcity">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="BigCity" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="bigcity" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="citiespolygon">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Cities_Polygon" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="citiespolygon" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="middlecity">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="MiddleCity" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="middlecity" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="script:weightedsum_1:rcrp_market">
+      <Option type="bool" value="true" name="create_by_default"/>
+      <Option type="int" value="-1" name="data_type"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="rcrp_market" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="script:weightedsum_1:rcrp_market" name="name"/>
+      <Option type="QString" value="vectorDestination" name="parameter_type"/>
+      <Option type="bool" value="true" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="smallcity1">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="SmallCity1" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="smallcity1" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="WeightsbyCityLevel">
+      <Option type="QString" value="WeightsbyCityLevel" name="component_description"/>
+      <Option type="double" value="1158.369201558229" name="component_pos_x"/>
+      <Option type="double" value="1131.2737544796223" name="component_pos_y"/>
+      <Option type="QString" value="WeightsbyCityLevel" name="name"/>
+    </Option>
+    <Option type="Map" name="bigcity">
+      <Option type="QString" value="bigcity" name="component_description"/>
+      <Option type="double" value="287.08378426828676" name="component_pos_x"/>
+      <Option type="double" value="535.1898916644935" name="component_pos_y"/>
+      <Option type="QString" value="bigcity" name="name"/>
+    </Option>
+    <Option type="Map" name="citiespolygon">
+      <Option type="QString" value="citiespolygon" name="component_description"/>
+      <Option type="double" value="285.66707682961703" name="component_pos_x"/>
+      <Option type="double" value="356.6347386634758" name="component_pos_y"/>
+      <Option type="QString" value="citiespolygon" name="name"/>
+    </Option>
+    <Option type="Map" name="middlecity">
+      <Option type="QString" value="middlecity" name="component_description"/>
+      <Option type="double" value="537.2492017265013" name="component_pos_x"/>
+      <Option type="double" value="723.5142862590465" name="component_pos_y"/>
+      <Option type="QString" value="middlecity" name="name"/>
+    </Option>
+    <Option type="Map" name="smallcity1">
+      <Option type="QString" value="smallcity1" name="component_description"/>
+      <Option type="double" value="866.576501819189" name="component_pos_x"/>
+      <Option type="double" value="923.2607124938738" name="component_pos_y"/>
+      <Option type="QString" value="smallcity1" name="name"/>
+    </Option>
+  </Option>
+</Option>
