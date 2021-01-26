@@ -14,6 +14,7 @@ class ZonalStats(QgsProcessingAlgorithm):
     INPUT = 'INPUT'
     RASTER = 'RASTER'
     STATS = 'STATS'
+    OUTPUT_COLUMN_PREFIX = "OUTPUT_COLUMN_PREFIX"
     NODATA = 'NODATA'
     OUTPUT = 'ZonalStats'
 
@@ -127,6 +128,12 @@ class ZonalStats(QgsProcessingAlgorithm):
             )
         )
         self.addParameter(
+            QgsProcessingParameterString(
+                self.OUTPUT_COLUMN_PREFIX,
+                self.tr('Output column prefix')
+            )
+        )
+        self.addParameter(
             QgsProcessingParameterNumber(
                 self.NODATA,
                 self.tr('No data value'),
@@ -145,6 +152,9 @@ class ZonalStats(QgsProcessingAlgorithm):
         input_lyr = self.parameterAsVectorLayer(parameters, self.INPUT, context)
         raster_lyr = self.parameterAsRasterLayer(parameters, self.RASTER, context)
         stats = self.parameterAsString(parameters, self.STATS, context)
+        output_clm_prefix = self.parameterAsString(parameters,
+                                                   self.OUTPUT_COLUMN_PREFIX,
+                                                   context)
         nodata = parameters[self.NODATA]
         output_file = self.parameterAsOutputLayer(parameters, self.OUTPUT, context)
 
@@ -154,6 +164,7 @@ class ZonalStats(QgsProcessingAlgorithm):
         input_gdf = LUCISOpenQGISUtils.vector_to_gdf(input_lyr)
         raster_path = raster_lyr.dataProvider().dataSourceUri()
 
-        output = zonal.zonal_stats_raster(input_gdf, raster_path, stats, nodata)
+        output = zonal.zonal_stats_raster(input_gdf, raster_path, stats,
+                                          output_clm_prefix, nodata)
         output.to_file(output_file)
         return {self.OUTPUT: output_file}
