@@ -47,19 +47,23 @@ class Reclassify(QgsProcessingAlgorithm):
         <h3>Field to reclassify</h3>
         <p>Transform specific values or ranges of values in a field to \
         specified classes, i.e. reclassifying values 5 as 100 or \
-        values 1 to 5 as 100</p>
+        values 1 to 5 as 100.</p>
         
         <h3>Old values</h3>
         <p>Old values could be specific values or ranges of values. \
         Specific values or ranges of values should be separated by comma, \
-        i.e., for specific values: 1, 2, for ranges of values: 1-5, 6-10.</p>
+        i.e., for specific values: 1, 2, for ranges of values: 1-5, 5-10. \
+        If two ranges are specified, such as 1 to 5 equal to 100 and 5 to 10 \
+        equal to 200, the value 5 will usually be assigned to the value 100 \
+        and 5.01 will be assigned to 200 as output values. </p>
         
         <h3>New values</h3>
         <p>New values should correspond to Old specific values \
         or Old ranges of values</p>
         
         <h3>No data value</h3>
-        <p>Value should be considered as "no data" in the vector layer.</p>
+        <p>If any value in fields cannot be covered by defined Old values, \
+        those value will be given a new value. The default value is 1</p>
         
         <h3>Output column name</h3>
         <p>Name of the column storing reclassified new values</p>

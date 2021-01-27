@@ -54,7 +54,7 @@ class ZonalStats(QgsProcessingAlgorithm):
  
         The types of statistics defaults to ['count', 'min', 'max', \
         'mean'].Other valid statistics are ['sum', 'std', 'median', \
-        'majority','minority', 'unique', 'range', 'nodata', 'nan'].
+        'majority','minority', 'unique', 'range'].
 
         Count—Count the number of cells have value, no data would not be \
         counted.
