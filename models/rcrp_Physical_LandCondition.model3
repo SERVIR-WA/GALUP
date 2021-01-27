@@ -1,0 +1,396 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:reclassifybytable_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:reclassifybytable"/>
+      <Option type="QString" name="component_description" value="Add value for land cover"/>
+      <Option type="double" name="component_pos_x" value="363"/>
+      <Option type="double" name="component_pos_y" value="289.5"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:reclassifybytable_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATA_TYPE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="5"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_RASTER">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="3LandCover"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NODATA_FOR_MISSING">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="true"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NO_DATA">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="-9999"/>
+          </Option>
+        </Option>
+        <Option type="List" name="RANGE_BOUNDARIES">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="RASTER_BAND">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="TABLE">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="4table"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:reclassify_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="script:reclassify"/>
+      <Option type="QString" name="component_description" value="Reclassify Slope Percent"/>
+      <Option type="double" name="component_pos_x" value="887"/>
+      <Option type="double" name="component_pos_y" value="709"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="script:reclassify_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="script:zonalstats_2"/>
+            <Option type="QString" name="output_name" value="ZonalStats"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELD">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Slope_mean"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_VALUE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="1,2,3,4,5"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NODATA">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="255"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OLD_VALUE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="0-2,2-8,8-15,15-25,25-45"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="SLmean_re"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:weightedsum_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="script:weightedsum"/>
+      <Option type="QString" name="component_description" value="Weighted Sum of Fields"/>
+      <Option type="double" name="component_pos_x" value="1009.5"/>
+      <Option type="double" name="component_pos_y" value="833.5"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="script:weightedsum_1"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="Land_Conditon_Score">
+          <Option type="QString" name="child_id" value="script:weightedsum_1"/>
+          <Option type="QString" name="component_description" value="Land_Conditon_Score"/>
+          <Option type="double" name="component_pos_x" value="1221.5"/>
+          <Option type="double" name="component_pos_y" value="938.5"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" name="mandatory" value="false"/>
+          <Option type="QString" name="name" value="Land_Conditon_Score"/>
+          <Option type="QString" name="output_name" value="WeightedSum"/>
+        </Option>
+      </Option>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Landc_mean;SLmean_re"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="script:reclassify_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="LandCondit"/>
+          </Option>
+        </Option>
+        <Option type="List" name="WEIGHTS">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="9Weight"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:zonalstats_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="script:zonalstats"/>
+      <Option type="QString" name="component_description" value="Zonal Statistics LC"/>
+      <Option type="double" name="component_pos_x" value="537.5"/>
+      <Option type="double" name="component_pos_y" value="421.5"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="script:zonalstats_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="1inputlayer"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NODATA">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="-9999"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN_PREFIX">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Landc"/>
+          </Option>
+        </Option>
+        <Option type="List" name="RASTER">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:reclassifybytable_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="STATS">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="mean"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="script:zonalstats_2">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="script:zonalstats"/>
+      <Option type="QString" name="component_description" value="Zonal Statistics Slope"/>
+      <Option type="double" name="component_pos_x" value="703.5"/>
+      <Option type="double" name="component_pos_y" value="575"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="script:zonalstats_2"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="script:zonalstats_1"/>
+            <Option type="QString" name="output_name" value="ZonalStats"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NODATA">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="invalid" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OUTPUT_COLUMN_PREFIX">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Slope"/>
+          </Option>
+        </Option>
+        <Option type="List" name="RASTER">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="5Slope"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="STATS">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="mean"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option type="Map" name="help">
+    <Option type="QString" name="1inputlayer" value="Input vector layer"/>
+    <Option type="QString" name="3LandCover" value="Input raster layer. Land cover is usually comprised of lands with different woodland condtions and built up area."/>
+    <Option type="QString" name="4table" value="Add new value for different land cover types in table.Table is fixed as 3 row table. Row 1 represents the number of land cover types. Row 2 is the number of land cover types plus 1. Row 3 is the value the land cover types will be given. Different columns represent different types of land cover."/>
+    <Option type="QString" name="5Slope" value="Input slope raster data."/>
+    <Option type="QString" name="9Weight" value="Weight the suitability of land cover condition for agriculture activities and slope percent. Weight should be separated by comma."/>
+    <Option type="QString" name="ALG_CREATOR" value=""/>
+    <Option type="QString" name="ALG_DESC" value="The tool aims to evaluate the capacity of land to respond to rain and produce useful pasture. The assessment of land condition includes the evaluation of slope percent and land cover condition.Weight should be separated by comma."/>
+    <Option type="QString" name="ALG_VERSION" value=""/>
+    <Option type="QString" name="SHORT_DESCRIPTION" value=""/>
+    <Option type="QString" name="script:weightedsum_1:Land_Conditon_Score" value="Output vector layer"/>
+  </Option>
+  <Option name="modelVariables"/>
+  <Option type="QString" name="model_group" value="Physical"/>
+  <Option type="QString" name="model_name" value="Land Condition"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="1inputlayer">
+      <Option type="List" name="data_types">
+        <Option type="int" value="5"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Input layer"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="1inputlayer"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+    <Option type="Map" name="3LandCover">
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Land cover"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="3LandCover"/>
+      <Option type="QString" name="parameter_type" value="raster"/>
+    </Option>
+    <Option type="Map" name="4table">
+      <Option type="List" name="default">
+        <Option type="QString" value="1"/>
+        <Option type="QString" value="2"/>
+        <Option type="QString" value="3"/>
+        <Option type="QString" value="2"/>
+        <Option type="QString" value="3"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="3"/>
+        <Option type="QString" value="4"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="4"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="3"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="6"/>
+        <Option type="QString" value="2"/>
+        <Option type="QString" value="6"/>
+        <Option type="QString" value="7"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="7"/>
+        <Option type="QString" value="8"/>
+        <Option type="QString" value="1"/>
+        <Option type="QString" value="8"/>
+        <Option type="QString" value="9"/>
+        <Option type="QString" value="5"/>
+        <Option type="QString" value="9"/>
+        <Option type="QString" value="10"/>
+        <Option type="QString" value="4"/>
+      </Option>
+      <Option type="QString" name="description" value="Add value for land cover"/>
+      <Option type="bool" name="fixed_number_rows" value="true"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option type="StringList" name="headers">
+        <Option type="QString" value="1"/>
+        <Option type="QString" value="2"/>
+        <Option type="QString" value="3"/>
+      </Option>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="4table"/>
+      <Option type="QString" name="parameter_type" value="matrix"/>
+      <Option type="int" name="rows" value="3"/>
+    </Option>
+    <Option type="Map" name="5Slope">
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Slope"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="5Slope"/>
+      <Option type="QString" name="parameter_type" value="raster"/>
+    </Option>
+    <Option type="Map" name="9Weight">
+      <Option type="QString" name="default" value="0.5,0.5"/>
+      <Option type="QString" name="description" value="Weight by LC Slope"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="9Weight"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="script:weightedsum_1:Land_Conditon_Score">
+      <Option type="bool" name="create_by_default" value="true"/>
+      <Option type="int" name="data_type" value="-1"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Land_Conditon_Score"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="script:weightedsum_1:Land_Conditon_Score"/>
+      <Option type="QString" name="parameter_type" value="vectorDestination"/>
+      <Option type="bool" name="supports_non_file_outputs" value="true"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="1inputlayer">
+      <Option type="QString" name="component_description" value="1inputlayer"/>
+      <Option type="double" name="component_pos_x" value="538"/>
+      <Option type="double" name="component_pos_y" value="177"/>
+      <Option type="QString" name="name" value="1inputlayer"/>
+    </Option>
+    <Option type="Map" name="3LandCover">
+      <Option type="QString" name="component_description" value="3LandCover"/>
+      <Option type="double" name="component_pos_x" value="100.25"/>
+      <Option type="double" name="component_pos_y" value="203.25"/>
+      <Option type="QString" name="name" value="3LandCover"/>
+    </Option>
+    <Option type="Map" name="4table">
+      <Option type="QString" name="component_description" value="4table"/>
+      <Option type="double" name="component_pos_x" value="123.5"/>
+      <Option type="double" name="component_pos_y" value="333.75"/>
+      <Option type="QString" name="name" value="4table"/>
+    </Option>
+    <Option type="Map" name="5Slope">
+      <Option type="QString" name="component_description" value="5Slope"/>
+      <Option type="double" name="component_pos_x" value="432"/>
+      <Option type="double" name="component_pos_y" value="574"/>
+      <Option type="QString" name="name" value="5Slope"/>
+    </Option>
+    <Option type="Map" name="9Weight">
+      <Option type="QString" name="component_description" value="9Weight"/>
+      <Option type="double" name="component_pos_x" value="681.5"/>
+      <Option type="double" name="component_pos_y" value="857.5"/>
+      <Option type="QString" name="name" value="9Weight"/>
+    </Option>
+  </Option>
+</Option>
