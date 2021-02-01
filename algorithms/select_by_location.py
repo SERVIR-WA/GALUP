@@ -67,7 +67,10 @@ class SelectByLocation(QgsProcessingAlgorithm):
         For this option, the Selection features can only be polygons when the \
         Input features are also polygons. Point can be a Selection feature \
         only if point a is Input feature.</li>
-        <li><b>Within a distance<b>: </li>
+        <li><b>Within a distance<b>: This operator creates buffers using \
+        the buffer distance around the source features and returns all the \
+        features intersecting/containing/within the buffer zones. For example, \
+        select cities within 100 meters of a river or railroad.</li>
         </ul>
         <h3>Within a distance from selection features</h3>
         <p>The distance used to search for input features around any \
