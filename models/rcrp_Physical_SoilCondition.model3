@@ -6,8 +6,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec RZD"/>
-      <Option type="double" name="component_pos_x" value="977.5999999999999"/>
-      <Option type="double" name="component_pos_y" value="529.5999999999996"/>
+      <Option type="double" name="component_pos_x" value="921.2489511337089"/>
+      <Option type="double" name="component_pos_y" value="480.35543492423193"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_1"/>
       <Option name="outputs"/>
@@ -30,7 +30,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="4, 3, 2, 1"/>
+            <Option type="QString" name="static_value" value="3, 5, 7, 9"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -58,12 +58,12 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec Drainage"/>
-      <Option type="double" name="component_pos_x" value="1089.6"/>
-      <Option type="double" name="component_pos_y" value="722.4000000000004"/>
+      <Option type="double" name="component_pos_x" value="1103.8129675810474"/>
+      <Option type="double" name="component_pos_y" value="657.2572319201998"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_2"/>
       <Option name="outputs"/>
-      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="outputs_collapsed" value="false"/>
       <Option type="bool" name="parameters_collapsed" value="true"/>
       <Option type="Map" name="params">
         <Option type="List" name="INPUT">
@@ -82,7 +82,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3, 2 ,1"/>
+            <Option type="QString" name="static_value" value="3, 7 ,9"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -110,8 +110,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (0-5 cm)"/>
-      <Option type="double" name="component_pos_x" value="1201.6000000000006"/>
-      <Option type="double" name="component_pos_y" value="909.5999999999998"/>
+      <Option type="double" name="component_pos_x" value="1300.8403623383829"/>
+      <Option type="double" name="component_pos_y" value="845.1408244273878"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_3"/>
       <Option name="outputs"/>
@@ -134,7 +134,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -162,8 +162,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (5-15 cm)"/>
-      <Option type="double" name="component_pos_x" value="1306.4"/>
-      <Option type="double" name="component_pos_y" value="1100.7999999999997"/>
+      <Option type="double" name="component_pos_x" value="1543.282793017456"/>
+      <Option type="double" name="component_pos_y" value="1020.2598503740649"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_4"/>
       <Option name="outputs"/>
@@ -186,7 +186,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -214,8 +214,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (15-30 cm)"/>
-      <Option type="double" name="component_pos_x" value="1412"/>
-      <Option type="double" name="component_pos_y" value="1290.4000000000005"/>
+      <Option type="double" name="component_pos_x" value="1746.0047381546133"/>
+      <Option type="double" name="component_pos_y" value="1200.3845386533674"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_5"/>
       <Option name="outputs"/>
@@ -238,7 +238,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -266,8 +266,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (30-60 cm)"/>
-      <Option type="double" name="component_pos_x" value="1528"/>
-      <Option type="double" name="component_pos_y" value="1491.9999999999998"/>
+      <Option type="double" name="component_pos_x" value="1923.594264339152"/>
+      <Option type="double" name="component_pos_y" value="1373.558603491272"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_6"/>
       <Option name="outputs"/>
@@ -290,7 +290,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -318,8 +318,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (60-100 cm)"/>
-      <Option type="double" name="component_pos_x" value="1632.0000000000002"/>
-      <Option type="double" name="component_pos_y" value="1709.6000000000004"/>
+      <Option type="double" name="component_pos_x" value="2113.4880226529667"/>
+      <Option type="double" name="component_pos_y" value="1554.3741308939077"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_7"/>
       <Option name="outputs"/>
@@ -342,7 +342,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -370,8 +370,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (100-200 cm)"/>
-      <Option type="double" name="component_pos_x" value="1744.8000000000002"/>
-      <Option type="double" name="component_pos_y" value="1916"/>
+      <Option type="double" name="component_pos_x" value="2330.2660408516977"/>
+      <Option type="double" name="component_pos_y" value="1723.3737054690125"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_8"/>
       <Option name="outputs"/>
@@ -394,7 +394,7 @@
         <Option type="List" name="NEW_VALUE">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="3.0, 2.0, 1.0, 2.1, 3.1"/>
+            <Option type="QString" name="static_value" value="3.0, 7.0, 9.0, 6.1, 3.1"/>
           </Option>
         </Option>
         <Option type="List" name="NODATA">
@@ -422,19 +422,19 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:weightedsum"/>
       <Option type="QString" name="component_description" value="Weighted Sum of Fields(Soil Condition Weighted)"/>
-      <Option type="double" name="component_pos_x" value="1811.9999999999982"/>
-      <Option type="double" name="component_pos_y" value="2012.7999999999997"/>
+      <Option type="double" name="component_pos_x" value="2520.2795511221925"/>
+      <Option type="double" name="component_pos_y" value="1811.449625935162"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:weightedsum_1"/>
       <Option type="Map" name="outputs">
-        <Option type="Map" name="Soil Condition Weighted">
+        <Option type="Map" name="rcrp_SoilCondition">
           <Option type="QString" name="child_id" value="script:weightedsum_1"/>
-          <Option type="QString" name="component_description" value="Soil Condition Weighted"/>
-          <Option type="double" name="component_pos_x" value="2011.9999999999982"/>
-          <Option type="double" name="component_pos_y" value="2057.7999999999997"/>
+          <Option type="QString" name="component_description" value="rcrp_SoilCondition"/>
+          <Option type="double" name="component_pos_x" value="2719.279551122192"/>
+          <Option type="double" name="component_pos_y" value="1910.4496259351617"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" name="mandatory" value="false"/>
-          <Option type="QString" name="name" value="Soil Condition Weighted"/>
+          <Option type="QString" name="name" value="rcrp_SoilCondition"/>
           <Option type="QString" name="output_name" value="WeightedSum"/>
         </Option>
       </Option>
@@ -473,8 +473,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="Root Zone Depth"/>
-      <Option type="double" name="component_pos_x" value="926.4"/>
-      <Option type="double" name="component_pos_y" value="443.1999999999999"/>
+      <Option type="double" name="component_pos_x" value="921.6623441396508"/>
+      <Option type="double" name="component_pos_y" value="393.454613466334"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_1"/>
       <Option name="outputs"/>
@@ -518,8 +518,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="Drainage"/>
-      <Option type="double" name="component_pos_x" value="1031.2000000000003"/>
-      <Option type="double" name="component_pos_y" value="626.4000000000002"/>
+      <Option type="double" name="component_pos_x" value="1102.5152486341863"/>
+      <Option type="double" name="component_pos_y" value="576.9050241952835"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_2"/>
       <Option name="outputs"/>
@@ -564,8 +564,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (0-5 cm)"/>
-      <Option type="double" name="component_pos_x" value="1147.1999999999998"/>
-      <Option type="double" name="component_pos_y" value="813.5999999999999"/>
+      <Option type="double" name="component_pos_x" value="1291.6985037406482"/>
+      <Option type="double" name="component_pos_y" value="766.2234413965086"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_3"/>
       <Option name="outputs"/>
@@ -610,8 +610,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (5-15 cm)"/>
-      <Option type="double" name="component_pos_x" value="1255.2000000000005"/>
-      <Option type="double" name="component_pos_y" value="1004"/>
+      <Option type="double" name="component_pos_x" value="1539.4593516209486"/>
+      <Option type="double" name="component_pos_y" value="932.9351620947634"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_4"/>
       <Option name="outputs"/>
@@ -656,8 +656,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (15-30 cm)"/>
-      <Option type="double" name="component_pos_x" value="1359.9999999999998"/>
-      <Option type="double" name="component_pos_y" value="1196.0000000000002"/>
+      <Option type="double" name="component_pos_x" value="1741.3812967581046"/>
+      <Option type="double" name="component_pos_y" value="1113.0910224438906"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_5"/>
       <Option name="outputs"/>
@@ -702,8 +702,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (30-60 cm)"/>
-      <Option type="double" name="component_pos_x" value="1471.1999999999998"/>
-      <Option type="double" name="component_pos_y" value="1391.2"/>
+      <Option type="double" name="component_pos_x" value="1916.5396508728177"/>
+      <Option type="double" name="component_pos_y" value="1289.3403990024938"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_6"/>
       <Option name="outputs"/>
@@ -748,8 +748,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (60-100 cm)"/>
-      <Option type="double" name="component_pos_x" value="1580"/>
-      <Option type="double" name="component_pos_y" value="1596.8"/>
+      <Option type="double" name="component_pos_x" value="2098.7733167082292"/>
+      <Option type="double" name="component_pos_y" value="1457.0391521197007"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_7"/>
       <Option name="outputs"/>
@@ -794,8 +794,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:zonalstats"/>
       <Option type="QString" name="component_description" value="PH (100-200 cm)"/>
-      <Option type="double" name="component_pos_x" value="1688.8000000000002"/>
-      <Option type="double" name="component_pos_y" value="1816"/>
+      <Option type="double" name="component_pos_x" value="2326.3802553155397"/>
+      <Option type="double" name="component_pos_y" value="1644.4427461116343"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:zonalstats_8"/>
       <Option name="outputs"/>
@@ -944,14 +944,14 @@
       <Option type="QString" name="name" value="WeightsforRZDDrainageandPH"/>
       <Option type="QString" name="parameter_type" value="string"/>
     </Option>
-    <Option type="Map" name="script:weightedsum_1:Soil Condition Weighted">
+    <Option type="Map" name="script:weightedsum_1:rcrp_SoilCondition">
       <Option type="bool" name="create_by_default" value="true"/>
       <Option type="int" name="data_type" value="-1"/>
       <Option type="invalid" name="default"/>
-      <Option type="QString" name="description" value="Soil Condition Weighted"/>
+      <Option type="QString" name="description" value="rcrp_SoilCondition"/>
       <Option type="int" name="flags" value="0"/>
       <Option name="metadata"/>
-      <Option type="QString" name="name" value="script:weightedsum_1:Soil Condition Weighted"/>
+      <Option type="QString" name="name" value="script:weightedsum_1:rcrp_SoilCondition"/>
       <Option type="QString" name="parameter_type" value="vectorDestination"/>
       <Option type="bool" name="supports_non_file_outputs" value="true"/>
     </Option>
@@ -959,62 +959,62 @@
   <Option type="Map" name="parameters">
     <Option type="Map" name="0inputpolygon">
       <Option type="QString" name="component_description" value="0inputpolygon"/>
-      <Option type="double" name="component_pos_x" value="752.7999999999998"/>
-      <Option type="double" name="component_pos_y" value="275.20000000000016"/>
+      <Option type="double" name="component_pos_x" value="809.9972644330848"/>
+      <Option type="double" name="component_pos_y" value="273.08158279877495"/>
       <Option type="QString" name="name" value="0inputpolygon"/>
     </Option>
     <Option type="Map" name="A1">
       <Option type="QString" name="component_description" value="A1"/>
-      <Option type="double" name="component_pos_x" value="636.0000000000005"/>
-      <Option type="double" name="component_pos_y" value="382.4000000000001"/>
+      <Option type="double" name="component_pos_x" value="648.7105032073526"/>
+      <Option type="double" name="component_pos_y" value="412.0578408171552"/>
       <Option type="QString" name="name" value="A1"/>
     </Option>
     <Option type="Map" name="B">
       <Option type="QString" name="component_description" value="B"/>
-      <Option type="double" name="component_pos_x" value="707.6000000000005"/>
-      <Option type="double" name="component_pos_y" value="575.5999999999999"/>
+      <Option type="double" name="component_pos_x" value="810.3461125436713"/>
+      <Option type="double" name="component_pos_y" value="602.4083394187676"/>
       <Option type="QString" name="name" value="B"/>
     </Option>
     <Option type="Map" name="C">
       <Option type="QString" name="component_description" value="C"/>
-      <Option type="double" name="component_pos_x" value="829.6000000000001"/>
-      <Option type="double" name="component_pos_y" value="769.5999999999999"/>
+      <Option type="double" name="component_pos_x" value="1011.2485184365942"/>
+      <Option type="double" name="component_pos_y" value="782.5609139363014"/>
       <Option type="QString" name="name" value="C"/>
     </Option>
     <Option type="Map" name="ESoil515cmPHValue">
       <Option type="QString" name="component_description" value="ESoil515cmPHValue"/>
-      <Option type="double" name="component_pos_x" value="902.4000000000001"/>
-      <Option type="double" name="component_pos_y" value="953.5999999999998"/>
+      <Option type="double" name="component_pos_x" value="1270.319561363905"/>
+      <Option type="double" name="component_pos_y" value="958.3376558603491"/>
       <Option type="QString" name="name" value="ESoil515cmPHValue"/>
     </Option>
     <Option type="Map" name="FSoil1530cmPHValue">
       <Option type="QString" name="component_description" value="FSoil1530cmPHValue"/>
-      <Option type="double" name="component_pos_x" value="1008.8000000000001"/>
-      <Option type="double" name="component_pos_y" value="1142.4"/>
+      <Option type="double" name="component_pos_x" value="1451.0195907557957"/>
+      <Option type="double" name="component_pos_y" value="1123.0838344600222"/>
       <Option type="QString" name="name" value="FSoil1530cmPHValue"/>
     </Option>
     <Option type="Map" name="GSoil3060cmPHValue">
       <Option type="QString" name="component_description" value="GSoil3060cmPHValue"/>
-      <Option type="double" name="component_pos_x" value="1117.6000000000001"/>
-      <Option type="double" name="component_pos_y" value="1333.6000000000001"/>
+      <Option type="double" name="component_pos_x" value="1652.5694221311846"/>
+      <Option type="double" name="component_pos_y" value="1309.4108992403562"/>
       <Option type="QString" name="name" value="GSoil3060cmPHValue"/>
     </Option>
     <Option type="Map" name="HSoil60100cmPHValue">
       <Option type="QString" name="component_description" value="HSoil60100cmPHValue"/>
-      <Option type="double" name="component_pos_x" value="1220.0000000000002"/>
-      <Option type="double" name="component_pos_y" value="1538.4000000000003"/>
+      <Option type="double" name="component_pos_x" value="1841.2488705332662"/>
+      <Option type="double" name="component_pos_y" value="1488.4042027373855"/>
       <Option type="QString" name="name" value="HSoil60100cmPHValue"/>
     </Option>
     <Option type="Map" name="ISoil100200cmPHValue">
       <Option type="QString" name="component_description" value="ISoil100200cmPHValue"/>
-      <Option type="double" name="component_pos_x" value="1347.2"/>
-      <Option type="double" name="component_pos_y" value="1763.1999999999994"/>
+      <Option type="double" name="component_pos_x" value="2043.6354114713215"/>
+      <Option type="double" name="component_pos_y" value="1658.9715710723187"/>
       <Option type="QString" name="name" value="ISoil100200cmPHValue"/>
     </Option>
     <Option type="Map" name="WeightsforRZDDrainageandPH">
       <Option type="QString" name="component_description" value="WeightsforRZDDrainageandPH"/>
-      <Option type="double" name="component_pos_x" value="1504.8"/>
-      <Option type="double" name="component_pos_y" value="1971.2000000000003"/>
+      <Option type="double" name="component_pos_x" value="2256.0839959639175"/>
+      <Option type="double" name="component_pos_y" value="1821.963840399003"/>
       <Option type="QString" name="name" value="WeightsforRZDDrainageandPH"/>
     </Option>
   </Option>
