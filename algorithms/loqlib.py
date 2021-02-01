@@ -107,12 +107,14 @@ class StringParameterInterval(StringParameter):
 
 class StringParameterIntervalList(StringParameter):
 
-    def __init__(self, name, value):
+    def __init__(self, name, value, enforce_ascending=False):
         super().__init__(name, value)
+        self.enforce_ascending = enforce_ascending
         if not self._validate_interval_list():
             raise ValueError("'{}' is not a valid definition, since '{}' "
-                             "is not a valid list of intervals. Make sure "
-                             "bounds of each interval follow an ascending "
+                             "is not a valid list of intervals. "
+                             "`if enforce_ascending == True`, make sure "
+                             "bounds of each interval follows an ascending "
                              "order.".format(self.name, self.value))
 
     def _validate_interval_list(self):
@@ -121,9 +123,10 @@ class StringParameterIntervalList(StringParameter):
                 StringParameterInterval("interval", _.strip()).as_tuple
                 for _ in self.value.split(",")
             ]
-            from itertools import chain
-            chained_list = list(chain.from_iterable(self.interval_list))
-            assert sorted(chained_list) == chained_list
+            if self.enforce_ascending:
+                from itertools import chain
+                chained_list = list(chain.from_iterable(self.interval_list))
+                assert sorted(chained_list) == chained_list
             return True
         except AssertionError:
             return False
