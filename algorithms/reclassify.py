@@ -155,6 +155,7 @@ class Reclassify(QgsProcessingAlgorithm):
             except ValueError:
                 re_key = StringParameterCategoryList(input_clm,
                                                      old_val).as_category_list
+
         try:
             re_val = StringParameterNumberList(input_clm,
                                                new_val).as_number_list
@@ -162,7 +163,8 @@ class Reclassify(QgsProcessingAlgorithm):
             re_val = StringParameterCategoryList(input_clm,
                                                  new_val).as_category_list
         re_dict = dict(zip(re_key, re_val))
-        nodata = float(nodata)
+        if nodata:
+            nodata = float(nodata)
 
         output = rescale.reclassify(input_gdf, input_clm, re_dict,
                                     output_clm, nodata)
