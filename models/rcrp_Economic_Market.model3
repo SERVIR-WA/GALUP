@@ -382,6 +382,7 @@
     <Option type="QString" name="nWeightsbyCityLevel" value="This is a weight setting for different size of cities. （Note: when enter multiple field names in the &quot;field&quot;, please seperate multiple field names by  semicolon, and no space needed between different field names. e.g., Res_D_BC;Res_D_MC;Res_D_SC)"/>
     <Option type="QString" name="script:weightedsum_1:Market Weighted" value="The value for rating each potential marketplaces (InputPolygon). The higher the value, the more suitable for the location to be the marketplace."/>
     <Option type="QString" name="script:weightedsum_1:Market_Weighted" value="The value for rating each potential marketplaces (InputPolygon). The higher the value, the more suitable for the location to be the marketplace."/>
+    <Option type="QString" name="script:weightedsum_1:rcrp_Market" value="The output vector layer of Market."/>
     <Option type="QString" name="smallcity1" value=""/>
   </Option>
   <Option name="modelVariables"/>
