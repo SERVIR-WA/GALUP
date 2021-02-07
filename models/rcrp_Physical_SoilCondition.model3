@@ -862,7 +862,7 @@
   <Option type="Map" name="parameterDefinitions">
     <Option type="Map" name="0inputpolygon">
       <Option type="List" name="data_types">
-        <Option type="int" value="5"/>
+        <Option type="int" value="2"/>
       </Option>
       <Option type="invalid" name="default"/>
       <Option type="QString" name="description" value="InputPolygon"/>
