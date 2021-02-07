@@ -91,6 +91,8 @@ class SpatialJoin(QgsProcessingAlgorithm):
         Std(Standard deviation)—Use the standard deviation classification method \
         on all columns' values.
 
+        Var(Variance)—Calculates the variance for all records of the specified field.
+
         Count—Find the number of records included in the calculation.</p>
 
         <h3>Join type</h3>
