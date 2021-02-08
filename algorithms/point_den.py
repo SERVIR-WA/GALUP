@@ -141,7 +141,7 @@ class PointDensity(QgsProcessingAlgorithm):
     def processAlgorithm(self, parameters, context, feedback):
         input_lyr = self.parameterAsVectorLayer(parameters, self.INPUT, context)
         point_lyr = self.parameterAsVectorLayer(parameters, self.POINT, context)
-        pop_clm = self.parameterAsString(parameters, self.POP_COLUMN, context)
+        pop_clm = parameters[self.POP_COLUMN]
         search_radius = self.parameterAsDouble(parameters,
                                                self.SEARCH_RADIUS,
                                                context)
