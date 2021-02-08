@@ -55,7 +55,8 @@ class PointDensity(QgsProcessingAlgorithm):
 
         <h3>Search Radius</h3>
         <p>The search radius created around the polygons to calculate the \
-        density. The default set is 0, which means the calculating area is the area of each polygon feature. Units need to be specified.</p>
+        density. The default set is 0, which means the calculating area is \
+        the area of each polygon feature. Units need to be specified.</p>
 
         <h3>Areal Unint</h3>
         <p>The desired area units of the output density values.</p>
