@@ -1,6 +1,14 @@
-# Tutorial 1 - Software Setup
+# Install QGIS
 
-## Install QGIS
+## Steps to Follow:
+
+***Step 1 - Download***
+
+***Step 2 - Install***
+
+***Step 3 - Open the software***
+
+## Specific instructions in each step are described as below:
 
 **Step 1 - Download**: 
 

@@ -61,7 +61,7 @@ class SelectByLocation(QgsProcessingAlgorithm):
         (third parameter).</p>
 
         <h3>Weights</h3>
-        <p>The weight value by which to multiply the fields. It can be any positive \
+        <p>Weight value by which to multiply the fields. It can be any positive \
         or negative decimal value. Weights should be separated by comma.</p>
 
         <h3>Output field</h3>

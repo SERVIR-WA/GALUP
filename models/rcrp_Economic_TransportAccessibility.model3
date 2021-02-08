@@ -1,372 +1,345 @@
 <!DOCTYPE model>
 <Option type="Map">
-  <Option name="children" type="Map">
-    <Option name="script:linearrescale_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
+  <Option type="Map" name="children">
+    <Option type="Map" name="script:linearrescale_1">
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:linearrescale" type="QString"/>
-      <Option name="component_description" value="Rescale Sec Roads" type="QString"/>
-      <Option name="component_pos_x" value="1009.9285849603887" type="double"/>
-      <Option name="component_pos_y" value="1229.208733752108" type="double"/>
+      <Option type="QString" name="alg_id" value="script:linearrescale"/>
+      <Option type="QString" name="component_description" value="Res Secondary Roads"/>
+      <Option type="double" name="component_pos_x" value="920.9285849603887"/>
+      <Option type="double" name="component_pos_y" value="1196.208733752108"/>
       <Option name="dependencies"/>
-      <Option name="id" value="script:linearrescale_1" type="QString"/>
+      <Option type="QString" name="id" value="script:linearrescale_1"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="END" type="List">
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="END">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="0" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0"/>
           </Option>
         </Option>
-        <Option name="INPUT" type="List">
+        <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option name="child_id" value="script:linedistance_2" type="QString"/>
-            <Option name="output_name" value="OUTPUT" type="QString"/>
-            <Option name="source" value="1" type="int"/>
+            <Option type="QString" name="child_id" value="script:linedistance_2"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
-        <Option name="INPUT_FIELD" type="List">
+        <Option type="List" name="INPUT_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="Dis_toR" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Dis_toR"/>
           </Option>
         </Option>
-        <Option name="NEW_MAX" type="List">
+        <Option type="List" name="NEW_MAX">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="9" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="9"/>
           </Option>
         </Option>
-        <Option name="NEW_MIN" type="List">
+        <Option type="List" name="NEW_MIN">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="1" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
           </Option>
         </Option>
-        <Option name="OUTPUT_FIELD" type="List">
+        <Option type="List" name="OUTPUT_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="DisR_R" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="DisR_R"/>
           </Option>
         </Option>
-        <Option name="START" type="List">
+        <Option type="List" name="START">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="5000" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="5000"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="script:linearrescale_3" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="script:linearrescale_3">
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:linearrescale" type="QString"/>
-      <Option name="component_description" value="Rescale Major Roads" type="QString"/>
-      <Option name="component_pos_x" value="621.0216545657261" type="double"/>
-      <Option name="component_pos_y" value="1003.1396695582021" type="double"/>
+      <Option type="QString" name="alg_id" value="script:linearrescale"/>
+      <Option type="QString" name="component_description" value="Res Major Roads"/>
+      <Option type="double" name="component_pos_x" value="551.0216545657261"/>
+      <Option type="double" name="component_pos_y" value="1005.1396695582022"/>
       <Option name="dependencies"/>
-      <Option name="id" value="script:linearrescale_3" type="QString"/>
+      <Option type="QString" name="id" value="script:linearrescale_3"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="END" type="List">
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="END">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="0" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0"/>
           </Option>
         </Option>
-        <Option name="INPUT" type="List">
+        <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option name="child_id" value="script:linedistance_1" type="QString"/>
-            <Option name="output_name" value="OUTPUT" type="QString"/>
-            <Option name="source" value="1" type="int"/>
+            <Option type="QString" name="child_id" value="script:linedistance_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
-        <Option name="INPUT_FIELD" type="List">
+        <Option type="List" name="INPUT_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="Dis_toMR" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Dis_toMR"/>
           </Option>
         </Option>
-        <Option name="NEW_MAX" type="List">
+        <Option type="List" name="NEW_MAX">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="9" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="9"/>
           </Option>
         </Option>
-        <Option name="NEW_MIN" type="List">
+        <Option type="List" name="NEW_MIN">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="1" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
           </Option>
         </Option>
-        <Option name="OUTPUT_FIELD" type="List">
+        <Option type="List" name="OUTPUT_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="DisMR_R" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="DisMR_R"/>
           </Option>
         </Option>
-        <Option name="START" type="List">
+        <Option type="List" name="START">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="15000" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="15000"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="script:linedistance_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="script:linedistance_1">
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:linedistance" type="QString"/>
-      <Option name="component_description" value="Distance to Major Roads" type="QString"/>
-      <Option name="component_pos_x" value="421.07606461086635" type="double"/>
-      <Option name="component_pos_y" value="897" type="double"/>
+      <Option type="QString" name="alg_id" value="script:linedistance"/>
+      <Option type="QString" name="component_description" value="Distance to Major Roads"/>
+      <Option type="double" name="component_pos_x" value="421.07606461086635"/>
+      <Option type="double" name="component_pos_y" value="897"/>
       <Option name="dependencies"/>
-      <Option name="id" value="script:linedistance_1" type="QString"/>
+      <Option type="QString" name="id" value="script:linedistance_1"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="CELL_SIZE" type="List">
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="CELL_SIZE">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="30" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="30"/>
           </Option>
         </Option>
-        <Option name="DATA_TYPE" type="List">
+        <Option type="List" name="DATA_TYPE">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="1" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
           </Option>
         </Option>
-        <Option name="INPUT" type="List">
+        <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option name="parameter_name" value="0inputpolygon" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option type="QString" name="parameter_name" value="cropland"/>
+            <Option type="int" name="source" value="0"/>
           </Option>
         </Option>
-        <Option name="LINE" type="List">
+        <Option type="List" name="LINE">
           <Option type="Map">
-            <Option name="parameter_name" value="1majorroads" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option type="QString" name="parameter_name" value="mainroad"/>
+            <Option type="int" name="source" value="0"/>
           </Option>
         </Option>
-        <Option name="METHOD" type="List">
+        <Option type="List" name="METHOD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="0" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="0"/>
           </Option>
         </Option>
-        <Option name="OUTPUT_COLUMN" type="List">
+        <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="Dis_toMR" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Dis_toMR"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="script:linedistance_2" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="script:linedistance_2">
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:linedistance" type="QString"/>
-      <Option name="component_description" value="Distance to Sec Roads" type="QString"/>
-      <Option name="component_pos_x" value="817.6438126574931" type="double"/>
-      <Option name="component_pos_y" value="1115.3522953264082" type="double"/>
+      <Option type="QString" name="alg_id" value="script:linedistance"/>
+      <Option type="QString" name="component_description" value="Distance to Sec Roads"/>
+      <Option type="double" name="component_pos_x" value="747.6438126574932"/>
+      <Option type="double" name="component_pos_y" value="1101.3522953264082"/>
       <Option name="dependencies"/>
-      <Option name="id" value="script:linedistance_2" type="QString"/>
+      <Option type="QString" name="id" value="script:linedistance_2"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="CELL_SIZE" type="List">
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="CELL_SIZE">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="30" type="double"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="30"/>
           </Option>
         </Option>
-        <Option name="DATA_TYPE" type="List">
+        <Option type="List" name="DATA_TYPE">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="1" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
           </Option>
         </Option>
-        <Option name="INPUT" type="List">
+        <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option name="child_id" value="script:linearrescale_3" type="QString"/>
-            <Option name="output_name" value="Rescaled" type="QString"/>
-            <Option name="source" value="1" type="int"/>
+            <Option type="QString" name="child_id" value="script:linearrescale_3"/>
+            <Option type="QString" name="output_name" value="Rescaled"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
-        <Option name="LINE" type="List">
+        <Option type="List" name="LINE">
           <Option type="Map">
-            <Option name="parameter_name" value="2secondaryroads" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option type="QString" name="parameter_name" value="road"/>
+            <Option type="int" name="source" value="0"/>
           </Option>
         </Option>
-        <Option name="METHOD" type="List">
+        <Option type="List" name="METHOD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="0" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="0"/>
           </Option>
         </Option>
-        <Option name="OUTPUT_COLUMN" type="List">
+        <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="Dis_toR" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Dis_toR"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="script:weightedsum_2" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="script:weightedsum_2">
+      <Option type="bool" name="active" value="true"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:weightedsum" type="QString"/>
-      <Option name="component_description" value="Weighted Sum of Fields" type="QString"/>
-      <Option name="component_pos_x" value="1208.8750367107195" type="double"/>
-      <Option name="component_pos_y" value="1364.9348017621141" type="double"/>
+      <Option type="QString" name="alg_id" value="script:weightedsum"/>
+      <Option type="QString" name="component_description" value="Weighted Sum MR &amp; SR"/>
+      <Option type="double" name="component_pos_x" value="1075.8750367107195"/>
+      <Option type="double" name="component_pos_y" value="1289.9348017621144"/>
       <Option name="dependencies"/>
-      <Option name="id" value="script:weightedsum_2" type="QString"/>
-      <Option name="outputs" type="Map">
-        <Option name="rcrp_TransportAccessibility" type="Map">
-          <Option name="child_id" value="script:weightedsum_2" type="QString"/>
-          <Option name="component_description" value="rcrp_TransportAccessibility" type="QString"/>
-          <Option name="component_pos_x" value="1416.8750367107195" type="double"/>
-          <Option name="component_pos_y" value="1441.9348017621141" type="double"/>
-          <Option name="default_value" type="invalid"/>
-          <Option name="mandatory" value="false" type="bool"/>
-          <Option name="name" value="rcrp_TransportAccessibility" type="QString"/>
-          <Option name="output_name" value="WeightedSum" type="QString"/>
+      <Option type="QString" name="id" value="script:weightedsum_2"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="rcrp_TransportAccessibility">
+          <Option type="QString" name="child_id" value="script:weightedsum_2"/>
+          <Option type="QString" name="component_description" value="rcrp_TransportAccessibility"/>
+          <Option type="double" name="component_pos_x" value="1275.8750367107195"/>
+          <Option type="double" name="component_pos_y" value="1334.9348017621144"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" name="mandatory" value="false"/>
+          <Option type="QString" name="name" value="rcrp_TransportAccessibility"/>
+          <Option type="QString" name="output_name" value="WeightedSum"/>
         </Option>
       </Option>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="FIELDS" type="List">
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="DisMR_R;DisR_R" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="DisMR_R;DisR_R"/>
           </Option>
         </Option>
-        <Option name="INPUT" type="List">
+        <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option name="child_id" value="script:linearrescale_1" type="QString"/>
-            <Option name="output_name" value="Rescaled" type="QString"/>
-            <Option name="source" value="1" type="int"/>
+            <Option type="QString" name="child_id" value="script:linearrescale_1"/>
+            <Option type="QString" name="output_name" value="Rescaled"/>
+            <Option type="int" name="source" value="1"/>
           </Option>
         </Option>
-        <Option name="OUTPUT_COLUMN" type="List">
+        <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="rcrp_trans" type="QString"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="rcrp_trans"/>
           </Option>
         </Option>
-        <Option name="WEIGHTS" type="List">
+        <Option type="List" name="WEIGHTS">
           <Option type="Map">
-            <Option name="parameter_name" value="3WeightedbyRoadslevel" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="0.7, 0.3"/>
           </Option>
         </Option>
       </Option>
     </Option>
   </Option>
-  <Option name="help" type="Map">
-    <Option name="" value="" type="QString"/>
-    <Option name="0inputpolygon" value="Input vector layer" type="QString"/>
-    <Option name="1majorroads" value="Input vector layer.Roads with the largest capacity  usually are viewed as Major Roads." type="QString"/>
-    <Option name="2secondaryroads" value="Input vector layer" type="QString"/>
-    <Option name="3WeightedbyRoadslevel" value="The weight value by which to multiply the fields. It can be any positive or negative decimal value. Weights should be separated by comma.(Note: the weighted fields should be separated by semicolon without space, i.e., field1;field2)" type="QString"/>
-    <Option name="ALG_CREATOR" value="" type="QString"/>
-    <Option name="ALG_DESC" value="Transport Accessibility model are used to evaluate automobile accessibility in each parcel. The tool is able to calculate the distance to two types of roads and then weight the rescaled distances." type="QString"/>
-    <Option name="ALG_HELP_CREATOR" value="" type="QString"/>
-    <Option name="ALG_VERSION" value="" type="QString"/>
-    <Option name="SHORT_DESCRIPTION" value="" type="QString"/>
-    <Option name="script:weightedsum_2:rcrp_TransportAccessibility" value="Output vector layer" type="QString"/>
-  </Option>
+  <Option name="help"/>
   <Option name="modelVariables"/>
-  <Option name="model_group" value="Economic" type="QString"/>
-  <Option name="model_name" value="Transport Accessibility" type="QString"/>
-  <Option name="parameterDefinitions" type="Map">
-    <Option name="0inputpolygon" type="Map">
-      <Option name="data_types" type="List">
-        <Option value="5" type="int"/>
+  <Option type="QString" name="model_group" value="Row Crops"/>
+  <Option type="QString" name="model_name" value="Transport Accessibility"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="cropland">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
       </Option>
-      <Option name="default" type="invalid"/>
-      <Option name="description" value="Input Polygon" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Input Polygon"/>
+      <Option type="int" name="flags" value="0"/>
       <Option name="metadata"/>
-      <Option name="name" value="0inputpolygon" type="QString"/>
-      <Option name="parameter_type" value="vector" type="QString"/>
+      <Option type="QString" name="name" value="cropland"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
     </Option>
-    <Option name="1majorroads" type="Map">
-      <Option name="data_types" type="List">
-        <Option value="5" type="int"/>
+    <Option type="Map" name="mainroad">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
       </Option>
-      <Option name="default" type="invalid"/>
-      <Option name="description" value="Major Roads" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Major Roads"/>
+      <Option type="int" name="flags" value="0"/>
       <Option name="metadata"/>
-      <Option name="name" value="1majorroads" type="QString"/>
-      <Option name="parameter_type" value="vector" type="QString"/>
+      <Option type="QString" name="name" value="mainroad"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
     </Option>
-    <Option name="2secondaryroads" type="Map">
-      <Option name="data_types" type="List">
-        <Option value="5" type="int"/>
+    <Option type="Map" name="road">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
       </Option>
-      <Option name="default" type="invalid"/>
-      <Option name="description" value="Secondary Roads" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Secondary Roads"/>
+      <Option type="int" name="flags" value="0"/>
       <Option name="metadata"/>
-      <Option name="name" value="2secondaryroads" type="QString"/>
-      <Option name="parameter_type" value="vector" type="QString"/>
+      <Option type="QString" name="name" value="road"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
     </Option>
-    <Option name="3WeightedbyRoadslevel" type="Map">
-      <Option name="default" value="0.75,0.25" type="QString"/>
-      <Option name="description" value="Weighted by Roads level" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+    <Option type="Map" name="script:weightedsum_2:rcrp_TransportAccessibility">
+      <Option type="bool" name="create_by_default" value="true"/>
+      <Option type="int" name="data_type" value="-1"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="rcrp_TransportAccessibility"/>
+      <Option type="int" name="flags" value="0"/>
       <Option name="metadata"/>
-      <Option name="multiline" value="false" type="bool"/>
-      <Option name="name" value="3WeightedbyRoadslevel" type="QString"/>
-      <Option name="parameter_type" value="string" type="QString"/>
-    </Option>
-    <Option name="script:weightedsum_2:rcrp_TransportAccessibility" type="Map">
-      <Option name="create_by_default" value="true" type="bool"/>
-      <Option name="data_type" value="-1" type="int"/>
-      <Option name="default" type="invalid"/>
-      <Option name="description" value="rcrp_TransportAccessibility" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
-      <Option name="metadata"/>
-      <Option name="name" value="script:weightedsum_2:rcrp_TransportAccessibility" type="QString"/>
-      <Option name="parameter_type" value="vectorDestination" type="QString"/>
-      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+      <Option type="QString" name="name" value="script:weightedsum_2:rcrp_TransportAccessibility"/>
+      <Option type="QString" name="parameter_type" value="vectorDestination"/>
+      <Option type="bool" name="supports_non_file_outputs" value="true"/>
     </Option>
   </Option>
-  <Option name="parameters" type="Map">
-    <Option name="0inputpolygon" type="Map">
-      <Option name="component_description" value="0inputpolygon" type="QString"/>
-      <Option name="component_pos_x" value="186" type="double"/>
-      <Option name="component_pos_y" value="831" type="double"/>
-      <Option name="name" value="0inputpolygon" type="QString"/>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="cropland">
+      <Option type="QString" name="component_description" value="cropland"/>
+      <Option type="double" name="component_pos_x" value="174.25"/>
+      <Option type="double" name="component_pos_y" value="921.25"/>
+      <Option type="QString" name="name" value="cropland"/>
     </Option>
-    <Option name="1majorroads" type="Map">
-      <Option name="component_description" value="1majorroads" type="QString"/>
-      <Option name="component_pos_x" value="200" type="double"/>
-      <Option name="component_pos_y" value="922" type="double"/>
-      <Option name="name" value="1majorroads" type="QString"/>
+    <Option type="Map" name="mainroad">
+      <Option type="QString" name="component_description" value="mainroad"/>
+      <Option type="double" name="component_pos_x" value="174"/>
+      <Option type="double" name="component_pos_y" value="817.5"/>
+      <Option type="QString" name="name" value="mainroad"/>
     </Option>
-    <Option name="2secondaryroads" type="Map">
-      <Option name="component_description" value="2secondaryroads" type="QString"/>
-      <Option name="component_pos_x" value="501" type="double"/>
-      <Option name="component_pos_y" value="1096" type="double"/>
-      <Option name="name" value="2secondaryroads" type="QString"/>
-    </Option>
-    <Option name="3WeightedbyRoadslevel" type="Map">
-      <Option name="component_description" value="3WeightedbyRoadslevel" type="QString"/>
-      <Option name="component_pos_x" value="929" type="double"/>
-      <Option name="component_pos_y" value="1335" type="double"/>
-      <Option name="name" value="3WeightedbyRoadslevel" type="QString"/>
+    <Option type="Map" name="road">
+      <Option type="QString" name="component_description" value="road"/>
+      <Option type="double" name="component_pos_x" value="417.83700440528605"/>
+      <Option type="double" name="component_pos_y" value="1157.3429701238197"/>
+      <Option type="QString" name="name" value="road"/>
     </Option>
   </Option>
 </Option>

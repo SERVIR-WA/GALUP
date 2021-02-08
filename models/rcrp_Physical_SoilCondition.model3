@@ -48,7 +48,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="RZD"/>
+            <Option type="QString" name="static_value" value="RZD_r"/>
           </Option>
         </Option>
       </Option>
@@ -100,7 +100,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="Drain"/>
+            <Option type="QString" name="static_value" value="Drain_r"/>
           </Option>
         </Option>
       </Option>
@@ -152,7 +152,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd1"/>
+            <Option type="QString" name="static_value" value="PHd1_r"/>
           </Option>
         </Option>
       </Option>
@@ -204,7 +204,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd2"/>
+            <Option type="QString" name="static_value" value="PHd2_r"/>
           </Option>
         </Option>
       </Option>
@@ -256,7 +256,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd3"/>
+            <Option type="QString" name="static_value" value="PHd3_r"/>
           </Option>
         </Option>
       </Option>
@@ -266,8 +266,8 @@
       <Option name="alg_config"/>
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec PH (30-60 cm)"/>
-      <Option type="double" name="component_pos_x" value="1923.594264339152"/>
-      <Option type="double" name="component_pos_y" value="1373.558603491272"/>
+      <Option type="double" name="component_pos_x" value="1917.9942643391519"/>
+      <Option type="double" name="component_pos_y" value="1374.3586034912719"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_6"/>
       <Option name="outputs"/>
@@ -308,7 +308,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd4"/>
+            <Option type="QString" name="static_value" value="PHd4_r"/>
           </Option>
         </Option>
       </Option>
@@ -360,7 +360,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd5"/>
+            <Option type="QString" name="static_value" value="PHd5_r"/>
           </Option>
         </Option>
       </Option>
@@ -412,7 +412,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="PHd6"/>
+            <Option type="QString" name="static_value" value="PHd6_r"/>
           </Option>
         </Option>
       </Option>
@@ -430,8 +430,8 @@
         <Option type="Map" name="rcrp_SoilCondition">
           <Option type="QString" name="child_id" value="script:weightedsum_1"/>
           <Option type="QString" name="component_description" value="rcrp_SoilCondition"/>
-          <Option type="double" name="component_pos_x" value="2719.279551122192"/>
-          <Option type="double" name="component_pos_y" value="1910.4496259351617"/>
+          <Option type="double" name="component_pos_x" value="2720.2795511221925"/>
+          <Option type="double" name="component_pos_y" value="1856.449625935162"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" name="mandatory" value="false"/>
           <Option type="QString" name="name" value="rcrp_SoilCondition"/>
@@ -444,7 +444,7 @@
         <Option type="List" name="FIELDS">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="RZD;Drain;PHd1;PHd2;PHd3;PHd4;PHd5;PHd6"/>
+            <Option type="QString" name="static_value" value="RZD_r;Drain_r;PHd1_r;PHd2_r;PHd3_r;PHd4_r;PHd5_r;PHd6_r"/>
           </Option>
         </Option>
         <Option type="List" name="INPUT">
@@ -457,7 +457,7 @@
         <Option type="List" name="OUTPUT_COLUMN">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="QString" name="static_value" value="SC_rating"/>
+            <Option type="QString" name="static_value" value="SC"/>
           </Option>
         </Option>
         <Option type="List" name="WEIGHTS">
@@ -855,6 +855,7 @@
     <Option type="QString" name="WeightsforPHdifferentdepths" value=""/>
     <Option type="QString" name="WeightsforRZDDrainageandPH" value="The weights assigned to different parameters are according to offical documents, and agriculture literatures. The default value setting is 0.33, 0.33, 0, 0, 0, 0.089, 0.236, 0.005. These values derive from the table of the Estimated Production of Major Crops 2016 (District Medium Term Delevelopment Plan 2018-2021, pp.82), and root zone depth information for 6 major crops in the THLD (Maize, Rice, Cassava, Yam, Cocoyam, Plantain) is from different agricultural articles.&#xa;&#xa;Reference:&#xa;&#xa;Albert, S. (2017, July 27). Plantain Organic Weed Control. Retrieved January 27, 2021, from https://harvesttotable.com/plantain-organic-weed-control/#:~:text=Root%20System%3A%20Plantain%20has%20a,depth%20of%20about%2018%20inches.&#xa; &#xa;Grace, M. R. (1977). Cassava Processing. Rome: FAO.&#xa; &#xa;O'SULLIVAN, J. N. (2008). Root distribution of yam (Dioscorea alata) determined by strontium tracer. Experimental Agriculture, 44(2), 223.&#xa; &#xa;Scaling Soil Nutrient Balances: Enabling Mesolevel Applications for African Realities. (2004). Italy: Food and Agriculture Organization of the United Nations.&#xa; &#xa;DISTRICT MEDIUM TERM DEVELOPMENT PLAN (2018-2021) “An Agenda for Jobs : Creating Prosperity And Equal Opportunity for All”. District Planning Coordinating Unit (DPCU), April. 2017."/>
     <Option type="QString" name="script:weightedsum_1:Soil Condition Weighted" value="The output shapefile for the soil condition."/>
+    <Option type="QString" name="script:weightedsum_1:rcrp_SoilCondition" value="The output vector layer of Soil Condition."/>
   </Option>
   <Option name="modelVariables"/>
   <Option type="QString" name="model_group" value="Physical"/>
@@ -862,7 +863,7 @@
   <Option type="Map" name="parameterDefinitions">
     <Option type="Map" name="0inputpolygon">
       <Option type="List" name="data_types">
-        <Option type="int" value="5"/>
+        <Option type="int" value="2"/>
       </Option>
       <Option type="invalid" name="default"/>
       <Option type="QString" name="description" value="InputPolygon"/>
