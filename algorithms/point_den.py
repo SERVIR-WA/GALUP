@@ -102,7 +102,8 @@ class PointDensity(QgsProcessingAlgorithm):
                 self.POP_COLUMN,
                 self.tr('Population field'),
                 parentLayerParameterName=self.POINT,
-                type=QgsProcessingParameterField.Numeric
+                type=QgsProcessingParameterField.Numeric,
+                optional=True
             )
         )
         search_radius = QgsProcessingParameterDistance(

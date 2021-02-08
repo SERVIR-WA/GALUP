@@ -112,22 +112,21 @@ class AHP(QgsProcessingAlgorithm):
         output_file = self.parameterAsFileOutput(parameters,
                                                  self.OUTPUT_HTML_FILE,
                                                  context)
-
-        com_tbl = np.array(compare_table).reshape((-1, 3))
-        n_row = np.sum(np.arange(num_weights)).item()
-        assert n_row == com_tbl.shape[0], (
-            f'Given {num_weights} weights, there should be {n_row} in the '
-            f'compare table. Unable to construct a valid reciprocal matrix.'
-        )
-        r_mtx = np.identity(num_weights)
-        for i in range(n_row):
-            row_id, col_id, value = com_tbl[i]
-            r_mtx[int(row_id)-1, int(col_id)-1] = value
-
-        r_mtx[np.tril_indices(num_weights, -1)] = (
-            1 / r_mtx.T[np.tril_indices(num_weights, -1)]
-        )
         if op == 'Defined AHP weights':
+            com_tbl = np.array(compare_table).reshape((-1, 3))
+            n_row = np.sum(np.arange(num_weights)).item()
+            r_mtx = np.identity(num_weights)
+            for i in range(n_row):
+                row_id, col_id, value = com_tbl[i]
+                r_mtx[int(row_id)-1, int(col_id)-1] = value
+
+            r_mtx[np.tril_indices(num_weights, -1)] = (
+                1 / r_mtx.T[np.tril_indices(num_weights, -1)]
+            )
+            assert n_row == com_tbl.shape[0], (
+                f'Given {num_weights} weights, there should be {n_row} in the '
+                f'compare table. Unable to construct a valid reciprocal matrix.'
+            )
             priority_vector, cr = utils.ahp(r_mtx)
         else:
             priority_vector, cr = utils.random_ahp(num_weights)
