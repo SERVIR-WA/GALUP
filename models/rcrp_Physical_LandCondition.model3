@@ -64,7 +64,7 @@
       <Option type="QString" name="alg_id" value="script:reclassify"/>
       <Option type="QString" name="component_description" value="Rec Slope Percent"/>
       <Option type="double" name="component_pos_x" value="875.1338339222614"/>
-      <Option type="double" name="component_pos_y" value="673.5881183745583"/>
+      <Option type="double" name="component_pos_y" value="671.5881183745582"/>
       <Option name="dependencies"/>
       <Option type="QString" name="id" value="script:reclassify_1"/>
       <Option name="outputs"/>
@@ -123,8 +123,8 @@
         <Option type="Map" name="rcrp_LandCondition">
           <Option type="QString" name="child_id" value="script:weightedsum_1"/>
           <Option type="QString" name="component_description" value="rcrp_LandCondition"/>
-          <Option type="double" name="component_pos_x" value="1221.3661660777384"/>
-          <Option type="double" name="component_pos_y" value="855.9542844522967"/>
+          <Option type="double" name="component_pos_x" value="1256.3661660777384"/>
+          <Option type="double" name="component_pos_y" value="911.9542844522966"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" name="mandatory" value="false"/>
           <Option type="QString" name="name" value="rcrp_LandCondition"/>
@@ -409,14 +409,14 @@
     </Option>
     <Option type="Map" name="6Landcapacityclassification">
       <Option type="QString" name="component_description" value="6Landcapacityclassification"/>
-      <Option type="double" name="component_pos_x" value="496.3308303886927"/>
+      <Option type="double" name="component_pos_x" value="495.3308303886927"/>
       <Option type="double" name="component_pos_y" value="686.1621024734982"/>
       <Option type="QString" name="name" value="6Landcapacityclassification"/>
     </Option>
     <Option type="Map" name="7LCCClasses">
       <Option type="QString" name="component_description" value="7LCCClasses"/>
-      <Option type="double" name="component_pos_x" value="604.6757950530036"/>
-      <Option type="double" name="component_pos_y" value="770.6936837455833"/>
+      <Option type="double" name="component_pos_x" value="605.6757950530036"/>
+      <Option type="double" name="component_pos_y" value="771.6936837455833"/>
       <Option type="QString" name="name" value="7LCCClasses"/>
     </Option>
     <Option type="Map" name="9Weight">
