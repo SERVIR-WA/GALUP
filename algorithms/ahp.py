@@ -38,6 +38,43 @@ class AHP(QgsProcessingAlgorithm):
 
     def shortHelpString(self):
         return self.tr("Compute AHP weights.")
+        html_doc = '''
+        <p>The tool is used to calculate weights of important criteria \
+        for decision making. In the Analytic Hierarchy Process, we arrange \
+        these factors, once selected, in a hierarchic structure descending \
+        from an overall goal to criteria, subcriteria and alternatives \
+        in successive levels. The tool serves two purposes: it provides an \
+        overall view of the complex relationships inherent in the situation; \
+        and helps the decision maker assess whether the issues in each level \
+        are of the same order of magnitude, so he can compare such homogeneous \
+        elements accurately.</p>
+
+        <h3>Weights generating options</h3>
+        <p>Defined AHP weights - Use this option if the relationships between \
+        each criteria can be measured by certain scales.
+
+        Random AHP wights - Use this option if the relationships between each \
+        criteria are unclear.</p>
+
+        <h3>List of criteria to weight</h3>
+        <p>Input all criteria involved in decision making.</p>
+
+        <h3>Comparison table for creating the reciprocal matrix</h3>
+        <p>Comparison table should be filled if you choose Defined AHP weights \
+        option. The table is used to compare each criteria in scales, i.e.,if \
+        criteria 1 (row) is 5 times important than criteria 2 (column), you \
+        should fill 5 in Pair-wise importance.
+        </p>
+
+        <h3>HTML report</h3>
+        <p>Output HTML report. The consistency index (CI) in here is compared \
+        with the same index obtained as an average over a large number of reciprocal \
+        matrices of the same order whose entries are random. If the consistency ratio \
+        of CI to that from random matrices is significantly small (carefully specified \
+        to be about 10% or less), we accept the estimate. Otherwise, we attempt to \
+        improve consistency. </p>
+        '''
+        return html_doc
 
     def createInstance(self):
         return AHP()
