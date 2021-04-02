@@ -1,4 +1,4 @@
-# LUCIS<sup>OPEN</sup>: Open-source Land Use Conflict Identification Strategy
+# Welcome to LUCIS<sup>OPEN</sup>
 
 LUCIS<sup>OPEN</sup> is a GIS-based, open-source land use planning framework. It's a newly developed system by the [GALUP](http://galup.cersgis.org/) project for the Land Use Spatial Planning Agency (LUSPA) of Ghana to replace the existing Land Use Planning and Management Information System (LUPMIS). LUPMIS<sup>plus</sup> is based on the Land-Use Conflict Identification Strategy (LUCIS), a goal-oriented land use decision-making model developed by Professor Peggy Carr and Professor Paul Zwick at the University of Florida. The intention of the QGIS processing algorithms presented in this repoitory is to allow planners and analysts to create LUCIS models with QGIS. We also provide you documentations and tutorials to guide you through the process of land use modeling.
 
