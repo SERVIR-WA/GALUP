@@ -107,7 +107,7 @@ class ZonalStats(QgsProcessingAlgorithm):
     def __init__(self):
         super().__init__()
 
-    def initAlgorithm(self, configuration={}):
+    def initAlgorithm(self, config=None):
         self.addParameter(
             QgsProcessingParameterFeatureSource(
                 self.INPUT,
@@ -166,5 +166,5 @@ class ZonalStats(QgsProcessingAlgorithm):
 
         output = zonal.zonal_stats_raster(input_gdf, raster_path, stats,
                                           output_clm_prefix, nodata)
-        output.to_file(output_file)
+        output.to_file(output_file, driver="GPKG")
         return {self.OUTPUT: output_file}
