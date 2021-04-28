@@ -1,6 +1,9 @@
 # Welcome to LUCIS<sup>OPEN</sup>
 
-LUCIS<sup>OPEN</sup> is a GIS-based, open-source land use planning framework. It's a newly developed system by the [GALUP](http://galup.cersgis.org/) project for the Land Use Spatial Planning Agency (LUSPA) of Ghana to replace the existing Land Use Planning and Management Information System (LUPMIS). LUPMIS<sup>plus</sup> is based on the Land-Use Conflict Identification Strategy (LUCIS), a goal-oriented land use decision-making model developed by Professor Peggy Carr and Professor Paul Zwick at the University of Florida. The intention of the QGIS processing algorithms presented in this repoitory is to allow planners and analysts to create LUCIS models with QGIS. We also provide you documentations and tutorials to guide you through the process of land use modeling.
+LUCIS<sup>OPEN</sup> is a GIS-based, open-source land use planning framework.
+It is a new system developed by the Ghana Land Use Project ([GALUP](http://galup.cersgis.org/)) for the Land Use Spatial Planning Agency (LUSPA) of Ghana to replace the existing Land Use Planning and Management Information System (LUPMIS). LUPMIS<sup>plus</sup> is based on the Land-Use Conflict Identification Strategy (LUCIS), a goal-oriented land use decision-making model developed by Professor Peggy Carr and Professor Paul Zwick at the University of Florida. The intention of the QGIS processing algorithms presented in this repository is to allow planners and analysts to create LUCIS models with QGIS. We also provide you documentations and tutorials to guide you through the process of land use modeling.
+
+![lucis_open](images/lucis_workflow.jpg)
 
 ## What tools are available
 
@@ -20,9 +23,15 @@ LUCIS<sup>OPEN</sup> is a GIS-based, open-source land use planning framework. It
 14. Weighted Sum of Columns
 15. Zonal Statistics
 
-## [Install](tutorials/0-install_instruction.md)
+## [Installation](https://github.com/chjch/lucis_qgis/wiki/Installation)
 
-## Requirements
+## Resources
 
-1. [QGIS 3.10](https://qgis.org/en/site/index.html): A Free and Open Source Geographic Information System.
-2. [pylusat](https://github.com/ChangjieChen/pylusat): Python Land-Use Suitability Analysis Toolkit.
+1. [University of Florida](https://abe.ufl.edu/galup/)
+
+<p float="left">
+  <img src="images/GALUP-logo.png" width="100"/> &nbsp
+  <img src="images/Servir_Logo.jpg" width="100" /> &nbsp
+  <img src="images/nasa.png" width="100" /> &nbsp
+  <img src="images/USAID-logo.jpg" width="90" />
+</p>
