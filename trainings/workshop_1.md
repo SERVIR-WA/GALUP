@@ -1,14 +1,17 @@
 # Module 1 - Software and Data Preparation
 
-## 1. Learning Goals
+**What will you learn from this module?**
 
-This module will cover the following contents:
-
-- Installing QGIS and PyLUSAT (Python for Land Use Suitability Analysis Tools)
-- Introducing the interface of QGIS 3.10.8
+- Installing QGIS and PyLUSAT (Python for Land Use Suitability Analysis Tools),
+- Introducing the interface of QGIS 3.10.8,
 - Visualizing the datasets prepared for this series of trainings in QGIS.
 
-## 2. Software Installation
+**Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit)
+to help us improve this tutorial.**
+
+<hr style="border:1px solid gray"> </hr>
+
+## 1. Software Installation
 
 - Follow the [instruction](https://github.com/chjch/lucis_qgis/wiki/Installation)
   to install the QGIS software and the Python package, PyLUSAT, which must be
@@ -17,7 +20,7 @@ This module will cover the following contents:
   - [QGIS 3.10.8](https://qgis.org/en/site/)
   - [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/)
 
-## 3. Get familiar with QGIS user interface
+## 2. Get familiar with QGIS user interface
 
 We will explore the QGIS user interface so that you are familiar with the
 menus, toolbars, map canvas and layers list that form the basic structure of
@@ -32,14 +35,17 @@ the interface.
   - Locator bar
 - Customize the QGIS GUI to fits your own preferences and needs.
 
-## 4. Get to know the datasets
+## 3. Get to know the datasets
 
 - [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
 - Open data in QGIS
 - Change the symbology of the dataset
 
----
+## 4. Additional Resources
 
-**What's Next**?
+- [What is GIS and why use QGIS](https://www.youtube.com/watch?v=8oEnJvLzDnQ)
+- [QGIS User Guide](https://docs.qgis.org/3.16/en/docs/user_manual/)
+
+## 5. What's Next?
 
 Module 2 - Introduction to LUCIS<sup>OPEN</sup> Tools
