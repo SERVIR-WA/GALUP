@@ -41,11 +41,15 @@ the interface.
 - Open data in QGIS
 - Change the symbology of the dataset
 
-## 4. Additional Resources
+## 4. Exercises
+
+- Please complete the exercise [here](https://github.com/chjch/lucis_qgis).
+
+## 5. Additional Resources
 
 - [What is GIS and why use QGIS](https://www.youtube.com/watch?v=8oEnJvLzDnQ)
 - [QGIS User Guide](https://docs.qgis.org/3.16/en/docs/user_manual/)
 
-## 5. What's Next?
+## 6. What's Next?
 
 Module 2 - Introduction to LUCIS<sup>OPEN</sup> Tools
