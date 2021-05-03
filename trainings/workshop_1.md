@@ -9,7 +9,7 @@
 **Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit)
 to help us improve this tutorial.**
 
-<hr style="border:1px solid gray"> </hr>
+<hr style="height:1px;border-width:0;background-color:LightGray"> </hr>
 
 ## 1. Software Installation
 
