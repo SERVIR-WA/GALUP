@@ -9,16 +9,15 @@
 **Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit)
 to help us improve this tutorial.**
 
-<hr style="height:1px;border-width:0;background-color:LightGray"> </hr>
+---
 
 ## 1. Software Installation
 
-- Follow the [instruction](https://github.com/chjch/lucis_qgis/wiki/Installation)
-  to install the QGIS software and the Python package, PyLUSAT, which must be
-  installed before we can successfully load and run the tools GALUP have
-  developed.
-  - [QGIS 3.10.8](https://qgis.org/en/site/)
-  - [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/)
+> Follow the [instruction](https://github.com/chjch/lucis_qgis/wiki/Installation)
+> to install [QGIS 3.10.8](https://qgis.org/en/site/) and
+> [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/) package, which
+> must be installed before we can successfully load and run the tools GALUP
+> have developed.
 
 ## 2. Using QGIS to Create Maps
 
@@ -69,7 +68,7 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
   - Click _Manage and Install Plugins..._.
   ![basemap1](../../../images/Basemap/basemap.png)
 - In the **Plugin** Window, search for **QuickMapServices** then click Install
-  button [basemap_ins](../../../images/Basemap/quick_map_ins.png)
+  button ![basemap_ins](../../../images/Basemap/quick_map_ins.png)
 - After installlation, you should be able to find the _QuickMapServices_ button
   in the Web Toolbar. ![QuickMapServices](../../../images/Basemap/quick_service.png)
 - Click the _QuickMapServices_ button and click _Settings_.
