@@ -7,7 +7,7 @@ It is a new system developed by the Ghana Land Use Project ([GALUP](http://galup
 
 ## GALUP Training Sessions
 
-1. [Module 1 - Software and Data Preparation](https://github.com/chjch/lucis_qgis/blob/master/trainings/workshop_1.md)
+1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
 2. [Module 2]
 3. [Module 3]
 4. [Module 4]
