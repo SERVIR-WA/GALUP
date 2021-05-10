@@ -40,7 +40,7 @@ the interface.
     - To install the basemap, you need to go to the menu toolbar, click _Plugins_, and click _Manage and Install Plugins..._. ![basemap1](../../../images/Basemap/basemap.png)
     - In the **Plugin** Window, search for **QuickMapServices** then click Install button. ![basemap_ins](../../../images/Basemap/quick_map_ins.png)
     - After it installs, you should be able to find the _QuickMapServices_ button in the Web Toolbar.
-    - ![QuickMapServices](../../../images/Basemap/quick_service.png)
+      ![QuickMapServices](../../../images/Basemap/quick_service.png)
     - Click the _QuickMapServices_ button and click _Settings_.
     - In the **QuickMapServices Settings** window, click the _More Services_ tab, and click _Get contributed pack_ to get more basemaps.
     ![settings](../../../images/Basemap/settings.png)
@@ -51,7 +51,7 @@ the interface.
     - In the map window, click the _Add Item_ button on the main menu bar, and click add map. Select an area to render your map. ![add_map](../../../images/Export_ur_own_map/add_map.gif)
     - In order to have a decent map, you might need _Add Label_ to set the name of your map, _Add Legend_ to identify the elements in the map, _Add Scale Bar_ to use a scale bar to indicates the scale of the map, _Add North Arrow_ to add a north arrow. You can add these items under the _Add Item_ button.
     - You can edit the items you added at windows the right side.
-    ![edit](../../../images/Export_ur_own_map/edit.png)
+      ![edit](../../../images/Export_ur_own_map/edit.png)
     - After you finishing all the layout of your map, click the _Layout_ button on the main menu bar, and click _Export as PDF..._ to export your map.
   
 - Customize the QGIS GUI to fits your own preferences and needs.
