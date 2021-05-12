@@ -6,14 +6,12 @@
 - Introducing the interface of QGIS 3.10.8,
 - Visualizing the datasets prepared for this series of trainings in QGIS.
 
-**Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit)
-to help us improve this tutorial.**
-
 ---
 
 ## 1. Software Installation
 
-> Follow the [instruction](https://github.com/chjch/lucis_qgis/wiki/Installation)
+> :pushpin:<br>
+> Follow the [instruction](https://github.com/SERVIR-WA/GALUP/wiki/Install)
 > to install [QGIS 3.10.8](https://qgis.org/en/site/) and
 > [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/) package, which
 > must be installed before we can successfully load and run the tools GALUP
@@ -114,6 +112,11 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
 - [What is GIS and why use QGIS](https://www.youtube.com/watch?v=8oEnJvLzDnQ)
 - [QGIS User Guide](https://docs.qgis.org/3.16/en/docs/user_manual/)
 
-## 6. What's Next?
+## 6. Post-training Survey
+
+Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit) to summarize what you have
+learned and also help us improve this tutorial.
+
+## 7. What's Next?
 
 Module 2 - Introduction to LUCIS<sup>OPEN</sup> Tools
