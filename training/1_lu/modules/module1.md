@@ -56,7 +56,7 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
 - symbolize the vector layers using the [symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?highlight=symbology#basic-fa-changing-colors) tab in the layer properties
 - choose the [Categorized option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
-- choose [Graduated option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) to present the data, if you have numeric data you want to symbolize (i.e. total population)
+- choose the [Graduated option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) to present the data, if you have numeric data you want to symbolize (i.e. total population)
 
 ### 2.5 Add a _Basemap_ to the canvas
 
