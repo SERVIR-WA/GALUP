@@ -38,9 +38,10 @@ of the QGIS GUI (Graphic User Interface).
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
 ### 2.2 Add data to _map canvas_ （GY）
-
-- drag and drop data
-- browser panel, and add to Favorites
+[Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?highlight=favoriate#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
+- drag and drop the target files from brower panel into the map canvas
+- explore the [interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#interacting-with-the-browser-items)
+- add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=favoriate#basic-the-browser-panel)
 
 ### 2.3 Open the _Attribute Table_ to review your data (SL)
 
@@ -52,10 +53,10 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
   attributes of all features in the layer.
 
 ### 2.4 Symbology (GY)
-
-- Single color
-- Categorized
-- Graduated color
+The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
+- symbolize the vector layers using the [symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?highlight=symbology#basic-fa-changing-colors) tab in the layer properties
+- choose the [Categorized option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
+- choose [Graduated option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) to present the data, if you have numeric data you want to symbolize (i.e. total population)
 
 ### 2.5 Add a _Basemap_ to the canvas
 
