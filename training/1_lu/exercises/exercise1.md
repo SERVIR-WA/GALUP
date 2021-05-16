@@ -17,7 +17,7 @@
     - Click _Classify_ and then Click _OK_
     - Add a _Basemap_ to the _map canvas_  
     - Create a _Layout_ and Add a _Legend_, a _Scale bar_, and a _North Arrow_
-
+    - Print the _Layout_
 - Output
 
 
