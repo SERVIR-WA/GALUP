@@ -43,7 +43,9 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
 - explore the [interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#interacting-with-the-browser-items)
 - add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=favoriate#basic-the-browser-panel)
 
-### 2.3 Open the _Attribute Table_ to review your data (SL)
+### 2.3 Open the _Attribute Table_ to Review Your Data (SL)
+
+The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) displays information on features of a selected layer.
 
 - Put the cursor on a layer of your interest, and right click the layer and
   click _Open Attribute Table_.
@@ -58,45 +60,31 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 - choose the [Categorized option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
 - choose the [Graduated option](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) to present the data, if you have numeric data you want to symbolize (i.e. total population)
 
-### 2.5 Add a _Basemap_ to the canvas
+### 2.5 Add a _Basemap_ to Map Canvas
 
-- To add a basemap to the map canvas, in QGIS, we need to install a
+A [basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm) is a layer with geographic information that serves as a background. A base map provides context for additional layers that are overlaid on top of the base map.
+
+- To add a basemap to the map canvas, in QGIS, we need to install an
   [QGIS plugin](https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html).
-  - Go to the menu toolbar,
-  - Click _Plugins_, and
-  - Click _Manage and Install Plugins..._.
-  ![basemap1](../../../images/Basemap/basemap.png)
-- In the **Plugin** Window, search for **QuickMapServices** then click Install
-  button ![basemap_ins](../../../images/Basemap/quick_map_ins.png)
-- After installlation, you should be able to find the _QuickMapServices_ button
-  in the Web Toolbar. ![QuickMapServices](../../../images/Basemap/quick_service.png)
-- Click the _QuickMapServices_ button and click _Settings_.
-- In the **QuickMapServices Settings** window, click the _More Services_ tab,
-  and click _Get contributed pack_ to get more basemaps.
-  ![settings](../../../images/Basemap/settings.png)
-- Now try to click the _QuickMapServices_ button again, and you will see more
-  basemap options.
-  
-### 2.6 Create a _Layout_ to print your map
+- Open the **Plugin** Window, search and install [**QuickMapServices**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin).
+- After installation, open the **QuickMapServices Settings** window, click the _More Services_ tab, and click _Get contributed pack_ to get more basemaps.
+- Add one basemap from **QuickMapServices** to map canvas.
+  ![basemap](../../../images/Basemap/basemap_1.png)
 
-- After setting up the map, you are now ready to print it (as a pdf file) to
-  share with your colleagues. You can click the _Show Layout Manager_ button on
-  the **Project Toolbar** to open the **Layout Manager** window (or you can
-  click the _Project_ button on the menu bar and click _Layout Manager..._).
-- In the **Layout Manager** window, click the _Create..._ button, and name your
+### 2.6 Create a _Layout_ to Print Your Map
+
+After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#overview-of-the-print-layout) your map and print it (as a pdf file) to share with your colleagues.
+  
+- Open the [**Layout Manager**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-manager) window, click the _Create..._ button, and name your
   map and click _OK_ to open the map window.
-  ![create_layout](../../../images/Export_ur_own_map/layout_manager.png)
-- In the map window, click the _Add Item_ button on the main menu bar, and
-  click add map. Select an area to render your map.
-  ![add_map](../../../images/Export_ur_own_map/add_map.gif)
-- In order to have a decent map, you might need _Add Label_ to set the name of
-  your map, _Add Legend_ to identify the elements in the map, _Add Scale Bar_
-  to use a scale bar to indicates the scale of the map, _Add North Arrow_ to
-  add a north arrow. You can add these items under the _Add Item_ button.
-- You can edit the items you added at windows the right side.<br>
-  ![edit](../../../images/Export_ur_own_map/edit.png)
+- In the map window, click the [_Add Item_ button](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu) on the main menu bar, and
+  click add map.
+- In order to have a decent map, you might need a **Name** for your map, a **Legend** to identify the elements in the map, a **Scale Bar**
+  to indicates the scale of the map, a **North Arrow** to
+  indicate the direction. You can add these items under the _Add Item_ button.
 - After you finishing all the layout of your map, click the _Layout_ button on
-  the main menu bar, and click _Export as PDF..._ to export your map.
+  the main menu bar, and click [_Export as PDF..._](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#edit-menu) to export your map. (If the basemap can't be rendered in the PDF, try lower _dpi_ in the **Export Setting** in the **Layout** tab.)
+  ![MyMap](../../../images/Export_ur_own_map/MyMap.png)
   
 ## 3. Get to know the datasets
 
