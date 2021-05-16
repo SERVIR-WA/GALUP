@@ -1,23 +1,32 @@
+# Exercise 1
 
-- Presenting population in Ghana
+## 1. Tasks
     
-    We provided you a exercise to illustate the populaton distribution of Ghana by using Q gis. To better understand how population are distributed in Ghana, you need to visually present the number of population in each regions of Ghana. You can download the dataset [here](). This exercise cover the knowledge about:
+We provided you a exercise to illustate the populaton distribution of Ghana by using Q gis. To better understand how population are distributed in Ghana, you need to visually present the number of population in each regions of Ghana.
 
-    - Acquire the datasets and add the data to map
-    - Symbolize vector layers
-    - Create a layout to print the map
+Download the dataset in [here](). 
 
+## 2. knowledge
 
-- Step by step
-    - Find Population in _Browser Panel_ and Add data to the _map canvas_
-    - Open Population's _Attribute Table_ to review the column containing population data
-    - Open _Symbology_ tab in _Layer Properties
-    - Select _Graduated_ option and Find the target column in _Value_
-    - Choose an appropriate _Color ramp_ and _Classes_
-    - Click _Classify_ and then Click _OK_
-    - Add a _Basemap_ to the _map canvas_  
-    - Create a _Layout_ and Add a _Legend_, a _Scale bar_, and a _North Arrow_
-    - Print the _Layout_
-- Output
+This exercise cover the knowledge about:
 
+- Acquire the datasets and add the data to map.
+- Symbolize vector layers.
+- Create a layout to print the map.
+
+## 3. Step by step
+- Find data (_Gh_260_MMDA_WGS84_) in _Browser Panel_ and Add data to the _map canvas_
+- Open _Attribute Table_ to review the field (_Pop_2018_) containing population data
+- Open _Symbology_ tab in _Layer Properties_.
+- Select _Graduated_ option and Find the target field (_Pop_2018_) in _Value_.
+- Choose _Reds_ color ramp with 5 classes to render the population distribution.
+- Add _ESRI Gray (light)_ as your basemap.
+- Create a _Layout_ and Add a _Legend_, a _Scale bar_, and a _North Arrow_.
+- Print the _Layout_.
+
+## 4.Output
+
+|               Example of the Output Layout           |
+|:-------------------------------------------------:|
+| ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
 

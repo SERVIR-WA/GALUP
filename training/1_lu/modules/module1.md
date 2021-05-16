@@ -37,13 +37,13 @@ of the QGIS GUI (Graphic User Interface).
 
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
-### 2.2 Add Data to _map canvas_ （GY）
+### 2.2 Add Data to _map canvas_
 [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?highlight=favoriate#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
 - Drag and drop the target files from brower panel into the map canvas
 - Explore the [Interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#interacting-with-the-browser-items)
 - Add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=favoriate#basic-the-browser-panel)
 
-### 2.3 Open the _Attribute Table_ to Review Your Data (SL)
+### 2.3 Open the _Attribute Table_ to Review Your Data
 
 The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) displays information on features of a selected layer.
 
@@ -54,7 +54,7 @@ The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_wit
   filtered, and the number of features are selected. You can find the
   attributes of all features in the layer.
 
-### 2.4 Symbology (GY)
+### 2.4 Symbology
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
 - Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?highlight=symbology#basic-fa-changing-colors) tab in the layer properties
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
