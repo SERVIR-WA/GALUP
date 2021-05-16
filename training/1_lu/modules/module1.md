@@ -60,6 +60,10 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
 - Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population)
 
+| Categorized color | Graduated color |
+|-------------------|--------------------|
+| ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
+
 ### 2.5 Add a _Basemap_ to Map Canvas
 
 A [basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm) is a layer with geographic information that serves as a background. A base map provides context for additional layers that are overlaid on top of the base map.
@@ -89,11 +93,7 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 ## 3. Get to Know the Datasets
 
 - [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
-- Open data in QGIS
-- Change the symbology of the dataset
-
-- Open _Information_ tab in _Layer Properties_
-- Review the formats and types of the data
+- Identify and acquire useful datasets
 
 | Theme | ID | File Name            | Data Format | Type | Description                                               |
 |-------|----|----------------------|-------------|------|-----------------------------------------------------------|
