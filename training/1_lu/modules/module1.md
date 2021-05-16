@@ -60,8 +60,8 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.)
 - Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population)
 
-| Categorized color | Graduated color |
-|-------------------|--------------------|
+|                   Categorized color                    |               Graduated color                  |
+|:--------------------------------------------------------:|:---------------------------------:|
 | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
 
 ### 2.5 Add a _Basemap_ to Map Canvas
@@ -73,7 +73,10 @@ A [basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_Ab
 - Open the **Plugin** Window, search and install [**QuickMapServices**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin).
 - After installation, open the **QuickMapServices Settings** window, click the _More Services_ tab, and click _Get contributed pack_ to get more basemaps.
 - Add one basemap from **QuickMapServices** to map canvas.
-  ![basemap](../../../images/Basemap/basemap_1.png)
+
+|                Layer with a Basemap                  |
+|:-------------------------------------------------:|
+| ![basemap](../../../images/Basemap/basemap_1.png) |
 
 ### 2.6 Create a _Layout_ to Print Your Map
 
@@ -88,8 +91,12 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
   indicate the direction. You can add these items under the _Add Item_ button.
 - After you finishing all the layout of your map, click the _Layout_ button on
   the main menu bar, and click [_Export as PDF..._](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#edit-menu) to export your map. (If the basemap can't be rendered in the PDF, try lower _dpi_ in the **Export Setting** in the **Layout** tab.)
-  ![MyMap](../../../images/Export_ur_own_map/MyMap.png)
-  
+
+|               Example of the Printed Layout           |
+|:-------------------------------------------------:|
+| ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
+
+
 ## 3. Get to Know the Datasets
 
 - [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
