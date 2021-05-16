@@ -22,7 +22,7 @@ This exercise cover the knowledge about:
 - Choose _Reds_ color ramp with 5 classes to render the population distribution.
 - Add _ESRI Gray (light)_ as your basemap.
 - Create a _Layout_ and Add a _Legend_, a _Scale bar_, and a _North Arrow_.
-- Print the _Layout_.
+- Export your map with appropriate map parameters as a PDF file.
 
 ## 4.Output
 
