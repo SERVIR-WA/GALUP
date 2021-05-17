@@ -6,7 +6,7 @@ We provided you a exercise to illustate the populaton distribution of Ghana by u
 
 Download the dataset in [here](). 
 
-## 2. knowledge
+## 2. Knowledge
 
 This exercise cover the knowledge about:
 

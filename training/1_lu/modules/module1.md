@@ -60,7 +60,7 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
 - Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population).
 
-|                   Categorized color                    |               Graduated color                  |
+|                   Categorized Symbology                    |               Graduated Symbology                  |
 |:--------------------------------------------------------:|:---------------------------------:|
 | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
 
@@ -124,7 +124,8 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 
 ## 4. Exercises
 
-- Please complete the exercise [here](https://github.com/chjch/lucis_qgis).
+- Please complete the Exercise 1 [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
+- Please complete the Exercise 2 [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
 
 ## 5. Additional Resources
 
