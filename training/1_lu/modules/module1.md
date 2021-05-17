@@ -56,7 +56,7 @@ The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_wit
 
 ### 2.4 Symbology
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
-- Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?highlight=symbology#basic-fa-changing-colors) tab in the layer properties.
+- Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) tab in the layer properties.
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
 - Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population).
 
@@ -111,16 +111,16 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 | 5  | THLD_poly                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
 | 6  | Gh_260_MMDA               | vector      | polygon | Administration Regions of Ghana                           |
 | 7  | osm2020_allrds_THLD       | vector      | line    | Road Network                                              |
-| 8  | Drain_THLD100             | raster      | tiff    | Soil Drainage                                             |
-| 9  | RZD_THLD100               | raster      | tiff    | Root Zone Depth                                           |
+| 8  | Drain_THLD100             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
+| 9  | RZD_THLD100               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
 | 10 | Slope_Percent             | raster      | tiff    | Slope Percent                                             |
-| 11 | SD0_5                     | raster      | tiff    | Soil PH 0-5                                               |
-| 12 | SD5_15                    | raster      | tiff    | Soil PH 5-15                                              |
-| 13 | SD15_30                   | raster      | tiff    | Soil PH 15-30                                             |
-| 14 | SD30_60                   | raster      | tiff    | Soil PH 30-60                                             |
-| 15 | SD60_100                  | raster      | tiff    | Soil PH 60-100                                            |
-| 16 | SD100_200                 | raster      | tiff    | Soil PH 100-200                                           |
-| 17 | iSDA_MGRS                 | raster      | tiff    | Land Cover Type Ghana 2019                                |
+| 11 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                               |
+| 12 | SD5_15                    | raster      | tiff    | [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                              |
+| 13 | SD15_30                   | raster      | tiff    | [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
+| 14 | SD30_60                   | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
+| 15 | SD60_100                  | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                            |
+| 16 | SD100_200                 | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                           |
+| 17 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)                                |
 
 ## 4. Exercises
 
