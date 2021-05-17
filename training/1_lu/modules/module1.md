@@ -38,10 +38,10 @@ of the QGIS GUI (Graphic User Interface).
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
 ### 2.2 Add Data to _map canvas_
-[Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?highlight=favoriate#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
+[Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
 - Drag and drop the target files from brower panel into the map canvas.
-- Explore the [Interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?highlight=browser%20panel#interacting-with-the-browser-items).
-- Add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=favoriate#basic-the-browser-panel).
+- Explore the [Interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#interacting-with-the-browser-items).
+- Add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?#basic-the-browser-panel).
 
 ### 2.3 Open the _Attribute Table_ to Review Your Data
 
@@ -56,9 +56,9 @@ The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_wit
 
 ### 2.4 Symbology
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
-- Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?highlight=symbology#basic-fa-changing-colors) tab in the layer properties.
-- Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
-- Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=single%20color#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population).
+- Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) tab in the layer properties.
+- Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
+- Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population).
 
 |                   Categorized Symbology                    |               Graduated Symbology                  |
 |:--------------------------------------------------------:|:---------------------------------:|
@@ -102,14 +102,25 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 - [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
 - Identify and acquire useful datasets
 
-| Theme | ID | File Name            | Data Format | Type | Description                                               |
-|-------|----|----------------------|-------------|------|-----------------------------------------------------------|
-| Demography | 1 <br> 2 <br> 3 | Gh_260_MMDA_WGS84 <br> population_gha_2018-10-01 <br> pop_landsat_2018_THLD | vector <br> raster <br> raster  | polygon <br> tiff <br> tiff    | Areas and Population of Ghana 2018 <br> Ghana Population 2018 <br> Twifo/Heman/Lower Denkyira District Population |
-| Regions & Boundary | 4 <br> 5 <br> 6 | THLD_Boundary <br> THLD_poly <br> Gh_260_MMDA | vector <br> vector <br> vector | polygon <br> polygon <br> polygon | Twifo/Heman/Lower Denkyira District Boundary <br> Twifo/Heman/Lower Denkyira District Administrative Region <br> Administration Regions of Ghana |
-| Transport | 7 | osm2020_allrds_THLD | vector | line | Road Network |
-| Soils & Land Condition  | 8 <br> 9 <br> 10 <br> 11 <br> 12 <br> 13 <br> 14 <br> 15 <br> 16 <br> 17 | Twifo_Hemang_Lower_Denkyira1 <br> Drain_THLD100 <br> RZD_THLD100 <br> Slope_Percent <br> SD0_5 <br> SD5_15 <br> SD15_30 <br> SD30_60 <br> SD60_100 <br> SD100_200 | raster <br> raster <br> raster <br> raster <br> raster <br> raster <br> raster <br> raster <br> raster <br> raster | tiff <br> tiff <br> tiff <br> tiff <br> tiff <br> tiff <br> tiff <br> tiff <br> tiff <br> tiff | Twifo/Heman/Lower Denkyira District Elevation <br> [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9) <br> [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) <br> Slope Percent <br> [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) <br> [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) <br> [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) <br> [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) <br> [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) <br> [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) |
-| Forest & Water | 18 <br> 19 <br> 20| Hansen_GFC-2019-v1.7_gain_10N_010W <br> Hansen_GFC-2019-v1.7_lossyear_10N_010W <br> Hansen_GFC-2019-v1.7_treecover2000_10N_010W | raster <br> raster <br> raster | tiff <br> tiff <br> tiff | [Global Rorest Cover Gain 2000–2012](https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html) <br> [Year of Gross Forest Cover Loss Event](https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html) <br> [Tree Canopy Cover for Year 2000](https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html) |
-| Land Cover | 21 <br> 22 <br> 23 <br> 24 | iSDA_MGRS <br> GhanaClassMODIS_2019 <br> GhanaClassMODIS_2010 <br> GhanaClassMODIS_2001 | raster <br> raster <br> raster <br> raster | tiff <br> tiff <br> tiff <br> tiff | Land Cover Type Ghana 2019 <br> Land Cover Type 2019 <br> Land Cover Type 2010 <br> Land Cover Type 2001 |
+| ID | File Name                 | Data Format | Type    | Description                                               |
+|----|---------------------------|-------------|---------|-----------------------------------------------------------|
+| 1  | Gh_260_MMDA_WGS84         | vector      | polygon | Areas and Population of Ghana 2018                        |
+| 2  | population_gha_2018-10-01 | raster      | tiff    | Ghana Population 2018                                     |
+| 3  | pop_landsat_2018_THLD     | raster      | tiff    | Twifo/Heman/Lower Denkyira District Population            |
+| 4  | THLD_Boundary             | vector      | polygon | Twifo/Heman/Lower Denkyira District Boundary              |
+| 5  | THLD_poly                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
+| 6  | Gh_260_MMDA               | vector      | polygon | Administration Regions of Ghana                           |
+| 7  | osm2020_allrds_THLD       | vector      | line    | Road Network                                              |
+| 8  | Drain_THLD100             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
+| 9  | RZD_THLD100               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
+| 10 | Slope_Percent             | raster      | tiff    | Slope Percent                                             |
+| 11 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                               |
+| 12 | SD5_15                    | raster      | tiff    | [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                              |
+| 13 | SD15_30                   | raster      | tiff    | [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
+| 14 | SD30_60                   | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
+| 15 | SD60_100                  | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                            |
+| 16 | SD100_200                 | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                           |
+| 17 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)                                |
 
 ## 4. Exercises
 
