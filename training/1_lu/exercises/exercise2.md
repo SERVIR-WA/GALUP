@@ -22,7 +22,8 @@ For the video instruction of the **Field Calculator** click [here](https://www.y
 4. In the **Field Calculator** tool, create a new field and type the correct expression for calculating the population density by using _Pop\_2018_ and _Area\_km2_.
 5. Use the _Graduated_ symbology and _Reds_ color ramp with 5 classes to render the population density distribution.
 6. Add _ESRI Gary (light)_ as your basemap.
-7. Export your map with appropriate map parameters as a PDF file.
+7. Create a _Layout_ and Add a _Label_, a _Legend_, a _Scale bar_, and a _North Arrow_.
+8. Export your map as a PDF file.
   
 ## 4. Output
 ![densitymap](../../../images/Export_ur_own_map/MyDensityMap.png)

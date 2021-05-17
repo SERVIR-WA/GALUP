@@ -90,7 +90,7 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
   to indicates the scale of the map, a **North Arrow** to
   indicate the direction. You can add these items under the _Add Item_ button.
 - After you finishing all the layout of your map, click the _Layout_ button on
-  the main menu bar, and click [_Export as PDF..._](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#edit-menu) to export your map. (If the basemap can't be rendered in the PDF, try lower _dpi_ in the **Export Setting** in the **Layout** tab.)
+  the main menu bar, and click [_Export as PDF..._](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#edit-menu) to export your map. (If the basemap cannot be rendered in the PDF, try a lower _dpi_ in the **Export Setting** in the **Layout** tab.)
 
 |               Example of the Printed Layout           |
 |:-------------------------------------------------:|
