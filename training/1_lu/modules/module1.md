@@ -6,8 +6,6 @@
 - Introducing the interface of QGIS 3.10.8,
 - Visualizing the datasets prepared for this series of trainings in QGIS.
 
----
-
 ## 1. Software Installation
 
 > :pushpin:<br>
