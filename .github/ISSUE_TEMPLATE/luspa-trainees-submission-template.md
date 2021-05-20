@@ -8,10 +8,8 @@ assignees: ''
 
 ---
 
-### 1. Please drag & drop exercise 1 pdf file below.
+1. Please drag & drop exercise 1 pdf file below.
 
+2. Please drag & drop exercise 2 pdf file below.
 
-### 2. Please drag & drop exercise 2 pdf file below.
-
-
-### 3. If you have any comments about this exercise, please leave it below.
+3. If you have any comments about this exercise, please leave it below.
