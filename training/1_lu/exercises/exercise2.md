@@ -16,6 +16,7 @@ For the video instruction of the **Field Calculator** click [here](https://www.y
 - Create a layout and export the map.
 
 ## 3. Instruction
+
 1. Add the data (_Gh_260_MMDA_WGS84_) to the _Layer_ panel.
 2. Open the _Attribute Table_ of the data to review the field containing population data (_Pop\_2018_) and the field containing the area of each district data (_Area\_km2_).
 3. Search and open the **Field Calculator** tool in the [**Processing Toolbox**](https://docs.qgis.org/3.10/en/docs/user_manual/processing/toolbox.html?highlight=processing%20toolbox#the-toolbox).
@@ -25,5 +26,10 @@ For the video instruction of the **Field Calculator** click [here](https://www.y
 7. Create a _Layout_ and add a _Label_, a _Legend_, a _Scale bar_, and a _North Arrow_.
 8. Export your map as a PDF file.
   
-## 4. Output
+## 4. Result
+
 ![densitymap](../../../images/Export_ur_own_map/MyDensityMap.png)
+
+## 5. Turn in this Exercise
+
+Please turn in your exercise [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=EXERCISE+1+%5Breplace+with+your+name%5D).
