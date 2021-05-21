@@ -12,4 +12,6 @@ assignees: ''
 
 2. Please drag & drop exercise 2 pdf file below.
 
-3. If you have any comments about this exercise, please leave it below.
+3. Make sure to update the title with your name.
+
+4. If you have any comments about this exercise, please leave it below.
