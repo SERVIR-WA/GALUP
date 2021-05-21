@@ -122,8 +122,8 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 
 ## 4. Exercises
 
-- Please complete the Exercise 1 [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
-- Please complete the Exercise 2 [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
+- Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
+- Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
 
 ## 5. Additional Resources
 
@@ -137,4 +137,4 @@ learned and also help us improve this tutorial.
 
 ## 7. What's Next?
 
-Module 2 - Introduction to LUCIS<sup>OPEN</sup> Tools
+Module 2 - Introduction to LUCIS-OPEN Tools for QGIS.
