@@ -2,7 +2,7 @@
 name: Submit module 1 exercises
 about: Please turn in your exercises for the GALUP team to
   review.
-title: 'EXERCISE 1 [replace with your name]'
+title: 'Module 1 exercises [replace with your name]'
 labels: submission w1m1
 assignees: ''
 
