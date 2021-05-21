@@ -29,7 +29,3 @@ For the video instruction of the **Field Calculator** click [here](https://www.y
 ## 4. Result
 
 ![densitymap](../../../images/Export_ur_own_map/MyDensityMap.png)
-
-## 5. Turn in this Exercise
-
-Please turn in your exercise [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=EXERCISE+1+%5Breplace+with+your+name%5D).
