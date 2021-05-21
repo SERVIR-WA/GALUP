@@ -30,3 +30,6 @@ This exercise cover the knowledge about:
 |:-------------------------------------------------:|
 | ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
 
+## 5. Turn in this Exercise
+
+Please turn in your exercise [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=EXERCISE+1+%5Breplace+with+your+name%5D)
