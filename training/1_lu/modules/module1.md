@@ -124,6 +124,7 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
 - Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
+- Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=EXERCISE+1+%5Breplace+with+your+name%5D)
 
 ## 5. Additional Resources
 
