@@ -1,44 +1,50 @@
 # Welcome to GALUP
 
-LUCIS<sup>OPEN</sup> is a GIS-based, open-source land use planning framework.
-It is a new system developed by the Ghana Land Use Project ([GALUP](http://galup.cersgis.org/)) for the Land Use Spatial Planning Agency (LUSPA) of Ghana to replace the existing Land Use Planning and Management Information System (LUPMIS). LUPMIS<sup>plus</sup> is based on the Land-Use Conflict Identification Strategy (LUCIS), a goal-oriented land use decision-making model developed by Professor Peggy Carr and Professor Paul Zwick at the University of Florida. The intention of the QGIS processing algorithms presented in this repository is to allow planners and analysts to create LUCIS models with QGIS. We also provide you documentations and tutorials to guide you through the process of land use modeling.
+In Ghana, farmlands and cities are expanding rapidly into the savannas,
+woodlands and forests.
+The Ghana Land Use Project ([GALUP](http://galup.cersgis.org/)) project will
+enhance the current operational planning framework and building capacity for
+effective land use planning in Ghana.
+Working in close collaboration with national and regional authorities in
+Ashanti, Eastern and Central Regions in Ghana, the project aims to build local
+capacity in the region regarding remote sensing and GIS, and transfer the land
+use planning framework for continued planning.
 
-![lucis_open](images/lucis_workflow.jpg)
+## About the Land Use Planning Framework
 
-## GALUP Training Sessions
+The planning framework GALUP proposed is based on the Land-Use Identification
+Strategy (LUCIS) developed by two professors, Margaret Carr and Paul Zwick, at
+the University of Florida. LUCIS, at its core, is a GIS-based land-use
+suitability modeling framework. LUCIS models were originally developed using
+ModelBuilder in ArcMap&trade;.
+![lucis_open](images/lucis_workflow.svg)
+The GALUP team developed the **LUCIS-OPEN Tools for QGIS** by using
+[PyLUSAT](https://pypi.org/project/pylusat/)—Python for Land-Use Suitability
+Analysis Tools—and the [QGIS Python API](https://qgis.org/pyqgis/3.10/).
+These tools enable land-use planners to perform suitability analysis on
+[QGIS](https://docs.qgis.org/3.10/en/docs/user_manual/preamble/foreword.html#foreword),
+an open-source GIS software application.
+
+## GALUP Trainings
+
+One of GALUP’s objectives is to help build local capacity in applying tools
+empowered by Remote Sensing (RS) and Geographic Information System (GIS)
+technologies to inform and ensure sustainable land use practices.
+
+### Workshop #1 - Land-Use Suitability Analysis with QGIS Tools
 
 1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
-2. [Module 2]
-3. [Module 3]
-4. [Module 4]
+2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md)
+3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
+4. [Module 4 - Aggregate Results to Make Land-Use Decisions](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module4.md)
 
-## What tools are available
+## Documentation
 
-1. Density of Point Features
-2. Density of Line Features
-3. Distance to Line Features
-4. Distance to Point Features
-5. Distance to Raster Cells
-6. Erase
-7. Inverse Distance Weighting
-8. Generate Random AHP Weights
-9. Reclassify
-10. Rescale Values Linearly
-11. Rescale Values by Probability
-12. Select by Location
-13. Spatial Join
-14. Weighted Sum of Columns
-15. Zonal Statistics
+1. [LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/wiki/Tools)
+2. [Agriculture Models](https://github.com/SERVIR-WA/GALUP/wiki/models_ag)
 
-## [Installation](https://github.com/chjch/lucis_qgis/wiki/Installation)
-
-## Resources
-
-1. [University of Florida](https://abe.ufl.edu/galup/)
+## GALUP Partners
 
 <p float="left">
-  <img src="images/GALUP-logo.png" width="100"/> &nbsp
-  <img src="images/Servir_Logo.jpg" width="100" /> &nbsp
-  <img src="images/nasa.png" width="100" /> &nbsp
-  <img src="images/USAID-logo.jpg" width="90" />
+  <img src="images/galup_partners.png">
 </p>
