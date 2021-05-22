@@ -2,9 +2,11 @@
 
 **What will you learn from this module?**
 
-- Installing QGIS and PyLUSAT (Python for Land Use Suitability Analysis Tools),
-- Introducing the interface of QGIS 3.10.8,
-- Visualizing the datasets prepared for this series of trainings in QGIS.
+- Installing QGIS and PyLUSAT,
+- Loading _LUCIS-OPEN Tools for QGIS_,
+- Be familiar with the interface of QGIS 3.10.8,
+- Visualizing the datasets prepared for this workshop in QGIS,
+- Creating Layouts to print maps.
 
 ## 1. Software Installation
 
@@ -15,15 +17,15 @@
 > must be installed before we can successfully load and run the tools GALUP
 > have developed.
 
-## 2. Using QGIS to Create Maps
+## 2. Working with QGIS 3.10.8
 
 We will explore the QGIS user interface so that you are familiar with the
 menus, toolbars, map canvas and layers list that form the basic structure of
 the interface.
 
-### 2.1 The QGIS User Interface
+### 2.1 The QGIS Graphical User Interface (GUI)
 
-[Elements](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html)
+[Elements](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/qgis_gui.html)
 of the QGIS GUI (Graphic User Interface).
 
 - Layers List / Browser Panel
@@ -35,8 +37,10 @@ of the QGIS GUI (Graphic User Interface).
 
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
-### 2.2 Add Data to _map canvas_
+### 2.2 Add Data to [_Map Canvas_](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html)
+
 [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
+
 - Drag and drop the target files from brower panel into the map canvas.
 - Explore the [Interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#interacting-with-the-browser-items).
 - Add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?#basic-the-browser-panel).
@@ -53,6 +57,7 @@ The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_wit
   attributes of all features in the layer.
 
 ### 2.4 Symbology
+
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
 - Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) tab in the layer properties.
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
@@ -94,7 +99,6 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 |:-------------------------------------------------:|
 | ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
 
-
 ## 3. Get to Know the Datasets
 
 - [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
@@ -124,12 +128,15 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
 - Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
-- Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=Module+1+exercises+%5Breplace+with+your+name%5D)
+- Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=Module+1+exercises+%5Breplace+with+your+name%5D).
 
 ## 5. Additional Resources
 
 - [What is GIS and why use QGIS](https://www.youtube.com/watch?v=8oEnJvLzDnQ)
+  (YouTube video by [Statistics Canada](https://www.youtube.com/channel/UCvfquhvHW5ffRamjLHdXDtQ))
 - [QGIS User Guide](https://docs.qgis.org/3.16/en/docs/user_manual/)
+- [Git & GitHub Tutorials for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR)
+  (YouTube playlist by [The Net Ninja](https://www.youtube.com/c/TheNetNinja))
 
 ## 6. Post-training Survey
 
