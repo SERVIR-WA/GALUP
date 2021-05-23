@@ -47,9 +47,9 @@ from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction
 
   Now, lets load _Administration Regions of Ghana_, _Roads Netwrok_, and _Health Facility_ to Map Canvas:
 
-|               Roads Network in Ghana              |
+|               Add Data to Map Canvas            |
 |:-------------------------------------------------:|
-| ![basemap](../../../images/AddData/AddData.png) |
+| <img src="../../../images/AddData/AddData.png" alt= "Add data to Map Canvas" width="400"> |
 
 ### 2.3 Open the _Attribute Table_ to Review Your Data
 
