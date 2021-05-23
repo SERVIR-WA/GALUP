@@ -88,7 +88,7 @@ A [Basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_Ab
 
 |                Layer with a Basemap                  |
 |:-------------------------------------------------:|
-| ![basemap](../../../images/Basemap/basemap_1.png) |
+| ![basemap](../../../images/Basemap/basemap_2.png) |
 
 ### 2.6 Create a _Layout_ to Print Your Map
 
