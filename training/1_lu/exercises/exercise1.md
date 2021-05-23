@@ -28,6 +28,6 @@ This exercise cover the knowledge about:
 
 ## 4.Result
 
-You can check the Example of the Output Layout in
-[**here**](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/MyDensityMap.pdf)
+- See the example of Ghana Population (2018) map PDF file
+[here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/MyMap.pdf)
 
