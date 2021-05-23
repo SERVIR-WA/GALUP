@@ -51,7 +51,7 @@ from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction
 
 |               Add Data to Map Canvas            |
 |:-------------------------------------------------:|
-| <img src="../../../images/AddData/AddData.png" alt= "Add data to Map Canvas" width="500"> |
+| <img src="../../../images/AddData/AddData.png" alt= "Add data to Map Canvas" width="600"> |
 
 </div>
 
