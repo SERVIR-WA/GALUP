@@ -38,10 +38,21 @@ of the QGIS GUI (Graphic User Interface).
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
 ### 2.2 Add Data to _map canvas_
-[Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel) in QGIS can let you easily navigate in your filesystem and manage geodata.
-- Drag and drop the target files from brower panel into the map canvas.
-- Explore the [Interface](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#exploring-the-interface) and interact with the [Browser items](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#interacting-with-the-browser-items).
-- Add the data you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?#basic-the-browser-panel).
+
+1. The primary way to add data to QGIS Map Canvas is by **drag-and-drop** Brower items
+from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel).
+
+2. The another way to add data is by [**loading layer from a file**](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#loading-a-layer-from-a-file).
+
+    Now, lets load _Administration Regions of Ghana_, _Roads Netwrok_, and _Health Facility_ to Map Canvas:
+
+|               Roads Network in Ghana              |
+|:-------------------------------------------------:|
+| ![basemap](../../../images/AddData/AddData.png) |
+
+
+> :pushpin:<br>
+> In the Browser Pannel, you can also add the floder you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). You can also `Rename Favorite...`.
 
 ### 2.3 Open the _Attribute Table_ to Review Your Data
 
@@ -56,13 +67,13 @@ The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_wit
 
 ### 2.4 Symbology
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
-- Symbolize the vector layers using the [Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) tab in the layer properties.
-- Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (i.e. male or female, hair color, political party, etc.).
-- Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (i.e. total population).
+- Symbolize the vector layers using the [Single Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) in the layer properties.
+- Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (the image in the middle is using region column).
+- Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (the image on the right is using the population column).
 
-|                   Categorized Symbology                    |               Graduated Symbology                  |
-|:--------------------------------------------------------:|:---------------------------------:|
-| ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
+|            Single Symbology                              |                   Categorized Symbology                    |               Graduated Symbology                  |
+|:--------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------:|
+|    ![basemap](../../../images/Symbology/Single.png)  | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
 
 ### 2.5 Add a _Basemap_ to Map Canvas
 
