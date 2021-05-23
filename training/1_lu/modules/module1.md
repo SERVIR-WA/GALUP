@@ -47,14 +47,18 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
 
 ### 2.3 Open the _Attribute Table_ to Review Your Data
 
-The [attribute table](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) displays information on features of a selected layer.
+The [Attribute Table](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) displays
+information on features of a selected layer.
 
-- Put the cursor on a layer of your interest, and right click the layer and
-  click _Open Attribute Table_.
-- The title of the Attribute Table window includes the name of the layer, the
-  total number of the features in the layer, the number of features are
-  filtered, and the number of features are selected. You can find the
-  attributes of all features in the layer.
+- Right click the layer of your interest, and
+  click `Open Attribute Table`.
+- The title of the Attribute Table window includes: 1) the title of the layer, 2) the
+  total number of the features in the layer, 3) the number of features are
+  filtered, and 4) the number of features are selected.
+
+|               Attribute Table           |
+|:-------------------------------------------------:|
+| ![Attribute_Table](../../../images/AttributeTable/attribute_table.png) |
 
 ### 2.4 Symbology
 
@@ -68,14 +72,13 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
 
 ### 2.5 Add a _Basemap_ to Map Canvas
+A [Basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm) is a layer with geographic information that serves as a background. A base map provides context for additional layers that are overlaid on top of the base map. In this module, we use [**QuickMapServices**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin), a QGIS [Plugin](https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html), to add basemap to Map Canvas.
 
-A [basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm) is a layer with geographic information that serves as a background. A base map provides context for additional layers that are overlaid on top of the base map.
-
-- To add a basemap to the map canvas, in QGIS, we need to install an
-  [QGIS plugin](https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html).
-- Open the **Plugin** Window, search and install [**QuickMapServices**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin).
-- After installation, open the **QuickMapServices Settings** window, click the _More Services_ tab, and click _Get contributed pack_ to get more basemaps.
-- Add one basemap from **QuickMapServices** to map canvas.
+1. Open the [**Plugins**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-managing-plugins) window at the _main menu toolbar_, and click `Manage and Install Plugins...`
+2. Search and [install a new Plugin](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-installing-new-plugins) called **QuickMapServices**.
+3. After installation, open the **QuickMapServices Settings** window, click the _More Services_ tab, and click _Get contributed pack_ to get more basemaps. For details, please check out this [tutorial](https://opengislab.com/blog/2018/4/15/add-basemaps-in-qgis-30).
+4. Choose one basemap from the **QuickMapServices** and add it to Map Canvas.
+   ![icons](../../../images/Basemap/web_incons.png)
 
 |                Layer with a Basemap                  |
 |:-------------------------------------------------:|
@@ -83,21 +86,18 @@ A [basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_Ab
 
 ### 2.6 Create a _Layout_ to Print Your Map
 
-After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#overview-of-the-print-layout) your map and print it (as a pdf file) to share with your colleagues.
+After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#ls-using-print-layout) your map and print it (as a pdf file) to share with your colleagues.
   
-- Open the [**Layout Manager**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-manager) window, click the _Create..._ button, and name your
+- Open the [**Layout Manager**](https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-the-layout-manager) window, click the _Create..._ button, and name your
   map and click _OK_ to open the map window.
-- In the map window, click the [_Add Item_ button](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu) on the main menu bar, and
+- In the map window, click the [`Add Item`](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu) button on the main menu bar, and
   click add map.
-- In order to have a decent map, you might need a **Name** for your map, a **Legend** to identify the elements in the map, a **Scale Bar**
-  to indicates the scale of the map, a **North Arrow** to
-  indicate the direction. You can add these items under the _Add Item_ button.
-- After you finishing all the layout of your map, click the _Layout_ button on
-  the main menu bar, and click [_Export as PDF..._](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#edit-menu) to export your map. (If the basemap cannot be rendered in the PDF, try a lower _dpi_ in the **Export Setting** in the **Layout** tab.)
-
-|               Example of the Printed Layout           |
-|:-------------------------------------------------:|
-| ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
+- In order to have a decent map, you need: 1) a [**Title**](https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-title) for your map, 2) a [**Legend**](https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-legend) to identify the elements in the map, 3) a [**Scale Bar**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_scale_bar.html?#the-scale-bar-item)
+  to indicates the scale of the map, 4) a [**North Arrow**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_image.html?#the-picture-and-the-north-arrow-items) to
+  indicate the direction. You can add these items under the `Add Item` button.
+- After you finishing all the layout of your map, click the `Layout` button on
+  the main menu bar, and click [`Export as PDF...`](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/create_output.html#export-layout-pdf) to export your map. (If the basemap cannot be rendered in the PDF file, try a lower _dpi_ (e.g., 150 dpi) in the [**Export Setting**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#export-settings ) in the [**Layout Panel**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel).)
+- See the example map PDF file [here](../pdf_download/MyMap.pdf).
 
 ## 3. Get to Know the Datasets
 

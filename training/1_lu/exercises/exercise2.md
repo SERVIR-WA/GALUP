@@ -28,4 +28,4 @@ For the video instruction of the **Field Calculator** click [here](https://www.y
   
 ## 4. Result
 
-![densitymap](../../../images/Export_ur_own_map/MyDensityMap.png)
+- See the example of Ghana Population Density (2018) map PDF file [here](../pdf_download/MyDensityMap.pdf).
