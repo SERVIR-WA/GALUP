@@ -43,7 +43,7 @@ You can also customize the QGIS GUI to fits your own preferences and needs.
 from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel).
 2. The another way to add data is by [**loading layer from a file**](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#loading-a-layer-from-a-file).
 > :pushpin:<br>
-> In the Browser Pannel, you can also add the floder you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). You can also `Rename Favorite...`.
+> In the Browser Panel, you can also add the folder you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). You can also `Rename Favorite...`.
 
   Now, lets load _Administration Regions of Ghana_, _Roads Netwrok_, and _Health Facility_ to Map Canvas:
 
