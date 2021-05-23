@@ -37,7 +37,6 @@ of the QGIS GUI (Graphic User Interface).
 
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
-<<<<<<< HEAD
 ### 2.2 Add Data to [_Map Canvas_](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html)
 
 1. The primary way to add data to QGIS Map Canvas is by **drag-and-drop** Brower items
