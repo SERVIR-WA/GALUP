@@ -47,9 +47,13 @@ from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction
 
   Now, lets load _Administration Regions of Ghana_, _Roads Network_, and _Health Facility_ to Map Canvas:
 
-|               Roads Network in Ghana              |
+<div align="center">
+
+|               Add Data to Map Canvas            |
 |:-------------------------------------------------:|
-| ![basemap](../../../images/AddData/AddData.png) |
+| <img src="../../../images/AddData/AddData.png" alt= "Add data to Map Canvas" width="600"> |
+
+</div>
 
 ### 2.3 Open the _Attribute Table_ to Review Your Data
 
@@ -69,8 +73,7 @@ information on features of a selected layer.
 ### 2.4 Symbology
 
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
-- Symbolize the vector layers using the [Single Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) in the layer
-properties.
+- Symbolize the vector layers using the [Single Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) in the layer properties.
 - Choose the [Categorized](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#categorized-renderer) option to present the data, if you have data that is broken into categories (the image in the middle is using region column).
 - Choose the [Graduated](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/vector_properties.html?#graduated-renderer) option to present the data, if you have numeric data you want to symbolize (the image on the right is using the population column).
 
