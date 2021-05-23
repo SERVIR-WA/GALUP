@@ -2,12 +2,14 @@
 
 ## 1. Description
     
-We provided you a exercise to illustate the populaton distribution of Ghana by using QGIS. To better understand how population are distributed in Ghana, you need to visually present the number of population in each regions of Ghana.
+We provided you a exercise to illustate the populaton distribution of Ghana by
+using QGIS. To better understand how population are distributed in Ghana, you
+need to visually present the number of population in each regions of Ghana.
 
-Download _Ghana Administrative Areas_ in [here](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/datasets). 
+Download _Ghana Administrative Areas_ in
+[**here**](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/datasets). 
 
 ## 2. Skills Practices
-
 
 This exercise cover the knowledge about:
 
@@ -26,7 +28,6 @@ This exercise cover the knowledge about:
 
 ## 4.Result
 
-|               Example of the Output Layout           |
-|:-------------------------------------------------:|
-| ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
+You can check the Example of the Output Layout in
+[**here**](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/MyDensityMap.pdf)
 

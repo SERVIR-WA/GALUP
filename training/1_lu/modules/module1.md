@@ -45,7 +45,7 @@ from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction
 > :pushpin:<br>
 > In the Browser Panel, you can also add the folder you frequently used to [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). You can also `Rename Favorite...`.
 
-  Now, lets load _Administration Regions of Ghana_, _Roads Netwrok_, and _Health Facility_ to Map Canvas:
+  Now, lets load _Administration Regions of Ghana_, _Roads Network_, and _Health Facility_ to Map Canvas:
 
 <div align="center">
 
