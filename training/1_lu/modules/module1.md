@@ -17,13 +17,25 @@
 > must be installed before we can successfully load and run the tools GALUP
 > have developed.
 
-## 2. Working with QGIS 3.10.8
+## 2. Get to Know the Datasets
+
+- Open `GALUP -> training -> 1_lu -> datasets`
+- Identify and acquire useful datasets
+
+| ID | File Name                        | Data Format | Type    | Description                     |
+|----|----------------------------------|-------------|---------|---------------------------------|
+| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Administration Regions of Ghana |
+| 2  | population_gha_2018-10-01.tif    | raster      | tiff    | Ghana Population 2018           |
+| 3  | healthsites.shp                  | vector      | point   | Ghana Health Facilities         |
+| 4  | GHARoads2020PrimarySecondary.shp | vector      | line    | Ghana Road Network              |
+
+## 3. Working with QGIS 3.10.8
 
 We will explore the QGIS user interface so that you are familiar with the
 menus, toolbars, map canvas and layers list that form the basic structure of
 the interface.
 
-### 2.1 The QGIS Graphical User Interface (GUI)
+### 3.1 The QGIS Graphical User Interface (GUI)
 
 [Elements](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/qgis_gui.html)
 of the QGIS GUI (Graphic User Interface).
@@ -37,7 +49,7 @@ of the QGIS GUI (Graphic User Interface).
 
 You can also customize the QGIS GUI to fits your own preferences and needs.
 
-### 2.2 Add Data to [_Map Canvas_](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html)
+### 3.2 Add Data to [_Map Canvas_](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html)
 
 1. The primary way to add data to QGIS Map Canvas is by **drag-and-drop** Brower items
 from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel).
@@ -55,7 +67,7 @@ from [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction
 
 </div>
 
-### 2.3 Open the _Attribute Table_ to Review Your Data
+### 3.3 Open the _Attribute Table_ to Review Your Data
 
 The [Attribute Table](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) displays
 information on features of a selected layer.
@@ -73,7 +85,8 @@ information on features of a selected layer.
 | <img src="../../../images/AttributeTable/attribute_table.png" alt= "Attribute_Table" width="500"> |
 
 </div>
-### 2.4 Symbology
+
+### 3.4 Symbology
 
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
 - Symbolize the vector layers using the [Single Symbology](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/symbology.html?#basic-fa-changing-colors) in the layer properties.
@@ -84,7 +97,7 @@ The symbology of a layer is one of important functions in GIS. By presenting the
 |:--------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------:|
 |    ![basemap](../../../images/Symbology/Single.png)  | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
 
-### 2.5 Add a _Basemap_ to Map Canvas
+### 3.5 Add a _Basemap_ to Map Canvas
 A [Basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm) is a layer with geographic information that serves as a background. A base map provides context for additional layers that are overlaid on top of the base map. In this module, we use [**QuickMapServices**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin), a QGIS [Plugin](https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html), to add basemap to Map Canvas.
 
 1. Open the [**Plugins**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-managing-plugins) window at the _main menu toolbar_, and click `Manage and Install Plugins...`
@@ -101,7 +114,7 @@ A [Basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_Ab
 
 </div>
 
-### 2.6 Create a _Layout_ to Print Your Map
+### 3.6 Create a _Layout_ to Print Your Map
 
 After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#ls-using-print-layout) your map and print it (as a pdf file) to share with your colleagues.
   
@@ -115,18 +128,6 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 - After you finishing all the layout of your map, click the `Layout` button on
   the main menu bar, and click [`Export as PDF...`](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/create_output.html#export-layout-pdf) to export your map. (If the basemap cannot be rendered in the PDF file, try a lower _dpi_ (e.g., 150 dpi) in the [**Export Setting**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#export-settings ) in the [**Layout Panel**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel).)
 - See the example map PDF file [here](../pdf_download/MyMap.pdf).
-
-## 3. Get to Know the Datasets
-
-- [Download](https://github.com/chjch/lucis_qgis) the datasets from GitHub
-- Identify and acquire useful datasets
-
-| ID | File Name                        | Data Format | Type    | Description                                        |
-|----|----------------------------------|-------------|---------|----------------------------------------------------|
-| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Administration Regions of Ghana                    |
-| 2  | population_gha_2018-10-01.tif    | raster      | tiff    | Ghana Population 2018                              |
-| 3  | healthsites.shp                  | vector      | point   | Ghana Health Facilities                            |
-| 4  | GHARoads2020PrimarySecondary.shp | vector      | line    | Ghana Road Network                                 |
 
 ## 4. Exercises
 
