@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1052 511" xmlns:xlink="http://www.w3.org/1999/xlink" width="1052" height="511">
+    <defs>
+        <linearGradient y2="292" x1="250" gradientUnits="userSpaceOnUse" id="lg1" x2="792" y1="-250">
+            <stop offset="0.01" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#b0ddc1"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-32.54,-86.72)">
+        <g transform="translate(40.99,91.94)" id="shape1">
+            <path d="M0,0L1042.8,0L1042.8,41.6L0,41.6L0,0z" fill-rule="evenodd" fill="url(#lg1)"/>
+            <text xml:space="preserve" style="fill:#303030;font-family:Calibri;font-size:15pt">
+                <tspan x="4.4" y="28">LUCIS Framework</tspan>
+            </text>
+        </g>
+        <g transform="translate(33.54,252.53)" id="shape2">
+            <path stroke="#191919" d="M0,41.8C0,18.7,28.1,0,62.8,0C97.4,0,125.5,18.7,125.5,41.8C125.5,64.9,97.4,83.7,62.8,83.7C28.1,83.7,0,64.9,0,41.8z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="39.8" y="28.3">inquire </tspan>
+                <tspan x="25.3" y="47.3">stakeholder </tspan>
+                <tspan x="42.3" y="66.3">values</tspan>
+            </text>
+        </g>
+        <g transform="translate(362.21,175.72)" id="shape3">
+            <path stroke="#191919" d="M116.2,59L116.2,0L0,0L0,59L116.2,59z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="20.1" y="25.5">agricultural</tspan>
+                <tspan x="28.1" y="44.5">land uses</tspan>
+            </text>
+        </g>
+        <g transform="translate(362.21,351.98)" id="shape4">
+            <path stroke="#191919" d="M116.2,59L116.2,0L0,0L0,59L116.2,59z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="10.6" y="25.5">conservational </tspan>
+                <tspan x="44.1" y="44.5">land</tspan>
+            </text>
+        </g>
+        <g transform="translate(362.21,264.86)" id="shape5">
+            <path stroke="#191919" d="M116.2,59L116.2,0L0,0L0,59L116.2,59z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="39.1" y="25.5">urban</tspan>
+                <tspan x="28.1" y="44.5">land uses</tspan>
+            </text>
+        </g>
+        <g transform="translate(211.76,174.56)" id="shape6">
+            <path stroke="#191919" d="M0,53.6L0,0L104,0L104,53.6L104,53.6C96.5,48.8,87.6,46,78,46C68.4,46,59.5,48.8,52,53.6L52,53.6C44.5,58.5,35.6,61.3,26,61.3C16.4,61.3,7.5,58.5,0,53.6z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="14" y="19">agricultural </tspan>
+                <tspan x="14" y="38">productions</tspan>
+            </text>
+        </g>
+        <g transform="translate(211.76,350.82)" id="shape7">
+            <path stroke="#191919" d="M0,53.7L0,0L104,0L104,53.7L104,53.7C96.5,48.8,87.6,46,78,46C68.4,46,59.5,48.8,52,53.7L52,53.7C44.5,58.5,35.6,61.3,26,61.3C16.4,61.3,7.5,58.5,0,53.7z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="19" y="19">ecological </tspan>
+                <tspan x="22.5" y="38">functions</tspan>
+            </text>
+        </g>
+        <g transform="translate(211.76,262.69)" id="shape8">
+            <path stroke="#191919" d="M0,55.4L0,0L104,0L104,55.4L104,55.4C96.6,50.4,87.6,47.5,78,47.5C68.4,47.5,59.4,50.4,52,55.4L52,55.4C44.6,60.4,35.6,63.3,26,63.3C16.4,63.3,7.4,60.4,0,55.4z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="4" y="19.8">socioeconomic </tspan>
+                <tspan x="23" y="38.8">activities</tspan>
+            </text>
+        </g>
+        <g transform="translate(561.25,476.76)" id="shape9">
+            <path stroke="#191919" d="M0,41.8C0,18.7,28.1,0,62.8,0C97.4,0,125.5,18.7,125.5,41.8C125.5,64.9,97.4,83.7,62.8,83.7C28.1,83.7,0,64.9,0,41.8z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="36.8" y="28.3">Analytic </tspan>
+                <tspan x="4.3" y="47.3">Hierarchy Process </tspan>
+                <tspan x="44.3" y="66.3">(AHP)</tspan>
+            </text>
+        </g>
+        <g transform="translate(958.25,476.76)" id="shape10">
+            <path stroke="#191919" d="M0,41.8C0,18.7,28.1,0,62.8,0C97.4,0,125.5,18.7,125.5,41.8C125.5,64.9,97.4,83.7,62.8,83.7C28.1,83.7,0,64.9,0,41.8z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="31.3" y="37.8">suitability </tspan>
+                <tspan x="32.3" y="56.8">modeling</tspan>
+            </text>
+        </g>
+        <g transform="translate(159.04,294.36)" id="shape11">
+            <path stroke="#6f6f6f" d="M0,0L49.7,-84" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M47.1,-85.5L52.7,-89.1L52.2,-82.5L47.1,-85.5" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(159.04,294.36)" id="shape12">
+            <path stroke="#6f6f6f" d="M0,0L49.6,82" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M52.2,80.4L52.7,87.1L47,83.5L52.2,80.4" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(159.04,294.36)" id="shape13">
+            <path stroke="#6f6f6f" d="M0,0L46.7,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M46.7,-3L52.7,0L46.7,3L46.7,-3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(315.76,205.22)" id="shape14">
+            <path stroke="#6f6f6f" d="M0,0L40.5,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M40.5,-3L46.5,0L40.5,3L40.5,-3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(315.76,381.48)" id="shape15">
+            <path stroke="#6f6f6f" d="M0,0L40.5,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M40.5,-3L46.5,0L40.5,3L40.5,-3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(315.76,294.36)" id="shape16">
+            <path stroke="#6f6f6f" d="M0,0L40.5,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M40.5,-3L46.5,0L40.5,3L40.5,-3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(958.25,246.16)" id="shape17">
+            <path stroke="#191919" d="M0,41.8C0,18.7,28.1,0,62.8,0C97.4,0,125.5,18.7,125.5,41.8C125.5,64.9,97.4,83.7,62.8,83.7C28.1,83.7,0,64.9,0,41.8z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="24.3" y="37.8">identify and </tspan>
+                <tspan x="9.3" y="56.8">acquire datasets</tspan>
+            </text>
+        </g>
+        <g transform="translate(774,152)" id="group18">
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(20,0)" id="shape19" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(10,10)" id="shape20" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(0,20)" id="shape21" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="15" y="46">single utility </tspan>
+                <tspan x="13.5" y="65">(agriculture)</tspan>
+            </text>
+        </g>
+        <g transform="translate(531,195.63)" id="table22">
+            <g>
+                <path stroke="#000000" d="M0,0L187.8,0L187.8,29.5L0,29.5L0,0z" stroke-width="1" fill="#868686"/>
+                <text xml:space="preserve" style="fill:#000000;font-family:Calibri;font-size:12pt;font-weight:bold">
+                    <tspan x="57" style="fill:#ffffff" y="20.3">suitability</tspan>
+                </text>
+            </g>
+            <g>
+                <path stroke="#000000" d="M0,29.5L187.8,29.5L187.8,59.6L0,59.6L0,29.5z" stroke-width="1" fill="none"/>
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="9" y="50.1">physical suitability</tspan>
+                </text>
+            </g>
+            <g>
+                <path stroke="#000000" d="M0,59.6L187.8,59.6L187.8,89.8L0,89.8L0,59.6z" stroke-width="1" fill="none"/>
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="9" y="80.2">economic suitability</tspan>
+                </text>
+            </g>
+        </g>
+        <g transform="translate(532.08,336.11)" id="table23">
+            <g>
+                <path stroke="#000000" d="M0,0L187.8,0L187.8,29.5L0,29.5L0,0z" stroke-width="1" fill="#868686"/>
+                <text xml:space="preserve" style="fill:#000000;font-family:Calibri;font-size:12pt;font-weight:bold">
+                    <tspan x="50.5" style="fill:#ffffff" y="20.3">significance</tspan>
+                </text>
+            </g>
+            <g>
+                <path stroke="#000000" d="M0,29.5L187.8,29.5L187.8,59.6L0,59.6L0,29.5z" stroke-width="1" fill="none"/>
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="9" y="50.1">existing ecological value</tspan>
+                </text>
+            </g>
+            <g>
+                <path stroke="#000000" d="M0,59.6L187.8,59.6L187.8,89.8L0,89.8L0,59.6z" stroke-width="1" fill="none"/>
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="9" y="80.2">potential ecological value</tspan>
+                </text>
+            </g>
+        </g>
+        <g transform="translate(478.4,381.48)" id="shape24">
+            <path stroke="#6f6f6f" d="M0,0L47.7,.3" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M47.7,-2.7L53.7,.3L47.7,3.3L47.7,-2.7" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(478.4,205.22)" id="shape25">
+            <path stroke="#6f6f6f" d="M0,0L47.7,32.7" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M49.4,30.2L52.6,36.1L46,35.2L49.4,30.2" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(478.4,294.36)" id="shape26">
+            <path stroke="#6f6f6f" d="M0,0L48.4,-48.8" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M46.2,-50.9L52.6,-53L50.5,-46.7L46.2,-50.9" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(718.83,241.31)" id="shape27">
+            <path stroke="#6f6f6f" d="M0,0L50.7,-45.3" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M48.7,-47.5L55.2,-49.3L52.7,-43.1L48.7,-47.5" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(774,247.99)" id="group28">
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(20,0)" id="shape29" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(10,10)" id="shape30" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,60L0,60L0,0z" fill-rule="evenodd" transform="translate(0,20)" id="shape31" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="15" y="46">single utility </tspan>
+                <tspan x="30.5" y="65">(urban)</tspan>
+            </text>
+        </g>
+        <g transform="translate(718.83,241.31)" id="shape32">
+            <path stroke="#6f6f6f" d="M0,0L50.6,42.8" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M52.5,40.5L55.2,46.7L48.7,45.1L52.5,40.5" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(774,338.98)" id="group33">
+            <path stroke="#191919" d="M0,0L109,0L109,65L0,65L0,0z" fill-rule="evenodd" transform="translate(20,0)" id="shape34" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,65L0,65L0,0z" fill-rule="evenodd" transform="translate(10,10)" id="shape35" fill="#ffffff"/>
+            <path stroke="#191919" d="M0,0L109,0L109,65L0,65L0,0z" fill-rule="evenodd" transform="translate(0,20)" id="shape36" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="15" y="48.5">single utility </tspan>
+                <tspan x="8" y="67.5">(conservation)</tspan>
+            </text>
+        </g>
+        <g transform="translate(719.91,381.79)" id="shape37">
+            <path stroke="#6f6f6f" d="M0,0L48.1,-0.3" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M48.1,-3.3L54.1,-0.3L48.1,2.7L48.1,-3.3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(504,94)" id="group38">
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,0L20,19L0,38" stroke-width="2" id="shape39" fill="none"/>
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,38L0,383" stroke-width="2" id="shape40" fill="none"/>
+        </g>
+        <g transform="translate(745,93.72)" id="group41">
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,0L20,19L0,38" stroke-width="2" id="shape42" fill="none"/>
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,38L0,383.3" stroke-width="2" id="shape43" fill="none"/>
+        </g>
+        <g transform="translate(903,192)" id="shape44">
+            <path stroke="#6f6f6f" d="M0,0L52.3,90.8" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M54.9,89.3L55.3,96L49.7,92.3L54.9,89.3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(903,287.99)" id="shape45">
+            <path stroke="#6f6f6f" d="M0,0L49.3,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M49.3,-3L55.3,0L49.3,3L49.3,-3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(903,381.48)" id="shape46">
+            <path stroke="#6f6f6f" d="M0,0L52.2,-88.3" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M49.6,-89.9L55.3,-93.5L54.8,-86.8L49.6,-89.9" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="matrix(-1,0,0,1,746,480)" id="group47">
+            <g id="shape48">
+                <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,0L20,19L0,38" stroke-width="2" fill="none"/>
+                <text xml:space="preserve" transform="matrix(-1,0,0,1,-35,0)" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="-30" y="24.5">AHP</tspan>
+                </text>
+            </g>
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,38L0,38.1" stroke-width="2" id="shape49" fill="none"/>
+        </g>
+        <g transform="matrix(-1,0,0,1,504,480)" id="group50">
+            <g id="shape51">
+                <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,0L20,19L0,38" stroke-width="2" fill="none"/>
+                <text xml:space="preserve" transform="matrix(-1,0,0,1,-35,0)" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="-30" y="24.5">AHP</tspan>
+                </text>
+            </g>
+            <path stroke="#2e8d5d" stroke-dasharray="2,5" d="M0,38L0,38.1" stroke-width="2" id="shape52" fill="none"/>
+        </g>
+        <g transform="translate(52.71,400.97)" id="group53">
+            <path d="M0,63.8C0,28.5,28.6,0,63.8,0C99,0,127.6,28.5,127.6,63.8C127.6,99,99,127.5,63.8,127.5C28.6,127.5,0,99,0,63.8z" fill-rule="evenodd" transform="translate(42.5,0)" id="shape54" fill="#fdc55b"/>
+            <path d="M0,63.8C0,28.5,28.6,0,63.8,0C99,0,127.6,28.5,127.6,63.8C127.6,99,99,127.5,63.8,127.5C28.6,127.5,0,99,0,63.8z" fill-rule="evenodd" transform="translate(0,68.54)" id="shape55" fill="#d2e18f"/>
+            <path d="M0,63.8C0,28.5,28.6,0,63.8,0C99,0,127.6,28.5,127.6,63.8C127.6,99,99,127.5,63.8,127.5C28.6,127.5,0,99,0,63.8z" fill-rule="evenodd" transform="translate(84.99,68.22)" id="shape56" fill="#a5efff"/>
+            <path d="M41.6,39.8C35.1,42.1,28.1,43.3,20.8,43.3C13.5,43.3,6.5,42.1,0,39.8C1.9,24,9.6,10.1,20.8,0C32,10.1,39.7,24,41.6,39.8z" fill-rule="evenodd" transform="translate(85.49,84.25)" id="shape57" fill="#e7372a"/>
+            <path d="M63.3,3.5C60.4,28,43.5,48.2,20.8,56C18.9,40.3,11.2,26.3,0,16.2C0,16.2,0,16.2,0,16.2C0,16.2,0,16.2,0,16.2C11.3,6.1,26.2,0,42.5,0C49.8,0,56.8,1.2,63.3,3.5z" fill-rule="evenodd" transform="translate(106.19,68.01)" id="shape58" fill="#ff9189"/>
+            <path d="M0,3.5C6.5,1.2,13.5,0,20.8,0C37.1,0,52,6.1,63.3,16.2C52.1,26.3,44.4,40.3,42.5,56C19.9,48.2,3,28,0,3.5z" fill-rule="evenodd" transform="translate(42.99,68.37)" id="shape59" fill="#ff9189"/>
+            <path d="M0,47.5C0,44.9,.2,42.3,.5,39.8C7,42.1,14,43.3,21.3,43.3C28.5,43.3,35.5,42.1,42.1,39.8C40.2,24,32.5,10.1,21.3,0C21.3,0,21.3,0,21.3,0C32.5,10.1,40.2,24,42.1,39.8C42.4,42.3,42.5,44.9,42.5,47.5C42.5,66.4,34.3,83.4,21.3,95C8.2,83.4,0,66.4,0,47.5z" fill-rule="evenodd" transform="translate(85.03,84.25)" id="shape60" fill="#ff9189"/>
+            <g transform="translate(79.63,34.52)" id="shape61">
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="8.5" y="15.3">urban</tspan>
+                </text>
+            </g>
+            <g transform="translate(114.13,135.09)" id="shape62">
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="12.8" y="15.3">conservation</tspan>
+                </text>
+            </g>
+            <g transform="translate(-4.52,132.84)" id="shape63">
+                <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                    <tspan x="9.1" y="15.3">agriculture</tspan>
+                </text>
+            </g>
+        </g>
+        <g transform="translate(265,480)" id="shape64">
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="15" y="24.5">land use preferences</tspan>
+            </text>
+        </g>
+        <g transform="translate(1021,329.82)" id="shape65">
+            <path stroke="#6f6f6f" d="M0,0L0,140.9" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M3,140.9L0,146.9L-3,140.9L3,140.9" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(786.81,489.1)" id="shape66">
+            <path stroke="#191919" d="M116.2,59L116.2,0L0,0L0,59L116.2,59z" fill-rule="evenodd" fill="#ffffff"/>
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="20.6" y="25.5">stakeholder </tspan>
+                <tspan x="38.6" y="44.5">inputs</tspan>
+            </text>
+        </g>
+        <g transform="translate(958.25,518.6)" id="shape67">
+            <path stroke="#6f6f6f" d="M0,0L-49.3,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M-49.3,3L-55.3,0L-49.3,-3L-49.3,3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(786.81,518.6)" id="shape68">
+            <path stroke="#6f6f6f" d="M0,0L-94.1,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M-94.1,3L-100.1,0L-94.1,-3L-94.1,3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(561.25,518.6)" id="shape69">
+            <path stroke="#6f6f6f" d="M0,0L-264,0L-264,0L-291.6,0" fill="none"/>
+            <path stroke-linecap="round" stroke="#6f6f6f" d="M-291.6,3L-297.6,0L-291.6,-3L-291.6,3" stroke-width="1" fill="#6f6f6f"/>
+        </g>
+        <g transform="translate(786.5,87.72)" id="shape70">
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="5.5" y="30.5">Sub-objectives</tspan>
+            </text>
+        </g>
+        <g transform="translate(581,88)" id="shape71">
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="9.5" y="30.5">Objectives</tspan>
+            </text>
+        </g>
+        <g transform="translate(377.3,88)" id="shape72">
+            <text xml:space="preserve" style="fill:#191919;font-family:Calibri;font-size:12pt">
+                <tspan x="25" y="30.5">Goals</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
