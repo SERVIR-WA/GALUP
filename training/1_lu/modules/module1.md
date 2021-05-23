@@ -66,10 +66,13 @@ information on features of a selected layer.
   total number of the features in the layer, 3) the number of features are
   filtered, and 4) the number of features are selected.
 
+<div align="center">
+
 |               Attribute Table           |
 |:-------------------------------------------------:|
-| ![Attribute_Table](../../../images/AttributeTable/attribute_table.png) |
+| <img src="../../../images/AttributeTable/attribute_table.png" alt= "Attribute_Table" width="500"> |
 
+</div>
 ### 2.4 Symbology
 
 The symbology of a layer is one of important functions in GIS. By presenting the data with a dynamic visual appearance on the map, you can better explore the data as you are working with it.
@@ -90,9 +93,13 @@ A [Basemap](https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_Ab
 4. Choose one basemap from the **QuickMapServices** and add it to Map Canvas.
    ![icons](../../../images/Basemap/web_incons.png)
 
+<div align="center">
+
 |                Layer with a Basemap                  |
 |:-------------------------------------------------:|
 | ![basemap](../../../images/Basemap/basemap_2.png) |
+
+</div>
 
 ### 2.6 Create a _Layout_ to Print Your Map
 
