@@ -70,7 +70,7 @@ information on features of a selected layer.
 
 |               Attribute Table           |
 |:-------------------------------------------------:|
-| ![Attribute_Table](../../../images/AttributeTable/attribute_table.png) |
+| <img src="../../../images/AttributeTable/attribute_table.png" alt= "Attribute_Table" width="500"> |
 
 </div>
 ### 2.4 Symbology
