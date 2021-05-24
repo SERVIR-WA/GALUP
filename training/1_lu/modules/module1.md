@@ -137,6 +137,7 @@ After setting up the map, you are now ready to [layout](https://docs.qgis.org/3.
 - [QGIS User Guide](https://docs.qgis.org/3.16/en/docs/user_manual/)
 - [Git & GitHub Tutorials for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR)
   (YouTube playlist by [The Net Ninja](https://www.youtube.com/c/TheNetNinja))
+- [OpenSourceOptions Tutorials](https://opensourceoptions.com/blog/)
 
 ## 6. Post-training Survey
 
