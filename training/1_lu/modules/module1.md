@@ -11,9 +11,8 @@
 > :pushpin: Note on installation:<br>
 > Follow the [instruction](https://github.com/SERVIR-WA/GALUP/wiki/Install)
 > to install [QGIS 3.10.8](https://qgis.org/en/site/) and
-> [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/) package, which
-> must be installed before we can successfully load and run the tools GALUP
-> have developed.
+> [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/), which must be installed
+> before we can successfully load and run the tools GALUP have developed.
 
 ## 2. GIS Datasets
 
