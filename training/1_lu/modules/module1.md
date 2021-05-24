@@ -2,9 +2,9 @@
 
 **What will you learn from this module?**
 
-- Installing QGIS and PyLUSAT, and Loading _LUCIS-OPEN Tools for QGIS_,
-- Be familiar with QGIS 3.10.8,
-- Visualizing GIS data and creating maps in QGIS.
+- Installing QGIS and PyLUSAT, and loading _LUCIS-OPEN Tools for QGIS_,
+- Be familiar with the user interface of QGIS 3.10.8,
+- Visualizing GIS data and creating maps.
 
 ## 1. Software Installation
 
