@@ -2,15 +2,13 @@
 
 **What will you learn from this module?**
 
-- Installing QGIS and PyLUSAT,
-- Loading _LUCIS-OPEN Tools for QGIS_,
-- Be familiar with the interface of QGIS 3.10.8,
-- Visualizing the datasets prepared for this workshop in QGIS,
-- Creating Layouts to print maps.
+- Installing QGIS and PyLUSAT, and Loading _LUCIS-OPEN Tools for QGIS_,
+- Be familiar with QGIS 3.10.8,
+- Visualizing GIS data and creating maps in QGIS.
 
 ## 1. Software Installation
 
-> :pushpin:<br>
+> :pushpin: Note on installation:<br>
 > Follow the [instruction](https://github.com/SERVIR-WA/GALUP/wiki/Install)
 > to install [QGIS 3.10.8](https://qgis.org/en/site/) and
 > [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/) package, which
@@ -51,7 +49,7 @@ _Toolbars_ to the place you prefer (see the animation below).
    items in the [Browser panel](https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel).
 2. Another way to add data is by
    [**loading layer from a file**](https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#loading-a-layer-from-a-file).<br> <br>
-   > :pushpin:<br>
+   > :pushpin: Use Favorites to quickly get to the data you used frequently:<br>
    > In the Browser Panel, you can also add the folder you frequently used to
    > [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). To avoid long path shown in
    > the Favorites, you can also `Rename Favorite...`.
