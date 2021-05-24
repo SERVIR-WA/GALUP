@@ -2,37 +2,49 @@
 
 ## 1. Description
 
-In Exercise 1, we made a population map of Ghana (2018), and in Exercise 2, we
-want to know the population density distribution in Ghana (2018). Therefore, you
-are supposed to calculate the 2018 population density of Ghana by working with
-the [**Attribute Table**](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface) and [**Field Calculator**](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator) tool.
-Finally, you should export your population density map as a PDF file.
+In Exercise 1, we made a map of the population of Ghana in year 2018. In this
+exercise, we will calculate _Population density_ for individual Districts by,
+first, reviewing the data in
+[**Attribute Table**](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface),
+and then calculating density (population/area) in the
+[**Field Calculator**](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#using-the-field-calculator).
+Finally, we will export the population density map as a PDF file.
 
-You should use _Gh\_260\_MMDA_ shapefile data to finish this exercise.<br>
-For the video instruction of the **Field Calculator** click [here](https://www.youtube.com/watch?v=PkGON2G8vEU).
+You should use _Gh\_260\_MMDA.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> District of Ghana`
+to finish this exercise.
+
+Check out this tutorial [here](https://www.youtube.com/watch?v=PkGON2G8vEU)
+for the details about how to use **Field Calculator**.
 
 ## 2. Skills Practiced
 
- By finishing this exercise, you will be able to:
+By finishing this exercise, you will be able to:
 
-- Get familiar with the **Attribute Table**.
-- Use the **Field Calculator** tool.
-- Create a layout and export the map.
+- get familiar with the **Attribute Table**.
+- calculate new _field_ with **Field Calculator**.
+- create a _layout_ and export maps as pdf files.
 
 ## 3. Instruction
 
-1. Add the data (_Gh\_260\_MMDA_) to the _Layer_ panel.
-2. Open the _Attribute Table_ of the data to review the field containing
-   population data (_Pop\_2018_) and the field containing the area of each district data (_Area\_km2_).
-3. Search and open the **Field Calculator** tool in the [**Processing Toolbox**](https://docs.qgis.org/3.10/en/docs/user_manual/processing/toolbox.html?highlight=processing%20toolbox#the-toolbox).
-4. In the **Field Calculator** tool, create a new field and type the correct
-   expression for calculating the population density by using _Pop\_2018_ and _Area\_km2_.
-5. Use the _Graduated_ symbology and _Reds_ color ramp with 5 classes to render
-   the population density distribution.
-6. Add _ESRI Gary (light)_ as your basemap.
-7. Create a _Layout_ and add a _Label_, a _Legend_, a _Scale bar_, and a _North Arrow_.
+1. Add the data (_Gh\_260\_MMDA.shp_) to Map Canvas.
+2. Open the _Attribute Table_ of the data to view two fields: _Pop\_2018_
+   (population by district in 2018) and _Area\_km2_ (area by district in square
+   kilometers).
+3. Open **Field Calculator** from the menu bar on the top of the Attribute
+   Table ![icon_field_calculator]().
+4. In the **Field Calculator**,
+   - **Create a new field** with name "Pop_Den", and
+   - specify the **Expression** to calculate population density using two
+     fields: _Pop\_2018_ and _Area\_km2_.
+5. Choose the _Graduated_ symbology and the _Reds_ color ramp with 5 classes to
+   render _Pop\_Den_, the newly calculated field.
+6. Add _ESRI Gary (light)_ as a basemap.
+7. Create a _Layout_ and add a _Label_, a _Legend_, a _Scale bar_, and
+   a _North Arrow_.
 8. Export your map as a PDF file.
   
 ## 4. Result
 
-- See the example of Ghana Population Density (2018) map in PDF file [here](../pdf_download/MyDensityMap.pdf).
+- See the example map, Population Density of Ghana in 2018, in this pdf
+  [here](../pdf_download/MyDensityMap.pdf).
