@@ -32,7 +32,7 @@ By finishing this exercise, you will be able to:
    (population by district in 2018) and _Area\_km2_ (area by district in square
    kilometers).
 3. Open **Field Calculator** from the menu bar on the top of the Attribute
-   Table ![icon_field_calculator]().
+   Table ![icon_field_calculator](../../../images/AttributeTable/cal_icon.png).
 4. In the **Field Calculator**,
    - **Create a new field** with name "Pop_Den", and
    - specify the **Expression** to calculate population density using two
