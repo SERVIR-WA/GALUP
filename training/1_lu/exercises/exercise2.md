@@ -47,4 +47,4 @@ By finishing this exercise, you will be able to:
 ## 4. Result
 
 - See the example map, Population Density of Ghana in 2018, in this pdf
-  [here](../pdf_download/MyDensityMap.pdf).
+  [here](../pdf_download/DensityMap.pdf).

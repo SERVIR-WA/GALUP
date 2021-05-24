@@ -33,4 +33,4 @@ This exercise covers:
 ## 4.Result
 
 - See the example map, Population of Ghana in 2018, in this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/MyMap.pdf)
+  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/PopulationMap.pdf)
