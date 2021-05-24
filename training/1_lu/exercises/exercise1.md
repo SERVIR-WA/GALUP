@@ -1,24 +1,25 @@
 # Exercise 1
 
 ## 1. Description
+    
+We provided you a exercise to illustrate the population distribution of Ghana by
+using QGIS. To better understand how population are distributed in Ghana, you
+need to visually present the number of population in each regions of Ghana.
 
-We provided you a exercise to illustate the populaton distribution of Ghana by using Q gis. To better understand how population are distributed in Ghana, you need to visually present the number of population in each regions of Ghana.
-
-Download the dataset in [here](). 
+Download _Ghana Administrative Areas_ in
+[**here**](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/datasets).
 
 ## 2. Skills Practices
 
 This exercise cover the knowledge about:
 
-- Acquire the datasets and add the data to map.
+- Acquire the datasets and Add the data to map.
 - Symbolize vector layers.
 - Create a layout to print the map.
 
 ## 3. Instruction
-
-- Find data (_Gh_260_MMDA_WGS84_) in _Browser Panel_ and Add data to the _map canvas_
-- Open _Attribute Table_ to review the field (_Pop_2018_) containing population data
-- Open _Symbology_ tab in _Layer Properties_.
+- Find data (_Gh_260_MMDA.shp_) in _Browser Panel_ and Add data to the _map canvas_
+- Open _Attribute Table_ to review the field (_Pop_2018_) containing population data.
 - Select _Graduated_ option and Find the target field (_Pop_2018_) in _Value_.
 - Choose _Reds_ color ramp with 5 classes to render the population distribution.
 - Add _ESRI Gray (light)_ as your basemap.
@@ -27,6 +28,6 @@ This exercise cover the knowledge about:
 
 ## 4.Result
 
-|               Example of the Output Layout           |
-|:-------------------------------------------------:|
-| ![MyMap](../../../images/Export_ur_own_map/MyMap.png) |
+- See the example of Ghana Population (2018) map PDF file
+[here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/MyMap.pdf)
+
