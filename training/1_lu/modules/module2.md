@@ -1,5 +1,18 @@
+# Module 2 - Introduction to LUCIS-OPEN Tools for QGIS
+
+**What will you learn from this module?**
+
+- Get to know the function of each LUCIS-OPEN Tools for QGIS,
+- Be familiar with the parameters of Tools,
+- Process data with appropriate Tools.
+
+## 1. Tool Functions & Parameters
+
+- [Density of Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features): Calculate the line density of each polygon, i.e., the total length of lines in a polygon divided by the total area of the polygon.
 
 
+
+## 2. Get to Know the Datasets
 
 
 | ID | File Name   | Data Format | Type    | Description  |
@@ -20,3 +33,8 @@
 | 14 | SD60_100                  | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                            |
 | 15 | SD100_200                 | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                           |
 | 16 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   
+
+## 3. Exercises
+
+- Please complete the [Exercise 1](). # Density of Line,
+
