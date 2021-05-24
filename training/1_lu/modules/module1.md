@@ -2,9 +2,9 @@
 
 **What will you learn from this module?**
 
-- Installing QGIS and PyLUSAT, and Loading _LUCIS-OPEN Tools for QGIS_,
-- Be familiar with QGIS 3.10.8,
-- Visualizing GIS data and creating maps in QGIS.
+- Installing QGIS and PyLUSAT, and loading _LUCIS-OPEN Tools for QGIS_,
+- Be familiar with the user interface of QGIS 3.10.8,
+- Visualizing GIS data and creating maps.
 
 ## 1. Software Installation
 
@@ -52,8 +52,7 @@ _Toolbars_ to the place you prefer (see the animation below).
    > In the Browser Panel, you can also add the folder you frequently used to
    > [Favorites](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html?highlight=Favorites#basic-the-browser-panel). To avoid long path shown in
    > the Favorites, you can also `Rename Favorite...`.
-
-Now, lets load _Districts of Ghana_, _Road Network_, and _Health Facility_
+3. Now, lets load _Districts of Ghana_, _Road Network_, and _Health Facility_
 to Map Canvas, as shown in below.
 
 <div align="center">

@@ -2,6 +2,7 @@
 
 ## 1. Description
 
+
 In this exercise, we will visualize the distribution of population in Ghana in
 year 2018 by using a **Graduated** symbology on population in each district of
 Ghana.
