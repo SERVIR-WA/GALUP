@@ -30,19 +30,21 @@
 
 ## 2. Get to Know LUCIS-OPEN Tools for QGIS
 
-### Density of Line Features
+### 2.1 Density of Line Features
 
+#### **Summary**
+Calculate the line density of each polygon, i.e., the total length of lines in a polygon divided by the total area of the polygon.
+#### **Parameters**
+  For the parameters setting for Density of Line Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
+#### **Applications**
 
+### 2.2 Distance to Point Features
 
- [Density of Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features): Calculate the line density of each polygon, i.e., the total length of lines in a polygon divided by the total area of the polygon.
+### 2.3 Reclassify Field
 
-### Distance to Point Features
+### 2.4 Spatial Join
 
-### Reclassify Field
-
-### Spatial Join
-
-### Zonal Statistics
+### 2.5 Zonal Statistics
 
 
 
