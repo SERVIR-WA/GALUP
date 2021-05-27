@@ -8,11 +8,12 @@
 
 ## 1. Get to Know the Datasets
 
+- The table below lists the GIS datasets used for this module.
+- They can be found within the downloaded _zip_ folder from the previous
+  section at `GALUP-master -> training -> 1_lu -> datasets`.
 
 | ID | File Name   | Data Format | Type    | Description  |
 |----|------------|-------------|---------|-----------------------------|
-| 1  | Gh_260_MMDA               | vector      | polygon | Administration Regions of Ghana                           |
-| 2  | population_gha_2018-10-01 | raster      | tiff    | Ghana Population 2018                                     |
 | 3  | pop_landsat_2018_THLD     | raster      | tiff    | Twifo/Heman/Lower Denkyira District Population            |
 | 4  | THLD_Boundary             | vector      | polygon | Twifo/Heman/Lower Denkyira District Boundary              |
 | 5  | THLD_poly                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
@@ -20,13 +21,14 @@
 | 7  | Drain_THLD100             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
 | 8  | RZD_THLD100               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
 | 9 | Slope_Percent              | raster      | tiff    | Slope Percent                                             |
-| 10 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                               |
-| 11 | SD5_15                    | raster      | tiff    | [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                              |
-| 12 | SD15_30                   | raster      | tiff    | [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
-| 13 | SD30_60                   | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                             |
-| 14 | SD60_100                  | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                            |
-| 15 | SD100_200                 | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                                           |
-| 16 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   
+| 10 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)<sup>1</sup>                                                |
+| 11 | SD5_15                    | raster      | tiff    | Soil PH 5-15<sup>1</sup>                                             |
+| 12 | SD15_30                   | raster      | tiff    | Soil PH 15-30<sup>1</sup>                                          |
+| 13 | SD30_60                   | raster      | tiff    | Soil PH 30-60<sup>1</sup>                                              |
+| 14 | SD60_100                  | raster      | tiff    | Soil PH 60-100<sup>1</sup>                                          |
+| 15 | SD100_200                 | raster      | tiff    | Soil PH 100-200<sup>1</sup>                          |
+| 16 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   |
+|Note:| 1. Same data source
 
 ## 2. Get to Know LUCIS-OPEN Tools for QGIS
 
@@ -44,11 +46,31 @@ Calculate the line density of each polygon, i.e., the total length of lines in a
 
 ### 2.4 Spatial Join
 
+#### **Summary**
+Join attributes from the join features to the target features based on specified spatial relationship.
+#### **Parameters**
+For the parameters setting for Spatial Join tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
+
+#### **Applications**
+The spatial join tool inserts the columns from one feature table to another based on location or proximity. For example, when you have a set of land parcels, and each land parcel has a point inside of it. By running a spatial join, you can transfer the point table columns into the land parcel layer.
+
 ### 2.5 Zonal Statistics
 
+#### **Summary**
+Calculate statistics on values of raster within the zones of another dataset.
+#### **Parameters**
+For the parameters setting for Zonal Statistics tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
+
+#### **Applications**
+Zonal Statistics uses groupings to calculate statistics for specified zones. It can calculate the mean, median, sum, minimum, maximum, or range in each zone. Here are some examples when you would use this operation in GIS:
+1. Summing Rain in a Watershed – If you want to find out how much rain is in a watershed, you can use a zonal operation like this one. By using a precipitation raster as your value field, you can set your zone as the watersheds with a sum function.
+2. Highest Elevation in Country – If you have an elevation raster dataset, you can run Zonal Statistics to find out its highest peak by using the maximum function.
+3. Adding Tree Cover in an Ecozone – To find the tree cover area in an ecozone, you can run Zonal Statistics to sum a raster land cover dataset.
 
 
 ## 3. Exercises
 
 - Please complete the [Exercise 1](). # Density of Line,
 
+- Please complete the [Exercise 4](). # Spatial Join,
+- Please complete the [Exercise 5](). # Zonal Statistics,
