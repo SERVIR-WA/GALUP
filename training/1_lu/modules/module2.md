@@ -21,7 +21,6 @@
 | 5  | Drain_THLD100             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
 | 6  | RZD_THLD100               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
 | 7 | Slope_Percent              | raster      | tiff    | Slope Percent                                             |
-<<<<<<< HEAD
 | 8 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)<sup>1</sup>                                                |
 | 9 | SD5_15                    | raster      | tiff    | Soil PH 5-15<sup>1</sup>                                             |
 | 10 | SD15_30                   | raster      | tiff    | Soil PH 15-30<sup>1</sup>                                          |
