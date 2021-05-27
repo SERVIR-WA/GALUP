@@ -86,6 +86,3 @@ Zonal Statistics uses groupings to calculate statistics for specified zones. It 
 - Please complete the [Exercise 2](). # Distance to Point Features
 - Please complete the [Exercise 3](). # Reclassify Field
 - Please complete the [Exercise 4](). # Spatial Join & Zonal Statistics
-
-- Please complete the [Exercise 4](). # Spatial Join,
-- Please complete the [Exercise 5](). # Zonal Statistics,
