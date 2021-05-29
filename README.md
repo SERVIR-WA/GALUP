@@ -2,6 +2,7 @@
 
 ![license](https://img.shields.io/github/license/servir-wa/galup)
 ![contributors](https://img.shields.io/github/contributors/servir-wa/galup)
+![gh-size](https://img.shields.io/github/repo-size/servir-wa/galup)
 
 ## Introduction
 
