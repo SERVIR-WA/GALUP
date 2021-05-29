@@ -1,5 +1,9 @@
 # Welcome to GALUP
 
+![license](https://img.shields.io/github/license/servir-wa/galup)
+
+## Introduction
+
 In Ghana, farmlands and cities are expanding rapidly into the savannas,
 woodlands and forests.
 The Ghana Land Use Project ([GALUP](http://galup.cersgis.org/)) project will
