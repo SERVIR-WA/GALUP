@@ -1,6 +1,7 @@
 # Welcome to GALUP
 
 ![license](https://img.shields.io/github/license/servir-wa/galup)
+![contributors](https://img.shields.io/github/contributors/servir-wa/galup)
 
 ## Introduction
 
