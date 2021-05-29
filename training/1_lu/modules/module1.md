@@ -11,7 +11,7 @@
 > :pushpin: Note on installation:<br>
 > Follow the [instruction](https://github.com/SERVIR-WA/GALUP/wiki/Install)
 > to install [QGIS 3.10.8](https://qgis.org/en/site/) and
-> [PyLUSAT v0.4.0](https://pypi.org/project/pylusat/), which must be installed
+> [PyLUSAT v0.5.1](https://github.com/chjch/pylusat), which must be installed
 > before we can successfully load and run the tools GALUP have developed.
 
 ## 2. GIS Datasets
@@ -149,7 +149,7 @@ indicate the direction. You can add these items under the `Add Item` button.
   in the PDF file, try a lower _dpi_ (e.g., 150 dpi) in the
   [**Export Setting**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#export-settings )
   in the [**Layout Panel**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel).)
-- See the example map in PDF file [here](../pdf_download/MyMap.pdf).
+- See the example map in PDF file [here](../pdf_download/PopulationMap.pdf).
 
 ## 4. Exercises
 

@@ -19,7 +19,7 @@ suitability modeling framework. LUCIS models were originally developed using
 ModelBuilder in ArcMap&trade;.
 ![lucis_open](images/lucis_workflow.svg)
 The GALUP team developed the **LUCIS-OPEN Tools for QGIS** by using
-[PyLUSAT](https://pypi.org/project/pylusat/)—Python for Land-Use Suitability
+[PyLUSAT](https://github.com/chjch/pylusat)—Python for Land-Use Suitability
 Analysis Tools—and the [QGIS Python API](https://qgis.org/pyqgis/3.10/).
 These tools enable land-use planners to perform suitability analysis on
 [QGIS](https://docs.qgis.org/3.10/en/docs/user_manual/preamble/foreword.html#foreword),
