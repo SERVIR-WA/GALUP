@@ -55,10 +55,10 @@ technologies to inform and ensure sustainable land use practices.
 
 We appreciate the supports from our partners below.<br>
 <img src="images/UF_Signature-transparent.png" width="320" vspace="10px">&nbsp; &nbsp;
-<img src="images/cersgis-logo.png" style="width:130px">&nbsp; &nbsp;
-<img src="images/university-of-ghana-logo-1024x948.png" style="width:100px">
+<img src="images/cersgis-logo.png" width="130">&nbsp; &nbsp;
+<img src="images/university-of-ghana-logo-1024x948.png" width="100">
 <br><br>
-<img src="images/nasa.png" style="width:100px">&nbsp;
-<img src="images/Servir_Logo.png" style="width:100px">&nbsp;
-<img src="images/USAID_logo.png" style="width:200px">&nbsp;
-<img src="images/crs.png" style="width:100px"><br>
+<img src="images/nasa.png" width="100">&nbsp;
+<img src="images/Servir_Logo.png" width="100">&nbsp;
+<img src="images/USAID_logo.png" width="200">&nbsp;
+<img src="images/crs.png" width="100"><br>
