@@ -3,7 +3,7 @@
 ## 1. Description
 
 In Exercise 1, we made a map of the population of Ghana in year 2018. In this
-exercise, we will calculate _Population density_ for individual Districts by,
+exercise, we will calculate _Population Density_ for individual Districts by,
 first, reviewing the data in
 [**Attribute Table**](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface),
 and then calculating density (population/area) in the
@@ -40,16 +40,17 @@ This exercise covers:
    - **Create a new field** with name "Pop_Den", and
    - specify the **Expression** to calculate population density using two
      fields: _Pop\_2018_ and _Area\_km2_.
-5. Choose the _Graduated_ symbology and the _Reds_ color ramp with 5 classes to
+5. Save your results on the attribute table by clicking _Toggle editing mode_ ![stopediting](../../../images/AttributeTable/stopediting_icon.png) on the menu bar of the attribute table, or press _Ctrl\+E_.
+6. Choose the _Graduated_ symbology and the _BuPu_ color ramp with 5 classes to
    render _Pop\_Den_, the newly calculated field.
-6. Add _ESRI Gary (light)_ as a basemap.
-7. Create a _Layout_ and add a _Label_, a _Legend_, a _Scale bar_, and
+7. Add _ESRI Gary (light)_ as a basemap.
+8. Create a _Layout_ and add a _Label_, a _Legend_, a _Scale bar_, and
    a _North Arrow_.
-8. Export your map as a PDF file.
+9. Export your map as a PDF file.
   
 ## 5. Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](../pdf_download/DensityMap.pdf).
+  [here](../pdf_download/DensityMap2.pdf).
 - Now you have completed both exercises. Please go back to
   [Module 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to turn in them.
