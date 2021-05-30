@@ -53,6 +53,12 @@ technologies to inform and ensure sustainable land use practices.
 
 ## GALUP Partners
 
-<p float="left">
-  <img src="images/galup_partners.png">
-</p>
+We appreciate the supports from our partners below.<br>
+<img src="images/UF_Signature-transparent.png" style="width:320px" vspace="10px">&nbsp; &nbsp;
+<img src="images/cersgis-logo.png" style="width:130px">&nbsp; &nbsp;
+<img src="images/university-of-ghana-logo-1024x948.png" style="width:100px">
+<br><br>
+<img src="images/nasa.png" style="width:100px">&nbsp;
+<img src="images/Servir_Logo.png" style="width:100px">&nbsp;
+<img src="images/USAID_logo.png" style="width:200px">&nbsp;
+<img src="images/crs.png" style="width:100px"><br>
