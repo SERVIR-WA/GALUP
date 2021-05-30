@@ -6,7 +6,7 @@
 - Be familiar with the parameters of Tools,
 - Process data with appropriate Tools.
 
-## 1. Get to Know the Datasets
+## 1. GIS Datasets
 
 - The table below lists the GIS datasets used for this module.
 - They can be found within the downloaded _zip_ folder from the previous
@@ -14,20 +14,21 @@
 
 | ID | File Name   | Data Format | Type    | Description  |
 |----|------------|-------------|---------|-----------------------------|
-| 1  | pop_landsat_2018_THLD     | raster      | tiff    | Twifo/Heman/Lower Denkyira District Population            |
-| 2  | THLD_Boundary             | vector      | polygon | Twifo/Heman/Lower Denkyira District Boundary              |
-| 3  | THLD_poly                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
-| 4  | osm2020_allrds_THLD       | vector      | line    | Road Network                                              |
-| 5  | Drain_THLD100             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
-| 6  | RZD_THLD100               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
-| 7 | Slope_Percent              | raster      | tiff    | Slope Percent                                             |
-| 8 | SD0_5                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)<sup>1</sup>                                                |
-| 9 | SD5_15                    | raster      | tiff    | Soil PH 5-15<sup>1</sup>                                             |
-| 10 | SD15_30                   | raster      | tiff    | Soil PH 15-30<sup>1</sup>                                          |
-| 11 | SD30_60                   | raster      | tiff    | Soil PH 30-60<sup>1</sup>                                              |
-| 12 | SD60_100                  | raster      | tiff    | Soil PH 60-100<sup>1</sup>                                          |
-| 13 | SD100_200                 | raster      | tiff    | Soil PH 100-200<sup>1</sup>                          |
-| 14 | iSDA_MGRS                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   |
+| 1  | pop_landsat_2018_THLD.shp     | raster      | tiff    | Twifo/Heman/Lower Denkyira District Population            |
+| 2  | THLD_Boundary.shp             | vector      | polygon | Twifo/Heman/Lower Denkyira District Boundary              |
+| 3  | THLD_poly.shp                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
+| 4  | osm2020_allrds_THLD.shp       | vector      | line    | Road Network                                              |
+| 5  | Health_Facilities.shp       | vector      | line    | Road Network                                              |
+| 6  | Drain_THLD100.tif             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
+| 7  | RZD_THLD100.tif               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
+| 8 | Slope_Percent.tif              | raster      | tiff    | Slope Percent                                             |
+| 9 | SD0_5.tif                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)<sup>1</sup>                                                |
+| 10 | SD5_15.tif                    | raster      | tiff    | Soil PH 5-15<sup>1</sup>                                             |
+| 11 | SD15_30.tif                   | raster      | tiff    | Soil PH 15-30<sup>1</sup>                                          |
+| 12 | SD30_60.tif                   | raster      | tiff    | Soil PH 30-60<sup>1</sup>                                              |
+| 13 | SD60_100.tif                  | raster      | tiff    | Soil PH 60-100<sup>1</sup>                                          |
+| 14 | SD100_200.tif                 | raster      | tiff    | Soil PH 100-200<sup>1</sup>                          |
+| 15 | iSDA_MGRS.tif                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   |
 |Note:| 1. Same data source
 
 ## 2. Get to Know LUCIS-OPEN Tools for QGIS
@@ -92,12 +93,17 @@ The figures below shows the parameter setting of the tool and an output map of t
 ### 2.4 Spatial Join
 
 #### **Summary**
-Join attributes from the join features to the target features based on specified spatial relationship.
+The spatial join tool can join attributes from the join features to the target features based on specified spatial relationship.
+
 #### **Parameters**
 For the parameters setting for Spatial Join tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
 
 #### **Applications**
-The spatial join tool inserts the columns from one feature table to another based on location or proximity. For example, when you have a set of land parcels, and each land parcel has a point inside of it. By running a spatial join, you can transfer the point table columns into the land parcel layer.
+The spatial join tool inserts the columns from one feature table to another based on specified spatial relationship, including _Intersect_, _Contains_, and _Within_. For example, you have a set of points within different land parcels. By running a spatial join, you can transfer the land parcel table columns into the point feature. So that means that if the land parcels have their ID number, this field gets transferred to the point feature. 
+
+|         Parameters setting     |       Result        |
+|:---------------------------------------:|:---------------------------------------------:|
+|   |     |
 
 ### 2.5 Zonal Statistics
 

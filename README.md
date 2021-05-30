@@ -1,5 +1,12 @@
 # Welcome to GALUP
 
+![license](https://img.shields.io/github/license/servir-wa/galup)
+![contributors](https://img.shields.io/github/contributors/servir-wa/galup)
+![gh-size](https://img.shields.io/github/repo-size/servir-wa/galup)
+[![twitter](https://img.shields.io/twitter/follow/Galupghana?style=social)](https://twitter.com/GALUPGhana)
+
+## Introduction
+
 In Ghana, farmlands and cities are expanding rapidly into the savannas,
 woodlands and forests.
 The Ghana Land Use Project ([GALUP](http://galup.cersgis.org/)) project will
@@ -17,13 +24,13 @@ Strategy (LUCIS) developed by two professors, Margaret Carr and Paul Zwick, at
 the University of Florida. LUCIS, at its core, is a GIS-based land-use
 suitability modeling framework. LUCIS models were originally developed using
 ModelBuilder in ArcMap&trade;.
-![lucis_open](images/lucis_workflow.svg)
 The GALUP team developed the **LUCIS-OPEN Tools for QGIS** by using
 [PyLUSAT](https://github.com/chjch/pylusat)—Python for Land-Use Suitability
 Analysis Tools—and the [QGIS Python API](https://qgis.org/pyqgis/3.10/).
 These tools enable land-use planners to perform suitability analysis on
 [QGIS](https://docs.qgis.org/3.10/en/docs/user_manual/preamble/foreword.html#foreword),
 an open-source GIS software application.
+![lucis_open](images/lucis_workflow.svg)
 
 ## GALUP Trainings
 
