@@ -1,5 +1,6 @@
 # Welcome to GALUP
 
+[![pulusat-version](https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version)](https://github.com/chjch/pylusat)
 ![license](https://img.shields.io/github/license/servir-wa/galup)
 ![contributors](https://img.shields.io/github/contributors/servir-wa/galup)
 ![gh-size](https://img.shields.io/github/repo-size/servir-wa/galup)
