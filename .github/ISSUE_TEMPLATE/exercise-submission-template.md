@@ -16,23 +16,33 @@ assignees: ''
 
 4. Post-training Survey (required)
 
-   1. Time needed to complete:
-     1.1. How long did you need to go through module 1?
+   (1) Time needed to complete:
 
-     1.2. How long did it take you to go through exercise 1?
+     (1.1) How long did you need to go through module 1?
 
-     1.3. How long did it take you to go through exercise 2?
+     (1.2) How long did it take you to go through exercise 1?
 
-   2. Content of the course:
-     2.1. Did you experience any difficulties with the instructions?
+     (1.3) How long did it take you to go through exercise 2?
 
-     2.2. Could you list any portions that were more difficult for you to complete?
+   (2) Content of the course:
 
-   3. Did you learn anything new?
+     (2.1) Did you experience any difficulties with the instructions?
+     
+     (2.2) Could you list any portions that were more difficult for you to complete?
 
-     3.1. If yes, please provide details:
+   (3) Did you learn anything new?
 
-   4. Do you have any suggestion on how we could improve future training sessions?
+     (3.1) If yes, please provide details:
+     
+
+   (4) Do you have any suggestion on how we could improve future training sessions?
+   
+   
+   
+   
+   
+   
+   
    
 
 
