@@ -59,7 +59,7 @@ We appreciate the supports from our partners below.<br>
   <tr> 
     <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="320"></td>
     <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="130"></td>
-    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="100"></td>
+    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="120"></td>
   </tr>
 </table>
 <br>
