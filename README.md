@@ -55,7 +55,7 @@ technologies to inform and ensure sustainable land use practices.
 
 We appreciate the supports from our partners below.<br>
 
-<table>
+<table style="border: 0;">
   <tr> 
     <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="320"></td>
     <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="130"></td>
