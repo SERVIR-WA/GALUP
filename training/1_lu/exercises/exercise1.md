@@ -1,25 +1,26 @@
-# Exercise 1
+# Module 1 - Exercise 1
 
 ## 1. Description
 
+In this exercise, we will visualize the distribution of population by
+individual District Assemblies of Ghana in the year 2018 by using a
+**Graduated** symbology.
 
-In this exercise, we will visualize the distribution of population in Ghana in
-year 2018 by using a **Graduated** symbology on population in each district of
-Ghana.
+## 2. GIS Dataset
 
-You should use _Gh\_260\_MMDA.shp_ at
+We will use the _shapefile_ named **_Gh\_260\_MMDA.shp_** at
 `GALUP-master -> training -> 1_lu -> datasets -> District of Ghana`
-to finish this exercise.
+to do this exercise.
 
-## 2. Skills Practices
+## 3. Skills Practices
 
 This exercise covers:
 
-- load GIS data to Map Canvas in QGIS,
-- change the symbology of vector layers,
-- create a layout and print a map as a pdf file.
+- Load GIS data to QGIS Map Canvas,
+- Change the symbology of vector layers,
+- Create a layout and print a map as a pdf file.
 
-## 3. Instruction
+## 4. Instruction
 
 1. Locate _Gh\_260\_MMDA.shp_ in the _Browser Panel_ and add it to
    _Map Canvas_.
@@ -28,10 +29,13 @@ This exercise covers:
 3. Choose _Graduated_ symbology and choose the _Reds_ color ramp with 5 classes
    to render the target field: _Pop\_2018_.
 4. Add _ESRI Gray (light)_ as the basemap.
-5. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+5. Create a _Layout_ and then add a _Title_, _Legend_, _Scale bar_, and
+   _North Arrow_.
 6. Export as a PDF file.
 
-## 4.Result
+## 5. Result
 
-- See the example map, Population of Ghana in 2018, in this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/PopulationMap.pdf)
+- Upon completion, the map you got should look similar to this pdf
+  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/PopulationMap.pdf).
+- Please go back to
+  [Module 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to complete the second exercise.

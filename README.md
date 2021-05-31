@@ -1,5 +1,6 @@
 # Welcome to GALUP
 
+[![pulusat-version](https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version)](https://github.com/chjch/pylusat)
 ![license](https://img.shields.io/github/license/servir-wa/galup)
 ![contributors](https://img.shields.io/github/contributors/servir-wa/galup)
 ![gh-size](https://img.shields.io/github/repo-size/servir-wa/galup)
@@ -52,6 +53,21 @@ technologies to inform and ensure sustainable land use practices.
 
 ## GALUP Partners
 
-<p float="left">
-  <img src="images/galup_partners.png">
-</p>
+We appreciate the supports from our partners below.<br>
+
+<table style="border: 0;">
+  <tr> 
+    <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="320"></td>
+    <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="130"></td>
+    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="120"></td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td><img src="images/nasa.png" width="100"></td>
+    <td><img src="images/SERVIR_Logo.png" width="100"></td>
+    <td><img src="images/USAID_logo.png" width="240"></td>
+    <td><img src="images/crs.png" width="100"></td>
+  </tr>
+</table>
