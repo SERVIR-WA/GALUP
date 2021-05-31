@@ -43,7 +43,9 @@ particular land-use purpose.
 ## 3. Delivery Method
 
 The training will be delivered through the
-[GALUP](https://github.com/SERVIR-WA/GALUP) GitHub repository.
+[GALUP](https://github.com/SERVIR-WA/GALUP) GitHub repository, including
+software package, training materials, and exercises. So, we ask every
+participant to get a GitHub Account which is completely free.
 
 ![training_workflow](../../../images/training_workflow.svg)
 
