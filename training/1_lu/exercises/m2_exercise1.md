@@ -2,36 +2,40 @@
 
 ## 1. Description
 
+In this exercise, we will visualize the road network density in the THLD area by using the [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features) tool.
 
-In this exercise, we will visualize the distribution of population in Ghana in
-year 2018 by using a **Graduated** symbology on population in each district of
-Ghana.
-
-You should use _Gh\_260\_MMDA.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> District of Ghana`
-to finish this exercise.
+You should use the following data to finish this exercise:
+- THLD polygon shapefile _THLD\_30N.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> XXX`.
+- Roads in the THLD area _roads\_30N.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
 
 ## 2. Skills Practices
 
 This exercise covers:
 
-- load GIS data to Map Canvas in QGIS,
-- change the symbology of vector layers,
-- create a layout and print a map as a pdf file.
+- The parameter setting and the usage of the Density of Line Features tool.
+- Change the symbology of vector layers.
+- Create a layout and print a map as a pdf file.
 
 ## 3. Instruction
 
-1. Locate _Gh\_260\_MMDA.shp_ in the _Browser Panel_ and add it to
+1. Locate _THLD\_30N.shp_ and _roads\_30N.shp_ in the _Browser Panel_ and add them to
    _Map Canvas_.
-2. Open _Attribute Table_ to view the field, _Pop\_2018_, which represents
-   population by district in 2018.
-3. Choose _Graduated_ symbology and choose the _Reds_ color ramp with 5 classes
-   to render the target field: _Pop\_2018_.
-4. Add _ESRI Gray (light)_ as the basemap.
-5. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-6. Export as a PDF file.
+2. In the _Processing Toolbox_ panel, find the Density of Line Features tool under the _Scripts_.
+3. Open the Density of Line Features tool, set the _THLD\_30N.shp_ as the **input layer**, and _roads\_30N.shp_ as the **Line layer**. Name the **Output column name** as _Rds\_Den_, and the **Output layer** as _RdsDenMap_ and click **Run**.
+4. Open _Attribute Table_ of the output layer (_RdsDenMap_) to review the output field, _Rds\_Den_, which represents THLD roads network density
+   by district.
+5. Open the symbology window, choose the target field: _Rds\_Den_ and _Graduated_ symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose _Rule\_based symbology_, click **Add rule** ![addrule](../../../images/M2E1/AddRule.png) to open the _Edit Rule_ window.
+6. Type _0_ for the _Label_, and click the **Expression** ![expre](../../../images/M2E1/Expression.png) to open the _Expression String Builder_ window, and type _"Rds\_den" is NULL_ into the _Expression_ field, and click **OK** to close the _Expression String Builder_ window.
+7. Scroll down the _Edit Rule_ window and select the white color in the drop-down menu of the _Color_. Click **OK** to close the _Edit Rule_ window.
+8. Click **OK** on the symbology window to finish the symbology part.
+9. Add _ESRI Gray (light)_ as the basemap.
+10. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+11. Export as a PDF file.
 
 ## 4.Result
 
-- See the example map, Population of Ghana in 2018, in this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/PopulationMap.pdf)
+- Upon completion, the map you got should look similar to this pdf
+  [here](../pdf_download/M2E1_RdsDenMap.pdf).
+- Now you have completed both exercises. Please go back to
+  [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to turn in them.

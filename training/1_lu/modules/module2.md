@@ -29,16 +29,19 @@
 
 ### 2.1 Density of Line Features
 
-#### **Summary**
-Calculates a magnitude-per-unit area from polyline features that fall within a radius around each input vector feature.
-#### **Parameters**
-For the parameters setting for the Density of Line Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
-#### **Applications**
-The Density of Line Features tool is used to calculate the line density in a polygon (i.e., calculating the total length of line in a polygon divided by the area of the polygon). Only the portion of a line within the neighborhood is considered when calculating the density. If no lines fall within the neighborhood at a particular polygon, that polygon is assigned "Null".
+1. **Summary:**<br>
+   Calculates a magnitude-per-unit area from polyline features that fall within a radius around each input vector feature.
+2. **Parameters:**<br>
+   For the parameters setting for the Density of Line Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
+3. **Applications:**<br>
+   The Density of Line Features tool is used to calculate the line density in a polygon (i.e., calculating the total length of line in a polygon divided by the area of the polygon). Only the portion of a line within the neighborhood is considered when calculating the density. If no lines fall within the neighborhood at a particular polygon, that polygon is assigned "Null".
 
-This tool is often used to calculate the roads network density in planning.
+   This tool is often used to calculate the roads network density in planning.
 
-In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.
+   In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.<br>
+   > :pushpin: Check the details of an image:<br>
+   > If you can't see the image clearly, click on the image to view it in a
+   > new page, which will show the image in its original size.
 
 |          Parameter Setting         |    Output Map    |
 |:------------------------------------------:|:------------------------------------------:|
