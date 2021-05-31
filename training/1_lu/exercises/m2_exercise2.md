@@ -1,10 +1,8 @@
-# Exercise 1
+# Exercise 2
 
 ## 1. Description
 
-The distance to health facilities in a district is one common measure of that area's accessibility to medical resource. In Twifo/Heman/Lower Denkyira (THLD) district, we want to build a healthcare center to improve all Integrated Decision Units' (IDUs) accessibility to medical resource. Therefore, we need to find out those area far from health facilities for location selection of the healthcare center in the next step.
-
-In this exercise, we will visualize the distance to Health Facilities in THLD district by calculating the distance to the health facilities in each IDU.
+The distance to health facilities in a district is one common measure of that area's accessibility to medical resource. In Twifo/Heman/Lower Denkyira (THLD) district, we want to build a healthcare center to improve all Integrated Decision Units' (IDUs) accessibility to medical resource. Therefore, we need to find out those area far from health facilities in the first step of the healthcare center location selection. In this exercise, we will visualize the distance to Health Facilities in THLD district by calculating the distance to the health facilities in each IDU.
 
 You should use _Health\_Facilities.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Health facilities in THLD`
@@ -36,6 +34,9 @@ This exercise covers:
 10. Export as a PDF file.
 
 ## 4.Result
+
+Now, you can easily find out the area with the lowest accessibility to medical resource
+by reviewing the map.
 
 - See the example map, Distance to Health Facility in THLD District, in this pdf
   [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/DistanceToHF.pdf)

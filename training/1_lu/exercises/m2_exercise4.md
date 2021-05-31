@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 4
 
 ## 1. Description
 
@@ -9,9 +9,9 @@ The first step of our analysis aims to select out the area with a suitable soil 
 In this exercise, we will create a Soil pH index to evaluate the suitability to grow Yam in the land of each Integrated Decision Units' (IDUs) in THLD district.
 
 You should use _SD5/_15.tif_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Soil_PH_cm_5_15`
+`GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
 and _THLD\_poly_ at
-`GALUP-master -> training -> 1_lu -> datasets -> IDUs of THLD District`
+`GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`
 to finish this exercise.
 
 ## 2. Skills Practices
@@ -50,6 +50,8 @@ This exercise covers:
 
 ## 4.Result
 
+Now, you can select out the area with Soil pH Suitaility Index 3 as the suitable
+cropland to grow Yam.
 
 - See the example map, Population of Ghana in 2018, in this pdf
   [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/SoilIndex.pdf)
