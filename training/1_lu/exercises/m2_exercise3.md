@@ -2,32 +2,33 @@
 
 ## 1. Description
 
-Normally, when parents purchase a house, they might consider the proximity to schools so that it will be convenient for the education of children. In this exercise, we will help those parents to find out the districts of THLD that are in proximity (within the 2 miles) to the education facility by using the [Select by Location](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#26-select-by-location) tool.
+Normally, the residential areas will be built near the education facilities so that it will be convenient for the education of children. In this exercise, we will help to find out the IDUs of THLD that are in proximity (within the 1 miles) to the education facility by using the [Select by Location](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#26-select-by-location) tool.
 
+## 2. GIS Dataset
 You should use the following data to finish this exercise:
 - THLD polygon shapefile _THLD\_30N.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
-- Education facilities in the THLD area _Education\_Facilities.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
+- Education facilities in the THLD area _Education\_Facilities.shp_ at `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
 
-## 2. Skills Practiced
+## 3. Skills Practiced
 
 This exercise covers:
 
 - The parameter setting and the usage of the Select by Location tool.
 - Create a layout and print a map as a pdf file.
 
-## 3. Instruction
+## 4. Instruction
 
 1. Locate _THLD\_30N.shp_ and _Education\_Facilities.shp_ in the _Browser Panel_ and add them to
    _Map Canvas_.
 2. In the _Processing Toolbox_ panel, find the [Select by Location tool under the _Scripts_.
-3. Open the Select by Location tool, set the _THLD\_30N.shp_ as the **input layer**, and _Education\_Facilities.shp_ as the **Selection layer**. Set the **Join option** as _Within a distance_, and the **Within disctance of selecting feature** as _2 miles_ Name the **Output layer** as _EduProIDU_ and click **Run**.
-4.  Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-5.  Export as a PDF file.
+3. Open the Select by Location tool, set the _THLD\_30N.shp_ as the **input layer**, and _Education\_Facilities.shp_ as the **Selection layer**. Set the **Join option** as _Within a distance_, and the **Within distance of selecting feature** as _1 mile_ Name the **Output layer** as _EduProIDU_ and click **Run**.
+4. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+5. Export as a PDF file.
 
-## 4.Result
+## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](../pdf_download/M2E3_EduProximity.pdf).
+  [here](../pdf_download/M2E3_EduProximity2.pdf).
 - Now you have completed both exercises. Please go back to
   [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to turn in them.
