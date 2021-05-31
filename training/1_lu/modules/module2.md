@@ -42,7 +42,7 @@ feature.
    Only the portion of a line within the neighborhood (a polygon feature or a
    radius around a polygon feature) is considered when calculating the density.
    If no lines fall within the neighborhood at a particular polygon, that
-   polygon is assigned "Null".
+   polygon is assigned "[Null](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)".
 
    This tool is often used to calculate the density of linear features, such as
    roads and rivers.

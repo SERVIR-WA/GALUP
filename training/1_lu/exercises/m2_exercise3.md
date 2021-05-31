@@ -1,4 +1,4 @@
-# Exercise 3
+# Module 2 - Exercise 3
 
 ## 1. Description
 
@@ -30,5 +30,5 @@ This exercise covers:
 
 - Upon completion, the map you got should look similar to this pdf
   [here](../pdf_download/M2E3_EduProximity2.pdf).
-- Now you have completed both exercises. Please go back to
-  [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to turn in them.
+- Please go back to
+  [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#3-exercises) to complete the fourth exercise.
