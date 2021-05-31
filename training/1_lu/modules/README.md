@@ -52,3 +52,7 @@ The training will be delivered through the
 1. Go to the GitHub official website: [https://github.com/](https://github.com/), and click the [**Sign up**](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
 2. Type your 1) Username, 2) Email address, and 3) Password to set up for your account.
 3. Finish the verification step and click **Create account**.
+
+### 3.2. Turn in the Exercises
+
+At the end of every Module, a dedicated link is provided for you to submit 
