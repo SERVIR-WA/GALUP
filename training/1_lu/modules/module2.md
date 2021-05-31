@@ -14,81 +14,83 @@
 
 | ID | File Name   | Data Format | Type    | Description  |
 |----|------------|-------------|---------|-----------------------------|
-| 1  | pop_landsat_2018_THLD.shp     | raster      | tiff    | Twifo/Heman/Lower Denkyira District Population            |
-| 2  | THLD_Boundary.shp             | vector      | polygon | Twifo/Heman/Lower Denkyira District Boundary              |
-| 3  | THLD_poly.shp                 | vector      | polygon | Twifo/Heman/Lower Denkyira District Administrative Region |
-| 4  | osm2020_allrds_THLD.shp       | vector      | line    | Road Network                                              |
-| 5  | Health_Facilities.shp       | vector      | line    | Road Network                                              |
-| 6  | Drain_THLD100.tif             | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)                                             |
-| 7  | RZD_THLD100.tif               | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617)                                           |
-| 8 | Slope_Percent.tif              | raster      | tiff    | Slope Percent                                             |
-| 9 | SD0_5.tif                     | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)<sup>1</sup>                                                |
-| 10 | SD5_15.tif                    | raster      | tiff    | Soil PH 5-15<sup>1</sup>                                             |
-| 11 | SD15_30.tif                   | raster      | tiff    | Soil PH 15-30<sup>1</sup>                                          |
-| 12 | SD30_60.tif                   | raster      | tiff    | Soil PH 30-60<sup>1</sup>                                              |
-| 13 | SD60_100.tif                  | raster      | tiff    | Soil PH 60-100<sup>1</sup>                                          |
-| 14 | SD100_200.tif                 | raster      | tiff    | Soil PH 100-200<sup>1</sup>                          |
-| 15 | iSDA_MGRS.tif                 | raster      | tiff    | [Land Cover Type Ghana 2019](https://www.isda-africa.com/isdasoil/)   |
-|Note:| 1. Same data source
+| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
+| 2  | population_gha_2018-10-01.tif    | raster      | tiff    | Population of Ghana in 2018     |
+| 3  | THLD_poly.shp                 | vector      | polygon | Integrated Decision Units in THLD District     |
+| 4  | osm2020_allrds_THLD.shp       | vector      | line    | Primary and secondary roads in THLD District                                             |
+| 5  | RailwayLine.shp             | vector      | line    | Railway line in Ghana                                             |
+| 6  | Hydro.shp             | vector      | line    | Hydro in THLD District                                            |
+| 7  | Health_Facilities.shp       | vector      | point    | Health facilities in THLD District                                           |
+| 8  | Education_Facilities.shp       | vector      | point    | Education facilities in THLD District                                         |
+| 9  | PointOfInterest.shp               | vector      | point    | Tourism point in Ghana                                           |
+| 10  | SD5_15.tif                    | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                  |
 
 ## 2. Get to Know LUCIS-OPEN Tools for QGIS
 
 ### 2.1 Density of Line Features
 
-#### **Summary**
-Calculates a magnitude-per-unit area from polyline features that fall within a radius around each input vector feature.
-#### **Parameters**
-For the parameters setting for the Density of Line Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
-#### **Applications**
-The Density of Line Features tool is used to calculate the line density in a polygon (i.e., calculating the total length of line in a polygon divided by the area of the polygon). Only the portion of a line within the neighborhood is considered when calculating the density. If no lines fall within the neighborhood at a particular polygon, that polygon is assigned "Null".
+This tool calculates a magnitude-per-unit area from polyline features that fall within each input vector feature _or_ within a radius around each input vector
+feature.
 
-This tool is often used to calculate the roads network density in planning.
+1. **Tool Parameters:**<br>
+   For details about parameters settings of this tool, please check
+   [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
+2. **Application Scenario:**<br>
+   _Density of Line Features_ is used to calculate the line density in
+   a polygon (i.e., calculating the total length of lines in a polygon feature
+   divided by its area).
+   Only the portion of a line within the neighborhood (a polygon feature or a
+   radius around a polygon feature) is considered when calculating the density.
+   If no lines fall within the neighborhood at a particular polygon, that
+   polygon is assigned "[Null](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)".
 
-In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.
+   This tool is often used to calculate the density of linear features, such as
+   roads and rivers.
+   In the following example, we use this tool to calculate the density of
+   underground water veins in the THLD area.
 
-|          Parameter Setting         |    Output Map    |
+   The figures below show the parameter setting of the tool and the output.<br>
+   > :pushpin: Check the details of an image:<br>
+   > If you can't see the image clearly, click on the image to view it in a
+   > new page, which will show the image in its original size.
+
+|          Parameter Setting         |    Output    |
 |:------------------------------------------:|:------------------------------------------:|
-| ![PS1](../../../images/PrameterSetting/LineDensity.png) | ![am1](../../../images/ApplicationMaps/LineDen.png) |
+| ![PS1](../../../images/PrameterSetting/LineDensity.png) | ![am1](../../../images/ApplicationMaps/LineDen2.png) |
 
 ### 2.2 Distance to Point Features
 
-#### **Summary**
 Calculates distance between the input vector features and the nearest point feature.
-#### **Parameters**
-For the parameters setting for the Distance to Point Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
-#### **Applications**
-The Distance to Point Features tool is often used to find the nearest location (point feature) around a polygon feature. For example, this tool can be used to find the nearest school around each residential area or used to find the nearest hospital of each census tract.
 
-In the following example, we use the Distance to Point Features tool to calculate the distance between each polygon of THLD area and the nearest education facility. The figures below shows the parameter setting of the tool and an output map of the distance to the education facility of the THLD area.
+1. **Tool Parameters:**<br>
+    For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
+2. **Application Scenario:**<br>
+    _Distance to Point Features_ is often used to find the nearest location (point feature) around a polygon feature. For example, this tool can be used to find the nearest school around each residential area or used to find the nearest hospital of each census tract.
 
-|          Parameter Setting         |    Output Map    |
+    In the following example, we use the Distance to Point Features tool to calculate the distance between each polygon of THLD area and the nearest education facility.
+    
+    The figures below shows the parameter setting of the tool and the output.
+
+|          Parameter Setting         |    Output    |
 |:------------------------------------------:|:------------------------------------------:|
-| ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP.png) |
+| ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP2.png) |
 
 ### 2.3 Reclassify Field
 
-#### **Summary**
 Reclassify a field in the input table based on predefined rules and store the translated values in a new field.
-#### **Parameters**
-For the parameters setting for the Reclassify Field tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
-#### **Applications**
-The Reclassify Field tool reclassifies or change the values of the feature to alternative values. For example, a vector of soil type may be assigned values of 1 to 10 to represent erosion potential. The Reclassify Field tool is useful when you are trying to do a building suitability model, it allow you to assign new values to different evaluation indicators under a same scoring system on which the final weighting step will be based.
 
-Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria below.
+1. **Tool Parameters:**<br>
+    For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
+2. **Application Scenario:**<br>
+    _Reclassify Field_ reclassifies or changes the values of the feature to alternative values. For example, a vector of soil type may be assigned values of 1 to 10 to represent erosion potential. This tool is useful when you are trying to do a building suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system on which the final weighting step will be based.
 
-| Old Value| New Value|
-  |----------------------|---------------------|
-  | 7-60 | 1|
-  | 60-100| 2|
-  | 100-186|3|
-  | 186-490|4|
-  | 490-18804| 5|
+    Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804, will be assigned new values: 1, 2, 3, 4, 5, respectively.
 
-The figures below shows the parameter setting of the tool and an output map of the population density level of the Ghana by district in 2018.
+    The figures below shows the parameter setting of the tool and the output.
 
-|          Parameter Setting         |    Output Map    |
+|          Parameter Setting         |    Output   |
 |:------------------------------------------:|:------------------------------------------:|
-| ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify.png) |
+| ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify2.png) |
 
 ### 2.4 Spatial Join
 
@@ -137,10 +139,9 @@ The Select By Location tool allows you to select features based on their locatio
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
-
 ## 3. Exercises
 
-- Please complete the [Exercise 1](). # Density of Line (road density)
+- Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md#exercise-1). # Density of Line (road density)
 - Please complete the [Exercise 2](). # Distance to Point Features (distance to health facility)
-- Please complete the [Exercise 3](). # Select by location  (within the 5 miles buffer of the education facility)
+- Please complete the [Exercise 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise3.md#exercise-3). # Select by location  (within the 5 miles buffer of the education facility)
 - Please complete the [Exercise 4](). # Reclassify Field & Zonal Statistics (a kind of crops, reclassify soil PH)
