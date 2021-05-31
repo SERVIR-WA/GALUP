@@ -86,48 +86,71 @@ The figures below shows the parameter setting of the tool and an output map of t
 
 ### 2.4 Spatial Join
 
-#### **Summary**
-The spatial join tool can join attributes from the join features to the target features based on specified spatial relationship.
+1. **Summary:**<br>
+  This tool join attributes from the join features to the target
+  features based on specified spatial relationship.
 
-#### **Parameters**
-For the parameters setting for Spatial Join tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
+2. **Parameters:**<br>
+  For the parameters setting for Spatial Join tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
 
-#### **Applications**
-Spatial joins begin by selecting a target feature and comparing it spatially to other feature layers (_**Intersect**_, _**Contains**_, _**Within**_). The Spatial Join tool inserts the columns from one feature table to another if and only if the two features share the same spatial reference. In a case that you have multiple features that you want to combine into a target feature, you can choose _**Join one to many**_ option to create multiple overlapping records that each duplicate record contains the records from the joining features. Or you can choose _**Join one to one**_ option to merge the multiple records from joining features for each single target feature. 
+3. **Applications:**<br>
+  _Spatial Join_ begin by selecting a target feature and comparing it spatially to
+  other feature layers (_**Intersect**_, _**Contains**_, _**Within**_). This tool inserts the columns from one feature table to another if and only if the two features
+  share the same spatial reference. In a case that you have multiple
+  features that you want to combine into a target feature, you can choose
+  _**Join one to many**_ option to create multiple overlapping records that each
+  duplicate record contains the records from the joining features. Or you can
+  choose _**Join one to one**_ option to merge the multiple records from joining
+  features for each single target feature.<br>
 
-For example, you have a set of points of interest within different districts in Ghana. By running a spatial join, you can transfer the points of interest table columns into the district layer, and then _**count**_ the number of records in each district. By using the Spatial Joing tool, you can find out the number of points of interest in each distircts of Ghana.
+    For example, you have a set of points of interest within different districts
+    in Ghana. By running _Spatial Join_, you can transfer the points of interest
+    table columns into the district layer, and then _**count**_ the number of records
+    in each district. Then you can find out the number of points of interest in
+    each distircts of Ghana.
 
-|         Parameters setting     |       Result        |
+|         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
 ### 2.5 Zonal Statistics
 
-#### **Summary**
-The Zonal Statistics tool calculate statistics on values of raster within the zones of another dataset.
+1. **Summary:**<br>
+  This tool calculate statistics on values of raster within the
+  zones of another dataset.
 
-#### **Parameters**
-For the parameters setting for Zonal Statistics tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
+2. **Parameters:**<br>
+  For the parameters setting for Zonal Statistics tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
 
-#### **Applications**
-Zonal Statistics calculates statistics for specified zones based on values from another dataset (rasater dataset). It can calculate the mean, median, sum, minimum, maximum, standard deviation, majority, minority, unique, or range in each zone. Here is an example when you would use this operation: if you have a population raster dataset and you want to know how many population are in each district of Ghana, you can run Zonal Statistics to find out the distribution of population in Ghana.
+3. **Applications:**<br>
+  _Zonal Statistics_ calculates statistics for specified zones based on values from
+  another dataset (rasater dataset). This tool calculates the mean, median, sum, minimum,
+  maximum, standard deviation, majority, minority, unique, or range in each zone.
+  Here is an example when you would use this operation: if you have a population
+  raster dataset and you want to know how many population are in each district
+  of Ghana, you can run _Zonal Statistics_ to find out the distribution of population
+  in Ghana.
 
-|         Parameters setting     |       Result        |
+|         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_ZonalStatistics/ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../images/m2_ZonalStatistics/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
 ### 2.6 Select by Location
 
-#### **Summary**
-The Select by Location tool can select part of the input Layer based on its spatial relationship with the selecting layer.
+1. **Summary:**<br>
+This tool can select part of the input Layer based on its spatial
+relationship with the selecting layer.
 
-#### **Parameters**
+2. **Parameters:**<br>
 For the parameters setting for Select by Location tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#select-by-location).
 
-#### **Applications**
-The Select By Location tool allows you to select features based on their location relative to features in another layer. For instance, you may want to know how many districts of Ghana can access to the railway service, so you could select all the districts within the 100 kilometer buffer of railway line.
+3. **Applications:**<br>
+_Select By Location_ allows you to select features based on their location
+relative to features in another layer. For instance, you may want to know how many
+districts of Ghana can access to the railway service, so you could use this tool to
+select all the districts within the 100 kilometer buffer of railway line.
 
-|         Parameters setting     |       Result        |
+|         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
