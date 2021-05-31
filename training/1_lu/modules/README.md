@@ -55,4 +55,8 @@ The training will be delivered through the
 
 ### 3.2. Turn in the Exercises
 
-At the end of every Module, a dedicated link is provided for you to submit 
+At the end of every Module, a dedicated link is provided for you to submit the
+completed exercise files. In addition, we ask you to complete a post-training
+survey for you to provide us feedbacks and comments to help us improve the
+training materials so that we can adjust our materials in the future that
+better suit your preferences.
