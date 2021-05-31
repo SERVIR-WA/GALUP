@@ -29,16 +29,27 @@
 
 ### 2.1 Density of Line Features
 
-1. **Summary:**<br>
-   Calculates a magnitude-per-unit area from polyline features that fall within a radius around each input vector feature.
-2. **Parameters:**<br>
-   For the parameters setting for the Density of Line Features tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
-3. **Applications:**<br>
-   The Density of Line Features tool is used to calculate the line density in a polygon (i.e., calculating the total length of line in a polygon divided by the area of the polygon). Only the portion of a line within the neighborhood is considered when calculating the density. If no lines fall within the neighborhood at a particular polygon, that polygon is assigned "Null".
+This tool calculates a magnitude-per-unit area from polyline features that fall within each input vector feature _or_ within a radius around each input vector
+feature.
 
-   This tool is often used to calculate the roads network density in planning.
+1. **Tool Parameters:**<br>
+   For details about parameters settings of this tool, please check
+   [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
+2. **Application Scenario:**<br>
+   _Density of Line Features_ is used to calculate the line density in
+   a polygon (i.e., calculating the total length of lines in a polygon feature
+   divided by its area).
+   Only the portion of a line within the neighborhood (a polygon feature or a
+   radius around a polygon feature) is considered when calculating the density.
+   If no lines fall within the neighborhood at a particular polygon, that
+   polygon is assigned "Null".
 
-   In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.<br>
+   This tool is often used to calculate the density of linear features, such as
+   roads and rivers.
+   In the following example, we use this tool to calculate the density of
+   underground water veins in the THLD area.
+
+   The figures below show the parameter setting of the tool and the output.<br>
    > :pushpin: Check the details of an image:<br>
    > If you can't see the image clearly, click on the image to view it in a
    > new page, which will show the image in its original size.
