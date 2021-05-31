@@ -38,7 +38,10 @@ The Density of Line Features tool is used to calculate the line density in a pol
 
 This tool is often used to calculate the roads network density in planning.
 
-In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.
+In the following example, we use the Density of Line Features tool to calculate the underground water line density of the THLD area. The figures below shows the parameter setting of the tool and an output map of the underground water line density of the THLD area.<br>
+   > :pushpin: Check the details of an image:<br>
+   > If you can't see the image clearly, click on the image to view it in a
+   > new page, which will show the image in its original size.
 
 |          Parameter Setting         |    Output Map    |
 |:------------------------------------------:|:------------------------------------------:|
