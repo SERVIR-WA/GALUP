@@ -4,12 +4,14 @@
 
 In this exercise, we will visualize the road network density in the THLD area by using the [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features) tool.
 
+## 2. GIS Dataset
+
 You should use the following data to finish this exercise:
 - THLD polygon shapefile _THLD\_30N.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
 - Roads in the THLD area _roads\_30N.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
 
-## 2. Skills Practices
+## 3. Skills Practiced
 
 This exercise covers:
 
@@ -17,7 +19,7 @@ This exercise covers:
 - Change the symbology of vector layers.
 - Create a layout and print a map as a pdf file.
 
-## 3. Instruction
+## 4. Instruction
 
 1. Locate _THLD\_30N.shp_ and _roads\_30N.shp_ in the _Browser Panel_ and add them to
    _Map Canvas_.
@@ -33,7 +35,7 @@ This exercise covers:
 10. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 11. Export as a PDF file.
 
-## 4.Result
+## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
   [here](../pdf_download/M2E1_RdsDenMap.pdf).
