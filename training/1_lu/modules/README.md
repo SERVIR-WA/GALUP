@@ -1,6 +1,8 @@
 # Workshop #1: Land-Use Suitability Analysis with QGIS Tools
 
-**Goal**: The first GALUP workshop aims at laying a foundation of core
+### Goal:
+
+The first GALUP workshop aims at laying a foundation of core
 concepts and techniques used in land-use suitability analysis, of which the
 output will help inform land-use decision making.
 Using QGIS, an open-source Geographic Information System (GIS) software
@@ -9,7 +11,7 @@ conclusion of the workshop, trainees should be able to independently visualize
 GIS data, conduct geospatial analysis, and identify suitable areas for a
 particular land-use purpose.
 
-**Objectives:**
+### Objectives:
 
 - Understand key concepts in land use analysis
 - Be familiar with the QGIS software
