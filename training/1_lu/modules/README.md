@@ -51,9 +51,14 @@ participant to get a GitHub Account which is completely free.
 
 ### 3.1. Create a GitHub Account
 
-1. Go to the GitHub official website: [https://github.com/](https://github.com/), and click the [**Sign up**](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
-2. Type your 1) Username, 2) Email address, and 3) Password to set up for your account.
-3. Finish the verification step and click **Create account**.
+1. Go to the GitHub website: [https://github.com/](https://github.com/)
+   and **click**
+   [**Sign up**](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+2. Type in a (1) _Username_, (2) _Email address_, and (3) _Password_ to set up
+   your account.
+3. Finish the _verification_ step and click **Create account**.
+4. You should receive an email from GitHub in the email account you used above.
+   Follow the instruction in the email to complete the "sign-up" process.
 
 ### 3.2. Turn in the Exercises
 
@@ -62,3 +67,21 @@ completed exercise files. In addition, we ask you to complete a post-training
 survey for you to provide us feedbacks and comments to help us improve the
 training materials so that we can adjust our materials in the future that
 better suit your preferences.
+
+### 3.3. Have an Issue?
+
+GitHub allows user to
+[Create an Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-issues/creating-an-issue)
+to get in touch with the developers.
+So, if you encounter an issue during the training, please don't hesitate to let
+us know by submitting an issue
+[here](https://github.com/SERVIR-WA/GALUP/issues/new).
+This link will direct you to submit _a blank new issue_ to GALUP repository
+without any template.
+You can report anything from:
+
+1. Error in installing software,
+2. Trouble in using the LUCIS-OPEN Tools for QGIS,
+3. Report **bugs** of the tools,
+4. Problems with the modules and the exercises, or
+5. General comments and/or suggestions.
