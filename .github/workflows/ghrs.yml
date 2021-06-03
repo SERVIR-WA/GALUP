@@ -10,7 +10,7 @@ jobs:
     name: repostats-for-GALUP
     runs-on: ubuntu-latest
     steps:
-      - name: run-ghrs
+      - name: run-galup-ghrs
         uses: jgehrcke/github-repo-stats@v1.1.0
         with:
           # Define the stats repository (the repo to fetch
