@@ -26,7 +26,7 @@ cd /d %~dp0
 python -m pip install --upgrade pip
 python -m pip install Fiona-1.8.13-cp37-cp37m-win_amd64.whl
 python -m pip install geopandas==0.8.1
-python -m pip install rtree==0.9.7
+python -m pip install Rtree-0.9.7-cp37-cp37m-win_amd64.whl
 python -m pip install rasterio-1.1.2-cp37-cp37m-win_amd64.whl
 python -m pip install rasterstats==0.15.0
 python -m pip install pylusat
