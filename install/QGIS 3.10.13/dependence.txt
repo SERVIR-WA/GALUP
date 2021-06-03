@@ -1,4 +1,0 @@
-QGIS (long term release) 3.10.13
-Fiona 1.8.18
-Rtree 0.9.5
-rasterio 1.1.8
