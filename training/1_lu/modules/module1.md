@@ -166,11 +166,6 @@ indicate the direction. You can add these items under the `Add Item` button.
   (YouTube playlist by [The Net Ninja](https://www.youtube.com/c/TheNetNinja))
 - [OpenSourceOptions Tutorials](https://opensourceoptions.com/blog/)
 
-## 6. Post-training Survey
-
-Upon completion, please take this [survey](https://docs.google.com/document/d/1p1oy635ZMgXBcyxPJPv2Je-62xTVaNV6xCtltQYvde0/edit) to summarize what you have
-learned and also help us improve this tutorial.
-
-## 7. What's Next?
+## 6. What's Next?
 
 Module 2 - Introduction to LUCIS-OPEN Tools for QGIS.
