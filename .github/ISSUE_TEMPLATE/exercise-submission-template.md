@@ -12,7 +12,7 @@ assignees: ''
 
 2. Please drag & drop exercise 2 pdf file below.
 
-3. Make sure to update the title of this "Issue" in the title bar with your name.
+3. Make sure to UPDATE THE TITLE of this "Issue" in the title bar with your name.
 
 4. If you haven't done so, please go back to Module 1 and make sure to take
    the post-training survey. Participating in surveys is required for receiving
