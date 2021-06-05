@@ -151,10 +151,12 @@ indicate the direction. You can add these items under the `Add Item` button.
   in the [**Layout Panel**](https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel).)
 - See the example map in PDF file [here](../pdf_download/PopulationMap.pdf).
 
-## 4. Exercises
+## 4. Exercises and Post-training Survey
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise1.md#exercise-1).
 - Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/exercise2.md#exercise-2).
+- Please take this post-training
+  [survey](https://ufl.qualtrics.com/jfe/form/SV_3n21W1ko0UPJNLo) (required).
 - Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=submission+w1m1&template=exercise-submission-template.md&title=Module+1+exercises+%5Breplace+with+your+name%5D).
 
 ## 5. Additional Resources
