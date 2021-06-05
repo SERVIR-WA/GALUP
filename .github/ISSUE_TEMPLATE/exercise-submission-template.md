@@ -15,4 +15,5 @@ assignees: ''
 3. Make sure to update the title with your name.
 
 4. If you haven't done so, please go back to Module 1 and make sure to take
-   the post-training survey (required).
+   the post-training survey. Participating in surveys is required for receiving
+   the "GALUP Certificate" by the University of Florida.
