@@ -14,5 +14,5 @@ assignees: ''
 
 3. Make sure to update the title with your name.
 
-4. If you haven't done so, please go back to the module and make sure to take
+4. If you haven't done so, please go back to Module 1 and make sure to take
    the post-training survey (required).
