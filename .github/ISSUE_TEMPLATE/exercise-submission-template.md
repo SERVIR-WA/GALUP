@@ -8,9 +8,9 @@ assignees: ''
 
 ---
 
-1. Please drag & drop exercise 1 pdf file below.
+1. Please "drag & drop" exercise 1 pdf file below.
 
-2. Please drag & drop exercise 2 pdf file below.
+2. Please "drag & drop" exercise 2 pdf file below.
 
 3. Make sure to UPDATE THE TITLE of this "Issue" in the title bar above with your name.
 
