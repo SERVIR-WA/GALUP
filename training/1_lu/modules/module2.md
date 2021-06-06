@@ -60,15 +60,15 @@ feature.
 
 ### 2.2 Distance to Point Features
 
-Calculates distance between the input vector features and the nearest point feature.
+Calculates the distance between the input vector features and their nearest point feature.
 
 1. **Tool Parameters:**<br>
     For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
 2. **Application Scenario:**<br>
-    _Distance to Point Features_ is often used to find the nearest location (point feature) around a polygon feature. For example, this tool can be used to find the nearest school around each residential area or used to find the nearest hospital of each census tract.
+    _Distance to Point Features_ is often used to find the nearest location (point feature) around a polygon feature. For example, this tool can be used to find the nearest school or the nearest hospital around each residential area.
 
-    In the following example, we use the Distance to Point Features tool to calculate the distance between each polygon of THLD area and the nearest education facility.
-    
+    In the following example, we use the Distance to Point Features tool to calculate the distance between each polygon in THLD area and the nearest education facility.
+
     The figures below shows the parameter setting of the tool and the output.
 
 |          Parameter Setting         |    Output    |
@@ -82,9 +82,9 @@ Reclassify a field in the input table based on predefined rules and store the tr
 1. **Tool Parameters:**<br>
     For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
 2. **Application Scenario:**<br>
-    _Reclassify Field_ reclassifies or changes the values of the feature to alternative values. For example, a vector of soil type may be assigned values of 1 to 10 to represent erosion potential. This tool is useful when you are trying to do a building suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system on which the final weighting step will be based.
+    _Reclassify Field_ reclassifies or changes the values of the feature to alternative values. For example, a vector of soil type may be assigned values of 1 to 10 to represent erosion potential. This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system on which the final weighting step will be based.
 
-    Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804, will be assigned new values: 1, 2, 3, 4, 5, respectively.
+    Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804 will be assigned new values: 1, 2, 3, 4, 5, respectively.
 
     The figures below shows the parameter setting of the tool and the output.
 
