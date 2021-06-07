@@ -121,7 +121,7 @@ Reclassify a field in the input table based on predefined rules and store the tr
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="550">   |
+| <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="580">   |
 
 ### 2.5 Zonal Statistics
 
