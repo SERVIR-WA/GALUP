@@ -158,7 +158,7 @@ In the following example, we use this tool to select all the districts attached 
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output.png" alt= "Add data to Map Canvas" width="51">   |
+| <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output.png" alt= "Add data to Map Canvas" width="521">   |
 
 
 ## 3. Exercises
