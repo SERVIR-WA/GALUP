@@ -16,7 +16,6 @@ You should use the following data to finish this exercise:
 This exercise covers:
 
 - The parameter setting and the usage of the Density of Line Features tool.
-- Change the symbology of vector layers.
 - Create a layout and print a map as a pdf file.
 
 ## 4. Instruction
