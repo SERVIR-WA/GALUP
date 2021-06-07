@@ -16,7 +16,7 @@
 |----|------------|-------------|---------|-----------------------------|
 | 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
 | 2  | population_gha_2018-10-01.tif    | raster      | tiff    | Population of Ghana in 2018     |
-| 3  | THLD_poly.shp                 | vector      | polygon | Integrated Decision Units in THLD District     |
+| 3  | THLD_poly.shp                 | vector      | polygon | Integrated Decision Units in THLD (Twifo-Hemang-Lower-Denkyira) District     |
 | 4  | osm2020_allrds_THLD.shp       | vector      | line    | Primary and secondary roads in THLD District                                             |
 | 5  | RailwayLine.shp             | vector      | line    | Railway line in Ghana                                             |
 | 6  | Hydro.shp             | vector      | line    | Hydro in THLD District                                            |
@@ -25,38 +25,46 @@
 | 9  | PointOfInterest.shp               | vector      | point    | Tourism point in Ghana                                           |
 | 10  | SD5_15.tif                    | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                  |
 
-## 2. Get to Know LUCIS-OPEN Tools for QGIS
+## 1. Density of Line Features
 
-### 2.1 Density of Line Features
+_Density of Line Features_ is used to calculate the line density in
+a polygon (i.e., the total length of line features that fall within a polygon feature divided by the polygon's area). The polygon features (i.e., Input layer) and line features (i.e., Line layer) are two required parameters for using this tool. There are five additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
 
-This tool calculates a magnitude-per-unit area from polyline features that fall within each input vector feature _or_ within a radius around each input vector
-feature.
+### 1.1 Usage
 
-1. **Tool Parameters:**<br>
-   For details about parameters settings of this tool, please check
-   [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
-2. **Application Scenario:**<br>
-   _Density of Line Features_ is used to calculate the line density in
-   a polygon (i.e., calculating the total length of lines in a polygon feature
-   divided by its area).
-   Only the portion of a line within the neighborhood (a polygon feature or a
-   radius around a polygon feature) is considered when calculating the density.
-   If no lines fall within the neighborhood at a particular polygon, that
-   polygon is assigned "[Null](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)".
+This tool is often used to calculate the density of linear features, such as roads and rivers, in a polygon area. Results of this tool can help us understand the magnitude of a certain phenomenon within a territory.
 
-   This tool is often used to calculate the density of linear features, such as
-   roads and rivers.
-   In the following example, we use this tool to calculate the density of
-   underground water veins in the THLD area.
+Only the portion of a line within the neighborhood (a polygon feature or a
+radius around a polygon feature) is considered when calculating the density.
+If no lines fall within the neighborhood of a particular polygon, a
+"[Null value](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)" will be given to that polygon.
 
-   The figures below show the parameter setting of the tool and the output.<br>
-   > :pushpin: Check the details of an image:<br>
-   > If you can't see the image clearly, click on the image to view it in a
-   > new page, which will show the image in its original size.
+Search radius 
 
-|          Parameter Setting         |    Output    |
+### 1.2 Example
+
+In the following example, we use this tool to calculate the density of
+underground water veins in the THLD area. The datasets used are listed below:
+
+| ID | File Name     | Data Format | Type    | Description                                                 |
+|----|---------------|-------------|---------|-------------------------------------------------------------|
+| 1  | THLD_poly.shp | vector      | polygon | IDUs<sup>*</sup> in the THLD<sup>**</sup> District Assembly |
+| 2  | Hydro.shp     | vector      | line    | Underground water veins in the THLD District                |
+
+*\: Integrated Decision Unit. <br>
+**\: Twifo-Hemang-Lower-Denkyira.
+
+The two figures below display the specific parameter settings
+ and the output of the tool.<br>
+> :pushpin: Check the details of an image:<br>
+> If you can't see the image clearly, click on the image to view it in a
+> new page, which will show the image in its original size.
+
+|          Parameter Setting         |    Output Map   |
 |:------------------------------------------:|:------------------------------------------:|
 | ![PS1](../../../images/PrameterSetting/LineDensity.png) | ![am1](../../../images/ApplicationMaps/LineDen2.png) |
+
+In the output map, we used **Blues** [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the line density (per square meter). Specifically, the darker the blue the higher the density of underground water veins.
 
 ### 2.2 Distance to Point Features
 
