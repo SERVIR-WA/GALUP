@@ -121,7 +121,7 @@ Reclassify a field in the input table based on predefined rules and store the tr
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output.png" alt= "Add data to Map Canvas" width="550">   |
+| <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="550">   |
 
 ### 2.5 Zonal Statistics
 
@@ -141,7 +141,7 @@ Reclassify a field in the input table based on predefined rules and store the tr
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_ZonalStatistics/ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../images/m2_ZonalStatistics/Output.png" alt= "Add data to Map Canvas" width="530">   |
+| <img src="../../../images/m2_ZonalStatistics/ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../images/m2_ZonalStatistics/Output2.png" alt= "Add data to Map Canvas" width="530">   |
 
 ### 2.6 Select by Location
 
@@ -158,7 +158,7 @@ In the following example, we use this tool to select all the districts attached 
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output.png" alt= "Add data to Map Canvas" width="521">   |
+| <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output2.png" alt= "Add data to Map Canvas" width="521">   |
 
 
 ## 3. Exercises
