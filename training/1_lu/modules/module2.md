@@ -48,11 +48,11 @@ underground water veins in the THLD area. The datasets used are listed below:
 
 | ID | File Name     | Data Format | Type    | Description                                                 |
 |----|---------------|-------------|---------|-------------------------------------------------------------|
-| 1  | THLD_poly.shp | vector      | polygon | IDUs<sup>*</sup> in the THLD<sup>**</sup> District Assembly |
+| 1  | THLD_poly.shp | vector      | polygon | IDUs<sup>1</sup> in the THLD<sup>2</sup> District Assembly |
 | 2  | Hydro.shp     | vector      | line    | Underground water veins in the THLD District                |
 
-*\: Integrated Decision Unit. <br>
-**\: Twifo-Hemang-Lower-Denkyira.
+1: Integrated Decision Unit. <br>
+2: Twifo-Hemang-Lower-Denkyira.
 
 The two figures below display the specific parameter settings
  and the output of the tool.<br>
