@@ -98,7 +98,7 @@ Reclassify a field in the input table based on predefined rules and store the tr
   features based on specified spatial relationship.
 
 2. **Parameters:**<br>
-  For the parameters setting for Spatial Join tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
+  For the parameters setting for Spatial Join tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
 
 3. **Application Scenario:**<br>
   _Spatial Join_ evaluates spatial relationships (i.e., _**Intersect**_,
@@ -130,7 +130,7 @@ Reclassify a field in the input table based on predefined rules and store the tr
   zones of another dataset.
 
 2. **Parameters:**<br>
-  For the parameters setting for Zonal Statistics tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
+  For the parameters setting for Zonal Statistics tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
 
 3. **Applications:**<br>
   _Zonal Statistics_ calculates statistics for specified zones based on values from another dataset (rasater dataset). 
@@ -150,7 +150,7 @@ This tool can select part of the input Layer based on its spatial
 relationship with the selecting layer.
 
 2. **Parameters:**<br>
-For the parameters setting for Select by Location tool, pleasae click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#select-by-location).
+For the parameters setting for Select by Location tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#select-by-location).
 
 3. **Applications:**<br>
 _Select By Location_ allows you to select features from **Input layer** based on their location relative to features in **Selection layer**.
@@ -161,7 +161,7 @@ In the following example, we use this tool to select all the districts attached 
 | <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output2.png" alt= "Add data to Map Canvas" width="521">   |
 
 
-## 3. Exercises
+## 3. Exercises and Post
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md). # Density of Line (road density)
 - Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise2.md). # Distance to Point Features (distance to health facility)

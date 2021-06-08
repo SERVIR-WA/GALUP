@@ -4,7 +4,7 @@
 
 Yam is an important staple food crop in Ghana and is produced throughout the
 country.
-In Twifo/Heman/Lower Denkyira (THLD) district, the local government wants to
+In Twifo-Heman-Lower-Denkyira (THLD) district, the local government wants to
 plan and develop new cropland to grow Yam.
 Therefore, as a planner, we need to evaluate the suitability of land for
 growing Yam.
@@ -25,24 +25,23 @@ to grow Yam in THLD district by using the [Reclassify Field](https://github.com/
 ## 2. GIS Dataset
 
 You should use the following data to finish this exercise:
-- _SD5/_15.tif_ at
+- _SD5\_15.tif_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
-- _THLD\_poly_ at
+- _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`
 
 ## 3. Skills Practices
 
-This exercise covers:
+This exercise will practice:
 
-- The parameter setting and the usage of the Reclassify Field tool
-- The parameter setting and the usage of the Zonal Statistics tool
-- Create a layout and print a map as a pdf file.
+- [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field)
+- [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics)
 
 ## 4. Instruction
 
-1. Locate _SD5\_15.tif_ and _THLD\_poly_ in the _Browser Panel_ and add it to _Map Canvas_.
+1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add it to _Map Canvas_.
 2. Open _Zonal Statistics_ tool.
-3. Set _THLD\_poly_ as **Input layer** and _SD5\_15.tif_ as **Raster layer**.
+3. Set _THLD\_poly.shp_ as **Input layer** and _SD5\_15.tif_ as **Raster layer**.
 4. Type _mean_ in **Types of statistics** and then give an appropriate
 name for **Output column prefix**.
 5. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
@@ -57,9 +56,8 @@ name for **Output column prefix**.
 13. **Run** _Reclassify Field_ tool.
 14. Choose _Categorized_ symbology and choose the _Greens_ color ramp to
 render the the Output column from _Reclassify Field_ tool.
-15. Add _ESRI Gray (light)_ as the basemap.
-16. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-17. Export as a PDF file.
+15. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+16. Export as a PDF file.
 
 ## 5.Result
 
