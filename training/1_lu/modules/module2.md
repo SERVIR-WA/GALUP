@@ -27,7 +27,7 @@
 
 ## 1. Density of Line Features
 
-_Density of Line Features_ calculatesc the line density in
+_Density of Line Features_ calculates the line density in
 a polygon (i.e., the total length of line features that fall within a polygon feature divided by the polygon's area). The polygon features (i.e., Input layer) and line features (i.e., Line layer) are two required parameters for using this tool. There are five additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
 
 ### 1.1 Usage
@@ -101,7 +101,13 @@ _Reclassify Field_ reclassifies a field in the input table based on predefined r
 
 ### 3.1 Usage
 
-This tool is used to reclassify or change the values of the feature to alternative values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential. This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system (e.g., 1 to 10) on which the final weighting step will be based.
+This tool is used to reclassify or change the values of the feature to alternative values.
+
+Old values are the values (or value ranges) you want to reclassify, the New values is the values that will be assigned to the old values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential.\
+
+No data value is the new value that will be assigned to the no data value. In most cases, the no data value will be 255, so the new value 0 (default setting of No data value) will replace the old value 255 in the field after running the tool.
+
+This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system (e.g., 1 to 10) on which the final weighting step will be based.
 
 ### 3.2 Example
 
