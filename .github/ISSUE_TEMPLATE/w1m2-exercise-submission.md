@@ -5,7 +5,6 @@ about: Please turn in your exercises for the GALUP team to
 title: 'Module 2 exercises [replace with your name]'
 labels: exercise w1m2
 assignees: 'muribasterra'
-milestone: 'Module 2 Exercises'
 
 ---
 
