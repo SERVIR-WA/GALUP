@@ -42,9 +42,9 @@ technologies to inform and ensure sustainable land use practices.
 ### [Workshop #1 - Land-Use Suitability Analysis with QGIS Tools](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/modules)
 
 1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
-2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md)
-3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
-4. [Module 4 - Aggregate Results to Make Land-Use Decisions](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module4.md)
+2. Module 2 - Introduction to LUCIS-OPEN Tools for QGIS
+3. Module 3 - Create Suitability Models with QGIS Graphical Modeler
+4. Module 4 - Aggregate Results to Make Land-Use Decisions
 
 ## Documentation
 
