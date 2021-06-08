@@ -105,8 +105,6 @@ The two figures below display the specific parameter settings
 |:------------------------------------------:|:------------------------------------------:|
 | ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify2.png) |
 
-### 2.4 Spatial Join
-
 ## 4. Spatial Join
   _Spatial Join_ evaluates spatial relationships (i.e., **Intersect**,
   **Contains**, **Within**) between features in the **Target Layer** and the **Join Layer**.
@@ -140,11 +138,8 @@ Join Layer and then calculate particular statistics (i.e., **first**, **last**,
 
 | ID | File Name           | Data Format | Type    | Description                                                 |
 |----|---------------------|-------------|---------|-------------------------------------------------------------|
-| 1  | THLD_poly.shp       | vector      | polygon | IDUs<sup>1</sup> in the THLD<sup>2</sup> District Assembly |
-| 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana                                 |
-
-1: Integrated Decision Unit. <br>
-2: Twifo-Hemang-Lower-Denkyira.
+| 1  | Gh_260_MMDA.shp     | vector      | polygon | Districts of Ghana               |
+| 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana       |
 
   The two figures below display the specific parameter settings and the output of the tool.
 |         Parameters setting     |       Output        |
@@ -156,8 +151,7 @@ In the output map,  we used Reds
 to indicate different ranges of the number of point of interest in Ghana.
 Specifically, the darker the red the higher the number of point of interest.
 
-
-## 5.1 Zonal Statistics
+## 5. Zonal Statistics
   _Zonal Statistics_ calculates statistics (i.e., **mean**, **median**,
   **sum**, **minimum**, **maximum**, **standard deviation**, **majority**,
   **minority**, **unique**, **range**) on values of **Raster Layer** within the
@@ -191,7 +185,7 @@ distribution of population in Ghana.
 In the output map,  we used Reds [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the number of population in Ghana. Specifically, the darker the red the higher the number of population.
 
 
-## 6.1 Select by Location
+## 6. Select by Location
 _Select By Location_ allows you to select features from **Input layer** based on
 their location relative (i.e., **Intersect**, **Contains**, **Within**, **Within a distance**)
 to features in **Selection layer**. There are two additional parameters can be specified, please check
