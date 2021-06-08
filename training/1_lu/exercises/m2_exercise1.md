@@ -7,24 +7,23 @@ In this exercise, we will visualize the road network density in the THLD area by
 ## 2. GIS Dataset
 
 You should use the following data to finish this exercise:
-- THLD polygon shapefile _THLD\_30N.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> XXX`.
-- Roads in the THLD area _roads\_30N.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> XXX`.
+- THLD polygon shapefile _THLD\_poly.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`.
+- Roads in the THLD area _osm2020\_allrds\_THLD.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> Primary and secondary roads in THLD District`.
 
 ## 3. Skills Practiced
 
 This exercise covers:
 
 - The parameter setting and the usage of the Density of Line Features tool.
-- Change the symbology of vector layers.
 - Create a layout and print a map as a pdf file.
 
 ## 4. Instruction
 
-1. Locate _THLD\_30N.shp_ and _roads\_30N.shp_ in the _Browser Panel_ and add them to
+1. Locate _THLD\_poly.shp_ and _osm2020\_allrds\_THLD.shp_ in the _Browser Panel_ and add them to
    _Map Canvas_.
 2. In the _Processing Toolbox_ panel, find the Density of Line Features tool under the _Scripts_.
-3. Open the Density of Line Features tool, set the _THLD\_30N.shp_ as the **input layer**, and _roads\_30N.shp_ as the **Line layer**. Name the **Output column name** as _Rds\_Den_, and the **Output layer** as _RdsDenMap_ and click **Run**.
+3. Open the Density of Line Features tool, set the _THLD\_poly.shp_ as the **input layer**, and _osm2020\_allrds\_THLD.shp_ as the **Line layer**. Name the **Output column name** as _Rds\_Den_, and the **Output layer** as _RdsDenMap_ and click **Run**.
 4. Open _Attribute Table_ of the output layer (_RdsDenMap_) to review the output field, _Rds\_Den_, which represents THLD roads network density
    by district.
 5. Open the symbology window, choose the target field: _Rds\_Den_ and _Graduated_ symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose _Rule\_based symbology_, click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) to open the _Edit Rule_ window.
