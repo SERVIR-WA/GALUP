@@ -103,7 +103,7 @@ _Reclassify Field_ reclassifies a field in the input table based on predefined r
 
 This tool is used to reclassify or change the values of the feature to alternative values.
 
-Old values are the values (or value ranges) you want to reclassify, the New values is the values that will be assigned to the old values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential.\
+Old values are the values (or value ranges) you want to reclassify, the New values is the values that will be assigned to the old values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential.
 
 No data value is the new value that will be assigned to the no data value. In most cases, the no data value will be 255, so the new value 0 (default setting of No data value) will replace the old value 255 in the field after running the tool.
 
