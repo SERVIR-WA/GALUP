@@ -6,28 +6,9 @@
 - Be familiar with the parameters of Tools,
 - Process data with appropriate Tools.
 
-## 1. GIS Datasets
-
-- The table below lists the GIS datasets used for this module.
-- They can be found within the downloaded _zip_ folder from the previous
-  section at `GALUP-master -> training -> 1_lu -> datasets`.
-
-| ID | File Name   | Data Format | Type    | Description  |
-|----|------------|-------------|---------|-----------------------------|
-| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
-| 2  | population_gha_2018-10-01.tif    | raster      | tiff    | Population of Ghana in 2018     |
-| 3  | THLD_poly.shp                 | vector      | polygon | Integrated Decision Units in THLD (Twifo-Hemang-Lower-Denkyira) District     |
-| 4  | osm2020_allrds_THLD.shp       | vector      | line    | Primary and secondary roads in THLD District                                             |
-| 5  | RailwayLine.shp             | vector      | line    | Railway line in Ghana                                             |
-| 6  | Hydro.shp             | vector      | line    | Underground water veins in THLD District                                            |
-| 7  | Health_Facilities.shp       | vector      | point    | Health facilities in THLD District                                           |
-| 8  | Education_Facilities.shp       | vector      | point    | Education facilities in THLD District                                         |
-| 9  | PointOfInterest.shp               | vector      | point    | Point of interest in Ghana                                           |
-| 10  | SD5_15.tif                    | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)                  |
-
 ## 1. Density of Line Features
 
-_Density of Line Features_ is used to calculate the line density in
+_Density of Line Features_ calculates the line density in
 a polygon (i.e., the total length of line features that fall within a polygon feature divided by the polygon's area). The polygon features (i.e., Input layer) and line features (i.e., Line layer) are two required parameters for using this tool. There are five additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
 
 ### 1.1 Usage
@@ -39,7 +20,9 @@ radius around a polygon feature) is considered when calculating the density.
 If no lines fall within the neighborhood of a particular polygon, a
 "[Null value](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)" will be given to that polygon.
 
-Search radius 
+Search radius, if specified, will be used to calculate the line density by using the total length of line features fall within the area of a circle (the centroid of a polygon as the center and the search radius as the radius) divided by the circle's area.
+
+[Cell size](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/cell-size-of-raster-data.htm) is used to calculate the total length of line features fall within the area of a circle by rasterizing those line features. The smaller the value, the more precise the outcome, but the longer time will be taken to run the tool.
 
 ### 1.2 Example
 
@@ -66,39 +49,63 @@ The two figures below display the specific parameter settings
 
 In the output map, we used **Blues** [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the line density (per square meter). Specifically, the darker the blue the higher the density of underground water veins.
 
-### 2.2 Distance to Point Features
+## 2. Distance to Point Features
 
-Calculates the distance between the input vector features and their nearest point feature.
+_Distance to Point Features_ calculates the distance between an input feature and its nearest point feature in another layer. The polygon features (i.e., Input layer) and point features (i.e., Point layer) are two required parameters for using this tool. There are four additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
 
-1. **Tool Parameters:**<br>
-    For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
-2. **Application Scenario:**<br>
-    _Distance to Point Features_ is often used to find the nearest location (point feature) around a polygon feature. For example, this tool can be used to find the nearest school or the nearest hospital around each residential area.
+### 2.1 Usage
 
-    In the following example, we use the Distance to Point Features tool to calculate the distance between each polygon in THLD area and the nearest education facility.
+This tool is often used to calculate the distance of the nearest point feature around a vector feature. For example, this tool can be used to find the nearest school or the nearest hospital around each residential area.
 
-    The figures below shows the parameter setting of the tool and the output.
+In the Distance method, [Euclidean Distance](https://en.wikipedia.org/wiki/Euclidean_distance) and
+[Manhattan Distance](https://en.wikipedia.org/wiki/Taxicab_geometry) are two different methods to measure the distance between an input feature and its nearest point feature.
+
+### 2.2 Example
+
+In the following example, we use the tool to calculate the distance between each polygon in THLD area and its nearest education facility. The datasets used are listed below:
+
+| ID | File Name     | Data Format | Type    | Description                                                 |
+|----|---------------|-------------|---------|-------------------------------------------------------------|
+| 1  | THLD_poly.shp | vector | polygon | IDUs in the THLD District Assembly |
+| 2  | Education_Facilities.shp | vector | point | Education facilities in THLD District |
+
+The two figures below display the specific parameter settings
+ and the output of the tool.
 
 |          Parameter Setting         |    Output    |
 |:------------------------------------------:|:------------------------------------------:|
 | ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP2.png) |
 
-### 2.3 Reclassify Field
+## 3. Reclassify Field
 
-Reclassify a field in the input table based on predefined rules and store the translated values in a new field.
+_Reclassify Field_ reclassifies a field in the input table based on predefined rules and store the translated values in a new field. The input table (i.e., Input layer), the field to be reclassified (i.e., Field to reclassify), the predefined rules (i.e., Old values and New values), and the new field (i.e., Output column name) are required parameters. There are two additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
 
-1. **Tool Parameters:**<br>
-    For details about parameters settings of this tool, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
-2. **Application Scenario:**<br>
-    _Reclassify Field_ reclassifies or changes the values of the feature to alternative values. For example, a vector of soil type may be assigned values of 1 to 10 to represent erosion potential. This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system on which the final weighting step will be based.
+### 3.1 Usage
 
-    Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804 will be assigned new values: 1, 2, 3, 4, 5, respectively.
+This tool is used to reclassify or change the values of the feature to alternative values.
 
-    The figures below shows the parameter setting of the tool and the output.
+Old values are the values (or value ranges) you want to reclassify, the New values is the values that will be assigned to the old values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential.
+
+No data value is the new value that will be assigned to the no data value. In most cases, the no data value will be 255, so the new value 0 (default setting of No data value) will replace the old value 255 in the field after running the tool.
+
+This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a same scoring system (e.g., 1 to 10) on which the final weighting step will be based.
+
+### 3.2 Example
+
+Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of the Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of the Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804 will be assigned new values: 1, 2, 3, 4, 5, respectively. The datasets used are listed below:
+
+| ID | File Name     | Data Format | Type    | Description                                                 |
+|----|---------------|-------------|---------|-------------------------------------------------------------|
+| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
+
+The two figures below display the specific parameter settings
+ and the output of the tool.
 
 |          Parameter Setting         |    Output   |
 |:------------------------------------------:|:------------------------------------------:|
 | ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify2.png) |
+
+### 2.4 Spatial Join
 
 ## 4. Spatial Join
   _Spatial Join_ evaluates spatial relationships (i.e., **Intersect**,

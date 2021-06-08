@@ -15,14 +15,13 @@ You should use the following data to finish this exercise:
 This exercise covers:
 
 - The parameter setting and the usage of the Select by Location tool.
-- Create a layout and print a map as a pdf file.
 
 ## 4. Instruction
 
 1. Locate _THLD\_poly.shp_ and _Education\_Facilities.shp_ in the _Browser Panel_ and add them to
    _Map Canvas_.
 2. In the _Processing Toolbox_ panel, find the [Select by Location tool under the _Scripts_.
-3. Open the Select by Location tool, set the _THLD\_poly.shp_ as the **input layer**, and _Education\_Facilities.shp_ as the **Selection layer**. Set the **Join option** as _Within a distance_, and the **Within distance of selecting feature** as _1 mile_. Name the **Output layer** as _EduProIDU_ and click **Run**.
+3. Open the Select by Location tool, set the _THLD\_poly.shp_ as the **Input layer**, and _Education\_Facilities.shp_ as the **Selection layer**. Set the **Join option** as _Within a distance_, and the **Within distance of selecting feature** as _1 mile_. Name the **Output layer** as _EduProIDU_ and click **Run**.
 4. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 5. Export as a PDF file.
 
