@@ -99,79 +99,130 @@ Reclassify a field in the input table based on predefined rules and store the tr
 |          Parameter Setting         |    Output   |
 |:------------------------------------------:|:------------------------------------------:|
 | ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify2.png) |
-### 2.4 Spatial Join
 
-1. **Summary:**<br>
-  This tool join attributes from the join features to the target
-  features based on specified spatial relationship.
-
-2. **Parameters:**<br>
-  For the parameters setting for Spatial Join tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).
-
-3. **Application Scenario:**<br>
-  _Spatial Join_ evaluates spatial relationships (i.e., _**Intersect**_,
-  _**Contains**_, _**Within**_) between features in the **Target Layer** and
-  the **Join Layer**.
+## 4. Spatial Join
+  _Spatial Join_ evaluates spatial relationships (i.e., **Intersect**,
+  **Contains**, **Within**) between features in the **Target Layer** and the **Join Layer**.
   The tool joins the columns from the **Join Layer** to the **Target Layer** if
-  any two features, one from each layer (we call them "matched" for each
-  other), satisfy the specified spatial relationship.<br>
+  any two features, one from each layer (we call them "matched" for each other),
+  satisfy the specified spatial relationship. There are three additional parameters
+  can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#spatial-join).<br>
+
   When there are multiple "matched" features in the **Join Layer**, you can
-  choose either _**Join one to many**_ or _**Join one to one**_.
-  If _**Join one to many**_ is selected, features in the **Target Layer**
+  choose either **Join one to many** or **Join one to one**.
+  If **Join one to many** is selected, features in the **Target Layer**
   will be duplicated multiple times (as many as the number of "matched"
   features) to combine with each "matched" feature in the **Join Layer**.
-  On the contrary, if  _**Join one to one**_ is selected, all "matched"
+  On the contrary, if  **Join one to one** is selected, all "matched"
   features in the **Join Layer** will be aggregated, and then combined with
   a target feature.<br>
-  In the following example, we choose the _**Join one to one**_ option to find
-  out the _**count**_ (number of records) of points of interest (tourism)
-  within each District Assembly of Ghana.
 
+### 4.1 Usage
+_Spatial Join_ matches rows from the Join Features to the Target Features based
+on their relative spatial locations.
+
+This tool take a step further to specify the column you are interested from the
+Join Layer and then calculate particular statistics (i.e., **first**, **last**,
+**sum**, **mean**, **median**, **max**, **min**, **std**, **var**, **count**).
+
+### 4.2 Example
+ In the following example, we choose the **Join one to one** option to find
+  out the **count** (number of records) of points of interest (tourism)
+  within each District Assembly of Ghana.
+  The datasets used are listed below:
+
+| ID | File Name           | Data Format | Type    | Description                                                 |
+|----|---------------------|-------------|---------|-------------------------------------------------------------|
+| 1  | THLD_poly.shp       | vector      | polygon | IDUs<sup>1</sup> in the THLD<sup>2</sup> District Assembly |
+| 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana                                 |
+
+1: Integrated Decision Unit. <br>
+2: Twifo-Hemang-Lower-Denkyira.
+
+  The two figures below display the specific parameter settings and the output of the tool.
 |         Parameters setting     |       Output        |
-|:---------------------------------------:|:---------------------------------------------:|
+|:------------------------------:|:------------------------------------------:|
 | <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="580">   |
 
-### 2.5 Zonal Statistics
+In the output map,  we used Reds
+[Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer)
+to indicate different ranges of the number of point of interest in Ghana.
+Specifically, the darker the red the higher the number of point of interest.
 
-1. **Summary:**<br>
-  This tool calculate statistics on values of raster within the
-  zones of another dataset.
 
-2. **Parameters:**<br>
-  For the parameters setting for Zonal Statistics tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).
+## 5.1 Zonal Statistics
+  _Zonal Statistics_ calculates statistics (i.e., **mean**, **median**,
+  **sum**, **minimum**, **maximum**, **standard deviation**, **majority**,
+  **minority**, **unique**, **range**) on values of **Raster Layer** within the
+  zones of **Input Layer**.
+  There are three additional parameters can be specified, please check
+  [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).<br>
 
-3. **Applications:**<br>
-  _Zonal Statistics_ calculates statistics for specified zones based on values from another dataset (rasater dataset). 
-  This tool calculates the **mean**, **median**, **sum**, **minimum**,
-  **maximum**, **standard deviation**, **majority**, **minority**, **unique**, or **range** in each zone.
-  In the following example, we use this tool to show the population size
-  in each district of Ghana.
+### 5.1 Usage
+This tool is often used to calculates statistic on values you are interested from
+**Raster Data** within the zones defined by **Input Layer**.
+
+### 5.2 Example
+
+In the following example, we use this tool to **sum** population based
+on values of raster dataset within each district of Ghana to show the
+distribution of population in Ghana.
+
+  The datasets used are listed below:
+
+| ID | File Name           | Data Format | Type    | Description                                                 |
+|----|---------------------|-------------|---------|-------------------------------------------------------------|
+| 1  | Gh_260_MMDA.shp               | vector      | polygon | Districts of Ghana              |
+| 2  | population_gha_2018-10-01.tif | raster      | tiff    | Population of Ghana in 2018     |
+
+  The two figures below display the specific parameter settings and the output of the tool.
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_ZonalStatistics/ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../images/m2_ZonalStatistics/Output2.png" alt= "Add data to Map Canvas" width="530">   |
 
-### 2.6 Select by Location
+In the output map,  we used Reds [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the number of population in Ghana. Specifically, the darker the red the higher the number of population.
 
-1. **Summary:**<br>
-This tool can select part of the input Layer based on its spatial
-relationship with the selecting layer.
 
-2. **Parameters:**<br>
-For the parameters setting for Select by Location tool, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#select-by-location).
+## 6.1 Select by Location
+_Select By Location_ allows you to select features from **Input layer** based on
+their location relative (i.e., **Intersect**, **Contains**, **Within**, **Within a distance**)
+to features in **Selection layer**. There are two additional parameters can be specified, please check
+  [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#select-by-location).<br>
 
-3. **Applications:**<br>
-_Select By Location_ allows you to select features from **Input layer** based on their location relative to features in **Selection layer**.
-In the following example, we use this tool to select all the districts attached with the 100-kilometer buffer of the railway line in Ghana.
+### 6.1 Usage
+This tool is often used to select features spatially relative to the feature you
+are interested in.
+
+### 6.2 Example
+In the following example, we use this tool to select all the districts attached
+with the 100-kilometer buffer of the railway line in Ghana.
+
+  The datasets used are listed below:
+
+| ID | File Name           | Data Format | Type    | Description                                                 |
+|----|---------------------|-------------|---------|-------------------------------------------------------------|
+| 1  | Gh_260_MMDA.shp             | vector      | polygon | Districts of Ghana              |
+| 2  | RailwayLine.shp             | vector      | line    | Railway line in Ghana           |
+
+  The two figures below display the specific parameter settings and the output of the tool.
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
 | <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output2.png" alt= "Add data to Map Canvas" width="521">   |
 
+In the output map, we used Green color to indicate the served area of railway in Ghana.
 
-## 3. Exercises and Post
+## 7. Exercises and Post-training Survey
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md). # Density of Line (road density)
 - Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise2.md). # Distance to Point Features (distance to health facility)
 - Please complete the [Exercise 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise3.md). # Select by location  (within the 5 miles buffer of the education facility)
 - Please complete the [Exercise 4](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise4.md). # Reclassify Field & Zonal Statistics (a kind of crops, reclassify soil PH)
+- Please take this post-training
+  [survey](https://ufl.qualtrics.com/jfe/form/SV_3n21W1ko0UPJNLo) (required).
+- Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=muribasterra&labels=exercise+w1m2&milestone=Module+2+Exercises&template=w1m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D).
+
+## 8. What's Next?
+
+Module 3 - Create Suitability Models with QGIS Graphical Modeler.
