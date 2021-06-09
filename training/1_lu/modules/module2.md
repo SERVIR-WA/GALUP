@@ -2,14 +2,19 @@
 
 **What will you learn from this module?**
 
-- Get to know the function of each LUCIS-OPEN Tools for QGIS,
-- Be familiar with the parameters of Tools,
-- Process data with appropriate Tools.
+- Get to know the LUCIS-OPEN Tools for QGIS,
+- Learn when and how to use different tools,
+- Use the tools to answer planning-related questions.
 
 ## 1. Density of Line Features
 
-_Density of Line Features_ calculates the line density in
-a polygon (i.e., the total length of line features that fall within a polygon feature divided by the polygon's area). The polygon features (i.e., Input layer) and line features (i.e., Line layer) are two required parameters for using this tool. There are five additional parameters can be specified, please check [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
+_Density of Line Features_ calculates the line density in a polygon (i.e., the
+total length of line features that fall within a polygon feature divided by the
+polygon's area).
+The polygon features (i.e., Input layer) and line features (i.e., Line layer)
+are two required parameters for using this tool. There are five additional
+parameters can be specified, please check
+[here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#density-of-line-features).
 
 ### 1.1 Usage
 
@@ -98,8 +103,8 @@ Recall that, in Exercise 2 of Module 1, we calculated the population density of 
 |----|---------------|-------------|---------|-------------------------------------------------------------|
 | 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
 
-The two figures below display the specific parameter settings
- and the output of the tool.
+The two figures below display the specific parameter settings and the output
+of the tool.
 
 |          Parameter Setting         |    Output   |
 |:------------------------------------------:|:------------------------------------------:|
@@ -216,10 +221,10 @@ In the output map, we used Green color to indicate the served area of railway in
 
 ## 7. Exercises and Post-training Survey
 
-- Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md). # Density of Line (road density)
-- Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise2.md). # Distance to Point Features (distance to health facility)
-- Please complete the [Exercise 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise3.md). # Select by location  (within the 5 miles buffer of the education facility)
-- Please complete the [Exercise 4](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise4.md). # Reclassify Field & Zonal Statistics (a kind of crops, reclassify soil PH)
+- Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md).
+- Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise2.md).
+- Please complete the [Exercise 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise3.md).
+- Please complete the [Exercise 4](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise4.md).
 - Please take this post-training
   [survey](https://ufl.qualtrics.com/jfe/form/SV_3n21W1ko0UPJNLo) (required).
 - Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=muribasterra&labels=exercise+w1m2&milestone=Module+2+Exercises&template=w1m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D).
