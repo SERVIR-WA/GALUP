@@ -7,9 +7,9 @@ In this exercise, we will visualize the road network density in the THLD area by
 ## 2. GIS Dataset
 
 You should use the following data to finish this exercise:
-- THLD polygon shapefile _THLD\_poly.shp_ at
+- _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`.
-- Roads in the THLD area _osm2020\_allrds\_THLD.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> Primary and secondary roads in THLD District`.
+- _osm2020\_allrds\_THLD.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> Primary and secondary roads in THLD District`.
 
 ## 3. Skills Practiced
 
