@@ -7,7 +7,7 @@ Normally, the residential areas will be built near the education facilities so t
 ## 2. GIS Dataset
 You should use the following data to finish this exercise:
 - _THLD\_poly.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`.
+`GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`.
 - _Education\_Facilities.shp_ at `GALUP-master -> training -> 1_lu -> datasets -> Education facilities in THLD District`.
 
 ## 3. Skills Practiced
