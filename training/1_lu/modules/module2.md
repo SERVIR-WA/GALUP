@@ -88,7 +88,7 @@ The two figures below display the specific parameter settings
  and the output of the tool.
 
 |          Parameter Setting         |    Output    |
-|:------------------------------------------:|:------------------------------------------:|
+|------------------------------------------|------------------------------------------|
 | ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP2.png) |
 
 ## 3. Reclassify Field
