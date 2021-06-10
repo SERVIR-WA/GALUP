@@ -18,16 +18,26 @@ parameters that can be specified, which are outlined
 
 ### 1.1 Usage
 
-This tool is often used to calculate the density of linear features, such as roads and rivers, in a polygon area. Results of this tool can help us understand the magnitude of a certain phenomenon within a territory.
+This tool is often used to calculate the density of linear features, such as
+roads and rivers, in a polygon area. Results of this tool can help us
+understand the magnitude of a certain phenomenon within a territory.
 
 Only the portion of a line within the neighborhood (a polygon feature or a
 radius around a polygon feature) is considered when calculating the density.
 If no lines fall within the neighborhood of a particular polygon, a
-"[Null value](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value.)" will be given to that polygon.
+"[Null value](https://www.cadlinecommunity.co.uk/hc/en-us/articles/360013744338-QGIS-NULL-Values#:~:text=By%20default%2C%20when%20you%20browse,will%20show%20a%20NULL%20value)"
+will be given to that polygon.
 
-Search radius, if specified, will be used to calculate the line density by using the total length of line features fall within the area of a circle (the centroid of a polygon as the center and the search radius as the radius) divided by the circle's area.
+Search radius, if specified, will be used to calculate the line density by
+using the total length of line features fall within the area of a circle (the
+centroid of a polygon as the center and the search radius as the radius)
+divided by the circle's area.
 
-[Cell size](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/cell-size-of-raster-data.htm) is used to calculate the total length of line features fall within the area of a circle by rasterizing those line features. The smaller the value, the more precise the outcome, but the longer time will be taken to run the tool.
+[Cell size](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/cell-size-of-raster-data.htm)
+is used to calculate the total length of line features fall within the area of
+a circle by rasterizing those line features.
+The smaller the value, the more precise the outcome, but the longer time will
+be taken to run the tool.
 
 ### 1.2 Example
 
@@ -89,19 +99,34 @@ _Reclassify Field_ reclassifies a field in the input table based on predefined r
 
 This tool is used to reclassify or change the values of the feature to alternative values.
 
-Old values are the values (or value ranges) you want to reclassify, the New values are the values that will be assigned to the old values. For example, a vector of soil type may be assigned new values of 1 to 10 to represent erosion potential.
+Old values are the values (or value ranges) you want to reclassify, the New
+values are the values that will be assigned to the old values.
+For example, a vector of soil type may be assigned new values of 1 to 10 to
+represent erosion potential.
 
-No data value is the new value that will be assigned to the no data value. In most cases, the no data value will be 255, so the new value 0 (default setting of No data value) will replace the old value 255 in the field after running the tool.
+No data value is the new value that will be assigned to the no data value.
+In most cases, the no data value will be 255, so the new value 0 (default
+setting of No data value) will replace the old value 255 in the field after
+running the tool.
 
-This tool is useful when you are trying to do a suitability model, it allows you to assign new values to different evaluation indicators under a uniform scoring system (e.g., 1 to 10) on which the final weighting step will be based.
+This tool is useful when you are trying to do a suitability model, it allows
+you to assign new values to different evaluation indicators under a uniform
+scoring system (e.g., 1 to 10) on which the final weighting step will be based.
 
 ### 3.2 Example
 
-Recall that, in Exercise 2 of Module 1, we calculated the population density of Ghana by district in 2018. In the following example, in order to know the population density level of Ghana by district in 2018, we use the Reclassify Field tool to reclassify the population density of Ghana by district in 2018 according to the criteria that old values: 7-60, 60-100, 100-186, 186-490, and 490-18804 will be assigned new values: 1, 2, 3, 4, and 5, respectively. The datasets used are listed below:
+Recall that, in Exercise 2 of Module 1, we calculated the population density of
+Ghana by district in 2018.
+In the following example, in order to know the population density level of
+Ghana by district in 2018, we use the Reclassify Field tool to reclassify the
+population density of Ghana by district in 2018 according to the criteria that
+old values: 7-60, 60-100, 100-186, 186-490, and 490-18804 will be assigned new
+values: 1, 2, 3, 4, and 5, respectively.
+The datasets used are listed below:
 
-| ID | File Name     | Data Format | Type    | Description                                                 |
-|----|---------------|-------------|---------|-------------------------------------------------------------|
-| 1  | Gh_260_MMDA.shp                  | vector      | polygon | Districts of Ghana              |
+| ID | File Name       | Data Format | Type    | Description        |
+|----|-----------------|-------------|---------|--------------------|
+| 1  | Gh_260_MMDA.shp | vector      | polygon | Districts of Ghana |
 
 The two figures below display the specific parameter settings and the output
 of the tool.
@@ -129,22 +154,26 @@ features in the **Join Layer** will be aggregated, and then combined with
 a target feature.<br>
 
 ### 4.1 Usage
+
 _Spatial Join_ matches rows from the Join Features to the Target Features based
-on their relative spatial locations. Moreover, this tool is taken a step further in that it not only evaluates spatial relationships but also allows users to
-specify the column of interest from the
-Join Layer and then calculate particular statistics (i.e., **first**, **last**,
-**sum**, **mean**, **median**, **max**, **min**, **std**, **var**, **count**).
+on their relative spatial locations.
+Moreover, this tool is taken a step further in that it not only evaluates
+spatial relationships but also allows users to specify the column of interest
+from the Join Layer and then calculate particular statistics, e.g., **first**,
+**last**, **sum**, **mean**, **median**, **max**, **min**, **std** (standard
+deviation), **var** (variance), **count**.
 
 ### 4.2 Example
- In the following example, we choose the **Join one to one** option to find
-  out the **count** (number of records) of points of interest (tourism)
-  within each District Assembly of Ghana.
-  The datasets used are listed below:
 
-| ID | File Name           | Data Format | Type    | Description                                                 |
-|----|---------------------|-------------|---------|-------------------------------------------------------------|
-| 1  | Gh_260_MMDA.shp     | vector      | polygon | Districts of Ghana               |
-| 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana       |
+In the following example, we choose the **Join one to one** option to find out
+the **count** (number of records) of points of interest (tourism) within each
+District Assembly of Ghana.
+The datasets used are listed below:
+
+| ID | File Name           | Data Format | Type    | Description                |
+|----|---------------------|-------------|---------|----------------------------|
+| 1  | Gh_260_MMDA.shp     | vector      | polygon | Districts of Ghana         |
+| 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana |
 
   The two figures below display the specific parameter settings and the output of the tool.
 |         Parameters setting     |       Output        |
@@ -157,14 +186,16 @@ to indicate different ranges of the number of point of interest in Ghana.
 Specifically, the darker the red the higher the number of point of interest.
 
 ## 5. Zonal Statistics
-  _Zonal Statistics_ calculates statistics (i.e., **mean**, **median**,
-  **sum**, **minimum**, **maximum**, **standard deviation**, **majority**,
-  **minority**, **unique**, **range**) on values of **Raster Layer** within the
-  zones of **Input Layer**.
-  There are three additional parameters that can be specified, which are outlined
-  [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).<br>
+
+_Zonal Statistics_ calculates statistics (i.e., **mean**, **median**,
+**sum**, **minimum**, **maximum**, **standard deviation**, **majority**,
+**minority**, **unique**, **range**) on values of **Raster Layer** within the
+zones of **Input Layer**.
+There are three additional parameters that can be specified, which are outlined
+[here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics).<br>
 
 ### 5.1 Usage
+
 This tool is often used to calculates statistic on values you are interested from
 **Raster Data** within the zones defined by **Input Layer**.
 
@@ -189,8 +220,8 @@ distribution of population in Ghana.
 
 In the output map,  we used Reds [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the number of population in Ghana. Specifically, the darker the red the higher the number of population.
 
-
 ## 6. Select by Location
+
 _Select By Location_ allows you to select features from **Input layer** based on
 their location relative (i.e., **Intersect**, **Contains**, **Within**, **Within a distance**)
 to features in **Selection layer**. There are two additional parameters that can be specified, which are outlined
