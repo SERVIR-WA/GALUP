@@ -29,7 +29,7 @@ This exercise covers:
 6. Type _0_ for the _Label_, and click the **Expression** ![expre](../../../images/M2E1/mIconExpression.svg) to open the _Expression String Builder_ window, and type _"Rds\_den" is NULL_ into the _Expression_ field, and click **OK** to close the _Expression String Builder_ window.
 7. Scroll down the _Edit Rule_ window and select the white color in the drop-down menu of the _Color_. Click **OK** to close the _Edit Rule_ window.
 8. Click **OK** on the symbology window to finish the symbology part.
-9.  Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 10. Export as a PDF file.
 
 ## 5.Result
