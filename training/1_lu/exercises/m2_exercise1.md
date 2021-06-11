@@ -1,21 +1,21 @@
 # Module 2 - Exercise 1
 
-## 1. Description
+## 1. Skills Practiced
+
+This exercise covers:
+
+- The parameter setting and the usage of the Density of Line Features tool.
+
+## 2. Description
 
 In this exercise, we will visualize the road network density in the THLD area by using the [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features) tool.
 
-## 2. GIS Dataset
+## 3. GIS Dataset
 
 You should use the following data to finish this exercise:
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`.
 - _osm2020\_allrds\_THLD.shp_  at `GALUP-master -> training -> 1_lu -> datasets -> Primary and secondary roads in THLD District`.
-
-## 3. Skills Practiced
-
-This exercise covers:
-
-- The parameter setting and the usage of the Density of Line Features tool.
 
 ## 4. Instruction
 
