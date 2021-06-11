@@ -32,7 +32,7 @@ You should use the following data to finish this exercise:
 5. Choose drop down list in **Output shapefile** and select `Save to Files...`, so
    you can save the output shapefile to the files you frequently use.
 6. Click **Run**.
-7. Choose _Graduated_ symbology and choose the [_Natural Breaks (Jenks)_]([http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049
+7. Choose _Graduated_ ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology and choose the [_Natural Breaks (Jenks)_]([http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049
 ) and the _Reds_
    color ramp with 5 classes to render the Output column.
 8. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.

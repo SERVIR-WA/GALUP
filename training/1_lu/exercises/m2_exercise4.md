@@ -53,7 +53,7 @@ name for **Output column prefix**.
    **Output column prefix**.
 12. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
 13. **Run** _Reclassify Field_ tool.
-14. Choose _Categorized_ symbology and choose the _Greens_ color ramp to
+14. Choose _Categorized_ ![categorized](../../../images/M2E1/rendererCategorizedSymbol.svg) symbology and choose the _Greens_ color ramp to
 render the the Output column from _Reclassify Field_ tool.
 15. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 16. Export as a PDF file.
