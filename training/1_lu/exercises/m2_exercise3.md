@@ -28,6 +28,6 @@ This exercise covers:
 ## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](../pdf_download/M2E3_EduProximity2.pdf).
+  [here](../pdf_maps/M2E3_EduProximity2.pdf).
 - Please go back to
   [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#3-exercises) to complete the fourth exercise.

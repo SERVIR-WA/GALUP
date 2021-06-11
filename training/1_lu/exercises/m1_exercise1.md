@@ -36,6 +36,6 @@ This exercise covers:
 ## 5. Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/PopulationMap.pdf).
+  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/PopulationMap.pdf).
 - Please go back to
   [Module 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#4-exercises) to complete the second exercise.
