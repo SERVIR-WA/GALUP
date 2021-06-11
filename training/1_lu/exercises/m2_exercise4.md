@@ -1,6 +1,13 @@
 # Module 2 - Exercise 4
 
-## 1. Description
+## 1. Skills Practices
+
+This exercise will practice:
+
+- [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field)
+- [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics)
+
+## 2. Description
 
 Yam is an important staple food crop in Ghana and is produced throughout the
 country.
@@ -21,25 +28,17 @@ So, we will evaluate the land in THLD district by analyzing the Soil pH dataset 
 In this exercise, we will create a Soil pH index to evaluate the suitability
 to grow Yam in THLD district by using the [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field) tool and [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics) tool.
 
-
-## 2. GIS Dataset
+## 3. GIS Dataset
 
 You should use the following data to finish this exercise:
 - _SD5\_15.tif_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
 - _THLD\_poly.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Integrated Decision Units in THLD District`
-
-## 3. Skills Practices
-
-This exercise will practice:
-
-- [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field)
-- [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics)
+`GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
 
 ## 4. Instruction
 
-1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add it to _Map Canvas_.
+1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
 2. Open _Zonal Statistics_ tool.
 3. Set _THLD\_poly.shp_ as **Input layer** and _SD5\_15.tif_ as **Raster layer**.
 4. Type _mean_ in **Types of statistics** and then give an appropriate
@@ -62,8 +61,8 @@ render the the Output column from _Reclassify Field_ tool.
 ## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_download/SoilIndex.pdf).
-- Now you have completed both exercises. Please go back to
+  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/SoilIndex.pdf).
+- Now you have completed all exercises. Please go back to
   [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
 
 ## 6.Reference
