@@ -2,7 +2,9 @@
 
 **What will you learn from this module?**
 
-- 
+- Get to know the Graphical Modeler,
+- Learn about the Row Crops model,
+- Solve planning-related questions by modeling in the Graphical Modeler.
 
 ## 1. Graphical Modeler
 
