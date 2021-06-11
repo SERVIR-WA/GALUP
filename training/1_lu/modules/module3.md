@@ -16,7 +16,15 @@ In this model, we will use Tools to do land suitability modeling. There are four
 
 ## 3. Row Crops Model
 
-_Row Crops Model_
+_Row Crops Model_ aims to evaluate the suitability of IDUs' land in THLD district
+to grow Row crops. This model evaluate the land based on economic and physical
+perspectives.
+In terms of the economic aspect, the model measures [_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
+and the distance to [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic).
+In terms of the physical aspect, the model considers about
+[_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+to respond to rain and produce useful pasture, and
+[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
 ### 3.1 Economic - Transportation Accessibility
 
@@ -34,25 +42,33 @@ the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
-## 3.1.1 Usage
+#### 3.1.1 Usage
 _Transportation Accessibility model_ can be used to evaluate the nearness of
 polygons to the two different types of line features. By adjusting the weighted
 value, the model can give different outcomes.
 
-## 3.1.2 Example
+#### 3.1.2 Example
 
-In the following example, we choose the **Join one to one** option to find out
-the **count** (number of records) of points of interest (tourism) within each
-District Assembly of Ghana.
+In the following example, we use _Transportation Accessibility model_ to measure
+the accessibility of IDUs in THLD district to the primary and secondary roads.
 
 The datasets used are listed below:
 
+| ID | File Name     | Data Format | Type    | Description                     |
+|----|---------------|-------------|---------|---------------------------------|
+| 1  | THLD_poly.shp | vector | polygon | IDUs in the THLD District Assembly |
+| 2  | primary_road.shp | vector | point | Primary road in THLD District |
+| 3  | secondary_road.shp | vector | point | Secondary road in THLD District |
 
 The two figures below display the specific parameter settings and the output of the model.
 
+|          Parameter Setting         |    Output    |
+|------------------------------------------|------------------------------------------|
+| <img src="../../../images/m3_TransportationAcces/ParametersSetting.png" alt= "Add data to Map Canvas" width="540">   |  <img src="../../../images/m3_TransportationAcces/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
-
-In the output map
+In the output map, we used Reds to indicate transportation accessibility of IDUs
+in THLD district.
+Specifically, the darker the red the higher the traffic accessbility.
 
 
 ### 3.2 Physical - Soil Condition
