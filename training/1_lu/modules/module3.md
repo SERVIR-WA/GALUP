@@ -20,6 +20,41 @@ _Row Crops Model_
 
 ### 3.1 Economic - Transportation Accessibility
 
+_Transportation Accessibility model_ aims to evaluate the accessibility of IDUs
+to traffic roads.
+By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
+this model calculate the shorest distance from each IDU to the primary and
+secondary roads and store the values in two different fields.
+Then the model use [_Rescale Field Linearly_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
+to transform values in fields to specified continuous scales (i.e., 1 to 9 scale).
+Finally, by using [_Weight Sum of Fields_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+to multiply the rescaled fields with weighted value and sum them up,
+the model can create a index for each IDU to measure their accessibility to
+the primary and secondary roads.
+You can check the _Input parameters_ of this model
+[here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
+
+## 3.1.1 Usage
+_Transportation Accessibility model_ can be used to evaluate the nearness of
+polygons to the two different types of line features. By adjusting the weighted
+value, the model can give different outcomes.
+
+## 3.1.2 Example
+
+In the following example, we choose the **Join one to one** option to find out
+the **count** (number of records) of points of interest (tourism) within each
+District Assembly of Ghana.
+
+The datasets used are listed below:
+
+
+The two figures below display the specific parameter settings and the output of the model.
+
+
+
+In the output map
+
+
 ### 3.2 Physical - Soil Condition
 
 ## 4. Exercises and Post-training Survey
