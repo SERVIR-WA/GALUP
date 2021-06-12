@@ -2,9 +2,9 @@
 
 ## 1. Skills Practiced
 
-This exercise covers:
+This exercise will practice:
 
-- The parameter setting and the usage of the Density of Line Features tool.
+- [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features)
 
 ## 2. Description
 
@@ -25,7 +25,7 @@ You should use the following data to finish this exercise:
 3. Open the Density of Line Features tool, set the _THLD\_poly.shp_ as the **input layer**, and _osm2020\_allrds\_THLD.shp_ as the **Line layer**. Name the **Output column name** as _Rds\_Den_, and the **Output layer** as _RdsDenMap_ and click **Run**.
 4. Open _Attribute Table_ of the output layer (_RdsDenMap_) to review the output field, _Rds\_Den_, which represents THLD roads network density
    by district.
-5. Open the symbology window, choose the target field: _Rds\_Den_ and _Graduated_ symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose _Rule\_based symbology_, click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) to open the _Edit Rule_ window.
+5. Open the symbology window, choose the target field: _Rds\_Den_ and choose Graduated ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose _Rule\_based symbology_, click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) to open the _Edit Rule_ window.
 6. Type _0_ for the _Label_, and click the **Expression** ![expre](../../../images/M2E1/mIconExpression.svg) to open the _Expression String Builder_ window, and type _"Rds\_den" is NULL_ into the _Expression_ field, and click **OK** to close the _Expression String Builder_ window.
 7. Scroll down the _Edit Rule_ window and select the white color in the drop-down menu of the _Color_. Click **OK** to close the _Edit Rule_ window.
 8. Click **OK** on the symbology window to finish the symbology part.

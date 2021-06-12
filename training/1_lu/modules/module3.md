@@ -6,7 +6,7 @@
 - Learn about the Row Crops model,
 - Solve planning-related questions by modeling in the Graphical Modeler.
 
-## 1. Graphical Modeler
+## 1. Introduction to QGIS Graphical Modeler
 
 ## 2. Suitability Modeling
 
@@ -71,7 +71,6 @@ The two figures below display the specific parameter settings and the output of 
 In the output map, we used Reds to indicate transportation accessibility of IDUs
 in THLD district.
 Specifically, the darker the red the higher the traffic accessbility.
-
 
 ### 3.2 Physical - Soil Condition
 
