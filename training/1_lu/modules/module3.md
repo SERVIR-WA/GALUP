@@ -26,7 +26,8 @@ and the distance to [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag
 In terms of the physical aspect, the model considers about
 [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 to respond to rain and produce useful pasture, and
-[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
+including the drainage level and Soil pH.
 
 ### 3.1 Economic - Transportation Accessibility
 
