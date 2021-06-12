@@ -23,8 +23,7 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
-1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to
-   _Map Canvas_.
+1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 2. Open _Distance to Point Features_ tool.
 3. Set _THLD\_poly.shp_ as **Input layer** and _Health\_Facilities.shp_ as **Point layer**.
 4. Choose _Euclidean_ as Distance method and _Float_ as **Output data type**, and then
@@ -32,10 +31,9 @@ You should use the following data to finish this exercise:
 5. Choose drop down list in **Output shapefile** and select `Save to Files...`, so
    you can save the output shapefile to the files you frequently use.
 6. Click **Run**.
-7. Choose _Graduated_ ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology and choose the [_Natural Breaks (Jenks)_]([http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049
-) and the _Reds_
+7. Choose _Graduated_ ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology and choose the [_Natural Breaks (Jenks)_](http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049) and the _Reds_
    color ramp with 5 classes to render the Output column.
-8. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+8. Create a **_Layout_** and then add **_Legend_**, **_Scale bar_**, and **_North Arrow_**.
 9. Export as a PDF file.
 
 ## 5.Result
