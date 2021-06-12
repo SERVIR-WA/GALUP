@@ -29,6 +29,8 @@ to respond to rain and produce useful pasture, and
 [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
 including the drainage level and Soil pH.
 
+In this module, we will introduce Transit Soil and leave Land Con and Market as exercise.
+
 ### 3.1 Economic - Transportation Accessibility
 
 _Transportation Accessibility model_ aims to evaluate the accessibility of IDUs
