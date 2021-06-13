@@ -9,7 +9,8 @@ This exercise will practice:
 
 ## 2. Description
 
-In this exercise, we will calculate and visualize the density of road networks
+In this exercise, we will calculate and visualize the
+**density of road networks**
 in the THLD District Assembly by using the
 [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features)
 tool.
@@ -57,7 +58,7 @@ The following datasets are used in this exercises:
    the output layer because of "Null" values.
    So, we need to add a specific "rule" on how "Null" values should be
    rendered.
-   <ol type="a">
+   <ol type="1">
       <li>
       Now, select the
       <img src="../../../images/M2E1/rendererRuleBasedSymbol.svg" alt="rule">
