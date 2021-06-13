@@ -13,6 +13,9 @@ In this exercise, we will calculate and visualize the density of road networks
 in the THLD District Assembly by using the
 [Density of Line Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#21-density-of-line-features)
 tool.
+This is an important measurement to help understand transportation
+accessibility of a given region, which is a crucial factor to consider when
+making land-use plans.
 
 ## 3. GIS Dataset
 
@@ -31,13 +34,11 @@ The following datasets are used in this exercises:
    **<ins>Density of Line Features</ins>** tool under **_Scripts_**
    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
-   <ol type="a">
-      <li><b>Input layer</b>: THLD_poly,</li>
-      <li><b>Line later</b>: osm2020_allrds_THLD,</li>
-      <li><b>Output column name</b>: Rds_Den,</li>
-      <li><b>Output layer</b>: RdsDenMap.shp,</li>
+   - Input layer</b>: THLD_poly,</li>
+   - Line later</b>: osm2020_allrds_THLD,</li>
+   - Output column name</b>: Rds_Den,</li>
+   - Output layer</b>: RdsDenMap.shp,</li>
       <li>leave all other parameters as default.</li>
-   </ol>
 4. Click **Run**.
 5. Open the **_Attribute Table_**
    <img src="../../../images/M2E1/attributes.svg" alt= "AttrTbl" width="20">
@@ -54,25 +55,51 @@ The following datasets are used in this exercises:
    with 5 classes. Click **Apply**.
 7. However, if we leave the symbology like this, many IDUs would not appear in
    the output layer because of "Null" values.
-   So, let's fix this (still in the **Symbology** tab).
-
-   Select the ![rule](../../../images/M2E1/rendererRuleBasedSymbol.svg)
-   Rule\_based style.
-   Click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) on the
-   lower left portion of the window to open **_Edit Rule_**.
-   Type `0` for **Label**.
-   Click <img src="../../../images/M2E1/mIconExpression.svg" alt= "exp" width="20">
-   **Expression** to open the **_Expression String Builder_** window, in which
-   type `"Rds_den" is NULL` in the **Expression** field.
-   Click **OK** to close the **_Expression String Builder_** window.
-
-   Scroll down the **_Edit Rule_** window to the **Symbol** section.
-   Change the color to _White_ from the drop-down menu of **Color**.
-   Click **OK** to close the **_Edit Rule_** window.
-8. Click **OK** on the **Symbology** tab.
-9. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
+   So, we need to add a specific "rule" on how "Null" values should be
+   rendered.
+   <ol type="a">
+      <li>
+      Now, select the
+      <img src="../../../images/M2E1/rendererRuleBasedSymbol.svg" alt="rule">
+      Rule_based style.
+      </li>
+      <li>
+      Then, click <b>Add rule</b>
+      <img src="../../../images/M2E1/symbologyAdd.svg" alt="addrule"> on the
+      lower left portion of the window to open <b><i>Edit Rule</i></b>.
+      </li>
+      <li>
+      Type <code>0</code> for <b>Label</b>.
+      </li>
+      <li>
+      Click
+      <img src="../../../images/M2E1/mIconExpression.svg" alt= "exp" width="20">
+      <b>Expression</b> to open the <b><i>Expression String Builder</i></b>
+      window.
+      </li>
+      <li>
+      Type `"Rds<i>den" is NULL` in the <b>Expression</b> field.
+      </li>
+      <li>
+      Click <b>OK</b> to close the <b><i>Expression String Builder</i></b>
+      window.
+      </li>
+      <li>
+      Scroll down the <b><i>Edit Rule</i></b> window to the <b>Symbol</b>
+      section.
+      Change the color to <ins><i>white</i></ins> from the drop-down menu of
+      <b>Color</b>.
+      </li>
+      <li>
+      Click <b>OK</b> to close the <b><i>Edit Rule</i></b> window.
+      </li>
+      <li>
+      Click <b>OK</b> on the <b>Symbology</b> tab.
+      </li>
+   </ol>
+8. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
    layout.
-10. Export the map as a PDF file.
+9. Export the map as a PDF file.
 
 ## 5.Result
 
