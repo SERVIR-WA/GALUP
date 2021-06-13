@@ -35,11 +35,11 @@ The following datasets are used in this exercises:
    **<ins>Density of Line Features</ins>** tool under **_Scripts_**
    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
-   - Input layer</b>: THLD_poly,</li>
-   - Line later</b>: osm2020_allrds_THLD,</li>
-   - Output column name</b>: Rds_Den,</li>
-   - Output layer</b>: RdsDenMap.shp,</li>
-      <li>leave all other parameters as default.</li>
+   - **Input layer**: THLD_poly,
+   - **Line later**: osm2020_allrds_THLD,
+   - **Output column name**: Rds_Den,
+   - **Output layer**: RdsDenMap.shp,
+   - leave all other parameters as default.
 4. Click **Run**.
 5. Open the **_Attribute Table_**
    <img src="../../../images/M2E1/attributes.svg" alt= "AttrTbl" width="20">
