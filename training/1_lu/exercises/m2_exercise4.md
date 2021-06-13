@@ -72,7 +72,7 @@ You should use the following data to finish this exercise:
    Select the ![categorized](../../../images/M2E1/rendererCategorizedSymbol.svg)
    Categorized style.
    Specify the _SpH\_re_ field as **Value**, then choose the _Greens_ color ramp
-   with 5 classes. Click **Apply**.
+   with 3 classes. Click **Apply**.
 9. Click **OK** on the **Symbology** tab.
 10. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
    layout.
