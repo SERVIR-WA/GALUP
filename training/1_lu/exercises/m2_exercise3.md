@@ -28,7 +28,7 @@ You should use the following data to finish this exercise:
       <li><b>Join option</b>: Within a distance,</li>
       <li><b>Within distance of selecting feature</b>: 1 mile,</li>
       <li><b>Output layer</b>: EduProIDU.shp,</li>
-      <li>leave all other parameters as default..</li>
+      <li>leave all other parameters as default.</li>
    </ol>
 4. Click **Run**.
 5. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
