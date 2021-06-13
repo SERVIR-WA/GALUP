@@ -20,19 +20,19 @@ You should use the following data to finish this exercise:
 
 1. Locate _THLD\_poly.shp_ and _Education\_Facilities.shp_ in the **_Browser Panel_** and add them to
    **_Map Canvas_**.
-2. In the _Processing Toolbox_ panel, find the **<ins>Select by Location</ins>** tool under the _Scripts_  ![scripts](../../../images/M2E1/processingScript.svg) and double click to open the tool.
-3. Parameter Setting:
+2. In the **_Processing Toolbox_** panel, locate the **<ins>Select by Location</ins>** tool under _Scripts_  <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20"> and double click to open the tool.
+3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
-      <li><b>Input layer</b>: THLD_poly.shp</li>
-      <li><b>Selection layer</b>: Education_Facilities.shp</li>
-      <li><b>Join option</b>: Within a distance</li>
-      <li><b>Within distance of selecting feature</b>: 1 mile</li>
-      <li><b>Output layer</b>: EduProIDU.shp</li>
-      <li>Set all other parameters as default</li>
-      <li>Click <b>Run</b></li>
+      <li><b>Input layer</b>: THLD_poly,</li>
+      <li><b>Selection layer</b>: Education_Facilities,</li>
+      <li><b>Join option</b>: Within a distance,</li>
+      <li><b>Within distance of selecting feature</b>: 1 mile,</li>
+      <li><b>Output layer</b>: EduProIDU.shp,</li>
+      <li>leave all other parameters as default..</li>
    </ol>
-4. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-5. Export as a PDF file.
+4. Click **Run**.
+5. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+6. Export the map as a PDF file.
 
 ## 5.Result
 
