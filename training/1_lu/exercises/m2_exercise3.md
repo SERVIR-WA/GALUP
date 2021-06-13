@@ -11,7 +11,8 @@ This exercise will practice:
 Normally, the residential areas will be built near the education facilities so that it will be convenient for the education of children. In this exercise, we will help to find out the IDUs of THLD that are in proximity (within the 1 miles) to the education facility by using the [Select by Location](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#26-select-by-location) tool.
 
 ## 3. GIS Dataset
-You should use the following data to finish this exercise:
+
+The following datasets are used in this exercises:
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`.
 - _Education\_Facilities.shp_ at `GALUP-master -> training -> 1_lu -> datasets -> Education facilities in THLD District`.
