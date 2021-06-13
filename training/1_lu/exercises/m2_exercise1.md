@@ -62,7 +62,7 @@ The following datasets are used in this exercises:
       <li>
       Now, select the
       <img src="../../../images/M2E1/rendererRuleBasedSymbol.svg" alt="rule">
-      Rule_based style.
+      Rule_based style in the Symbology tab.
       </li>
       <li>
       Then, click <b>Add rule</b>
