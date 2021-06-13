@@ -28,8 +28,8 @@ The following datasets are used in this exercises:
 1. Locate _THLD\_poly.shp_ and _osm2020\_allrds\_THLD.shp_ in the
    **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
-   **<ins>Density of Line Features</ins>** tool under the **_Scripts_**
-   ![scripts](../../../images/M2E1/processingScript.svg).
+   **<ins>Density of Line Features</ins>** tool under **_Scripts_**
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: THLD_poly,</li>
