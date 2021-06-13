@@ -19,17 +19,25 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
-1. Locate _THLD\_poly.shp_ and _osm2020\_allrds\_THLD.shp_ in the _Browser Panel_ and add them to
-   _Map Canvas_.
-2. In the _Processing Toolbox_ panel, find the Density of Line Features tool under the _Scripts_.
-3. Open the Density of Line Features tool, set the _THLD\_poly.shp_ as the **Input layer**, and _osm2020\_allrds\_THLD.shp_ as the **Line layer**. Name the **Output column name** as _Rds\_Den_, and the **Output layer** as _RdsDenMap_ and click **Run**.
-4. Open _Attribute Table_ of the output layer (_RdsDenMap_) to review the output field, _Rds\_Den_, which represents THLD roads network density
+1. Locate _THLD\_poly.shp_ and _osm2020\_allrds\_THLD.shp_ in the **_Browser Panel_** and add them to
+   **_Map Canvas_**.
+2. In the _Processing Toolbox_ panel, find the **<ins>Density of Line Features</ins>** tool under the _Scripts_ ![scripts](../../../images/M2E1/processingScript.svg) and double click to open the tool.
+3. Parameter Setting:
+   <ol type="a">
+      <li><b>Input layer</b>: THLD_poly.shp</li>
+      <li><b>Line later</b>: osm2020_allrds_THLD.shp</li>
+      <li><b>Output column name</b>: Rds_Den</li>
+      <li><b>Output layer</b>: RdsDenMap_.shp</li>
+      <li>Set all other parameters as default</li>
+      <li>Click <b>Run</b></li>
+   </ol>
+4. Open _Attribute Table_ <img src="../../../images/M2E1/attributes.svg" alt= "Add data to Map Canvas" width="27"> of the output layer (_RdsDenMap_) to review the output field, _Rds\_Den_, which represents THLD roads network density
    by district.
-5. Open the symbology window, choose the target field: _Rds\_Den_ and choose Graduated ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose _Rule\_based symbology_, click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) to open the _Edit Rule_ window.
-6. Type _0_ for the _Label_, and click the **Expression** ![expre](../../../images/M2E1/mIconExpression.svg) to open the **Expression String Builder** window, and type `"Rds_den" is NULL` into the _Expression_ field, and click **OK** to close the **Expression String Builder** window.
+5. Open the symbology window, choose the target field: _Rds\_Den_ and choose Graduated ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology, then choose the _RdPu_ color ramp with 5 classes. Click **Apply**, and then choose Rule\_based ![rulebase](../../../images/M2E1/rendererRuleBasedSymbol.svg) symbology, click **Add rule** ![addrule](../../../images/M2E1/symbologyAdd.svg) to open the _Edit Rule_ window.
+6. Type _0_ for the _Label_, and click the **Expression** ![expre](../../../images/M2E1/mIconExpression.svg) to open the **_Expression String Builder_** window, and type `"Rds_den" is NULL` into the _Expression_ field, and click **OK** to close the **_Expression String Builder_** window.
 7. Scroll down the _Edit Rule_ window and select the white color in the drop-down menu of the _Color_. Click **OK** to close the _Edit Rule_ window.
 8. Click **OK** on the symbology window to finish the setting of symbology.
-9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+9.  Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 10. Export as a PDF file.
 
 ## 5.Result
