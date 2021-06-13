@@ -15,7 +15,8 @@ In this exercise, we will visualize the distance to Health Facilities in the THL
 
 ## 3. GIS Dataset
 
-You should use the following data to finish this exercise: 
+The following datasets are used in this exercises:
+
 - _Health\_Facilities.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Health facilities in THLD District`
 - _THLD\_poly.shp_ at
@@ -23,20 +24,34 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
-1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to
-   _Map Canvas_.
-2. Open _Distance to Point Features_ tool.
-3. Set _THLD\_poly.shp_ as **Input layer** and _Health\_Facilities.shp_ as **Point layer**.
-4. Choose _Euclidean_ as Distance method and _Float_ as **Output data type**, and then
-   give an appropriate **Output column name**.
-5. Choose drop down list in **Output shapefile** and select `Save to Files...`, so
-   you can save the output shapefile to the files you frequently use.
-6. Click **Run**.
-7. Choose _Graduated_ ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) symbology and choose the [_Natural Breaks (Jenks)_]([http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049
-) and the _Reds_
-   color ramp with 5 classes to render the Output column.
-8. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-9. Export as a PDF file.
+1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
+2. In the **_Processing Toolbox_** panel, locate the
+   **<ins>Distance to Point Features</ins>** tool under **_Scripts_**
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+3. **Double Click** to open the tool and set parameters as follows:
+   <ol type="a">
+      <li><b>Input layer</b>: THLD_poly,</li>
+      <li><b>Point layer</b>: Health_Facilities,</li>
+      <li><b>Distance method</b>: Euclidean,</li>
+      <li><b>Output data type</b>: Float,</li>
+      <li><b>Output column name</b>: HF_Dis,</li>
+      <li><b>Output shapefile</b>: HFDisMap.shp,</li>
+      <li>leave all other parameters as default.</li>
+   </ol>
+4. Click **Run**.
+5. Now let's setup the **Symbology** of the output layer.
+   Open the
+   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   Symbology tab from the **_Layer Properties_** window.
+   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
+   Graduated style.
+   Choose the [_Natural Breaks (Jenks)_](http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049).
+   Specify the _HF\_Dis_ field as **Value**, then choose the _Reds_ color ramp
+   with 5 classes. Click **Apply**.
+6. Click **OK** on the **Symbology** tab.
+7. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
+   layout.
+8. Export the map as a PDF file.
 
 ## 5.Result
 
