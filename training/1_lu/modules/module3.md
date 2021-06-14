@@ -16,17 +16,56 @@ Suitability modeling is the most common application for the LUCIS-OPEN Tools in 
 
 The following figure shows the LUCIS Framework.
 ![lucis_workflow](../../../images/lucis_workflow.svg)
-The first step is to ascertain the goals of the LUCIS. We need to inquire the opinions of stakeholders and separate these values into three categories: 1) agricultural productions, 2) socioeconomic activities, and 3) ecological functions. To be more specific, these three categories can be turned into three land uses correspondingly: 1) agricultural land uses, 2) urban land uses, and 3) conservational land. Therefore, the goals are to identify land use for agricultural land uses, urban land uses, and conservational land.
 
-The second step is to ascertain the objectives for each goal. For agricultural land uses and urban land uses, we always consider the suitability, in which two perspectives are commonly used to derive objectives: 1) physical suitability, and 2) economic suitability. In terms of conservational land, we should consider the significance of conservational land and two perspectives are commonly: 1) existing ecological value, and 2) potential ecological value.
+#### 2.1.1 Goals
+
+In the LUCIS Framework, the first step is to ascertain the goals of the LUCIS. We need to inquire the opinions of stakeholders and separate these values into three categories: 1) agricultural productions, 2) socioeconomic activities, and 3) ecological functions. To be more specific, these three categories can be turned into three land uses correspondingly: 1) agricultural land uses, 2) urban land uses, and 3) conservational land. Therefore, the goals are to identify land use for agricultural land uses, urban land uses, and conservational land.
+
+#### 2.1.2 Objectives
+
+The second step is to ascertain the objectives for each goal. For agricultural land uses and urban land uses, we always consider the suitability, in which two perspectives are commonly used to derive objectives: 1) physical suitability, and 2) economic suitability. In terms of conservational land, we consider the significance of conservational land and two perspectives are commonly used: 1) existing ecological value, and 2) potential ecological value.
+
+#### 2.1.3 Sub-objectives
+
+In this last step, sub-objectives is the specified objectives. For example, if the the objective is to consider the physical suitability perspective (objective) of the residential land use (a goal in urban land uses), one of the sub-objectives can be that to evaluate the proximity of research areas to educational facilities.
 
 ### 2.2 The General Workflow of Suitability Modeling
 
-#### 2.2.1 Define Criteria
+There are three main steps for creating a suitability model:
 
-#### 2.2.2 Transform to a Common Suitability Scale
+1. Define Criteria
+2. Transform to a Common Suitability Scale
+3. Weight the Criteria and Create a Suitability Map
 
-#### 2.2.3 Weight the Criteria and Create a Suitability Map
+#### **Step 1: Define Criteria**
+
+The first step to create a suitability model is to identify the criteria for the subject of the model. Each criterion identified should be instrumental in reaching the overall goal of the model. For example, if we want to identify the suitable site for an orchard. The following criteria will be considered:
+
+1. Slope;
+2. Distance to markets;
+3. Land price;
+4. Land use types.
+
+#### **Step 2: Transform to a Common Suitability Scale**
+
+Slope, distance to markets, land price and land use type are the criteria that will be used for the suitability model. To proceed, these will be combined. However, mathematically adding the slope, distance to markets, land price and land use type together will result in meaningless values. For example, a location may have a slope value of 5 percent, be 600 meters from a fruit market, and have a land use of 4, representing single family residential. The resulting sum of these values for the location is 609, an irrelevant number. Before the criteria can be added together, the values within each criterion must be transformed to a common suitability scale.
+
+In this example, a 1 to 9 suitability scale will be used. For each value in a criterion, locations with attributes that are most preferred will receive higher suitability values, while locations with the least preferred features will receive lower suitability values. For example, slopes greater than 25 percent will receive a suitability value of 1, slopes that are between 4 percent and 6 percent will be assigned a suitability value of 7, and slopes that are less than 3 percent will have a suitability value of 9.
+
+This transformation process is applied to each value within each criterion identified in the model. The standard for assigning 1 to 9 to values in each criterion should be according to relevant literature or official documents. The values in each criterion are transformed relative to one another to a common suitability scale. The transformed criteria can now be combined.
+
+#### **Step 3: Weight the Criteria and Create a Suitability Map**
+
+Before combination of the transformed values, it may be that one criterion is more important than the others. If that is the case, that criterion will be weighted more than the others. To emphasize the distinction, the transformation process described in step 2 converts the values within a criterion relative to one another. The weighting in this step defines the relative importance of each criterion to one another.
+
+In our example, the weight of each criteria can be:
+
+1. Slope: 10%
+2. Distance to markets: 30%
+3. Land price: 25%
+4. Land use types: 35%
+
+Then, the suitability map can be created by doing symbology on the weighted combination of transformed values. The place with the higher value will be a more suitable site for the orchard.
 
 In this module, we will use Tools to do land suitability modeling. Each IDU in the THLD area will be assigned to one of the four land uses by comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
 
