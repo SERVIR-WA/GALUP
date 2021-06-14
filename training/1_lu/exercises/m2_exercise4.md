@@ -38,25 +38,45 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
-1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
-2. Open _Zonal Statistics_ tool.
-3. Set _THLD\_poly.shp_ as **Input layer** and _SD5\_15.tif_ as **Raster layer**.
-4. Type _mean_ in **Types of statistics** and then give an appropriate
-name for **Output column prefix**.
-5. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
-6. **Run** _Zonal statistics_ tool.
-7. Open _Reclassify Field_ tool.
-8. Set the output shapefile from the Zonal Statistics tool as **Input layer** and the output column as **Field to reclassify**.
-9. Type _40-50, 50-55, 55-65_ in **Old values**.
-10. Type _1, 2, 3_ in **New values**.
-11. Set _0_ for No data value and then give an appropriate name for
-   **Output column prefix**.
-12. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
-13. **Run** _Reclassify Field_ tool.
-14. Choose _Categorized_ ![categorized](../../../images/M2E1/rendererCategorizedSymbol.svg) symbology and choose the _Greens_ color ramp to
-render the the Output column from _Reclassify Field_ tool.
-15. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-16. Export as a PDF file.
+1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
+2. In the **_Processing Toolbox_** panel, locate the
+   **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+3. **Double Click** to open the tool and set parameters as follows:
+   <ol type="a">
+      <li><b>Input layer</b>: THLD_poly,</li>
+      <li><b>Raster layer</b>: SD5_15,</li>
+      <li><b>Types of statistics</b>: mean,</li>
+      <li><b>Output column prefix</b>: SpH,</li>
+      <li><b>Output layer</b>: SpH.shp,</li>
+      <li>leave all other parameters as default.</li>
+   </ol>
+4. Click **Run**.
+5. Open **<ins>Reclassify Field</ins>** tool under **_Scripts_**
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+6. **Double Click** to open the tool and set parameters as follows:
+   <ol type="a">
+      <li><b>Input layer</b>: SpH,</li>
+      <li><b>Field to reclassify</b>: SpH_mean,</li>
+      <li><b>Old values</b>: 40-50, 50-55, 55-65,</li>
+      <li><b>New values</b>: 1, 2, 3,</li>
+      <li><b>Output column name</b>: SpH_re,</li>
+      <li><b>Output layer</b>: SpH_re.shp,</li>
+      <li>leave all other parameters as default.</li>
+   </ol>
+7. Click **Run**.
+8. Now let's setup the **Symbology** of the output layer (_SpH\_re.shp_).
+   Open the
+   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   Symbology tab from the **_Layer Properties_** window.
+   Select the ![categorized](../../../images/M2E1/rendererCategorizedSymbol.svg)
+   Categorized style.
+   Specify the _SpH\_re_ field as **Value**, then choose the _Greens_ color ramp
+   with 3 classes. Click **Apply**.
+9. Click **OK** on the **Symbology** tab.
+10. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
+   layout.
+11. Export the map as a PDF file.
 
 ## 5.Result
 
