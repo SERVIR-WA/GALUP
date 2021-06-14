@@ -12,9 +12,25 @@
 
 Suitability modeling is the most common application for the LUCIS-OPEN Tools in QGIS and can solve a variety of problems, for examples, you can use Tools to find the best place for a new housing development.
 
+### 2.1 LUCIS Philosophy
+
+The following figure shows the LUCIS Framework.
+![lucis_workflow](../../../images/lucis_workflow.svg)
+The first step is to ascertain the goals of the LUCIS. We need to inquire the opinions of stakeholders and separate these values into three categories: 1) agricultural productions, 2) socioeconomic activities, and 3) ecological functions. To be more specific, these three categories can be turned into three land uses correspondingly: 1) agricultural land uses, 2) urban land uses, and 3) conservational land. Therefore, the goals are to identify land use for agricultural land uses, urban land uses, and conservational land.
+
+The second step is to ascertain the objectives for each goal. For agricultural land uses and urban land uses, we always consider the suitability, in which two perspectives are commonly used to derive objectives: 1) physical suitability, and 2) economic suitability. In terms of conservational land, we should consider the significance of conservational land and two perspectives are commonly: 1) existing ecological value, and 2) potential ecological value.
+
+### 2.2 The General Workflow of Suitability Modeling
+
+#### 2.2.1 Define Criteria
+
+#### 2.2.2 Transform to a Common Suitability Scale
+
+#### 2.2.3 Weight the Criteria and Create a Suitability Map
+
 In this module, we will use Tools to do land suitability modeling. Each IDU in the THLD area will be assigned to one of the four land uses by comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
 
-In terms of the scoring process, firstly, we have different decisive factors in each of the land use, and, under each decisive factor, multiple models will be applied and generate a weighted score for that decisive factor (with 9 represents the highest, and 1 represents the lowest) to each IDU. Then, the final score of a certain land use of each IDU will be calculated by using the [Compute AHP Weights](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights) to weightedly sum up each decisive factor's score under that land use (with 9 represents the highest, and 1 represents the lowest). Finally, after we having a score for each land use on each IDU, the land use with the highest score will be the final land use for that IDU.
+In terms of the scoring process, firstly, we have different decisive factors in each of the land use, and, under each decisive factor, multiple models will be applied and generate a weighted score for that decisive factor (with 9 represents the highest, and 1 represents the lowest) to each IDU. Finally, after we having a score for each land use on each IDU, the land use with the highest score will be the final land use for that IDU.
 
 ## 3. Row Crops Model
 
@@ -26,10 +42,7 @@ and the distance to [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag
 In terms of the physical aspect, the model considers about
 [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 to respond to rain and produce useful pasture, and
-[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-including the drainage level and Soil pH.
-
-In this module, we will introduce Transit Soil and leave Land Con and Market as exercise.
+[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
 ### 3.1 Economic - Transportation Accessibility
 
@@ -48,6 +61,7 @@ You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
 #### 3.1.1 Usage
+
 _Transportation Accessibility model_ can be used to evaluate the nearness of
 polygons to the two different types of line features. By adjusting the weighted
 value, the model can give different outcomes.
@@ -78,6 +92,16 @@ Specifically, the darker the red the higher the traffic accessbility.
 ### 3.2 Physical - Soil Condition
 
 When evaluate the Soil Condition of the Row Crops land use, three influential indicators on the growth of crops are included in this model: Root Zone Depth, Soil Drainage, and Soil PH at Different Soil Depth. The logic of this model is that, firstly, the model uses Zonal Statistics tool to assign the raster data (three indicators) to the vector polygon, and then uses the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures). Finally, the Weight Sum of Fields tool is used to calculate the final score for the Soil Condition. For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+
+The suitability modeling workflow
+To identify the best bobcat patches to conserve you will use a suitability model. A suitability model is comprised of six steps:
+
+Define the problem
+Identify and derive the criteria
+Transform values to a common scale
+Weight the criteria relative to one another and combine
+Locate the phenomenon
+Analyze the results
 
 #### 3.2.1 Usage
 
