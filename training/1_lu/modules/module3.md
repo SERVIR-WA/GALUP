@@ -68,21 +68,40 @@ In our example, the weight of each criteria can be:
 
 Then, the suitability map can be created by doing symbology on the weighted combination of transformed values. The place with the higher value will be a more suitable site for the orchard.
 
-In this module, we will use Tools to do land suitability modeling. Each IDU in the THLD area will be assigned to one of the four land uses by comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
-
-In terms of the scoring process, firstly, we have different decisive factors in each of the land use, and, under each decisive factor, multiple models will be applied and generate a weighted score for that decisive factor (with 9 represents the highest, and 1 represents the lowest) to each IDU. Finally, after we having a score for each land use on each IDU, the land use with the highest score will be the final land use for that IDU.
-
 ## 3. Row Crops Model
 
-_Row Crops Model_ aims to evaluate the suitability of IDUs' land in THLD district
-to grow Row crops. This model evaluate the land based on economic and physical
-perspectives.
-In terms of the economic aspect, the model measures [_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
-and the distance to [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic).
-In terms of the physical aspect, the model considers about
-[_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
-to respond to rain and produce useful pasture, and
-[_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+In this module, we will use Tools to do land suitability modeling.
+Each IDU in the THLD area will be assigned to one of the four land uses by
+comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
+
+In terms of the scoring process, firstly, we have different decisive factors
+in each of the land use, and, under each decisive factor, multiple models will
+be applied and generate a weighted score for that decisive factor (with 9 represents
+the highest, and 1 represents the lowest) to each IDU. Finally, after we having
+a score for each land use on each IDU, the land use with the highest score will
+be the final land use for that IDU.
+
+In Row Crops model, we evaluate the suitability of IDUs to grow Row Crops based
+on two perspectives: physical and economic. The following figure shows the Row Crops model.
+
+![RowCrops_model](../../../images/RowCrops_model.svg)
+
+In terms of physical suitability, we look for conditions in which land
+growing Row Crops can have the optimized production.
+In this model, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
+as important criteria to determine how many IDUs in THLD district are physically
+suitable to grow Row Crops.
+In terms of economic suitability, we evaluate the economic efficiency of each IDU
+in THLD district.
+We expect the land owners who grow Row Crops spend the lowest cost on transportation.
+Therefore, we need to ensure lands growing Row Crops have shorter distance to
+primary/secondary roads and small/middle/large cities than those without growing
+Row Crops.
+To achieve that, we choose
+[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
+and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
+as criteria to evaluate how many IDUs in THLD district are economically suitable.
 
 ### 3.1 Economic - Transportation Accessibility
 
