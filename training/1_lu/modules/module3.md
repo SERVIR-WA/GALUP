@@ -10,7 +10,8 @@
 
 ## 2. Suitability Modeling
 
-Suitability modeling is the most common application for the LUCIS-OPEN Tools in QGIS and can solve a variety of problems, for examples, you can use Tools to find the best place for a new housing development.
+Suitability is a measure of the relative degree to which a land unit is suitable for a specified purpose. The decision on suitability is based strictly on its current condition and the context in which it is found. It neither anticipates nor requires any change for the assignment of a suitability score. In many cases, suitability is measured on a scale of 1 to 9, with 1 representing low suitability and 9 representing high suitability.
+Suitability modeling is a process consisting of a series of GIS tools to determine suitability. In this workshop, we present a method of modeling suitability in QGIS with the **LUCIS-OPEN Tools for QGIS**.
 
 ### 2.1 LUCIS Philosophy
 
@@ -33,37 +34,37 @@ In this last step, sub-objectives is the specified objectives. For example, if t
 
 There are three main steps for creating a suitability model:
 
-1. Define Criteria
-2. Transform to a Common Suitability Scale
-3. Weight the Criteria and Create a Suitability Map
+1. [Define criteria](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-1-define-criteria)
+2. [Transform to a common suitability scale](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-2-transform-to-a-common-suitability-scale)
+3. [Weight the criteria and create a suitability map](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-3-weight-the-criteria-and-create-a-suitability-map)
 
-#### **Step 1: Define Criteria**
+#### Step 1: Define Criteria
 
-The first step to create a suitability model is to identify the criteria for the subject of the model. Each criterion identified should be instrumental in reaching the overall goal of the model. For example, if we want to identify the suitable site for an orchard. The following criteria will be considered:
+The first step to create a suitability model is to identify the criteria for the subject of the model. Each criterion identified should be instrumental in reaching the overall goal of the model. For example, if we want to identify a suitable site for an orchard. We can consider the following criteria:
 
-1. Slope;
-2. Distance to markets;
-3. Land price;
-4. Land use types.
+- Slope
+- Distance to markets
+- Land price
+- Land use types
 
-#### **Step 2: Transform to a Common Suitability Scale**
+#### Step 2: Transform to a Common Suitability Scale
 
-Slope, distance to markets, land price and land use type are the criteria that will be used for the suitability model. To proceed, these will be combined. However, mathematically adding the slope, distance to markets, land price and land use type together will result in meaningless values. For example, a location may have a slope value of 5 percent, be 600 meters from a fruit market, and have a land use of 4, representing single family residential. The resulting sum of these values for the location is 609, an irrelevant number. Before the criteria can be added together, the values within each criterion must be transformed to a common suitability scale.
+The four criteria mentioned above are measured in their specific scales. The final suitability will combine them together. However, simply adding their values is meaningless. For example, a site is on a 5 percent slope, 600 meters from a fruit market, and with a land use of 34, representing single-family residential. The sum of these values is 639,  which makes no sense. Therefore, before combining the criteria, we must transform the values of each criterion from its original scale to a common suitability scale.
 
 In this example, a 1 to 9 suitability scale will be used. For each value in a criterion, locations with attributes that are most preferred will receive higher suitability values, while locations with the least preferred features will receive lower suitability values. For example, slopes greater than 25 percent will receive a suitability value of 1, slopes that are between 4 percent and 6 percent will be assigned a suitability value of 7, and slopes that are less than 3 percent will have a suitability value of 9.
 
-This transformation process is applied to each value within each criterion identified in the model. The standard for assigning 1 to 9 to values in each criterion should be according to relevant literature or official documents. The values in each criterion are transformed relative to one another to a common suitability scale. The transformed criteria can now be combined.
+The original values in every criterion should be transformed into this common scale from 1 to 9. And such transformations should follow relevant literature or guidelines. The transformed criteria can now be combined.
 
-#### **Step 3: Weight the Criteria and Create a Suitability Map**
+#### Step 3: Weight the Criteria and Create a Suitability Map
 
 Before combination of the transformed values, it may be that one criterion is more important than the others. If that is the case, that criterion will be weighted more than the others. To emphasize the distinction, the transformation process described in step 2 converts the values within a criterion relative to one another. The weighting in this step defines the relative importance of each criterion to one another.
 
 In our example, the weight of each criteria can be:
 
-1. Slope: 10%
-2. Distance to markets: 30%
-3. Land price: 25%
-4. Land use types: 35%
+- Slope: 10%
+- Distance to markets: 30%
+- Land price: 25%
+- Land use types: 35%
 
 Then, the suitability map can be created by doing symbology on the weighted combination of transformed values. The place with the higher value will be a more suitable site for the orchard.
 
