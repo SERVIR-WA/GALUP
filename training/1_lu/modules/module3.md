@@ -83,7 +83,7 @@ be the final land use for that IDU.
 In Row Crops model, we evaluate the suitability of IDUs to grow Row Crops based
 on two perspectives: physical and economic. The following figure shows the Row Crops model.
 
-![RowCrops_model](../../../images/RowCrops_model.svg)
+<img src="../../../images/RowCrops_model.svg" alt= "RowCrops_model" width="400">
 
 In terms of physical suitability, we look for conditions in which land
 growing Row Crops can have the optimized production.
