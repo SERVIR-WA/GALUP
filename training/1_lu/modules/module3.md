@@ -165,7 +165,7 @@ Next, after defining the soil condition as a sub-objective, we need to identify 
 
 Then, we assign new values to the old values of the three criteria (the rule will be based on relevant agricultural literature).
 
-The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight vlaue will be based on relevant agricultural literature).
+The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on relevant agricultural literature).
 
 #### 3.2.1 Data
 
@@ -183,9 +183,8 @@ The datasets used are listed below:
 | 8  | SD60_100       | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
 | 9  | SD100_200      | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) |
 
-#### 3.2.2 Tools Applied in the Model
+#### 3.2.2 Tools Used in the Model
 
-Tools used in the model:
 1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
 2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
