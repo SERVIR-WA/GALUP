@@ -91,6 +91,12 @@ The two figures below display the specific parameter settings
 |------------------------------------------|------------------------------------------|
 | ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP2.png) |
 
+### 2.3 Video Tutorial
+
+<a href="https://tinyurl.com/38stnx67">
+  <img src="../../../images/video_frames/m2_dist_pnt.png" alt= "distance to point" width="350">
+</a>
+
 ## 3. Reclassify Field
 
 _Reclassify Field_ reclassifies a field in the input table based on predefined rules and stores the translated values in a new field. The input table (i.e., Input layer), the field to be reclassified (i.e., Field to reclassify), the predefined rules (i.e., Old values and New values), and the new field (i.e., Output column name) are required parameters. There are two additional parameters that can be specified, which are outlined [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field).
