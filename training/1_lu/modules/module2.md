@@ -94,7 +94,7 @@ The two figures below display the specific parameter settings
 ### 2.3 Video Tutorial
 
 <a href="https://tinyurl.com/38stnx67">
-  <img src="../../../images/video_frames/m2_dist_pnt.png" alt= "distance to point" width="400">
+  <img src="../../../images/video_frames/m2_dist_pnt.png" alt= "distance to point" width="600">
 </a>
 
 ## 3. Reclassify Field
