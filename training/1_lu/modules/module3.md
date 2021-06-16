@@ -155,9 +155,9 @@ Specifically, the darker the red the higher the traffic accessbility.
 
 ### 3.2 Soil Condition
 
-Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., slope will affect the plantation of crops, and soil PH can affect the production of the crops).
+Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., drainage will affect the plantation of crops, and soil PH can affect the production of the crops).
 
-Next, after defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify Slope, Root Zone Depth, and Soil PH as three criteria in the model.
+Next, after defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify Root Zone Depth, Soil Permeability, and Soil PH as three criteria in the model.
 
 Then, we assign new values to the old values of the three criteria (the rule will be based on relevant agricultural literature).
 
