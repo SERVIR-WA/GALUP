@@ -107,6 +107,9 @@ as criteria to evaluate how many IDUs in THLD district are economically suitable
 
 _Transportation Accessibility model_ aims to evaluate the accessibility of IDUs
 to traffic roads.
+_Transportation Accessibility model_ can be used to evaluate the nearness of
+polygons to the two different types of line features. By adjusting the weighted
+value, the model can give different outcomes.
 By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
 this model calculate the shorest distance from each IDU to the primary and
 secondary roads and store the values in two different fields.
@@ -119,13 +122,7 @@ the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
-#### 3.1.1 Usage
-
-_Transportation Accessibility model_ can be used to evaluate the nearness of
-polygons to the two different types of line features. By adjusting the weighted
-value, the model can give different outcomes.
-
-#### 3.1.2 Example
+#### 3.1.1 Dataset
 
 In the following example, we use _Transportation Accessibility model_ to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
@@ -137,6 +134,14 @@ The datasets used are listed below:
 | 1  | THLD_poly.shp | vector | polygon | IDUs in the THLD District Assembly |
 | 2  | primary_road.shp | vector | point | Primary road in THLD District |
 | 3  | secondary_road.shp | vector | point | Secondary road in THLD District |
+
+#### 3.1.2 Tools used in the model
+
+1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
+2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+
+#### 3.1.3 Example
 
 The two figures below display the specific parameter settings and the output of the model.
 
