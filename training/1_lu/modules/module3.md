@@ -190,8 +190,6 @@ Tools used in the model:
 |------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
 
-
-
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
 | ![PS1](../../../images/SoilCondition/pa_set.png) | ![am1](../../../images/SoilCondition/symbology_sc.png) |
