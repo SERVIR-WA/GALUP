@@ -148,27 +148,17 @@ In the output map, we used Reds to indicate transportation accessibility of IDUs
 in THLD district.
 Specifically, the darker the red the higher the traffic accessbility.
 
-### 3.2 Physical - Soil Condition
+### 3.2 Soil Condition
 
-When evaluate the Soil Condition of the Row Crops land use, three influential indicators on the growth of crops are included in this model: Root Zone Depth, Soil Drainage, and Soil PH at Different Soil Depth. The logic of this model is that, firstly, the model uses Zonal Statistics tool to assign the raster data (three indicators) to the vector polygon, and then uses the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures). Finally, the Weight Sum of Fields tool is used to calculate the final score for the Soil Condition. For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., slope will affect the plantation of crops, and soil PH can affect the production of the crops).
 
-The suitability modeling workflow
-To identify the best bobcat patches to conserve you will use a suitability model. A suitability model is comprised of six steps:
+Next, after defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify Slope, Root Zone Depth, and Soil PH as three criteria in the model.
 
-Define the problem
-Identify and derive the criteria
-Transform values to a common scale
-Weight the criteria relative to one another and combine
-Locate the phenomenon
-Analyze the results
+Then, we assign new values to the old values of the three criteria (the rule will be based on relevant agricultural literature).
 
-#### 3.2.1 Usage
+The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight vlaue will be based on relevant agricultural literature).
 
-This model is often used to evaluate the soil condition for crops. Specific parameters (reclassification rule, weights of each indicator) in the model can be set according to the growing condition of different crops. The number of intervals of soil depth for the soil PH can also be changed based on the soil PH data you find.
-
-#### 3.2.2 Example
-
-In the following example, we set the parameters of the model according to the growing conditions of 6 main crops (Maize, Rice, Cassava, Yam, Cocoyam, Plantain) in THLD area.
+#### 3.2.1 Data
 
 The datasets used are listed below:
 
@@ -183,6 +173,24 @@ The datasets used are listed below:
 | 7  | SD30_60        | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
 | 8  | SD60_100       | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
 | 9  | SD100_200      | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) |
+
+#### 3.2.2 Tools Applied in the Model
+
+Tools used in the model:
+1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+4. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
+
+ The logic of this model is that, firstly, the model uses Zonal Statistics tool to assign the raster data (three criteria that have eight raster layers in total) to the vector polygon, and then uses the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures). Finally, the Weight Sum of Fields tool is used to calculate the final score for the Soil Condition. For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+
+#### 3.2.3 Model and Model Results
+
+|          Model         |
+|------------------------------------------|
+| ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
+
+
 
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
