@@ -161,7 +161,7 @@ Next, after defining the soil condition as a sub-objective, we need to identify 
 
 Then, we assign new values to the old values of the three criteria (the rule will be based on relevant agricultural literature).
 
-The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight vlaue will be based on relevant agricultural literature).
+The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on relevant agricultural literature).
 
 #### 3.2.1 Data
 
