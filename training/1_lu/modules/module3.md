@@ -145,9 +145,11 @@ The datasets used are listed below:
 2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
 
-#### 3.1.3 Example
+#### 3.1.3 Model and Model Results
 
-The two figures below display the specific parameter settings and the output of the model.
+|          Model         |
+|------------------------------------------|
+| ![SCM](../../../images/Model%20Map/Transportation_Accessbility.svg) |
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
