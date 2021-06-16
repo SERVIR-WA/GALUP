@@ -103,10 +103,12 @@ To achieve that, we choose
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
 
-### 3.1 Economic - Transportation Accessibility
+### 3.1 Transportation Accessibility
 
-_Transportation Accessibility model_ aims to evaluate the accessibility of IDUs
-to traffic roads.
+_Transportation Accessibility model_ is a sub-objective of the economic condition objective. 
+_Transportation Accessibility model_ is used to compare the potential transportation costs in each IDUs by measuring its accessibility to traffic roads.
+We assume the IDUs with higher accessibility require lower transportation fee to
+deliver goods to outside.
 _Transportation Accessibility model_ can be used to evaluate the nearness of
 polygons to the two different types of line features. By adjusting the weighted
 value, the model can give different outcomes.
@@ -121,6 +123,8 @@ the model can create a index for each IDU to measure their accessibility to
 the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
+
+
 
 #### 3.1.1 Dataset
 
@@ -141,9 +145,11 @@ The datasets used are listed below:
 2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
 
-#### 3.1.3 Example
+#### 3.1.3 Model and Model Results
 
-The two figures below display the specific parameter settings and the output of the model.
+|          Model         |
+|------------------------------------------|
+| ![SCM](../../../images/Model%20Map/Transportation_Accessbility.svg) |
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
