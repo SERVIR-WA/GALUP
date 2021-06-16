@@ -181,7 +181,7 @@ The datasets used are listed below:
 | 1  | Gh_260_MMDA.shp     | vector      | polygon | Districts of Ghana         |
 | 2  | PointOfInterest.shp | vector      | point   | Point of interest in Ghana |
 
-  The two figures below display the specific parameter settings and the output of the tool.
+The two figures below display the specific parameter settings and the output of the tool.
 |         Parameters setting     |       Output        |
 |:------------------------------:|:------------------------------------------:|
 | <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="580">   |
