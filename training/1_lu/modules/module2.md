@@ -64,6 +64,12 @@ The two figures below display the specific parameter settings
 
 In the output map, we used **Blues** [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the line density (per square meter). Specifically, the darker the blue the higher the density of underground water veins.
 
+### 1.3 Video Tutorial
+
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/454f67d210d843889b84dc1a1bc25f421d">
+  <img src="../../../images/video_frames/m2_den_line.png" alt= "density of line" width="350">
+</a>
+
 ## 2. Distance to Point Features
 
 _Distance to Point Features_ calculates the distance between an input feature and its nearest point feature in another layer. The polygon features (i.e., Input layer) and point features (i.e., Point layer) are two required parameters for using this tool. There are four additional parameters that can be specified, which are outlined [here](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-point-features).
