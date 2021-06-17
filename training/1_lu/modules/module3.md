@@ -194,8 +194,8 @@ The datasets used are listed below:
  The logic of this model is:
 
   1. Use Zonal Statistics tool to assign the raster data (three criteria that have eight raster layers in total) to the vector polygon;
-  2. Use the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
-  3. Use the Weight Sum of Fields tool to calculate the final score for the Soil Condition.
+  2. Then, use the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
+  3. Finally, use the Weight Sum of Fields tool to calculate the final score for the Soil Condition.
   
 For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
