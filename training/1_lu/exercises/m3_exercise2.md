@@ -4,29 +4,18 @@
 
 This exercise will practice:
 
-- [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field)
-- [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics)
+- [Land Condition Model](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 
 ## 2. Description
 
-Yam is an important staple food crop in Ghana and is produced throughout the
-country.
-In Twifo-Heman-Lower-Denkyira (THLD) district, the local government wants to
-plan and develop new cropland to grow Yam.
-Therefore, as a planner, we need to evaluate the suitability of land for
-growing Yam.
+_Land Condition Model_ aims to evaluate the capacity of land to respond to rain
+and produce useful pasture.
+The assessment of land condition includes the evaluation of slope percent and
+land cover condition.
+In the first step, this model 
 
-The first step of our analysis aims to select out the area with a suitable
-soil pH range.
-Soil pH affects plant nutrient availability by controlling the chemical forms
-of the different nutrients and influencing the chemical reactions they undergo.
-Yam prefers the rich fertile soil with a pH ranged from 5.5 to 6.5<sup>[1]</sup>,
-and the horizontal growth of its roots has been observed to occur within the
-top 10 cm of soil<sup>[2]</sup>.
-So, we will evaluate the land in THLD district by analyzing the Soil pH dataset in root depth ranged from 5 to 15 cm.
 
-In this exercise, we will create a Soil pH index to evaluate the suitability
-to grow Yam in THLD district by using the [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field) tool and [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics) tool.
+
 
 ## 3. GIS Dataset
 
@@ -64,6 +53,50 @@ render the the Output column from _Reclassify Field_ tool.
   [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/SoilIndex.pdf).
 - Now you have completed all exercises. Please go back to
   [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### **Tools used in the model**
+1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+4. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
+#### **_Input parameters_**
+  1. Input layer: Input vector layer.
+  2. Land cover: Input raster layer. Land cover is usually comprised of lands with different woodland conditions and built up area.
+  3. Add value for land cover: Add new value for different land cover types in table.Table is fixed as 3 row table. Row 1 represents the number of land cover types. Row 2 is the number of land cover types plus 1. Row 3 represents the value the land cover types will be given. Different columns represent different types of land cover.
+  4. Slope: Input slope raster data.
+  5. Parameters for LCC: Land Capability Classification is defined as a system of grouping land into various classes based on inherent limitations imposed on sustained use by soil attributes, topography, drainage and climate. Slope percent could be attributed into 5 classes in following range<a href="#ref1"><sup>[1]</sup></a>:
+        | Slope (percent rise) | Suitability |
+        |----------------------|-------------|
+        | 0-2                  | 9           |
+        | 2-8                  | 7           |
+        | 8-15                 | 5           |
+        | 15-25                | 3           |
+        | 25-45                | 1           |
+  6. LCC Classes: Defined Classes respond to the range of Slope percent.
+  7. Weight by LC Slope: Weight the suitability of land cover condition for agriculture activities and slope percent. Weight should be separated by comma.
+#### **Output**
+`rcrp_LandCondition` (output vector layer for land condition).
+
+
+
+
 
 ## 6.Reference
 

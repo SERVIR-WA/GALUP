@@ -103,10 +103,15 @@ To achieve that, we choose
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
 
-### 3.1 Economic - Transportation Accessibility
+### 3.1 Transportation Accessibility
 
-_Transportation Accessibility model_ aims to evaluate the accessibility of IDUs
-to traffic roads.
+_Transportation Accessibility model_ is a sub-objective of the economic condition objective. 
+_Transportation Accessibility model_ is used to compare the potential transportation costs in each IDUs by measuring its accessibility to traffic roads.
+We assume the IDUs with higher accessibility require lower transportation fee to
+deliver goods to outside.
+_Transportation Accessibility model_ can be used to evaluate the nearness of
+polygons to the two different types of line features. By adjusting the weighted
+value, the model can give different outcomes.
 By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
 this model calculate the shorest distance from each IDU to the primary and
 secondary roads and store the values in two different fields.
@@ -119,13 +124,9 @@ the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
-#### 3.1.1 Usage
 
-_Transportation Accessibility model_ can be used to evaluate the nearness of
-polygons to the two different types of line features. By adjusting the weighted
-value, the model can give different outcomes.
 
-#### 3.1.2 Example
+#### 3.1.1 Dataset
 
 In the following example, we use _Transportation Accessibility model_ to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
@@ -138,7 +139,17 @@ The datasets used are listed below:
 | 2  | primary_road.shp | vector | point | Primary road in THLD District |
 | 3  | secondary_road.shp | vector | point | Secondary road in THLD District |
 
-The two figures below display the specific parameter settings and the output of the model.
+#### 3.1.2 Tools used in the model
+
+1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
+2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+
+#### 3.1.3 Model and Model Results
+
+|          Model         |
+|------------------------------------------|
+| ![SCM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
@@ -146,29 +157,19 @@ The two figures below display the specific parameter settings and the output of 
 
 In the output map, we used Reds to indicate transportation accessibility of IDUs
 in THLD district.
-Specifically, the darker the red the higher the traffic accessbility.
+Specifically, the darker the red the higher the traffic accessibility.
 
-### 3.2 Physical - Soil Condition
+### 3.2 Soil Condition
 
-When evaluate the Soil Condition of the Row Crops land use, three influential indicators on the growth of crops are included in this model: Root Zone Depth, Soil Drainage, and Soil PH at Different Soil Depth. The logic of this model is that, firstly, the model uses Zonal Statistics tool to assign the raster data (three indicators) to the vector polygon, and then uses the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures). Finally, the Weight Sum of Fields tool is used to calculate the final score for the Soil Condition. For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., drainage will affect the plantation of crops, and soil pH can affect the production of the crops).
 
-The suitability modeling workflow
-To identify the best bobcat patches to conserve you will use a suitability model. A suitability model is comprised of six steps:
+After defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify 1) **Drainage**, 2) **Root Zone Depth**, and 3) **Soil pH** as three criteria in the model.
 
-Define the problem
-Identify and derive the criteria
-Transform values to a common scale
-Weight the criteria relative to one another and combine
-Locate the phenomenon
-Analyze the results
+Then, we assign new values to the old values of the three criteria (the rule will be based on literature in relevant agricultural fields).
 
-#### 3.2.1 Usage
+The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on literature in relevant agricultural fields).
 
-This model is often used to evaluate the soil condition for crops. Specific parameters (reclassification rule, weights of each indicator) in the model can be set according to the growing condition of different crops. The number of intervals of soil depth for the soil PH can also be changed based on the soil PH data you find.
-
-#### 3.2.2 Example
-
-In the following example, we set the parameters of the model according to the growing conditions of 6 main crops (Maize, Rice, Cassava, Yam, Cocoyam, Plantain) in THLD area.
+#### 3.2.1 Data
 
 The datasets used are listed below:
 
@@ -177,12 +178,35 @@ The datasets used are listed below:
 | 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
 | 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
 | 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |
-| 4  | SD0_5          | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 5  | SD5_15         | raster      | tiff    | [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 6  | SD15_30        | raster      | tiff    | [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 7  | SD30_60        | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 8  | SD60_100       | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 9  | SD100_200      | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) |
+| 4  | SD0_5          | raster      | tiff    | Soil pH value at 0cm-5cm soil depth*      |
+| 5  | SD5_15         | raster      | tiff    | Soil pH value at 5cm-15cm soil depth*     |
+| 6  | SD15_30        | raster      | tiff    | Soil pH value at 15cm-30cm soil depth*    |
+| 7  | SD30_60        | raster      | tiff    | Soil pH value at 30cm-60cm soil depth*    |
+| 8  | SD60_100       | raster      | tiff    | Soil pH value at 60cm-100cm soil depth*   |
+| 9  | SD100_200      | raster      | tiff    | Soil pH value at 100cm-200cm soil depth*  |
+
+\*: [Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc): the soil pH value varies in different soil depth at the same location.
+
+#### 3.2.2 Tools Used in the Model
+
+1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+2. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+3. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
+
+ The logic of this model is:
+
+  1. Use **Zonal Statistics** tool to calculate the mean value of raster data (three criteria consist of eight raster layers) to each IDU;
+  2. Then, use the **Reclassify Field** tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
+  3. Finally, after iterating the two steps above for each criterion, we use the **Weight Sum of Fields** tool to calculate the final suitability. <br>
+  Note: 
+  
+For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+
+#### 3.2.3 Model and Model Results
+
+|          Model         |
+|------------------------------------------|
+| ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
 
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
