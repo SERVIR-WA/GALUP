@@ -67,7 +67,7 @@ In the output map, we used **Blues** [Graduated Color](https://github.com/SERVIR
 ### 1.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/454f67d210d843889b84dc1a1bc25f421d">
-  <img src="../../../images/video_frames/m2_den_line.png" alt= "density of line" width="350">
+  <img src="../../../images/video_frames/m2_den_line.png" alt= "density of line" width="800">
 </a>
 
 ## 2. Distance to Point Features
