@@ -1,31 +1,33 @@
-# Module 2 - Exercise 4
+# Module 3 - Exercise 2
 
-## 1. Skills Practices
+## 1. Skills Practiced
 
 This exercise will practice:
 
-- [Land Condition Model](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+- **QGIS Graphical Modeler**
+- **Market Model**
 
 ## 2. Description
 
-_Land Condition Model_ aims to evaluate the capacity of land to respond to rain
-and produce useful pasture.
-The assessment of land condition includes the evaluation of slope percent and
-land cover condition.
-In the first step, this model 
+Market is a sub-objective of the economic condition objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
 
-
-
+**Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to big city, middle city, and small city).
 
 ## 3. GIS Dataset
 
 You should use the following data to finish this exercise:
-- _SD5\_15.tif_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
+- _BigCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Big_City_Point`
+- _MiddleCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Middle_City_Point`
+- _SmallCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Small_City_Point`
 
 ## 4. Instruction
+
+![marketmodelmap](../../../images/Model%20Map/Market.svg)
 
 1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
 2. Open _Zonal Statistics_ tool.
@@ -54,51 +56,3 @@ render the the Output column from _Reclassify Field_ tool.
 - Now you have completed all exercises. Please go back to
   [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### **Tools used in the model**
-1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
-2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
-3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
-4. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
-#### **_Input parameters_**
-  1. Input layer: Input vector layer.
-  2. Land cover: Input raster layer. Land cover is usually comprised of lands with different woodland conditions and built up area.
-  3. Add value for land cover: Add new value for different land cover types in table.Table is fixed as 3 row table. Row 1 represents the number of land cover types. Row 2 is the number of land cover types plus 1. Row 3 represents the value the land cover types will be given. Different columns represent different types of land cover.
-  4. Slope: Input slope raster data.
-  5. Parameters for LCC: Land Capability Classification is defined as a system of grouping land into various classes based on inherent limitations imposed on sustained use by soil attributes, topography, drainage and climate. Slope percent could be attributed into 5 classes in following range<a href="#ref1"><sup>[1]</sup></a>:
-        | Slope (percent rise) | Suitability |
-        |----------------------|-------------|
-        | 0-2                  | 9           |
-        | 2-8                  | 7           |
-        | 8-15                 | 5           |
-        | 15-25                | 3           |
-        | 25-45                | 1           |
-  6. LCC Classes: Defined Classes respond to the range of Slope percent.
-  7. Weight by LC Slope: Weight the suitability of land cover condition for agriculture activities and slope percent. Weight should be separated by comma.
-#### **Output**
-`rcrp_LandCondition` (output vector layer for land condition).
-
-
-
-
-
-## 6.Reference
-
-1. Ernest, D. (n.d.). How to Grow Yams. https://www.diynetwork.com/how-to/outdoors/gardening/how-to-grow-yams
-2. O'SULLIVAN, J. N. (2008). Root distribution of yam (Dioscorea alata) determined by strontium tracer. Experimental Agriculture, 44(2), 223.

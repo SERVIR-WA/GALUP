@@ -8,6 +8,11 @@
 
 ## 1. Introduction to QGIS Graphical Modeler
 
+Please see this video:<br>
+<a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
+  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt= "GMtutorial" width="800">
+</a>
+
 ## 2. Suitability Modeling
 
 Suitability is a measure of the relative degree to which a land unit is suitable for a specified purpose. The decision on suitability is based strictly on its current condition and the context in which it is found. It neither anticipates nor requires any change for the assignment of a suitability score. In many cases, suitability is measured on a scale of 1 to 9, with 1 representing low suitability and 9 representing high suitability.
@@ -178,17 +183,17 @@ The datasets used are listed below:
 
 In the output map, we used Reds to indicate transportation accessibility of IDUs
 in THLD district.
-Specifically, the darker the red the higher the traffic accessbility.
+Specifically, the darker the red the higher the traffic accessibility.
 
 ### 3.2 Soil Condition
 
-Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., slope will affect the plantation of crops, and soil PH can affect the production of the crops).
+Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., drainage will affect the plantation of crops, and soil pH can affect the production of the crops).
 
-Next, after defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify Slope, Root Zone Depth, and Soil PH as three criteria in the model.
+After defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify 1) **Drainage**, 2) **Root Zone Depth**, and 3) **Soil pH** as three criteria in the model.
 
-Then, we assign new values to the old values of the three criteria (the rule will be based on relevant agricultural literature).
+Then, we assign new values to the old values of the three criteria (the rule will be based on literature in relevant agricultural fields).
 
-The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on relevant agricultural literature).
+The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on literature in relevant agricultural fields).
 
 #### 3.2.1 Data
 
@@ -199,21 +204,29 @@ The datasets used are listed below:
 | 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
 | 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
 | 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |
-| 4  | SD0_5          | raster      | tiff    | [Soil PH 0-5](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 5  | SD5_15         | raster      | tiff    | [Soil PH 5-15](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 6  | SD15_30        | raster      | tiff    | [Soil PH 15-30](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 7  | SD30_60        | raster      | tiff    | [Soil PH 30-60](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 8  | SD60_100       | raster      | tiff    | [Soil PH 60-100](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc)     |
-| 9  | SD100_200      | raster      | tiff    | [Soil PH 100-200](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc) |
+| 4  | SD0_5          | raster      | tiff    | Soil pH value at 0cm-5cm soil depth*      |
+| 5  | SD5_15         | raster      | tiff    | Soil pH value at 5cm-15cm soil depth*     |
+| 6  | SD15_30        | raster      | tiff    | Soil pH value at 15cm-30cm soil depth*    |
+| 7  | SD30_60        | raster      | tiff    | Soil pH value at 30cm-60cm soil depth*    |
+| 8  | SD60_100       | raster      | tiff    | Soil pH value at 60cm-100cm soil depth*   |
+| 9  | SD100_200      | raster      | tiff    | Soil pH value at 100cm-200cm soil depth*  |
+
+\*: [Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc): the soil pH value varies in different soil depth at the same location.
 
 #### 3.2.2 Tools Used in the Model
 
 1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
-2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
-3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
-4. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
+2. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+3. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
 
- The logic of this model is that, firstly, the model uses Zonal Statistics tool to assign the raster data (three criteria that have eight raster layers in total) to the vector polygon, and then uses the Reclassify Field tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures). Finally, the Weight Sum of Fields tool is used to calculate the final score for the Soil Condition. For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+ The logic of this model is:
+
+  1. Use **Zonal Statistics** tool to calculate the mean value of raster data (three criteria consist of eight raster layers) to each IDU;
+  2. Then, use the **Reclassify Field** tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
+  3. Finally, after iterating the two steps above for each criterion, we use the **Weight Sum of Fields** tool to calculate the final suitability. <br>
+  Note: 
+  
+For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
 #### 3.2.3 Model and Model Results
 
