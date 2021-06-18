@@ -8,6 +8,11 @@
 
 ## 1. Introduction to QGIS Graphical Modeler
 
+Please see this video:
+<a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
+  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt= "GMtutorial" width="800">
+</a>
+
 ## 2. Suitability Modeling
 
 Suitability is a measure of the relative degree to which a land unit is suitable for a specified purpose. The decision on suitability is based strictly on its current condition and the context in which it is found. It neither anticipates nor requires any change for the assignment of a suitability score. In many cases, suitability is measured on a scale of 1 to 9, with 1 representing low suitability and 9 representing high suitability.
