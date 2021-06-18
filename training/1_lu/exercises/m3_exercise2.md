@@ -18,8 +18,8 @@ Market is a sub-objective of the economic condition objective. The reason that w
 You should use the following data to finish this exercise:
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
-- _BigCity\_pt.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Big_City_Point`
+- _LargeCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Large_City_Point`
 - _MiddleCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Middle_City_Point`
 - _SmallCity\_pt.shp_ at
