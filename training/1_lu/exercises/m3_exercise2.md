@@ -52,7 +52,7 @@ render the the Output column from _Reclassify Field_ tool.
 ## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/SoilIndex.pdf).
+  [here](../pdf_maps/rcrp_Market.pdf).
 - Now you have completed all exercises. Please go back to
-  [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
+  [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
 
