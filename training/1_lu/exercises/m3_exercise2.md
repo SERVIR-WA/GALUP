@@ -11,7 +11,7 @@ This exercise will practice:
 
 Market is a sub-objective of the economic condition objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
 
-**Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to big city, middle city, and small city).
+**Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to large city, middle city, and small city).
 
 ## 3. GIS Dataset
 
