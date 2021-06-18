@@ -99,7 +99,7 @@ The two figures below display the specific parameter settings
 
 ### 2.3 Video Tutorial
 
-<a href="https://tinyurl.com/38stnx67">
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/7b5a5d92d18543df8ccb5e9839d9e2ba1d">
   <img src="../../../images/video_frames/m2_dist_pnt.png" alt= "distance to point" width="800">
 </a>
 
