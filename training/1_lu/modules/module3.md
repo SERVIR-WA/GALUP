@@ -70,25 +70,19 @@ Then, the suitability map can be created by doing symbology on the weighted comb
 
 ## 3. Row Crops Model
 
-In this module, we will use Tools to do land suitability modeling.
+In this module, we will use **LUCIS-Open Tools for QGIS** to create suitability models.
+
 Each IDU in the THLD area will be assigned to one of the four land uses by
 comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
-
-In terms of the scoring process, firstly, we have different decisive factors
-in each of the land use, and, under each decisive factor, multiple models will
-be applied and generate a weighted score for that decisive factor (with 9 represents
-the highest, and 1 represents the lowest) to each IDU. Finally, after we having
-a score for each land use on each IDU, the land use with the highest score will
-be the final land use for that IDU.
-
-In Row Crops model, we evaluate the suitability of IDUs to grow Row Crops based
-on two perspectives: physical and economic. The following figure shows the Row Crops model.
+In Row Crops model, we evaluate the IDUs' suitability in growing Row Crops based
+on two objectives: physical suitability and economic suitability.
+The following figure shows the Row Crops model.
 
 <img src="../../../images/RowCrops_model.svg" alt= "RowCrops_model" width="400">
 
 In terms of physical suitability, we look for conditions in which land
 growing Row Crops can have the optimized production.
-In this model, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+In this objectives, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
 as important criteria to determine how many IDUs in THLD district are physically
 suitable to grow Row Crops.
@@ -103,28 +97,27 @@ To achieve that, we choose
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
 
+In this module, we will introduce two models and two for exercise.
+
 ### 3.1 Transportation Accessibility
 
-_Transportation Accessibility model_ is a sub-objective of the economic condition objective. 
-_Transportation Accessibility model_ is used to compare the potential transportation costs in each IDUs by measuring its accessibility to traffic roads.
-We assume the IDUs with higher accessibility require lower transportation fee to
+_Transportation Accessibility_ model is a sub-objective of the economic objectives. 
+_Transportation Accessibility_ model is used to compare the potential
+transportation costs in each IDUs by measuring its distance to traffic roads.
+We assume the IDUs with higher accessibility require less transportation cost to
 deliver goods to outside.
-_Transportation Accessibility model_ can be used to evaluate the nearness of
-polygons to the two different types of line features. By adjusting the weighted
-value, the model can give different outcomes.
-By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
+
+1. By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
 this model calculate the shorest distance from each IDU to the primary and
 secondary roads and store the values in two different fields.
-Then the model use [_Rescale Field Linearly_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
+2. Then the model use [_Rescale Field Linearly_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
 to transform values in fields to specified continuous scales (i.e., 1 to 9 scale).
-Finally, by using [_Weight Sum of Fields_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+3. Finally, using [_Weight Sum of Fields_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
 to multiply the rescaled fields with weighted value and sum them up,
 the model can create a index for each IDU to measure their accessibility to
 the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
-
-
 
 #### 3.1.1 Dataset
 
@@ -142,7 +135,7 @@ The datasets used are listed below:
 #### 3.1.2 Tools used in the model
 
 1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
-2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+2. [Rescale Field Linearly](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
 
 #### 3.1.3 Model and Model Results
@@ -150,6 +143,34 @@ The datasets used are listed below:
 |          Model         |
 |------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
+
+|                    | Distance to Major Roads | Distance to Sec Roads                           |
+|--------------------|-------------------------|-------------------------------------------------|
+| Input layer        | Input Polygon           | 'Output layer' from algorithm 'Res Major Roads' |
+| Line layer         | Major Roads             | Secondary Roads                                 |
+| Cell size          | 30                      | 30                                              |
+| Distance method    | Euclidean               | Euclidean                                       |
+| Output data type   | Float                   | Float                                           |
+| Output column name | Dis_toMR                | Dis_toR                                         |
+
+|                   | Res Major Roads                                         | Res Secondary Roads                                   |
+|-------------------|---------------------------------------------------------|-------------------------------------------------------|
+| Input layer       | 'Output layer' from algorithm 'Distance to Major Roads' | 'Output layer' from algorithm 'Distance to Sec Roads' |
+| Field to rescale  | Dis_toMR                                                | Dis_toR                                               |
+| Start value       | 15000                                                   | 5000                                                  |
+| End value         | 0                                                       | 0                                                     |
+| New minimum       | 1                                                       | 1                                                     |
+| New maximum       | 9                                                       | 9                                                     |
+| Output field name | DisMR_R                                                 | DisR_R                                                |
+
+
+|                   | Weighted Sum MR & SR                                |
+|-------------------|-----------------------------------------------------|
+| Input layer       | 'Output layer' from algorithm 'Res Secondary Roads' |
+| Fields            | DisMR_R;DisR_R                                      |
+| Weights           | Using model input: Weighted Value                   |
+| Output field name | rcrp_trans                                          |
+| Output layer      | rcrp_TransportAccessibility                         |
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
