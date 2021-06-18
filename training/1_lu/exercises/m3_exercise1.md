@@ -1,6 +1,6 @@
-# Module 2 - Exercise 4
+# Module 3 - Exercise 1
 
-## 1. Skills Practices
+## 1. Skills Practiced
 
 This exercise will practice:
 
