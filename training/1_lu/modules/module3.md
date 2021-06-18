@@ -8,7 +8,7 @@
 
 ## 1. Introduction to QGIS Graphical Modeler
 
-Please see this video:
+Please see this video:<br>
 <a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
   <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt= "GMtutorial" width="800">
 </a>
