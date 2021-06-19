@@ -9,7 +9,7 @@ This exercise will practice:
 
 ## 2. Description
 
-Market is a sub-objective of the economic condition objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
+Market is a sub-objective of the economic objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
 
 **Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to large city, middle city, and small city).
 
@@ -54,5 +54,5 @@ render the the Output column from _Reclassify Field_ tool.
 - Upon completion, the map you got should look similar to this pdf
   [here](../pdf_maps/rcrp_Market.pdf).
 - Now you have completed all exercises. Please go back to
-  [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
+  [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#4-exercises-and-post-training-survey) to turn in them.
 
