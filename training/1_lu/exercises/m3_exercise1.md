@@ -4,8 +4,15 @@
 
 This exercise will practice:
 
-- [Reclassify Field](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#23-reclassify-field)
-- [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#25-zonal-statistics)
+- **QGIS Graphical Modeler**
+- **Land Condition Model**
+
+The Land Condition model will use following tools:
+
+1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+2. [Reclassify by table](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#reclassify-by-table)
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+4. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
 
 ## 2. Description
 
@@ -31,12 +38,18 @@ to grow Yam in THLD district by using the [Reclassify Field](https://github.com/
 ## 3. GIS Dataset
 
 You should use the following data to finish this exercise:
-- _SD5\_15.tif_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
+- _Slope\_Percent.tif_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Slope_Percent`
+- _SD5\_15.tif_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Soil pH 5_15 in THLD District`
 
 ## 4. Instruction
+
+|          Model         |
+|------------------------------------------|
+| ![LCM](../../../images/Model%20Map/Land_Condition.svg) |
 
 1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
 2. Open _Zonal Statistics_ tool.
