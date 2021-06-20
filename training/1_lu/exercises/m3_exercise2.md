@@ -9,17 +9,17 @@ This exercise will practice:
 
 ## 2. Description
 
-Market is a sub-objective of the economic condition objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
+Market is a sub-objective of the economic objective. The reason that we set this as a sub-objective is that the distance to market can affect the row crops selling and transportation fee.
 
-**Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to big city, middle city, and small city).
+**Market model** aims to evaluate the suitability of IDUs for planting row crops by measuring the distance between the IDU and the market places (i.e., the distance to large city, middle city, and small city).
 
 ## 3. GIS Dataset
 
 You should use the following data to finish this exercise:
 - _THLD\_poly.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
-- _BigCity\_pt.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Big_City_Point`
+- _LargeCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Large_City_Point`
 - _MiddleCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Middle_City_Point`
 - _SmallCity\_pt.shp_ at
@@ -52,7 +52,7 @@ render the the Output column from _Reclassify Field_ tool.
 ## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/SoilIndex.pdf).
+  [here](../pdf_maps/rcrp_Market.pdf).
 - Now you have completed all exercises. Please go back to
-  [Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#4-exercises) to turn in them.
+  [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#4-exercises-and-post-training-survey) to turn in them.
 
