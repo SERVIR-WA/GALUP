@@ -20,8 +20,8 @@ You should use the following data to finish this exercise:
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
 - _LargeCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Large_City_Point`
-- _MiddleCity\_pt.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Middle_City_Point`
+- _MediumCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Medium_City_Point`
 - _SmallCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Small_City_Point`
 
@@ -55,7 +55,7 @@ You should use the following data to finish this exercise:
 
 - **Inputpolygon**: select _THLD\_poly_
 - **Large cities**: _LargeCity\_pt_
-- **Medium cities**: MediumCity\_pt_
+- **Medium cities**: _MediumCity\_pt_
 - **Small cities**: _SmallCity\_pt_
 - Leave other prameters as default
 - Click **Run**.
