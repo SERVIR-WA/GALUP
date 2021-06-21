@@ -50,8 +50,8 @@ You should use the following data to finish this exercise:
 | 5 | 6 | 7 |
 |**Description**: Distance to Small City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Medium City'_ <br> **Point layer**: select _Small cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_SC <br> **Output shapefile**: _leave this as default_  |**Description**: Res Dist to Small City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Small City'_ <br> **Field to rescale**: Dis_to_SC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_SC <br> **Output layer**: _leave this as default_|**Description**: Weighted Sum of Fields <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Small City'_ <br> **Fields**: Res_D_BC;Res_D_MC;Res_D_SC <br> **Weights** click the _Value_ icon, select _Model Input_, and select _Weights by City Level_ <br> **Output column name**: Market <br> **Output layer**: rcrp_Market |
 
-5. Now you have finished the model, click **Run model** ![st](../../../images/mActionStart.svg) on the main menu of the _Processing Modeler_ window to open the run the _Market_ model.
-6. Set the model as follows:
+1. Now you have finished the model, click **Run model** ![st](../../../images/mActionStart.svg) on the main menu of the _Processing Modeler_ window to open the _Market_ model.
+2. Set the model as follows:
 
 - **Inputpolygon**: select _THLD\_poly_
 - **Large cities**: _LargeCity\_pt_
@@ -60,7 +60,7 @@ You should use the following data to finish this exercise:
 - Leave other prameters as default
 - Click **Run**.
 
-7.  Choose _Categorized_ symbology and choose the _Greens_ color ramp to
+7.  Choose _Categorized_ symbology and choose the _Bupu_ color ramp to
 render the the Output column from _Reclassify Field_ tool.
 8. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 9. Export as a PDF file.
