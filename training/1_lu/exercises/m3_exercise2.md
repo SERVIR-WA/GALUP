@@ -60,14 +60,7 @@ You should use the following data to finish this exercise:
 - Leave other prameters as default.
 - Click **Run**.
 
-8.  Now let's setup the **Symbology** of the output layer _rcrp\_Market_.
-   Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
-   Symbology tab from the **_Layer Properties_** window.
-   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
-   Graduated style.
-   Specify the _Market_ field as **Value**, then choose the _BuPu_ color ramp
-   with 5 classes. Click **Apply**.
+8.  Now let's setup the **Symbology** of the output layer _rcrp\_Market_.Open the <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20"> Symbology tab from the **_Layer Properties_** window. Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) Graduated style. Specify the _Market_ field as **Value**, then choose the _BuPu_ color ramp with 5 classes. Click **Apply**.
 9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 10. Export as a PDF file.
 
