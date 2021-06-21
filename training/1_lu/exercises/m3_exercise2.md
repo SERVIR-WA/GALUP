@@ -61,9 +61,9 @@ You should use the following data to finish this exercise:
 - Click **Run**.
 
 8.  Choose _Categorized_ symbology and choose the _Bupu_ color ramp to
-render the the Output column from _Reclassify Field_ tool.
-9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-10. Export as a PDF file.
+render the output **Market** column from _Reclassify Field_ tool.
+1. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+2.  Export as a PDF file.
 
 ## 5.Result
 
