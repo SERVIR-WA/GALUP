@@ -126,7 +126,7 @@ You can check the _Input parameters_ of this model
 
 #### 3.1.1 Dataset
 
-In the following example, we use _Transportation Accessibility model_ to measure
+In the following example, we use _Transportation Accessibility_ model to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
 
 The datasets used are listed below:
