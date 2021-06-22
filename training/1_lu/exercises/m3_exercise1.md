@@ -89,22 +89,19 @@ Dataset. The table below lists all land cover types collected in 2019:
    in **_Processing Toolbox_** and choose `Create New Model...`.
 2. Click **_Model Properties_** and type _Land Condition_ in **Name** and
    _Physical_ in **Group**.
-3. Add _Vector Layer_, name it **AInput layer**, and choose _Polygon_ in  **Geometry type**.
-4. Add Raster Layer and name it **BLand Cover**.
-5. Add _Matrix_, name it **CAdd Value for Land Cover**, and then set table as
+3. Add _Vector Layer_, name it **1Input layer**, and choose _Polygon_ in  **Geometry type**.
+4. Add Raster Layer and name it **2Land Cover**.
+5. Add _Matrix_, name it **3Add Value for Land Cover**, and then set table as
    following:
-   |   | 1 | 2 | 3 |
-   |---|---|---|---|
-   | 1 | 1 | 2 | 5 |
-   | 2 | 2 | 3 | 1 |
-   | 3 | 3 | 4 | 1 |
-   | 4 | 4 | 5 | 5 |
-   | 5 | 5 | 6 | 7 |
-   | 6 | 6 | 7 | 1 |
-   | 7 | 7 | 8 | 9 |
-   | 8 | 8 | 9 | 1 |
-   | 9 | 9 | 0 | 3 |
-6. Remove all prefix **A**, **B**, **C** in name.
+
+|          Matrix setting         |
+|------------------------------------------|
+| <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="200"> |
+6. Remove all prefix **1**, **2**, **3** in name.
+   > :bulb: **A tip for remove name prefix**<br>
+   > Because of Q GIS work omission in this vesion, we need to order the adding
+   > element by ourselves. We can give each element with sequence number when
+   > we add it to the model.
 7. Click **_Algorithms_**, locate the
    **<ins>Reclassify by table</ins>** tool under **_Raster analysis_**.
 8. Add the tool and rename it **Add Value for Land Cover**, then set
@@ -165,7 +162,8 @@ Dataset. The table below lists all land cover types collected in 2019:
        <li>leave all other parameters as default.</li>
     </ol>
 18. Add _String_, name it as **GWeight by LC Slope**, and then set **Default value**
-   as: 0.5,0.5;
+   as: 0.5,0.5 (these values suggest land cover and slope are equally important
+   in determining the _Land Condition_ sub-objective).
 19. Remove prefix **G** in name.
 20. Click **_Algorithms_**, locate the
    **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
@@ -180,7 +178,7 @@ Dataset. The table below lists all land cover types collected in 2019:
        <li><b>Output layer</b>: rcrp_LandCondition,</li>
        <li>leave all other parameters as default.</li>
     </ol>
-22. Sava the model in a folder you can find.
+22. Save the model in a folder you can find.
 23. Locate _Slope\_Percent.tif_, _iSDA\_MGRS.tif_, and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 24. In the **_Processing Toolbox_** panel, locate the
    **<ins>Land Condition</ins>** model under **_Models_** -> **_Physical_**.
@@ -208,9 +206,10 @@ Dataset. The table below lists all land cover types collected in 2019:
 ## 5.Result
 
 - Upon completion, the map you got should look similar to this pdf
-  [here]().
+  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/LandConditionMap.pdf).
 - Now you have completed all exercises. Please go back to
-  [Module 3]() to turn in them.
+  [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
+  to turn in them.
 
 ## 6.Reference
 
