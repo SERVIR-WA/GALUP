@@ -96,7 +96,7 @@ Dataset. The table below lists all land cover types collected in 2019:
 
 |          Matrix setting         |
 |------------------------------------------|
-| <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="200"> |
+| <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="400"> |
 6. Remove all prefix **1**, **2**, **3** in name.
    > :bulb: **A tip for remove name prefix**<br>
    > Because of Q GIS work omission in this vesion, we need to order the adding
