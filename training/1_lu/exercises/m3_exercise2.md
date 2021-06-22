@@ -57,7 +57,9 @@ tools **in sequence**.
     | 5. _<ins>Distance to Point Features</ins>_| 6. _<ins>Rescale Field Field Linearly</ins>_ | 7. _<ins>Weighted Sum of Fields</ins>_|
     |-----------------------|------------------|------------------|
     |**Description**: Distance to Small City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Medium City'_ <br> **Point layer**: select _Small cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_SC <br> **Output shapefile**: _leave this as default_  |**Description**: Res Dist to Small City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Small City'_ <br> **Field to rescale**: Dis_to_SC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_SC <br> **Output layer**: _leave this as default_|**Description**: Weighted Sum of Fields <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Small City'_ <br> **Fields**: Res_D_BC;Res_D_MC;Res_D_SC <br> **Weights** click the _Value_ icon, select _Model Input_, and select _Weights by City Level_ <br> **Output column name**: Market <br> **Output layer**: rcrp_Market |
-6. Now you have finished the model, click ![st](../../../images/mActionStart.svg)`Run model`  on the main menu of the _Processing Modeler_ window to open the _Market_ model.
+6. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
+`Run model`  on the main menu of the _Processing Modeler_ window to open the
+_Market_ model.
 7. Set the model as follows:
    - **Inputpolygon**: select _THLD\_poly_
    - **Large cities**: _LargeCity\_pt_
@@ -66,7 +68,8 @@ tools **in sequence**.
    - Leave other prameters as default.
    - Click **Run**.
 8. Now let's setup the **Symbology** of the output layer _rcrp\_Market_.
-Open the <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20"> Symbology tab from the **Layer Properties** window. Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) Graduated style. Specify the _Market_
+Open the <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+Symbology tab from the **Layer Properties** window. Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) Graduated style. Specify the _Market_
 field as **Value**, then choose the _BuPu_ color ramp with 5 classes. Click **Apply**.
 9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
 10. Export as a PDF file.
