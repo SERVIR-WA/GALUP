@@ -19,21 +19,26 @@ The following datasets are used in this exercises:
 
 ## 4. Instruction
 
-1. Locate _THLD\_poly.shp_ and _Education\_Facilities.shp_ in the **_Browser Panel_** and add them to
-   **_Map Canvas_**.
-2. In the **_Processing Toolbox_** panel, locate the **<ins>Select by Location</ins>** tool under _Scripts_  <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20"> and double click to open the tool.
+1. Locate _THLD\_poly.shp_ and _Education\_Facilities.shp_ in the
+   **_Browser Panel_** and add them to **_Map Canvas_**.
+2. In the **_Processing Toolbox_** panel, locate the
+   **<ins>Select by Location</ins>** tool under _Scripts_
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">
+   and double click to open the tool.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: THLD_poly,</li>
       <li><b>Selection layer</b>: Education_Facilities,</li>
       <li><b>Join option</b>: Within a distance,</li>
       <li><b>Within distance of selecting feature</b>: 1 mile,</li>
-      <li><b>Output layer</b>: EduProIDU.shp,</li>
+      <li><b>Output layer</b>: <i>EduProIDU.shp</i>,</li>
       <li>leave all other parameters as default.</li>
    </ol>
 4. Click **Run**.
-5. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-6. Export the map as a PDF file.
+5. Set the symbology for the output polygons (match the color as the pdf file
+   below).
+6. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+7. Export the map as a PDF file.
 
 ## 5.Result
 
