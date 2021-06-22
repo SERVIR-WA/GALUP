@@ -126,7 +126,7 @@ You can check the _Input parameters_ of this model
 
 #### 3.1.1 Dataset
 
-In the following example, we use _Transportation Accessibility model_ to measure
+In the following example, we use _Transportation Accessibility_ model to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
 
 The datasets used are listed below:
@@ -147,35 +147,11 @@ The datasets used are listed below:
 
 |          Model         |
 |------------------------------------------|
-| ![SCM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
+| ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
 
-|                    | Distance to Major Roads | Distance to Sec Roads                           |
-|--------------------|-------------------------|-------------------------------------------------|
-| Input layer        | Input Polygon           | 'Output layer' from algorithm 'Res Major Roads' |
-| Line layer         | Major Roads             | Secondary Roads                                 |
-| Cell size          | 30                      | 30                                              |
-| Distance method    | Euclidean               | Euclidean                                       |
-| Output data type   | Float                   | Float                                           |
-| Output column name | Dis_toMR                | Dis_toR                                         |
-
-|                   | Res Major Roads                                         | Res Secondary Roads                                   |
-|-------------------|---------------------------------------------------------|-------------------------------------------------------|
-| Input layer       | 'Output layer' from algorithm 'Distance to Major Roads' | 'Output layer' from algorithm 'Distance to Sec Roads' |
-| Field to rescale  | Dis_toMR                                                | Dis_toR                                               |
-| Start value       | 15000                                                   | 5000                                                  |
-| End value         | 0                                                       | 0                                                     |
-| New minimum       | 1                                                       | 1                                                     |
-| New maximum       | 9                                                       | 9                                                     |
-| Output field name | DisMR_R                                                 | DisR_R                                                |
-
-
-|                   | Weighted Sum MR & SR                                |
-|-------------------|-----------------------------------------------------|
-| Input layer       | 'Output layer' from algorithm 'Res Secondary Roads' |
-| Fields            | DisMR_R;DisR_R                                      |
-| Weights           | Using model input: Weighted Value                   |
-| Output field name | rcrp_trans                                          |
-| Output layer      | rcrp_TransportAccessibility                         |
+| Distance to Major Roads                                                               | Res Major Roads                                                                                             | Distance to Sec Roads | Res Secondary Roads | Weighted Sum MR & SR                                                |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------------|---------------------|---------------------------------------------------------------------|
+| 1.Input layer: Input Polygon <br> 2.Line layer: Major Roads <br> 3.Output column name: Dis_toMR | 1.Input layer: 'Output layer' from algorithm 'Distance to Major Roads' <br> 2.Field to rescale: Dis_toMR <br> 3.Start value: 15000 <br> 4.End value: 0 <br> 6.New minimum: 1 <br> 7.New maximum: 9 <br> 8.Output field name: DisMR_R |    1.Input layer: 'Output layer' from algorithm 'Res Major Roads' <br> 2.Line layer: Secondary Roads <br> 3.Output column name: Dis_toR     |    1.Input layer: 'Output layer' from algorithm 'Distance to Sec Roads' <br> 2.Field to rescale: Dis_toR <br> 3.Start value: 5000 <br> 4.End value: 0 <br> 6.New minimum: 1 <br> 7.New maximum: 9 <br> 8.Output field name: DisR_R | 1.Input layer: 'Output layer' from algorithm 'Res Secondary Roads' <br> 2.Fields: DisMR_R;DisR_R <br> 3.Weights: Using model input: Weighted Value <br> 4.Output field name: rcrp_trans <br> 5.Output layer: rcrp_TransportAccessibility |
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|

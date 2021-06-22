@@ -20,8 +20,8 @@ You should use the following data to finish this exercise:
 `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
 - _LargeCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Large_City_Point`
-- _MiddleCity\_pt.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Middle_City_Point`
+- _MediumCity\_pt.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Medium_City_Point`
 - _SmallCity\_pt.shp_ at
 `GALUP-master -> training -> 1_lu -> datasets -> Small_City_Point`
 
@@ -29,25 +29,32 @@ You should use the following data to finish this exercise:
 
 ![marketmodelmap](../../../images/Model%20Map/Market.svg)
 
-1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
-2. Open _Zonal Statistics_ tool.
-3. Set _THLD\_poly.shp_ as **Input layer** and _SD5\_15.tif_ as **Raster layer**.
-4. Type _mean_ in **Types of statistics** and then give an appropriate
-name for **Output column prefix**.
-5. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
-6. **Run** _Zonal statistics_ tool.
-7. Open _Reclassify Field_ tool.
-8. Set the output shapefile from the Zonal Statistics tool as **Input layer** and the output column as **Field to reclassify**.
-9. Type _40-50, 50-55, 55-65_ in **Old values**.
-10. Type _1, 2, 3_ in **New values**.
-11. Set _0_ for No data value and then give an appropriate name for
-   **Output column prefix**.
-12. Choose drop down list in **Output layer** and select `Save to Files...`, so you can save the output shapefile to the files you frequently use.
-13. **Run** _Reclassify Field_ tool.
-14. Choose _Categorized_ symbology and choose the _Greens_ color ramp to
-render the the Output column from _Reclassify Field_ tool.
-15. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-16. Export as a PDF file.
+1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and _THLD\_poly.shp_ in the _Browser Panel_ and add them to _Map Canvas_.
+2. In the _Menu Toolbar_, click _Processing_ and open ![gm](../../../images/processingModel.svg) _Graphical Modeler..._ .
+3. In the _Model Properties_ panel, name the _Name_ as **Market**, and the _Group_ as **Economic**.
+4. In the _Inputs_ panel, click _Inputs_ tab, add:
+   - One _Vector Features_ parameter, and name the _Parameter name_ as **InputPolygon** and leave others as default, then click **OK**.
+   - Three _Point_ parameters, and name their the _Parameter name_ as **Large cities**, **Medium cities**, and **Small cities** respectively, and leave others as default, then click **OK** for each one.
+   - One _String_ parameter, and name the _Description_ as **Weights by City Level** and type `0.6, 0.3, 0.1` for _Default value_ market weights for **Large cities**, **Medium cities**, and **Small cities**), and leave others as default, then then click **OK**.
+5. In the _Algorithm_ tab, add and set the parameters of the following tools **in sequence**.
+    |_1. Distance to Point Features_|_2. Rescale Field Field Linearly_|_3. Distance to Point Features_|_4. Rescale Field Field Linearly_|
+    |------------------------|---------------------|------------------------------------|------------------------|
+    |**Description**: Distance to Large City <br> **Input layer**: select _InputPolygon_ <br> **Point layer**: select _Large cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_BC <br> **Output shapefile**: _leave this as default_ |**Description**: Res Dist to Large City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Large City'_ <br> **Field to rescale**: Dis_to_BC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_BC <br> **Output layer**: _leave this as default_|**Description**: Distance to Medium City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Large City'_ <br> **Point layer**: select _Medium cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_MC <br> **Output shapefile**: _leave this as default_ |**Description**: Res Dist to Medium City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Medium City'_ <br> **Field to rescale**: Dis_to_MC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_MC <br> **Output layer**: _leave this as default_|
+
+    |_5. Distance to Point Features_|_6. Rescale Field Field Linearly_ |_7. Weighted Sum of Fields_|
+    |-----------------------|------------------|------------------|
+    |**Description**: Distance to Small City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Medium City'_ <br> **Point layer**: select _Small cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_SC <br> **Output shapefile**: _leave this as default_  |**Description**: Res Dist to Small City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Small City'_ <br> **Field to rescale**: Dis_to_SC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_SC <br> **Output layer**: _leave this as default_|**Description**: Weighted Sum of Fields <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Small City'_ <br> **Fields**: Res_D_BC;Res_D_MC;Res_D_SC <br> **Weights** click the _Value_ icon, select _Model Input_, and select _Weights by City Level_ <br> **Output column name**: Market <br> **Output layer**: rcrp_Market |
+6. Now you have finished the model, click **Run model** ![st](../../../images/mActionStart.svg) on the main menu of the _Processing Modeler_ window to open the _Market_ model.
+7. Set the model as follows:
+   - **Inputpolygon**: select _THLD\_poly_
+   - **Large cities**: _LargeCity\_pt_
+   - **Medium cities**: _MediumCity\_pt_
+   - **Small cities**: _SmallCity\_pt_
+   - Leave other prameters as default.
+   - Click **Run**.
+8.  Now let's setup the **Symbology** of the output layer _rcrp\_Market_. Open the <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20"> Symbology tab from the **_Layer Properties_** window. Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) Graduated style. Specify the _Market_ field as **Value**, then choose the _BuPu_ color ramp with 5 classes. Click **Apply**.
+9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+10. Export as a PDF file.
 
 ## 5.Result
 
@@ -55,4 +62,3 @@ render the the Output column from _Reclassify Field_ tool.
   [here](../pdf_maps/rcrp_Market.pdf).
 - Now you have completed all exercises. Please go back to
   [Module 3](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#4-exercises-and-post-training-survey) to turn in them.
-

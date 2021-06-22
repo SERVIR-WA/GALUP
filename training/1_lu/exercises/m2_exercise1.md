@@ -79,7 +79,7 @@ The following datasets are used in this exercises:
       window.
       </li>
       <li>
-      Type `"Rds<i>den" is NULL` in the <b>Expression</b> field.
+      Type <code>"Rds_den" is NULL</code> in the <b>Expression</b> field.
       </li>
       <li>
       Click <b>OK</b> to close the <b><i>Expression String Builder</i></b>
