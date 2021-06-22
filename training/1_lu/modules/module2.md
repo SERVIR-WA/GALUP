@@ -290,7 +290,6 @@ in Ghana.
   <img src="../../../images/video_frames/m2_select_by_location.png" alt= "select by location" width="800">
 </a>
 
-
 ## 7. Exercises and Post-training Survey
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m2_exercise1.md).
