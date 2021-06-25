@@ -176,7 +176,7 @@ The last step is to proceed the value combination. Before combining values, diff
 The datasets used are listed below:
 
 | ID | File Name     | Data Format | Type    | Description                                                 |
-|--- |---------------|-------------|---------|-------------------------------------------------------------|
+|----|---------------|-------------|---------|-------------------------------------------------------------|
 | 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
 | 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
 | 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |
