@@ -2,15 +2,47 @@
 
 **What will you learn from this module?**
 
-- Get to know the Graphical Modeler,
-- Learn about the Row Crops model,
-- Solve planning-related questions by modeling in the Graphical Modeler.
+- Understand the general workflow of suitability modeling and the LUCIS
+  framework,
+- Get to know the QGIS Graphical Modeler,
+- Learn how to build suitability models with LUCIS-OPEN tools for QGIS in the
+  Graphical Modeler,
+- Learn the details of the suitability models for the _Row Crops_ Goal.
 
 ## 1. Introduction to QGIS Graphical Modeler
 
-Please see this video:<br>
+The [_graphical modeler_](https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html)
+![modeler](../../../images/processingModel.svg) allows you to create complex
+models using a simple and easy-to-use interface.
+When working with a GIS, most analysis operations are not isolated, rather part
+of a chain of operations. Using the graphical modeler, that chain of operations
+can be wrapped into a single process, making it convenient to execute later
+with a different set of inputs.
+No matter how many steps and different algorithms it involves, a model is
+executed as a single algorithm, saving time and effort.
+
+Similar to the **Toolbox** we have seen and practiced in previous modules,
+**Graphical Modeler** is an integral component of the
+[QGIS processing framework](https://docs.qgis.org/3.10/en/docs/user_manual/processing/intro.html).
+Several algorithms can be **combined graphically** using the modeler to define
+a workflow, creating a single process that involves several sub-processes.
+
+The Graphical Modeler bears a resemblance to ArcGIS
+[ModelBuilder](https://tinyurl.com/bknc9843), in terms of their functionality.
+So, prior experiences with ModelBuilder would be helpful in learning the
+graphical modeler.
+However, there exist some distinctions between the mechanisms of the two.
+The first difference that you might notice is that the graphical modeler is a
+more rigid tool to configure in that you have to define
+[inputs](tinyurl.com/qgis-gm-input) and
+[workflow](https://tinyurl.com/qgis-gm-workflow) in sequence.
+
+Please watch the video below created by
+[Open Source Options](https://www.youtube.com/channel/UCOSeGDrlScCNgBcN5C8nTEw)
+for a detailed introduction to the **Graphical Modeler**.
+
 <a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
-  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt= "GMtutorial" width="800">
+  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
 </a>
 
 ## 2. Suitability Modeling
@@ -176,7 +208,7 @@ The last step is to proceed the value combination. Before combining values, diff
 The datasets used are listed below:
 
 | ID | File Name     | Data Format | Type    | Description                                                 |
-|--- |---------------|-------------|---------|-------------------------------------------------------------|
+|----|---------------|-------------|---------|-------------------------------------------------------------|
 | 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
 | 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
 | 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |
