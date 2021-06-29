@@ -210,7 +210,7 @@ The datasets used are listed below:
 In this model, we used different
 ![modeler](../../../images/input.svg)
 [inputs](tinyurl.com/qgis-gm-input)
- and ![modeler](../../../images/Workflow.svg)
+and ![modeler](../../../images/Workflow.svg)
 [workflow](https://tinyurl.com/qgis-gm-workflow)
 to construct the model.
 
