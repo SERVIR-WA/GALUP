@@ -2,65 +2,89 @@
 
 **What will you learn from this module?**
 
-- Get to know the Graphical Modeler,
-- Learn about the Row Crops model,
-- Solve planning-related questions by modeling in the Graphical Modeler.
+- Understand the general workflow of suitability modeling,
+- Get to know the QGIS **Graphical Modeler**,
+- Learn how to build suitability models with LUCIS-OPEN tools for QGIS in the
+  Graphical Modeler,
+- Learn the details and the logic behind the suitability models for
+  ***Row Crops***.
 
-## 1. Introduction to QGIS Graphical Modeler
+## 1. Land-use Suitability Modeling
 
-Please see this video:<br>
-<a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
-  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt= "GMtutorial" width="800">
-</a>
+**Suitability** is a measure of the *relative degree* to which a land unit is
+suitable for a <ins>specified purpose</ins>.
+The decision on suitability is based strictly on its **current condition** and
+**the context** in which it is found.
+It neither anticipates nor requires any change for the assignment of a
+suitability score.
+Suitability modeling is the process of determining ***suitability***.
+In this module, we present a method of suitability modeling in **QGIS** using
+**LUCIS-OPEN Tools for QGIS** and the **Graphical Modeler**.
 
-## 2. Suitability Modeling
-
-Suitability is a measure of the relative degree to which a land unit is suitable for a specified purpose. The decision on suitability is based strictly on its current condition and the context in which it is found. It neither anticipates nor requires any change for the assignment of a suitability score. In many cases, suitability is measured on a scale of 1 to 9, with 1 representing low suitability and 9 representing high suitability.
-Suitability modeling is a process consisting of a series of GIS tools to determine suitability. In this workshop, we present a method of modeling suitability in QGIS with the **LUCIS-OPEN Tools for QGIS**.
-
-### 2.1 LUCIS Philosophy
-
-The following figure shows the LUCIS Framework.
-![lucis_workflow](../../../images/lucis_workflow.svg)
-
-#### 2.1.1 Goals
-
-In the LUCIS Framework, the first step is to ascertain the goals of the LUCIS. We need to inquire the opinions of stakeholders and separate these values into three categories: 1) agricultural productions, 2) socioeconomic activities, and 3) ecological functions. To be more specific, these three categories can be turned into three land uses correspondingly: 1) agricultural land uses, 2) urban land uses, and 3) conservational land. Therefore, the goals are to identify land use for agricultural land uses, urban land uses, and conservational land.
-
-#### 2.1.2 Objectives
-
-The second step is to ascertain the objectives for each goal. For agricultural land uses and urban land uses, we always consider the suitability, in which two perspectives are commonly used to derive objectives: 1) physical suitability, and 2) economic suitability. In terms of conservational land, we consider the significance of conservational land and two perspectives are commonly used: 1) existing ecological value, and 2) potential ecological value.
-
-#### 2.1.3 Sub-objectives
-
-In this last step, sub-objectives is the specified objectives. For example, if the the objective is to consider the physical suitability perspective (objective) of the residential land use (a goal in urban land uses), one of the sub-objectives can be that to evaluate the proximity of research areas to educational facilities.
-
-### 2.2 The General Workflow of Suitability Modeling
-
-There are three main steps for creating a suitability model:
+The **general workflow** of suitability modeling consists of three steps:
 
 1. [Define criteria](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-1-define-criteria)
 2. [Transform to a common suitability scale](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-2-transform-to-a-common-suitability-scale)
 3. [Weight the criteria and create a suitability map](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-3-weight-the-criteria-and-create-a-suitability-map)
 
-#### Step 1: Define Criteria
+### 1.1 Define Criteria
 
-The first step to create a suitability model is to identify the criteria for the subject of the model. Each criterion identified should be instrumental in reaching the overall goal of the model. For example, if we want to identify a suitable site for an orchard. We can consider the following criteria:
+The first step to create a suitability model is to identify the criteria for
+the subject of the model.
+Each criterion identified should be instrumental in reaching the overall goal
+of the model.
+For example, if we want to locate a suitable site for an orchard, we might
+consider four criteria:
 
-- Slope
-- Distance to markets
-- Land price
-- Land use types
+- Soil permeability
+- Distance to major roads
+- Land value per unit area
+- Current land use
 
-#### Step 2: Transform to a Common Suitability Scale
+### 1.2 Transform to a Common Suitability Scale
 
-The four criteria mentioned above are measured in their specific scales. The final suitability will combine them together. However, simply adding their values is meaningless. For example, a site is on a 5 percent slope, 600 meters from a fruit market, and with a land use of 34, representing single-family residential. The sum of these values is 639,  which makes no sense. Therefore, before combining the criteria, we must transform the values of each criterion from its original scale to a common suitability scale.
+All four criteria mentioned above affect, although in different magnitudes,
+how a land parcel is suitable for an orchard.
+Therefore, to determine suitability for orchards, we need to combine these
+criteria in *a meaningful way*.
+However, criteria are often measured with
+**different [measurement levels](https://tinyurl.com/jh8n7hzh)**
+(*nominal*, *ordinal*, *interval*, and *ratio*) at **different scales**.
+Hence, transformations to each criterion from its original scale to
+<ins>a common suitability scale</ins> are needed.
+In theory, you can choose any arbitrary interval for such
+**suitability scale**.
+But, to follow the convention of the
+**Land-Use Conflict Identification Strategy** (LUCIS), we will use a scale of
+<b><ins>1 to 9</ins></b> throughout this workshop, where 1 represents lowest
+suitability and 9 represents highest suitability.
 
-In this example, a 1 to 9 suitability scale will be used. For each value in a criterion, locations with attributes that are most preferred will receive higher suitability values, while locations with the least preferred features will receive lower suitability values. For example, slopes greater than 25 percent will receive a suitability value of 1, slopes that are between 4 percent and 6 percent will be assigned a suitability value of 7, and slopes that are less than 3 percent will have a suitability value of 9.
+In general, there are three transformation methods:
 
-The original values in every criterion should be transformed into this common scale from 1 to 9. And such transformations should follow relevant literature or guidelines. The transformed criteria can now be combined.
+- **Unique categories**: is **a one-to-one matching** of the criterion value to
+  the suitability value and best for *nominal* and *ordinal* data.
+- **Range of classes**: is applied when ranges of values can be grouped into
+  **homogeneous** classes that can be assigned the same suitability preference.
+  It is usually used for *interval* and *ratio* data.
+- **Continuous functions**: applies linear and nonlinear functions to transform
+  the values continuously to the suitability scale. Because this method applies
+  a continuous function to the criterion values, with each increase in the
+  criterion value, the resulting suitability value continuously changes. It is
+  best for criteria represented by *ratio* (or ***continuous***) data such as
+  slope, aspect, or distance from streams.
 
-#### Step 3: Weight the Criteria and Create a Suitability Map
+In this workshop, we will use
+[Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+for *unique categories* and *range of classes* transformations.
+And, we will use
+[Rescale Field Linearly](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
+for *continuous function* transformation.
+As suggested by the name, the Rescale Field Linearly tool only supports linear
+transformation for now.
+But, more non-linear functions will be included in the next major update
+of [PyLUSAT](https://github.com/chjch/pylusat).
+
+### 1.3 Weight the Criteria and Create a Suitability Map
 
 Before combination of the transformed values, it may be that one criterion is more important than the others. If that is the case, that criterion will be weighted more than the others. To emphasize the distinction, the transformation process described in step 2 converts the values within a criterion relative to one another. The weighting in this step defines the relative importance of each criterion to one another.
 
@@ -72,6 +96,44 @@ In our example, the weight of each criteria can be:
 - Land use types: 35%
 
 Then, the suitability map can be created by doing symbology on the weighted combination of transformed values. The place with the higher value will be a more suitable site for the orchard.
+
+## 2. Introduction to QGIS Graphical Modeler
+
+The [_graphical modeler_](https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html)
+![modeler](../../../images/processingModel.svg) allows you to create complex
+models using a simple and easy-to-use interface.
+When working with a GIS, most analysis operations are not isolated, rather part
+of a chain of operations. Using the graphical modeler, that chain of operations
+can be wrapped into a single process, making it convenient to execute later
+with a different set of inputs.
+No matter how many steps and different algorithms it involves, a model is
+executed as a single algorithm, saving time and effort.
+
+Similar to the **Toolbox** we have seen and practiced in previous modules,
+**Graphical Modeler** is an integral component of the
+[QGIS processing framework](https://docs.qgis.org/3.10/en/docs/user_manual/processing/intro.html).
+Several algorithms can be **combined graphically** using the modeler to define
+a workflow, creating a single process that involves several sub-processes.
+
+The Graphical Modeler bears a resemblance to ArcGIS
+[ModelBuilder](https://tinyurl.com/bknc9843), in terms of their functionality.
+So, prior experiences with ModelBuilder would be helpful in learning the
+graphical modeler.
+However, there exist some distinctions between the mechanisms of the two.
+The first difference that you might notice is that the graphical modeler is a
+more rigid tool to configure in that you have to define
+[inputs](tinyurl.com/qgis-gm-input) and
+[workflow](https://tinyurl.com/qgis-gm-workflow) in sequence.
+
+Please watch the video below created by
+[Open Source Options](https://www.youtube.com/channel/UCOSeGDrlScCNgBcN5C8nTEw)
+for a detailed introduction to the **Graphical Modeler**.
+
+<a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
+  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
+</a>
+
+
 
 ## 3. Row Crops Model
 
@@ -176,7 +238,7 @@ The last step is to proceed the value combination. Before combining values, diff
 The datasets used are listed below:
 
 | ID | File Name     | Data Format | Type    | Description                                                 |
-|--- |---------------|-------------|---------|-------------------------------------------------------------|
+|----|---------------|-------------|---------|-------------------------------------------------------------|
 | 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
 | 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
 | 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |

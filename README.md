@@ -57,17 +57,18 @@ We appreciate the supports from our partners below.<br>
 
 <table style="border: 0;">
   <tr> 
-    <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="320"></td>
-    <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="130"></td>
-    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="120"></td>
+    <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="300"></td>
+    <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="125"></td>
+    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="105"></td>
+    <td vlign="center" style="border: 0;"><img src="images/LUSPA_Logo.png" width="100"></td>
   </tr>
 </table>
 <br>
 <table>
-  <tr>
-    <td><img src="images/nasa.png" width="100"></td>
-    <td><img src="images/SERVIR_Logo.png" width="100"></td>
-    <td><img src="images/USAID_logo.png" width="240"></td>
-    <td><img src="images/crs.png" width="100"></td>
+  <tr>    
+    <td><img src="images/SERVIR_Logo.png" width="120"></td>
+    <td><img src="images/nasa.png" width="120"></td>
+    <td><img src="images/USAID_logo.png" width="260"></td>
+    <td><img src="images/crs.png" width="120"></td>
   </tr>
 </table>
