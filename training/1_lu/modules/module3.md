@@ -207,7 +207,7 @@ The datasets used are listed below:
 
 #### 3.1.3 Model and Model Results
 
-In this model, we used different ![Input](../../../images/input.svg)
+In this model, we used different ![Input](../../../images/Input.svg)
 [inputs](tinyurl.com/qgis-gm-input)
 and ![Workflow](../../../images/Workflow.svg)
 [workflow](https://tinyurl.com/qgis-gm-workflow)
