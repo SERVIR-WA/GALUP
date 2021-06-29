@@ -211,9 +211,7 @@ The datasets used are listed below:
 |------------------------------------------|
 | ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
 
-| Distance to Major Roads                                                               | Res Major Roads                                                                                             | Distance to Sec Roads | Res Secondary Roads | Weighted Sum MR & SR                                                |
-|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------------|---------------------|---------------------------------------------------------------------|
-| 1.Input layer: Input Polygon <br> 2.Line layer: Major Roads <br> 3.Output column name: Dis_toMR | 1.Input layer: 'Output layer' from algorithm 'Distance to Major Roads' <br> 2.Field to rescale: Dis_toMR <br> 3.Start value: 15000 <br> 4.End value: 0 <br> 6.New minimum: 1 <br> 7.New maximum: 9 <br> 8.Output field name: DisMR_R |    1.Input layer: 'Output layer' from algorithm 'Res Major Roads' <br> 2.Line layer: Secondary Roads <br> 3.Output column name: Dis_toR     |    1.Input layer: 'Output layer' from algorithm 'Distance to Sec Roads' <br> 2.Field to rescale: Dis_toR <br> 3.Start value: 5000 <br> 4.End value: 0 <br> 6.New minimum: 1 <br> 7.New maximum: 9 <br> 8.Output field name: DisR_R | 1.Input layer: 'Output layer' from algorithm 'Res Secondary Roads' <br> 2.Fields: DisMR_R;DisR_R <br> 3.Weights: Using model input: Weighted Value <br> 4.Output field name: rcrp_trans <br> 5.Output layer: rcrp_TransportAccessibility |
+![TAM_tools](../../../images/m3_TransportationAcces/tools_table.svg)
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
