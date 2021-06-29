@@ -207,6 +207,13 @@ The datasets used are listed below:
 
 #### 3.1.3 Model and Model Results
 
+In this model, we used different
+![modeler](../../../images/input.svg)
+[inputs](tinyurl.com/qgis-gm-input)
+ and ![modeler](../../../images/Workflow.svg)
+[workflow](https://tinyurl.com/qgis-gm-workflow)
+to construct the model.
+
 |          Model         |
 |------------------------------------------|
 | ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
