@@ -129,11 +129,11 @@ Dataset. The table below lists all land cover types collected in 2019:
        <li><b>No data value</b>: -9999,</li>
        <li>leave all other parameters as default.</li>
     </ol>
-11. Add _Raster Layer_ and name it **DSlope**.
-12. Add two _String_, name one as **EParameters for LCC**, and then set
+11. Add _Raster Layer_ and name it **4Slope**.
+12. Add two _String_, name one as **5Parameters for LCC**, and then set
     **Default value** as: 0-2,2-8,8-15,15-25,25-45; and name another one as
-    **FLCC Classes**, and then set **Default value** as: 9,7,5,3,1.
-13. Remove all prefix **D**, **E**, **F** in name.
+    **6LCC Classes**, and then set **Default value** as: 9,7,5,3,1.
+13. Remove all prefix **4**, **5**, **6** in name.
 14. Click **_Algorithms_**, locate the
    **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
@@ -161,10 +161,10 @@ Dataset. The table below lists all land cover types collected in 2019:
        <li><b>Output column name</b>: Slp_r,</li>
        <li>leave all other parameters as default.</li>
     </ol>
-18. Add _String_, name it as **GWeight by LC Slope**, and then set **Default value**
+18. Add _String_, name it as **7Weight by LC Slope**, and then set **Default value**
    as: 0.5,0.5 (these values suggest land cover and slope are equally important
    in determining the _Land Condition_ sub-objective).
-19. Remove prefix **G** in name.
+19. Remove prefix **7** in name.
 20. Click **_Algorithms_**, locate the
    **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
