@@ -207,11 +207,7 @@ The datasets used are listed below:
 
 #### 3.1.3 Model and Model Results
 
-In this model, we used different ![Input](../../../images/Input.svg)
-[inputs](tinyurl.com/qgis-gm-input)
-and ![Workflow](../../../images/Workflow.svg)
-[workflow](https://tinyurl.com/qgis-gm-workflow)
-to construct the model.
+The following diagram shows the structure of the Transportation Accessibility model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
 
 |          Model         |
 |------------------------------------------|
