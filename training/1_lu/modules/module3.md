@@ -213,7 +213,7 @@ The datasets used are listed below:
 
 ![TAM_tools](../../../images/m3_TransportationAcces/tools_table.svg)
 
-> :blub: Note:<br>
+> :bulb: Note:<br>
 > Parameters were left as default if not mentioned in the table above.
 
 |          Parameter Setting         |    Output    |
