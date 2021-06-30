@@ -216,6 +216,8 @@ The datasets used are listed below:
 
 #### 3.1.3 Model and Model Results
 
+The following diagram shows the structure of the Transportation Accessibility model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
+
 |          Model         |
 |------------------------------------------|
 | ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
@@ -272,15 +274,25 @@ The datasets used are listed below:
   1. Use **Zonal Statistics** tool to calculate the mean value of raster data (three criteria consist of eight raster layers) to each IDU;
   2. Then, use the **Reclassify Field** tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
   3. Finally, after iterating the two steps above for each criterion, we use the **Weight Sum of Fields** tool to calculate the final suitability. <br>
-  Note: 
+  Note:
   
 For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
 #### 3.2.3 Model and Model Results
 
+The following diagram shows the structure of the Soil Condition model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
+
 |          Model         |
 |------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
+
+![TAM_tools1](../../../images/PrameterSetting/sc1.svg)
+![TAM_tools2](../../../images/PrameterSetting/sc2.svg)
+![TAM_tools3](../../../images/PrameterSetting/sc3.svg)
+![TAM_tools4](../../../images/PrameterSetting/sc4.svg)
+
+> :bulb: Note:<br>
+> Parameters were left as default if not mentioned in the table above.
 
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
