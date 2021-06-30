@@ -171,17 +171,24 @@ row crops farming:
 3. Land condition
 4. Market proximity
 
-Of the four models above, the first two are presented below, while the last two
-will be used for exercises. 
-
+We will see how we can build an independent suitability model in QGIS for
+each criterion.
+Of these four models, the first two are presented below, while the last two
+will be used for exercises.
+In this module, we still use *Twifo-Hemang-Lower-Denkyira* (THLD) District
+Assembly as our study area and the **Integrated Decision Units** (IDUs) that we
+have seen in the last module as the study land units.
 
 ### 3.1 Transportation Accessibility
 
-_Transportation Accessibility_ model is a sub-objective of the economic objectives. 
-_Transportation Accessibility_ model is used to compare the potential
-transportation costs in each IDUs by measuring its distance to traffic roads.
-We assume the IDUs with higher accessibility require less transportation cost to
-deliver goods to outside.
+Since row crops are grown in large quantities, _Transportation Accessibility_
+is considered a critical factor **affecting the distribution costs** of
+harvested crops.
+The criterion is measured by each IDU's
+([Euclidean](https://tinyurl.com/2xe8sd3y)) distance to primary and secondary
+roads.
+We assume IDUs closer to these facilities have **better accessibility** to the
+transportation network and hence require **fewer distribution costs**.
 
 1. By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
 this model calculate the shortest distance from each IDU to the primary and
@@ -235,6 +242,12 @@ In the output map, we used Reds to indicate transportation accessibility of IDUs
 in THLD district.
 Specifically, the darker the red the higher the traffic accessibility.
 
+#### 3.1.4 Video Tutorial
+
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/966ff210d6e64eb09e54d407e0cfd4231d">
+  <img src="../../../images/video_frames/m3_TAM.png" alt= "TAM" width="800">
+</a>
+
 ### 3.2 Soil Condition
 
 Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., drainage will affect the plantation of crops, and soil pH can affect the production of the crops).
@@ -286,13 +299,11 @@ The following diagram shows the structure of the Soil Condition model. Note that
 |------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
 
-![TAM_tools1](../../../images/PrameterSetting/sc1.svg)
-![TAM_tools2](../../../images/PrameterSetting/sc2.svg)
-![TAM_tools3](../../../images/PrameterSetting/sc3.svg)
-![TAM_tools4](../../../images/PrameterSetting/sc4.svg)
+![SCM_tools1](../../../images/SoilCondition/gm_setting_tbl1.svg)
+![SCM_tools2](../../../images/SoilCondition/gm_setting_tbl2.svg)
 
 > :bulb: Note:<br>
-> Parameters were left as default if not mentioned in the table above.
+> Parameters were left as default if not mentioned in the tables above.
 
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
@@ -301,7 +312,7 @@ The following diagram shows the structure of the Soil Condition model. Note that
 ## 4. Exercises and Post-training Survey
 
 - Please complete the [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m3_exercise1.md).
-- Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m3_exercise2.md#module-3---exercise-2).
+- Please complete the [Exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m3_exercise2.md).
 - Please take this post-training
   [survey](https://ufl.qualtrics.com/jfe/form/SV_9nLiduVDMRRE4t0) (required).
 - Please submit your exercises [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=muribasterra&labels=exercise+w1m2&milestone=Module+2+Exercises&template=w1m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D).
