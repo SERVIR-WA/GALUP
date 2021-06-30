@@ -282,7 +282,6 @@ The following diagram shows the structure of the Soil Condition model. Note that
 ![TAM_tools3](../../../images/PrameterSetting/sc3.svg)
 ![TAM_tools4](../../../images/PrameterSetting/sc4.svg)
 
-
 > :bulb: Note:<br>
 > Parameters were left as default if not mentioned in the table above.
 
