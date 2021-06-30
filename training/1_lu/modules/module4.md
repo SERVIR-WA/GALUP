@@ -26,3 +26,31 @@ The second step is to ascertain the objectives for each goal. For agricultural l
 #### 1.1.3 Sub-objectives
 
 In this last step, sub-objectives is the specified objectives. For example, if the the objective is to consider the physical suitability perspective (objective) of the residential land use (a goal in urban land uses), one of the sub-objectives can be that to evaluate the proximity of research areas to educational facilities.
+
+## 3. Row Crops Models
+
+Each IDU in the THLD area will be assigned to one of the four land uses by
+comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
+In Row Crops model, we evaluate the IDUs' suitability in growing Row Crops based
+on two objectives: physical suitability and economic suitability.
+The following figure shows the Row Crops model.
+
+<img src="../../../images/RowCrops_model.svg" alt= "RowCrops_model" width="400">
+
+
+In terms of physical suitability, we look for conditions in which land
+growing Row Crops can have the optimized production.
+In this objectives, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
+as important criteria to determine how many IDUs in THLD district are physically
+suitable to grow Row Crops.
+In terms of economic suitability, we evaluate the economic efficiency of each IDU
+in THLD district.
+We expect the land owners who grow Row Crops spend the lowest cost on transportation.
+Therefore, we need to ensure lands growing Row Crops have shorter distance to
+primary/secondary roads and small/middle/large cities than those without growing
+Row Crops.
+To achieve that, we choose
+[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
+and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
+as criteria to evaluate how many IDUs in THLD district are economically suitable.
