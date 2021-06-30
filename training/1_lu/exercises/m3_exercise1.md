@@ -105,7 +105,7 @@ Dataset. The table below lists all land cover types collected in 2019:
 
    |          Parameter setting         |
    |------------------------------------------|
-   | <img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="500"> |
+   | <img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="1000"> |
 7. Click **_Algorithms_**, Add the
    **<ins>Reclassify by table</ins>** tool under **_Raster analysis_**,
    and rename it **Add Value for Land Cover**, then set
