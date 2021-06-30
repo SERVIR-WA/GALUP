@@ -49,6 +49,12 @@ consider four criteria:
 - Land value per unit area
 - Current land use
 
+As it has been introduced in
+[Module 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md),
+**LUCIS-OPEN Tools for QGIS** consists of various geospatial tools to measure
+different criteria defined in a suitability analysis, such as *Distance*,
+*Density*, and *Zonal Statistics* tools.
+
 ### 1.2 Transform to a Common Suitability Scale
 
 All four criteria mentioned above affect, although in different magnitudes,
@@ -139,9 +145,10 @@ So, prior experiences with ModelBuilder would be helpful in learning the
 graphical modeler.
 However, there exist some distinctions between the mechanisms of the two.
 The first difference that you might notice is that the graphical modeler is a
-more rigid tool to configure in that you have to define
-[inputs](tinyurl.com/qgis-gm-input) and
-[workflow](https://tinyurl.com/qgis-gm-workflow) in sequence.
+more rigid tool to configure in that you have to define, in sequence,
+[inputs](https://tinyurl.com/qgis-gm-input) and
+[workflow](https://tinyurl.com/qgis-gm-workflow) consisting a series of
+algorithms (or tools).
 
 Please watch the video below created by
 [Open Source Options](https://www.youtube.com/channel/UCOSeGDrlScCNgBcN5C8nTEw)
@@ -202,7 +209,7 @@ the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
-#### 3.1.1 Datasets
+#### 3.1.1 Model Inputs
 
 In the following example, we use _Transportation Accessibility_ model to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
@@ -215,11 +222,19 @@ The datasets used are listed below:
 | 2  | primary_road.shp | vector | point | Primary road in THLD District |
 | 3  | secondary_road.shp | vector | point | Secondary road in THLD District |
 
-#### 3.1.2 Tools used in the model
+> :bulb: Note:<br>
+> Inputs are denoted by ![Input](../../../images/Input.svg) in all diagrams
+> throughout this Module (including exercises).
+
+#### 3.1.2 Model Algorithms (workflow)
 
 1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
 2. [Rescale Field Linearly](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+
+> :bulb: Note:<br>
+> Algorithms are denoted by ![Workflow](../../../images/Workflow.svg) in all
+> diagrams throughout this Module (including exercises).
 
 #### 3.1.3 Model and Model Results
 
