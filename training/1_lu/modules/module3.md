@@ -9,7 +9,7 @@
 - Learn the details and the logic behind the suitability models for
   ***Row Crops***.
 
-## 1. Land-use Suitability Modeling
+## <a id="sec1"></a>1. Land-use Suitability Modeling</a>
 
 **Suitability** is a measure of the *relative degree* to which a land unit is
 suitable for a <ins>specified purpose</ins>.
@@ -18,10 +18,18 @@ The decision on suitability is based strictly on its **current condition** and
 It neither anticipates nor requires any change for the assignment of a
 suitability score.
 Suitability modeling is the process of determining ***suitability***.
-In this module, we present a method of suitability modeling in **QGIS** using
-**LUCIS-OPEN Tools for QGIS** and the **Graphical Modeler**.
+Its output is usually presented in a **suitability map** as the example shown
+below, in which **Green** areas indicate better suitability and **Red** areas
+suggest lower suitability considering two factors: (a) *transportation access*
+and (b) *market proximity*.
 
-The **general workflow** of suitability modeling consists of three steps:
+<img src="../../../images/ApplicationMaps/aggregation_market_trans.png" alt="suitability map" width="500">
+
+> :bulb: Note:<br>
+> This "GREEN(good)-RED(bad)" symbology style is a convention that has been
+> followed since the early time of land-use suitability modeling.
+
+### The general workflow of suitability modeling
 
 1. [Define criteria](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-1-define-criteria)
 2. [Transform to a common suitability scale](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-2-transform-to-a-common-suitability-scale)
@@ -86,20 +94,30 @@ of [PyLUSAT](https://github.com/chjch/pylusat).
 
 ### 1.3 Weight the Criteria and Create a Suitability Map
 
-Before combination of the transformed values, it may be that one criterion is more important than the others. If that is the case, that criterion will be weighted more than the others. To emphasize the distinction, the transformation process described in step 2 converts the values within a criterion relative to one another. The weighting in this step defines the relative importance of each criterion to one another.
+Before adding the transformed values together, it may be that one criterion is
+more important than the others.
+If that is the case, that criterion will be weighted more than the others.
+The weighting in this step defines the relative importance of each criterion
+to one another.
 
-In our example, the weight of each criteria can be:
+In the *orchard* example, the weight of each criteria could be:
 
-- Slope: 10%
-- Distance to markets: 30%
-- Land price: 25%
-- Land use types: 35%
+- Soil permeability: ***30%***
+- Distance to major roads: ***20%***
+- Land value per unit area: ***20%***
+- Current land use: ***30%***
 
-Then, the suitability map can be created by doing symbology on the weighted combination of transformed values. The place with the higher value will be a more suitable site for the orchard.
+Now we can sum the products of each criterion and their corresponding weights
+by using
+[Weighted Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields),
+the output of which contains a **suitability score** for each land unit in the
+analysis.
+We can then visualize the result by applying an appropriate symbology to the
+output.
 
 ## 2. Introduction to QGIS Graphical Modeler
 
-The [_graphical modeler_](https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html)
+The [graphical modeler](https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html)
 ![modeler](../../../images/processingModel.svg) allows you to create complex
 models using a simple and easy-to-use interface.
 When working with a GIS, most analysis operations are not isolated, rather part
@@ -133,38 +151,29 @@ for a detailed introduction to the **Graphical Modeler**.
   <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
 </a>
 
+## 3. Modeling Suitability for Row Crops Farming
 
+In this module, we will use Row Crops Farming as an example to explore how to
+develop suitability models by connecting various **LUCIS-OPEN Tools for QGIS**
+in the **QGIS Graphical Modeler**.
+As described in <a href="#sec1">Section 1</a> of this module,
+suitability modeling starts by **defining criteria**.
+In many cases, criteria are determined by the **qualities** sustaining a
+land parcel's usefulness for a particular purpose (land use).
+Such qualities should be based upon *expert knowledge*, *official guidelines*,
+and *stakeholders' values*.
 
-## 3. Row Crops Model
+In this example, we define four criteria contributing to the suitability for
+row crops farming:
 
-In this module, we will use **LUCIS-Open Tools for QGIS** to create suitability models.
+1. Transportation accessibility
+2. Soil condition
+3. Land condition
+4. Market proximity
 
-Each IDU in the THLD area will be assigned to one of the four land uses by
-comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
-In Row Crops model, we evaluate the IDUs' suitability in growing Row Crops based
-on two objectives: physical suitability and economic suitability.
-The following figure shows the Row Crops model.
+Of the four models above, the first two are presented below, while the last two
+will be used for exercises. 
 
-<img src="../../../images/RowCrops_model.svg" alt= "RowCrops_model" width="400">
-
-In terms of physical suitability, we look for conditions in which land
-growing Row Crops can have the optimized production.
-In this objectives, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
-and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-as important criteria to determine how many IDUs in THLD district are physically
-suitable to grow Row Crops.
-In terms of economic suitability, we evaluate the economic efficiency of each IDU
-in THLD district.
-We expect the land owners who grow Row Crops spend the lowest cost on transportation.
-Therefore, we need to ensure lands growing Row Crops have shorter distance to
-primary/secondary roads and small/middle/large cities than those without growing
-Row Crops.
-To achieve that, we choose
-[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
-and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
-as criteria to evaluate how many IDUs in THLD district are economically suitable.
-
-In this module, we will introduce two models and two for exercise.
 
 ### 3.1 Transportation Accessibility
 
@@ -175,7 +184,7 @@ We assume the IDUs with higher accessibility require less transportation cost to
 deliver goods to outside.
 
 1. By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
-this model calculate the shorest distance from each IDU to the primary and
+this model calculate the shortest distance from each IDU to the primary and
 secondary roads and store the values in two different fields.
 2. Then the model use [_Rescale Field Linearly_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
 to transform values in fields to specified continuous scales (i.e., 1 to 9 scale).
@@ -186,7 +195,7 @@ the primary and secondary roads.
 You can check the _Input parameters_ of this model
 [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
 
-#### 3.1.1 Dataset
+#### 3.1.1 Datasets
 
 In the following example, we use _Transportation Accessibility_ model to measure
 the accessibility of IDUs in THLD district to the primary and secondary roads.
@@ -234,7 +243,7 @@ Then, we assign new values to the old values of the three criteria (the rule wil
 
 The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on literature in relevant agricultural fields).
 
-#### 3.2.1 Data
+#### 3.2.1 Datasets
 
 The datasets used are listed below:
 
@@ -287,4 +296,4 @@ For more information about this model, please click [here](https://github.com/SE
 
 ## 5. What's Next?
 
-Module 4 - Aggregate Results to Make Land-Use Decisions.
+Module 4 - Aggregate Results of Suitability Analyses to Make Land-Use Decisions
