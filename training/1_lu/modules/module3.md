@@ -197,18 +197,6 @@ roads.
 We assume IDUs closer to these facilities have **better accessibility** to the
 transportation network and hence require **fewer distribution costs**.
 
-1. By using [_Distance to Line Features_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features),
-this model calculate the shortest distance from each IDU to the primary and
-secondary roads and store the values in two different fields.
-2. Then the model use [_Rescale Field Linearly_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
-to transform values in fields to specified continuous scales (i.e., 1 to 9 scale).
-3. Finally, using [_Weight Sum of Fields_](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
-to multiply the rescaled fields with weighted value and sum them up,
-the model can create a index for each IDU to measure their accessibility to
-the primary and secondary roads.
-You can check the _Input parameters_ of this model
-[here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic).
-
 #### 3.1.1 Model Inputs
 
 In the following example, we use _Transportation Accessibility_ model to measure
@@ -216,11 +204,12 @@ the accessibility of IDUs in THLD district to the primary and secondary roads.
 
 The datasets used are listed below:
 
-| ID | File Name     | Data Format | Type    | Description                     |
-|----|---------------|-------------|---------|---------------------------------|
-| 1  | THLD_poly.shp | vector | polygon | IDUs in the THLD District Assembly |
-| 2  | primary_road.shp | vector | point | Primary road in THLD District |
-| 3  | secondary_road.shp | vector | point | Secondary road in THLD District |
+| ID | Input Element | Parameter Name          | Geometry Type | Data used to run the model | Description                                |
+|----|---------------|-------------------------|---------------|----------------------------|--------------------------------------------|
+| 1  | `Vector Layer`| Input Polygon           | Polygon       | *THLD_poly.shp*            | IDUs in the THLD District Assembly         |
+| 2  | `Vector Layer`| Major Roads             | Line          | *primary_road.shp*         | Primary road in THLD District              |
+| 3  | `Vector Layer`| Secondary Roads         | Line          | *secondary_road.shp*       | Secondary road in THLD District            |
+| 4  | `String`      | Weighted Value | n/a           | *0.75,0.25*                | Weights used to sum the different criteria |
 
 > :bulb: Note:<br>
 > Inputs are denoted by ![Input](../../../images/Input.svg) in all diagrams
@@ -229,34 +218,42 @@ The datasets used are listed below:
 #### 3.1.2 Model Algorithms (workflow)
 
 1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
+   is used to calculate distances between each IDU and its closest road segment
+   on both primary and secondary roads.
 2. [Rescale Field Linearly](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
+   is used to transform the distances from its original scale to the
+   **common suitability scale**, i.e., 1 to 9.
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+   is used to combine and quantify the effects on accessibility by primary
+   roads *versus* by secondary roads.
 
 > :bulb: Note:<br>
 > Algorithms are denoted by ![Workflow](../../../images/Workflow.svg) in all
 > diagrams throughout this Module (including exercises).
 
-#### 3.1.3 Model and Model Results
+#### 3.1.3 Modeling and Results
 
-The following diagram shows the structure of the
-**Transportation Accessibility** model.
+The following diagram (exported from the graphical modeler) shows the structure
+of the **Transportation Accessibility** model.
 
-|          Model         |
-|------------------------------------------|
+| Transportation Accessibility Model                                   |
+|----------------------------------------------------------------------|
 | ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
+
+The table below shows the **parameter settings** for each algorithm used in
+this model.
 
 ![TAM_tools](../../../images/m3_TransportationAcces/tools_table.svg)
 
-> :bulb: Note:<br>
-> Parameters were left as default if not mentioned in the table above.
+<sup>*</sup>
+Note: Parameters were left as default if not mentioned in the table above.
 
-|          Parameter Setting         |    Output    |
+| Model Dialog         |    Output Map    |
 |------------------------------------------|------------------------------------------|
 | <img src="../../../images/m3_TransportationAcces/ParametersSetting.png" alt= "Add data to Map Canvas" width="540">   |  <img src="../../../images/m3_TransportationAcces/Output.png" alt= "Add data to Map Canvas" width="600">   |
 
-In the output map, we used Reds to indicate transportation accessibility of IDUs
-in THLD district.
-Specifically, the darker the red the higher the traffic accessibility.
+In the output map, we used the ***Greens*** color ramp to indicate **five**
+different levels of transportation accessibility in the THLD District Assembly.
 
 #### 3.1.4 Video Tutorial
 
@@ -290,7 +287,9 @@ The datasets used are listed below:
 | 8  | SD60_100       | raster      | tiff    | Soil pH value at 60cm-100cm soil depth*   |
 | 9  | SD100_200      | raster      | tiff    | Soil pH value at 100cm-200cm soil depth*  |
 
-\*: [Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc): the soil pH value varies in different soil depth at the same location.
+<sup>*</sup>
+[Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc):
+the soil pH value varies in different soil depth at the same location.
 
 #### 3.2.2 Tools Used in the Model
 
@@ -307,19 +306,22 @@ The datasets used are listed below:
   
 For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
 
-#### 3.2.3 Model and Model Results
+#### 3.2.3 Modeling and Results
 
-The following diagram shows the structure of the **Soil Condition** model.
+The following diagram (exported from the graphical modeler) shows the structure
+of the **Soil Condition** model.
 
-|          Model         |
-|------------------------------------------|
+| Soil Condition Model                                   |
+|--------------------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
 
-![SCM_tools1](../../../images/SoilCondition/gm_setting_tbl1.svg)
-![SCM_tools2](../../../images/SoilCondition/gm_setting_tbl2.svg)
+The table below shows the **parameter settings** for each algorithm used in
+this model.
 
-> :bulb: Note:<br>
-> Parameters were left as default if not mentioned in the tables above.
+![SCM_setting](../../../images/SoilCondition/gm_setting_table.svg)
+
+<sup>*</sup>
+Note: Parameters were left as default if not mentioned in the table above.
 
 |          Parameter Setting         |    Output Map   |
 |------------------------------------------|------------------------------------------|
