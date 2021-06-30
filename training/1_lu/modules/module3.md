@@ -238,7 +238,8 @@ The datasets used are listed below:
 
 #### 3.1.3 Model and Model Results
 
-The following diagram shows the structure of the Transportation Accessibility model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
+The following diagram shows the structure of the
+**Transportation Accessibility** model.
 
 |          Model         |
 |------------------------------------------|
@@ -308,7 +309,7 @@ For more information about this model, please click [here](https://github.com/SE
 
 #### 3.2.3 Model and Model Results
 
-The following diagram shows the structure of the Soil Condition model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
+The following diagram shows the structure of the **Soil Condition** model.
 
 |          Model         |
 |------------------------------------------|
