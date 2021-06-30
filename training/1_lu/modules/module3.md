@@ -186,7 +186,7 @@ In this module, we still use *Twifo-Hemang-Lower-Denkyira* (THLD) District
 Assembly as our study area and the **Integrated Decision Units** (IDUs) that we
 have seen in the last module as the study land units.
 
-### 3.1 Transportation Accessibility
+### 3.1 Transportation Accessibility Model
 
 Since row crops are grown in large quantities, _Transportation Accessibility_
 is considered a critical factor **affecting the distribution costs** of
@@ -204,12 +204,12 @@ the accessibility of IDUs in THLD district to the primary and secondary roads.
 
 The datasets used are listed below:
 
-| ID | Input Element | Parameter Name          | Geometry Type | Data used to run the model | Description                                |
-|----|---------------|-------------------------|---------------|----------------------------|--------------------------------------------|
-| 1  | `Vector Layer`| Input Polygon           | Polygon       | *THLD_poly.shp*            | IDUs in the THLD District Assembly         |
-| 2  | `Vector Layer`| Major Roads             | Line          | *primary_road.shp*         | Primary road in THLD District              |
-| 3  | `Vector Layer`| Secondary Roads         | Line          | *secondary_road.shp*       | Secondary road in THLD District            |
-| 4  | `String`      | Weighted Value | n/a           | *0.75,0.25*                | Weights used to sum the different criteria |
+| ID | Input Element | Parameter Name  | Geometry Type | Data used to run the model | Description                                |
+|----|---------------|-----------------|---------------|----------------------------|--------------------------------------------|
+| 1  | `Vector Layer`| Input Polygon   | Polygon       | *THLD_poly.shp*            | IDUs in the THLD District Assembly         |
+| 2  | `Vector Layer`| Major Roads     | Line          | *primary_road.shp*         | Primary road in THLD District              |
+| 3  | `Vector Layer`| Secondary Roads | Line          | *secondary_road.shp*       | Secondary road in THLD District            |
+| 4  | `String`      | Weighted Value  | n/a           | *0.75,0.25*                | Weights used to sum the different criteria |
 
 > :bulb: Note:<br>
 > Inputs are denoted by ![Input](../../../images/Input.svg) in all diagrams
@@ -218,8 +218,8 @@ The datasets used are listed below:
 #### 3.1.2 Model Algorithms (workflow)
 
 1. [Distance to Line Features](https://github.com/SERVIR-WA/GALUP/wiki/Tools#distance-to-line-features)
-   is used to calculate distances between each IDU and its closest road segment
-   on both primary and secondary roads.
+   calculates distances between each IDU and its closest segments on primary
+   and secondary roads, respectively.
 2. [Rescale Field Linearly](https://github.com/SERVIR-WA/GALUP/wiki/Tools#rescale-field-linearly)
    is used to transform the distances from its original scale to the
    **common suitability scale**, i.e., 1 to 9.
@@ -261,17 +261,20 @@ different levels of transportation accessibility in the THLD District Assembly.
   <img src="../../../images/video_frames/m3_TAM.png" alt= "TAM" width="800">
 </a>
 
-### 3.2 Soil Condition
+### 3.2 Soil Condition Model
 
-Soil condition is a sub-objective of the physical condition objective. The reason that we set this as a sub-objective is that soil condition can affect the row crops plantation and production (e.g., drainage will affect the plantation of crops, and soil pH can affect the production of the crops).
+Soil attributes, such as pH value and permeability, deeply affect the
+cultivation of crops.
+Thus, the *Soil Condition* model operates on this concept in that the model
+calculates suitability based on whether (and how much) the soil qualities of a
+given area is conducive to growing crops.
+In this model, we will examine soil condition through three factors:
 
-After defining the soil condition as a sub-objective, we need to identify specific criteria. Here, in consideration of the possible criterion and the data availability of the THLD area, we identify 1) **Drainage**, 2) **Root Zone Depth**, and 3) **Soil pH** as three criteria in the model.
+- Soil depth
+- Soil pH
+- Soil permeability
 
-Then, we assign new values to the old values of the three criteria (the rule will be based on literature in relevant agricultural fields).
-
-The last step is to proceed the value combination. Before combining values, different weights will be assigned to each criteria (weight value will be based on literature in relevant agricultural fields).
-
-#### 3.2.1 Datasets
+#### 3.2.1 Model Inputs
 
 The datasets used are listed below:
 
@@ -291,20 +294,16 @@ The datasets used are listed below:
 [Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc):
 the soil pH value varies in different soil depth at the same location.
 
-#### 3.2.2 Tools Used in the Model
+#### 3.2.2 Model Algorithms (workflow)
 
-1. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
-2. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
-3. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
-
- The logic of this model is:
-
-  1. Use **Zonal Statistics** tool to calculate the mean value of raster data (three criteria consist of eight raster layers) to each IDU;
-  2. Then, use the **Reclassify Field** tool to reclassify the assigned value on each the vector data (the reclassification rule should be based on the official documents and agriculture literatures);
-  3. Finally, after iterating the two steps above for each criterion, we use the **Weight Sum of Fields** tool to calculate the final suitability. <br>
-  Note:
-  
-For more information about this model, please click [here](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical).
+1. [Zonal Statistics](https://github.com/SERVIR-WA/GALUP/wiki/Tools#zonal-statistics)
+   calculates the ***mean*** within individual IDUs for **8** raster datasets.
+2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
+   transforms to the values derived from each raster dataset to the
+   common suitability scale, i.e., 1 to 9.
+3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+   is used to combine and quantify the effects on suitability by different soil
+   attributes, i.e., depth, pH, and permeability.
 
 #### 3.2.3 Modeling and Results
 
@@ -323,7 +322,7 @@ this model.
 <sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
-|          Parameter Setting         |    Output Map   |
+| Model Dialog        |    Output Map   |
 |------------------------------------------|------------------------------------------|
 | ![PS1](../../../images/SoilCondition/pa_set.png) | ![am1](../../../images/SoilCondition/symbology_sc.png) |
 
