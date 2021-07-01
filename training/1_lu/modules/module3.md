@@ -73,7 +73,7 @@ But, to follow the convention of the
 <b><ins>1 to 9</ins></b> throughout this workshop, where 1 represents lowest
 suitability and 9 represents highest suitability.
 
-In general, there are three transformation methods:
+In general, there are three transformation methods:<a id="transformations"></a>
 
 - **Unique categories**: is **a one-to-one matching** of the criterion value to
   the suitability value and best for *nominal* and *ordinal* data.
@@ -314,6 +314,35 @@ of the **Soil Condition** model.
 |--------------------------------------------------------|
 | ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
 
+> :memo: **Some notes on reclassification and weights**
+>
+> 1. Again, the purpose of reclassification is to transform values from its
+>    original scale to the so-called **common suitability scale**.
+>    As mentioned before, there are
+>    <a href="#transformations">three methods for transformation</a>:
+>    *unique categories*, *range of classes*, and *continuous functions*.
+>    The reclassified values indicating suitability should be **defendable**
+>    and based on either *relevant literature*, *official guidelines*, or
+>    *professional expertise*.
+> 2. In the table below, all reclassifications were done by using the first
+>    transformation method, **unique categories**.
+>    The reclassified values for (1) *drainage*, (2) *pH*, and (3)
+>    *root zone depth* are based on relevant agriculture literature
+>    <a href="#ref1"><sup>[1]</sup></a>.
+> 3. The **weights** used to sum the reclassified layers are equally
+>    allocated towards the three factors, i.e., permeability (33%),
+>    depth (33%), and pH (34%).
+>    However, since pH varies at different depth of soil, the six reclassified
+>    pH-related layers **collectively share 34%** of the total weights.
+>    The 34% was then distributed over the six layers according to root depths
+>    <sup>
+>      [<a href="#ref2">2</a>, <a href="#ref3">3</a>,
+>      <a href="#ref4">4</a>, <a href="#ref5">5</a>]
+>    </sup>
+>    of the **top six crops**<a href="#ref6"><sup>[6]</sup></a> (with respect
+>    to annual yields) in the THLD District Assembly, which are *maize*,
+>    *rice*, *cassava*, *yam*, *cocoyam*, and *plantain*.
+
 The table below shows the **parameter settings** for each algorithm used in
 this model.
 
@@ -325,6 +354,12 @@ Note: Parameters were left as default if not mentioned in the table above.
 | Model Dialog        |    Output Map   |
 |------------------------------------------|------------------------------------------|
 | ![PS1](../../../images/SoilCondition/pa_set.png) | ![am1](../../../images/SoilCondition/symbology_sc.png) |
+
+#### 3.2.4 Video Tutorial
+
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/d1689e451d2c4d0eb3a6aface82e6bf41d">
+  <img src="../../../images/video_frames/m3_SCM.png" alt= "SCM" width="800">
+</a>
 
 ## 4. Write Documentation for Your Models
 
@@ -361,3 +396,24 @@ We certainly encourage you to include "Helps" for all the models you created.
 ## 6. What's Next?
 
 Module 4 - Making Land-Use Decisions using the LUCIS Framework
+
+## 7. Reference
+
+1. <a id="ref1"></a>Girmay, G., Sebnie, W., & Reda, Y. (2018). Land capability
+   classification and suitability assessment for selected crops in Gateno
+   watershed, Ethiopia. Cogent Food & Agriculture, 4(1).
+   https://doi.org/10.1080/23311932.2018.1532863
+2. <a id="ref2"></a>Grace, M. R. (1977). Cassava Processing. Rome: FAO.
+3. <a id="ref3"></a>O'SULLIVAN, J. N. (2008). Root distribution of yam
+   (Dioscorea alata) determined by strontium tracer. Experimental Agriculture,
+   44(2), 223.
+4. <a id="ref4"></a>Scaling Soil Nutrient Balances: Enabling Mesolevel
+   Applications for African Realities. (2004). Italy: Food and Agriculture
+   Organization of the United Nations.
+5. <a id="ref5"></a>Albert, S. (2017, July 27). Plantain Organic Weed Control.
+   Retrieved January 27, 2021,
+   from https://harvesttotable.com/plantain-organic-weed-control.
+6. <a id="ref6"></a>An Agenda for Jobs: Creating Prosperity and Equal
+   Opportunity for All—District Medium Term Development Plan (2018-2021)
+   (2017). *District Planning Coordinating Unit (DPCU) of the Twifo Hemang*
+   *Lower Denkyira District Assembly*.
