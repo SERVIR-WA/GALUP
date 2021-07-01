@@ -289,13 +289,10 @@ The **Inputs** used by this model are listed below:
 | 10 | `String`       | Weights for RZD, Drainage  | *0.33, 0.33, 0, 0, 0, 0.089, 0.236, 0.005* | Weights used to sum criteria        |
 
 **Data Source**:<br>
-<sup>\*</sup>
-[Soil pH data](https://tinyurl.com/w9fcrxfu) (the soil pH value varies in
-different soil depth at the same location)<br>
-<sup>\*\*</sup>
-[Root Zone Depth](https://tinyurl.com/348v7zvf)<br>
-<sup>\*\*\*</sup>
-[Soil Drainage](https://tinyurl.com/49p9tw94)
+<sup>\*</sup>[Soil pH data](https://tinyurl.com/w9fcrxfu)
+(the pH value varies at different depth of the same location on the ground)<br>
+<sup>\*\*</sup> [Root Zone Depth](https://tinyurl.com/348v7zvf)<br>
+<sup>\*\*\*</sup> [Soil Drainage](https://tinyurl.com/49p9tw94)
 
 #### 3.2.2 Model Algorithms (workflow)
 
@@ -329,7 +326,29 @@ Note: Parameters were left as default if not mentioned in the table above.
 |------------------------------------------|------------------------------------------|
 | ![PS1](../../../images/SoilCondition/pa_set.png) | ![am1](../../../images/SoilCondition/symbology_sc.png) |
 
-## 4. Exercises and Post-training Survey
+## 4. Write Documentation for Your Models
+
+It is a **virtue** to write **quality documentation** for any piece of software
+which might be used not just by yourself.
+Some developers would probably argue that the above statement is TRUE, even for
+something only you would use because you can only imagine how often you ask
+yourself the question: "*why I did this*?"
+Now, you have developed two suitability models in QGIS and you are about to
+develop two more in the **exercises** below.
+If you want to share what you created with your team, you should consider
+write documentation for those models.
+
+In QGIS Graphical Modeler, you can document your model with the
+![help editor](../../../images/QGISGUI/mActionEditHelpContent.svg)
+[**Help Editor**](https://tinyurl.com/4v5sa57j).
+You can include information like *author*, *description*,
+*input/output parameters*, *version*, and *external links* of the model.
+Simply click the `Edit model help` on the **Menu Bar** at the top of the
+graphical modeler to start editing the documentation for your model.
+This is a "***bonus***" credit for the **exercises** as well.
+We certainly encourage you to include "Helps" for all the models you created.
+
+## 5. Exercises and Post-training Survey
 
 - Please complete the
   [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m3_exercise1.md).
@@ -339,6 +358,6 @@ Note: Parameters were left as default if not mentioned in the table above.
   [survey](https://ufl.qualtrics.com/jfe/form/SV_8w547pBqD15UScm) (required).
 - Please submit your exercises [here](https://tinyurl.com/2nd8knax).
 
-## 5. What's Next?
+## 6. What's Next?
 
 Module 4 - Making Land-Use Decisions using the LUCIS Framework
