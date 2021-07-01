@@ -31,9 +31,9 @@ and (b) *market proximity*.
 
 ### The general workflow of suitability modeling
 
-1. [Define criteria](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-1-define-criteria)
-2. [Transform to a common suitability scale](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-2-transform-to-a-common-suitability-scale)
-3. [Weight the criteria and create a suitability map](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md#step-3-weight-the-criteria-and-create-a-suitability-map)
+1. [Define criteria](https://tinyurl.com/4mavut7n)
+2. [Transform to a common suitability scale](https://tinyurl.com/nmaxjnwv)
+3. [Weight the criteria and create a suitability map](https://tinyurl.com/2jptepna)
 
 ### 1.1 Define Criteria
 
@@ -199,10 +199,7 @@ transportation network and hence require **fewer distribution costs**.
 
 #### 3.1.1 Model Inputs
 
-In the following example, we use _Transportation Accessibility_ model to measure
-the accessibility of IDUs in THLD district to the primary and secondary roads.
-
-The datasets used are listed below:
+The **Inputs** used by this model are listed below:
 
 | ID | Input Element | Parameter Name  | Geometry Type | Data used to run the model | Description                                |
 |----|---------------|-----------------|---------------|----------------------------|--------------------------------------------|
@@ -276,23 +273,29 @@ In this model, we will examine soil condition through three factors:
 
 #### 3.2.1 Model Inputs
 
-The datasets used are listed below:
+The **Inputs** used by this model are listed below:
 
-| ID | File Name     | Data Format | Type    | Description                                                 |
-|----|---------------|-------------|---------|-------------------------------------------------------------|
-| 1  | THLD_poly.shp | vector      | polygon | IDUs in the THLD District Assembly |
-| 2  | RZD_THLD100   | raster      | tiff    | [Root Zone Depth](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/c77d1209-56e9-4cac-b76e-bbf6c7e3a617) |
-| 3  | Drain_THLD100 | raster      | tiff    | [Soil Drainage](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/953d0964-6746-489a-a8d1-f188595516a9)     |
-| 4  | SD0_5          | raster      | tiff    | Soil pH value at 0cm-5cm soil depth*      |
-| 5  | SD5_15         | raster      | tiff    | Soil pH value at 5cm-15cm soil depth*     |
-| 6  | SD15_30        | raster      | tiff    | Soil pH value at 15cm-30cm soil depth*    |
-| 7  | SD30_60        | raster      | tiff    | Soil pH value at 30cm-60cm soil depth*    |
-| 8  | SD60_100       | raster      | tiff    | Soil pH value at 60cm-100cm soil depth*   |
-| 9  | SD100_200      | raster      | tiff    | Soil pH value at 100cm-200cm soil depth*  |
+| ID | Input Element | Parameter Name             | Geometry Type | Data used to run the model        | Description                              |
+|----|---------------|----------------------------|---------------|-----------------------------------|------------------------------------------|
+| 1  | Vector Layer  | Input Polygon              | Polygon       | THLD_poly.shp                     | IDUs in the THLD District Assembly       |
+| 2  | Raster Layer  | Root Zone Depth            | n/a           | RZD_THLD100.tif                   | Root Zone Depth**                        |
+| 3  | Raster Layer  | Drainage                   | n/a           | Drain_THLD100.tif                 | Soil Drainage***                         |
+| 4  | Raster Layer  | Soil (0-5 cm) PH Value     | n/a           | SD0_5.tif                         | Soil pH value at 0cm-5cm soil depth*     |
+| 5  | Raster Layer  | Soil (5-15 cm) PH Value    | n/a           | SD5_15.tif                        | Soil pH value at 5cm-15cm soil depth*    |
+| 6  | Raster Layer  | Soil (15-30 cm) PH Value   | n/a           | SD15_30.tif                       | Soil pH value at 15cm-30cm soil depth*   |
+| 7  | Raster Layer  | Soil (30-60 cm) PH Value   | n/a           | SD30_60.tif                       | Soil pH value at 30cm-60cm soil depth*   |
+| 8  | Raster Layer  | Soil (60-100 cm) PH Value  | n/a           | SD60_100.tif                      | Soil pH value at 60cm-100cm soil depth*  |
+| 9  | Raster Layer  | Soil (100-200 cm) PH Value | n/a           | SD100_200.tif                     | Soil pH value at 100cm-200cm soil depth* |
+| 10 | String        | Weights for RZD, Drainage  | n/a           | 0.33,0.33,0,0,0,0.089,0.236,0.005 | Weights used to sum criteria             |
 
+**Data Source**:<br>
 <sup>*</sup>
-[Soil pH data source](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a3364e47-9229-4a6d-aed2-487fd7e4dccc):
-the soil pH value varies in different soil depth at the same location.
+[Soil pH data](https://tinyurl.com/w9fcrxfu) (the soil pH value varies in
+different soil depth at the same location)<br>
+<sup>**</sup>
+[Root Zone Depth](https://tinyurl.com/348v7zvf)<br>
+<sup>***</sup>
+[Soil Drainage](https://tinyurl.com/49p9tw94)
 
 #### 3.2.2 Model Algorithms (workflow)
 
@@ -300,7 +303,7 @@ the soil pH value varies in different soil depth at the same location.
    calculates the ***mean*** within individual IDUs for **8** raster datasets.
 2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
    transforms to the values derived from each raster dataset to the
-   common suitability scale, i.e., 1 to 9.
+   **common suitability scale**, i.e., 1 to 9.
 3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
    is used to combine and quantify the effects on suitability by different soil
    attributes, i.e., depth, pH, and permeability.
