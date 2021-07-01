@@ -275,18 +275,18 @@ In this model, we will examine soil condition through three factors:
 
 The **Inputs** used by this model are listed below:
 
-| ID | Input Element | Parameter Name             | Geometry Type | Data used to run the model        | Description                              |
-|----|---------------|----------------------------|---------------|-----------------------------------|------------------------------------------|
-| 1  | Vector Layer  | Input Polygon              | Polygon       | THLD_poly.shp                     | IDUs in the THLD District Assembly       |
-| 2  | Raster Layer  | Root Zone Depth            | n/a           | RZD_THLD100.tif                   | Root Zone Depth**                        |
-| 3  | Raster Layer  | Drainage                   | n/a           | Drain_THLD100.tif                 | Soil Drainage***                         |
-| 4  | Raster Layer  | Soil (0-5 cm) PH Value     | n/a           | SD0_5.tif                         | Soil pH value at 0cm-5cm soil depth*     |
-| 5  | Raster Layer  | Soil (5-15 cm) PH Value    | n/a           | SD5_15.tif                        | Soil pH value at 5cm-15cm soil depth*    |
-| 6  | Raster Layer  | Soil (15-30 cm) PH Value   | n/a           | SD15_30.tif                       | Soil pH value at 15cm-30cm soil depth*   |
-| 7  | Raster Layer  | Soil (30-60 cm) PH Value   | n/a           | SD30_60.tif                       | Soil pH value at 30cm-60cm soil depth*   |
-| 8  | Raster Layer  | Soil (60-100 cm) PH Value  | n/a           | SD60_100.tif                      | Soil pH value at 60cm-100cm soil depth*  |
-| 9  | Raster Layer  | Soil (100-200 cm) PH Value | n/a           | SD100_200.tif                     | Soil pH value at 100cm-200cm soil depth* |
-| 10 | String        | Weights for RZD, Drainage  | n/a           | 0.33,0.33,0,0,0,0.089,0.236,0.005 | Weights used to sum criteria             |
+| ID | Input Element  | Parameter Name             | Data Used to Run the Model        | Description                         |
+|----|----------------|----------------------------|-----------------------------------|-------------------------------------|
+| 1  | `Vector Layer` | Input Polygon              | THLD_poly.shp                     | IDUs in the THLD District Assembly  |
+| 2  | `Raster Layer` | Root Zone Depth            | RZD_THLD100.tif                   | Root Zone Depth**                   |
+| 3  | `Raster Layer` | Drainage                   | Drain_THLD100.tif                 | Soil Drainage***                    |
+| 4  | `Raster Layer` | Soil (0-5 cm) PH Value     | SD0_5.tif                         | pH value at 0cm-5cm soil depth*     |
+| 5  | `Raster Layer` | Soil (5-15 cm) PH Value    | SD5_15.tif                        | pH value at 5cm-15cm soil depth*    |
+| 6  | `Raster Layer` | Soil (15-30 cm) PH Value   | SD15_30.tif                       | pH value at 15cm-30cm soil depth*   |
+| 7  | `Raster Layer` | Soil (30-60 cm) PH Value   | SD30_60.tif                       | pH value at 30cm-60cm soil depth*   |
+| 8  | `Raster Layer` | Soil (60-100 cm) PH Value  | SD60_100.tif                      | pH value at 60cm-100cm soil depth*  |
+| 9  | `Raster Layer` | Soil (100-200 cm) PH Value | SD100_200.tif                     | pH value at 100cm-200cm soil depth* |
+| 10 | `String`       | Weights for RZD, Drainage  | 0.33,0.33,0,0,0,0.089,0.236,0.005 | Weights used to sum criteria        |
 
 **Data Source**:<br>
 <sup>\*</sup>
