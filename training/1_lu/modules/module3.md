@@ -289,12 +289,12 @@ The **Inputs** used by this model are listed below:
 | 10 | String        | Weights for RZD, Drainage  | n/a           | 0.33,0.33,0,0,0,0.089,0.236,0.005 | Weights used to sum criteria             |
 
 **Data Source**:<br>
-<sup>*</sup>
+<sup>\*</sup>
 [Soil pH data](https://tinyurl.com/w9fcrxfu) (the soil pH value varies in
 different soil depth at the same location)<br>
-<sup>**</sup>
+<sup>\*\*</sup>
 [Root Zone Depth](https://tinyurl.com/348v7zvf)<br>
-<sup>***</sup>
+<sup>\*\*\*</sup>
 [Soil Drainage](https://tinyurl.com/49p9tw94)
 
 #### 3.2.2 Model Algorithms (workflow)
