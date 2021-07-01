@@ -102,82 +102,39 @@ Dataset. The table below lists all land cover types collected in 2019:
    > Because of Q GIS work omission in this vesion, we need to order the adding
    > element by ourselves. We can give each element with sequence number when
    > we add it to the model.
-7. Click **_Algorithms_**, locate the
-   **<ins>Reclassify by table</ins>** tool under **_Raster analysis_**.
-8. Add the tool and rename it **Add Value for Land Cover**, then set
-   parameters as follows (click advanced parameters):
-   <ol type="a">
-      <li><b>Raster layer</b>: Land Cover,</li>
-      <li><b>Band number</b>: 1,</li>
-      <li><b>Reclassification table</b>: Add Value for Land Cover,</li>
-      <li><b>Output no data value</b>: -9999,</li>
-      <li><b>Range boundaries</b>: min <= value < max,</li>
-      <li><b>Use no data when no range matches value</b>: Yes,</li>
-      <li><b>Output data type</b>: Float32,</li>
-      <li>leave all other parameters as default.</li>
-   </ol>
-9. Click **_Algorithms_**, locate the
+
+   |          Parameter setting         |
+   |------------------------------------------|
+   | <img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="1000"> |
+7. Click **_Algorithms_**, Add the
+   **<ins>Reclassify by table</ins>** tool under **_Raster analysis_**,
+   and rename it **Add Value for Land Cover**, then set
+   parameters as it shows in table (click advanced parameters).
+9. Add the
    **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
-10. Add the tool and rename it **Add LC to Polygon**, then set parameters as
-    follows:
-    <ol type="a">
-       <li><b>Input layer</b>: Input layer,</li>
-       <li><b>Raster layer</b>: 'Reclassified raster' from algorithm 'Add Value fo Land Cover',</li>
-       <li><b>Types of statistics</b>: mean,</li>
-       <li><b>Output column prefix</b>: LC,</li>
-       <li><b>No data value</b>: -9999,</li>
-       <li>leave all other parameters as default.</li>
-    </ol>
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+   and rename it **Add LC to Polygon**, then set parameters.
 11. Add _Raster Layer_ and name it **4Slope**.
 12. Add two _String_, name one as **5Parameters for LCC**, and then set
     **Default value** as: 0-2,2-8,8-15,15-25,25-45; and name another one as
     **6LCC Classes**, and then set **Default value** as: 9,7,5,3,1.
 13. Remove all prefix **4**, **5**, **6** in name.
-14. Click **_Algorithms_**, locate the
+14. Add the
    **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
-15. Add the tool and rename it **Add Slope to Polygon**, then set
-    parameters as follows:
-    <ol type="a">
-       <li><b>Input layer</b>: 'Output layer' from algorithm 'Add LC to Polygon',</li>
-       <li><b>Raster layer</b>: Slope,</li>
-       <li><b>Types of statistics</b>: mean,</li>
-       <li><b>Output column prefix</b>: Slp,</li>
-       <li><b>No data value</b>: Not set,</li>
-       <li>leave all other parameters as default.</li>
-    </ol>
-16. Click **_Algorithms_**, locate the **<ins>Reclassify Field</ins>** tool
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+   and rename it **Add Slope to Polygon**, then setparameters.
+16. Add the **<ins>Reclassify Field</ins>** tool
     under **_Scripts_**
-    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
-17. Add the tool and rename it **Rec Slope Percent**, then set parameters as
-    follows:
-    <ol type="a">
-       <li><b>Input layer</b>: 'Output layer' from algorithm 'Add Slope to Polygon',</li>
-       <li><b>Field to reclassify</b>: Health_Facilities,</li>
-       <li><b>Old values</b>: Parameters for LCC,</li>
-       <li><b>New values</b>: LCC Classes,</li>
-       <li><b>No data value</b>: 255,</li>
-       <li><b>Output column name</b>: Slp_r,</li>
-       <li>leave all other parameters as default.</li>
-    </ol>
+    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+    and rename it **Rec Slope Percent**, then set parameters.
 18. Add _String_, name it as **7Weight by LC Slope**, and then set **Default value**
    as: 0.5,0.5 (these values suggest land cover and slope are equally important
    in determining the _Land Condition_ sub-objective).
 19. Remove prefix **7** in name.
-20. Click **_Algorithms_**, locate the
+20. Add the
    **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
-21. Add the tool and rename it **Weighted Sum LC & Slp**, then set
-    parameters as follows:
-    <ol type="a">
-       <li><b>Input layer</b>: 'Output layer' from algorithm 'Rec Slope Percent',</li>
-       <li><b>Fields</b>: LC_mean;Slp_r,</li>
-       <li><b>Weights</b>: Weight by LC Slop,</li>
-       <li><b>Output field name</b>: LandCondit,</li>
-       <li><b>Output layer</b>: rcrp_LandCondition,</li>
-       <li>leave all other parameters as default.</li>
-    </ol>
+   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+   and rename it **Weighted Sum LC & Slp**, then set parameters.
 22. Save the model in a folder you can find.
 23. Locate _Slope\_Percent.tif_, _iSDA\_MGRS.tif_, and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 24. In the **_Processing Toolbox_** panel, locate the
