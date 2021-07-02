@@ -50,7 +50,7 @@ leave others as default, then click **OK** for each one.
 **Weights by City Level** and type `0.6, 0.3, 0.1` for _Default value_
 market weights for **Large cities**, **Medium cities**, and **Small cities**),
 and leave others as default, then then click **OK**.
-5. Parameter settings:
+5. Parameter setting:
 
    ![m1](../../../images/PrameterSetting/m1.svg)
 <br><sup>*</sup>
