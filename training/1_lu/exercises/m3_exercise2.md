@@ -53,7 +53,7 @@ and leave others as default, then then click **OK**.
 5. Parameter settings:
 
    ![m1](../../../images/PrameterSetting/m1.svg)
-<sup>*</sup>
+<br><sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
 1. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
