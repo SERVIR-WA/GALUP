@@ -53,12 +53,10 @@ and leave others as default, then then click **OK**.
 5. Parameter settings:
 
    ![m1](../../../images/PrameterSetting/m1.svg)
-   ![m2](../../../images/PrameterSetting/m2.svg)
-    
 <sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
-6. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
+1. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
 `Run model`  on the main menu of the _Processing Modeler_ window to open the
 _Market_ model.
 7. Set the model as follows:
