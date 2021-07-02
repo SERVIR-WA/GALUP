@@ -31,6 +31,8 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
+The following diagram shows the structure of the Market model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
+
 ![marketmodelmap](../../../images/Model%20Map/Market.svg)
 
 1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and
@@ -48,15 +50,14 @@ leave others as default, then click **OK** for each one.
 **Weights by City Level** and type `0.6, 0.3, 0.1` for _Default value_
 market weights for **Large cities**, **Medium cities**, and **Small cities**),
 and leave others as default, then then click **OK**.
-5. In the **_Algorithm_** tab, add and set the parameters of the following
-tools **in sequence**.
-    |1. _<ins>Distance to Point Features</ins>_| 2. _<ins>Rescale Field Field Linearly</ins>_| 3. _<ins>Distance to Point Features</ins>_| 4. _<ins>Rescale Field Field Linearly</ins>_|
-    |------------------------|---------------------|------------------------------------|------------------------|
-    |**Description**: Distance to Large City <br> **Input layer**: select _InputPolygon_ <br> **Point layer**: select _Large cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_BC <br> **Output shapefile**: _leave this as default_ |**Description**: Res Dist to Large City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Large City'_ <br> **Field to rescale**: Dis_to_BC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_BC <br> **Output layer**: _leave this as default_|**Description**: Distance to Medium City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Large City'_ <br> **Point layer**: select _Medium cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_MC <br> **Output shapefile**: _leave this as default_ |**Description**: Res Dist to Medium City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Medium City'_ <br> **Field to rescale**: Dis_to_MC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_MC <br> **Output layer**: _leave this as default_|
+5. Parameter settings:
 
-    | 5. _<ins>Distance to Point Features</ins>_| 6. _<ins>Rescale Field Field Linearly</ins>_ | 7. _<ins>Weighted Sum of Fields</ins>_|
-    |-----------------------|------------------|------------------|
-    |**Description**: Distance to Small City <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Medium City'_ <br> **Point layer**: select _Small cities_ <br> **Distance method**: select _Euclidean_ <br> **Output data type**: select _Float_ <br> **Output column name**: Dis_to_SC <br> **Output shapefile**: _leave this as default_  |**Description**: Res Dist to Small City <br> **Input layer**: select _'Output shapefile' from algorithm 'Distance to Small City'_ <br> **Field to rescale**: Dis_to_SC <br> **Start value for rescaling**: 30000 <br> **End value for scaling**: 0 <br> **New minimum**: 1 <br> **New maximum**: 9 <br> **Output field name**: Res_D_SC <br> **Output layer**: _leave this as default_|**Description**: Weighted Sum of Fields <br> **Input layer**: select _'Output layer' from algorithm 'Res Dist to Small City'_ <br> **Fields**: Res_D_BC;Res_D_MC;Res_D_SC <br> **Weights** click the _Value_ icon, select _Model Input_, and select _Weights by City Level_ <br> **Output column name**: Market <br> **Output layer**: rcrp_Market |
+![m1](../../../images/PrameterSetting/m1.svg)
+![m2](../../../images/PrameterSetting/m2.svg)
+    
+<sup>*</sup>
+Note: Parameters were left as default if not mentioned in the table above.
+
 6. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
 `Run model`  on the main menu of the _Processing Modeler_ window to open the
 _Market_ model.
