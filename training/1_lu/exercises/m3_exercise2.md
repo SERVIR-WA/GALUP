@@ -52,8 +52,8 @@ market weights for **Large cities**, **Medium cities**, and **Small cities**),
 and leave others as default, then then click **OK**.
 5. Parameter settings:
 
-![m1](../../../images/PrameterSetting/m1.svg)
-![m2](../../../images/PrameterSetting/m2.svg)
+   ![m1](../../../images/PrameterSetting/m1.svg)
+   ![m2](../../../images/PrameterSetting/m2.svg)
     
 <sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
