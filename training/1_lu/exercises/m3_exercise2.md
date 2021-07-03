@@ -30,8 +30,6 @@ You should use the following data to finish this exercise:
 
 ## 4. Instruction
 
-The following diagram shows the structure of the Market model. Note that inputs are denoted by ![Input](../../../images/Input.svg) and  workflows (algorithms) are denoted by ![Workflow](../../../images/Workflow.svg), a style will be used across all model diagrams in this module.
-
 ![marketmodelmap](../../../images/Model%20Map/Market.svg)
 
 1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and
