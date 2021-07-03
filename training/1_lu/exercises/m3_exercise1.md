@@ -81,7 +81,7 @@ Dataset. The table below lists all land cover types collected in 2019:
 
 ## 4. Instruction
 
-|          Model         |
+|            Land Condition Model          |
 |------------------------------------------|
 | ![LCM](../../../images/Model%20Map/Land_Condition.svg) |
 
@@ -89,23 +89,19 @@ Dataset. The table below lists all land cover types collected in 2019:
    in **_Processing Toolbox_** and choose `Create New Model...`.
 2. Click **_Model Properties_** and type _Land Condition_ in **Name** and
    _Physical_ in **Group**.
-3. Add _Vector Layer_, name it **1Input layer**, and choose _Polygon_ in  **Geometry type**.
-4. Add Raster Layer and name it **2Land Cover**.
-5. Add _Matrix_, name it **3Add Value for Land Cover**, and then set table as
-   following:
-
-|          Matrix setting         |
-|------------------------------------------|
-| <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="400"> |
-6. Remove all prefix **1**, **2**, **3** in name.
+3. Add _Vector Layer Input_, name it **1_Input layer**, and choose _Polygon_ in  **Geometry type**.
    > :bulb: **A tip for remove name prefix**<br>
-   > Because of Q GIS work omission in this vesion, we need to order the adding
+   > Because of QGIS work omission in this vesion, we need to order the adding
    > element by ourselves. We can give each element with sequence number when
    > we add it to the model.
+4. Add Raster Layer and name it **2_Land Cover**.
+5. Add _Matrix_, name it **3_Add Value for Land Cover**, and then set table as
+   following:
 
-   |          Parameter setting         |
-   |------------------------------------------|
-   | <img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="1000"> |
+   <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="400">
+6. Remove all prefix **1_**, **2_**, **3_** in name.
+
+<img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="1000">
 7. Click **_Algorithms_**, Add the
    **<ins>Reclassify by table</ins>** tool under **_Raster analysis_**,
    and rename it **Add Value for Land Cover**, then set
