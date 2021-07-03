@@ -42,12 +42,12 @@ _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 the _Group_ as **Economic**.
 4. In the **_Inputs_** panel, click **_Inputs_** tab, add:
    - One _Vector Features_ parameter, and name the _Parameter name_ as
-**InputPolygon** and leave others as default, then click **OK**.
+**1_Input Polygon** and leave others as default, then click **OK**.
    - Three _Point_ parameters, and name their the _Parameter name_ as
-**Large cities**, **Medium cities**, and **Small cities** respectively, and
+**2_Large cities**, **3_Medium cities**, and **4_Small cities** respectively, and
 leave others as default, then click **OK** for each one.
    - One _String_ parameter, and name the _Description_ as
-**Weights by City Level** and type `0.6, 0.3, 0.1` for _Default value_
+**5_Weights by City Level** and type `0.6, 0.3, 0.1` for _Default value_
 market weights for **Large cities**, **Medium cities**, and **Small cities**),
 and leave others as default, then then click **OK**.
 5. Parameter setting:
@@ -56,22 +56,24 @@ and leave others as default, then then click **OK**.
 <br><sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
-1. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
+6. Edit the names of inputs, delete all the number and underscore in front of their names (e.g., edit **1_Input Polygon** to **Input Polygon**).
+
+7. Now you have finished the model, click ![st](../../../images/mActionStart.svg)
 `Run model`  on the main menu of the _Processing Modeler_ window to open the
 _Market_ model.
-7. Set the model as follows:
+8. Set the model as follows:
    - **Inputpolygon**: select _THLD\_poly_
    - **Large cities**: _LargeCity\_pt_
    - **Medium cities**: _MediumCity\_pt_
    - **Small cities**: _SmallCity\_pt_
    - Leave other prameters as default.
    - Click **Run**.
-8. Now let's setup the **Symbology** of the output layer _rcrp\_Market_.
+9. Now let's setup the **Symbology** of the output layer _rcrp\_Market_.
 Open the <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
 Symbology tab from the **Layer Properties** window. Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg) Graduated style. Specify the _Market_
 field as **Value**, then choose the _BuPu_ color ramp with 5 classes. Click **Apply**.
-9. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
-10. Export as a PDF file.
+10. Create a _Layout_ and then add _Legend_, _Scale bar_, and _North Arrow_.
+11. Export as a PDF file.
 
 ## 5.Result
 
