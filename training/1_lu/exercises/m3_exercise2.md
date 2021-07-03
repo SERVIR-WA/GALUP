@@ -58,7 +58,6 @@ The following datasets are used in the landscape condition model:
      cities), and then click **OK**.
 5. Parameter settings for each **algorithm**:<br>
    ![m1](../../../images/PrameterSetting/m1.svg)
-
 6. **Edit** inputs names, i.e., delete the prefixes (number and underscore) in
    front of their names.
 7. Now you have finished the model.
