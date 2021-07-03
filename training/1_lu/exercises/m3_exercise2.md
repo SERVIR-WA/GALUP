@@ -9,9 +9,8 @@ This exercise will practice:
 
 ## 2. Description
 
-Market is a sub-objective of the economic objective. The reason that we set
-this as a sub-objective is that the distance to market can affect the row
-crops selling and transportation fee.
+Market is a significant aspect for planting row crops because the distance to
+market can affect the row crops selling and transportation fee.
 
 **Market model** aims to evaluate the suitability of IDUs for planting row
 crops by measuring the distance between the IDU and the market places (i.e.,
