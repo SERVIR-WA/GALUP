@@ -23,7 +23,7 @@ below, in which **Green** areas indicate better suitability and **Red** areas
 suggest lower suitability considering two factors: (a) *transportation access*
 and (b) *market proximity*.
 
-<img src="../../../images/ApplicationMaps/aggregation_market_trans.png" alt="suitability map" width="500">
+<img src="../../../img/map/m3_aggregation_market_trans.png" width="500">
 
 > :bulb: Note:<br>
 > This "GREEN(good)-RED(bad)" symbology style is a convention that has been
@@ -124,7 +124,7 @@ output.
 ## 2. Introduction to QGIS Graphical Modeler
 
 The [graphical modeler](https://docs.qgis.org/3.10/en/docs/user_manual/processing/modeler.html)
-![modeler](../../../images/processingModel.svg) allows you to create complex
+![modeler](../../../img/gui/icon/processingModel.svg) allows you to create complex
 models using a simple and easy-to-use interface.
 When working with a GIS, most analysis operations are not isolated, rather part
 of a chain of operations. Using the graphical modeler, that chain of operations
@@ -155,7 +155,7 @@ Please watch the video below created by
 for a detailed introduction to the **Graphical Modeler**.
 
 <a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
-  <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
+  <img src="../../../img/timg/m3_QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
 </a>
 
 ## 3. Modeling Suitability for Row Crops Farming
@@ -209,7 +209,7 @@ The **Inputs** used by this model are listed below:
 | 4  | `String`      | Weighted Value  | n/a           | *0.75,0.25*                | Weights used to sum the different criteria |
 
 > :bulb: Note:<br>
-> Inputs are denoted by ![Input](../../../images/Input.svg) in all diagrams
+> Inputs are denoted by ![Input](../../../img/gui/menu/qgm_input.svg) in all diagrams
 > throughout this Module (including exercises).
 
 #### 3.1.2 Model Algorithms (workflow)
@@ -225,7 +225,7 @@ The **Inputs** used by this model are listed below:
    roads *versus* by secondary roads.
 
 > :bulb: Note:<br>
-> Algorithms are denoted by ![Workflow](../../../images/Workflow.svg) in all
+> Algorithms are denoted by ![Workflow](../../../img/gui/menu/qgm_algorithm.svg) in all
 > diagrams throughout this Module (including exercises).
 
 #### 3.1.3 Modeling and Results
@@ -235,19 +235,19 @@ of the **Transportation Accessibility** model.
 
 | Transportation Accessibility Model                                   |
 |----------------------------------------------------------------------|
-| ![TAM](../../../images/Model%20Map/Transportation_Accessibility.svg) |
+| ![TAM](../../../img/qgm/model/m3_Transportation_Accessibility.svg) |
 
 The table below shows the **parameter settings** for each algorithm used in
 this model.
 
-![TAM_tools](../../../images/m3_TransportationAcces/tools_table.svg)
+![TAM_tools](../../../img/qgm/algtbl/m3_transportation_accessibility_table.svg)
 
 <sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
 | Model Dialog         |    Output Map    |
 |------------------------------------------|------------------------------------------|
-| <img src="../../../images/m3_TransportationAcces/ParametersSetting.png" alt= "Add data to Map Canvas" width="540">   |  <img src="../../../images/m3_TransportationAcces/Output.png" alt= "Add data to Map Canvas" width="600">   |
+| <img src="../../../img/gui/window/m3_transportation_accessibilityPS.png" alt= "Add data to Map Canvas" width="540">   |  <img src="../../../img/map/m3_transportation_accessibility.png" alt= "Add data to Map Canvas" width="600">   |
 
 In the output map, we used the ***Greens*** color ramp to indicate **five**
 different levels of transportation accessibility in the THLD District Assembly.
@@ -255,7 +255,7 @@ different levels of transportation accessibility in the THLD District Assembly.
 #### 3.1.4 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/966ff210d6e64eb09e54d407e0cfd4231d">
-  <img src="../../../images/video_frames/m3_TAM.png" alt= "TAM" width="800">
+  <img src="../../../img/timg/m3_TAM.png" alt= "TAM" width="800">
 </a>
 
 ### 3.2 Soil Condition Model
@@ -312,7 +312,7 @@ of the **Soil Condition** model.
 
 | Soil Condition Model                                   |
 |--------------------------------------------------------|
-| ![SCM](../../../images/Model%20Map/Soil_Condition.svg) |
+| ![SCM](../../../img/qgm/model/m3_Soil_Condition.svg) |
 
 > :memo: **Some notes on reclassification and weights**
 >
@@ -346,19 +346,19 @@ of the **Soil Condition** model.
 The table below shows the **parameter settings** for each algorithm used in
 this model.
 
-![SCM_setting](../../../images/SoilCondition/gm_setting_table.svg)
+![SCM_setting](../../../img/qgm/algtbl/m3_gm_setting_table.svg)
 
 <sup>*</sup>
 Note: Parameters were left as default if not mentioned in the table above.
 
 | Model Dialog        |    Output Map   |
 |------------------------------------------|------------------------------------------|
-| ![PS1](../../../images/SoilCondition/pa_set.png) | ![am1](../../../images/SoilCondition/symbology_sc.png) |
+| ![PS1](../../../img/gui/window/m3_soil_conditionPS.png) | ![am1](../../../img/map/m3_symbology_sc.png) |
 
 #### 3.2.4 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/d1689e451d2c4d0eb3a6aface82e6bf41d">
-  <img src="../../../images/video_frames/m3_SCM.png" alt= "SCM" width="800">
+  <img src="../../../img/timg/m3_SCM.png" alt= "SCM" width="800">
 </a>
 
 ## 4. Write Documentation for Your Models
@@ -374,7 +374,7 @@ If you want to share what you created with your team, you should consider
 write documentation for those models.
 
 In QGIS Graphical Modeler, you can document your model with the
-![help editor](../../../images/QGISGUI/mActionEditHelpContent.svg)
+![help editor](../../../img/gui/icon/mActionEditHelpContent.svg)
 [**Help Editor**](https://tinyurl.com/4v5sa57j).
 You can include information like *author*, *description*,
 *input/output parameters*, *version*, and *external links* of the model.
