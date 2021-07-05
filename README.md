@@ -31,7 +31,7 @@ Analysis Tools—and the [QGIS Python API](https://qgis.org/pyqgis/3.10/).
 These tools enable land-use planners to perform suitability analysis on
 [QGIS](https://docs.qgis.org/3.10/en/docs/user_manual/preamble/foreword.html#foreword),
 an open-source GIS software application.
-![lucis_open](images/lucis_workflow.svg)
+![lucis_open](img/dgrm/lucis_workflow.svg)
 
 ## GALUP Trainings
 
@@ -57,18 +57,18 @@ We appreciate the supports from our partners below.<br>
 
 <table style="border: 0;">
   <tr> 
-    <td vlign="center" style="border: 0;"><img src="images/UF_Signature-transparent.png" width="300"></td>
-    <td vlign="center" style="border: 0;"><img src="images/cersgis-logo.png" width="125"></td>
-    <td vlign="center" style="border: 0;"><img src="images/university-of-ghana-logo-1024x948.png" width="105"></td>
-    <td vlign="center" style="border: 0;"><img src="images/LUSPA_Logo.png" width="100"></td>
+    <td vlign="center" style="border: 0;"><img src="img/logo/UF_Signature-transparent.png" width="300"></td>
+    <td vlign="center" style="border: 0;"><img src="img/logo/cersgis-logo.png" width="125"></td>
+    <td vlign="center" style="border: 0;"><img src="img/logo/university-of-ghana-logo-1024x948.png" width="105"></td>
+    <td vlign="center" style="border: 0;"><img src="img/logo/LUSPA_Logo.png" width="100"></td>
   </tr>
 </table>
 <br>
 <table>
   <tr>    
-    <td><img src="images/SERVIR_Logo.png" width="120"></td>
-    <td><img src="images/nasa.png" width="120"></td>
-    <td><img src="images/USAID_logo.png" width="260"></td>
-    <td><img src="images/crs.png" width="120"></td>
+    <td><img src="img/logo/SERVIR_Logo.png" width="120"></td>
+    <td><img src="img/logo/nasa.png" width="120"></td>
+    <td><img src="img/logo/USAID_logo.png" width="260"></td>
+    <td><img src="img/logo/crs.png" width="120"></td>
   </tr>
 </table>

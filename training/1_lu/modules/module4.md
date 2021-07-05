@@ -5,7 +5,7 @@ The **Land-Use Conflict Identification Strategy** (LUCIS) is a
 of **probable patterns** of future land use.
 The following diagram shows the general process of the LUCIS Framework.
 
-![lucis_workflow](../../../images/lucis_workflow.svg)
+![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
 #### 1.1.1 Goals
 
@@ -35,8 +35,7 @@ In Row Crops model, we evaluate the IDUs' suitability in growing Row Crops based
 on two objectives: physical suitability and economic suitability.
 The following figure shows the Row Crops model.
 
-<img src="../../../images/RowCrops_model.svg" alt= "RowCrops_model" width="400">
-
+<img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
 
 In terms of physical suitability, we look for conditions in which land
 growing Row Crops can have the optimized production.

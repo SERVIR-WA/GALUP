@@ -24,7 +24,7 @@ The following datasets are used in this exercises:
 
 - _THLD\_poly.shp_ at
   `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`.
-- _osm2020\_allrds\_THLD.shp_  at
+- _osm2020\_allrds\_THLD.shp_ at
   `GALUP-master -> training -> 1_lu -> datasets -> Primary and secondary roads in THLD District`.
 
 ## 4. Instruction

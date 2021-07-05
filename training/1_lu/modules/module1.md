@@ -40,7 +40,7 @@ this [page](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overvie
 
 Moreover, you can customize the GUI by dragging and moving _Panels_ and
 _Toolbars_ to the place you prefer (see the animation below).
-![gui_custom](../../../images/custom_gui.gif)
+![gui_custom](../../../img/gif/m1_custom_gui.gif)
 
 ### 3.1 Add Data to [_Map Canvas_](https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html)
 
@@ -59,7 +59,7 @@ to Map Canvas, as shown in below.
 
 |               Add Data to Map Canvas            |
 |:-------------------------------------------------:|
-| <img src="../../../images/AddData/AddData.png" alt= "Add data to Map Canvas" width="600"> |
+| <img src="../../../img/map/m1_AddData.png" width="600"> |
 
 </div>
 
@@ -79,7 +79,7 @@ information on features of a selected layer.
 
 |               Attribute Table           |
 |:-------------------------------------------------:|
-| <img src="../../../images/AttributeTable/attribute_table.png" alt= "Attribute_Table" width="600"> |
+| <img src="../../../img/gui/window/m1_attribute_table.png" width="600"> |
 
 </div>
 
@@ -101,7 +101,7 @@ as you are working with it.
 
 |  Single Symbology  |  Categorized Symbology |  Graduated Symbology  |
 |:------------------:|:----------------------:|:---------------------:|
-| ![basemap](../../../images/Symbology/Single.png)  | ![basemap](../../../images/Symbology/Categorized.png)  | ![basemap](../../../images/Symbology/Graduated.png)  |
+| ![basemap](../../../img/map/m1_Single.png)  | ![basemap](../../../img/map/m1_Categorized.png)  | ![basemap](../../../img/map/m1_Graduated.png)  |
 
 ### 3.4 Add a _Basemap_ to Map Canvas
 
@@ -115,18 +115,18 @@ to add basemap to Map Canvas.
 1. Open the [**Plugins**](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-managing-plugins)
 window at the _main menu toolbar_,
 and click `Manage and Install Plugins...`.
-1. Search and [install a new Plugin](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-installing-new-plugins) called **QuickMapServices**.
-2. After installation, open the **QuickMapServices Settings** window, click the
+2. Search and [install a new Plugin](https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html?#basic-fa-installing-new-plugins) called **QuickMapServices**.
+3. After installation, open the **QuickMapServices Settings** window, click the
 _More Services_ tab, and click _Get contributed pack_ to get more basemaps.
 For details, please check out this [tutorial](https://opengislab.com/blog/2018/4/15/add-basemaps-in-qgis-30).
-1. Choose one basemap from the **QuickMapServices** and add it to Map Canvas.
-   ![icons](../../../images/Basemap/web_incons.png)
+4. Choose one basemap from the **QuickMapServices** and add it to Map Canvas.
+   ![icons](../../../img/gui/menu/qms_web_icons.png)
 
 <div align="center">
 
 |                Layer with a Basemap                  |
 |:-------------------------------------------------:|
-| <img src="../../../images/Basemap/basemap_2.png" alt= "basemap" width="700"> |
+| <img src="../../../img/map/m1_basemap.png" alt= "basemap" width="700"> |
 
 </div>
 

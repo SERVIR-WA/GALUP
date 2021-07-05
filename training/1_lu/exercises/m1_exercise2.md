@@ -40,7 +40,7 @@ This exercise covers:
    - **Create a new field** with name "Pop_Den", and
    - specify the **Expression** to calculate population density using two
      fields: _Pop\_2018_ and _Area\_km2_.
-5. Save your results on the attribute table by clicking _Toggle editing mode_ ![stopediting](../../../images/AttributeTable/stopediting_icon.png) on the menu bar of the attribute table, or press _Ctrl\+E_.
+5. Save your results on the attribute table by clicking _Toggle editing mode_ ![stopediting](../../../img/gui/icon/mActionToggleEditing.svg) on the menu bar of the attribute table, or press _Ctrl\+E_.
 6. Choose the _Graduated_ symbology and the _BuPu_ color ramp with 5 classes to
    render _Pop\_Den_, the newly calculated field.
 7. Add _ESRI Gary (light)_ as a basemap.

@@ -49,7 +49,7 @@ The training will be delivered through the
 software package, training materials, and exercises. So, we ask every
 participant to get a GitHub Account which is completely free.
 
-![training_workflow](../../../images/training_workflow.svg)
+![training_workflow](../../../img/dgrm/training_workflow.svg)
 
 ### 3.1. Create a GitHub Account
 
