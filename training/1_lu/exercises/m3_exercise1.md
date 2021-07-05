@@ -74,12 +74,12 @@ For details of the classification please check the above
 
 |            Land Condition Model          |
 |------------------------------------------|
-| ![LCM](../../../images/Model%20Map/Land_Condition.svg) |
+| ![LCM](../../../img/qgm/model/Land_Condition.svg) |
 
 ### 3.1 Build the model
 
 1. Click
-   <img src="../../../images/M2E1/processingModel.svg" alt= "Model" width="20">
+   <img src="../../../img/gui/icon/processingModel.svg" alt= "Model" width="20">
    in **_Processing Toolbox_** and choose `Create New Model...`.
 2. Click **_Model Properties_** and type _Land Condition_ in **Name** and
    _Physical_ in **Group**.
@@ -92,32 +92,32 @@ For details of the classification please check the above
 4. Add a *Raster Layer* input, and name it **2_Land Cover**.
 5. Add a _Matrix_ input, and name it **3_Add Value for Land Cover**, and then
    set table as following:
-   <img src="../../../images/m3_LandCondition/Matrix.png" alt= "Matrix" width="400">
+   <img src="../../../img/gui/window/m3_e1_Matrix.png" alt= "Matrix" width="400">
 6. Remove all prefix **1_**, **2_**, **3_** in name.
-   <img src="../../../images/m3_LandCondition/Toolsettings.svg" alt= "Toolsettings" width="1000">
+   <img src="../../../img/qgm/algtbl/m3_e1_landscapecondition.svg" alt= "Toolsettings" width="1000">
 7. Click **_Algorithms_**, Add the **<ins>Reclassify by table</ins>** tool
    under **_Raster analysis_**, and rename it **Add Value for Land Cover**,
    then set parameters as it shows in table (click advanced parameters).
 8. Add the **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">,
    and rename it **Add LC to Polygon**, then set parameters.
 9.  Add _Raster Layer_ and name it **4_Slope**.
-10. Add two _String_, name one as **5Parameters for LCC**, and then set
+10. Add two _String_, name one as **5_Parameters for LCC**, and then set
     **Default value** as: 0-2,2-8,8-15,15-25,25-45; and name another one as
-    **6LCC Classes**, and then set **Default value** as: 9,7,5,3,1.
-11. Remove all prefix **4**, **5**, **6** in name.
+    **6_LCC Classes**, and then set **Default value** as: 9,7,5,3,1.
+11. Remove all prefix **4_**, **5_**, **6_** in name.
 12. Add the **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
-    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+    <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">,
     and rename it **Add Slope to Polygon**, then set parameters.
 13. Add the **<ins>Reclassify Field</ins>** tool under **_Scripts_**
-    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+    <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">,
     and rename it **Rec Slope Percent**, then set parameters.
-14. Add _String_, name it as **7Weight by LC Slope**, and then set
+14. Add _String_, name it as **7_Weight by LC Slope**, and then set
     **Default value** as 0.5,0.5 which suggests **land cover** and **slope**
     are equally important.
 15. Remove prefix **7_** in name.
 16. Add the **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
-    <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">,
+    <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">,
     and rename it **Weighted Sum LC & Slp**, then set parameters.
 17. **Save** the model in a desired location.
 
@@ -137,9 +137,9 @@ For details of the classification please check the above
 4. Click **Run**.
 5. Now let's setup the **Symbology** of the output layer.
    Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    Symbology tab from the **_Layer Properties_** window.
-   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
+   Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    Graduated style.
    Specify the _LandCondit_ field as **Value**, then choose the _Reds_ color
    ramp with 5 classes. Click **Apply**.

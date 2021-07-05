@@ -23,7 +23,7 @@ The following datasets are used in this exercises:
    **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
    **<ins>Select by Location</ins>** tool under _Scripts_
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">
    and double click to open the tool.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">

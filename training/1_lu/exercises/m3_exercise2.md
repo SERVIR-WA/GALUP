@@ -37,13 +37,13 @@ The following datasets are used in the landscape condition model:
 
 ## 3. Instruction
 
-![marketmodelmap](../../../images/Model%20Map/Market.svg)
+![marketmodelmap](../../../img/qgm/model/Market.svg)
 
 1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and
    _THLD\_poly.shp_ in the **_Browser Panel_** and add them to
    **_Map Canvas_**.
 2. In the _Menu Toolbar_, click _Processing_ and open
-   ![gm](../../../images/processingModel.svg) `Graphical Modeler...` .
+   ![gm](../../../img/gui/icon/processingModel.svg) `Graphical Modeler...` .
 3. In the **_Model Properties_** panel, name the _Name_ as **Market**, and
    the _Group_ as **Economic**.
 4. In the **_Inputs_** panel, click the **_Inputs_** tab, and **add**:
@@ -57,11 +57,11 @@ The following datasets are used in the landscape condition model:
      _Default value_ (weights for Large cities, Medium cities, and Small
      cities), and then click **OK**.
 5. Parameter settings for each **algorithm**:<br>
-   ![m1](../../../images/PrameterSetting/m1.svg)
+   ![m1](../../../img/qgm/algtbl/m3_e2_market.svg)
 6. **Edit** inputs names, i.e., delete the prefixes (number and underscore) in
    front of their names.
 7. Now you have finished the model.
-   Click ![st](../../../images/mActionStart.svg) `Run model`  on the top menu
+   Click ![st](../../../img/gui/icon/mActionStart.svg) `Run model`  on the top menu
    bar of the window to **run** the _Market_ model.
 8. Set the model as follows:
    - **Input polygon**: _THLD\_poly_.
@@ -72,9 +72,9 @@ The following datasets are used in the landscape condition model:
    - Click **Run**.
 9. Now, let's set up the **Symbology** of the output layer _rcrp\_Market_.
    Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    **Symbology** tab from the **Layer Properties** window.
-   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
+   Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    *Graduated style*.
    Specify the _Market_ field as **Value**, and then choose the _BuPu_ color
    ramp with **5** classes.

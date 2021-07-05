@@ -33,7 +33,7 @@ The following datasets are used in this exercises:
    **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
    **<ins>Density of Line Features</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
    - **Input layer**: THLD_poly,
    - **Line later**: osm2020_allrds_THLD,
@@ -42,15 +42,15 @@ The following datasets are used in this exercises:
    - leave all other parameters as default.
 4. Click **Run**.
 5. Open the **_Attribute Table_**
-   <img src="../../../images/M2E1/attributes.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/attributes.svg" alt= "AttrTbl" width="20">
    of the output layer, i.e., _RdsDenMap_, to review the calculated output
    field, _Rds\_Den_, each record of which represents the road density of each
    IDU in the THLD District Assembly.
 6. Now let's setup the **Symbology** of the output layer.
    Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    Symbology tab from the **_Layer Properties_** window.
-   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
+   Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    Graduated style.
    Specify the _Rds\_Den_ field as **Value**, then choose the _RdPu_ color ramp
    with 5 classes. Click **Apply**.
@@ -61,12 +61,12 @@ The following datasets are used in this exercises:
    <ol type="1">
       <li>
       Now, select the
-      <img src="../../../images/M2E1/rendererRuleBasedSymbol.svg" alt="rule">
+      <img src="../../../img/gui/icon/rendererRuleBasedSymbol.svg" alt="rule">
       Rule_based style in the Symbology tab.
       </li>
       <li>
       Then, click <b>Add rule</b>
-      <img src="../../../images/M2E1/symbologyAdd.svg" alt="addrule"> on the
+      <img src="../../../img/gui/icon/symbologyAdd.svg" alt="addrule"> on the
       lower left portion of the window to open <b><i>Edit Rule</i></b>.
       </li>
       <li>
@@ -74,7 +74,7 @@ The following datasets are used in this exercises:
       </li>
       <li>
       Click
-      <img src="../../../images/M2E1/mIconExpression.svg" alt= "exp" width="20">
+      <img src="../../../img/gui/icon/mIconExpression.svg" alt= "exp" width="20">
       <b>Expression</b> to open the <b><i>Expression String Builder</i></b>
       window.
       </li>
