@@ -27,7 +27,7 @@ The following datasets are used in this exercises:
 1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
    **<ins>Distance to Point Features</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: THLD_poly,</li>
@@ -41,9 +41,9 @@ The following datasets are used in this exercises:
 4. Click **Run**.
 5. Now let's setup the **Symbology** of the output layer.
    Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    Symbology tab from the **_Layer Properties_** window.
-   Select the ![graduated](../../../images/M2E1/rendererGraduatedSymbol.svg)
+   Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    Graduated style.
    Choose the [_Natural Breaks (Jenks)_](http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049).
    Specify the _HF\_Dis_ field as **Value**, then choose the _Reds_ color ramp

@@ -41,7 +41,7 @@ You should use the following data to finish this exercise:
 1. Locate _SD5\_15.tif_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
    **<ins>Zonal Statistics</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: THLD_poly,</li>
@@ -53,7 +53,7 @@ You should use the following data to finish this exercise:
    </ol>
 4. Click **Run**.
 5. Open **<ins>Reclassify Field</ins>** tool under **_Scripts_**
-   <img src="../../../images/M2E1/processingScript.svg" alt= "scripts" width="20">.
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
 6. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: SpH,</li>
@@ -67,9 +67,9 @@ You should use the following data to finish this exercise:
 7. Click **Run**.
 8. Now let's setup the **Symbology** of the output layer (_SpH\_re.shp_).
    Open the
-   <img src="../../../images/M2E1/symbology.svg" alt= "AttrTbl" width="20">
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    Symbology tab from the **_Layer Properties_** window.
-   Select the ![categorized](../../../images/M2E1/rendererCategorizedSymbol.svg)
+   Select the ![categorized](../../../img/gui/icon/rendererCategorizedSymbol.svg)
    Categorized style.
    Specify the _SpH\_re_ field as **Value**, then choose the _Greens_ color ramp
    with 3 classes. Click **Apply**.

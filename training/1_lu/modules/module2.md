@@ -60,14 +60,14 @@ The two figures below display the specific parameter settings
 
 |          Parameter Setting         |    Output Map   |
 |:------------------------------------------:|:------------------------------------------:|
-| ![PS1](../../../images/PrameterSetting/LineDensity.png) | ![am1](../../../images/ApplicationMaps/LineDen2.png) |
+| ![PS1](../../../img/gui/window/m2_linedensity_ParametersSetting.png) | ![am1](../../../img/map/m2_linedensity_Output.png) |
 
 In the output map, we used **Blues** [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer) to indicate different ranges of the line density (per square meter). Specifically, the darker the blue the higher the density of underground water veins.
 
 ### 1.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/454f67d210d843889b84dc1a1bc25f421d">
-  <img src="../../../images/video_frames/m2_den_line.png" alt= "density of line" width="800">
+  <img src="../../../img/timg/m2_den_line.png" alt= "density of line" width="800">
 </a>
 
 ## 2. Distance to Point Features
@@ -95,12 +95,12 @@ The two figures below display the specific parameter settings
 
 |          Parameter Setting         |    Output    |
 |------------------------------------------|------------------------------------------|
-| ![PS2](../../../images/PrameterSetting/DistoPoint.png) | ![am2](../../../images/ApplicationMaps/DistoP2.png) |
+| ![PS2](../../../img/gui/window/m2_distopoint_ParametersSetting.png) | ![am2](../../../img/map/m2_distopoint_Output.png) |
 
 ### 2.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/7b5a5d92d18543df8ccb5e9839d9e2ba1d">
-  <img src="../../../images/video_frames/m2_dist_pnt.png" alt= "distance to point" width="800">
+  <img src="../../../img/timg/m2_dist_pnt.png" alt= "distance to point" width="800">
 </a>
 
 ## 3. Reclassify Field
@@ -145,12 +145,12 @@ of the tool.
 
 |          Parameter Setting         |    Output   |
 |:------------------------------------------:|:------------------------------------------:|
-| ![PS3](../../../images/PrameterSetting/Reclassify.png) | ![am3](../../../images/ApplicationMaps/Reclassify2.png) |
+| ![PS3](../../../img/gui/window/m2_reclassify_ParametersSetting.png) | ![am3](../../../img/map/m2_reclassify_Output.png) |
 
 ### 3.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/4f1c71dcc1c34ee8a350bb248ffba49e1d">
-  <img src="../../../images/video_frames/m2_reclass_field.png" alt= "reclassify" width="800">
+  <img src="../../../img/timg/m2_reclass_field.png" alt= "reclassify" width="800">
 </a>
 
 ## 4. Spatial Join
@@ -196,7 +196,7 @@ The datasets used are listed below:
 The two figures below display the specific parameter settings and the output of the tool.
 |         Parameters setting     |       Output        |
 |:------------------------------:|:------------------------------------------:|
-| <img src="../../../images/m2_SpatialJoin/ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../images/m2_SpatialJoin/Output2.png" alt= "Add data to Map Canvas" width="580">   |
+| <img src="../../../img/gui/window/m2_spatialjoin_ParametersSetting.png" alt= "Add data to Map Canvas" width="600">   |  <img src="../../../img/map/m2_spatialjoin_Output.png" alt= "Add data to Map Canvas" width="580">   |
 
 In the output map,  we used Reds
 [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer)
@@ -206,7 +206,7 @@ Specifically, the darker the red the higher the number of point of interest.
 ### 4.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/0fb02ede595f4440b8f72446168f0a961d">
-  <img src="../../../images/video_frames/m2_spatial_join.png" alt= "spatial join" width="800">
+  <img src="../../../img/timg/m2_select_by_location.png" alt= "spatial join" width="800">
 </a>
 
 ## 5. Zonal Statistics
@@ -240,7 +240,7 @@ distribution of population in Ghana.
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_ZonalStatistics/ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../images/m2_ZonalStatistics/Output2.png" alt= "Add data to Map Canvas" width="530">   |
+| <img src="../../../img/gui/window/m2_zonalstats_ParametersSetting.png" alt= "Add data to Map Canvas" width="565">   |  <img src="../../../img/map/m2_zonalstats_Output.png" alt= "Add data to Map Canvas" width="530">   |
 
 In the output map, we used _Reds_
 [Graduated Color](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md#33-change-symbology-of-a-layer)
@@ -250,7 +250,7 @@ Specifically, the darker the red the higher the number of population.
 ### 5.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/ee051550edd14f4fa19238694aa215181d">
-  <img src="../../../images/video_frames/m2_zonal_stats.png" alt= "zonal stats" width="800">
+  <img src="../../../img/timg/m2_zonal_stats.png" alt= "zonal stats" width="800">
 </a>
 
 ## 6. Select by Location
@@ -279,7 +279,7 @@ within a 100-kilometer buffer of the railway line in Ghana.
 
 |         Parameters setting     |       Output        |
 |:---------------------------------------:|:---------------------------------------------:|
-| <img src="../../../images/m2_SelectbyLocation/ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../images/m2_SelectbyLocation/Output2.png" alt= "Add data to Map Canvas" width="521">   |
+| <img src="../../../img/gui/window/m2_selectbylocation_ParametersSetting.png" alt= "Add data to Map Canvas" width="570">   |  <img src="../../../img/map/m2_selectbylocation_Output.png" alt= "Add data to Map Canvas" width="521">   |
 
 In the output map, we used Green color to indicate the served area of railway
 in Ghana.
@@ -287,7 +287,7 @@ in Ghana.
 ### 6.3 Video Tutorial
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9bf6d0b1150849bc8d91e71db48625281d">
-  <img src="../../../images/video_frames/m2_select_by_location.png" alt= "select by location" width="800">
+  <img src="../../../img/timg/m2_select_by_location.png" alt= "select by location" width="800">
 </a>
 
 ## 7. Exercises and Post-training Survey
