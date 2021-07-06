@@ -156,7 +156,9 @@ for a detailed introduction to the **Graphical Modeler**.
 
 <a href="https://www.youtube.com/watch?v=eZb5VLTc9-o">
   <img src="../../../img/timg/m3_QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
-</a>
+</a><br>
+
+<br>
 
 > :books: "Test Drive" the QGIS Graphical Modeler<br>
 > Before we dive into the land-use suitability models, let's give the
