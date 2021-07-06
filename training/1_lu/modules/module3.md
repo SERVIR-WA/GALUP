@@ -158,6 +158,33 @@ for a detailed introduction to the **Graphical Modeler**.
   <img src="../../../images/video_frames/QGIS%20Model%20Builder.png" alt="GMtutorial" width="800">
 </a>
 
+> :books: "Test Drive" the QGIS Graphical Modeler<br>
+> Before we dive into the land-use suitability models, let's give the
+> </b>graphical modeler</b> a "test drive".
+> See if you can replicate the workflow presented in the video.
+> We will use two <b>algorithms</b> (tools):<br>
+> <ul>
+>   <li><a href="https://tinyurl.com/3ndzs6n8">Buffer</a>, and</li>
+>   <li><a href="https://tinyurl.com/cukvw68n">Clip by mask layer</a>.</li>
+> </ul>
+> And, the following datasets as <b>inputs</b>:
+> <ul>
+>   <li><i>Slope_Percent.tif</i> at
+>   <code>
+>     GALUP-master -> training -> 1_lu -> datasets -> Slope_Percent
+>   </code>
+>   </li>
+>   <li><i>Hydro.shp</i> at
+>   <code>
+>     GALUP-master -> training -> 1_lu -> datasets ->
+>     Underground water veins in THLD District
+>   </code>
+>   </li>
+> </ul>
+> For <i>buffer distance</i>, please use <b>200 meters</b>.
+> Please submit your model, i.e., the "*.model3" file, as the first attachment
+> along with the other two exercises below.
+
 ## 3. Modeling Suitability for Row Crops Farming
 
 In this module, we will use Row Crops Farming as an example to explore how to
