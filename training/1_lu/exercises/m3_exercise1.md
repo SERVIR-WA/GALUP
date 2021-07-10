@@ -84,11 +84,11 @@ For details of the classification please check the above
 3. Add a *Vector Layer* [input](https://tinyurl.com/qgis-gm-input), and name
    it **1_Input layer**, and choose _Polygon_ in **Geometry type**.
    > :bulb: **Why adding a prefix to the input element**<br>
-   > In  QGIS 3.10.8 version, Model Dialog will show added input elements in a
-   > sequence number or alphabet order according to their first number or
-   > initials respectively.
-   > To make input elements be shown in an expected order, this exercise gives
-   > each element with sequence number when adding it to the model. 
+   > In  QGIS 3.10.8, Model Dialogs display *input* elements in a sequence that
+   > is based on their first character's order in the
+   > [ASCII table](http://www.asciitable.com/).
+   > So, to display inputs in the desired order, we need to add a number as a
+   > prefix, e.g., "1_", in front of the input element's name.
 4. Add a *Raster Layer* input, and name it **2_Land Cover**.
 5. Add a _Matrix_ input, and name it **3_Add Value for Land Cover**, and then
    set table as following:
