@@ -7,25 +7,38 @@ The following diagram shows the general process of the LUCIS Framework.
 
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
+Goals and objectives are a hierarchical set of statements that first define
+what is to be accomplished (goal), and second, define how each accomplishment
+is to be achieved (objectives) (Carr & Zwick, 2007). Goals and objectives are
+widely used in planning and design, and are occasionally enhanced by a third
+or even fourth tier of supporting statements (sub-objectives) (Lyle, 1985; Steiner, 2000).
+
 #### 1.1.1 Goals
 
-In the LUCIS Framework, the first step is to ascertain the **goals** of .
-We need to inquire the opinions of stakeholders and separate these values into
+In the LUCIS Framework, the first step is to ascertain the **goals** of the project.
+We need to inquire the intents of stakeholders and separate their intents into
 three categories: 1) agricultural productions, 2) socioeconomic activities, and
-1) ecological functions.
+3) ecological functions.
 To be more specific, these three categories can be turned into three land uses
-correspondingly: 1) agricultural land uses, 2) urban land uses, and
-3) conservational land.
+correspondingly: 1) agricultural land uses, 2) urban land uses, and 3) conservational land.
 Therefore, the goals are to identify land use for agricultural land uses, urban
 land uses, and conservational land.
+
+For example, if one intent of the stakeholders is to develop a land-use scenarios for THLD area to accommodate the population projected for the year 2050.
+
+We can distill some goals from this intent according to the three categories: 1) agricultural productions, 2) socioeconomic activities, and 3) ecological functions. One possible goal for the agricultural productions is to plan for the agricultural land uses to increase the food production for future population growth. In terms of the socioeconomic activities, the possible goal can be that to develop more residential land uses in THLD area to solve the future housing issue. For the ecological functions, goals for protecting conservational land should be considered because normally population growth is accompanied with more pollution.
 
 #### 1.1.2 Objectives
 
 The second step is to ascertain the objectives for each goal. For agricultural land uses and urban land uses, we always consider the suitability, in which two perspectives are commonly used to derive objectives: 1) physical suitability, and 2) economic suitability. In terms of conservational land, we consider the significance of conservational land and two perspectives are commonly used: 1) existing ecological value, and 2) potential ecological value.
 
+If we continue to use the example mentioned before, for instance, we want to develop objectives for the residential land use goal to accommodate the future population growth. Considering the physical suitability aspect, one objective for physical suitability is public transportation accessibility since the pubic transit is an important amenity for residential area. As for economic suitability aspect, land price should be an objective for residential land use.
+
 #### 1.1.3 Sub-objectives
 
-In this last step, sub-objectives is the specified objectives. For example, if the the objective is to consider the physical suitability perspective (objective) of the residential land use (a goal in urban land uses), one of the sub-objectives can be that to evaluate the proximity of research areas to educational facilities.
+In this last step, sub-objectives is the specified objectives. For example, if the the objective is to consider the physical suitability perspective (objective) of the residential land use (a goal in urban land uses), one of the sub-objectives can be that to evaluate the proximity of research areas to educational facilities. Note that not all objectives are required to have sub-objectives.
+
+To continue think about the example of residential land use goal. Now we are supposed to develop specific sub-objectives for our objectives. Let's say we want to set specific sub-objectives for public transportation accessibility, the distance to public bus stops and distance to subway stations are two suitable sub-objectives. Whereas, for the land price object, it does not necessarily to have sub-objectives as land price is an objective that is already measured by price.
 
 ## 3. Row Crops Models
 
