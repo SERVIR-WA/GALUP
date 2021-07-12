@@ -122,8 +122,4 @@ To achieve that, we choose
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
 
-<<<<<<< HEAD
 ## 4. Weighting Method
-=======
-
->>>>>>> 30445251428e3bb3bfc46a7ed99509ab95e4d627
