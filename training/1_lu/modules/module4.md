@@ -106,7 +106,7 @@ We can distill some goals from this intent according to the three
 categories: 1) *agricultural productions*, 2) *socioeconomic activities*,
 and 3) *ecological functions*.
 
-| Categories               | Land use               | Possible goal                                                                     |
+| Categories               | Land use categories              | Possible goal                                                                     |
 | ------------------------ | ---------------------- | --------------------------------------------------------------------------------- |
 | Agricultural productions | Agricultural land uses | Increase the food production for future population growth                         |
 | Socioeconomic activities | Urban land uses        | Develop more residential land uses in THLD area to solve the future housing issue |
