@@ -31,7 +31,7 @@ the general process of the LUCIS Framework.
 This module will introduce **Define Goals and Objectives and Sub-objectives**
 and **Analytic Hierarchy Process (AHP)**. Dataset preparation will not be
 elaborated in this module, and recall that the suitability modeling has been
-introduced in [Module 3]().  
+introduced in Module 3.
 
 ### 1.1 Define Goals, Objectives and Sub-objectives
 
