@@ -40,39 +40,20 @@ In this last step, sub-objectives is the specified objectives. For example, if t
 
 To continue think about the example of residential land use goal. Now we are supposed to develop specific sub-objectives for our objectives. Let's say we want to set specific sub-objectives for public transportation accessibility, the distance to public bus stops and distance to subway stations are two suitable sub-objectives. Whereas, for the land price object, it does not necessarily to have sub-objectives as land price is an objective that is already measured by price.
 
+
+## 2. AHP
+The LUCIS uses Analytic Hierarchy Process (AHP) to arrange the goals,
+objectives, sub-objectives, and stakeholders in a hierarchy for two purposes.
+Firstly, AHP provides an overall view of the complex relationships inherent
+in the situation.
+Secondly, it helps the decision-maker assess whether the issues in each level
+are of the same order of magnitude so that he can compare such homogeneous
+elements accurately. 
+
+
+
+
 ## 3. Row Crops Models
-
-Each IDU in the THLD area will be assigned to one of the four land uses by
-comparing land use scores: Row Crops, Livestock, Timberland, and Urban.
-
-In Row Crops model, we evaluate the IDUs' suitability in growing Row Crops based
-on two objectives: physical suitability and economic suitability.
-The following figure shows the Row Crops model.
-
-<img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
-
-
-In terms of physical suitability, we look for conditions in which land
-growing Row Crops can have the optimized production.
-In this objectives, we consider [_Land Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
-and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-as important criteria to determine how many IDUs in THLD district are physically
-suitable to grow Row Crops.
-
-
-In terms of economic suitability, we evaluate the economic efficiency of each IDU
-in THLD district.
-We expect the land owners who grow Row Crops spend the lowest cost on transportation.
-Therefore, we need to ensure lands growing Row Crops have shorter distance to
-primary/secondary roads and small/middle/large cities than those without growing
-Row Crops.
-To achieve that, we choose
-[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
-and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
-as criteria to evaluate how many IDUs in THLD district are economically suitable.
-
-
-
 
 The intent of the row crops model is to identify lands most suitable for growing row crops.
 The suitability of the land to grow row crops depends on two aspects: whether this land has relatively appropriate physical conditions to optimize the production; and how much development or transportation costs it can save compared with others.
@@ -85,18 +66,18 @@ In terms of physical suitability, we look for conditions in which land
 growing Row Crops can have the optimized production.
 In this objectives, we consider [_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-as important criteria to determine how many IDUs in THLD district are physically
-suitable to grow Row Crops.
+as important criteria to determine how many IDUs in THLD district are physically suitable to grow Row Crops.
 
-In terms of economic suitability, we evaluate the economic efficiency of each IDU
-in THLD district.
+In terms of economic suitability, we evaluate the economic efficiency of each IDU in THLD district.
 We expect the land owners who grow Row Crops spend the lowest cost on transportation.
 Therefore, we need to ensure lands growing Row Crops have shorter distance to
-primary/secondary roads and small/middle/large cities than those without growing
-Row Crops.
+primary/secondary roads and small/middle/large cities than those without growing Row Crops.
 To achieve that, we choose
 [_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
+
+
+
 
 
