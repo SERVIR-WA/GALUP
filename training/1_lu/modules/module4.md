@@ -117,7 +117,7 @@ and 3) *ecological functions*.
 We use the goal in *Socioeconomic activities*, which is **Develop more
 residential land uses in THLD area to solve the future population growth**, as
 an example. The possible objectives and sub-objectives are represented in the
-following figure:
+following chart:
 
 ![goal_obj_sub](../../../img/qgm/algtbl/m4_Goal_obj_sub.svg)
 
