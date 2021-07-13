@@ -119,7 +119,7 @@ residential land uses in THLD area to solve the future population growth**, as
 an example. The possible objectives and sub-objectives are represented in the
 following chart:
 
-![goal_obj_sub](../../../img/qgm/algtbl/m4_Goal_obj_sub.svg)
+<img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="600">
 
 We want to develop objectives for the residential land use goal to accommodate
 the future population growth. Considering the physical suitability aspect,
