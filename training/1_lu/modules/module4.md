@@ -24,10 +24,9 @@ the general process of the LUCIS Framework.
 ### The general workflow of LUCIS
 
 1. [Define goals, objectives, and sub-objectives]()
-2. [Define sub-objectives](https://tinyurl.com/2jptepna)
-3. Dataset Preparation
-4. [Suitability Modeling]()
-5. [Analytic Hierarchy Process (AHP)]()
+2. Dataset Preparation
+3. [Suitability Modeling]()
+4. [Analytic Hierarchy Process (AHP)]()
 
 This module will introduce **Define Goals and Objectives and Sub-objectives**
 and **Analytic Hierarchy Process (AHP)**. Dataset preparation will not be
