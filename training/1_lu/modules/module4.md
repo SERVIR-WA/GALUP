@@ -169,10 +169,9 @@ an example. The possible objectives and sub-objectives are represented in the
 following chart and the hierarchy relationship between goal, objectives and
 sub-objectives is denoted by the following figure:
 
-|          Parameter Setting         |    Output Map   |
+ |  Goal, Objectives, Sub-objectives Chart         |    Hierarchy Figure   |
 |:------------------------------------------:|:------------------------------------------:|
-| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="400">
- | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="400"> |
+| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="500"> | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="500"> |
 
 > :bulb: Note:<br>
 > The goal, objectives, and sub-objectives are denoted by the numbers in the
