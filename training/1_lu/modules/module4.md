@@ -167,15 +167,15 @@ We use the goal in *Socioeconomic activities*, which is **Develop more
 residential land uses in THLD area to solve the future housing issue**, as
 an example. The possible objectives and sub-objectives are represented in the
 following chart and the hierarchy relationship between goal, objectives and
-sub-objectives is denoted by the following figure:
+sub-objectives is denoted by the following map:
 
- |  Goal, Objectives, Sub-objectives Chart         |    Hierarchy Figure   |
+ |  Goal, Objectives, Sub-objectives        |    Hierarchy Map   |
 |:------------------------------------------:|:------------------------------------------:|
-| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="500"> | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="500"> |
+| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> |
 
 > :bulb: Note:<br>
 > The goal, objectives, and sub-objectives are denoted by the numbers in the
-> hierarchy figure.
+> hierarchy map.
 
 We want to develop objectives for the residential land use goal to accommodate
 the future population growth. Considering the physical suitability aspect,
