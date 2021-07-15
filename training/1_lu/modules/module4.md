@@ -169,7 +169,7 @@ an example. The possible objectives and sub-objectives are represented in the
 following chart and the hierarchy relationship between goal, objectives and
 sub-objectives is denoted by the following map:
 
- |  Goal, Objectives, Sub-objectives1        |    Hierarchy Map   |
+ |  Goal, Objectives, Sub-objectives        |    Hierarchy Map   |
 |:------------------------------------------:|:------------------------------------------:|
 | <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> |
 
