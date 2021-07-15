@@ -10,18 +10,68 @@
 
 In the planning process, when planners make land-use decisions, the common
 problem is the **land-use conflicts** caused by the different values and
-motivations of the stakeholder groups that represent the interests of the
-three land-use categories.
+motivations of the stakeholder groups that represent the interests of the three
+land-use categories: 1) **agricultural land uses**, 2) **urban land uses**,
+and 3) **conservational land use**.
 
 To solve the **land-use conflict** problem, planners will refer to
 the **Land-Use Conflict Identification Strategy** (LUCIS) which is a
 ***goal-driven*** GIS model that produces a <ins>spatial representation</ins>
-of **probable patterns** of future land use. The following diagram shows
-the general process of the LUCIS Framework.
+of **probable patterns** of future land use.
 
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
-### The general workflow of LUCIS
+The diagram above shows the general process of the LUCIS Framework. In this
+framework, planners will first inquire **the values or interests of
+stakeholders**. Agriculture stakeholders might include members of the local
+farm bureau or a cattlemen and ranchers group. Urban development
+stakeholders might include representatives of the homebuilders and real
+estate associations. Conservation interests might be represented by members
+of locally active conservation organizations.
+
+Next, planners will define **goals** by sorting out these values and interests
+into three categories (*agricultural productions*, *socioeconomic activities*,
+and *ecological functions*) which match three land uses categories respectively: **agricultural land uses**, **urban land uses**, and **conservational land**).
+
+Then, after having goals, different **objectives** according to different
+land-use goals will be developed to help to accomplish the goals. Generally,
+for **agricultural** and **urban land uses**, we always consider two
+objectives:
+
+- Physical suitability
+- Economic suitability
+
+In terms of **conservational land**, we consider the significance of
+conservational land and two objectives are commonly used:
+
+- Existing ecological value
+- Potential ecological value
+
+**Sub-objectives** are a group of statements that can help to evaluate the
+objective. Single utility assignment will be conducted in sub-objectives.
+Utility values are the units by which suitability is measured or assigned.
+The assignment of utility values for individual features in a single layer
+of spatial data, the foundation upon which GIS suitability modeling rests,
+is called a **single utility assignment (SUA)**. The assignment of utility
+values that represent the suitability of particular features in a data layer
+for a single distinct purpose is accomplished by the GIS analyst, experts
+in the field, or stakeholders.
+
+Data preparation will be conducted according to the data requirements of
+**Sub-objectives**.
+
+**Analytic Hierarchy Process (AHP)** is used to decide the preference of goals,
+objectives, or sub-objectives by arranging them and stakeholders in a hierarchy
+and doing paired comparisons. AHP process will turn suitability to preference
+when choices are made about the relative weights of the goals within a
+category. The advantages of the AHP method are its simplicity and its potential
+to support participation by a wide range of individuals, including experts,
+community leaders, the general public, and other stakeholders.
+
+Finally, in the last step, after we getting the preference results from AHP,
+we can identify the land-use conflict areas by using normalized and collapsed preference values.
+
+### LUCIS Workflow:
 
 1. [Define goals, objectives, and sub-objectives](https://tinyurl.com/wtm9ddj2)
 2. Dataset Preparation
@@ -38,7 +88,7 @@ introduced in Module 3.
 ![hierarchy_workflow](../../../img/dgrm/lucis_hierarchy_workflow.svg)
 
 As shown in the figure above, **Goals**, **Objectives** and **Sub-objectives**
-are a hierarchical set of statements, they are defined in LUCIS as follows:
+are a hierarchical set of structure, they are defined in LUCIS as follows:
 
 1. Goals: describe what is to be accomplished;
 2. Objectives: describe how each accomplishment is to be achieved;
@@ -52,14 +102,14 @@ productions*, 2) *socioeconomic activities*, and 3) *ecological functions*.
 To define a goal, we need to:
 
 1. Inquire the intents of stakeholders;
-2. Sort out the intents into agricultural productions, socioeconomic
-   activities, and ecological functions.
+2. Sort out the intents into three land-use categories.
 
 Specifically, these three categories will be turned into three land uses
 categories correspondingly: 1) **agricultural land uses**,
-2) **urban land uses**, and 3) **conservational land use**. In other words,
+2) **urban land uses**, and 3) **conservational land**. In other words,
 we will make sure our goal fall into these three land-use categories (e.g.,
-to develop commercial land use for emerging industries in a city).
+to develop commercial land use for emerging industries in
+a city).
 
 In real world setting, a broad range of time and effort is normally devoted
 to the development of goals, but it is well worth to spend time on defining
@@ -78,8 +128,8 @@ objectives:
 - Physical suitability
 - Economic suitability
 
-In terms of conservational land, we consider the significance of conservational
-land and two objectives are commonly used:
+In terms of **conservational land**, we consider the significance of
+conservational land and two objectives are commonly used:
 
 - Existing ecological value
 - Potential ecological value
@@ -107,18 +157,26 @@ and 3) *ecological functions*.
 
 | Categories               | Land use categories              | Possible goal                                                                     |
 | ------------------------ | ---------------------- | --------------------------------------------------------------------------------- |
-| Agricultural productions | Agricultural land uses | Increase the food production for future population growth                         |
-| Socioeconomic activities | Urban land uses        | Develop more residential land uses in THLD area to solve the future housing issue |
-| Ecological functions     | Conservational land    | Protect conservational land                                                       |
+| Agricultural productions | Agricultural land uses | Increase the food production for future population growth.                         |
+| Socioeconomic activities | Urban land uses        | Develop more residential land uses in THLD area to solve the future housing issue. |
+| Ecological functions     | Conservational land    | Protect conservational land.                                                       |
 
-#### 1.2.2 Define Objectives and sub
+#### 1.2.2 Define Objectives and Sub-objectives
 
 We use the goal in *Socioeconomic activities*, which is **Develop more
-residential land uses in THLD area to solve the future population growth**, as
+residential land uses in THLD area to solve the future housing issue**, as
 an example. The possible objectives and sub-objectives are represented in the
-following chart:
+following chart and the hierarchy relationship between goal, objectives and
+sub-objectives is denoted by the following figure:
 
-<img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="600">
+|          Parameter Setting         |    Output Map   |
+|:------------------------------------------:|:------------------------------------------:|
+| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="400">
+ | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="400"> |
+
+> :bulb: Note:<br>
+> The goal, objectives, and sub-objectives are denoted by the numbers in the
+> hierarchy figure.
 
 We want to develop objectives for the residential land use goal to accommodate
 the future population growth. Considering the physical suitability aspect,
