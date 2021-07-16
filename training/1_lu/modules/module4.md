@@ -129,8 +129,18 @@ the future population growth. Considering the physical suitability aspect,
 we have four sub-objectives. For the economic objective, we have five
 sub-objectives.
 
+<<<<<<< HEAD
 ## 2. AHP
 The LUCIS uses Analytic Hierarchy Process (AHP) to arrange the goals,
+=======
+## 2. Analytic Hierarchy Process
+
+The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Analytic_hierarchy_process&oldid=1026677776)
+(AHP) is a structured technique for organizing and analyzing complex decisions,
+which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
+
+The LUCIS uses AHP to arrange the goals,
+>>>>>>> cb45b117ea9f68fa5c3f16e7d6ba7eb0a5924930
 objectives, sub-objectives, and stakeholders in a hierarchy for two purposes:
 1. AHP provides an overall view of the complex relationships inherent
    in the situation.
@@ -142,12 +152,13 @@ When advising how vital agricultural productions, socioeconomic activities,
 and ecological functions are in a district, the decision-making process usually
 involves five stakeholders to determine the land use developing direction of
 the future.
-These stakeholders include farmers, property developers, local government,
-non-governmental organizations (NGOs), and the central government.
+These stakeholders include five people representing the farmer,
+the property developer, the government official,
+the Non-Governmental Organization (NGO), and the homeowner.
 The decision-making intends to decide the preference of three land-use types:
 agricultural land uses, urban land uses, and conservational land.
 
-<img src="../../../img/dgrm/" alt= "RowCrops_model" width="400">
+<img src="../../../img/dgrm/lucis_AHP_structure.svg" alt= "RowCrops_model" width="650">
 
 The first step of AHP is to structure the intention as a hierarchy.
 In the first level is the overall goal of land-use preferences.
@@ -172,57 +183,51 @@ Then, the pairwise values (1–9) are entered in the cells of five matrices.
 >  This is why paired comparisons in combination with
 >  the hierarchical structure are useful in deriving measurement.
 
+<img src="../../../img/qgm/algtbl/m4_ahp_Intensityofimportance.svg" alt= "RowCrops_model" width="600">
+
 Again, the matrices contain the judgments of the stakeholders involved.
 To understand the judgments, a brief description of
-each stakeholder's interests is shown below.
+each stakeholder's interests is shown below:
+1. Farmer wants to protect farmers' interests in the district to have enough
+   agricultural land for future development.
+2. Property developer wants to optimize developers' interests during
+   the process of developing the district that he wish urban land could
+   occupy the most of area in the district.
+3. Government official wishes to develop more urban land in the future,
+   whereas the straitened financial circumstances do not allow government to
+   sustain too many urban infrastructure facilities.
+4. Non-governmental organization (NGO) has focused on forest conservation in
+   this district for many years, and NGO wishes the conservation land could
+   cover more closed forests.
+5. Homeowner wants to have more convenient transportation and better
+   living condition.
+   However, he indicates that agricultural land is equally important as
+   urban land since many residents are taking agricultural production for
+   a living.
 
-Farmers want to protect their interests in the district to have enough
-agricultural land for future development. Therefore, farmers would like
+Therefore, the five stakeholders would like
 to assign land-use suitability for each purpose as follows:
 
-Property developers want to optimize their interests during the process of
-developing the district that they wish urban land could occupy the most of area
-in the district.
-Therefore, property developers would like to assign land-use suitability
-for each purpose as follows:
+<img src="../../../img/qgm/algtbl/m4_ahp_localprioritytable.svg" alt= "RowCrops_model" width="800">
 
-The local government wishes to develop more urban land in the future,
-whereas their straitened financial circumstances do not allow them to
-sustain too many urban infrastructure facilities.
-Therefore, the local government would like to assign land-use suitability for
-each purpose as follows:
-
-The non-governmental organization (NGO) has focused on forest conservation in
-this district for many years, and they wish the conservation land could
-cover more closed forests.
-Therefore, the NGO would like to assign land-use suitability for each purpose
-as follows:
-
-The central government predicts this district will have relatively
-large population growth in the future, and they wish to introduce
-manufacturing industries funded by foreign investment in this district.
-The central government believes this district demands more urban land
-in the future.
-Therefore, the central government would like to assign land-use suitability
-for each purpose as follows:
-
-
-The third step is to establish the composite or global priorities of the houses.
+The third step is to establish the global priorities of
+the suitable land use preference.
 In this case, opinions from each stakeholder are viewed as equally important.
 When arranging the elements in the second level into a matrix and comparing
 them one by one for the relative importance of the elements concerning
 the overall goal, each of the five stakeholders will receive
 the same priority of 20%.
 
+<img src="../../../img/qgm/algtbl/m4_ahp_prioritytable.svg" alt= "RowCrops_model" width="700">
 
 The table lays out the local priorities of land-use types with respect to
 each stakeholder in a matrix and multiply each column of vectors by
 the priority of the corresponding stakeholder and add across each row
-which results in the desired vector of land-ues importance dgree in the table. 
-
-
-
-
+which results in the desired vector of land-ues importance dgree in the table.
+In this case, Urban land use had the largest priority of land development in
+this district.
+Agricultural land use was less desirable than urban land use, and
+Conservation land was the least important in the three land-use types.
 
 ## 3. Row Crops Models
 
