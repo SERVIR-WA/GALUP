@@ -186,7 +186,7 @@ sub-objectives.
 
 The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Analytic_hierarchy_process&oldid=1026677776)
 (AHP) is a structured technique for organizing and analyzing complex decisions,
-which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "RowCrops_model" width="80">.
+which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
 
 The LUCIS uses AHP to arrange the goals,
 objectives, sub-objectives, and stakeholders in a hierarchy for two purposes:
@@ -200,12 +200,13 @@ When advising how vital agricultural productions, socioeconomic activities,
 and ecological functions are in a district, the decision-making process usually
 involves five stakeholders to determine the land use developing direction of
 the future.
-These stakeholders include farmers, property developers, local government,
-non-governmental organizations (NGOs), and the central government.
+These stakeholders include five people representing the farmer,
+the property developer, the government official,
+the Non-Governmental Organization (NGO), and the homeowner.
 The decision-making intends to decide the preference of three land-use types:
 agricultural land uses, urban land uses, and conservational land.
 
-<img src="../../../img/dgrm/lucis_AHP_structure.svg" alt= "RowCrops_model" width="550">
+<img src="../../../img/dgrm/lucis_AHP_structure.svg" alt= "RowCrops_model" width="650">
 
 The first step of AHP is to structure the intention as a hierarchy.
 In the first level is the overall goal of land-use preferences.
@@ -230,51 +231,32 @@ Then, the pairwise values (1–9) are entered in the cells of five matrices.
 >  This is why paired comparisons in combination with
 >  the hierarchical structure are useful in deriving measurement.
 
-<img src="../../../img/qgm/algtbl/m4_ahp_Intensityofimportance.svg" alt= "RowCrops_model" width="500">
+<img src="../../../img/qgm/algtbl/m4_ahp_Intensityofimportance.svg" alt= "RowCrops_model" width="600">
 
 Again, the matrices contain the judgments of the stakeholders involved.
 To understand the judgments, a brief description of
-each stakeholder's interests is shown below.
+each stakeholder's interests is shown below:
+1. Farmer wants to protect farmers' interests in the district to have enough
+   agricultural land for future development.
+2. Property developer wants to optimize developers' interests during
+   the process of developing the district that he wish urban land could
+   occupy the most of area in the district.
+3. Government official wishes to develop more urban land in the future,
+   whereas the straitened financial circumstances do not allow government to
+   sustain too many urban infrastructure facilities.
+4. Non-governmental organization (NGO) has focused on forest conservation in
+   this district for many years, and NGO wishes the conservation land could
+   cover more closed forests.
+5. Homeowner wants to have more convenient transportation and better
+   living condition.
+   However, he indicates that agricultural land is equally important as
+   urban land since many residents are taking agricultural production for
+   a living.
 
-Farmer wants to protect farmers' interests in the district to have enough
-agricultural land for future development. Therefore, farmer would like
+Therefore, the five stakeholders would like
 to assign land-use suitability for each purpose as follows:
 
-<img src="../../../img/qgm/algtbl/m4_ahp_farmer.svg" alt= "RowCrops_model" width="250">
-
-Property developer wants to optimize developers' interests during the process of
-developing the district that he wish urban land could occupy the most of area
-in the district.
-Therefore, property developers would like to assign land-use suitability
-for each purpose as follows:
-
-<img src="../../../img/qgm/algtbl/m4_ahp_propertydeveloper.svg" alt= "RowCrops_model" width="250">
-
-Government official wishes to develop more urban land in the future,
-whereas the straitened financial circumstances do not allow government to
-sustain too many urban infrastructure facilities.
-Therefore, the local government would like to assign land-use suitability for
-each purpose as follows:
-
-<img src="../../../img/qgm/algtbl/m4_ahp_government.svg" alt= "RowCrops_model" width="250">
-
-The non-governmental organization (NGO) has focused on forest conservation in
-this district for many years, and NGO wishes the conservation land could
-cover more closed forests.
-Therefore, the NGO would like to assign land-use suitability for each purpose
-as follows:
-
-<img src="../../../img/qgm/algtbl/m4_ahp_NGO.svg" alt= "RowCrops_model" width="250">
-
-Homeowner wants to have more convenient transportation and better
-living condition.
-However, he indicates that agricultural land is equally important as
-urban land since many residents are taking agricultural production for
-a living.
-Therefore, the homeowner would like to assign land-use suitability for
-each purpose as follows:
-
-<img src="../../../img/qgm/algtbl/m4_ahp_homeowner.svg" alt= "RowCrops_model" width="250">
+<img src="../../../img/qgm/algtbl/m4_ahp_localprioritytable.svg" alt= "RowCrops_model" width="800">
 
 The third step is to establish the global priorities of
 the suitable land use preference.
