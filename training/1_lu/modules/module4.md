@@ -14,10 +14,17 @@ motivations of the stakeholder groups that represent the interests of the three
 land-use categories: 1) **agricultural land uses**, 2) **urban land uses**,
 and 3) **conservational land use**.
 
-To solve the **land-use conflict** problem, planners will refer to
+To identify the **land-use conflicts**, planners will refer to
 the **Land-Use Conflict Identification Strategy** (LUCIS) which is a
 ***goal-driven*** GIS model that produces a <ins>spatial representation</ins>
 of **probable patterns** of future land use.
+
+### LUCIS Workflow:
+
+1. [Define goals, objectives, and sub-objectives](https://tinyurl.com/wtm9ddj2)
+2. Dataset Preparation
+3. [Suitability Modeling](https://tinyurl.com/yxvmhy68)
+4. [Analytic Hierarchy Process (AHP)]()
 
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
@@ -31,7 +38,7 @@ of locally active conservation organizations.
 
 Next, planners will define **goals** by sorting out these values and interests
 into three categories (*agricultural productions*, *socioeconomic activities*,
-and *ecological functions*) which match three land uses categories respectively: **agricultural land uses**, **urban land uses**, and **conservational land**).
+and *ecological functions*) which match three land uses categories respectively: **agricultural land uses**, **urban land uses**, and **conservational land**.
 
 Then, after having goals, different **objectives** according to different
 land-use goals will be developed to help to accomplish the goals. Generally,
@@ -62,7 +69,7 @@ Data preparation will be conducted according to the data requirements of
 
 **Analytic Hierarchy Process (AHP)** is used to decide the preference of goals,
 objectives, or sub-objectives by arranging them and stakeholders in a hierarchy
-and doing paired comparisons. AHP process will turn suitability to preference
+and doing paired comparisons. AHP will turn suitability to preference
 when choices are made about the relative weights of the goals within a
 category. The advantages of the AHP method are its simplicity and its potential
 to support participation by a wide range of individuals, including experts,
@@ -71,74 +78,10 @@ community leaders, the general public, and other stakeholders.
 Finally, in the last step, after we getting the preference results from AHP,
 we can identify the land-use conflict areas by using normalized and collapsed preference values.
 
-### LUCIS Workflow:
-
-1. [Define goals, objectives, and sub-objectives](https://tinyurl.com/wtm9ddj2)
-2. Dataset Preparation
-3. [Suitability Modeling](https://tinyurl.com/yxvmhy68)
-4. [Analytic Hierarchy Process (AHP)]()
-
 This module will introduce **Define Goals and Objectives and Sub-objectives**
 and **Analytic Hierarchy Process (AHP)**. Dataset preparation will not be
 elaborated in this module, and recall that the suitability modeling has been
 introduced in Module 3.
-
-### 1.1 Define Goals, Objectives and Sub-objectives
-
-![hierarchy_workflow](../../../img/dgrm/lucis_hierarchy_workflow.svg)
-
-As shown in the figure above, **Goals**, **Objectives** and **Sub-objectives**
-are a hierarchical set of structure, they are defined in LUCIS as follows:
-
-1. Goals: describe what is to be accomplished;
-2. Objectives: describe how each accomplishment is to be achieved;
-3. Sub-objectives: supporting statements for goals and objectives.
-
-#### 1.1.1 Goal
-
-In the LUCIS Framework, the first step is to define the **goals** of the
-project. Three categories are employed to find the goal: 1) *agricultural
-productions*, 2) *socioeconomic activities*, and 3) *ecological functions*.
-To define a goal, we need to:
-
-1. Inquire the intents of stakeholders;
-2. Sort out the intents into three land-use categories.
-
-Specifically, these three categories will be turned into three land uses
-categories correspondingly: 1) **agricultural land uses**,
-2) **urban land uses**, and 3) **conservational land**. In other words,
-we will make sure our goal fall into these three land-use categories (e.g.,
-to develop commercial land use for emerging industries in
-a city).
-
-In real world setting, a broad range of time and effort is normally devoted
-to the development of goals, but it is well worth to spend time on defining
-explicit goals.
-
-#### 1.1.2 Objective
-
-After we have goals, we need to develop the objectives for each goal. As
-described by its definition, objectives are set to describe how each goal is
-to be achieved. Since three land uses categories are used in LUCIS, we use
-different objectives for each land use category.
-
-For **agricultural** and **urban land uses**, we always consider two
-objectives:
-
-- Physical suitability
-- Economic suitability
-
-In terms of **conservational land**, we consider the significance of
-conservational land and two objectives are commonly used:
-
-- Existing ecological value
-- Potential ecological value
-
-#### 1.1.3 Sub-objective
-
-Generally, sub-objectives are a group of statements that can help to
-evaluate the objective. Note that **not** all objectives are required to
-have sub-objectives if the objective is self-evident.
 
 ### 1.2 Example
 
@@ -149,17 +92,22 @@ workflow of defining **Goals**, **Objectives** and **Sub-objectives** in LUCIS.
 
 As a planner, first we need to ask the intents of stakeholders. Let's say one
 intent of the stakeholders is to <ins>***develop a land-use scenarios for THLD
-area to accommodate the population projected for the year 2050***</ins>.
+area to accommodate the population projected for the year 2035***</ins>.
 
-We can distill some goals from this intent according to the three
-categories: 1) *agricultural productions*, 2) *socioeconomic activities*,
-and 3) *ecological functions*.
+<img src="../../../img/plot/THLD_pop2035_projection.svg" alt= "pop_pro" width="800">
 
-| Categories               | Land use categories              | Possible goal                                                                     |
-| ------------------------ | ---------------------- | --------------------------------------------------------------------------------- |
-| Agricultural productions | Agricultural land uses | Increase the food production for future population growth.                         |
-| Socioeconomic activities | Urban land uses        | Develop more residential land uses in THLD area to solve the future housing issue. |
-| Ecological functions     | Conservational land    | Protect conservational land.                                                       |
+We can distill a goal from this intent for *socioeconomic activities*. As
+shown in the THLD Area Population Projection by 2035 chart above, the two
+dotted lines are two scenarios representing the upper limit and lower limit of
+the population projection by 2035 respectively. The middle solid line is
+the general scenario which indicates that there would be 71,060 people in THLD
+area.
+Therefore, one possible goal is to **develop more residential land uses in THLD
+area to solve the future housing issue**.
+
+| Categories              | Land use categories     | Possible goal                                                                      |
+| ----------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
+| Socioeconomic activities | Urban land uses | Develop more residential land uses in THLD area to solve the future housing issue. |
 
 #### 1.2.2 Define Objectives and Sub-objectives
 
@@ -182,6 +130,10 @@ the future population growth. Considering the physical suitability aspect,
 we have four sub-objectives. For the economic objective, we have five
 sub-objectives.
 
+<<<<<<< HEAD
+## 2. AHP
+The LUCIS uses Analytic Hierarchy Process (AHP) to arrange the goals,
+=======
 ## 2. Analytic Hierarchy Process
 
 The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Analytic_hierarchy_process&oldid=1026677776)
@@ -189,6 +141,7 @@ The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Anal
 which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
 
 The LUCIS uses AHP to arrange the goals,
+>>>>>>> cb45b117ea9f68fa5c3f16e7d6ba7eb0a5924930
 objectives, sub-objectives, and stakeholders in a hierarchy for two purposes:
 1. AHP provides an overall view of the complex relationships inherent
    in the situation.
