@@ -100,7 +100,8 @@ We can distill a goal from this intent for *socioeconomic activities*. As
 shown in the THLD Area Population Projection by 2035 chart above, the two
 dotted lines are two scenarios representing the upper limit and lower limit of
 the population projection by 2035 respectively. The middle solid line is
-the general scenario. we can see there would be 71,060 people in THLD area.
+the general scenario which indicates that there would be 71,060 people in THLD
+area.
 Therefore, one possible goal is to **develop more residential land uses in THLD
 area to solve the future housing issue**.
 
