@@ -258,6 +258,11 @@ to assign land-use suitability for each purpose as follows:
 
 <img src="../../../img/qgm/algtbl/m4_ahp_localprioritytable.svg" alt= "RowCrops_model" width="800">
 
+After getting the five matrics of judgments,
+[Compute AHP Weights](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights)
+in LUCIS-OPEN tools will be used to calculate local priorities for
+each of the matrics.
+
 The third step is to establish the global priorities of
 the suitable land use preference.
 In this case, opinions from each stakeholder are viewed as equally important.
