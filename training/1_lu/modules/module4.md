@@ -94,7 +94,7 @@ As a planner, first we need to ask the intents of stakeholders. Let's say one
 intent of the stakeholders is to <ins>***develop a land-use scenarios for THLD
 area to accommodate the population projected for the year 2035***</ins>.
 
-<img src="../../../img/plot/THLD_pop2035_projection.svg" alt= "pop_pro" width="500">
+<img src="../../../img/plot/THLD_pop2035_projection.svg" alt= "pop_pro" width="800">
 
 We can distill a goal from this intent for *socioeconomic activities*. As
 shown in the THLD Area Population Projection by 2035 chart above, the two
