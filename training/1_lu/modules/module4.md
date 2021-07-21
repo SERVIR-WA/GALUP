@@ -130,7 +130,6 @@ the future population growth. Considering the physical suitability aspect,
 we have four sub-objectives. For the economic objective, we have five
 sub-objectives.
 
-<<<<<<< HEAD
 ## 2. AHP
 The LUCIS uses Analytic Hierarchy Process (AHP) to arrange the goals,
 =======
@@ -141,7 +140,6 @@ The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Anal
 which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
 
 The LUCIS uses AHP to arrange the goals,
->>>>>>> cb45b117ea9f68fa5c3f16e7d6ba7eb0a5924930
 objectives, sub-objectives, and stakeholders in a hierarchy for two purposes:
 1. AHP provides an overall view of the complex relationships inherent
    in the situation.
