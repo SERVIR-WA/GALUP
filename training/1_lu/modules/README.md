@@ -1,4 +1,4 @@
-# Workshop #1: Land-Use Suitability Analysis with QGIS Tools
+# Workshop 1: Land-Use Suitability Analysis with QGIS Tools
 
 ### Goal:
 
