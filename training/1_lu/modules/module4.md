@@ -29,8 +29,8 @@ conflicts in different land-use categories and carefully addressing them.
 The diagram below shows the general process of the LUCIS Framework.
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
-&#x2666; First, planners meet with the _stakeholders_ of the project
-and ask them about their **values and opinions**.
+:small_blue_diamond: First, planners meet with the _stakeholders_ of the
+project and ask them about their **values and opinions**.
 As mentioned before, the stakeholders here are <ins>groups of people</ins>
 whose interests fall into one of the **three land-use categories**, i.e.,
 agriculture, conservation, and urban space.
@@ -41,9 +41,9 @@ homebuilders and real estate associations.
 Conservation interests might be represented by members of locally active
 conservation organizations, or non-governmental organization (NGO).
 
-&#x2666; Second, the _values_ and _interests_ are carefully sorted to develop
-a **_three-tire hierarchical structure_** formed by _goals_, _objectives_, and
-_sub-objectives_.
+:small_blue_diamond: Second, the _values_ and _interests_ are carefully sorted
+to develop a **_three-tire hierarchical structure_** formed by _goals_,
+_objectives_, and _sub-objectives_.
 
 1. <ins>Goals</ins> are directly distilled from the stakeholders' interests in
    three general purposes—_agricultural productions_,
@@ -68,14 +68,14 @@ _sub-objectives_.
    Here, _utility values_ are the units by which suitability is measured, i.e.,
    a value ranged from 1 to 9 indicating lowest to highest suitability.
 
-&#x2666; Then, dataset preparation will be conducted according to the data
-requirements for modeling **sub-objectives**.
+:small_blue_diamond: Then, dataset preparation will be conducted according to
+the data requirements for modeling **sub-objectives**.
 
-&#x2666; The **Analytic Hierarchy Process** (AHP), a Multi-Criteria Decision
-Making (MCDM) algorithm, is chosen by LUCIS to merge results from the bottom to
-the top of the hierarchical structure of LUCIS.
+:small_blue_diamond: The **Analytic Hierarchy Process** (AHP), a Multi-Criteria
+Decision Making (MCDM) algorithm, is chosen by LUCIS to merge results from the
+bottom to the top of the hierarchical structure of LUCIS.
 
-&#x2666; Finally, after deriving the overall suitability for urban,
+:small_blue_diamond: Finally, after deriving the overall suitability for urban,
 agriculture, and conservation, the suitability values are transformed into
 **preferences**.
 Each land unit will have a specific combination of the collapsed preference
