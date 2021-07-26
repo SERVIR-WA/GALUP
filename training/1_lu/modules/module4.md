@@ -1,89 +1,88 @@
 # Module 4 - Making Land-Use Decisions using the LUCIS Framework
 
-**What will you learn from this module?**
+Table of Contents
 
-- Understand the framework of LUCIS,
-- Get to know the AHP,
-- Learn more weights assignment methods in land-use decisions.
+- [Module 4 - Making Land-Use Decisions using the LUCIS Framework](#module-4---making-land-use-decisions-using-the-lucis-framework)
+  - [1. The LUCIS Philosophy](#1-the-lucis-philosophy)
+    - [1.1 The LUCIS workflow](#11-the-lucis-workflow)
+    - [1.2 An example of the hierarchical structure of LUCIS](#12-an-example-of-the-hierarchical-structure-of-lucis)
+      - [1.1.1 Define Goals](#111-define-goals)
+      - [1.2.2 Define Objectives and Sub-objectives](#122-define-objectives-and-sub-objectives)
+  - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
 
 ## 1. The LUCIS Philosophy
 
-In the planning process, when planners make land-use decisions, the common
-problem is the **land-use conflicts** caused by the different values and
-motivations of the stakeholder groups that represent the interests of the three
-land-use categories: 1) **agricultural land uses**, 2) **urban land uses**,
-and 3) **conservational land use**.
+When making land-use decisions in a planning process, a common situation faced
+by planners is the **land-use conflicts** arisen from the different values and
+motivations of the stakeholder groups who are interested in one of the three
+broad land-use categories: (1) **_agricultural_** land uses, (2) **_urban_**
+land uses, and (3) **_conservation_** land.
+The **Land-Use Conflict Identification Strategy** (LUCIS) is a
+_goal-driven GIS model_ based on the theories of suitability analysis
+introduced in [Module 3](module3.md).
+LUCIS aims at producing a _spatial representation_ of
+<ins>probable patterns</ins> of future land-use scenario by identifying
+conflicts in different land-use categories and carefully addressing them.
 
-To identify the **land-use conflicts**, planners will refer to
-the **Land-Use Conflict Identification Strategy** (LUCIS) which is a
-***goal-driven*** GIS model that produces a <ins>spatial representation</ins>
-of **probable patterns** of future land use.
+### 1.1 The LUCIS workflow
 
-### LUCIS Workflow:
-
-1. [Define goals, objectives, and sub-objectives](https://tinyurl.com/wtm9ddj2)
-2. Dataset Preparation
-3. [Suitability Modeling](https://tinyurl.com/yxvmhy68)
-4. [Analytic Hierarchy Process (AHP)]()
-
+The diagram below shows the general process of the LUCIS Framework.
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
-The diagram above shows the general process of the LUCIS Framework. In this
-framework, planners will first inquire **the values or interests of
-stakeholders**. Agriculture stakeholders might include members of the local
-farm bureau or a cattlemen and ranchers group. Urban development
-stakeholders might include representatives of the homebuilders and real
-estate associations. Conservation interests might be represented by members
-of locally active conservation organizations.
+&#x2666; First, planners meet with the _stakeholders_ of the project
+and ask them about their **values and opinions**.
+As mentioned before, the stakeholders here are <ins>groups of people</ins>
+whose interests fall into one of the **three land-use categories**, i.e.,
+agriculture, conservation, and urban space.
+For example, agricultural stakeholders might include members of the local
+farm bureau or a cattlemen and ranchers group.
+Urban development stakeholders might include representatives of the
+homebuilders and real estate associations.
+Conservation interests might be represented by members of locally active
+conservation organizations, or non-governmental organization (NGO).
 
-Next, planners will define **goals** by sorting out these values and interests
-into three categories (*agricultural productions*, *socioeconomic activities*,
-and *ecological functions*) which match three land uses categories respectively: **agricultural land uses**, **urban land uses**, and **conservational land**.
+&#x2666; Second, the _values_ and _interests_ are carefully sorted to develop
+a **_three-tire hierarchical structure_** formed by _goals_, _objectives_, and
+_sub-objectives_.
 
-Then, after having goals, different **objectives** according to different
-land-use goals will be developed to help to accomplish the goals. Generally,
-for **agricultural** and **urban land uses**, we always consider two
-objectives:
+1. <ins>Goals</ins> are directly distilled from the stakeholders' interests in
+   three general purposes—_agricultural productions_,
+   _socioeconomic activities_, and _ecological functions_—which, in turn,
+   correspond to the three broad land-use categories: **_agricultural_** land
+   uses, **_urban_** land uses, and **_conservational_** land.
+2. <ins>Objectives</ins> are defined to help accomplish individual goals.
+   - For **_agricultural_** and **_urban_** land uses, we usually conceptualize
+     objectives through two perspectives:
+      - Physical suitability
+      - Economic suitability
+   - For **_conservation_** land, we focus on the ecological significance of
+     the land from two aspects:
+      - Existing ecological value
+      - Potential ecological value
+3. <ins>Sub-objectives</ins> are a group of statements that can help assess
+   their respective _objectives_, which are the base analytical units of the
+   LUCIS framework.
+   The modeling of sub-objective is referred to as
+   **_Single Utility Assignment_** (SUA), the assignment of utility values for
+   individual features in a single layer of spatial data.
+   Here, _utility values_ are the units by which suitability is measured, i.e.,
+   a value ranged from 1 to 9 indicating lowest to highest suitability.
 
-- Physical suitability
-- Economic suitability
+&#x2666; Then, dataset preparation will be conducted according to the data
+requirements for modeling **sub-objectives**.
 
-In terms of **conservational land**, we consider the significance of
-conservational land and two objectives are commonly used:
+&#x2666; The **Analytic Hierarchy Process** (AHP), a Multi-Criteria Decision
+Making (MCDM) algorithm, is chosen by LUCIS to merge results from the bottom to
+the top of the hierarchical structure of LUCIS.
 
-- Existing ecological value
-- Potential ecological value
+&#x2666; Finally, after deriving the overall suitability for urban,
+agriculture, and conservation, the suitability values are transformed into
+**preferences**.
+Each land unit will have a specific combination of the collapsed preference
+values, _1_ (low), _2_ (medium), and _3_ (high), which are used to identify
+area of potential land-use conflicts.
 
-**Sub-objectives** are a group of statements that can help to evaluate the
-objective. Single utility assignment will be conducted in sub-objectives.
-Utility values are the units by which suitability is measured or assigned.
-The assignment of utility values for individual features in a single layer
-of spatial data, the foundation upon which GIS suitability modeling rests,
-is called a **single utility assignment (SUA)**. The assignment of utility
-values that represent the suitability of particular features in a data layer
-for a single distinct purpose is accomplished by the GIS analyst, experts
-in the field, or stakeholders.
-
-Data preparation will be conducted according to the data requirements of
-**Sub-objectives**.
-
-**Analytic Hierarchy Process (AHP)** is used to decide the preference of goals,
-objectives, or sub-objectives by arranging them and stakeholders in a hierarchy
-and doing paired comparisons. AHP will turn suitability to preference
-when choices are made about the relative weights of the goals within a
-category. The advantages of the AHP method are its simplicity and its potential
-to support participation by a wide range of individuals, including experts,
-community leaders, the general public, and other stakeholders.
-
-Finally, in the last step, after we getting the preference results from AHP,
-we can identify the land-use conflict areas by using normalized and collapsed preference values.
-
-This module will introduce **Define Goals and Objectives and Sub-objectives**
-and **Analytic Hierarchy Process (AHP)**. Dataset preparation will not be
-elaborated in this module, and recall that the suitability modeling has been
-introduced in Module 3.
-
-### 1.2 Example
+### 1.2 An example of the hierarchical structure of LUCIS
 
 In this section, we will use an example of THLD area to illustrate the
 workflow of defining **Goals**, **Objectives** and **Sub-objectives** in LUCIS.
@@ -117,9 +116,9 @@ an example. The possible objectives and sub-objectives are represented in the
 following chart and the hierarchy relationship between goal, objectives and
 sub-objectives is denoted by the following map:
 
- |  Goal, Objectives, Sub-objectives        |    Hierarchy Map   |
-|:------------------------------------------:|:------------------------------------------:|
-| <img src="../../../img/qgm/algtbl/m4_Goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> | <img src="../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg" alt= "goal_obj_sub" width="800"> |
+|  Goal, Objectives, Sub-objectives |    Hierarchy Map   |
+|:---------------------------------:|:------------------:|
+| ![goal_obj_sub](../../../img/qgm/algtbl/m4_Goal_obj_sub.svg) | ![hierarchy](../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg) |
 
 > :bulb: Note:<br>
 > The goal, objectives, and sub-objectives are denoted by the numbers in the
@@ -130,17 +129,17 @@ the future population growth. Considering the physical suitability aspect,
 we have four sub-objectives. For the economic objective, we have five
 sub-objectives.
 
-## 2. AHP
-The LUCIS uses Analytic Hierarchy Process (AHP) to arrange the goals,
-=======
 ## 2. Analytic Hierarchy Process
 
-The [Analytic Hierarchy Process](https://en.wikipedia.org/w/index.php?title=Analytic_hierarchy_process&oldid=1026677776)
-(AHP) is a structured technique for organizing and analyzing complex decisions,
-which is based on the solution of <img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
+The [Analytic Hierarchy Process](https://tinyurl.com/4bs2xxmm) (AHP) is a
+structured technique for organizing and analyzing complex decisions, which is
+based on the solution of an
+[eigenvalue equation](https://tinyurl.com/e3s5xxuy):
+<img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80">.
 
 The LUCIS uses AHP to arrange the goals,
 objectives, sub-objectives, and stakeholders in a hierarchy for two purposes:
+
 1. AHP provides an overall view of the complex relationships inherent
    in the situation.
 2. AHP helps the decision-maker assess whether the issues in each level
@@ -175,18 +174,20 @@ Thus there will be five 3 X 3 matrices of judgments since there are
 five elements in level 2, and 3 land-use types to be pairwise compared
 for each element.
 Then, the pairwise values (1–9) are entered in the cells of five matrices.
->  :bulb: **Why judgments are given in the form of paired comparisons**<br>
->  The most effective way to concentrate judgment is to take a pair of
->  elements and compare them on a single property without concern for other
->  properties or other elements.
->  This is why paired comparisons in combination with
->  the hierarchical structure are useful in deriving measurement.
+
+> :bulb: **Why judgments are given in the form of paired comparisons**<br>
+> The most effective way to concentrate judgment is to take a pair of
+> elements and compare them on a single property without concern for other
+> properties or other elements.
+> This is why paired comparisons in combination with
+> the hierarchical structure are useful in deriving measurement.
 
 <img src="../../../img/qgm/algtbl/m4_ahp_Intensityofimportance.svg" alt= "RowCrops_model" width="600">
 
 Again, the matrices contain the judgments of the stakeholders involved.
 To understand the judgments, a brief description of
 each stakeholder's interests is shown below:
+
 1. Farmer wants to protect farmers' interests in the district to have enough
    agricultural land for future development.
 2. Property developer wants to optimize developers' interests during
@@ -204,15 +205,15 @@ each stakeholder's interests is shown below:
    urban land since many residents are taking agricultural production for
    a living.
 
-Therefore, the five stakeholders would like
-to assign land-use suitability for each purpose as follows:
+Therefore, the five stakeholders would like to assign land-use suitability for
+each purpose as follows:
 
 <img src="../../../img/qgm/algtbl/m4_ahp_localprioritytable.svg" alt= "RowCrops_model" width="800">
 
-After getting the five matrics of judgments,
+After getting the five matrices of judgments,
 [Compute AHP Weights](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights)
 in LUCIS-OPEN tools will be used to calculate local priorities for
-each of the matrics.
+each of the matrices.
 
 The third step is to establish the global priorities of
 the suitable land use preference.
@@ -230,35 +231,9 @@ the priority of the corresponding stakeholder and add across each row
 which results in the desired vector of land-ues importance dgree in the table.
 In this case, Urban land use had the largest priority of land development in
 this district.
-Agricultural land use was less desirable than urban land use, and
-Conservation land was the least important in the three land-use types.
+Agricultural land use was less desirable than urban land use, and Conservation
+land was the least important in the three land-use types.
 
-## 3. Row Crops Models
-
-The intent of the row crops model is to identify lands most suitable for growing row crops.
-The suitability of the land to grow row crops depends on two aspects: whether this land has relatively appropriate physical conditions to optimize the production; and how much development or transportation costs it can save compared with others.
-Therefore, this model set up two objectives, physical suitability and economic suitability, for measuring the success of choosing a suitable land.
-The following figure shows the Row Crops model.
-
-<img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
-
-In terms of physical suitability, we look for conditions in which land
-growing Row Crops can have the optimized production.
-In this objectives, we consider [_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
-and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-as important criteria to determine how many IDUs in THLD district are physically suitable to grow Row Crops.
-
-In terms of economic suitability, we evaluate the economic efficiency of each IDU in THLD district.
-We expect the land owners who grow Row Crops spend the lowest cost on transportation.
-Therefore, we need to ensure lands growing Row Crops have shorter distance to
-primary/secondary roads and small/middle/large cities than those without growing Row Crops.
-To achieve that, we choose
-[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
-and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
-as criteria to evaluate how many IDUs in THLD district are economically suitable.
-
-
-
-## 4. Weighting Method
-
-
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/395c68b11a7d487b9bbdd1f6b10a477a1d">
+  <img src="../../../img/timg/m4_ahp.png" alt="ahp video" width="800">
+</a><br>
