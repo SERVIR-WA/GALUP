@@ -18,6 +18,10 @@ Ashanti, Eastern and Central Regions in Ghana, the project aims to build local
 capacity in the region regarding remote sensing and GIS, and transfer the land
 use planning framework for continued planning.
 
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/af9fff7909d6460991b329e41970d71a1d">
+  <img src="img/timg/galup_intro.png" alt="GALUP intro" width="800">
+</a><br>
+
 ## About the Land Use Planning Framework
 
 The planning framework GALUP proposed is based on the Land-Use Identification
