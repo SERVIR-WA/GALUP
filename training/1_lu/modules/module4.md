@@ -6,7 +6,6 @@ Table of Contents
   - [1. The LUCIS Philosophy](#1-the-lucis-philosophy)
     - [1.1 The LUCIS workflow](#11-the-lucis-workflow)
     - [1.2 An example of the hierarchical structure of LUCIS](#12-an-example-of-the-hierarchical-structure-of-lucis)
-      - [1.2.2 Define Objectives and Sub-objectives](#122-define-objectives-and-sub-objectives)
   - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
   - [3. Exercise](#3-exercise)
 
@@ -86,11 +85,10 @@ area of potential land-use conflicts.
 
 This section presents a concrete example of LUCIS's hierarchical structure,
 i.e., **goals**, **objectives** and **sub-objectives**.
-
-As a planner, first we need to ask the intents of stakeholders.
-Let's say one intent of the stakeholders is to <ins>***develop a land-use
-scenarios for THLD area to accommodate the population projected for the year
-2035***</ins>.
+The most critical component of a land-use plan is that it must
+<ins>accommodate the projected population growth</ins>.
+In this example, we will use the THLD District Assembly and look at the
+projected population in year 2035.
 
 <img src="../../../img/plot/THLD_pop2035_projection.svg" alt= "pop_pro" width="800">
 
@@ -98,28 +96,20 @@ scenarios for THLD area to accommodate the population projected for the year
 > M. L. (2020). _LandScan 2019_. Oak Ridge National Laboratory.
 > https://landscan.ornl.gov/
 
-We can distill a goal from this intent for *socioeconomic activities*. As
-shown in the THLD Area Population Projection by 2035 chart above, the two
-dotted lines are two scenarios representing the upper limit and lower limit of
-the population projection by 2035 respectively. The middle solid line is
-the general scenario which indicates that there would be 71,060 people in THLD
-area.
-Therefore, one possible goal is to **develop more residential land uses in THLD
-area to solve the future housing issue**.
+We can distill a **goal** from this intent for *socioeconomic activities*.
+As shown in the THLD Area Population Projection by 2035 chart above, the two
+dotted lines are two scenarios representing the upper and lower
+_confidence interval_ of the population projection by 2035.
+The middle solid line is the general scenario which indicates that there would
+be 71,060 people in THLD area.
+Therefore, the goal is to develop more residential land uses in the
+THLD area to _address the housing demands_.
 
-| Categories              | Land use categories     | Possible goal                                                                      |
-| ----------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
-| Socioeconomic activities | Urban land uses | Develop more residential land uses in THLD area to solve the future housing issue. |
+The **objectives** and **sub-objectives** are specified in the following table
+and the hierarchy relationship between goal, objectives and sub-objectives is
+shown by the following diagram:
 
-#### 1.2.2 Define Objectives and Sub-objectives
-
-We use the goal in *Socioeconomic activities*, which is **Develop more
-residential land uses in THLD area to solve the future housing issue**, as
-an example. The possible objectives and sub-objectives are represented in the
-following chart and the hierarchy relationship between goal, objectives and
-sub-objectives is denoted by the following map:
-
-|  Goal, Objectives, Sub-objectives |    Hierarchy Map   |
+|  Goal, Objectives, Sub-objectives |    Hierarchy Diagram   |
 |:---------------------------------:|:------------------:|
 | ![goal_obj_sub](../../../img/dgrm/m4_goal_obj_sub_example.svg) | ![hierarchy](../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg) |
 
@@ -128,9 +118,9 @@ sub-objectives is denoted by the following map:
 > hierarchy map.
 
 We want to develop objectives for the residential land use goal to accommodate
-the future population growth. Considering the physical suitability aspect,
-we have four sub-objectives. For the economic objective, we have five
-sub-objectives.
+the future population growth.
+Considering the physical suitability aspect, we have four _sub-objectives_.
+For the economic objective, we have five _sub-objectives_.
 
 ## 2. Analytic Hierarchy Process
 
