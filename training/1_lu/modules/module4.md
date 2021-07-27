@@ -30,10 +30,10 @@ The diagram below shows the general process of the LUCIS Framework.
 ![lucis_workflow](../../../img/dgrm/lucis_workflow.svg)
 
 :small_blue_diamond: First, planners meet with the _stakeholders_ of the
-project and ask them about their **values and opinions**.
+project and ask them about their **values** and **opinions**.
 As mentioned before, the stakeholders here are <ins>groups of people</ins>
-whose interests fall into one of the **three land-use categories**, i.e.,
-agriculture, conservation, and urban space.
+whose interests fall into one of the three land-use categories, i.e.,
+_agriculture_, _conservation_, and _urban space_.
 For example, agricultural stakeholders might include members of the local
 farm bureau or a cattlemen and ranchers group.
 Urban development stakeholders might include representatives of the
@@ -77,7 +77,7 @@ bottom to the top of the hierarchical structure of LUCIS.
 
 :small_blue_diamond: Finally, after deriving the overall suitability for urban,
 agriculture, and conservation, the suitability values are transformed into
-**preferences**.
+**preferences**.`
 Each land unit will have a specific combination of the collapsed preference
 values, _1_ (low), _2_ (medium), and _3_ (high), which are used to identify
 area of potential land-use conflicts.
