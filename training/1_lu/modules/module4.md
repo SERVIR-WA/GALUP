@@ -95,6 +95,10 @@ area to accommodate the population projected for the year 2035***</ins>.
 
 <img src="../../../img/plot/THLD_pop2035_projection.svg" alt= "pop_pro" width="800">
 
+> Rose, A. N., McKee, J. J., Sims, K. M., Bright, E. A., Reith, A. E., & Urban,
+> M. L. (2020). LandScan 2019 (2019 RI-global). Oak Ridge National Laboratory
+> SE   - July 1, 2020. https://landscan.ornl.gov/
+
 We can distill a goal from this intent for *socioeconomic activities*. As
 shown in the THLD Area Population Projection by 2035 chart above, the two
 dotted lines are two scenarios representing the upper limit and lower limit of
@@ -118,7 +122,7 @@ sub-objectives is denoted by the following map:
 
 |  Goal, Objectives, Sub-objectives |    Hierarchy Map   |
 |:---------------------------------:|:------------------:|
-| ![goal_obj_sub](../../../img/qgm/algtbl/m4_Goal_obj_sub.svg) | ![hierarchy](../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg) |
+| ![goal_obj_sub](../../../img/dgrm/m4_goal_obj_sub_example.svg) | ![hierarchy](../../../img/dgrm/m4_hierarchy_goal_obj_sub.svg) |
 
 > :bulb: Note:<br>
 > The goal, objectives, and sub-objectives are denoted by the numbers in the
