@@ -22,10 +22,10 @@ particular land-use purpose.
 
 ## 1. Modules
 
-1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
-2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md)
-3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
-4. Module 4 - Making Land-Use Decisions using the LUCIS Framework
+1. [Module 1 - Software and Data Preparation](module1.md)
+2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](module2.md)
+3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](module3.md)
+4. [Module 4 - Making Land-Use Decisions using the LUCIS Framework](module4.md)
 
 ## 2. Schedule
 
