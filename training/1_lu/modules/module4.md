@@ -9,6 +9,8 @@ Table of Contents
       - [1.1.1 Define Goals](#111-define-goals)
       - [1.2.2 Define Objectives and Sub-objectives](#122-define-objectives-and-sub-objectives)
   - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
+  - [3. Row Crops Models](#3-row-crops-models)
+  - [4. Weighting Method](#4-weighting-method)
 
 ## 1. The LUCIS Philosophy
 
@@ -241,3 +243,55 @@ land was the least important in the three land-use types.
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/395c68b11a7d487b9bbdd1f6b10a477a1d">
   <img src="../../../img/timg/m4_ahp.png" alt="ahp video" width="800">
 </a><br>
+
+## 3. Row Crops Models
+
+The intent of the row crops model is to identify lands most suitable for growing row crops.
+The suitability of the land to grow row crops depends on two aspects: whether this land has relatively appropriate physical conditions to optimize the production; and how much development or transportation costs it can save compared with others.
+Therefore, this model set up two objectives, physical suitability and economic suitability, for measuring the success of choosing a suitable land.
+The following figure shows the Row Crops model.
+
+<img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
+
+In terms of physical suitability, we look for conditions in which land
+growing Row Crops can have the optimized production.
+In this objectives, we consider [_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
+as important criteria to determine how many IDUs in THLD district are physically suitable to grow Row Crops.
+
+In terms of economic suitability, we evaluate the economic efficiency of each IDU in THLD district.
+We expect the land owners who grow Row Crops spend the lowest cost on transportation.
+Therefore, we need to ensure lands growing Row Crops have shorter distance to
+primary/secondary roads and small/middle/large cities than those without growing Row Crops.
+To achieve that, we choose
+[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
+and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
+as criteria to evaluate how many IDUs in THLD district are economically suitable.
+
+## 4. Weighting Method
+
+4.1
+根据个人preference to assign weight，比如transportation应该比market更重要
+
+4.2 Rank
+个人认知存在bias，所以使用rank去一定程度上去除bias
+rank sum
+rank reciprocal
+rank exponential
+每个都用objective1.1里的sub-objective做表举例
+
+4.3 AHP
+AHP采纳各方意见，bias更小，reconcile
+mention ahp is one of weighting method, (row crop is not feasible for applying
+ahp, because the number of sub-objective in one objective need to be more than 2)
+
+And ahp is most frequently used in goal weighting.
+
+E1: 学长做
+E2:
+use AHP to weight Livestock, timberland, rowcrops, 4 people (每个人权重0.25)
+E3:
+计算row crops的suitability数值，用rowcrops里各个sub-objective乘上权重
+E3.1 权重全部50%
+E3.2 rank sum
+E3.3 再换一个用 rank exponential或者rank reciprocal 保证transportation权重高于market
