@@ -7,7 +7,7 @@ Table of Contents
     - [1.1 The LUCIS workflow](#11-the-lucis-workflow)
     - [1.2 An example of the hierarchical structure of LUCIS](#12-an-example-of-the-hierarchical-structure-of-lucis)
   - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
-  - [3. Exercise](#3-exercise)
+  - [5. Exercise](#3-exercise)
 
 ## 1. The LUCIS Philosophy
 
@@ -229,7 +229,44 @@ land was the least important in the three land-use types.
   <img src="../../../img/timg/m4_ahp.png" alt="ahp video" width="800">
 </a><br>
 
-## 3. Exercise
+## 3. Row Crops Models
+
+
+
+The intent of the row crops model is to identify lands most suitable for
+growing row crops.
+The suitability of the land to grow row crops depends on two aspects:
+whether this land has relatively appropriate physical conditions to optimize
+the production;
+and how much development or transportation costs it can save compared
+with others.
+Therefore, this model set up two objectives, physical suitability and
+economic suitability, for measuring the success of choosing a suitable land.
+The following figure shows the Row Crops model.
+
+<img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
+
+In terms of physical suitability, we look for conditions in which land
+growing Row Crops can have the optimized production.
+In this objectives, we consider [_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
+as important criteria to determine how many IDUs in THLD district are physically suitable to grow Row Crops.
+
+In terms of economic suitability, we evaluate the economic efficiency of
+each IDU in THLD district.
+We expect the land owners who grow Row Crops spend the lowest cost on
+transportation.
+Therefore, we need to ensure lands growing Row Crops have shorter distance to
+primary/secondary roads and small/middle/large cities than those without
+growing Row Crops.
+To achieve that, we choose
+[_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
+and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
+as criteria to evaluate how many IDUs in THLD district are economically suitable.
+
+## 4. Weighting Method
+
+## 5. Exercise
 
 - Exercise 1： Please replicate the AHP calculations discussed in
   [Section 2](#2-analytic-hierarchy-process).

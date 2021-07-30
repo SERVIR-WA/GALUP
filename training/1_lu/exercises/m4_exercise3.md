@@ -1,11 +1,10 @@
-# Module 3 - Exercise 2
+# Module 4 - Exercise 3
 
 ## 1. Skills Practiced
 
 This exercise will practice:
 
-- **QGIS Graphical Modeler**
-- **Market Model**
+- **Nonpairwise Weighting Methods**
 
 ## 2. Modeling Market Proximity for Row Crops Farming
 
