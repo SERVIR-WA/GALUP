@@ -61,6 +61,6 @@ for the four land-use purposes.
 ## 5.Result
 
 - Upon completion, your result should look similar to the following table:
-  ![pic3](../../../img/qgm/algtbl/m4_e2_aph_result.svg).
+   <img src="../../../img/qgm/algtbl/m4_e2_aph_result.svg" alt= "AttrTbl" width="600">.
 - Please go back to [Module 4](https://tinyurl.com/yn9hy6ca) to complete the
   third exercise.
