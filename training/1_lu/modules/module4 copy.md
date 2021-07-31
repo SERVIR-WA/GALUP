@@ -333,7 +333,7 @@ This method of developing layer weights requires the modeler to reciprocate
 each layer value, then divide the individual reciprocal values by the sum of
 all reciprocal values.<br>
 <img src="../../../img/eqn/Rank_reciprocal.svg" alt= "AttrTbl" width="500">
-<img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="650">
 <img src="../../../img/eqn/m4_rank_reciprocal_eqn.svg" alt= "AttrTbl" width="600">
 
 #### 4.2.3 Rank Exponential
