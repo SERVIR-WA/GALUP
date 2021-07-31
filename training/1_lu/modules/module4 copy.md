@@ -299,7 +299,7 @@ accessibility is a more important sub-objective. If the transportation is not
 available, the a high market suitability score is meaningless since the
 products can not be transported to the market.
 <img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "AttrTbl" width="600">
-<img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600"><br>
 However, our preference or commonsense are not always a reliable to assign
 weights in reality. More scientific weighting methods are needed.
 
