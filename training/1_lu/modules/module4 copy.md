@@ -352,7 +352,7 @@ divided by the sum of all the exponential values.
 > n = categories; p = power<br>
 > In the example, n = 4, p = 2
 
-<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="700">
 <img src="../../../img/eqn/m4_rank_exponential_eqn.svg" alt= "AttrTbl" width="600">
 
 Comparison of the three ranking methods described here indicates that the rank
