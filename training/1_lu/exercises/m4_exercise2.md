@@ -45,7 +45,7 @@ for the four land-use purposes.
    fill out the values in each form in this table.
 6. Take the form of **Farmer 4** as an example, set the parameters in the
    table as follows:
-   <img src="../../../img/gui/window/m4_e2_ahp_setting.png" alt= "AttrTbl" width="400"><br>
+   <img src="../../../img/gui/window/m4_e2_ahp_setting.png" alt= "AttrTbl" width="600"><br>
    Note that _Row id_ and _Column id_ denote the row index and column index
    respectively.
    For instance, _Row id_ 2 and _Column id_ 3 represents the cell in second row
@@ -54,7 +54,7 @@ for the four land-use purposes.
 7. Click **OK** to close the window, and click **Run**.
 8. The weights for the four land-use purposes are shown as values in the line
    _PRIORITY_VECTOR_.
-   <img src="../../../img/gui/window/m4_e2_ahp_result.png" alt= "AttrTbl" width="400">
+   <img src="../../../img/gui/window/m4_e2_ahp_result.png" alt= "AttrTbl" width="600">
 9. Repeat the process above to calculate the weights for the forms of
    **Farmer 1**, **Farmer 2**, and **Farmer 3**.
 
