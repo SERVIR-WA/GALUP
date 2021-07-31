@@ -326,8 +326,8 @@ inverse rankings for all layers to produce the weight value for each layer.
 > n = categories<br>
 > In the example, n = 4
 
-<img src="../../../img/qgm/algtbl/m4_weight_rank_sum.svg" alt= "AttrTbl" width="500">
-<img src="../../../img/eqn/m4_rank_sum_eqn.svg" alt= "AttrTbl" width="500">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_sum.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/eqn/m4_rank_sum_eqn.svg" alt= "AttrTbl" width="600">
 
 #### 4.2.2 Rank Reciprocal
 
