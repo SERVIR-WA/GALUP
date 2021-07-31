@@ -297,7 +297,7 @@ an example, we would like to assign higher a weight to transportation
 accessibility than that to market accessibility because transportation
 accessibility is a more important sub-objective. If the transportation is not
 available, the a high market suitability score is meaningless since the
-products can not be transported to the market.
+products can not be transported to the market.<br>
 <img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "AttrTbl" width="500">
 <img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600"><br>
 However, our preference or commonsense are not always a reliable to assign
