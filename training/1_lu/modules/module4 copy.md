@@ -378,4 +378,4 @@ the economic objective.
   Use the **_Compute AHP Weights_** tool to solve the five matrices.
   Create an Excel file to store the results of each (local) priority vector.
   Calculate the final priority vector, and submit the Excel file.
-- Exercise 2： Please check and finish the [exercise 2]().
+- Exercise 2： Please check and finish the [exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m4_exercise2.md#module-4---exercise-2).
