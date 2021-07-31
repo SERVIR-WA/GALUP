@@ -347,12 +347,13 @@ ranking values, which separates the weighted values farther apart than either
 the rank sum or rank reciprocal methods. Each individual ranking value is then
 divided by the sum of all the exponential values.
 
-![formula3](../../../img/eqn/Rank_exponential.svg)
+<img src="../../../img/eqn/Rank_exponential.svg" alt= "AttrTbl" width="500">
+
 > n = categories; p = power<br>
 > In the example, n = 4, p = 2
 
-![rankexpo](../../../img/qgm/algtbl/m4_weight_rank_exponential.svg)
-![eqn4](../../../img/eqn/m4_rank_exponential_eqn.svg)
+<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/eqn/m4_rank_exponential_eqn.svg" alt= "AttrTbl" width="600">
 
 Comparison of the three ranking methods described here indicates that the rank
 sum method tends to keep the criteria weightings closer together, or more
