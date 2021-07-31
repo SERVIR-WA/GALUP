@@ -54,7 +54,7 @@ for the four land-use purposes.
 7. Click **OK** to close the window, and click **Run**.
 8. The weights for the four land-use purposes are shown as values in the line
    _PRIORITY_VECTOR_.
-   <img src="../../../img/gui/window/m4_e2_ahp_result.png" alt= "AttrTbl" width="800">
+   <img src="../../../img/gui/window/m4_e2_ahp_result.png" alt= "AttrTbl" width="700">
 9. Repeat the process above to calculate the weights for the forms of
    **Farmer 1**, **Farmer 2**, and **Farmer 3**.
 
