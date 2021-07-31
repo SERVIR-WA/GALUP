@@ -321,7 +321,7 @@ inverse rank value.
 Finally, divide each of the layer’s inverse rank value by the sum of the
 inverse rankings for all layers to produce the weight value for each layer.
 
-![formula1](../../../img/eqn/Rank_sum.svg)
+<img src="../../../img/eqn/Rank_sum.svg" alt= "AttrTbl" width="500">
 > n = categories<br>
 > In the example, n = 4
 
