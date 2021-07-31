@@ -369,16 +369,6 @@ comparison should be more than 2. For example, in the row crop model,
 AHP is not available to assign weights between the two sub-objectives under
 the economic objective.
 
-
-E1: 学长做
-E2:
-use AHP to weight Livestock, timberland, rowcrops, 4 people (每个人权重0.25)
-E3:
-计算row crops的suitability数值，用rowcrops里各个sub-objective乘上权重
-E3.1 权重全部50%
-E3.2 rank sum
-E3.3 再换一个用 rank exponential或者rank reciprocal 保证transportation权重高于market
-
 ## 5. Exercise
 
 - Exercise 1： Please replicate the AHP calculations discussed in
