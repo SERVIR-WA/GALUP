@@ -362,7 +362,7 @@ This method of developing layer weights requires the modeler to reciprocate
 each layer value, then divide the individual reciprocal values by the sum of
 all reciprocal values.<br>
 <img src="../../../img/eqn/Rank_reciprocal.svg" alt= "AttrTbl" width="500">
-<img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="650">
 <img src="../../../img/eqn/m4_rank_reciprocal_eqn.svg" alt= "AttrTbl" width="600">
 
 #### 4.2.3 Rank Exponential
@@ -376,7 +376,7 @@ divided by the sum of all the exponential values.<br>
 
 > n = categories; p = power<br>
 > In the example, n = 4, p = 2
-<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="700">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="750">
 <img src="../../../img/eqn/m4_rank_exponential_eqn.svg" alt= "AttrTbl" width="600">
 Comparison of the three ranking methods described here indicates that the rank
 sum method tends to keep the criteria weightings closer together, or more
