@@ -297,7 +297,7 @@ an example, we would like to assign higher a weight to transportation
 accessibility than that to market accessibility because transportation
 accessibility is a more important sub-objective. If the transportation is not
 available, the a high market suitability score is meaningless since the
-products can not be transported to the market.
+products can not be transported to the market.<br>
 <img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "AttrTbl" width="500">
 <img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600"><br>
 However, our preference or commonsense are not always a reliable to assign
@@ -319,8 +319,7 @@ Rank sum is a simple method to assign weights by arranging the criteria
 each layer’s ranking from the total number of layers and add 1 to produce the
 inverse rank value.
 Finally, divide each of the layer’s inverse rank value by the sum of the
-inverse rankings for all layers to produce the weight value for each layer.
-
+inverse rankings for all layers to produce the weight value for each layer.<br>
 <img src="../../../img/eqn/Rank_sum.svg" alt= "AttrTbl" width="500">
 
 > n = categories<br>
@@ -332,8 +331,7 @@ inverse rankings for all layers to produce the weight value for each layer.
 
 This method of developing layer weights requires the modeler to reciprocate
 each layer value, then divide the individual reciprocal values by the sum of
-all reciprocal values.
-
+all reciprocal values.<br>
 <img src="../../../img/eqn/Rank_reciprocal.svg" alt= "AttrTbl" width="500">
 <img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="600">
 <img src="../../../img/eqn/m4_rank_reciprocal_eqn.svg" alt= "AttrTbl" width="600">
@@ -344,7 +342,7 @@ The rank exponential method uses essentially the same methodology as the rank
 sum method, but allows the modeler to exponentially raise the individual
 ranking values, which separates the weighted values farther apart than either
 the rank sum or rank reciprocal methods. Each individual ranking value is then
-divided by the sum of all the exponential values.
+divided by the sum of all the exponential values.<br>
 <img src="../../../img/eqn/Rank_exponential.svg" alt= "AttrTbl" width="500">
 
 > n = categories; p = power<br>
