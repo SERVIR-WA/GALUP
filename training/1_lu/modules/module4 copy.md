@@ -7,7 +7,15 @@ Table of Contents
     - [1.1 The LUCIS workflow](#11-the-lucis-workflow)
     - [1.2 An example of the hierarchical structure of LUCIS](#12-an-example-of-the-hierarchical-structure-of-lucis)
   - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
-  - [5. Exercise](#3-exercise)
+  - [3. Row Crops Models](#3-row-crops-models)
+  - [4. Weighting Method](#4-weighting-method)
+    - [4.1 Preference](#41-preference)
+    - [4.2 Rank](#42-rank)
+      - [4.2.1 Rank Sum](#421-rank-sum)
+      - [4.2.2 Rank Reciprocal](#422-rank-reciprocal)
+      - [4.2.3 Rank Exponential](#423-rank-exponential)
+    - [4.3 AHP](#43-ahp)
+  - [5. Exercise](#5-exercise)
 
 ## 1. The LUCIS Philosophy
 
@@ -295,6 +303,97 @@ The result of this equally weighted method is shown as follows:
 
 ## 4. Weighting Method
 
+As mentioned above, the assignment of utility values within an individual
+raster layer, called a **_Single Utility Assignment_** (SUA). The combination
+of multiple SUA layers to create a simple **_Multiple Utility Assignment_**
+(MUA), and the combination of multiple MUAs or MUAs and SUAs to create a
+complex multiple utility assignment. The MUA assignment process is often
+referred to as weighted overlay, which, as the name implies, combines layers
+using weights or percentage of influence.
+
+Recall that in Module 3, we assigned weights to different land suitability
+criteria for an orchard so that we combine SUAs and calculate the land
+suitability. In LUCIS workflow, we also assign weights to different goals,
+objectives, or sub-objectives to represent their relative importance to
+each other and do the land suitability calculation.
+In this section, we will introduce three kinds of weighting methods.
+
+### 4.1 Preference
+
+For the preference weighting method, weights are assigned according to
+commonsense or preference. Take the economic suitability of row crops as
+an example, we would like to assign higher a weight to transportation
+accessibility than that to market accessibility because transportation
+accessibility is a more important sub-objective. If the transportation is not
+available, the a high market suitability score is meaningless since the
+products can not be transported to the market.<br>
+<img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "AttrTbl" width="450">
+<img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600"><br>
+However, our preference or commonsense are not always a reliable to assign
+weights in reality. More scientific weighting methods are needed.
+
+### 4.2 Rank
+
+Rank sum, rank reciprocal, and rank exponential are three different weighting
+methods that are all based on rank. We will use to illustrate these three
+methods by using the the four sub-objectives in objective 1.1
+(determine lands physically suitable for residential land use) of
+Goal 1 (identify lands suitable for residential land use in THLD area).
+
+#### 4.2.1 Rank Sum
+
+Rank sum is a simple method to assign weights by arranging the criteria
+(layers) in rank order where the value 1 signifies most important,
+2 next important, and so on, to the nth important criteria. Next, subtract
+each layer’s ranking from the total number of layers and add 1 to produce the
+inverse rank value.
+Finally, divide each of the layer’s inverse rank value by the sum of the
+inverse rankings for all layers to produce the weight value for each layer.<br>
+<img src="../../../img/eqn/Rank_sum.svg" alt= "AttrTbl" width="500">
+
+> n = categories<br>
+> In the example, n = 4
+<img src="../../../img/qgm/algtbl/m4_weight_rank_sum.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/eqn/m4_rank_sum_eqn.svg" alt= "AttrTbl" width="600">
+
+#### 4.2.2 Rank Reciprocal
+
+This method of developing layer weights requires the modeler to reciprocate
+each layer value, then divide the individual reciprocal values by the sum of
+all reciprocal values.<br>
+<img src="../../../img/eqn/Rank_reciprocal.svg" alt= "AttrTbl" width="500">
+<img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "AttrTbl" width="600">
+<img src="../../../img/eqn/m4_rank_reciprocal_eqn.svg" alt= "AttrTbl" width="600">
+
+#### 4.2.3 Rank Exponential
+
+The rank exponential method uses essentially the same methodology as the rank
+sum method, but allows the modeler to exponentially raise the individual
+ranking values, which separates the weighted values farther apart than either
+the rank sum or rank reciprocal methods. Each individual ranking value is then
+divided by the sum of all the exponential values.<br>
+<img src="../../../img/eqn/Rank_exponential.svg" alt= "AttrTbl" width="500">
+
+> n = categories; p = power<br>
+> In the example, n = 4, p = 2
+<img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "AttrTbl" width="700">
+<img src="../../../img/eqn/m4_rank_exponential_eqn.svg" alt= "AttrTbl" width="600">
+Comparison of the three ranking methods described here indicates that the rank
+sum method tends to keep the criteria weightings closer together, or more
+clustered, than the other methods, while the rank exponential method
+exaggerates the extreme criteria more than the rank sum or rank reciprocal.
+
+### 4.3 AHP
+
+As introduced before, AHP is a weighting method using pairwise comparison.
+Compared to other weighting methods, AHP is able to reconcile different
+opinions and assign weights reasonably.
+AHP is most frequently used in goal weighting.
+And it is notably that the number of categories participating in the pairwise
+comparison should be more than 2. For example, in the row crop model,
+AHP is not available to assign weights between the two sub-objectives under
+the economic objective.
+
 ## 5. Exercise
 
 - Exercise 1： Please replicate the AHP calculations discussed in
@@ -302,3 +401,4 @@ The result of this equally weighted method is shown as follows:
   Use the **_Compute AHP Weights_** tool to solve the five matrices.
   Create an Excel file to store the results of each (local) priority vector.
   Calculate the final priority vector, and submit the Excel file.
+- Exercise 2： Please check and finish the [exercise 2](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/exercises/m4_exercise2.md#module-4---exercise-2).

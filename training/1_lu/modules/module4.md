@@ -3,11 +3,18 @@
 Table of Contents
 
 - [Module 4 - Making Land-Use Decisions using the LUCIS Framework](#module-4---making-land-use-decisions-using-the-lucis-framework)
+- [- 4. Weighting Method](#--4-weighting-method)
   - [1. The LUCIS Philosophy](#1-the-lucis-philosophy)
     - [1.1 The LUCIS workflow](#11-the-lucis-workflow)
     - [1.2 An example of the hierarchical structure of LUCIS](#12-an-example-of-the-hierarchical-structure-of-lucis)
   - [2. Analytic Hierarchy Process](#2-analytic-hierarchy-process)
   - [3. Exercise](#3-exercise)
+<<<<<<< HEAD
+  - [3. Row Crops Models](#3-row-crops-models)
+  - [4. Weighting Method](#4-weighting-method)
+=======
+  - [3. Exercise](#3-exercise)
+>>>>>>> 01760df1131429ea8028ba1331db74ade0534905
 
 ## 1. The LUCIS Philosophy
 
