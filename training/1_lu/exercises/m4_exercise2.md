@@ -8,13 +8,13 @@ This exercise will practice:
 
 ## 2. Description
 
-As a modeler, you are trying to make land-use decisions for THLD by using LUCIS.
-Now you have four agricultural land-use purposes (goals): **Row crops**,
+As a planner, you are trying to make land-use decisions for THLD by using LUCIS.
+Now you have identified four agricultural land-use purposes (goals): **Row crops**,
 **Livestock**, **Timberland**, and **Orchards and groves**.
 After finishing building up the suitability modeling for each land-use purpose,
 you are ready to assign weights to these four purposes by using AHP.
 Because these are agricultural land-use purposes, you asked four farmers about
-interests and find:
+their interests and find:
 
 - The first farmer mainly plants row crops.
 - The second farmer focuses on livestock.
