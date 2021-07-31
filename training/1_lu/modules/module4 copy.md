@@ -322,11 +322,12 @@ Finally, divide each of the layer’s inverse rank value by the sum of the
 inverse rankings for all layers to produce the weight value for each layer.
 
 <img src="../../../img/eqn/Rank_sum.svg" alt= "AttrTbl" width="500">
+
 > n = categories<br>
 > In the example, n = 4
 
-![ranksum](../../../img/qgm/algtbl/m4_weight_rank_sum.svg)
-![eqn2](../../../img/eqn/m4_rank_sum_eqn.svg)
+<img src="../../../img/qgm/algtbl/m4_weight_rank_sum.svg" alt= "AttrTbl" width="500">
+<img src="../../../img/eqn/m4_rank_sum_eqn.svg" alt= "AttrTbl" width="500">
 
 #### 4.2.2 Rank Reciprocal
 
