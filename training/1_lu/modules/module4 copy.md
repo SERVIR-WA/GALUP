@@ -298,7 +298,7 @@ The result of weighted sum is shown as follows:
 
 |   Equally weighted method |
 |---------------------------|
-|<img src="../../../img/map/m4_row_crops_model_weightedvalue.png" alt= "RowCrops_model" width="400">|
+|<img src="../../../img/map/m4_row_crops_model_weightedvalue.png" alt= "RowCrops_model" width="500">|
 
 ## 4. Weighting Method
 
