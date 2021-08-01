@@ -238,11 +238,18 @@ land was the least important in the three land-use types.
 </a><br>
 
 ## 3. Row Crops Models
-
-
-
-The intent of the row crops model is to identify lands most suitable for
-growing row crops.
+Previously, this module introduces the LUCIS to help stakeholder groups
+to decide probable patterns of future land-use scenarios, including
+agricultural land uses, urban land uses, and conservation land
+in the planning process.
+After stakeholder groups decided the pattern of future land use and
+the specific land use proposes for each land-use category,
+the physical and economic suitability of land uses should be considered
+in the next step of the planning process.
+For example, in terms of agricultural land use, we evaluate the suitability
+of each land to grow row crops, raise livestock or be timberland.
+In here, the intent of the row crops model is to identify lands most suitable
+for growing row crops.
 The suitability of the land to grow row crops depends on two aspects:
 whether this land has relatively appropriate physical conditions to optimize
 the production;
@@ -271,6 +278,28 @@ To achieve that, we choose
 [_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
 as criteria to evaluate how many IDUs in THLD district are economically suitable.
+
+To calculate the suitability of lands to grow row crops, objectives and
+sub-objectives in row crops model need to be organized by using
+a weighted sum tool.
+This module assumes that physical suitability and economic suitability
+are equally important.
+As for physical suitability, landscape condition should be considered as
+the same important as soil condition. In terms of economic suitability,
+market and transportation accessibility are equally important as well.
+Therefore, the physical suitability will be calculated by multiplying 0.5 to
+both landscape condition and soil condition index and then summing them up.
+To calculate the economic suitability, both market and
+transportation access index will be multiplied by 0.5 and then summed up.
+Finally, the suitability for growing row crops will be measured by
+multiplying 0.5 to physical suitability and economic suitability
+and then summing them up.
+
+The result of this equally weighted method is shown as follows:
+
+|   Equally weighted method |
+|---------------------------|
+|<img src="../../../img/map/m4_row_crops_model_equally_weighted.png" alt= "RowCrops_model" width="400">|
 
 ## 4. Weighting Method
 

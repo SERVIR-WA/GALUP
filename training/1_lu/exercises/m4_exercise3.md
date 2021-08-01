@@ -4,87 +4,100 @@
 
 This exercise will practice:
 
-- **Nonpairwise Weighting Methods**
+- **Rank Sum Method**
+- **Rank Reciprocal Method**
 
-## 2. Modeling Market Proximity for Row Crops Farming
+## 2. Nonpairwise Weighting Methods for Row Crops Farming
 
-### 2.1 Model methodology
+The row crops model evaluates the suitability of lands to grow row crops
+from two objectives, physical and economic suitability.
+These two could be further divided into sub-objectives, including landscape
+and soil conditions, market, and transportation accessibility.
+Module 4 shows how to equally weigh objectives and sub-objectives when it is possible to compare importance between them.
 
-In this model, market refers to the human settlements where harvested crops
-can be sold.
-Market proximity is a critical factor when selecting suitable locations for
-row crops farming because distances to large, medium, and small markets
-(human settlements of different magnitudes) influence the sale potential of
-harvested crops.
+This exercise aims to illustrate how to organize sub-objectives by using different nonpairwise weighting methods if we can directly compare those sub-objectives.
 
-**Market model** aims to evaluate the suitability of IDUs in the THLD District
-Assembly for planting row crops by measuring the distance between each IDU and
-those markets (i.e., large city, medium city, and small city).
+The rank sum method firstly assesses weight values of all sub-objectives by arranging them in rank order from the value 1 signifies most important to the nth important. Then, this method divides the inverse rank value of each sub-objective by the sum of the inverse rank value of all sub-objectives.
 
-### 2.2 Model Datasets
+The rank reciprocal method also needs to first assess the weight values of all sub-objectives in rank order. Then, this method divides the reciprocal values of each sub-objective by the sum of the reciprocal values of all sub-objectives.
 
-The following datasets are used in the landscape condition model:
+### 2.2 Required Datasets
 
-- _THLD\_poly.shp_ at
-  `GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
-- _LargeCity\_pt.shp_ at
-  `GALUP-master -> training -> 1_lu -> datasets -> Large_City_Point`
-- _MediumCity\_pt.shp_ at
-  `GALUP-master -> training -> 1_lu -> datasets -> Medium_City_Point`
-- _SmallCity\_pt.shp_ at
-  `GALUP-master -> training -> 1_lu -> datasets -> Small_City_Point`
+The following datasets are requested in the practice of weighting methods
+for Row Crops:
+
+- The outcome from
+  [Landscape Condition](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/LandConditionMap.pdf)
+  model
+- The outcome from
+  [Soil Condition](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/SoilIndex.pdf)
+  model
+- The outcome from
+  [Market]((https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/rcrp_Market.pdf)
+  model
+- The outcome from
+  [Transportation Accessibility](https://github.com/SERVIR-WA/GALUP/blob/master/img/map/m3_transportation_accessibility.png)
+  model
 
 ## 3. Instruction
 
-![marketmodelmap](../../../img/qgm/model/Market.svg)
-
-1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and
-   _THLD\_poly.shp_ in the **_Browser Panel_** and add them to
-   **_Map Canvas_**.
-2. In the _Menu Toolbar_, click _Processing_ and open
-   ![gm](../../../img/gui/icon/processingModel.svg) `Graphical Modeler...` .
-3. In the **_Model Properties_** panel, name the _Name_ as **Market**, and
-   the _Group_ as **Economic**.
-4. In the **_Inputs_** panel, click the **_Inputs_** tab, and **add**:
-   - a _Vector Features_ input, and name the _Parameter name_ as
-     **1_Input Polygon** and leave others as default, then click **OK**.
-   - ***three*** _Point_ inputs, and set the _Parameter name_ as
-     **2_Large cities**, **3_Medium cities**, and **4_Small cities**
-     respectively, and leave others as default, then click **OK**.
-   - a _String_ input, set the _Description_ as
-     **5_Weights by City Level** and type `0.6, 0.3, 0.1` as the
-     _Default value_ (weights for Large cities, Medium cities, and Small
-     cities), and then click **OK**.
-5. Parameter settings for each **algorithm**:<br>
-   ![m1](../../../img/qgm/algtbl/m3_e2_market.svg)
-6. **Edit** inputs names, i.e., delete the prefixes (number and underscore) in
-   front of their names.
-7. Now you have finished the model.
-   Click ![st](../../../img/gui/icon/mActionStart.svg) `Run model`  on the top menu
-   bar of the window to **run** the _Market_ model.
-8. Set the model as follows:
-   - **Input polygon**: _THLD\_poly_.
-   - **Large cities**: _LargeCity\_pt_.
-   - **Medium cities**: _MediumCity\_pt_.
-   - **Small cities**: _SmallCity\_pt_.
-   - Leave the rest of the parameters as default.
-   - Click **Run**.
-9. Now, let's set up the **Symbology** of the output layer _rcrp\_Market_.
+### 3.1 Rank Sum Method
+1. This exercise rank Landscape Condition, Soil Condition, Market, and
+   Transportation Accessibility in order: 3, 2, 4, 1.
+2. Calculate the weight value of each sub-objective by using rank sum method.
+3. Use **<ins>Join attributes by field value</ins>** tool
+   under **_Vector general_** to join outcome fields into one vector layer.
+4. Use
+   **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
+   to calculate the weighted sum of sub-objectives by using the weight values
+   from rank sum method.
+5. Name **Output field name** as _ranksum_ and **Output layer** as _Ranksum.shp_
+5. Now, let's set up the **Symbology** of the output layer _Ranksum.shp_.
    Open the
    <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
    **Symbology** tab from the **Layer Properties** window.
    Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    *Graduated style*.
-   Specify the _Market_ field as **Value**, and then choose the _BuPu_ color
+   Specify the _ranksum_ field as **Value**, and then choose the _RdYlGn_ color
    ramp with **5** classes.
    Click **Apply**.
-10. Create a _Layout_ for the map, and then add _Legend_, _Scale bar_, and
-    _North Arrow_ to it.
-11. Export the map as a PDF file.
+6. Create a _Layout_ for the map, and then add _Legend_, _Scale bar_, and
+    _North Arrow_ to it. 
+7. Export the map as a PDF file.
 
-## 5.Result
+### 3.2 Rank Reciprocal Method
+1. This exercise rank Landscape Condition, Soil Condition, Market, and
+   Transportation Accessibility in order: 3, 2, 4, 1.
+2. Calculate the weight value of each sub-objective by using
+   rank reciprocal method.
+3. Use **<ins>Join attributes by field value</ins>** tool
+   under **_Vector general_** to join outcome fields into one vector layer.
+4. Use
+   **<ins>Weighted Sum of Fields</ins>** tool under **_Scripts_**
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
+   to calculate the weighted sum of sub-objectives by using the weight values
+   from rank reciprocal method.
+5. Name **Output field name** as _rankrcp_ and **Output layer** as _Rankrcp.shp_
+5. Now, let's set up the **Symbology** of the output layer _Rankrcp.shp_.
+   Open the
+   <img src="../../../img/gui/icon/symbology.svg" alt= "AttrTbl" width="20">
+   **Symbology** tab from the **Layer Properties** window.
+   Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
+   *Graduated style*.
+   Specify the _rankrcp_ field as **Value**, and then choose the _RdYlGn_ color
+   ramp with **5** classes.
+   Click **Apply**.
+6. Create a _Layout_ for the map, and then add _Legend_, _Scale bar_, and
+    _North Arrow_ to it. 
+7. Export the map as a PDF file.
 
-- Upon completion, the map you got should look similar to this pdf
-  [here](../pdf_maps/rcrp_Market.pdf).
+## 4.Result
+
+- Upon completion, the map by using rank sum method you got should look similar
+  to this pdf [here](),
+  and the map by using rank reciprocal method should look similar to this pdf
+  [here]()
 - Now you have completed all exercises. Please go back to
-  [Module 3](https://tinyurl.com/yn9hy6ca) to turn in them.
+  [Module 4](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module4.md)
+  to turn in them.
