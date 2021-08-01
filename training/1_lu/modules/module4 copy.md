@@ -237,37 +237,28 @@ land was the least important in the three land-use types.
   <img src="../../../img/timg/m4_ahp.png" alt="ahp video" width="800">
 </a><br>
 
-## 3. Row Crops Models
-Previously, this module introduces the LUCIS to help stakeholder groups
-to decide probable patterns of future land-use scenarios, including
-agricultural land uses, urban land uses, and conservation land
-in the planning process.
-After stakeholder groups decided the pattern of future land use and
-the specific land use proposes for each land-use category,
-the physical and economic suitability of land uses should be considered
-in the next step of the planning process.
-For example, in terms of agricultural land use, we evaluate the suitability
-of each land to grow row crops, raise livestock or be timberland.
-In here, the intent of the row crops model is to identify lands most suitable
-for growing row crops.
-The suitability of the land to grow row crops depends on two aspects:
-whether this land has relatively appropriate physical conditions to optimize
-the production;
-and how much development or transportation costs it can save compared
-with others.
-Therefore, this model set up two objectives, physical suitability and
-economic suitability, for measuring the success of choosing a suitable land.
-The following figure shows the Row Crops model.
+## 3. Row Crops Model
+
+Recall we have created four models to analyze suitability for row crops
+including (1) _landscape condition_, (2) _soil condition_,
+(3) _market proximity_, and (4) _transport accessibility_.
+These models are in fact integral parts of the LUCIS's hierachical structure
+under the row crops goal.
+The following diagram shows this structure.
 
 <img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
 
+In here, the intent of the row crops model is to identify lands most suitable
+for growing row crops. This model set up two objectives, physical suitability and
+economic suitability, for measuring the success of choosing a suitable land.
 In terms of physical suitability, we look for conditions in which land
 growing Row Crops can have the optimized production.
-In this objectives, we consider [_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
+In this objectives, we consider
+[_Landscape Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#land-condition-physical)
 and [_Soil Condition_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#soil-condition-physical)
-as important criteria to determine how many IDUs in THLD district are physically suitable to grow Row Crops.
-
-In terms of economic suitability, we evaluate the economic efficiency of
+as important sub-objectives to determine how many IDUs in THLD district
+are physically suitable to grow Row Crops.
+As for economic suitability, we evaluate the economic efficiency of
 each IDU in THLD district.
 We expect the land owners who grow Row Crops spend the lowest cost on
 transportation.
@@ -277,29 +268,37 @@ growing Row Crops.
 To achieve that, we choose
 [_Transport Accessibility_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#transport-accessibility-economic)
 and [_Market_](https://github.com/SERVIR-WA/GALUP/wiki/models_ag#market-economic)
-as criteria to evaluate how many IDUs in THLD district are economically suitable.
+as sub-objectives to evaluate how many IDUs in THLD district are
+economically suitable.
 
+The most intuitive approach to merge results of invidual sub-objectives is by
+assigining weights to them.
 To calculate the suitability of lands to grow row crops, objectives and
 sub-objectives in row crops model need to be organized by using
 a weighted sum tool.
-This module assumes that physical suitability and economic suitability
-are equally important.
-As for physical suitability, landscape condition should be considered as
-the same important as soil condition. In terms of economic suitability,
-market and transportation accessibility are equally important as well.
-Therefore, the physical suitability will be calculated by multiplying 0.5 to
-both landscape condition and soil condition index and then summing them up.
-To calculate the economic suitability, both market and
-transportation access index will be multiplied by 0.5 and then summed up.
-Finally, the suitability for growing row crops will be measured by
-multiplying 0.5 to physical suitability and economic suitability
-and then summing them up.
+This module assumes that physical suitability is more important than
+economic suitability.
+As for physical suitability, soil condition should be considered more
+important than landscape condition since the soil condition directly
+determines the land feasibility to grow row crops.
+In terms of economic suitability,
+market proximity is not as critical as transportation accessibility
+because a land lack of transportation accessibility requires
+a huge cost to build roads.
 
-The result of this equally weighted method is shown as follows:
+Therefore, the row crops model have weight value in follows:
+1. market weigh 30 percent of importance and transportation accessibility weigh
+   70 percent in economic suitability.
+2. soil condition weign 60 percent of importance and landscape condition weigh
+   40 percent in physical suitability.
+3. physical suitability weigh 70 percent of importance and economic suitability
+   weigh 30 percent in row crops model.
+
+The result of weighted sum is shown as follows:
 
 |   Equally weighted method |
 |---------------------------|
-|<img src="../../../img/map/m4_row_crops_model_equally_weighted.png" alt= "RowCrops_model" width="400">|
+|<img src="../../../img/map/m4_row_crops_model_weightedvalue.png" alt= "RowCrops_model" width="400">|
 
 ## 4. Weighting Method
 
