@@ -25,11 +25,14 @@ Four farmers assign land-use suitability weights to each purposes as follows:
 
 ![farmers](../../../img/qgm/algtbl/m4_e2_aph_4farmers.svg)
 
-Note that their opinions are equally weighted (i.e., 0.25 for each type of
+Note that their opinions are equally weighted (i.e., 0.25 for each
 farmer).
 
-Use the [**_Compute AHP Weights_**](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights) tool in LUCIS-OPEN to compute the weights
+Use the **_Compute AHP Weights_** tool in LUCIS-OPEN to compute the weights
 for the four land-use purposes.
+
+> :bulb: Note:<br>
+> For fractional inputs, please refer to the [Compute AHP Weights](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights) tool instruction.
 
 ## 3. Instruction
 
@@ -47,20 +50,16 @@ for the four land-use purposes.
    table as follows:
    <img src="../../../img/gui/window/m4_e2_ahp_setting.png" alt= "AttrTbl" width="600"><br>
    Note that _Row id_ and _Column id_ denote the row index and column index
-   respectively.
+   in the matrix respectively.
    For instance, _Row id_ 2 and _Column id_ 3 represents the cell in second row
    and third column in the form of **Farmer 4**. the _Pair-wise importance_
    stores the value in that cell, which is 1/2 (0.5).
 7. Click **OK** to close the window, and click **Run**.
-8. The weights for the four land-use purposes are shown as values in the line
-   _PRIORITY_VECTOR_.
-   <img src="../../../img/gui/window/m4_e2_ahp_result.png" alt= "AttrTbl" width="700">
-9. Repeat the process above to calculate the weights for the forms of
+8. Repeat the process above to calculate the weights for the forms of
    **Farmer 1**, **Farmer 2**, and **Farmer 3**.
 
 ## 5.Result
 
-- Upon completion, your result should look similar to the following table:
-   <img src="../../../img/qgm/algtbl/m4_e2_aph_result.svg" alt= "AttrTbl" width="800">.
+- Follow the steps above, put your result into a spread sheet and turn it in.
 - Please go back to [Module 4](https://tinyurl.com/yn9hy6ca) to complete the
   third exercise.

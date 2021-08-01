@@ -320,7 +320,7 @@ In this section, we will introduce three kinds of weighting methods.
 ### 4.1 Preference
 
 For the preference weighting method, weights are assigned according to
-commonsense or preference. Take the economic suitability of row crops as
+common sense or preference. Take the economic suitability of row crops as
 an example, we would like to assign higher a weight to transportation
 accessibility than that to market accessibility because transportation
 accessibility is a more important sub-objective. If the transportation is not
@@ -328,14 +328,14 @@ available, the a high market suitability score is meaningless since the
 products can not be transported to the market.<br>
 <img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "AttrTbl" width="450">
 <img src="../../../img/eqn/m4_preference_eqn.svg" alt= "AttrTbl" width="600"><br>
-However, our preference or commonsense are not always a reliable to assign
+However, our preference or common sense are not always a reliable to assign
 weights in reality. More scientific weighting methods are needed.
 
 ### 4.2 Rank
 
 Rank sum, rank reciprocal, and rank exponential are three different weighting
 methods that are all based on rank. We will use to illustrate these three
-methods by using the the four sub-objectives in objective 1.1
+methods by using the the four sub-objectives (SO) in objective 1.1
 (determine lands physically suitable for residential land use) of
 Goal 1 (identify lands suitable for residential land use in THLD area).
 
