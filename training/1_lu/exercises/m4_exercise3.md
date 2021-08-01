@@ -73,9 +73,9 @@ for Row Crops:
 
 - Upon completion, the map by using rank sum method you got should look similar
   to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/RankSum.pdf),
+  [here](../../../training/1_lu/pdf_maps/RankSum.pdf),
   and the map by using rank reciprocal method should look similar to this pdf
-  [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/pdf_maps/RankReciprocal.pdf).
+  [here](../../../training/1_lu/pdf_maps/RankSum.pdf).
 - Now you have completed all exercises. Please go back to
   [Module 4](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module4.md)
   to turn in them.
