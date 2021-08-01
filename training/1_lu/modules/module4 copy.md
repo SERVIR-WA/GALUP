@@ -307,7 +307,7 @@ weights in reality. More scientific weighting methods are needed.
 
 Rank sum, rank reciprocal, and rank exponential are three different weighting
 methods that are all based on rank. We will use to illustrate these three
-methods by using the the four sub-objectives in objective 1.1
+methods by using the the four sub-objectives (SO) in objective 1.1
 (determine lands physically suitable for residential land use) of
 Goal 1 (identify lands suitable for residential land use in THLD area).
 
