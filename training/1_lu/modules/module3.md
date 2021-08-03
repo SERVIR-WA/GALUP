@@ -330,7 +330,7 @@ The **Inputs** used by this model are listed below:
 2. [Reclassify Field](https://github.com/SERVIR-WA/GALUP/wiki/Tools#reclassify-field)
    transforms to the values derived from each raster dataset to the
    **common suitability scale**, i.e., 1 to 9.
-3. [Weight Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
+3. [Weighted Sum of Fields](https://github.com/SERVIR-WA/GALUP/wiki/Tools#weighted-sum-of-fields)
    is used to combine and quantify the effects on suitability by different soil
    attributes, i.e., depth, pH, and permeability.
 
