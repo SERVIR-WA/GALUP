@@ -1,6 +1,6 @@
 # Workshop 1: Land-Use Suitability Analysis with QGIS Tools
 
-### Goal:
+### Goal
 
 The first GALUP workshop aims at laying a foundation of core
 concepts and techniques used in land-use suitability analysis, of which the
@@ -11,7 +11,7 @@ conclusion of the workshop, trainees should be able to independently visualize
 GIS data, conduct geospatial analysis, and identify suitable areas for a
 particular land-use purpose.
 
-### Objectives:
+### Objectives
 
 - Understand key concepts in land use analysis
 - Be familiar with the QGIS software
@@ -19,6 +19,21 @@ particular land-use purpose.
 - Create models for suitability analysis using Graphical Modeler
 - Interpret the result of land-use suitability analysis
 - Making decisions when different purposes of land use are in conflict
+
+### About the Land Use Planning Framework
+
+The planning framework GALUP proposed is based on the Land-Use Identification
+Strategy (LUCIS) developed by two professors, Margaret Carr and Paul Zwick, at
+the University of Florida. LUCIS, at its core, is a GIS-based land-use
+suitability modeling framework. LUCIS models were originally developed using
+ModelBuilder in ArcMap&trade;.
+The GALUP team developed the **LUCIS-OPEN Tools for QGIS** by using
+[PyLUSAT](https://github.com/chjch/pylusat)—Python for Land-Use Suitability
+Analysis Tools—and the [QGIS Python API](https://qgis.org/pyqgis/3.10/).
+These tools enable land-use planners to perform suitability analysis on
+[QGIS](https://docs.qgis.org/3.10/en/docs/user_manual/preamble/foreword.html#foreword),
+an open-source GIS software application.
+![lucis_open](../../../img/dgrm/lucis_workflow.svg)
 
 ## 1. Modules
 
