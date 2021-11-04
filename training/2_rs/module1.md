@@ -45,7 +45,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 **1.1 Hyperspectral**
 <p align="center"> 
-  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png">
+  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
 </p>
 
 ### 2. Remote sensing systems and sensors
