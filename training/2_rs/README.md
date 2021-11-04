@@ -12,7 +12,7 @@ Objectives
 <a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
 
 
-## Assignment Submission 
+## Assignment Submission and Help
 
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9741afe237094a77aff3acbf6c2df8a91d" target="_blank">
