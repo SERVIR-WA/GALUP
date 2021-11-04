@@ -30,6 +30,8 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 <br/>
 
+<p align="center">
+ 
 | Band                         | Wavelength           |
 |------------------------------|----------------------|
 |     Blue                     |     0.45-0.51µm      |
@@ -39,6 +41,8 @@ The human eye is only able to detect wavelengths in the visible light range. How
 |     Short-wave infrared 1    |     1-1.6µm          |
 |     Short-wave infrared 2    |     1.6-2.5µm        |
 |     Thermal Infrared         |     10.60–12.51µm    |
+ 
+ </p>
 
 
 <br/>
