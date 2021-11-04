@@ -9,7 +9,7 @@ Objectives
 
 ## Modules
 
-<a href="Module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
+<a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
 
 
 ## Assignment Submission
