@@ -1,7 +1,17 @@
-# Workshop 2: Remote Sensing
+# Workshop 2: Satellite Remote Sensing for Land-use Planning
 
-## This is the remote sensing workshop
+Goal
 
-1. what is remote sensing?
-2. Some of the RS datasets?
-3. What is GEE?
+
+Objectives
+
+ 
+
+## Modules
+
+<a href="Module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
+
+
+## Assignment Submission
+
+Create a new issue to submit your assignment. Put your name and the assignment number as the title of the issue and attach any documents needed for submission.
