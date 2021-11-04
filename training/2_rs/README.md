@@ -1,10 +1,6 @@
 # Workshop 2: Satellite Remote Sensing for Land-use Planning
 
-## Getting Started
-
-
-Objectives
-
+## Goal
  
 
 ## Modules
