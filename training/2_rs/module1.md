@@ -102,8 +102,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 Spectral sampling: Multispectral sensors and Hyperspectral sensors
 
-<img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"> <img src="https://user-images.githubusercontent.com/87503837/133636485-93336e1a-214b-4897-b1ca-c1206879b4e1.png" width="400" height="220">
-
+<img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"> 
 
 
 <br/>
