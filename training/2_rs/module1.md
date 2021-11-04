@@ -139,11 +139,6 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 3. Switch between the two layers to see the difference between the two types of remote sensing data. 
 4. The file consists of NDVI and land surface temperature data. NDVI is a vegetation index that will be covered in another section.  
 
-##
-
-**Next Section**: 
-
-<a href="Module 2.md" title="Module 2">Module 2</a>
 
 
 
