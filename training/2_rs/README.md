@@ -2,6 +2,10 @@
 
 ## Goal
 
+## Modules
+
+<a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
+
 ## Assignment Submission and Help
 
 Below is a video explaining how to submit the module assignments and how to request help through GitHub. 
@@ -12,6 +16,3 @@ Below is a video explaining how to submit the module assignments and how to requ
   </a>
 </p>
 
-## Modules
-
-<a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
