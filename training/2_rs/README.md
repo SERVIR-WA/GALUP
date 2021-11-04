@@ -2,9 +2,20 @@
 
 ## Goal
 
+The second GALUP workshop aims providing core concepts and techniques used in land-use suitability analysis, of which the output will help inform land-use decision making. 
+
 ## Modules
 
 <a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
+
+Module 2 
+
+Module 3
+
+Module 4 
+
+Module 5 
+
 
 ## Assignment Submission and Help
 
