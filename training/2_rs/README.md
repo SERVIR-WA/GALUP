@@ -2,7 +2,7 @@
 
 ## Goal
 
-The second GALUP workshop aims at providing core concepts of use for remote sensing applications in land use planning. Using Google Earth Engine (GEE), trainees will explore remote sensing data, learn common indices, and use simple land cover classification techniques.  
+The second GALUP workshop aims at providing core concepts of use for remote sensing applications in land use planning. Using Google Earth Engine (GEE), trainees will explore remote sensing data, learn common indices, and use simple land cover classification techniques. The goal is to have an understanding of how these techniques can be used for better land-use decision making. 
 
 ## Modules
 
