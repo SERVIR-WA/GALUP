@@ -12,13 +12,13 @@ Remote sensing is the science and art of obtaining information about an object, 
 Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during WWII. Since then, detectors have been expanded to  run on most of the EM spectrum and variety of applications spanning from military use to agriculture. 
 
 ## 1. EM Spectrum 
-• **Electromagnetic spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. 
+- **Electromagnetic spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. 
 
-• **Observed energy** or **radiation** is primarily sensitive to molecular resonances in the to molecular resonances in the surface layer surface layer of target. 
+- **Observed energy** or **radiation** is primarily sensitive to molecular resonances in the to molecular resonances in the surface layer surface layer of target. 
 
-• **Emitted**, **reflected**, and **backscattered radiation** is sensitive to temperature distribution, geometric, and electric properties of surface or volume. 
+- **Emitted**, **reflected**, and **backscattered radiation** is sensitive to temperature distribution, geometric, and electric properties of surface or volume. 
 
-•**Near infrared (NIR)** is defined from 750 nm to 1400 nm and **shortwave infrared (SWIR)** from 1400 nm to 3000 nm.
+- **Near infrared (NIR)** is defined from 750 nm to 1400 nm and **shortwave infrared (SWIR)** from 1400 nm to 3000 nm.
 
 
 <p align="center">
@@ -57,9 +57,9 @@ The human eye is only able to detect wavelengths in the visible light range. How
 ## 2. Remote Sensing Systems and Sensors
 ### 2.1 Sensors:
 
-• **Active sensors** consist of a transmitter and a receiver that may (monostatic system) or may not be (bistatic system) co-located. It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter.” Examples include a camera with the flash, Light Detection and Ranging (LIDAR), Synthetic aperture radar (SAR). 
+- **Active sensors** consist of a transmitter and a receiver that may (monostatic system) or may not be (bistatic system) co-located. It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter.” Examples include a camera with the flash, Light Detection and Ranging (LIDAR), Synthetic aperture radar (SAR). 
 
-• **Passive Sensors** consist of receiver that receives naturally occurring EM energy from a target at a particular wavelength and direction. Examples include a camera without the flash and radiometers.
+- **Passive Sensors** consist of receiver that receives naturally occurring EM energy from a target at a particular wavelength and direction. Examples include a camera without the flash and radiometers.
 
 
 <!--- 
@@ -96,11 +96,11 @@ The human eye is only able to detect wavelengths in the visible light range. How
 -->
 ### 2.2 Resolution:
 
-• **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.
+- **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.
 
-• **Temporal resolution** describes how often a sensor observes the same target 
+- **Temporal resolution** describes how often a sensor observes the same target 
 
-• **Radiometric resolution** describes the number of wavelengths observed. For example, multispectral sensors observe about 10s of bands (or wavelength regions) in the VI/NIR spectrum, providing discrete observations. 
+- **Radiometric resolution** describes the number of wavelengths observed. For example, multispectral sensors observe about 10s of bands (or wavelength regions) in the VI/NIR spectrum, providing discrete observations. 
 
 
 Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right)
@@ -113,11 +113,11 @@ Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right
 
 ### 2.3 Satellite Systems
 
-•	**Geo-stationary/geo-synchronous** : at about 36,000km above the earth's surface and follows direction of Earth's rotation 
+-	**Geo-stationary/geo-synchronous** : at about 36,000km above the earth's surface and follows direction of Earth's rotation 
 
-•	**Polar orbiting**: circle the Earth in an almost north-south orbit, passing close to both poles
+-	**Polar orbiting**: circle the Earth in an almost north-south orbit, passing close to both poles
 
-•	**Neither**: Tropical Rainfall Mapping Mission (TRMM) 
+-	**Neither**: Tropical Rainfall Mapping Mission (TRMM) 
 
 <br/>
 
