@@ -3,7 +3,6 @@
 What will you learn from this module?
 
 • Basics of EM spectrum
-
 • Different types of remote sensing systems and sensors and their applications 
 
 ## 
