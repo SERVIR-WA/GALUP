@@ -49,13 +49,13 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 <br/>
 
-**1.1 Hyperspectral**
+### 1.1 Hyperspectral
 <p align="center"> 
   <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
 </p>
 
 ## 2. Remote sensing systems and sensors
-**2.1 Sensors:** 
+### 2.1 Sensors:
 
 • **Active sensors** consist of a transmitter and a receiver that may (monostatic system) or may not be (bistatic system) co-located. It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter”. Examples include a camera with the flash, Light Detection and Ranging (LIDAR), Synthetic aperture radar (SAR). 
 
@@ -96,7 +96,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 <img align="center" src="https://user-images.githubusercontent.com/87503837/133616643-ba9e4e28-2811-4d02-bc5a-987a549af606.png" width="350" height="320">
 -->
 
-**2.2 Resolution:**
+### 2.2 Resolution:
 
 • **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.
 
@@ -113,7 +113,7 @@ Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right
 
 <br/>
 
-**2.3 Satellite Systems**
+### 2.3 Satellite Systems
 
 •	**Geo-stationary/geo-synchronous** : at about 36,000km above the earth's surface and follows direction of Earth's rotation 
 
@@ -123,7 +123,7 @@ Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right
 
 <br/>
 
-**Data Sources**
+### Data Sources
 
 A table of the bands from the Landsat satellite program are given below, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
 
@@ -138,7 +138,7 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 </p> 
 
-## 2.4 Practice 
+### 2.4 Practice 
 
 1. Download [Module 1 Practice](https://github.com/ecodynlab/GALUP/files/7390297/MODULE.1.zip) and unzip the file. 
 2. Open the unzipped file in QGIS. 
