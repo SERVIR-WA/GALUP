@@ -30,7 +30,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 <br/>
 
-<p align="center"> 
+<center>
  
 |       Band                   |     Wavelength       |
 |------------------------------|----------------------|
@@ -42,7 +42,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 |     Short-wave infrared 2    |     1.6-2.5µm        |
 |     Thermal Infrared         |     10.60–12.51µm    |
  
- </p>
+</center>
 
 
 <br/>
