@@ -17,7 +17,7 @@ Module 4
 
 ## Assignment Submission and Help
 
-Below is a video explaining how to submit the module assignments and how to request help through GitHub. 
+Below is a video explaining how to submit the module assignments and how to request help through GitHub. Note: for the videos in this workshop, it may be convenient to open them in a new tab or window for ease of accessing the Github page.
 
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9741afe237094a77aff3acbf6c2df8a91d" target="_blank">
