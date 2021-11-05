@@ -32,7 +32,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 <p align="center">
  
-| Band                         | Wavelength           |
+|       Band                   |     Wavelength       |
 |------------------------------|----------------------|
 |     Blue                     |     0.45-0.51µm      |
 |     Green                    |     0.53-0.59µm      |
