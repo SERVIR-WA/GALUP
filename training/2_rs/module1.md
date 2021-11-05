@@ -31,6 +31,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 <br/>
 
 <p align="center"> 
+ 
 |       Band                   |     Wavelength       |
 |------------------------------|----------------------|
 |     Blue                     |     0.45-0.51µm      |
