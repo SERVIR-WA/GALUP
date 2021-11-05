@@ -61,7 +61,6 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 • **Passive Sensors** consist of receiver that receives naturally occurring EM energy from a target at a particular wavelength and direction. Examples include a camera without the flash and radiometers.
 
-<br/>
 
 <!--- 
 **Types of Detectors:** 
