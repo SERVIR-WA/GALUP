@@ -5,7 +5,6 @@ What will you learn from this module?
 - Basics of EM spectrum
 
 - Different types of remote sensing systems and sensors and their applications 
-
 ## 
 Remote sensing is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation<sup>1</sup>.
 
