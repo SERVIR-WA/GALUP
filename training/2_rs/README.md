@@ -25,11 +25,7 @@ The participants will have to sign into their GitHub accounts to submit assignme
 
 ## Modules
 
-<a href="module1.md" title="Module 1">Module 1</a> - Introduction to Remote Sensing
-
-Module 2 
-
-Module 3
-
-Module 4 
-
+1. [Module 1 - Introduction to Remote Sensing (RS)](training/2_rs/module1.md)
+2. Module 2 - Remote Sensing Applications using GEE
+3. Module 3 - Common RS Indices and Environmental Variables
+4. Module 4 - Land Cover Classification
