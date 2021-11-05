@@ -95,7 +95,6 @@ The human eye is only able to detect wavelengths in the visible light range. How
 
 <img align="center" src="https://user-images.githubusercontent.com/87503837/133616643-ba9e4e28-2811-4d02-bc5a-987a549af606.png" width="350" height="320">
 -->
-
 ### 2.2 Resolution:
 
 • **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.
