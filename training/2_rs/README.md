@@ -4,14 +4,14 @@
 
 The second GALUP workshop aims at providing core concepts of use for remote sensing applications in land use planning. Using Google Earth Engine (GEE), the participants will explore remote sensing data, learn common indices, and use simple land cover classification techniques. The goal is to have an understanding of how these techniques can be used for better land-use decision making. 
 
-### Objectives
+## Objectives
 
-- Understand key concepts in land use analysis
-- Be familiar with the QGIS software
-- Use LUCIS-Open Tools for QGIS to perform geospatial analysis
-- Create models for suitability analysis using Graphical Modeler
-- Interpret the result of land-use suitability analysis
-- Making decisions when different purposes of land use are in conflict
+- Understand information obtained from different wavelengths/bands
+- Learn about remote sensing systems and datasets
+- Be familiar with Google Earth Engine
+- Learn about commonly used indices and environmental variables from remote sensing
+- Conduct supervised land cover classification using GEE
+- Interpret the results from different land cover classifications
 
 ## Assignment Submission and Help
 
