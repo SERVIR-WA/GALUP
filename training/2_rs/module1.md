@@ -101,7 +101,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
 - **Temporal resolution** describes how often a sensor observes the same target 
 
 - **Radiometric resolution** describes the number of wavelengths observed. For example, multispectral sensors observe about 10s of bands (or wavelength regions) in the VI/NIR spectrum, providing discrete observations. 
-- 
+ 
 <br/>
 
 Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right)
