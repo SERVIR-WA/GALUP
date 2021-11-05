@@ -1,4 +1,4 @@
-## Module 1 - Introduction to Remote Sensing 
+# Module 1 - Introduction to Remote Sensing 
 
 What will you learn from this module?
 
@@ -11,7 +11,7 @@ Remote sensing is the science and art of obtaining information about an object, 
 
 Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during WWII. Since then, detectors have been expanded to  run on most of the EM spectrum and variety of applications spanning from military use to agriculture. 
 
-### 1. EM spectrum 
+## 1. EM spectrum 
 • **Electromagnetic spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. 
 
 • **Observed energy** or **radiation** is primarily sensitive to molecular resonances in the to molecular resonances in the surface layer surface layer of target. 
@@ -54,7 +54,7 @@ The human eye is only able to detect wavelengths in the visible light range. How
   <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
 </p>
 
-### 2. Remote sensing systems and sensors
+## 2. Remote sensing systems and sensors
 **2.1 Sensors:** 
 
 • **Active sensors** consist of a transmitter and a receiver that may (monostatic system) or may not be (bistatic system) co-located. It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter”. Examples include a camera with the flash, Light Detection and Ranging (LIDAR), Synthetic aperture radar (SAR). 
@@ -138,7 +138,7 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 </p> 
 
-### 2.4 Practice 
+## 2.4 Practice 
 
 1. Download [Module 1 Practice](https://github.com/ecodynlab/GALUP/files/7390297/MODULE.1.zip) and unzip the file. 
 2. Open the unzipped file in QGIS. 
