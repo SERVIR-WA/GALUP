@@ -140,8 +140,8 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 
 1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7490402/practice_m1.zip) and unzip the file. 
-2. Open the unzipped file in QGIS. 
-3. Switch between the two layers to see the difference between the two types of remote sensing data. 
+2. Open a blank project in QGIS and load both TIF files as layers. 
+3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
 4. The file consists of NDVI and land surface temperature data. NDVI is a vegetation index that will be covered in another section.  
 
 
