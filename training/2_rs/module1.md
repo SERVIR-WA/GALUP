@@ -138,7 +138,8 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 ### 2.4 Practice 
 
-1. Download [Module 1 Practice](https://github.com/ecodynlab/GALUP/files/7390297/MODULE.1.zip) and unzip the file. 
+
+1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7490402/practice_m1.zip) and unzip the file. 
 2. Open the unzipped file in QGIS. 
 3. Switch between the two layers to see the difference between the two types of remote sensing data. 
 4. The file consists of NDVI and land surface temperature data. NDVI is a vegetation index that will be covered in another section.  
