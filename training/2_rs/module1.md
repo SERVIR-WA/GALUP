@@ -100,6 +100,6 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 4. Submit the Post-Module [survey](https://ufl.qualtrics.com/jfe/form/SV_9ulL78WT64RMm1M)
 5. Take screen shots of the two layers and submit it (here)
 
-/
+
 
 
