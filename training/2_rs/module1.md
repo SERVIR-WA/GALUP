@@ -13,20 +13,18 @@
 
 - **EM spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. The Figure below shows the different wavelegth regions in the spectrum and the Table highlights the optical, infrared and microwave Regions that are most commonly used in Earth remote sensing. 
 
-:pushpin: Note that the wavelengths increase as we move across Gamma Ray --> Optical --> Infrared --> Radio Regions of the spectrum. Thus,
+:pushpin: Note that the wavelengths increase as we move across Gamma Ray --> Optical/Visible --> Infrared --> Radio Regions of the spectrum. Thus,
    - The radiation observed in **optical and infrared wavelengths (bands)** 
-       > is sensitive to molecular resonances **in the surface layer** of target.
-       > 
-       > is obstructed by clouds, carbon dioxide, and water vapor in the atmosphere.
-       > 
-       > is dependent on solar illumination (_optical and near-infrared_).
+       > is sensitive to molecular resonances **in the surface layer** of target.<br>
+       > is obstructed by clouds, carbon dioxide, and water vapor in the atmosphere.<br>
+       > is dependent on solar illumination (_optical and near-infrared_).<br>
+    
    - The radiation observed in the **microwave bands** 
-      > is sensitive to **temperature distribution, geometric, and electric properties of surface and volume**.
-      > 
-      > can penetrate through clouds and light rain. It may also penetrate through vegetation and provide soil information.
-      > 
-      > is independent of solar illumination.
+      > is sensitive to **temperature distribution, geometric, and electric properties of surface and volume**. <br>
+      > can penetrate through clouds and light rain. It may also penetrate through vegetation and provide soil information.<br>
+      > is independent of solar illumination.<br>
 
+<br>
 <p align="center">
  <img width="604" height="207" src="https://user-images.githubusercontent.com/87503837/132062813-8bd2faa0-336c-4fc7-b3f1-f8ae62822e9b.png">
 </p>
@@ -47,81 +45,29 @@
  
 </div>
 
-- **Observed energy** or **radiation** . 
+- The human eye is only able to detect in optical wavelengthsm while many insects see in the 300 to 650 nm region, and can detect ultraviolet light because   they have special photoreceptors in their eyes.   
 
-- **Emitted**, **reflected**, and **backscattered radiation** is sensitive to temperature distribution, geometric, and electric properties of surface or volume. 
-
-- **Near infrared (NIR)** is defined from 750 nm to 1400 nm and **shortwave infrared (SWIR)** from 1400 nm to 3000 nm.
-
-
-
-
-The human eye is only able to detect wavelengths in the visible light range. However, many insects see in the 300 to 650 nm wavelength and can detect ultraviolet light because   they have special photoreceptors in their eyes.   
-
-
-<br/>
-
-
-
-
-<br/>
-
-### 1.1 Hyperspectral
-<p align="center"> 
-  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
-</p>
 
 ## 2. Remote Sensing Systems and Sensors
-### 2.1 Sensors:
 
-- **Active sensors** consist of a transmitter and a receiver that may (monostatic system) or may not be (bistatic system) co-located. It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter.” Examples include a camera with the flash, Light Detection and Ranging (LIDAR), Synthetic aperture radar (SAR). 
+### 2.1 Satellite Systems <br>
+-	**Geo-stationary/geo-synchronous** : follows direction of Earth's rotation and provides regional coverage. E.g. weather satellites <br>
+-	**Polar orbiting**: circle the Earth in an almost north-south orbit, passing close to both poles and providing global coverage. E.g. Landsat series <br>
+-	**Neither**: the orbit is based upon science requirements. E.g. Tropical Rainfall Measurement Mission (1997-2015). <br>
 
-- **Passive Sensors** consist of receiver that receives naturally occurring EM energy from a target at a particular wavelength and direction. Examples include a camera without the flash and radiometers.
+### 2.2 Types of Sensors: <br>
+- **Active Sensors** consists of a transmitter and a receiver that may be co-located (monostatic system) or may be installed on different satellites (bistatic system). It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter.” E.g. camera with the flash (_optical_), Light Detection and Ranging (LIDAR) (_optical/NIR_), Radio Detection and Ranging (RADAR)(_microwave_). <br>
+- **Passive Sensor** consists of a receiver that receives naturally occurring EM energy from a target at a particular wavelength and direction. Examples include a camera without the flash (optical) and radiometers.
 
-
-<!--- 
-**Types of Detectors:** 
-
-**Thermal detectors**
-
-• absorb incident flux and undergo temperature changes
-
-• the power in absorbed radiation is typically small, and so the detector itself should be small to have a low heat capacity
-
-• Ex: Bolometer 
-
-![image](https://user-images.githubusercontent.com/87503837/133616355-0ff8f5fd-2d57-4e97-b781-786353fa934e.png)
-
-**External Photo-effect detectors**
-
-• has photocathode where incident light is partially absorbed and generates photoelectrons
-
-• Ex: Photomultiplier Tube (PMT)
-
-
-<img src="https://user-images.githubusercontent.com/87503837/133625438-5593a350-5cd9-414a-bd1e-24f23e051fc4.png" width="500" height="320">
-
-**Internal Photo-effect detectors**
-
-• semiconductors in which the electons undergo internal energy level transitions when they absorb an electron
-
-• consists of **photoconductive detectors** and **photovoltaic detectors**
-
-• Ex: 
-
-<img align="center" src="https://user-images.githubusercontent.com/87503837/133616643-ba9e4e28-2811-4d02-bc5a-987a549af606.png" width="350" height="320">
--->
-### 2.2 Resolution:
-
-- **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.
-
-- **Temporal resolution** describes how often a sensor observes the same target 
-
-- **Radiometric resolution** describes the number of wavelengths observed. For example, multispectral sensors observe about 10s of bands (or wavelength regions) in the VI/NIR spectrum, providing discrete observations. 
+### 2.3 Types of Resolutions: <br>
+- **Spatial resolution** describes how far apart two targets have to be so that they are detected as separate signals.<br>
+- **Temporal resolution** describes how often a sensor observes the same target . <br>
+- **Radiometric resolution** describes the number of wavelengths observed. For example, in the Figures below, a multispectral sensor observing about 10s of discrete bands and a hyperspectral sensor observing 100s of bands in the optical/NIR region.<br>
  
 <br/>
 
-Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right)
+<p align="center"> <b>Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right)<b> <p>
+
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"><img src="https://user-images.githubusercontent.com/87503837/133636485-93336e1a-214b-4897-b1ca-c1206879b4e1.png" width="400" height="220"> 
  </p>
@@ -129,19 +75,13 @@ Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right
 
 <br/>
 
-### 2.3 Satellite Systems
+<p align="center"> 
+  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
+</p> <br/>
 
--	**Geo-stationary/geo-synchronous** : at about 36,000km above the earth's surface and follows direction of Earth's rotation 
+## 3. Data Sources
 
--	**Polar orbiting**: circle the Earth in an almost north-south orbit, passing close to both poles
-
--	**Neither**: Tropical Rainfall Mapping Mission (TRMM) 
-
-<br/>
-
-### Data Sources
-
-A table of the bands from the Landsat satellite program are given below, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
+The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
 
 
 <p align="center">
