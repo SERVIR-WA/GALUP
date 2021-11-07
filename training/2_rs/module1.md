@@ -1,17 +1,39 @@
-# Module 1 - Introduction to Remote Sensing 
+# Module 1 - Introduction to Remote Sensing
 
-What will you learn from this module?
+**What will you learn from this module?**
 
-- Basics of EM spectrum
+- Basics of remote sensing (RS), Electromagnetic (EM) spectrum, wavelengths/bands
+- Different types of remote sensing systems, sensors, and resolutions
+- Sources for remote sensing data
 
-- Different types of remote sensing systems and sensors and their applications 
-## 
-Remote sensing is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation<sup>1</sup>.
+## Definition
+**Remote sensing** is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation<sup>1</sup>. Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during World War II. Since then, detectors have been expanded to obtain information from most of the bands in the EM spectrum, with a variety of applications spanning from military use to agriculture. 
 
-Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during WWII. Since then, detectors have been expanded to  run on most of the EM spectrum and variety of applications spanning from military use to agriculture. 
+## 1. Electromagnetic (EM) Spectrum 
 
-## 1. EM Spectrum 
-- **Electromagnetic spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. 
+- **EM spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. The Figure below shows the different wavelegth regions in the spectrum and the Table highlights the optical, infrared and microwave Regions that are most commonly used in Earth remote sensing. 
+
+:pushpin: Note that the wavelengths increase as we move from Gamma to Radio Regions of the spectrum.
+
+<p align="center">
+ <img width="604" height="207" src="https://user-images.githubusercontent.com/87503837/132062813-8bd2faa0-336c-4fc7-b3f1-f8ae62822e9b.png">
+</p>
+
+<div align="center">
+
+ 
+|         Bands            |     Wavelengths      |
+|--------------------------|----------------------|
+|   Blue                   |     0.45-0.51µm      |
+|   Green                  |     0.53-0.59µm      |
+|   Red                    |     0.64-0.67µm      |
+|   Near Infrared          |     0.75-1µm         |
+|   Short-wave infrared 1  |     1-1.6µm          |
+|   Short-wave infrared 2  |     1.6-2.5µm        |
+|   Thermal Infrared       |     10.60–12.51µm    |
+|   Microwave              |     1mm - 1m         |
+ 
+</div>
 
 - **Observed energy** or **radiation** is primarily sensitive to molecular resonances in the to molecular resonances in the surface layer surface layer of target. 
 
@@ -20,29 +42,13 @@ Modern day remote sensing started with the advent of radar, sonar, and thermal i
 - **Near infrared (NIR)** is defined from 750 nm to 1400 nm and **shortwave infrared (SWIR)** from 1400 nm to 3000 nm.
 
 
-<p align="center">
- <img width="604" height="207" src="https://user-images.githubusercontent.com/87503837/132062813-8bd2faa0-336c-4fc7-b3f1-f8ae62822e9b.png">
-</p>
+
 
 The human eye is only able to detect wavelengths in the visible light range. However, many insects see in the 300 to 650 nm wavelength and can detect ultraviolet light because   they have special photoreceptors in their eyes.   
 
 
 <br/>
 
-<div align="center">
-
- 
-|       Band                   |     Wavelength       |
-|------------------------------|----------------------|
-|     Blue                     |     0.45-0.51µm      |
-|     Green                    |     0.53-0.59µm      |
-|     Red                      |     0.64-0.67µm      |
-|     Near Infrared            |     0.75-1µm         |
-|     Short-wave infrared 1    |     1-1.6µm          |
-|     Short-wave infrared 2    |     1.6-2.5µm        |
-|     Thermal Infrared         |     10.60–12.51µm    |
- 
-</div>
 
 
 
