@@ -75,7 +75,7 @@
 <br/>
 
 <p align="center"> 
-  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
+  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png">
 </p> <br/>
 
 ## 3. Data Sources
