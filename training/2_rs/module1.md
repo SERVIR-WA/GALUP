@@ -72,7 +72,6 @@
 <img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"><img src="https://user-images.githubusercontent.com/87503837/133636485-93336e1a-214b-4897-b1ca-c1206879b4e1.png" width="400" height="220"> 
  </p>
 
-
 <br/>
 
 <p align="center"> 
@@ -82,7 +81,6 @@
 ## 3. Data Sources
 
 The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
-
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/84922404/134026792-d1f488cd-3630-4266-ad2f-ed7062e52982.png" width="500" height="600">
@@ -94,13 +92,13 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 </p> 
 
-### 2.4 Practice 
-
+## Practice Exercise and Post-Module Survey (required)
 
 1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7490402/practice_m1.zip) and unzip the file. 
-2. Open a blank project in QGIS and load both TIF files as layers. 
+2. Open a blank project in QGIS and load both TIF files as layers.The file consists of a vegetation index and land surface temperature (LST) data from the MODIS sensor. 
 3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
-4. The file consists of NDVI and land surface temperature data. NDVI is a vegetation index that will be covered in another section.  
+4. Submit the Post-Module survey
+5. Take screen shots of the two layers and submit it (here)
 
 
 
