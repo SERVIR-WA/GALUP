@@ -79,6 +79,11 @@
 </p> <br/>
 
 ## 3. Data Sources
+Satellite data can be obtained from multiple sources, some important repositories are:
+- <a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a>
+- <a href="https://search.earthdata.nasa.gov/search?ac=true">NASA Earthdata Search</a>
+- <a href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a>
+- <a href="https://scihub.copernicus.eu/dhus/#/home">Copernicus Open Access Hub</a>
 
 The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
 
