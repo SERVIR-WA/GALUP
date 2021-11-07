@@ -13,7 +13,15 @@
 
 - **EM spectrum** is the entire distribution of electromagnetic radiation according to frequency or wavelength. The Figure below shows the different wavelegth regions in the spectrum and the Table highlights the optical, infrared and microwave Regions that are most commonly used in Earth remote sensing. 
 
-:pushpin: Note that the wavelengths increase as we move from Gamma to Radio Regions of the spectrum.
+:pushpin: Note that the wavelengths increase as we move across Gamma Ray --> Optical --> Infrared --> Radio Regions of the spectrum. Thus,
+   - The radiation observed in **optical and infrared wavelengths (bands)** 
+       > is sensitive to molecular resonances **in the surface layer** of target.
+       > is obstructed by clouds, carbon dioxide, and water vapor in the atmosphere.
+       > is dependent on solar illumination (_optical and near-infrared_).
+   - The radiation observed in the **microwave bands** 
+      > is sensitive to **temperature distribution, geometric, and electric properties of surface and volume**.
+      > can penetrate through clouds and light rain. It may also penetrate through vegetation and provide soil information.
+      > is independent of solar illumination.
 
 <p align="center">
  <img width="604" height="207" src="https://user-images.githubusercontent.com/87503837/132062813-8bd2faa0-336c-4fc7-b3f1-f8ae62822e9b.png">
@@ -35,7 +43,7 @@
  
 </div>
 
-- **Observed energy** or **radiation** is primarily sensitive to molecular resonances in the to molecular resonances in the surface layer surface layer of target. 
+- **Observed energy** or **radiation** . 
 
 - **Emitted**, **reflected**, and **backscattered radiation** is sensitive to temperature distribution, geometric, and electric properties of surface or volume. 
 
