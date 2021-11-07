@@ -53,7 +53,7 @@
 ### 2.1 Satellite Systems <br>
 -	**Geo-stationary/geo-synchronous** : follows direction of Earth's rotation and provides regional coverage. E.g. weather satellites <br>
 -	**Polar orbiting**: circle the Earth in an almost north-south orbit, passing close to both poles and providing global coverage. E.g. Landsat series <br>
--	**Neither**: the orbit is based upon science requirements. E.g. Tropical Rainfall Measurement Mission (1997-2015). <br>
+-	**Neither**: the orbit is based upon science requirements. E.g. Megha-Tropiques. <br>
 
 ### 2.2 Types of Sensors: <br>
 - **Active Sensors** consists of a transmitter and a receiver that may be co-located (monostatic system) or may be installed on different satellites (bistatic system). It transmits a known signal at a particular wavelength and receives some portion of the signal in the direction of a receiver. In case of a monostatic system, the received signal is called “backscatter.” E.g. camera with the flash (_optical_), Light Detection and Ranging (LIDAR) (_optical/NIR_), Radio Detection and Ranging (RADAR)(_microwave_). <br>
