@@ -16,11 +16,15 @@
 :pushpin: Note that the wavelengths increase as we move across Gamma Ray --> Optical --> Infrared --> Radio Regions of the spectrum. Thus,
    - The radiation observed in **optical and infrared wavelengths (bands)** 
        > is sensitive to molecular resonances **in the surface layer** of target.
+       > 
        > is obstructed by clouds, carbon dioxide, and water vapor in the atmosphere.
+       > 
        > is dependent on solar illumination (_optical and near-infrared_).
    - The radiation observed in the **microwave bands** 
       > is sensitive to **temperature distribution, geometric, and electric properties of surface and volume**.
+      > 
       > can penetrate through clouds and light rain. It may also penetrate through vegetation and provide soil information.
+      > 
       > is independent of solar illumination.
 
 <p align="center">
