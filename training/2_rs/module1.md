@@ -66,7 +66,7 @@
  
 <br/>
 
-<p align="center"> **Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right)** <p>
+**<p align="center"> Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right) <p>**
 
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"><img src="https://user-images.githubusercontent.com/87503837/133636485-93336e1a-214b-4897-b1ca-c1206879b4e1.png" width="400" height="220"> 
