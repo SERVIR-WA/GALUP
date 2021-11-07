@@ -90,14 +90,14 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 (M.U. Liaqat (February, 2016))
 
-</p> 
+</p> <br/>
 
 ## Practice Exercise and Post-Module Survey (required)
 
 1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7490402/practice_m1.zip) and unzip the file. 
 2. Open a blank project in QGIS and load both TIF files as layers.The file consists of a vegetation index and land surface temperature (LST) data from the MODIS sensor. 
 3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
-4. Submit the Post-Module survey
+4. Submit the Post-Module [survey](https://ufl.qualtrics.com/jfe/form/SV_9ulL78WT64RMm1M)
 5. Take screen shots of the two layers and submit it (here)
 
 
