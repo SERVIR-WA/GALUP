@@ -79,7 +79,7 @@
 </p> <br/>
 
 ## 3. Data Sources
-   
+
 The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
 
 <p align="center">
@@ -99,8 +99,3 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
 4. Submit the Post-Module [survey](https://ufl.qualtrics.com/jfe/form/SV_9ulL78WT64RMm1M)
 5. Take screen shots of the two layers and submit it (here)
-
-
-
-
-**
