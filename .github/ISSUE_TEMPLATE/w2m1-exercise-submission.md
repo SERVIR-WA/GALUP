@@ -11,6 +11,5 @@ labels: exercise w2m1
 
 2. Please UPDATE THE TITLE of this "Issue" in the title bar above with your name.
 
-3. If you haven't done so, please go back to Module 2 and make sure to take
-   the post-training survey. Participating in surveys is required for receiving
-   the "GALUP Certificate" by the University of Florida.
+3. If you haven't done so, please go back to Module 1 and make sure to take
+   the post-training survey. 
