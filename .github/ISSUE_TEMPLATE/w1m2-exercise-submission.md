@@ -3,7 +3,7 @@ name: Submit Module 2 exercises
 about: Please turn in your exercises for the GALUP team to
   review.
 title: 'Module 2 exercises [replace with your name]'
-labels: exercise w1m2
+labels: exercise w1m1
 
 ---
 
