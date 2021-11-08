@@ -103,4 +103,4 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 2. Open a blank project in QGIS and load both TIF files as layers.  
 3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
 4. Submit the Post-Module [survey](https://ufl.qualtrics.com/jfe/form/SV_9ulL78WT64RMm1M)
-5. Take screen shots of the two layers and submit it (here)
+5. Take screen shots of the two layers and submit it <a href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=exercise+w2m1&template=w2m1-exercise-submission.md&title=Module+1+exercises+%5Breplace+with+your+name%5D" title="here">here</a>\.
