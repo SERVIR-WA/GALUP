@@ -85,15 +85,15 @@ Satellite data can be obtained from multiple sources, some important repositorie
 - <a href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a>
 - <a href="https://scihub.copernicus.eu/dhus/#/home">Copernicus Open Access Hub</a>
 
-The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined. General uses for these bands are supplied, such as Land Use/Land Cover (LULC) and Land Surface Temperature (LST).
+The USGS has provided an excellent resource for choosing the best Landsat bands based on application domains; see link <a href="https://www.usgs.gov/faqs/what-are-best-landsat-spectral-bands-use-my-research?qt-news_science_products=0#qt-news_science_products">here</a>. In general, data from other satellites (for e.g., Sentinel-2) can be substituted for Landsat when different spatio-temporal characteristics are desired.
+
+The Table below provides bands from the Landsat satellite program, with the differences between Landsat 5, 7, and 8 outlined.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/84922404/134026792-d1f488cd-3630-4266-ad2f-ed7062e52982.png" width="500" height="600">
 </p>
 
 For further information on remote sensing, this [video](https://www.youtube.com/watch?v=qiqUAlJK4vI) from NASA ARSET is a useful resource.
-
-(M.U. Liaqat (February, 2016))
 
 </p> <br/>
 
