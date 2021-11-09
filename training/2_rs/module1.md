@@ -99,7 +99,7 @@ For further information on remote sensing, this [video](https://www.youtube.com/
 
 ## Practice Exercise and Post-Module Survey (required)
 
-1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7490402/practice_m1.zip) and unzip the file. The file consists of a vegetation index and land surface temperature data from the MODIS sensor.
+1. Download [practice_m1.zip](https://github.com/SERVIR-WA/GALUP/files/7507592/practice_m1.zip) and unzip the file. The file consists of a vegetation index and land surface temperature data from the MODIS sensor.
 2. Open a blank project in QGIS and load both TIF files as layers (drag and drop). 
 3. Switch between the two layers to see the difference between the two types of remote sensing data. Which file has a higher resolution? 
 4. Take screen shots of the two layers displayed in QGIS and add them to the [template](https://github.com/SERVIR-WA/GALUP/files/7493535/WS2_M1E1_Submission.docx). 
