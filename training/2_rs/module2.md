@@ -33,7 +33,7 @@ The video and Figure below show general interface functions for GEE. Further des
 
 ### 3.1 Downloading and Visualizing Landsat Data
 In the following example, we will use GEE to download and visualize Landsat satellite data in Ghana. Please use the video tutorial in Section 3.2 to follow along.
-- Copy the script ["01_search_and_display"](https://github.com/ecodynlab/GALUP/wiki/Scripts) and paste into the GEE [code editor](https://code.earthengine.google.com/). This is the same script that will be used in Exercise with slight alterations necessary to complete the Exercise.  
+- Copy the script ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts) and paste into the GEE [code editor](https://code.earthengine.google.com/). This is the same script that will be used in Exercise with slight alterations necessary to complete the Exercise.  
 - The script includes: <br/>
       **a.** Defining variables for dates of interest: **ST_DATE** and **EN_DATE** <br/>
       **b.** Defining the region of interest using 4 coordinates: **Longitude_min**, **Latitude_min**, **Longitude_max**, **Latitude_max** <br/>
