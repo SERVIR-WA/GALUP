@@ -48,6 +48,6 @@ This video from the Module 2 example may be useful for following along with this
 
 
 ## Result
-* Upon completion of the exercise, your screenshot should look similar to the file [here](https://github.com/SERVIRWA/GALUP/blob/master/training/2_rs/Exercises/M2_E1_sample.md).
+* Upon completion of the exercise, your screenshot should look similar to the file [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/Exercises/M2_E1_sample.md).
 
 
