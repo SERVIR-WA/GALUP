@@ -8,18 +8,17 @@ In this exercise, we will cover Landsat dataset visualization using GEE.
 * Identify satellite differences over various years and regions
 
 ## Instruction
-1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts).
-
-This video may be useful for following along with this exercise.
+1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts). This video may be useful for following along with this exercise.
+2. 
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9d0bd66164844d478357dbb876e9a8b91d" target="_blank" rel="noopener">
     <img src="https://user-images.githubusercontent.com/84922404/141026786-f85ea3c1-1241-44f7-8edd-3b243ffac099.png" alt= "GEE Tutorial" width="800">
   </a>
 </p>
 
-2. Using the geometry tools (14.), identify a region of interest (roughly the size of a district) and draw a polygon around it following the procedure given in the video. This will be automatically imported into the code editor, modifying the existing script. 
+2. Using the geometry tools (*#14 from the Figure in Module-2*), identify a region of interest that is roughly the size of a district, and draw a polygon around it following the procedure given in the video above. This will be automatically imported into the code editor, modifying the existing script. <br/>
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Note that if the region is too large, the image won't be able to be exported unless the maximum number of pixels is altered.
+:pushpin: Note that if the region is too large, the image won't be able to be exported unless the maximum number of pixels is altered.
     
 3. Choose dates over which satellite data will be collected in the format 'YYYY-MM-DD':
 
@@ -43,7 +42,7 @@ This video may be useful for following along with this exercise.
     c. Run the script again after changing the cloud cover fraction filtered in GEE to 30% instead of the current value of 70% (.filterMetadata('CLOUD_COVER','less_than',70)) and run the script again. Do you see any changes in the final output? If so, what could be causing the changes in your chosen area? Did you notice a difference in the number of the images retrieved?
     
 
-6.  Download this document [template](https://github.com/SERVIR-WA/GALUP/files/7508860/WS2_M2E2_Submission.docx) and add screenshots of your two mapped images (summer and winter) as well as the answers to questions 5a through 5c to it. Once completed, submit the document <a href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=exercise+w2m2&template=w2m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D" title="here">here</a>\.
+6.  Download this document [template](https://github.com/SERVIR-WA/GALUP/files/7508860/WS2_M2E2_Submission.docx) and add screenshots of your two mapped images (summer and winter) as well as the answers to questions 5a through 5c to it. Once completed, submit the document <a href="https://github.com/ecodynlab/GALUP/issues/new?assignees=&labels=Exercises&template=assignment-submission.md&title=Add+your+name+and+the+module+number+for+submission" title="here">here</a>\.
 
 
 ## Result
