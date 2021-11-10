@@ -14,7 +14,7 @@ In this exercise, we will cover satellite dataset visualization using GEE.
 This video from the Module 2 example may be useful for following along with this exercise.
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/68693a462a914666807e47f992dedde11d" target="_blank" rel="noopener">
-    <img src="https://user-images.githubusercontent.com/84922404/140551115-a0e9d6fa-ae4b-4357-99be-0a27b1901394.png" alt= "GEE Tutorial" width="800">
+    <img src="https://user-images.githubusercontent.com/84922404/141026786-f85ea3c1-1241-44f7-8edd-3b243ffac099.png" alt= "GEE Tutorial" width="800">
   </a>
 </p>
 
