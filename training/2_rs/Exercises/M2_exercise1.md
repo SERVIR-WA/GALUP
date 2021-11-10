@@ -9,7 +9,7 @@ In this exercise, we will cover satellite dataset visualization using GEE.
 
 
 ## Instruction
-1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/ecodynlab/GALUP/wiki/Scripts).
+1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts).
 
 This video from the Module 2 example may be useful for following along with this exercise.
 <p align="center">
