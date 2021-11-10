@@ -40,7 +40,7 @@ In this exercise, we will cover Landsat dataset visualization using GEE.
     
     c. Run the script again after changing the cloud cover fraction filtered in GEE to 30% instead of the current value of 70% (```.filterMetadata('CLOUD_COVER','less_than',70)```). Do you see any changes in the final output? If so, take a screen shot of the new image and include it in the document as well. What could be causing the changes in your chosen area? Did you notice a difference in the number of the images retrieved?
     
-6. Once completed, submit the document <a href="https://github.com/ecodynlab/GALUP/issues/new?assignees=&labels=Exercises&template=assignment-submission.md&title=Add+your+name+and+the+module+number+for+submission" title="here">here</a>\. Please submit the Post-Module-2 survey [here](https://ufl.qualtrics.com/jfe/form/SV_6fIRnsK59HEwZ9k).
+6. Once completed, submit the document <a href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=&labels=Exercises&template=assignment-submission.md&title=Add+your+name+and+the+module+number+for+submission" title="here">here</a>\. Please submit the Post-Module-2 survey [here](https://ufl.qualtrics.com/jfe/form/SV_6fIRnsK59HEwZ9k).
 
 
 ## Result
