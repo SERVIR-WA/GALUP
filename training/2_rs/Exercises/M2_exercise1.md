@@ -1,14 +1,14 @@
-# Module 2 Exercise 1 
+# Module-2 Exercise
 ## Description
-In this exercise, we will cover satellite dataset visualization using GEE.
+In this exercise, we will cover Landsat dataset visualization using GEE.
 
-## Skills Practices
-* Understand how to import and filter a dataset in GEE
+## Skills Developed
+* Understand how to import and filter RS products in GEE
 * Create a visual map using specific bands
 * Identify satellite differences over various years and regions
 
 
-## Instruction
+## Instructions
 1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts).
 
 This video from the Module 2 example may be useful for following along with this exercise.
