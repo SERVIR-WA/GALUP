@@ -8,9 +8,7 @@ In this exercise, we will cover Landsat dataset visualization using GEE.
 * Identify satellite differences over various years and regions
 
 ## Instruction
-1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts).
-
-This video may be useful for following along with this exercise.
+1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts). This video may be useful for following along with this exercise.
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9d0bd66164844d478357dbb876e9a8b91d" target="_blank" rel="noopener">
     <img src="https://user-images.githubusercontent.com/84922404/141026786-f85ea3c1-1241-44f7-8edd-3b243ffac099.png" alt= "GEE Tutorial" width="800">
