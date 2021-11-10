@@ -33,20 +33,28 @@ The video and Figure below show general interface functions for GEE. Further des
 
 ### 3.1 Downloading and Visualizing Landsat Data
 In the following example, we will use GEE to download and visualize Landsat satellite data in Ghana. Please use the video tutorial in Section 3.2 to follow along.
-- Copy the script ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts) and paste into the GEE [code editor](https://code.earthengine.google.com/). This is the same script that will be used in Exercise with slight alterations necessary to complete the Exercise.  
-- The script includes: <br/>
-  - Defining variables for dates of interest: **ST_DATE** and **EN_DATE** <br/>
-  - Defining the region of interest using 4 coordinates: **Longitude_min**, **Latitude_min**, **Longitude_max**, **Latitude_max** <br/>
-  - :pushpin: Latitudes south of Equator and Longitudes west of Greenwich Meridian are negative. <br/>
-  - Defining variables for RS data products: Here, data products from **Landsat 5, 7, and 8** are used.<br/>
-  - Selecting the data product: **Landsat 5** <br/>
-  - Filtering the data product by the region and dates of interest, and by the amount of cloud cover. <br/>
-  - Repeating *d* and *e* with **Landsat 7 & 8** <br/>
-  - Setting the visualization parameters for each product: **bands**, **min**, **max**, **gamma** <br/>
-    -   For information on Landsat bands, please refer to [Module 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/module1.md) <br/>
-    -   The parameters **min**, **max**, and **gamma** describe the RGB visual representation. For more details on these, see [here](https://developers.google.com/earth-engine/guides/image_visualization) <br/>
-  - Mapping the images: Centering, and adding RS data in three layers. <br/>
-  - Exporting images to Google Drive
+<ul>
+  <li>Copy the script <a href="https://github.com/SERVIR-WA/GALUP/wiki/Scripts">"01_search_and_display"</a> and paste into the GEE <a href="https://code.earthengine.google.com/">code editor</a>. This is the same script that will be used in Exercise with slight alterations necessary to complete the Exercise.</li>
+  <li>The script includes:
+    <ol type="a">
+    <li>Defining variables for dates of interest: <b>ST_DATE</b> and <b>EN_DATE</b></li>
+    <li>Defining the region of interest using 4 coordinates: <b>Longitude_min</b>, <b>Latitude_min</b>, <b>Longitude_max</b>, <b>Latitude_max</b></li>
+    <li>Defining variables for RS data products: Here, data products from <b>Landsat 5, 7, and 8</b> are used.</li>
+    <li>Selecting the data product: <b>Landsat 5</b>.</li>
+    <li>Filtering the data product by the region and dates of interest, and by the amount of cloud cover.</li>
+    <li>Repeating <i>d</i> and <i>e</i> with <b>Landsat 7 & 8</b>.</li>
+    <li>Setting the visualization parameters for each product: <b>bands</b>, <b>min</b>, <b>max</b>, <b>gamma</b>.</li>
+    <blockquote>
+    For information on Landsat bands, please refer to <a href="https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/module1.md">Module 1</a>.
+    </blockquote>
+    <blockquote>
+    The parameters <b>min</b>, <b>max</b>, and <b>gamma</b> describe the RGB visual representation. For more details on these, see <a href="https://developers.google.com/earth-engine/guides/image_visualization">here</a>.
+    </blockquote>
+    <li>Mapping the images: Centering, and adding RS data in three layers.</li>
+    <li>Exporting images to Google Drive.</li>
+    </ol>
+  </li>
+</ul>
 
 ### 3.2 Video Tutorial for the Section 3.1
 Use the video tutorial to follow along with the example. This may also be useful in completing the exercise.
