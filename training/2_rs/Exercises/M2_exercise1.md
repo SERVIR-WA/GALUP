@@ -1,9 +1,9 @@
-# Module 2 Exercise 1 
+# Module-2 Exercise
 ## Description
-In this exercise, we will cover satellite dataset visualization using GEE.
+In this exercise, we will cover Landsat dataset visualization using GEE.
 
-## Skills Practices
-* Understand how to import and filter a dataset in GEE
+## Skills Developed
+* Understand how to import and filter RS products in GEE
 * Create a visual map using specific bands
 * Identify satellite differences over various years and regions
 
