@@ -16,7 +16,7 @@ Please request an account with Google Earth Engine (GEE) as follows:
 
 ## 2. Exploring GEE Interface
 
-The video and Figure below show general interface functions for GEE. Further description of the components of the Figure can be found [here](https://github.com/ecodynlab/GALUP/wiki/GEE-Interface). 
+The video and Figure below show general interface functions for GEE. Further description of the components of the Figure can be found [here](https://github.com/SERVIR-WA/GALUP/wiki/GEE-Interface). 
 
 <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/55447fcbfc2f487ebaae8d1258e829ca1d" target="_blank">
