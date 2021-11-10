@@ -7,7 +7,7 @@ In this exercise, we will cover Landsat dataset visualization using GEE.
 * Create a visual map using specific bands
 * Identify satellite differences over various years and regions
 
-## Instruction
+## Instructions
 1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts). This video may be useful for following along with this exercise.
 
 <p align="center">
