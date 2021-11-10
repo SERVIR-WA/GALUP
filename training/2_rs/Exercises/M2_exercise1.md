@@ -1,11 +1,11 @@
-# Module-2 Exercise
+# Module 2 Exercise 1 
 ## Description
-In this exercise, we will cover Landsat dataset visualization using GEE.
+In this exercise, we will cover satellite dataset visualization using GEE.
 
-## Skills Developed
-* Understand how to import and filter RS products in GEE
+## Skills Practices
+* Understand how to import and filter a dataset in GEE
 * Create a visual map using specific bands
-* Identify satellite differences over various years and regionss
+* Identify satellite differences over various years and regions
 
 
 ## Instruction
@@ -50,6 +50,4 @@ This video from the Module 2 example may be useful for following along with this
 ## Result
 * Upon completion of the exercise, your screenshot should look similar to the file [here](https://github.com/ecodynlab/GALUP/blob/main/Exercises/M2_E1_sample.md).
 
-</p>
 
-Return to [Module 2](https://github.com/ecodynlab/GALUP/blob/main/Modules/Module%202.md) or move on to [Module 3](https://github.com/ecodynlab/GALUP/blob/main/Modules/Module%203.md).
