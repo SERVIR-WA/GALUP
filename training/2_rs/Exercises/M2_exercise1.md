@@ -1,14 +1,14 @@
-# Module-2 Exercise
+# Module 2 Exercise 1 
 ## Description
-In this exercise, we will cover Landsat dataset visualization using GEE.
+In this exercise, we will cover satellite dataset visualization using GEE.
 
-## Skills Developed
-* Understand how to import and filter RS products in GEE
+## Skills Practices
+* Understand how to import and filter a dataset in GEE
 * Create a visual map using specific bands
 * Identify satellite differences over various years and regions
 
 
-## Instructions
+## Instruction
 1. In the GEE [code editor](https://code.earthengine.google.com/), copy and paste the script for this exercise, ["01_search_and_display"](https://github.com/SERVIR-WA/GALUP/wiki/Scripts).
 
 This video from the Module 2 example may be useful for following along with this exercise.
@@ -43,8 +43,8 @@ This video from the Module 2 example may be useful for following along with this
     
     c. Run the script again after changing the cloud cover fraction filtered in GEE to 30% instead of the current value of 70% (.filterMetadata('CLOUD_COVER','less_than',70)) and run the script again. Do you see any changes in the final output? If so, what could be causing the changes in your chosen area? Did you notice a difference in the number of the images retrieved?
     
-    
-6.  Download this document [template](https://github.com/ecodynlab/GALUP/files/7487735/WS2_M2E2_Submission.docx) and add screenshots of your two mapped images (summer and winter) as well as the answers to questions 5a through 5c to it. Once completed, submit the document <a href="https://github.com/ecodynlab/GALUP/issues/new?assignees=&labels=Exercises&template=assignment-submission.md&title=Add+your+name+and+the+module+number+for+submission" title="here">here</a>\.
+
+6.  Download this document [template](https://github.com/SERVIR-WA/GALUP/files/7508860/WS2_M2E2_Submission.docx) and add screenshots of your two mapped images (summer and winter) as well as the answers to questions 5a through 5c to it. Once completed, submit the document <a href="https://github.com/ecodynlab/GALUP/issues/new?assignees=&labels=Exercises&template=assignment-submission.md&title=Add+your+name+and+the+module+number+for+submission" title="here">here</a>\.
 
 
 ## Result
