@@ -45,9 +45,7 @@ In the following example, we will use GEE to download and visualize Landsat sate
     <li>Repeating <i>d</i> and <i>e</i> with <b>Landsat 7 & 8</b>.</li>
     <li>Setting the visualization parameters for each product: <b>bands</b>, <b>min</b>, <b>max</b>, <b>gamma</b>.</li>
     <blockquote>
-    For information on Landsat bands, please refer to <a href="https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/module1.md">Module 1</a>.
-    </blockquote>
-    <blockquote>
+    For information on Landsat bands, please refer to <a href="https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/module1.md">Module 1</a>. <br>
     The parameters <b>min</b>, <b>max</b>, and <b>gamma</b> describe the RGB visual representation. For more details on these, see <a href="https://developers.google.com/earth-engine/guides/image_visualization">here</a>.
     </blockquote>
     <li>Mapping the images: Centering, and adding RS data in three layers.</li>
