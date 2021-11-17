@@ -70,9 +70,8 @@ Use the video tutorial to follow along with the example. This may also be useful
 </p>
 
 ##
-**Previous Section:**
+**Previous Section:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; **Next Section:**
 
-<a href="module1.md" title="Module 1">Module 1</a>
-
+<a href="module1.md" title="Module 1">Module 1</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="module3.md" title="Module 3">Module 3</a>
 
 
