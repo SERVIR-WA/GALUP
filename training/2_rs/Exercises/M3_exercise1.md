@@ -38,4 +38,4 @@ In this exercise, we will build upon module 1 by extracting Landsat imagery, der
     b. What do you notice about the images that represent each different layer (Landsat, index, SRTM elevation, and LST)? Can you infer any information about the chosen region through these images? <br>
 5. Once completed, submit the document <a href="https://github.com/ecodyn/GALUP/issues/new?assignees=&labels=exercise+w2m2&template=w2m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D" title="here">here</a>\. Please submit the Post-Module-3 survey [here](https://ufl.qualtrics.com/jfe/form/SV_bpjF7THHLlhtWCO).
 ## Result
-Upon completion of the exercise, your map should look something like the image [here](https://github.com/ecodynlab/GALUP/blob/main/Exercises/M3_E1_sample.md).
+Upon completion of the exercise, your map should look something like the image [here](https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/Exercises/M3_E1_sample.md).
