@@ -33,7 +33,7 @@ In this exercise, we will build upon module 1 by extracting Landsat imagery, der
     e. The time series chart for the chosen index <br>
     f. The time series chart for LST <br>
   :pushpin: Check and Uncheck the layers in the GEE map to be able to see each image individually. 
-5. Download this document [template](https://github.com/ecodynlab/GALUP/files/7550880/WS2_M3E1_Template.docx) and add the 6 screenshots stated above, as well as the answers to the follwing questions:<br>
+5. Download this document [template](https://github.com/SERVIR-WA/GALUP/files/7551505/WS2_M3E1_Template.docx) and add the 6 screenshots stated above, as well as the answers to the follwing questions:<br>
     a. What does your chosen index represent? Do you notice any distinct patterns in values of the chosen index over the course of the chosen time period? <br>
     b. What do you notice about the images that represent each different layer (Landsat, index, SRTM elevation, and LST)? Can you infer any information about the chosen region through these images? <br>
 5. Once completed, submit the document <a href="https://github.com/ecodyn/GALUP/issues/new?assignees=&labels=exercise+w2m2&template=w2m2-exercise-submission.md&title=Module+2+exercises+%5Breplace+with+your+name%5D" title="here">here</a>\. Please submit the Post-Module-3 survey [here](https://ufl.qualtrics.com/jfe/form/SV_bpjF7THHLlhtWCO).
