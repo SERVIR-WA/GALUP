@@ -22,10 +22,7 @@
       </blockquote>
   
   
-- The Table below provides reflectances used to calculate the above indices and their uses.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/84922404/135870925-6baf5423-4762-4bff-9a59-3d30d189d039.png" width="700">
-</p>
+- The Table below provides reflectances used to calculate the above indices. 
 
 
 <p align="center">
