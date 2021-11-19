@@ -7,20 +7,10 @@
 ## 1. Supervised Image Classification Methods
 These methods identify spectrally similar areas on images by first identifying known classes from training sites and then directing the image processing using those training sites as reference for unknown sites. Following methods are commonly used for LCC:
 - **Minimum-Distance to the Mean Classifier**: This technique calculates the mean point in digital parameter space, and uses multiple metrics such as Euclidean distance, normalized Euclidean distance, and Mahalanobis distance from that mean to classify unknown image data to known classes. Additional information is available [here](https://docs.lib.purdue.edu/larstech/25/).
-- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees. 
-- **Random Forest Classifier**: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification. The RF algorithm can also classify variable importance. 
-- **Support Vector Machine (SVM) Classifier**: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data. 
-- **Continuous Change Detection and Classification (CCDC)**: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows. Classification occurs after change is detected in a pixel value. 
-
-<b>Additional resources: </b>
-<blockquote>
- <p><cite><a href="https://docs.lib.purdue.edu/larstech/25/"rel="external">Minimum Distance classification</a></cite></p>
- <p><cite><a href="https://www.sciencedirect.com/science/article/pii/S0167865505002242"rel="external">Random Forests for land cover classification</a></cite></p>
- <p><cite><a href="https://www.tandfonline.com/doi/abs/10.1080/01431160110040323"rel="external">SVM for land cover classification</a></cite></p>
- <p><cite><a href="https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/">CCDC algorithm</a></cite></p>
- <p><cite><a href="https://wiki.q-researchsoftware.com/wiki/Machine_Learning_-_Classification_And_Regression_Trees_(CART)">CART algorithm</a></cite></p>
- <p><cite><a href = "https://github.com/SERVIR-WA/GALUP/files/7573041/GALUP-GLanCE-Classification.pptx">PowerPoint: Harmonization of Land Cover Classification for West Africa</a></cite></p>
-</blockquote>
+- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees. Additional information is available [here](https://wiki.q-researchsoftware.com/wiki/Machine_Learning_-_Classification_And_Regression_Trees_(CART)).
+- **Random Forest Classifier**: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification. The RF algorithm can also classify variable importance. Additional information is available [here](https://www.sciencedirect.com/science/article/pii/S0167865505002242).
+- **Support Vector Machine (SVM) Classifier**: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data. [here](https://www.tandfonline.com/doi/abs/10.1080/01431160110040323).
+- **Continuous Change Detection and Classification (CCDC)**: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows. Classification occurs after change is detected in a pixel value. Additional information is available [here](https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/).
 
 
 
