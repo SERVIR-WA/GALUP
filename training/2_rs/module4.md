@@ -158,7 +158,7 @@ _Wetlands_
   <img src="https://user-images.githubusercontent.com/87503837/142496834-09496d67-12e2-44a8-93bc-69001f5dbea9.gif" alt="animated" />
 </p>
 <ul>
- Efforts are ongoing to develop a harmonized LCC specific for West Africa land covers. The current scheme for the Regional Land Cover Mapping (RLCM) in West Africa is given below, and details are available [here](https://github.com/ecodynlab/GALUP/files/7573312/RLCM.pdf). 
+ Efforts are ongoing to develop a harmonized LCC specific for West Africa land covers. The current scheme for the Regional Land Cover Mapping (RLCM) in West Africa is given below, and details are available [here](https://github.com/SERVIR-WA/GALUP/files/7573319/RLCM.pdf). 
   
  <details>
 <summary> <b> RLCM (Class name, Description) </b> </summary>
