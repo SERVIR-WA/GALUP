@@ -40,7 +40,7 @@ technologies to inform and ensure sustainable land use practices.
 1. [Module 1 - Introduction to Remote Sensing (RS)](training/2_rs/module1.md)
 2. [Module 2 - RS Applications using Google Earth Engine](training/2_rs/module2.md)
 3. [Module 3 - Common RS Indices and Environmental Variables](training/2_rs/module3.md)
-4. Module 4 - Land Cover Classification
+4. [Module 4 - Land Cover Classification](training/2_rs/module4.md)
 
 ## Documentation
 
