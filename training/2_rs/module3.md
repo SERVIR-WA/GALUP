@@ -73,6 +73,6 @@ This video may be useful in completing the exercises:
 ##
 **Previous Section:**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; **Next Section:**
 
-<a href="module2.md" title="Module 2">Module 2</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="module4.md" title="Module 4">Module 3</a>
+<a href="module2.md" title="Module 2">Module 2</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="module4.md" title="Module 4">Module 4</a>
 
 
