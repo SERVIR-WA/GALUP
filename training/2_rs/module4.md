@@ -7,11 +7,10 @@
 ## 1. Supervised Image Classification Methods
 These methods identify spectrally similar areas on images by first identifying known classes from training sites and then directing the image processing using those training sites as reference for unknown sites. Following methods are commonly used for LCC:
 - **Minimum-Distance to the Mean Classifier**: This technique calculates the mean point in digital parameter space, and uses multiple metrics such as Euclidean distance, normalized Euclidean distance, and Mahalanobis distance from that mean to classify unknown image data to known classes. 
+- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees. 
 - **Random Forest Classifier**: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification. The RF algorithm can also classify variable importance. 
 - **Support Vector Machine (SVM) Classifier**: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data. 
 - **Continuous Change Detection and Classification (CCDC)**: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows. Classification occurs after change is detected in a pixel value. 
-- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees. 
-
 
 <b>Additional resources: </b>
 <blockquote>
