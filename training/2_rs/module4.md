@@ -6,7 +6,7 @@
 
 ## 1. Supervised Image Classification Methods
 These methods identify spectrally similar areas on images by first identifying known classes from training sites and then directing the image processing using those training sites as reference for unknown sites. Following methods are commonly used for LCC:
-- **Minimum-Distance to the Mean Classifier**: This technique calculates the mean point in digital parameter space, and uses multiple metrics such as Euclidean distance, normalized Euclidean distance, and Mahalanobis distance from that mean to classify unknown image data to known classes, as shown in the Figure below. Additional information is available [here](https://docs.lib.purdue.edu/larstech/25/).
+- **Minimum-Distance to the Mean Classifier**: This technique calculates the mean point in digital parameter space, and uses multiple metrics such as Euclidean distance, normalized Euclidean distance, and Mahalanobis distance from that mean to classify unknown image data to known classes, as shown in the Figure below. Additional information is available [here](https://docs.lib.purdue.edu/larstech/25/). ([Source](https://github.com/SERVIR-WA/GALUP/files/7573860/full_phd.pdf))
 
 </p>
 
@@ -14,14 +14,14 @@ These methods identify spectrally similar areas on images by first identifying k
   <img width="600" alt="CCDC1" src="https://user-images.githubusercontent.com/84922404/142700597-7ae7e638-a789-424e-af22-e432a9bea17f.png"/>
 </p>
 
-- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees, as shown in the Figure below. Additional information is available [here](https://wiki.q-researchsoftware.com/wiki/Machine_Learning_-_Classification_And_Regression_Trees_(CART)).
+- **Classification and Regression Trees (CART)**: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees, as shown in the Figure below. Additional information is available [here](https://wiki.q-researchsoftware.com/wiki/Machine_Learning_-_Classification_And_Regression_Trees_(CART)). ([Source](https://medium.com/geekculture/decision-trees-with-cart-algorithm-7e179acee8ff))
 
 </p>
 <p align="center">
   <img width="600" alt="CART" src="https://user-images.githubusercontent.com/84922404/142700539-f4e6b3bf-7945-4380-baf8-acfb064ee63f.png"/>
 </p>
 
-- **Random Forest Classifier**: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification, as shown in the Figure below. The RF algorithm can also classify variable importance. Additional information is available [here](https://www.sciencedirect.com/science/article/pii/S0167865505002242).
+- **Random Forest Classifier**: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification, as shown in the Figure below. The RF algorithm can also classify variable importance. Additional information is available [here](https://www.sciencedirect.com/science/article/pii/S0167865505002242). ([Source](https://corporatefinanceinstitute.com/resources/knowledge/other/random-forest/))
 
 
 </p>
@@ -29,14 +29,14 @@ These methods identify spectrally similar areas on images by first identifying k
   <img width="600" alt="RF" src="https://user-images.githubusercontent.com/84922404/142700553-177ae5ae-169a-4a4d-8238-ff301f27c48e.png"/>
 </p>
 
-- **Support Vector Machine (SVM) Classifier**: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data, as shown in the Figure below. Additional information is available [here](https://www.tandfonline.com/doi/abs/10.1080/01431160110040323).
+- **Support Vector Machine (SVM) Classifier**: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data, as shown in the Figure below. Additional information is available [here](https://www.tandfonline.com/doi/abs/10.1080/01431160110040323). ([Source](https://github.com/SERVIR-WA/GALUP/files/7573858/sensors-21-04283-v3.pdf))
 
 </p>
 <p align="center">
   <img width="600" alt="SVM" src="https://user-images.githubusercontent.com/84922404/142700549-bc4d5f9c-432d-4bf5-b04d-808604b0ff58.png"/>
 </p>
 
-- **Continuous Change Detection and Classification (CCDC)**: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows, as shown in the Figure below. Classification occurs after change is detected in a pixel value. Additional information is available [here](https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/).
+- **Continuous Change Detection and Classification (CCDC)**: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows, as shown in the Figure below. Classification occurs after change is detected in a pixel value. Additional information is available [here](https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/). ([Source](https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/))
 
 </p>
 <p align="center">
