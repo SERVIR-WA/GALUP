@@ -31,8 +31,16 @@ This video may help in completing steps 1 through 5:
 
 **The classifications on the spreadsheet must be completed by Monday, 11/22 at 1:00 PM GMT**
 
-7. Once you receive the merged file of the classifications and original random points (this will be in the form of a shapefile), download this file. The file will be available here on **Tuesday, 11/23**: Please click [here](https://github.com/SERVIR-WA/GALUP/files/7589068/GALUP_Classification_Main.zip) to download the zipfile containing the shapefile of the classifications.
-8. Upload the entire zipfile into GEE as an asset (see this [link](https://developers.google.com/earth-engine/guides/asset_manager) for help with managing assets in GEE). 
+7. Once you receive the merged file of the classifications and original random points (this will be in the form of a shapefile), download this file. The file will be available here on **Tuesday, 11/23**: Please click [here](https://github.com/SERVIR-WA/GALUP/files/7589068/GALUP_Classification_Main.zip) to download the zipfile containing the shapefile of the classifications. 
+8. Upload the entire zipfile into GEE as an asset (see this [link](https://developers.google.com/earth-engine/guides/asset_manager) for help with managing assets in GEE). The video below may also help with this and following steps. 
+
+ <p align="center">
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/34f2887653d94667900f5eb240f954691d" target="_blank" rel="noopener">
+    <img src="https://user-images.githubusercontent.com/84922404/143688697-041adf9f-3c25-4857-ad58-ced83aa2fc7c.png" alt= "GEE Tutorial" width="800">
+  </a>
+</p>
+
+
 9. Once the asset has been loaded into GEE, run the script: [03_Landcover_Classification](https://github.com/SERVIR-WA/GALUP/wiki/Scripts#03_landcover_classification). This will utilize the training data (the asset) to classify Ghana's land cover using the Random Forest classification method.
 10. Repeat step 6 using each of the three other classifiers (minimumDistance, libsvm, and smileCart), and choose the classifier that you think best represents the land cover of the region. Take a screenshot of the land cover classification map that results from using this classifier.
 11. Download this [template](https://github.com/SERVIR-WA/GALUP/files/7572994/WS2_M4E1_Template.docx) and add the screenshot as well as answer the following questions:
