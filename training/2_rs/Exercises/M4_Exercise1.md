@@ -31,8 +31,8 @@ This video may help in completing steps 1 through 5:
 
 **The classifications on the spreadsheet must be completed by Monday, 11/22 at 1:00 PM GMT**
 
-7. Once you receive the merged file of the classifications and original random points (this will be in the form of a shapefile), download this file. The file will be available here on **Tuesday, 11/23**: Please click [here](https://github.com/SERVIR-WA/GALUP/files/7589068/GALUP_Classification_Main.zip) to download the zipfile containing the shapefile of the classifications. 
-8. Upload the entire zipfile into GEE as an asset (see this [link](https://developers.google.com/earth-engine/guides/asset_manager) for help with managing assets in GEE). The video below may also help with this and following steps. 
+7. Once you receive the merged files of the classifications and original random points (this will be in the form of a shapefile), download these files. The files will be available here on **Tuesday, 11/23**: one with the 7 main classes, and one with the 25 subclasses. Please click [here](https://github.com/SERVIR-WA/GALUP/files/7614691/GALUP_Classification_Updated_Main.zip) to download the zipfile containing the shapefile of the 7 main classifications, and please click [here](https://github.com/SERVIR-WA/GALUP/files/7614698/GALUP_Classification_Updated_Subclasses.zip) to download the zipfile containing the shapefile of the 25 subclasses.
+8. Upload each zipfile into GEE as an asset (see this [link](https://developers.google.com/earth-engine/guides/asset_manager) for help with managing assets in GEE). The video below may also help with this and following steps. 
 
  <p align="center">
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/34f2887653d94667900f5eb240f954691d" target="_blank" rel="noopener">
@@ -41,7 +41,9 @@ This video may help in completing steps 1 through 5:
 </p>
 
 
-9. Once the asset has been loaded into GEE, run the script: [03_Landcover_Classification](https://github.com/SERVIR-WA/GALUP/wiki/Scripts#03_landcover_classification). This will utilize the training data (the asset) to classify Ghana's land cover using the Random Forest classification method.
+9. Once the assets have been loaded into GEE, run the script: [03_Landcover_Classification](https://github.com/SERVIR-WA/GALUP/wiki/Scripts#03_landcover_classification). This will utilize the training data (the asset) to classify Ghana's land cover using the Random Forest classification method.
+
+📌 Note that the different zipfiles will have different labels for the classifications. The main classification file will use the label 'LCODE' to represent the classes, while the subclass file will use 'LCODE2'. The visualization parameters will also be different for each of these class levels. <br>
 10. Repeat step 6 using each of the three other classifiers (minimumDistance, libsvm, and smileCart), and choose the classifier that you think best represents the land cover of the region. Take a screenshot of the land cover classification map that results from using this classifier.
 11. Download this [template](https://github.com/SERVIR-WA/GALUP/files/7572994/WS2_M4E1_Template.docx) and add the screenshot as well as answer the following questions:
     a. What land cover classification method did you choose to use (minimumDistance, libsvm, smileCart, or smileRandomForest)? Why did you choose this classifier and how does it compare to classifications from the other methods?
