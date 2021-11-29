@@ -31,7 +31,7 @@ This video may help in completing steps 1 through 5:
 
 **The classifications on the spreadsheet must be completed by Monday, 11/22 at 1:00 PM GMT**
 
-7. Once you receive the merged files of the classifications and original random points (this will be in the form of a shapefile), download these files. The files will be available here on **Tuesday, 11/23**: one with the 7 main classes, and one with the 25 subclasses. Please click [here](https://github.com/SERVIR-WA/GALUP/files/7614691/GALUP_Classification_Updated_Main.zip) to download the zipfile containing the shapefile of the 7 main classifications, and please click [here](https://github.com/SERVIR-WA/GALUP/files/7614698/GALUP_Classification_Updated_Subclasses.zip) to download the zipfile containing the shapefile of the 25 subclasses.
+7. Once you receive the merged files of the classifications and original random points (this will be in the form of a shapefile), download these files. The files will be available here on **Tuesday, 11/23**: one with the 7 main classes, and one with the 25 subclasses. Please click [here](https://github.com/SERVIR-WA/GALUP/files/7620440/GALUP_Classification_Updated2_Main.zip) to download the zipfile containing the shapefile of the 7 main classifications, and please click [here](https://github.com/SERVIR-WA/GALUP/files/7620443/GALUP_Classification_Updated2_Subclasses.zip) to download the zipfile containing the shapefile of the 25 subclasses.
 8. Upload each zipfile into GEE as an asset (see this [link](https://developers.google.com/earth-engine/guides/asset_manager) for help with managing assets in GEE). The video below may also help with this and following steps. 
 
  <p align="center">
