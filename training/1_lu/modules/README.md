@@ -1,23 +1,6 @@
 # Workshop 1: Land-Use Suitability Analysis with QGIS Tools
 
-<table>
-<tr>
-    <td><b>Instructor<b></td>
-    <td><a href="https://github.com/chjch">Changjie Chen</a></td>
-</tr>
-<tr>
-    <td><b>Email</b></td>
-    <td>chj.chen@ufl.edu</td>
-</tr>
-<tr>
-    <td><b>Begin date</b></td>
-    <td>6/1/2021</td>
-</tr>
-<tr>
-    <td><b>End date</b></td>
-    <td>8/10/2021</td>
-</tr>
-</table>
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: June 1 - August 10, 2021
      
 ### Goal
 
