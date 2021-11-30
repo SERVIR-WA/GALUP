@@ -1,5 +1,24 @@
 # Workshop 1: Land-Use Suitability Analysis with QGIS Tools
 
+<table>
+<tr>
+    <td><b>Instructor<b></td>
+    <td><a href="https://github.com/chjch">Changjie Chen</a></td>
+</tr>
+<tr>
+    <td><b>Email</b></td>
+    <td>chj.chen@ufl.edu</td>
+</tr>
+<tr>
+    <td><b>Begin date</b></td>
+    <td>6/1/2021</td>
+</tr>
+<tr>
+    <td><b>End date</b></td>
+    <td>8/10/2021</td>
+</tr>
+</table>
+     
 ### Goal
 
 The first GALUP workshop aims at laying a foundation of core
