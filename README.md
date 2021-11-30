@@ -49,7 +49,7 @@ technologies to inform and ensure sustainable land use practices.
 
 ## GALUP Partners
 
-We appreciate the supports from our partners below.<br>
+We appreciate all the support from our partners below.<br>
 
 <table style="border: 0;">
   <tr> 
