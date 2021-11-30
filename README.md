@@ -30,6 +30,8 @@ technologies to inform and ensure sustainable land use practices.
 
 ### [Workshop 1 - Land-Use Suitability Analysis with QGIS Tools](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/modules)
 
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: June 1 - August 10, 2021
+
 1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
 2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md)
 3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
