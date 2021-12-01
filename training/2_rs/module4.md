@@ -206,6 +206,7 @@ The figure below shows the flow diagram of the classification process that will 
 
 1. Please complete and submit [Exercise 1](https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/Exercises/M4_Exercise1.md) for Module 4.
 2. Submit the Post-Module [survey](https://ufl.qualtrics.com/jfe/form/SV_6VxnjyVgVx04GuG). 
+3. Submit the Post-Training [survey](https://ufl.qualtrics.com/jfe/form/SV_8cvoKZLDrBllPkG) 
 
 
 
