@@ -39,7 +39,7 @@ technologies to inform and ensure sustainable land use practices.
 
 ### [Workshop 2 - Introduction to Satellite Remote Sensing](https://github.com/SERVIR-WA/GALUP/tree/master/training/2_rs)
 
-> **Instructor**: [Dr. Aditya Singh](https://abe.ufl.edu/people/faculty/aditya-singh/) (<ins>aditya01@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: November 8 - December 3, 2021.
+> **Instructor**: [Dr. Aditya Singh](https://abe.ufl.edu/people/faculty/aditya-singh/) (<ins>aditya01@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: November 8 - December 6, 2021.
 
 1. [Module 1 - Introduction to Remote Sensing (RS)](training/2_rs/module1.md)
 2. [Module 2 - RS Applications using Google Earth Engine](training/2_rs/module2.md)
