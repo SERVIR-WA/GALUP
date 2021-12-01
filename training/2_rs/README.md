@@ -1,5 +1,7 @@
 # Workshop 2: Introduction to Satellite Remote Sensing
 
+> **Instructor**: [Dr. Aditya Singh](https://abe.ufl.edu/people/faculty/aditya-singh/) (<ins>aditya01@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: November 8 - December 3, 2021.
+
 ## Goal
 
 The second GALUP workshop aims at providing training on core concepts in remote sensing applications for land use planning. Using Google Earth Engine (GEE), the participants will explore remote sensing data, learn common indices, and conduct land cover classification. This workshop is the first step toward understanding how RS data can be used for land-use assessments. 
