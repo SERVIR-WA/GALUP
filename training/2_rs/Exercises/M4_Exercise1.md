@@ -24,7 +24,7 @@ This video may help in completing steps 1 through 5:
     c. [ICRISAT KML](https://github.com/ecodynlab/GALUP/files/7565810/BOXES_ICRISAT.zip) <br>
     b. [LUSPA KML](https://github.com/ecodynlab/GALUP/files/7565811/BOXES_LUSPA.zip) <br>
 2. Opening these files in Google Earth Pro will zoom to the entire country. Expand the dropdown list to reveal individual boxes. Double-clicking on the boxes should make Google Earth Pro zoom into that location.
-3. 	~~Access this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/10JV0HxQAPhW3V7qjp5-bVLld8_-E8WhpeJayIAlVW2s/edit#gid=1266282790)~~.
+3. 	~~Access this Google Spreadsheet~~.
 4. Each organization has a tab assigned to it. The ID column corresponds to the ID of the boxes in the KML (do not change the ID). We have asumed each registered participant should be able to classify at least 100 locations by the end of the exercise, 
 5. Double-click on any box in the KML to zoom to that location. On the spreadsheet, locate the row corresponding to the KML box ID and click on the "Landcover" cell to reveal several options. Click on an option to select the landcover class. Clicking on this cell will result in several options appearing in the "Subclass cell". These are details of the landcover you selected. Select an option if you are sure the land cover class can be better defined using one of the subclasses.
 6. Once the sheet has been filled and the classification of each point completed, we will export the collected data and merge it with the coordinates of the random points.
