@@ -50,6 +50,12 @@ technologies to inform and ensure sustainable land use practices.
 3. [Module 3 - Common RS Indices and Environmental Variables](training/2_rs/module3.md)
 4. [Module 4 - Land Cover Classification](training/2_rs/module4.md)
 
+### [Workshop 3 - Integrated Decision Units for Land Use Suitability Modeling](https://github.com/SERVIR-WA/GALUP/tree/master/training/3_idu)
+
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;
+> **Date**: April 4 - April 8, 2022.<br>
+> **Co-authors**: Alex Eide.
+
 ## Documentation
 
 1. [LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/wiki/Tools)
