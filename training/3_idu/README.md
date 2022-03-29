@@ -19,3 +19,11 @@ input data are provided.
 - Understand key concepts of IDU and why it is useful to land use planning
 - Capable of using **16 tools** in QGIS involved in the process
 - Independently create IDUs for different regions
+
+### Content
+
+[Integrated Decision Units for Land Use Suitability Modeling](module.md)
+
+### Exercise
+
+[Assignment]
