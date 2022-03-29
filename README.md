@@ -30,6 +30,10 @@ technologies to inform and ensure sustainable land use practices.
 
 ### [Workshop 1 - Land-Use Suitability Analysis with QGIS Tools](https://github.com/SERVIR-WA/GALUP/tree/master/training/1_lu/modules)
 
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;
+> **Date**: June 1 - August 10, 2021.<br>
+> **Co-authors**: Genglin Yang and Shenyu Lyu.
+
 1. [Module 1 - Software and Data Preparation](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md)
 2. [Module 2 - Introduction to LUCIS-OPEN Tools for QGIS](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md)
 3. [Module 3 - Create Suitability Models with QGIS Graphical Modeler](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md)
@@ -37,10 +41,14 @@ technologies to inform and ensure sustainable land use practices.
 
 ### [Workshop 2 - Introduction to Satellite Remote Sensing](https://github.com/SERVIR-WA/GALUP/tree/master/training/2_rs)
 
+> **Instructor**: [Dr. Aditya Singh](https://abe.ufl.edu/people/faculty/aditya-singh/) (<ins>aditya01@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;
+> **Date**: November 8 - December 6, 2021.<br>
+> **Co-authors**: Dr. Jasmeet Judge, Julie Peeling, and Luc Olivier.
+
 1. [Module 1 - Introduction to Remote Sensing (RS)](training/2_rs/module1.md)
-2. Module 2 - RS Applications using Google Earth Engine
-3. Module 3 - Common RS Indices and Environmental Variables
-4. Module 4 - Land Cover Classification
+2. [Module 2 - RS Applications using Google Earth Engine](training/2_rs/module2.md)
+3. [Module 3 - Common RS Indices and Environmental Variables](training/2_rs/module3.md)
+4. [Module 4 - Land Cover Classification](training/2_rs/module4.md)
 
 ## Documentation
 
@@ -49,7 +57,7 @@ technologies to inform and ensure sustainable land use practices.
 
 ## GALUP Partners
 
-We appreciate the supports from our partners below.<br>
+We appreciate all the support from our partners below.<br>
 
 <table style="border: 0;">
   <tr> 

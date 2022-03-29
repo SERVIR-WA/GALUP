@@ -1,5 +1,7 @@
 # Workshop 1: Land-Use Suitability Analysis with QGIS Tools
 
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: June 1 - August 10, 2021
+     
 ### Goal
 
 The first GALUP workshop aims at laying a foundation of core
