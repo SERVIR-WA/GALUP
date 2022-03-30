@@ -284,7 +284,7 @@ The diagrams below show the general process of the IDU workflow.
 
 |Final IDU Map                                   |
 |------------------------------------------------|
-|![IDU Workflow Part 1](./img/final_IDU.png)|
+|![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
 
 
 ## Exercise and Post-training Survey
