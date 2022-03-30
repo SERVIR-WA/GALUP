@@ -14,7 +14,11 @@
     - [2.3 Raster Calculator](#23-raster-calculator)
     - [2.4 Reclassify by Table](#24-reclassify-by-table)
     - [2.5 Subdivide](#25-subdivide)
+    - [2.6 v.clean](#26-vclean)
   - [3. IDU Workflow](#3-idu-workflow)
+    - [3.1 Developing urban clusters](#31-developing-urban-clusters)
+    - [3.2 Calculating IDU's](#32-calculating-idus)
+    - [3.3 Final IDU Map](#33-final-idu-map)
   - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
@@ -103,6 +107,14 @@ This is the first, however, critical step to achieving a spatially explicit
 land-use plan.
 
 ## 2. Key Functions
+
+| Raster Analysis     | Vector Analysis             | Conversion               | Selection            |
+|---------------------|-----------------------------|--------------------------|----------------------|
+| [Raster calculator](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#qgisrastercalculator)   | [Eliminate selected polygons](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgiseliminateselectedpolygons) | [Rasterize](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalrasterize)  | [Extract by attribute](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorselection.html#qgisextractbyattribute) |
+| [Reclassify by table](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#qgisreclassifybytable) | [v.clean](https://grass.osgeo.org/grass80/manuals/v.clean.html)| [r.to.vect](https://grass.osgeo.org/grass80/manuals/r.to.vect.html)| [Select by expression](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorselection.html#qgisselectbyexpression)|
+| [Proximity](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/rasteranalysis.html#gdalproximity)           | [Merge vector layers](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#qgismergevectorlayers)         | [Raster pixels to points](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorcreation.html#qgispixelstopoints)  |                      |
+| [r.null](https://grass.osgeo.org/grass80/manuals/r.null.html)              | [Subdivide](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgissubdivide)                   | [Multipart to singleparts](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgismultiparttosingleparts) |                      |
+|                     | [DBSCAN clustering](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectoranalysis.html#qgisdbscanclustering)           | [Fix geometries](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgisfixgeometries)           |                      |
 
 ### 2.1 DBSCAN clustering
 For **Defined distance (DBSCAN)**, if the **Minimum Features per Cluster** can
@@ -244,10 +256,10 @@ The figures below show the parameters and output for the
 
 
 ### 2.5 Subdivide 
-is a tool that subdivides the original geometry into smaller parts, where no 
+**Subdivide** is a tool that subdivides the original geometry into smaller parts, where no 
 part has more than the specified maximum number of nodes. 
 
-- **Usage**
+- **Usage**:
   The **subdivide** tool is used to break down complex geometries into more 
   manageable parts. In our case, this tool allows us to subdivide large areas 
   of land into IDU's.
@@ -262,15 +274,37 @@ The figures below show the parameters and output for the **Subdivide** tool.
 
 |Input | Parameter Settings       | Output      |
 |------| ------------------------ | ----------- |
-|![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Raster calculator parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
+|![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Subdivide parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
+
+### 2.6 v.clean
+**v.clean** is a tool that cleans input layers using a selection of tools.
+These tools include . . . Different characteristics of the input layer can be 
+cleaned, including area, lines, . . . .
+
+- **Usage**
+
+- **Example**:
+
+| ID | File Name    | Data Format |Type    | Description                |
+|----|--------------|-------------|--------|----------------------------|
+| 1  | clean_ex.shp | vector      |polygon | Input polygon to be cleaned|
+
+The figures below show the parameters and output for the **v.clean** tool.
+
+|Input | Parameter Settings       | Output      |
+|------| ------------------------ | ----------- |
+|![v.clean Input](./img/CleanBase.jpg)| ![v.clean parameters](./img/CleanParameters.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
 ## 3. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
+
+### 3.1 Developing urban clusters
 |Developing urban clusters                           |
 |----------------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
+### 3.2 Calculating IDU's
 |Calculating IDU's                                   |
 |----------------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
@@ -284,9 +318,10 @@ The diagrams below show the general process of the IDU workflow.
 >polygons, delete the 'fid' from the FID row under the 'layer options' of 
 >the 'Save Feature Layer as...'
 
+### 3.3 Final IDU Map
 |Final IDU Map                                   |
 |------------------------------------------------|
-|![IDU Workflow Part 1](./img/final_IDU.png)|
+|![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
 
 
 ## Exercise and Post-training Survey
