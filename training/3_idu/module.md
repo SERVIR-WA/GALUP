@@ -21,7 +21,7 @@
     - [2.6 v.clean](#26-vclean)
   - [3. IDU Workflow](#3-idu-workflow)
     - [3.1 Developing urban clusters](#31-developing-urban-clusters)
-    - [3.2 Calculating IDU's](#32-calculating-idus)
+    - [3.2 Calculating IDUs](#32-calculating-idus)
     - [3.3 Final IDU Map](#33-final-idu-map)
   - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
   - [Reference](#reference)
@@ -38,7 +38,7 @@ Two major applications of IDU includes:
 
 We introduce a technical solution for creating IDUs in **QGIS**.
 We will begin by introducing the conceptual framework IDU is based on; then,
-moving onto QGIS functions that involved in the particular solution; and,
+moving onto QGIS functions that are involved in the particular solution; and,
 finally, looking at an example of the THLD District in Ghana.
 
 ### 1.1 An Integral Part of Land-Use Planning
@@ -151,6 +151,11 @@ Unzip the downloaded file and navigate to the appropriate location to use the
 datasets.
 
 ## 2. Key Functions
+
+The table below shows all of the tools used in this module. You can
+find out more information about each tool by following the attached link. 
+Later, we will take a more in depth look at 6 functions that are key to this
+workflow.
 
 | Raster Analysis     | Vector Analysis             | Conversion               | Selection            |
 |---------------------|-----------------------------|--------------------------|----------------------|
@@ -300,13 +305,13 @@ The figures below show the parameters and output for the
 
 
 ### 2.5 Subdivide 
-**Subdivide** is a tool that subdivides the original geometry into smaller parts, where no 
-part has more than the specified maximum number of nodes. 
+**Subdivide** is a tool that subdivides the original geometry into smaller 
+parts, where no part has more than the specified maximum number of nodes. 
 
 - **Usage**:
   The **subdivide** tool is used to break down complex geometries into more 
   manageable parts. In our case, this tool allows us to subdivide large areas 
-  of land into IDU's.
+  of land into IDUs.
 
 - **Example**:
 
@@ -325,7 +330,9 @@ The figures below show the parameters and output for the **Subdivide** tool.
 These tools include . . . Different characteristics of the input layer can be 
 cleaned, including area, lines, . . . .
 
-- **Usage**
+- **Usage**: 
+- The **v.clean** tool is used for making each of the IDUs more regularly
+  shaped. 
 
 - **Example**:
 
@@ -339,28 +346,56 @@ The figures below show the parameters and output for the **v.clean** tool.
 |------| ------------------------ | ----------- |
 |![v.clean Input](./img/CleanBase.jpg)| ![v.clean parameters](./img/CleanParameters.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
+>:pushpin: In order for this tool to work, you must specify a location for the 
+>output shapefile to be saved.
 ## 3. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
 
 ### 3.1 Developing urban clusters
+
+The first part of the IDU workflow focuses on developing urban clusters and 
+distinguishing the boundary between these clusters and the rest of the THLD 
+District. This can be done through a series of 4 geoprocessing steps: 
+identify urban clusters, measure distance to each cluster, aggregate inverse 
+distance raster, and define urban boundary. 
+
+- In order to identify urban
+ clusters, urban areas of the THLD District must first be extracted from the
+ base land use raster. This was done by converting the land use raster to 
+ vector points and then extracting points according to their land use 
+ designation. Points designated with land use type 6 make up the urban areas 
+ that we are looking for. Once these have been extracted, they are entered into
+ the DBSCAN clustering tool. The output from the DBSCAN tool is our urban 
+ clusters.
+
+- Now that DBSCAN has identified urban clusters, each of these clusters must 
+  individually be extracted, converted to raster, and then processed using the 
+  proximity tool. 
+
+- After completing the previous steps, we can move on to calculating the area 
+  of influence for each cluster. This influence is calculated by dividing the 
+  number of points in a cluster by the total number of points for all clusters.
+  These are now weighted using the inverse distance formula, where 1 is divided
+  by the proximity raster and multiplied by the weight.
+
+- To define the boundary between the urban and rural areas of the THLD
+  District, we can reclassify our weighted raster. This reclassified raster 
+  will be binary, where 1 corresponds to the urban area and 0 corresponds to 
+  the rural area.
+
 |Developing urban clusters                           |
 |----------------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
-### 3.2 Calculating IDU's
-|Calculating IDU's                                   |
+### 3.2 Calculating IDUs
+|Calculating IDUs                                   |
 |----------------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
->:pushpin: When selecting small polygons to eliminate, an area column must be
->calculated for for the rural and urban vector files. This can be done by 
->opening the layer's attribute table and calculating a new field based on the 
->'$area'.
-
 >:pushpin: If you are having trouble permanently saving your subdivided
->polygons, delete the 'fid' from the FID row under the 'layer options' of 
->the 'Save Feature Layer as...'
+>polygons, try saving them as Esri shapefiles (.shp) instead of geopackages 
+>(.gpkg)'
 
 ### 3.3 Final IDU Map
 |Final IDU Map                                   |
