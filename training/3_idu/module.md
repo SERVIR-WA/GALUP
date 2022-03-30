@@ -14,7 +14,7 @@
     - [2.6 v.clean](#26-vclean)
   - [3. IDU Workflow](#3-idu-workflow)
     - [3.1 Developing urban clusters](#31-developing-urban-clusters)
-    - [3.2 Calculating IDU's](#32-calculating-idus)
+    - [3.2 Calculating IDUs](#32-calculating-idus)
     - [3.3 Final IDU Map](#33-final-idu-map)
   - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
   - [Reference](#reference)
@@ -32,7 +32,7 @@ Two major applications of IDU includes:
 
 We introduce a technical solution for creating IDUs in **QGIS**.
 We will begin by introducing the conceptual framework IDU is based on; then,
-moving onto QGIS functions that involved in the particular solution; and,
+moving onto QGIS functions that are involved in the particular solution; and,
 finally, looking at an example of the THLD District in Ghana.
 
 ### 1.1 An Integral Part of Land-Use Planning
@@ -105,6 +105,11 @@ This is the first, however, critical step to achieving a spatially explicit
 land-use plan.
 
 ## 2. Key Functions
+
+The table below shows all of the tools used in this module. You can
+find out more information about each tool by following the attached link. 
+Later, we will take a more in depth look at 6 functions that are key to this
+workflow.
 
 | Raster Analysis     | Vector Analysis             | Conversion               | Selection            |
 |---------------------|-----------------------------|--------------------------|----------------------|
@@ -260,7 +265,7 @@ part has more than the specified maximum number of nodes.
 - **Usage**:
   The **subdivide** tool is used to break down complex geometries into more 
   manageable parts. In our case, this tool allows us to subdivide large areas 
-  of land into IDU's.
+  of land into IDUs.
 
 - **Example**:
 
@@ -302,19 +307,14 @@ The diagrams below show the general process of the IDU workflow.
 |----------------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
-### 3.2 Calculating IDU's
-|Calculating IDU's                                   |
+### 3.2 Calculating IDUs
+|Calculating IDUs                                   |
 |----------------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
->:pushpin: When selecting small polygons to eliminate, an area column must be
->calculated for for the rural and urban vector files. This can be done by 
->opening the layer's attribute table and calculating a new field based on the 
->'$area'.
-
 >:pushpin: If you are having trouble permanently saving your subdivided
->polygons, delete the 'fid' from the FID row under the 'layer options' of 
->the 'Save Feature Layer as...'
+>polygons, try saving them as Esri shapefiles (.shp) instead of geopackages 
+>(.gpkg)'
 
 ### 3.3 Final IDU Map
 |Final IDU Map                                   |
