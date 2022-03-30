@@ -1,5 +1,8 @@
 # Integrated Decision Units (IDUs) for Land Use Suitability Modeling
 
+<details>
+  <summary>Table of Contents (click to expand)</summary>
+
 - [Integrated Decision Units (IDUs) for Land Use Suitability Modeling](#integrated-decision-units-idus-for-land-use-suitability-modeling)
   - [1. Introduction](#1-introduction)
     - [1.1 An Integral Part of Land-Use Planning](#11-an-integral-part-of-land-use-planning)
@@ -18,11 +21,10 @@
     - [3.3 Final IDU Map](#33-final-idu-map)
   - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
   - [Reference](#reference)
+</details>
 
 ## 1. Introduction
 
-This workshop is the third of a series workshops offered by the Ghana Land Use
-Project (GALUP).
 As suggested by the title, the workshop deals with creating Integrated Decision
 Units (**IDUs**), a vector geographic data represented in polygons.
 Two major applications of IDU includes:
