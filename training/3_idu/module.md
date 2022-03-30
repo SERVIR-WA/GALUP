@@ -8,6 +8,10 @@
     - [1.1 An Integral Part of Land-Use Planning](#11-an-integral-part-of-land-use-planning)
     - [1.2 Some key concepts](#12-some-key-concepts)
     - [1.3 Implication of IDU](#13-implication-of-idu)
+  - [2. Datasets Description](#2-datasets-description)
+    - [2.1 Land Cover](#21-land-cover)
+    - [2.2 Soil Drainage](#22-soil-drainage)
+    - [2.3 Download and Use the Datasets](#23-download-and-use-the-datasets)
   - [2. Key Functions](#2-key-functions)
     - [2.1 DBSCAN clustering](#21-dbscan-clustering)
     - [2.2 Proximity](#22-proximity)
@@ -105,6 +109,46 @@ applicable than a raster representation.
 That's why we need to have a system of polygons, such as IDUs, to begin with.
 This is the first, however, critical step to achieving a spatially explicit
 land-use plan.
+
+## 2. Datasets Description
+
+The **homogeneity** of an IDU is determined by land properties or attributes,
+such as soil, land cover, slope, elevation, etc.
+Therefore, these information should be utilized in the creation of IDUs.
+As to which specific ones to use, it is often a combined result of data
+availability and the spatial scale of the particular question at hand.
+In general, the more datasets are involved in the process of creating IDUs the
+more complicated (in terms of granularity) the IDU system will be.
+In this workshop, we used two datasets: (1) **land cover** and (2)
+**soil drainage**.
+
+### 2.1 Land Cover
+
+Land cover is used because it reflects the condition of the land surface, which
+is directly related to the _potential_ **land use**.
+For example, when developing a new town, land that is classified as
+"closed forest" would require more labor than land that is "open forest."
+Therefore, it is useful to consider land cover when creating IDUs.
+
+### 2.2 Soil Drainage
+
+Soil drainage is used because it reflect the **permeability** of the land
+surface in natural conditions, which usually indicative to the landform and
+environmental characteristics of the land.
+
+### 2.3 Download and Use the Datasets
+
+The datasets can be found at [here](datasets).
+It is organized by two Districts Assembly of Ghana, namely
+**Asante Akim Central** (AAC) District and **Twifo-Hemang Lower Denkyira**
+(THLD) District.
+THLD datasets are used as examples in the following training materials, whereas
+AAC datasets will be used for the exercise.
+To download the datasets, simply click
+[here](https://github.com/SERVIR-WA/GALUP/archive/refs/heads/master.zip), which
+will download the entire GALUP repository as a zip file.
+Unzip the downloaded file and navigate to the appropriate location to use the
+datasets.
 
 ## 2. Key Functions
 
