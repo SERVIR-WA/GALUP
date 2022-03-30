@@ -261,8 +261,8 @@ The figures below show the parameters and output for the
 
 
 ### 2.5 Subdivide 
-**Subdivide** is a tool that subdivides the original geometry into smaller parts, where no 
-part has more than the specified maximum number of nodes. 
+**Subdivide** is a tool that subdivides the original geometry into smaller 
+parts, where no part has more than the specified maximum number of nodes. 
 
 - **Usage**:
   The **subdivide** tool is used to break down complex geometries into more 
@@ -286,7 +286,9 @@ The figures below show the parameters and output for the **Subdivide** tool.
 These tools include . . . Different characteristics of the input layer can be 
 cleaned, including area, lines, . . . .
 
-- **Usage**
+- **Usage**: 
+- The **v.clean** tool is used for making each of the IDUs more regularly
+  shaped. 
 
 - **Example**:
 
@@ -300,6 +302,8 @@ The figures below show the parameters and output for the **v.clean** tool.
 |------| ------------------------ | ----------- |
 |![v.clean Input](./img/CleanBase.jpg)| ![v.clean parameters](./img/CleanParameters.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
+>:pushpin: In order for this tool to work, you must specify a location for the 
+>output shapefile to be saved.
 ## 3. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
