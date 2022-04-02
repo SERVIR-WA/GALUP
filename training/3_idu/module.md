@@ -12,17 +12,17 @@
     - [2.1 Land Cover](#21-land-cover)
     - [2.2 Soil Drainage](#22-soil-drainage)
     - [2.3 Download and Use the Datasets](#23-download-and-use-the-datasets)
-  - [2. Key Functions](#2-key-functions)
-    - [2.1 DBSCAN clustering](#21-dbscan-clustering)
-    - [2.2 Proximity](#22-proximity)
-    - [2.3 Raster Calculator](#23-raster-calculator)
-    - [2.4 Reclassify by Table](#24-reclassify-by-table)
-    - [2.5 Subdivide](#25-subdivide)
-    - [2.6 v.clean](#26-vclean)
-  - [3. IDU Workflow](#3-idu-workflow)
-    - [3.1 Developing urban clusters](#31-developing-urban-clusters)
-    - [3.2 Calculating IDUs](#32-calculating-idus)
-    - [3.3 Final IDU Map](#33-final-idu-map)
+  - [3. Key Functions](#3-key-functions)
+    - [3.1 DBSCAN clustering](#31-dbscan-clustering)
+    - [3.2 Proximity](#32-proximity)
+    - [3.3 Raster Calculator](#33-raster-calculator)
+    - [3.4 Reclassify by Table](#34-reclassify-by-table)
+    - [3.5 Subdivide](#35-subdivide)
+    - [3.6 v.clean](#36-vclean)
+  - [4. IDU Workflow](#4-idu-workflow)
+    - [4.1 Developing urban clusters](#41-developing-urban-clusters)
+    - [4.2 Calculating IDUs](#42-calculating-idus)
+    - [4.3 Final IDU Map](#43-final-idu-map)
   - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
@@ -150,7 +150,7 @@ will download the entire GALUP repository as a zip file.
 Unzip the downloaded file and navigate to the appropriate location to use the
 datasets.
 
-## 2. Key Functions
+## 3. Key Functions
 
 The table below shows all of the tools used in this module. You can
 find out more information about each tool by following the attached link. 
@@ -165,7 +165,7 @@ workflow.
 | [r.null](https://grass.osgeo.org/grass80/manuals/r.null.html)              | [Subdivide](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgissubdivide)                   | [Multipart to singleparts](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgismultiparttosingleparts) |                      |
 |                     | [DBSCAN clustering](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectoranalysis.html#qgisdbscanclustering)           | [Fix geometries](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgisfixgeometries)           |                      |
 
-### 2.1 DBSCAN clustering
+### 3.1 DBSCAN clustering
 For **Defined distance (DBSCAN)**, if the **Minimum Features per Cluster** can
 be found within the **Search Distance** from a particular point, that point 
 will be marked as a core-point and included in a cluster, along with all points
@@ -196,7 +196,8 @@ in any cluster.
 |----|-----------------|-------------|-------|--------------------------------|
 | 1  | gas_station.shp | vector      | point | Gas station locations in Ghana |
 
-The two figures below display the parameter settings and the output of the tool.
+The two figures below display the parameter settings and the output of the 
+tool.
 
 | Parameter Settings       | Output      |
 | ------------------------ | ----------- |
@@ -204,7 +205,7 @@ The two figures below display the parameter settings and the output of the tool.
 
 
 
-### 2.2 Proximity
+### 3.2 Proximity
 The **Proximity** tool calculates the <u>**Euclidean distance**</u> from the 
 center of the source cell to the center of each of the surrounding cells. 
 Conceptually, the Euclidean algorithm works as follows: for each cell, the 
@@ -247,7 +248,7 @@ tool.
 
 
 
-### 2.3 Raster Calculator
+### 3.3 Raster Calculator
 The **Raster calculator** tool allows you to create and execute a Map Algebra 
 expression that will output a raster. We will be using a distance decay model 
 in order to assign weights to each cluster. Distance decay, also known as the 
@@ -279,12 +280,13 @@ tool.
 
 
 
-### 2.4 Reclassify by Table 
+### 3.4 Reclassify by Table 
 **Reclassify by table** is a tool that reclassifies a raster band by assigning 
 new class values based on ranges specified in a fixed table.
 
 - **Usage**:
   This tool is used to reclassify raster values. 
+  
 
 - **Example**:
 
@@ -303,8 +305,13 @@ The figures below show the parameters and output for the
 | ------------------------ | ----------- |--------|
 | ![Reclassify parameters](./img/RclsfyP1.jpg) | ![Reclassify table parameters](./img/RclsfyP2.jpg)|![Raster Calculator output](./img/RclsfyEx.jpg)|
 
+> :pushpin: Here is a helpful strategy:
+> If you want to keep track of what raster cells are combined when multiplying 
+> raster layers together, try reclassifying the raster values as prime numbers.
+> The product of two prime numbers can only be the result of those specific
+> numbers, allowing you to idnetify what cells were combined.
 
-### 2.5 Subdivide 
+### 3.5 Subdivide 
 **Subdivide** is a tool that subdivides the original geometry into smaller 
 parts, where no part has more than the specified maximum number of nodes. 
 
@@ -325,14 +332,28 @@ The figures below show the parameters and output for the **Subdivide** tool.
 |------| ------------------------ | ----------- |
 |![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Subdivide parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
 
-### 2.6 v.clean
+### 3.6 v.clean
 **v.clean** is a tool that cleans input layers using a selection of tools.
-These tools include . . . Different characteristics of the input layer can be 
-cleaned, including area, lines, . . . .
+The table below shows what tools are available:
+|v.clean |       |         |         |         |
+|--------|-------|---------|---------|---------|
+|break   |snap   |rmdangle |chdangle |rmbridge |
+|chbridge|rmdupl |rmdac    |bpol     |prune    |
+|rmarea  |rmline |rmsa     |
+
+There is also an optional parameter called _Input feature type_ which allows 
+you to specify what you want to be cleaned. This makes the **v.clean** tool
+more effective. The table below shows the possible input feature types:
+
+|v.clean  |       |         |         |
+|---------|-------|---------|---------|
+|area     |point  |line     |boundary |
+|centroid |face   | kernel  |
 
 - **Usage**: 
 - The **v.clean** tool is used for making each of the IDUs more regularly
-  shaped. 
+  shaped. We will be utilizing all of the tools to clean our feature type,
+  which is area.
 
 - **Example**:
 
@@ -342,17 +363,17 @@ cleaned, including area, lines, . . . .
 
 The figures below show the parameters and output for the **v.clean** tool.
 
-|Input | Parameter Settings       | Output      |
-|------| ------------------------ | ----------- |
-|![v.clean Input](./img/CleanBase.jpg)| ![v.clean parameters](./img/CleanParameters.jpg)| ![v.clean output](./img/CleanOut.jpg)|
+|Parameter Settings | Input  | Output      |
+|-------------------|------------------------ | ----------- |
+|![v.clean Input](./img/CleanParameters.jpg)| ![v.clean parameters](./img/CleanBase.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
 >:pushpin: In order for this tool to work, you must specify a location for the 
 >output shapefile to be saved.
-## 3. IDU Workflow
+## 4. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
 
-### 3.1 Developing urban clusters
+### 4.1 Developing urban clusters
 
 The first part of the IDU workflow focuses on developing urban clusters and 
 distinguishing the boundary between these clusters and the rest of the THLD 
@@ -384,22 +405,63 @@ distance raster, and define urban boundary.
   will be binary, where 1 corresponds to the urban area and 0 corresponds to 
   the rural area.
 
-|Developing urban clusters                           |
-|----------------------------------------------------|
+|Developing urban clusters                      |
+|-----------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
-### 3.2 Calculating IDUs
-|Calculating IDUs                                   |
-|----------------------------------------------------|
+### 4.2 Calculating IDUs
+
+The second part of the IDU workflow focuses on the actual calculating of the
+IDUs. This can be done by performing the following 4 geoprocessing functions:
+overlay input rasters, separate rural and urban areas, process vector data 
+(iteration) and merge results.
+
+- The first step in calculating the IDUs is to create the base suitability 
+  raster. This is done by combining the land cover raster and the drainage
+  raster. In order to combine these rasters, they must first be reclassified as
+  prime numbers. The reason we do this is to keep track of what raster values
+  are combined when we multiply the land cover and drainage rasters together 
+  (for further explanation on why we use prime numbers, you can refer back to 
+  section 3.3 Raster Calculator). After the layers are reclassified, they are 
+  multiplied together using raster calculator. 
+
+- Next, the combined suitability raster needs to be seperated into urban areas
+  and rural areas. This is where we use the urban and rural rasters that were 
+  calculated in the first part of the IDU workflow. The combined raster is
+  multiplied by the urban and rural rasters, respectively. This calculation
+  maintains the suitability of the targetted area while setting the rest of the
+  raster equal to 0. After this is done for both the urban and rural rasters,
+  the r.null tool is used to convert the 0 raster values to No Data.
+
+- With the urban and rural parts of the suitability raster seperated, it is
+  time to create the first iteration of the IDUs. Starting with either the
+  urban or rural suitability rasters, r.to.vect is used to convert the raster
+  layer to a vector layer. The fix geometries tool is then used on the vector
+  layer, creating a valid input for the subdivide tool. The subdivide tool
+  returns a multipart polygon which must be converted to a single part polygon
+  before further processing. At this point, the subdivided areas are very small
+  and irregular. This is addressed by eliminating very small polygons and
+  merging them with other nearby, larger polygons. Multiple iterations are 
+  required in order to create regular, consistent IDUs.
+
+- Once the IDUs have been established, all that is left to do is some final 
+  cleaning (if you choose) and to put the urban and rural layers back together.
+  The v.clean tool is used to make the IDUs more regularly shaped. This change
+  is very subtle and is not required if you feel that your IDUs are regular
+  enough already. The urban IDUs and rural IDUs can then be merged to create 
+  the final IDU layer.
+
+|Calculating IDUs                               |
+|-----------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
 >:pushpin: If you are having trouble permanently saving your subdivided
 >polygons, try saving them as Esri shapefiles (.shp) instead of geopackages 
->(.gpkg)'
+>(.gpkg).
 
-### 3.3 Final IDU Map
-|Final IDU Map                                   |
-|------------------------------------------------|
+### 4.3 Final IDU Map
+|Final IDU Map                                  |
+|-----------------------------------------------|
 |![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
 
 
