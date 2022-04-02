@@ -130,11 +130,24 @@ For example, when developing a new town, land that is classified as
 "closed forest" would require more labor than land that is "open forest."
 Therefore, it is useful to consider land cover when creating IDUs.
 
+<details>
+  <summary><u><b>Land Cover Map</u></b></summary>
+
+![land cover](img/LC_THLD.png)
+</details>
+
 ### 2.2 Soil Drainage
 
 Soil drainage is used because it reflect the **permeability** of the land
 surface in natural conditions, which usually indicative to the landform and
 environmental characteristics of the land.
+
+
+<details>
+  <summary><u><b>Soil Drainage Map</u></b></summary>
+
+![land cover](img/Drainage_THLD.png)
+</details>
 
 ### 2.3 Download and Use the Datasets
 
