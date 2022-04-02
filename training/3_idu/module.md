@@ -152,7 +152,8 @@ in any cluster.
 |----|-----------------|-------------|-------|--------------------------------|
 | 1  | gas_station.shp | vector      | point | Gas station locations in Ghana |
 
-The two figures below display the parameter settings and the output of the tool.
+The two figures below display the parameter settings and the output of the 
+tool.
 
 | Parameter Settings       | Output      |
 | ------------------------ | ----------- |
@@ -283,12 +284,26 @@ The figures below show the parameters and output for the **Subdivide** tool.
 
 ### 2.6 v.clean
 **v.clean** is a tool that cleans input layers using a selection of tools.
-These tools include . . . Different characteristics of the input layer can be 
-cleaned, including area, lines, . . . .
+The table below shows what tools are available:
+|v.clean |       |         |         |         |
+|--------|-------|---------|---------|---------|
+|break   |snap   |rmdangle |chdangle |rmbridge |
+|chbridge|rmdupl |rmdac    |bpol     |prune    |
+|rmarea  |rmline |rmsa     |
+
+There is also an optional parameter called _Input feature type_ which allows 
+you to specify what you want to be cleaned. This makes the **v.clean** tool
+more effective. The table below shows the possible input feature types:
+
+|v.clean  |       |         |         |
+|---------|-------|---------|---------|
+|area     |point  |line     |boundary |
+|centroid |face   | kernel  |
 
 - **Usage**: 
 - The **v.clean** tool is used for making each of the IDUs more regularly
-  shaped. 
+  shaped. We will be utilizing all of the tools to clean our feature type,
+  which is area.
 
 - **Example**:
 
@@ -298,9 +313,9 @@ cleaned, including area, lines, . . . .
 
 The figures below show the parameters and output for the **v.clean** tool.
 
-|Input | Parameter Settings       | Output      |
-|------| ------------------------ | ----------- |
-|![v.clean Input](./img/CleanBase.jpg)| ![v.clean parameters](./img/CleanParameters.jpg)| ![v.clean output](./img/CleanOut.jpg)|
+|Parameter Settings | Input  | Output      |
+|-------------------|------------------------ | ----------- |
+|![v.clean Input](./img/CleanParameters.jpg)| ![v.clean parameters](./img/CleanBase.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
 >:pushpin: In order for this tool to work, you must specify a location for the 
 >output shapefile to be saved.
@@ -340,22 +355,22 @@ distance raster, and define urban boundary.
   will be binary, where 1 corresponds to the urban area and 0 corresponds to 
   the rural area.
 
-|Developing urban clusters                           |
-|----------------------------------------------------|
+|Developing urban clusters                      |
+|-----------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
 ### 3.2 Calculating IDUs
-|Calculating IDUs                                   |
-|----------------------------------------------------|
+|Calculating IDUs                               |
+|-----------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
 >:pushpin: If you are having trouble permanently saving your subdivided
 >polygons, try saving them as Esri shapefiles (.shp) instead of geopackages 
->(.gpkg)'
+>(.gpkg).
 
 ### 3.3 Final IDU Map
-|Final IDU Map                                   |
-|------------------------------------------------|
+|Final IDU Map                                  |
+|-----------------------------------------------|
 |![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
 
 
