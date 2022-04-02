@@ -1,6 +1,6 @@
 # Workshop 3: Integrated Decision Units for Land Use Suitability Modeling
 
-> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: April 4 - April 8, 2022
+> **Instructor**: [Dr. Changjie Chen](https://github.com/chjch) (<ins>chj.chen@<i></i>ufl.edu</ins>).&nbsp;&nbsp;&nbsp;&nbsp;**Date**: April 11 - April 15, 2022
 
 ### Goal
 
