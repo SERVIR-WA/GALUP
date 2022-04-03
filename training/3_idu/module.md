@@ -225,7 +225,7 @@ raster.
 - **Usage**:
   This tool gives the measured Euclidean distance from every cell to the 
   nearest source. The distances are measured in the projection units of the 
-  raster, such as feet or meters,and are measured from cell center to cell 
+  raster, such as feet or meters, and are measured from cell center to cell 
   center.
 
 >:pushpin: The projected units of a raster layer can be found under the 
@@ -259,10 +259,15 @@ them increases.
 - **Usage**:
   The **Raster calculator** tool is used to individually weight and multiply 
   proximity rasters together.
-- The weighting formula that we will use is: 1/W*Cluster
-- W = # of points in a cluster / # of total points
-- 1/"clus1_prox328@1"*.38 + 1/"clus2_prox328@1"*.06 + 1/"clus3_prox_328@1"*.08 + 1/"clus4_prox328@1"*.2 + 1/"clus5_prox328@1"*.12 + 1/"clus6_prox328@1"*.09 + 1/"clus7_prox328@1"*.06
+  
+  The weighting formula that we will use is: 
+  ![Weight Equation](./img/WeightingEq.svg)
+  
+  Where W is equal to the number of points in a cluster divded by the total 
+  number of points in all clusters.
 
+  Here is what our full equation looks like:
+  ![Full Equation](./img/TotalEq.svg)
 
   **Example**:
 
