@@ -426,8 +426,10 @@ overlay input rasters, separate rural and urban areas, process vector data
 (iteration) and merge results.
 
 - The first step in calculating the IDUs is to create the base suitability 
-  raster. This is done by combining the land cover raster and the drainage
-  raster. In order to combine these rasters, they must first be reclassified as
+  raster. In order to make the calculations easier, we are going to reclassify
+  the land cover raster into three general categories. Once this is done, the 
+  generalized land cover and drainage rasters are ready to be combined. In 
+  order to combine these rasters, they must first be reclassified as
   prime numbers. The reason we do this is to keep track of what raster values
   are combined when we multiply the land cover and drainage rasters together 
   (for further explanation on why we use prime numbers, you can refer back to 
