@@ -20,7 +20,7 @@
   - [4. IDU Workflow](#4-idu-workflow)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
-    - [4.3 Final IDU Map](#43-final-idu-map)
+    - [4.3 Final Output](#43-final-output)
   - [5. Exercise and Post-training Survey](#5-exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
@@ -382,6 +382,7 @@ The figures below show the parameters and output for the **v.clean** tool.
 >output shapefile to be saved.
 
 ### 3.7 Eliminate Selected Polygons
+
 **Eliminate selected polygons** is a tool that combines selected polygons by 
 erasing the common boundary with nearby polygons. The merge can be based on 
 largest common boundary, largest area or smallest area. 
@@ -492,14 +493,23 @@ overlay input rasters, separate rural and urban areas, process vector data
 > polygons, try saving them as Esri shapefiles (.shp) instead of geopackages
 > (.gpkg).
 
-### 4.3 Final IDU Map
+### 4.3 Final Output
+
+> :bell: **Review the IDUs of THLD**<br>
+> The GIS process described above leads us to the final IDUs of THLD district.
+> It is worth noting that the output may not be identical or 100% reproducible
+> due to the fact that there are multiple **iterative processes** involved and
+> that some of the tools are **parameterized** in a case-specific fashion.<br>
+> Here, one output is presented in the map below (click to expand).
+> The output shapefile is also provided and can be found at
+> [here](./datasets/IDU_Output).
+> You can locate the file in the downloaded zip file of this GitHub repository
+> and visualize it in QGIS.
 
 <details>
-  <summary>Click to see the final THLD IDUs</summary>
+  <summary>THLD Final IDU Map</summary>
 
-|Final IDU Map                                  |
-|-----------------------------------------------|
-|![Final IDU](./img/FinalIDUmerge.jpg)|
+![Final IDU](./img/FinalIDUmerge.jpg)
 
 </details>
 
