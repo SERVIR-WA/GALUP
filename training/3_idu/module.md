@@ -16,6 +16,7 @@
     - [3.4 Reclassify by Table](#34-reclassify-by-table)
     - [3.5 Subdivide](#35-subdivide)
     - [3.6 v.clean](#36-vclean)
+    - [3.7 Eliminate Selected Polygons](#37-eliminate-selected-polygons)
   - [4. IDU Workflow](#4-idu-workflow)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
@@ -230,7 +231,7 @@ raster.
 - **Usage**:
   This tool gives the measured Euclidean distance from every cell to the 
   nearest source. The distances are measured in the projection units of the 
-  raster, such as feet or meters,and are measured from cell center to cell 
+  raster, such as feet or meters, and are measured from cell center to cell 
   center.
 
 >:pushpin: The projected units of a raster layer can be found under the 
@@ -264,10 +265,15 @@ them increases.
 - **Usage**:
   The **Raster calculator** tool is used to individually weight and multiply 
   proximity rasters together.
-- The weighting formula that we will use is: 1/W*Cluster
-- W = # of points in a cluster / # of total points
-- 1/"clus1_prox328@1"*.38 + 1/"clus2_prox328@1"*.06 + 1/"clus3_prox_328@1"*.08 + 1/"clus4_prox328@1"*.2 + 1/"clus5_prox328@1"*.12 + 1/"clus6_prox328@1"*.09 + 1/"clus7_prox328@1"*.06
+  
+  The weighting formula that we will use is: 
+  ![Weight Equation](./img/WeightingEq.svg)
+  
+  Where W is equal to the number of points in a cluster divded by the total 
+  number of points in all clusters.
 
+  Here is what our full equation looks like:
+  ![Full Equation](./img/TotalEq.svg)
 
   **Example**:
 
@@ -356,7 +362,7 @@ more effective. The table below shows the possible input feature types:
 |centroid |face   | kernel  |
 
 - **Usage**: 
-- The **v.clean** tool is used for making each of the IDUs more regularly
+  The **v.clean** tool is used for making each of the IDUs more regularly
   shaped. We will be utilizing all of the tools to clean our feature type,
   which is area.
 
@@ -374,6 +380,29 @@ The figures below show the parameters and output for the **v.clean** tool.
 
 >:pushpin: In order for this tool to work, you must specify a location for the 
 >output shapefile to be saved.
+
+### 3.7 Eliminate Selected Polygons
+**Eliminate selected polygons** is a tool that combines selected polygons by 
+erasing the common boundary with nearby polygons. The merge can be based on 
+largest common boundary, largest area or smallest area. 
+
+- **Usage**:
+  **Eliminate selected polygons** is used to refine the IDUs by eliminating
+  sliver polygons and other irregularities.
+
+- **Example**
+
+| ID | File Name        | Data Format |Type    | Description                    |
+|----|------------------|-------------|--------|--------------------------------|
+| 1  | eliminate_ex.shp | vector      |polygon | Input polygons to be eliminated|
+
+The figures below show the parameters for the **Eliminate selected polygons**
+tool.
+
+|Parameter Settings | Input  | Output      |
+|-------------------|------------------------ | ----------- |
+|![Elim Parameters](./img/ElimParameters.jpg)| ![Elim base](./img/ElimBase.jpg)| ![Elim output](./img/ElimOut.jpg)|
+
 ## 4. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
@@ -422,8 +451,10 @@ overlay input rasters, separate rural and urban areas, process vector data
 (iteration) and merge results.
 
 - The first step in calculating the IDUs is to create the base suitability 
-  raster. This is done by combining the land cover raster and the drainage
-  raster. In order to combine these rasters, they must first be reclassified as
+  raster. In order to make the calculations easier, we are going to reclassify
+  the land cover raster into three general categories. Once this is done, the 
+  generalized land cover and drainage rasters are ready to be combined. In 
+  order to combine these rasters, they must first be reclassified as
   prime numbers. The reason we do this is to keep track of what raster values
   are combined when we multiply the land cover and drainage rasters together 
   (for further explanation on why we use prime numbers, you can refer back to 
