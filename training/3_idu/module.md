@@ -20,7 +20,7 @@
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
     - [4.3 Final IDU Map](#43-final-idu-map)
-  - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
+  - [5. Exercise and Post-training Survey](#5-exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
 
@@ -116,8 +116,9 @@ As to which specific ones to use, it is often a combined result of data
 availability and the spatial scale of the particular question at hand.
 In general, the more datasets are involved in the process of creating IDUs the
 more complicated (in terms of granularity) the IDU system will be.
-In this workshop, we used two datasets: (1) **land cover** and (2)
-**soil drainage**.
+In this workshop, we used two datasets: (1)
+<a href="#iSDA land cover">_land cover_</a> and (2)
+<a href="#africa soil drainage dataset">_soil drainage_</a>.
 
 <details>
   <summary><u><b>Land Cover</b></u></summary>
@@ -170,6 +171,7 @@ workflow.
 |                     | [DBSCAN clustering](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectoranalysis.html#qgisdbscanclustering)           | [Fix geometries](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgisfixgeometries)           |                      |
 
 ### 3.1 DBSCAN clustering
+
 For **Defined distance (DBSCAN)**, if the **Minimum Features per Cluster** can
 be found within the **Search Distance** from a particular point, that point 
 will be marked as a core-point and included in a cluster, along with all points
@@ -207,9 +209,8 @@ tool.
 | ------------------------ | ----------- |
 | ![DBSCAN parameters](./img/DBSCANpmtrs.jpg)| ![Ghana Gas stations clusters](./img/GhanaGS_clus.png)|
 
-
-
 ### 3.2 Proximity
+
 The **Proximity** tool calculates the <u>**Euclidean distance**</u> from the 
 center of the source cell to the center of each of the surrounding cells. 
 Conceptually, the Euclidean algorithm works as follows: for each cell, the 
@@ -283,8 +284,8 @@ tool.
 | ![Raster calculator parameters](./img/RastCalcPrmtrs.jpg)| ![Raster Calculator output](./img/RastCalcEx.jpg)|
 
 
+### 3.4 Reclassify by Table
 
-### 3.4 Reclassify by Table 
 **Reclassify by table** is a tool that reclassifies a raster band by assigning 
 new class values based on ranges specified in a fixed table.
 
@@ -427,17 +428,15 @@ overlay input rasters, separate rural and urban areas, process vector data
   are combined when we multiply the land cover and drainage rasters together 
   (for further explanation on why we use prime numbers, you can refer back to 
   section 3.3 Raster Calculator). After the layers are reclassified, they are 
-  multiplied together using raster calculator. 
-
-- Next, the combined suitability raster needs to be seperated into urban areas
+  multiplied together using raster calculator.
+- Next, the combined suitability raster needs to be separated into urban areas
   and rural areas. This is where we use the urban and rural rasters that were 
   calculated in the first part of the IDU workflow. The combined raster is
   multiplied by the urban and rural rasters, respectively. This calculation
-  maintains the suitability of the targetted area while setting the rest of the
+  maintains the suitability of the targeted area while setting the rest of the
   raster equal to 0. After this is done for both the urban and rural rasters,
   the r.null tool is used to convert the 0 raster values to No Data.
-
-- With the urban and rural parts of the suitability raster seperated, it is
+- With the urban and rural parts of the suitability raster separated, it is
   time to create the first iteration of the IDUs. Starting with either the
   urban or rural suitability rasters, r.to.vect is used to convert the raster
   layer to a vector layer. The fix geometries tool is then used on the vector
@@ -447,7 +446,6 @@ overlay input rasters, separate rural and urban areas, process vector data
   and irregular. This is addressed by eliminating very small polygons and
   merging them with other nearby, larger polygons. Multiple iterations are 
   required in order to create regular, consistent IDUs.
-
 - Once the IDUs have been established, all that is left to do is some final 
   cleaning (if you choose) and to put the urban and rural layers back together.
   The v.clean tool is used to make the IDUs more regularly shaped. This change
@@ -459,21 +457,41 @@ overlay input rasters, separate rural and urban areas, process vector data
 |-----------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
->:pushpin: If you are having trouble permanently saving your subdivided
->polygons, try saving them as Esri shapefiles (.shp) instead of geopackages 
->(.gpkg).
+> :pushpin: If you are having trouble permanently saving your subdivided
+> polygons, try saving them as Esri shapefiles (.shp) instead of geopackages
+> (.gpkg).
 
 ### 4.3 Final IDU Map
+
+<details>
+  <summary>Click to see the final THLD IDUs</summary>
+
 |Final IDU Map                                  |
 |-----------------------------------------------|
-|![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
+|![Final IDU](./img/FinalIDUmerge.jpg)|
 
+</details>
 
-## Exercise and Post-training Survey
-* Please complete the Exercise 1.
-* Please take this post-training survey (required).
+## 5. Exercise and Post-training Survey
+
+- Please complete the Exercise 1.
+- Please take this post-training survey (required).
 
 ## Reference
 
-1. <a id="a framework for land evaluation"></a>FAO. (1976). A framework for land evaluation (No. 32; Soils Bulletins). Food and Agriculture Organization of the United Nations. http://www.fao.org/3/X5310E/x5310e00.htm
-2. <a id="land evaluation for development"></a>FAO. (1990). Land evaluation for development. Food and Agriculture Organization of the United Nations. https://www.fao.org/3/U1980E/u1980e00.htm
+1. <a id="a framework for land evaluation"></a>FAO. (1976). A framework for
+   land evaluation (No. 32; Soils Bulletins). Food and Agriculture Organization
+   of the United Nations. http://www.fao.org/3/X5310E/x5310e00.htm
+2. <a id="land evaluation for development"></a>FAO. (1990). Land evaluation for
+   development. Food and Agriculture Organization of the United Nations.
+   https://www.fao.org/3/U1980E/u1980e00.htm
+3. <a id="iSDA land cover"></a>Buchhorn, M., Lesiv, M., Tsendbazar, N.-E.,
+   Herold, M., Bertels, L., & Smets, B. (2020). Copernicus Global Land Cover
+   Layers—Collection 2. _Remote Sensing_, 12(6).
+   https://doi.org/10.3390/rs12061044
+4. <a id="africa soil drainage dataset"></a>Hengl, T., Heuvelink, G. B. M.,
+   Kempen, B., Leenaars, J. G. B., Walsh, M. G., Shepherd, K. D., Sila, A.,
+   MacMillan, R. A., De Jesus, J. M., Tamene, L., & Tondoh, J. E. (2015).
+   Mapping Soil Properties of Africa at 250 m Resolution: Random Forests
+   Significantly Improve Current Predictions. _PLOS ONE_, 10(6), e0125814.
+   https://doi.org/10.1371/JOURNAL.PONE.0125814
