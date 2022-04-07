@@ -16,6 +16,7 @@
     - [3.4 Reclassify by Table](#34-reclassify-by-table)
     - [3.5 Subdivide](#35-subdivide)
     - [3.6 v.clean](#36-vclean)
+    - [3.7 Eliminate Selected Polygons](#37-eliminate-selected-polygons)
   - [4. IDU Workflow](#4-idu-workflow)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
@@ -360,7 +361,7 @@ more effective. The table below shows the possible input feature types:
 |centroid |face   | kernel  |
 
 - **Usage**: 
-- The **v.clean** tool is used for making each of the IDUs more regularly
+  The **v.clean** tool is used for making each of the IDUs more regularly
   shaped. We will be utilizing all of the tools to clean our feature type,
   which is area.
 
@@ -378,6 +379,29 @@ The figures below show the parameters and output for the **v.clean** tool.
 
 >:pushpin: In order for this tool to work, you must specify a location for the 
 >output shapefile to be saved.
+
+### 3.7 Eliminate Selected Polygons
+**Eliminate selected polygons** is a tool that combines selected polygons by 
+erasing the common boundary with nearby polygons. The merge can be based on 
+largest common boundary, largest area or smallest area. 
+
+- **Usage**:
+  **Eliminate selected polygons** is used to refine the IDUs by eliminating
+  sliver polygons and other irregularities.
+
+- **Example**
+
+| ID | File Name        | Data Format |Type    | Description                    |
+|----|------------------|-------------|--------|--------------------------------|
+| 1  | eliminate_ex.shp | vector      |polygon | Input polygons to be eliminated|
+
+The figures below show the parameters for the **Eliminate selected polygons**
+tool.
+
+|Parameter Settings | Input  | Output      |
+|-------------------|------------------------ | ----------- |
+|![Elim Parameters](./img/ElimParameters.jpg)| ![Elim base](./img/ElimBase.jpg)| ![Elim output](./img/ElimOut.jpg)|
+
 ## 4. IDU Workflow
 
 The diagrams below show the general process of the IDU workflow.
