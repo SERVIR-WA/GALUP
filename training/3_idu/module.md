@@ -416,25 +416,23 @@ District. This can be done through a series of 4 geoprocessing steps:
 identify urban clusters, measure distance to each cluster, aggregate inverse 
 distance raster, and define urban boundary. 
 
-- In order to identify urban
- clusters, urban areas of the THLD District must first be extracted from the
- base land use raster. This was done by converting the land use raster to 
- vector points and then extracting points according to their land use 
- designation. Points designated with land use type 6 make up the urban areas 
- that we are looking for. Once these have been extracted, they are entered into
- the DBSCAN clustering tool. The output from the DBSCAN tool is our urban 
- clusters.
-
+- In order to identify urban clusters, urban areas of the THLD District must
+  first be extracted from the base land use raster.
+  This was done by converting the land use raster to vector points and then
+  extracting points according to their land use designation.
+  Points designated with land use type 6 make up the urban areas that we are
+  looking for.
+  Once these have been extracted, they are entered into the DBSCAN clustering
+  tool.
+  The output from the DBSCAN tool is our urban clusters.
 - Now that DBSCAN has identified urban clusters, each of these clusters must 
   individually be extracted, converted to raster, and then processed using the 
-  proximity tool. 
-
+  proximity tool.
 - After completing the previous steps, we can move on to calculating the area 
   of influence for each cluster. This influence is calculated by dividing the 
   number of points in a cluster by the total number of points for all clusters.
   These are now weighted using the inverse distance formula, where 1 is divided
   by the proximity raster and multiplied by the weight.
-
 - To define the boundary between the urban and rural areas of the THLD
   District, we can reclassify our weighted raster. This reclassified raster 
   will be binary, where 1 corresponds to the urban area and 0 corresponds to 
@@ -500,7 +498,7 @@ overlay input rasters, separate rural and urban areas, process vector data
 > It is worth noting that the output may not be identical or 100% reproducible
 > due to the fact that there are multiple **iterative processes** involved and
 > that some of the tools are **parameterized** in a case-specific fashion.<br>
-> Here, one output is presented in the map below (click to expand).
+> Here, one output is presented in the map below (_click to expand_).
 > The output shapefile is also provided and can be found at
 > [here](./datasets/IDU_Output).
 > You can locate the file in the downloaded zip file of this GitHub repository
