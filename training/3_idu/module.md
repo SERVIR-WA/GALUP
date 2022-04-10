@@ -20,8 +20,8 @@
   - [4. IDU Workflow](#4-idu-workflow)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
-    - [4.3 Final IDU Map](#43-final-idu-map)
-  - [Exercise and Post-training Survey](#exercise-and-post-training-survey)
+    - [4.3 Final Output](#43-final-output)
+  - [5. Exercise and Post-training Survey](#5-exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
 
@@ -117,8 +117,9 @@ As to which specific ones to use, it is often a combined result of data
 availability and the spatial scale of the particular question at hand.
 In general, the more datasets are involved in the process of creating IDUs the
 more complicated (in terms of granularity) the IDU system will be.
-In this workshop, we used two datasets: (1) **land cover** and (2)
-**soil drainage**.
+In this workshop, we used two datasets: (1)
+<a href="#iSDA land cover">_land cover_</a> and (2)
+<a href="#africa soil drainage dataset">_soil drainage_</a>.
 
 <details>
   <summary><u><b>Land Cover</b></u></summary>
@@ -435,7 +436,6 @@ distance raster, and define urban boundary.
   number of points in a cluster by the total number of points for all clusters.
   These are now weighted using the inverse distance formula, where 1 is divided
   by the proximity raster and multiplied by the weight.
-
 - To define the boundary between the urban and rural areas of the THLD
   District, we can reclassify our weighted raster. This reclassified raster
   will be binary, where 1 corresponds to the urban area and 0 corresponds to
@@ -470,7 +470,6 @@ overlay input rasters, separate rural and urban areas, process vector data
   maintains the suitability of the targeted area while setting the rest of the
   raster equal to 0. After this is done for both the urban and rural rasters,
   the r.null tool is used to convert the 0 raster values to No Data.
-
 - With the urban and rural parts of the suitability raster separated, it is
   time to create the first iteration of the IDUs. Starting with either the
   urban or rural suitability rasters, r.to.vect is used to convert the raster
@@ -497,17 +496,46 @@ overlay input rasters, separate rural and urban areas, process vector data
 >polygons, try saving them as Esri shapefiles (.shp) instead of geopackages
 >(.gpkg).
 
-### 4.3 Final IDU Map
-|Final IDU Map                                  |
-|-----------------------------------------------|
-|![IDU Workflow Part 1](./img/FinalIDUmerge.jpg)|
+### 4.3 Final Output
 
-## Exercise and Post-training Survey
+> :bell: **Review the IDUs of THLD**<br>
+> The GIS process described above leads us to the final IDUs of THLD district.
+> It is worth noting that the output may not be identical or 100% reproducible
+> due to the fact that there are multiple **iterative processes** involved and
+> that some of the tools are **parameterized** in a case-specific fashion.<br>
+> Here, one output is presented in the map below (_click to expand_).
+> The output shapefile is also provided and can be found at
+> [here](./datasets/IDU_Output).
+> You can locate the file in the downloaded zip file of this GitHub repository
+> and visualize it in QGIS.
+
+<details>
+  <summary>THLD Final IDU Map</summary>
+
+![Final IDU](./img/FinalIDUmerge.jpg)
+
+</details>
+
+## 5. Exercise and Post-training Survey
 
 - Please complete the Exercise 1.
 - Please take this post-training survey (required).
 
 ## Reference
 
-1. <a id="a framework for land evaluation"></a>FAO. (1976). A framework for land evaluation (No. 32; Soils Bulletins). Food and Agriculture Organization of the United Nations. http://www.fao.org/3/X5310E/x5310e00.htm
-2. <a id="land evaluation for development"></a>FAO. (1990). Land evaluation for development. Food and Agriculture Organization of the United Nations. https://www.fao.org/3/U1980E/u1980e00.htm
+1. <a id="a framework for land evaluation"></a>FAO. (1976). A framework for
+   land evaluation (No. 32; Soils Bulletins). Food and Agriculture Organization
+   of the United Nations. http://www.fao.org/3/X5310E/x5310e00.htm
+2. <a id="land evaluation for development"></a>FAO. (1990). Land evaluation for
+   development. Food and Agriculture Organization of the United Nations.
+   https://www.fao.org/3/U1980E/u1980e00.htm
+3. <a id="iSDA land cover"></a>Buchhorn, M., Lesiv, M., Tsendbazar, N.-E.,
+   Herold, M., Bertels, L., & Smets, B. (2020). Copernicus Global Land Cover
+   Layers—Collection 2. _Remote Sensing_, 12(6).
+   https://doi.org/10.3390/rs12061044
+4. <a id="africa soil drainage dataset"></a>Hengl, T., Heuvelink, G. B. M.,
+   Kempen, B., Leenaars, J. G. B., Walsh, M. G., Shepherd, K. D., Sila, A.,
+   MacMillan, R. A., De Jesus, J. M., Tamene, L., & Tondoh, J. E. (2015).
+   Mapping Soil Properties of Africa at 250 m Resolution: Random Forests
+   Significantly Improve Current Predictions. _PLOS ONE_, 10(6), e0125814.
+   https://doi.org/10.1371/JOURNAL.PONE.0125814
