@@ -15,12 +15,11 @@
     - [3.3 Raster Calculator](#33-raster-calculator)
     - [3.4 Reclassify by Table](#34-reclassify-by-table)
     - [3.5 Subdivide](#35-subdivide)
-    - [3.6 v.clean](#36-vclean)
-    - [3.7 Eliminate Selected Polygons](#37-eliminate-selected-polygons)
+    - [3.6 Eliminate Selected Polygons](#36-eliminate-selected-polygons)
+    - [3.7 v.clean](#37-vclean)
   - [4. IDU Workflow](#4-idu-workflow)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
-    - [4.3 Final Output](#43-final-output)
   - [5. Exercise and Post-training Survey](#5-exercise-and-post-training-survey)
   - [Reference](#reference)
 </details>
@@ -161,7 +160,7 @@ In this workshop, we used two datasets: (1)
 ## 3. Key Functions
 
 The table below shows all of the tools used in this module. You can
-find out more information about each tool by following the attached link. 
+find out more information about each tool by following the attached link.
 Later, we will take a more in depth look at 6 functions that are key to this
 workflow.
 
@@ -176,36 +175,36 @@ workflow.
 ### 3.1 DBSCAN clustering
 
 For **Defined distance (DBSCAN)**, if the **Minimum Features per Cluster** can
-be found within the **Search Distance** from a particular point, that point 
+be found within the **Search Distance** from a particular point, that point
 will be marked as a core-point and included in a cluster, along with all points
-within the core-distance.
-A border-point is a point that is within the search distance of a core-point
-but does not itself have the minimum number of features within the search distance. Each resulting cluster is composed of 
-core-points and border-points, where core-points tend to fall in the middle of 
-the cluster and border-points fall on the exterior. If a point does not have 
-the minimum number of features within the search distance and is not a within 
-the search distance of another core-point (in other words, it is neither a 
-core-point nor a border-point), it is marked as a noise point and not included 
+within the core-distance. A border-point is a point that is within the search
+distance of a core-point but does not itself have the minimum number of
+features within the search distance. Each resulting cluster is composed of
+core-points and border-points, where core-points tend to fall in the middle of
+the cluster and border-points fall on the exterior. If a point does not have
+the minimum number of features within the search distance and is not a within
+the search distance of another core-point (in other words, it is neither a
+core-point nor a border-point), it is marked as a noise point and not included
 in any cluster.
 
 |![DBSCAN illustration](./img/DBSCANex.png) |
 |:----------------------------------------------:|
-|Fig. 2 How DBSCAN is calculated. _Source_: [ESRI.](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/how-density-based-clustering-works.htm)| 
+|Fig. 2 How DBSCAN is calculated. _Source_: [ESRI.](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/how-density-based-clustering-works.htm)|
 
-- **Usage**: This tool is used to detect areas where points are concentrated 
-  and where they are separated by areas that are empty or sparse. Points that 
-  are not part of a cluster are labeled as noise. The results from running the 
-  DBSCAN algorithm help us identify points that make up a cluster and points 
+- **Usage**: This tool is used to detect areas where points are concentrated
+  and where they are separated by areas that are empty or sparse. Points that
+  are not part of a cluster are labeled as noise. The results from running the
+  DBSCAN algorithm help us identify points that make up a cluster and points
   that are noise.
 
-- **Example**: As an example, we will use **DBSCAN clustering** to identify 
+- **Example**: As an example, we will use **DBSCAN clustering** to identify
   clusters of gas stations within Ghana. The datasets used are listed below:
 
 | ID | File Name       | Data Format | Type  | Description                    |
 |----|-----------------|-------------|-------|--------------------------------|
 | 1  | gas_station.shp | vector      | point | Gas station locations in Ghana |
 
-The two figures below display the parameter settings and the output of the 
+The two figures below display the parameter settings and the output of the
 tool.
 
 | Parameter Settings       | Output      |
@@ -214,33 +213,31 @@ tool.
 
 ### 3.2 Proximity
 
-The **Proximity** tool calculates the <u>**Euclidean distance**</u> from the 
-center of the source cell to the center of each of the surrounding cells. 
-Conceptually, the Euclidean algorithm works as follows: for each cell, the 
-distance to each source cell is determined by calculating the hypotenuse with 
+The **Proximity** tool calculates the <u>**Euclidean distance**</u> from the
+center of the source cell to the center of each of the surrounding cells.
+Conceptually, the Euclidean algorithm works as follows: for each cell, the
+distance to each source cell is determined by calculating the hypotenuse with
 x_max and y_max as the other two legs of the triangle. This calculation derives
-the true Euclidean distance, rather than the cell distance. The shortest 
-distance to a source is determined, and if it is less than the specified 
-maximum distance, the value is assigned to the cell location on the output 
+the true Euclidean distance, rather than the cell distance. The shortest
+distance to a source is determined, and if it is less than the specified
+maximum distance, the value is assigned to the cell location on the output
 raster.
-
 
 |![Euclidean distance using trig](./img/EucDistEx2.gif)|
 |:---------------------------------------------------------:|
 |Determining true Euclidean distance. _Source_: [ESRI (2021)](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/understanding-euclidean-distance-analysis.htm)|
 
-
 - **Usage**:
-  This tool gives the measured Euclidean distance from every cell to the 
-  nearest source. The distances are measured in the projection units of the 
-  raster, such as feet or meters, and are measured from cell center to cell 
+  This tool gives the measured Euclidean distance from every cell to the
+  nearest source. The distances are measured in the projection units of the
+  raster, such as feet or meters, and are measured from cell center to cell
   center.
 
->:pushpin: The projected units of a raster layer can be found under the 
+>:pushpin: The projected units of a raster layer can be found under the
 >_information_ tab in the layer properties
 
 - **Example**:
-  Now we will use the **Proximity** tool in order to determine the Euclidean 
+  Now we will use the **Proximity** tool in order to determine the Euclidean
   distance from a gas station cluster to the rest of the raster cells.
 
 | ID | File Name      | Data Format | Description                |
@@ -254,24 +251,23 @@ tool.
 | ------------------------ | ----------- |
 | ![Proximity parameters](./img/ProximityPmtrs.jpg)| ![Cluster 1 distance](./img/ProximityRasEx.jpg)|
 
-
-
 ### 3.3 Raster Calculator
-The **Raster calculator** tool allows you to create and execute a Map Algebra 
-expression that will output a raster. We will be using a distance decay model 
-in order to assign weights to each cluster. Distance decay, also known as the 
-Gravity Model or the Inverse Square Law, is the tendency of a spatial 
-relationship between one place and another to weaken as the distance between 
+
+The **Raster calculator** tool allows you to create and execute a Map Algebra
+expression that will output a raster. We will be using a distance decay model
+in order to assign weights to each cluster. Distance decay, also known as the
+Gravity Model or the Inverse Square Law, is the tendency of a spatial
+relationship between one place and another to weaken as the distance between
 them increases.
 
 - **Usage**:
-  The **Raster calculator** tool is used to individually weight and multiply 
+  The **Raster calculator** tool is used to individually weight and multiply
   proximity rasters together.
   
   The weighting formula that we will use is:
   ![Weight Equation](./img/WeightingEq.svg)
   
-  Where W is equal to the number of points in a cluster divided by the total
+  Where _w_ is equal to the number of points in a cluster divided by the total
   number of points in all clusters.
 
   Here is what our full equation looks like:
@@ -284,30 +280,28 @@ them increases.
 | 1  | cluster1_euc_dst.tif | raster      | Euclidean distance from cluster 1 |
 | 2  | cluster2_euc_dst.tif | raster      | Euclidean distance from cluster 2 |
 
-The figures below show the parameters and output of the **Raster calculator** 
+The figures below show the parameters and output of the **Raster calculator**
 tool.
 
 | Parameter Settings       | Output      |
 | ------------------------ | ----------- |
 | ![Raster calculator parameters](./img/RastCalcPrmtrs.jpg)| ![Raster Calculator output](./img/RastCalcEx.jpg)|
 
-
 ### 3.4 Reclassify by Table
 
-**Reclassify by table** is a tool that reclassifies a raster band by assigning 
+**Reclassify by table** is a tool that reclassifies a raster band by assigning
 new class values based on ranges specified in a fixed table.
 
 - **Usage**:
-  This tool is used to reclassify raster values. 
+  This tool is used to reclassify raster values.
   
-
 - **Example**:
 
 | ID | File Name              | Data Format | Description                                            |
 |----|------------------------|-------------|--------------------------------------------------------|
 | 1  | euc_cluster_output.tif | raster      | Result of adding together the weighted clusters 1 and 2|
 
-The figures below show the parameters and output for the 
+The figures below show the parameters and output for the
 **Reclassify by table** tool.
 
 > :pushpin: Check the details of an image:  
@@ -319,18 +313,19 @@ The figures below show the parameters and output for the
 | ![Reclassify parameters](./img/RclsfyP1.jpg) | ![Reclassify table parameters](./img/RclsfyP2.jpg)|![Raster Calculator output](./img/RclsfyEx.jpg)|
 
 > :pushpin: Here is a helpful strategy:
-> If you want to keep track of what raster cells are combined when multiplying 
+> If you want to keep track of what raster cells are combined when multiplying
 > raster layers together, try reclassifying the raster values as prime numbers.
 > The product of two prime numbers can only be the result of those specific
 > numbers, allowing you to identify what cells were combined.
 
-### 3.5 Subdivide 
-**Subdivide** is a tool that subdivides the original geometry into smaller 
-parts, where no part has more than the specified maximum number of nodes. 
+### 3.5 Subdivide
+
+**Subdivide** is a tool that subdivides the original geometry into smaller
+parts, where no part has more than the specified maximum number of nodes.
 
 - **Usage**:
-  The **subdivide** tool is used to break down complex geometries into more 
-  manageable parts. In our case, this tool allows us to subdivide large areas 
+  The **subdivide** tool is used to break down complex geometries into more
+  manageable parts. In our case, this tool allows us to subdivide large areas
   of land into IDUs.
 
 - **Example**:
@@ -345,50 +340,11 @@ The figures below show the parameters and output for the **Subdivide** tool.
 |------| ------------------------ | ----------- |
 |![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Subdivide parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
 
-### 3.6 v.clean
+### 3.6 Eliminate Selected Polygons
 
-**v.clean** is a tool that cleans input layers using a selection of tools.
-The table below shows what tools are available:
-| v.clean  |       |         |         |         |
-|----------|-------|---------|---------|---------|
-| break    |snap   |rmdangle |chdangle |rmbridge |
-| chbridge |rmdupl |rmdac    |bpol     |prune    |
-| rmarea   |rmline |rmsa     |
-
-There is also an optional parameter called _Input feature type_ which allows 
-you to specify what you want to be cleaned. This makes the **v.clean** tool
-more effective. The table below shows the possible input feature types:
-
-|v.clean  |       |         |         |
-|---------|-------|---------|---------|
-|area     |point  |line     |boundary |
-|centroid |face   | kernel  |
-
-- **Usage**: 
-  The **v.clean** tool is used for making each of the IDUs more regularly
-  shaped. We will be utilizing all of the tools to clean our feature type,
-  which is area.
-
-- **Example**:
-
-| ID | File Name    | Data Format |Type    | Description                |
-|----|--------------|-------------|--------|----------------------------|
-| 1  | clean_ex.shp | vector      |polygon | Input polygon to be cleaned|
-
-The figures below show the parameters and output for the **v.clean** tool.
-
-|Parameter Settings | Input  | Output      |
-|-------------------|------------------------ | ----------- |
-|![v.clean Input](./img/CleanParameters.jpg)| ![v.clean parameters](./img/CleanBase.jpg)| ![v.clean output](./img/CleanOut.jpg)|
-
->:pushpin: In order for this tool to work, you must specify a location for the 
->output shapefile to be saved.
-
-### 3.7 Eliminate Selected Polygons
-
-**Eliminate selected polygons** is a tool that combines selected polygons by 
-erasing the common boundary with nearby polygons. The merge can be based on 
-largest common boundary, largest area or smallest area. 
+**Eliminate selected polygons** is a tool that combines selected polygons by
+erasing the common boundary with nearby polygons. The merge can be based on
+largest common boundary, largest area or smallest area.
 
 - **Usage**:
   **Eliminate selected polygons** is used to refine the IDUs by eliminating
@@ -405,7 +361,51 @@ tool.
 
 |Parameter Settings | Input  | Output      |
 |-------------------|------------------------ | ----------- |
-|![Elim Parameters](./img/ElimParameters.jpg)| ![Elim base](./img/ElimBase.jpg)| ![Elim output](./img/ElimOut.jpg)|
+|![Elim Parameters](./img/ElimParameters.jpg)| ![Elim base](./img/ElimBase.png)| ![Elim output](./img/ElimOut.jpg)|
+
+> :pushpin: Note: This workflow utilized largest common boundary as the
+> parameter for Eliminate selected polygons because this gave us the best
+> result. Try using the other methods for merging with the neighboring polygons
+> to see which gives you the best result.
+
+### 3.7 v.clean
+
+**v.clean** is a tool that cleans input layers using a selection of tools.
+The table below shows what tools are available:
+|v.clean |       |         |         |         |
+|--------|-------|---------|---------|---------|
+|break   |snap   |rmdangle |chdangle |rmbridge |
+|chbridge|rmdupl |rmdac    |bpol     |prune    |
+|rmarea  |rmline |rmsa     |
+
+There is also an optional parameter called _Input feature type_ which allows
+you to specify what you want to be cleaned. This makes the **v.clean** tool
+more effective. The table below shows the possible input feature types:
+
+|v.clean  |       |         |         |
+|---------|-------|---------|---------|
+|area     |point  |line     |boundary |
+|centroid |face   | kernel  |
+
+- **Usage**:
+  The **v.clean** tool is used for making each of the IDUs more regularly
+  shaped. We will be utilizing all of the tools to clean our feature type,
+  which is area.
+
+- **Example**:
+
+| ID | File Name    | Data Format |Type    | Description                |
+|----|--------------|-------------|--------|----------------------------|
+| 1  | clean_ex.shp | vector      |polygon | Input polygon to be cleaned|
+
+The figures below show the parameters and output for the **v.clean** tool.
+
+|Parameter Settings | Input  | Output      |
+|-------------------|------------------------ | ----------- |
+|![v.clean Input](./img/CleanParameters.jpg)| ![v.clean parameters](./img/CleanBase.jpg)| ![v.clean output](./img/CleanOut.jpg)|
+
+>:pushpin: In order for this tool to work, you must specify a location for the
+>output shapefile to be saved.
 
 ## 4. IDU Workflow
 
@@ -413,32 +413,33 @@ The diagrams below show the general process of the IDU workflow.
 
 ### 4.1 Developing urban clusters
 
-The first part of the IDU workflow focuses on developing urban clusters and 
-distinguishing the boundary between these clusters and the rest of the THLD 
-District. This can be done through a series of 4 geoprocessing steps: 
-identify urban clusters, measure distance to each cluster, aggregate inverse 
-distance raster, and define urban boundary. 
+The first part of the IDU workflow focuses on developing urban clusters and
+distinguishing the boundary between these clusters and the rest of the THLD
+District. This can be done through a series of 4 geoprocessing steps:
+identify urban clusters, measure distance to each cluster, aggregate inverse
+distance raster, and define urban boundary.
 
-- In order to identify urban clusters, urban areas of the THLD District must
-  first be extracted from the base land use raster.
-  This was done by converting the land use raster to vector points and then
-  extracting points according to their land use designation.
-  Points designated with land use type 6 make up the urban areas that we are
-  looking for.
-  Once these have been extracted, they are entered into the DBSCAN clustering
-  tool.
-  The output from the DBSCAN tool is our urban clusters.
-- Now that DBSCAN has identified urban clusters, each of these clusters must 
-  individually be extracted, converted to raster, and then processed using the 
+- In order to identify urban
+ clusters, urban areas of the THLD District must first be extracted from the
+ base land use raster. This was done by converting the land use raster to
+ vector points and then extracting points according to their land use
+ designation. Points designated with land use type 6 make up the urban areas
+ that we are looking for. Once these have been extracted, they are entered into
+ the DBSCAN clustering tool. The output from the DBSCAN tool is our urban
+ clusters.
+
+- Now that DBSCAN has identified urban clusters, each of these clusters must
+  individually be extracted, converted to raster, and then processed using the
   proximity tool.
-- After completing the previous steps, we can move on to calculating the area 
-  of influence for each cluster. This influence is calculated by dividing the 
+
+- After completing the previous steps, we can move on to calculating the area
+  of influence for each cluster. This influence is calculated by dividing the
   number of points in a cluster by the total number of points for all clusters.
   These are now weighted using the inverse distance formula, where 1 is divided
   by the proximity raster and multiplied by the weight.
 - To define the boundary between the urban and rural areas of the THLD
-  District, we can reclassify our weighted raster. This reclassified raster 
-  will be binary, where 1 corresponds to the urban area and 0 corresponds to 
+  District, we can reclassify our weighted raster. This reclassified raster
+  will be binary, where 1 corresponds to the urban area and 0 corresponds to
   the rural area.
 
 |Developing urban clusters                      |
@@ -449,21 +450,22 @@ distance raster, and define urban boundary.
 
 The second part of the IDU workflow focuses on the actual calculating of the
 IDUs. This can be done by performing the following 4 geoprocessing functions:
-overlay input rasters, separate rural and urban areas, process vector data 
+overlay input rasters, separate rural and urban areas, process vector data
 (iteration) and merge results.
 
-- The first step in calculating the IDUs is to create the base suitability 
+- The first step in calculating the IDUs is to create the base suitability
   raster. In order to make the calculations easier, we are going to reclassify
-  the land cover raster into three general categories. Once this is done, the 
-  generalized land cover and drainage rasters are ready to be combined. In 
+  the land cover raster into three general categories. Once this is done, the
+  generalized land cover and drainage rasters are ready to be combined. In
   order to combine these rasters, they must first be reclassified as
   prime numbers. The reason we do this is to keep track of what raster values
-  are combined when we multiply the land cover and drainage rasters together 
-  (for further explanation on why we use prime numbers, you can refer back to 
-  section 3.3 Raster Calculator). After the layers are reclassified, they are 
+  are combined when we multiply the land cover and drainage rasters together
+  (for further explanation on why we use prime numbers, you can refer back to
+  section 3.3 Raster Calculator). After the layers are reclassified, they are
   multiplied together using raster calculator.
+
 - Next, the combined suitability raster needs to be separated into urban areas
-  and rural areas. This is where we use the urban and rural rasters that were 
+  and rural areas. This is where we use the urban and rural rasters that were
   calculated in the first part of the IDU workflow. The combined raster is
   multiplied by the urban and rural rasters, respectively. This calculation
   maintains the suitability of the targeted area while setting the rest of the
@@ -477,32 +479,23 @@ overlay input rasters, separate rural and urban areas, process vector data
   returns a multipart polygon which must be converted to a single part polygon
   before further processing. At this point, the subdivided areas are very small
   and irregular. This is addressed by eliminating very small polygons and
-  merging them with other nearby, larger polygons. Multiple iterations are 
+  merging them with other nearby, larger polygons. Multiple iterations are
   required in order to create regular, consistent IDUs.
-- Once the IDUs have been established, all that is left to do is some final 
+
+- Once the IDUs have been established, all that is left to do is some final
   cleaning (if you choose) and to put the urban and rural layers back together.
   The v.clean tool is used to make the IDUs more regularly shaped. This change
   is very subtle and is not required if you feel that your IDUs are regular
-  enough already. The urban IDUs and rural IDUs can then be merged to create 
+  enough already. The urban IDUs and rural IDUs can then be merged to create
   the final IDU layer.
 
 |Calculating IDUs                               |
 |-----------------------------------------------|
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
-> :pushpin: If you are having trouble permanently saving your subdivided
-> polygons, try saving them as a shapefile (`.shp`) instead of the default
-> format, i.e., a
-> [GeoPackage](https://en.wikipedia.org/w/index.php?title=GeoPackage&oldid=1071852893)
-> (`.gpkg`).
-
-### 4.3 Final Output
-
-> :bell: **Review the IDUs of THLD**<br>
 > The GIS process described above leads us to the final IDUs of THLD district.
 > It is worth noting that the output may not be identical or 100% reproducible
 > due to the fact that there are multiple **iterative processes** involved and
-> that some of the tools are **parameterized** in a case-specific fashion.<br>
 > Here, one output is presented in the map below (_click to expand_).
 > The output shapefile is also provided and can be found at
 > [here](./datasets/IDU_Output).
