@@ -419,19 +419,18 @@ District. This can be done through a series of 4 geoprocessing steps:
 identify urban clusters, measure distance to each cluster, aggregate inverse
 distance raster, and define urban boundary.
 
-- In order to identify urban
- clusters, urban areas of the THLD District must first be extracted from the
- base land use raster. This was done by converting the land use raster to
- vector points and then extracting points according to their land use
- designation. Points designated with land use type 6 make up the urban areas
- that we are looking for. Once these have been extracted, they are entered into
- the DBSCAN clustering tool. The output from the DBSCAN tool is our urban
- clusters.
-
+- In order to identify urban clusters, urban areas of the THLD District must
+  first be extracted from the base land use raster.
+  This was done by converting the land use raster to vector points and then
+  extracting points according to their land use designation.
+  Points designated with land use type 6 make up the urban areas that we are
+  looking for.
+  Once these have been extracted, they are entered into the DBSCAN clustering
+  tool.
+  The output from the DBSCAN tool is our urban clusters.
 - Now that DBSCAN has identified urban clusters, each of these clusters must
   individually be extracted, converted to raster, and then processed using the
   proximity tool.
-
 - After completing the previous steps, we can move on to calculating the area
   of influence for each cluster. This influence is calculated by dividing the
   number of points in a cluster by the total number of points for all clusters.
@@ -454,16 +453,19 @@ overlay input rasters, separate rural and urban areas, process vector data
 (iteration) and merge results.
 
 - The first step in calculating the IDUs is to create the base suitability
-  raster. In order to make the calculations easier, we are going to reclassify
-  the land cover raster into three general categories. Once this is done, the
-  generalized land cover and drainage rasters are ready to be combined. In
-  order to combine these rasters, they must first be reclassified as
-  prime numbers. The reason we do this is to keep track of what raster values
-  are combined when we multiply the land cover and drainage rasters together
-  (for further explanation on why we use prime numbers, you can refer back to
-  section 3.3 Raster Calculator). After the layers are reclassified, they are
-  multiplied together using raster calculator.
-
+  raster.
+  In order to make the calculations easier, we are going to reclassify the land
+  cover raster into three general categories.
+  Once this is done, the generalized land cover and drainage rasters are ready
+  to be combined.
+  In order to combine these rasters, they must first be reclassified as
+  prime numbers.
+  The reason we do this is to keep track of what raster values are combined
+  when we multiply the land cover and drainage rasters together (for further
+  explanation on why we use prime numbers, you can refer back to section 3.3
+  Raster Calculator).
+  After the layers are reclassified, they are multiplied together using raster
+  calculator.
 - Next, the combined suitability raster needs to be separated into urban areas
   and rural areas. This is where we use the urban and rural rasters that were
   calculated in the first part of the IDU workflow. The combined raster is
@@ -481,7 +483,6 @@ overlay input rasters, separate rural and urban areas, process vector data
   and irregular. This is addressed by eliminating very small polygons and
   merging them with other nearby, larger polygons. Multiple iterations are
   required in order to create regular, consistent IDUs.
-
 - Once the IDUs have been established, all that is left to do is some final
   cleaning (if you choose) and to put the urban and rural layers back together.
   The v.clean tool is used to make the IDUs more regularly shaped. This change
@@ -489,9 +490,9 @@ overlay input rasters, separate rural and urban areas, process vector data
   enough already. The urban IDUs and rural IDUs can then be merged to create
   the final IDU layer.
 
-|Calculating IDUs                               |
-|-----------------------------------------------|
-|![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
+| Calculating IDUs                                |
+|-------------------------------------------------|
+| ![IDU Workflow Part 2](./img/IDU_diagram_2.svg) |
 
 > The GIS process described above leads us to the final IDUs of THLD district.
 > It is worth noting that the output may not be identical or 100% reproducible
@@ -512,6 +513,7 @@ overlay input rasters, separate rural and urban areas, process vector data
 ## 5. Exercise and Post-training Survey
 
 - Please complete the Exercise 1.
+- Please submit your exercise [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=eidealex&labels=exercise+w3&template=w3-exercise-submission.md&title=Workshop+3+exercise+%5Breplace+with+your+name%5D).
 - Please take this post-training
   [survey](https://ufl.qualtrics.com/jfe/form/SV_0vNRnI3WsOjXM1g) (required).
 
