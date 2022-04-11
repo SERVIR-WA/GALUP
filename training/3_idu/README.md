@@ -81,6 +81,7 @@ land-use plan.
 
 - [Integrated Decision Units for Land Use Suitability Modeling](module.md)
 - [Exercise: Create IDUs for AAC](exercise.md)
+- [Submit post-training survey]
 
 ## Assignment Submission and Help
 
