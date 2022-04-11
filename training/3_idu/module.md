@@ -334,8 +334,8 @@ The figures below show the parameters and output for the **v.clean** tool.
 |-------------------|------------------------ | ----------- |
 |![v.clean Input](./img/CleanParameters.jpg)| ![v.clean parameters](./img/CleanBase.jpg)| ![v.clean output](./img/CleanOut.jpg)|
 
->:pushpin: In order for this tool to work, you must specify a location for the
->output shapefile to be saved.
+>:pushpin: Note: In order for this tool to work, you must specify a location
+>for the output shapefile to be saved.
 
 ## 4. IDU Workflow
 
