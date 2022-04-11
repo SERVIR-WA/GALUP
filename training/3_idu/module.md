@@ -352,33 +352,33 @@ The diagrams below show the general process of the IDU workflow.
 
 ### 4.1 Developing urban clusters
 
-The first part of the IDU workflow focuses on developing urban clusters and
-distinguishing the boundary between these clusters and the rest of the THLD
+The first part of the IDU workflow focuses on **developing urban clusters** and
+**distinguishing the boundary** between these clusters and the rest of the THLD
 District. This can be done through a series of 4 geoprocessing steps:
 identify urban clusters, measure distance to each cluster, aggregate inverse
 distance raster, and define urban boundary.
 
-- In order to identify urban clusters, urban areas of the THLD District must
-  first be extracted from the base land use raster.
+- In order to **identify urban clusters**, urban areas of the THLD District
+  must first be extracted from the base land use raster.
   This was done by converting the land use raster to vector points and then
   extracting points according to their land use designation.
-  Points designated with land use type 6 make up the urban areas that we are
-  looking for.
+  Points designated with land use type <u>**6**</u> make up the urban areas
+  that we are looking for.
   Once these have been extracted, they are entered into the DBSCAN clustering
   tool.
-  The output from the DBSCAN tool is our urban clusters.
+  <u>The output from the DBSCAN tool is our urban clusters.</u>
 - Now that DBSCAN has identified urban clusters, each of these clusters must
-  individually be extracted, converted to raster, and then processed using the
-  proximity tool.
-- After completing the previous steps, we can move on to calculating the area
-  of influence for each cluster. This influence is calculated by dividing the
+  individually be **extracted**, **converted to raster**, and then **processed
+  using the proximity tool**.
+- After completing the previous steps, we can move on to **calculating the area
+  of influence** for each cluster. This influence is calculated by dividing the
   number of points in a cluster by the total number of points for all clusters.
-  These are now weighted using the inverse distance formula, where 1 is divided
-  by the proximity raster and multiplied by the weight.
+  These are now weighted using the _inverse distance formula_, where
+  <u>**1**</u> is divided by the proximity raster and multiplied by the weight.
 - To define the boundary between the urban and rural areas of the THLD
-  District, we can reclassify our weighted raster. This reclassified raster
-  will be binary, where 1 corresponds to the urban area and 0 corresponds to
-  the rural area.
+  District, we can **reclassify our weighted raster**. This reclassified raster
+  will be binary, where <u>**1**</u> corresponds to the urban area and
+  <u>**0**</u> corresponds to the rural area.
 
 |Developing urban clusters                      |
 |-----------------------------------------------|
@@ -386,48 +386,52 @@ distance raster, and define urban boundary.
 
 ### 4.2 Calculating IDUs
 
-The second part of the IDU workflow focuses on the actual calculating of the
-IDUs. This can be done by performing the following 4 geoprocessing functions:
+The second part of the IDU workflow focuses on the actual **calculating of the
+IDUs**. This can be done by performing the following 4 geoprocessing functions:
 overlay input rasters, separate rural and urban areas, process vector data
 (iteration) and merge results.
 
-- The first step in calculating the IDUs is to create the base suitability
-  raster.
-  In order to make the calculations easier, we are going to reclassify the land
-  cover raster into three general categories.
+- The first step in calculating the IDUs is to **create the base suitability
+  raster**.
+  In order to make the calculations easier, we are going to **reclassify** the
+  land cover raster into <u>three general categories</u>.
   Once this is done, the generalized land cover and drainage rasters are ready
   to be combined.
-  In order to combine these rasters, they must first be reclassified as
-  prime numbers.
-  The reason we do this is to keep track of what raster values are combined
-  when we multiply the land cover and drainage rasters together (for further
-  explanation on why we use prime numbers, you can refer back to section 3.3
-  Raster Calculator).
-  After the layers are reclassified, they are multiplied together using raster
-  calculator.
-- Next, the combined suitability raster needs to be separated into urban areas
-  and rural areas. This is where we use the urban and rural rasters that were
+  In order to combine these rasters, they must first be **reclassified as
+  prime numbers**.
+  The reason we do this is to keep track of what <u>raster values are combined
+  when we multiply the land cover and drainage rasters together</u>
+  (for further explanation on why we use prime numbers, you can refer back to
+  section 3.3 Raster Calculator).
+  After the layers are reclassified, they are **multiplied together** using
+  raster calculator.
+- Next, the combined suitability raster needs to be **separated into urban
+  and rural areas**. This is where we use the urban and rural rasters that were
   calculated in the first part of the IDU workflow. The combined raster is
-  multiplied by the urban and rural rasters, respectively. This calculation
-  maintains the suitability of the targeted area while setting the rest of the
-  raster equal to 0. After this is done for both the urban and rural rasters,
-  the r.null tool is used to convert the 0 raster values to No Data.
+  **multiplied** by the urban and rural rasters, respectively. <u>This
+  calculation maintains the suitability of the targeted area while setting the
+  rest of the raster equal to **0**</u>. After this is done for both the urban
+  and rural rasters,
+  the **r.null** tool is used to convert the <u>**0**</u> raster values to
+  <u>**No Data**.</u>
 - With the urban and rural parts of the suitability raster separated, it is
   time to create the first iteration of the IDUs. Starting with either the
-  urban or rural suitability rasters, r.to.vect is used to convert the raster
-  layer to a vector layer. The fix geometries tool is then used on the vector
-  layer, creating a valid input for the subdivide tool. The subdivide tool
+  urban or rural suitability rasters, r.to.vect is used to **convert the raster
+  layer** to a vector layer. The fix geometries tool is then used on the vector
+  layer, **creating a valid input** for the subdivide tool. <u>The subdivide
+  tool
   returns a multipart polygon which must be converted to a single part polygon
-  before further processing. At this point, the subdivided areas are very small
-  and irregular. This is addressed by eliminating very small polygons and
-  merging them with other nearby, larger polygons. Multiple iterations are
-  required in order to create regular, consistent IDUs.
-- Once the IDUs have been established, all that is left to do is some final
-  cleaning (if you choose) and to put the urban and rural layers back together.
+  before further processing.</u> At this point, the subdivided areas are very
+  small and irregular. This is addressed by **eliminating very small polygons**
+  and merging them with other nearby, larger polygons. <u>Multiple iterations
+  are required in order to create regular, consistent IDUs.</u>
+- Once the IDUs have been established, all that is left to do is some **final
+  cleaning** (if you choose) and to **merge** the urban and rural layers back
+  together.
   The v.clean tool is used to make the IDUs more regularly shaped. This change
   is very subtle and is not required if you feel that your IDUs are regular
-  enough already. The urban IDUs and rural IDUs can then be merged to create
-  the final IDU layer.
+  enough already. The urban IDUs and rural IDUs can then be **merged** to
+  create the final IDU layer.
 
 | Calculating IDUs                                |
 |-------------------------------------------------|
