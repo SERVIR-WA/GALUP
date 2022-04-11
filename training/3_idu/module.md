@@ -14,7 +14,7 @@
     - [3.5 Subdivide](#35-subdivide)
     - [3.6 Eliminate Selected Polygons](#36-eliminate-selected-polygons)
     - [3.7 v.clean](#37-vclean)
-  - [4. IDU Workflow](#4-idu-workflow)
+  - [4. The QGIS Workflow of Creating IDUs](#4-the-qgis-workflow-of-creating-idus)
     - [4.1 Developing urban clusters](#41-developing-urban-clusters)
     - [4.2 Calculating IDUs](#42-calculating-idus)
   - [5. Exercise and Post-training Survey](#5-exercise-and-post-training-survey)
@@ -155,7 +155,7 @@ raster.
 
 |![Euclidean distance using trig](./img/EucDistEx2.gif)|
 |:---------------------------------------------------------:|
-|Determining true Euclidean distance. _Source_: [ESRI (2021)](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/understanding-euclidean-distance-analysis.htm)|
+|Determining true Euclidean distance. _Source_: [ESRI](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/understanding-euclidean-distance-analysis.htm)|
 
 - **Usage**:
   This tool gives the measured Euclidean distance from every cell to the
@@ -183,39 +183,48 @@ tool.
 
 ### 3.3 Raster Calculator
 
-The **Raster calculator** tool allows you to create and execute a Map Algebra
-expression that will output a raster. We will be using a distance decay model
-in order to assign weights to each cluster. Distance decay, also known as the
-Gravity Model or the Inverse Square Law, is the tendency of a spatial
-relationship between one place and another to weaken as the distance between
-them increases.
+The **Raster calculator** tool allows you to create and execute _Map Algebra_
+expression that will output a raster.
+We will be using a [distance decay](https://www.spatialanalysisonline.com/HTML/Distance_decay_models.htm)
+model in order to assign weights to each cluster.
+Distance decay, also known as the **Gravity Model** or the Inverse Square Law,
+is the tendency of a spatial relationship between one place and another to
+weaken as the distance between them increases<a href="#geospatial anlysis"><sup>3</sup></a>.
+
+|![distance decay](./img/distance_decay.png)|
+|:---------------------------------------------------------:|
+|Decrease of weight with distance illustration. _Source_: [ESRI](https://pro.arcgis.com/en/pro-app/2.7/help/analysis/geostatistical-analyst/how-inverse-distance-weighted-interpolation-works.htm)|
 
 - **Usage**:
   The **Raster calculator** tool is used to individually weight and multiply
   proximity rasters together.
   
-  The weighting formula that we will use is:
-  ![Weight Equation](./img/WeightingEq.svg)
+  The weighting formula that we will use is: _w * 1/distance_.
   
-  Where _w_ is equal to the number of points in a cluster divided by the total
-  number of points in all clusters.
+  Where _w_ is equal to the **number of points** (urban pixels) in a cluster
+  divided by the total number of points in all clusters.
 
   Here is what our full equation looks like:
   ![Full Equation](./img/TotalEq.svg)
 
-  **Example**:
+- **Example**:
 
 | ID | File Name            | Data Format | Description                       |
 |----|----------------------|-------------|-----------------------------------|
 | 1  | cluster1_euc_dst.tif | raster      | Euclidean distance from cluster 1 |
 | 2  | cluster2_euc_dst.tif | raster      | Euclidean distance from cluster 2 |
+| 3  | cluster3_euc_dst.tif | raster      | Euclidean distance from cluster 3 |
+| 4  | cluster4_euc_dst.tif | raster      | Euclidean distance from cluster 4 |
+| 5  | cluster5_euc_dst.tif | raster      | Euclidean distance from cluster 5 |
+| 6  | cluster6_euc_dst.tif | raster      | Euclidean distance from cluster 6 |
+| 7  | cluster7_euc_dst.tif | raster      | Euclidean distance from cluster 7 |
 
 The figures below show the parameters and output of the **Raster calculator**
 tool.
 
 | Parameter Settings       | Output      |
 | ------------------------ | ----------- |
-| ![Raster calculator parameters](./img/RastCalcPrmtrs.jpg)| ![Raster Calculator output](./img/RastCalcEx.jpg)|
+| ![Raster calculator parameters](./img/RastCalcPrmtrs.jpg)| ![Raster Calculator output](./img/raster_calculator.png)|
 
 ### 3.4 Reclassify by Table
 
@@ -337,7 +346,7 @@ The figures below show the parameters and output for the **v.clean** tool.
 >:pushpin: Note: In order for this tool to work, you must specify a location
 >for the output shapefile to be saved.
 
-## 4. IDU Workflow
+## 4. The QGIS Workflow of Creating IDUs 
 
 The diagrams below show the general process of the IDU workflow.
 
@@ -459,3 +468,7 @@ overlay input rasters, separate rural and urban areas, process vector data
    Mapping Soil Properties of Africa at 250 m Resolution: Random Forests
    Significantly Improve Current Predictions. _PLOS ONE_, 10(6), e0125814.
    https://doi.org/10.1371/JOURNAL.PONE.0125814
+3. <a id="geospatial analysis"></a>de Smith, M. J., Goodchild, M. F., &
+   Longley, P. A. (2018). Geospatial analysis: A comprehensive guide to
+   principles, techniques and software tools (6th ed.).
+   https://www.spatialanalysisonline.com/HTML/index.html
