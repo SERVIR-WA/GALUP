@@ -512,7 +512,7 @@ overlay input rasters, separate rural and urban areas, process vector data
 
 ## 5. Exercise and Post-training Survey
 
-- Please complete the Exercise 1.
+- Please complete this [Exercise](exercise.md).
 - Please submit your exercise [here](https://github.com/SERVIR-WA/GALUP/issues/new?assignees=eidealex&labels=exercise+w3&template=w3-exercise-submission.md&title=Workshop+3+exercise+%5Breplace+with+your+name%5D).
 - Please take this post-training
   [survey](https://ufl.qualtrics.com/jfe/form/SV_0vNRnI3WsOjXM1g) (required).

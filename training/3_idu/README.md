@@ -24,10 +24,6 @@ input data are provided.
 
 [Integrated Decision Units for Land Use Suitability Modeling](module.md)
 
-### Exercise
-
-[Assignment]
-
 ### Assignment Submission and Help
 
 The participants will have to sign into their GitHub accounts to submit assignments. Below is a video explaining how to submit the module assignments and how to request help through GitHub. Note: It may be convenient to open videos in the workshop in a new tab or window to easily navigate the GitHub page.
