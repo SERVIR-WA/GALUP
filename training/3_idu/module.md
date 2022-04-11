@@ -70,10 +70,12 @@ land units, e.g., IDUs.
 > **differ sufficiently** from those of other land units to affect their
 > suitability for different land uses._"
 
-- Land Unit: areas of land with specific characteristics (or qualities).
-- Land Characteristic: simple attribute that can be measured or estimated. For
+- Land unit: areas of land with specific characteristics (or qualities).
+  For a comprehensive introduction of _land unit_, please check
+  <a href="#land unit">Zonneveld's paper</a>.
+- Land characteristic: simple attribute that can be measured or estimated. For
   example, _mean annual rainfall_.
-- Land Quality: a complex attribute that usually reflects the interaction of
+- Land quality: a complex attribute that usually reflects the interaction of
   many land characteristics, such as _susceptibility to flooding_.
 
 Although any parcel of land can be considered a land unit, it is more efficient
@@ -176,9 +178,9 @@ workflow.
 For **Defined distance (DBSCAN)**, if the **Minimum Features per Cluster** can
 be found within the **Search Distance** from a particular point, that point 
 will be marked as a core-point and included in a cluster, along with all points
-within the core-distance. A border-point is a point that is within the search
-distance of a core-point but does not itself have the minimum number of 
-features within the search distance. Each resulting cluster is composed of 
+within the core-distance.
+A border-point is a point that is within the search distance of a core-point
+but does not itself have the minimum number of features within the search distance. Each resulting cluster is composed of 
 core-points and border-points, where core-points tend to fall in the middle of 
 the cluster and border-points fall on the exterior. If a point does not have 
 the minimum number of features within the search distance and is not a within 
@@ -266,10 +268,10 @@ them increases.
   The **Raster calculator** tool is used to individually weight and multiply 
   proximity rasters together.
   
-  The weighting formula that we will use is: 
+  The weighting formula that we will use is:
   ![Weight Equation](./img/WeightingEq.svg)
   
-  Where W is equal to the number of points in a cluster divded by the total 
+  Where W is equal to the number of points in a cluster divided by the total
   number of points in all clusters.
 
   Here is what our full equation looks like:
@@ -320,7 +322,7 @@ The figures below show the parameters and output for the
 > If you want to keep track of what raster cells are combined when multiplying 
 > raster layers together, try reclassifying the raster values as prime numbers.
 > The product of two prime numbers can only be the result of those specific
-> numbers, allowing you to idnetify what cells were combined.
+> numbers, allowing you to identify what cells were combined.
 
 ### 3.5 Subdivide 
 **Subdivide** is a tool that subdivides the original geometry into smaller 
@@ -344,13 +346,14 @@ The figures below show the parameters and output for the **Subdivide** tool.
 |![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Subdivide parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
 
 ### 3.6 v.clean
+
 **v.clean** is a tool that cleans input layers using a selection of tools.
 The table below shows what tools are available:
-|v.clean |       |         |         |         |
-|--------|-------|---------|---------|---------|
-|break   |snap   |rmdangle |chdangle |rmbridge |
-|chbridge|rmdupl |rmdac    |bpol     |prune    |
-|rmarea  |rmline |rmsa     |
+| v.clean  |       |         |         |         |
+|----------|-------|---------|---------|---------|
+| break    |snap   |rmdangle |chdangle |rmbridge |
+| chbridge |rmdupl |rmdac    |bpol     |prune    |
+| rmarea   |rmline |rmsa     |
 
 There is also an optional parameter called _Input feature type_ which allows 
 you to specify what you want to be cleaned. This makes the **v.clean** tool
@@ -488,8 +491,10 @@ overlay input rasters, separate rural and urban areas, process vector data
 |![IDU Workflow Part 2](./img/IDU_diagram_2.svg)|
 
 > :pushpin: If you are having trouble permanently saving your subdivided
-> polygons, try saving them as Esri shapefiles (.shp) instead of geopackages
-> (.gpkg).
+> polygons, try saving them as a shapefile (`.shp`) instead of the default
+> format, i.e., a
+> [GeoPackage](https://en.wikipedia.org/w/index.php?title=GeoPackage&oldid=1071852893)
+> (`.gpkg`).
 
 ### 4.3 Final Output
 
@@ -514,7 +519,8 @@ overlay input rasters, separate rural and urban areas, process vector data
 ## 5. Exercise and Post-training Survey
 
 - Please complete the Exercise 1.
-- Please take this post-training survey (required).
+- Please take this post-training
+  [survey](https://ufl.qualtrics.com/jfe/form/SV_0vNRnI3WsOjXM1g) (required).
 
 ## Reference
 
@@ -524,11 +530,14 @@ overlay input rasters, separate rural and urban areas, process vector data
 2. <a id="land evaluation for development"></a>FAO. (1990). Land evaluation for
    development. Food and Agriculture Organization of the United Nations.
    https://www.fao.org/3/U1980E/u1980e00.htm
-3. <a id="iSDA land cover"></a>Buchhorn, M., Lesiv, M., Tsendbazar, N.-E.,
+3. <a id="land unit"></a>Zonneveld, I. S. (1989). The land unit—A fundamental
+   concept in landscape ecology, and its applications. _Landscape Ecology_,
+   3(2), 67–86. https://doi.org/10.1007/BF00131171
+4. <a id="iSDA land cover"></a>Buchhorn, M., Lesiv, M., Tsendbazar, N.-E.,
    Herold, M., Bertels, L., & Smets, B. (2020). Copernicus Global Land Cover
    Layers—Collection 2. _Remote Sensing_, 12(6).
    https://doi.org/10.3390/rs12061044
-4. <a id="africa soil drainage dataset"></a>Hengl, T., Heuvelink, G. B. M.,
+5. <a id="africa soil drainage dataset"></a>Hengl, T., Heuvelink, G. B. M.,
    Kempen, B., Leenaars, J. G. B., Walsh, M. G., Shepherd, K. D., Sila, A.,
    MacMillan, R. A., De Jesus, J. M., Tamene, L., & Tondoh, J. E. (2015).
    Mapping Soil Properties of Africa at 250 m Resolution: Random Forests
