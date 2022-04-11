@@ -137,9 +137,9 @@ in any cluster.
 The two figures below display the parameter settings and the output of the
 tool.
 
-| Parameter Settings       | Output      |
-| ------------------------ | ----------- |
-| ![DBSCAN parameters](./img/DBSCANpmtrs.jpg)| ![Ghana Gas stations clusters](./img/GhanaGS_clus.png)|
+| Parameter Settings       | Input     |Output      |
+| ------------------------ |-----------|----------- |
+| ![DBSCAN parameters](./img/DBSCANpmtrs.jpg)| ![Ghana Gas stations](./img/GhanaGS.jpg)| ![Ghana Gas stations clusters](./img/GhanaGS_clus.jpg)|
 
 ### 3.2 Proximity
 
@@ -266,9 +266,9 @@ parts, where no part has more than the specified maximum number of nodes.
 
 The figures below show the parameters and output for the **Subdivide** tool.
 
-|Input | Parameter Settings       | Output      |
+|Parameter Settings | Input       | Output      |
 |------| ------------------------ | ----------- |
-|![Subdivide Input](./img/SubDivBaseEx.jpg)| ![Subdivide parameters](./img/SubDivParameters.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
+|![Subdivide Input](./img/SubDivParameters.jpg)| ![Subdivide parameters](./img/SubDivBaseEx.jpg)| ![Subdivide output](./img/SubDivEx.jpg)|
 
 ### 3.6 Eliminate Selected Polygons
 
