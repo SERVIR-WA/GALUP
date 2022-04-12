@@ -81,7 +81,7 @@ land-use plan.
 
 - [Integrated Decision Units for Land Use Suitability Modeling](module.md)
 - [Exercise: Create IDUs for AAC](exercise.md)
-- [Submit post-training survey]
+- [Submit post-training survey](https://ufl.qualtrics.com/jfe/form/SV_0vNRnI3WsOjXM1g)
 
 ## Assignment Submission and Help
 
