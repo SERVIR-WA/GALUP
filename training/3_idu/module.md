@@ -384,6 +384,10 @@ distance raster, and define urban boundary.
 |-----------------------------------------------|
 |![IDU Workflow Part 1](./img/IDU_diagram_1.svg)|
 
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/97be5d97e2dc4150933b76f8624b43001d">
+  <img src="./img/IDU_part1_video_thumbnail.png" alt= "IDU part 1" width="800">
+</a>
+
 ### 4.2 Calculating IDUs
 
 The second part of the IDU workflow focuses on the actual **calculating of the
@@ -445,6 +449,14 @@ overlay input rasters, separate rural and urban areas, process vector data
 > [here](./datasets/IDU_Output).
 > You can locate the file in the downloaded zip file of this GitHub repository
 > and visualize it in QGIS.
+
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/1ccee73008e44189b0f3dfa13c4595ca1d">
+  <img src="./img/IDU_part2_video_thumbnail.png" alt= "IDU part 2" width="800">
+</a>
+
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/5e17bcddb40a4d73a79ed274f284b3491d">
+  <img src="./img/IDU_part3_video_thumbnail.png" alt= "IDU part 3" width="800">
+</a>
 
 <details>
   <summary>THLD Final IDU Map</summary>
