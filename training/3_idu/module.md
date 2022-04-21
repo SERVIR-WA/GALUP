@@ -468,16 +468,26 @@ overlay input rasters, separate rural and urban areas, process vector data
 > You can locate the file in the downloaded zip file of this GitHub repository
 > and visualize it in QGIS.
 
+<details>
+  <summary><b>IDU part 2 video demo (click to watch)</b></summary>
+
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/1ccee73008e44189b0f3dfa13c4595ca1d">
   <img src="./img/IDU_part2_video_thumbnail.png" alt= "IDU part 2" width="800">
 </a>
+
+</details>
+
+<details>
+  <summary><b>IDU part 3 video demo (click to watch)</b></summary>
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/5e17bcddb40a4d73a79ed274f284b3491d">
   <img src="./img/IDU_part3_video_thumbnail.png" alt= "IDU part 3" width="800">
 </a>
 
+</details>
+
 <details>
-  <summary>THLD Final IDU Map</summary>
+  <summary><b>THLD final IDU map</b></summary>
 
 ![Final IDU](./img/FinalIDUmerge.jpg)
 
