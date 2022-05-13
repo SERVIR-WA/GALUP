@@ -488,6 +488,16 @@ overlay input rasters, separate rural and urban areas, process vector data
 </details>
 
 <details>
+  <summary>
+    <b>IDU in-depth explanation: Weight clusters and create urban/rural masks (click to watch)</b>
+  </summary>
+
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/ccb43a6c0220405c97d282e2fa208a541d">
+    <img src="./img/IDU_indepth2_video_thumbnail.png" alt= "IDU in-depth 1" width="800">
+  </a>
+</details>
+
+<details>
   <summary><b>IDU part 3 video demo (click to watch)</b></summary>
 
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/5e17bcddb40a4d73a79ed274f284b3491d">
