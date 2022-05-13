@@ -493,7 +493,7 @@ overlay input rasters, separate rural and urban areas, process vector data
   </summary>
 
   <a href="https://mediasite.video.ufl.edu/Mediasite/Play/ccb43a6c0220405c97d282e2fa208a541d">
-    <img src="./img/IDU_indepth2_video_thumbnail.png" alt= "IDU in-depth 1" width="800">
+    <img src="./img/IDU_indepth2_video_thumbnail.png" alt= "IDU in-depth 2" width="800">
   </a>
 </details>
 
@@ -503,6 +503,29 @@ overlay input rasters, separate rural and urban areas, process vector data
 <a href="https://mediasite.video.ufl.edu/Mediasite/Play/5e17bcddb40a4d73a79ed274f284b3491d">
   <img src="./img/IDU_part3_video_thumbnail.png" alt= "IDU part 3" width="800">
 </a>
+
+</details>
+
+<details>
+  <summary>
+    <b>IDU in-depth explanation: Iterative elimination and v.clean tool (click to watch)</b>
+  </summary>
+
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/ab236f79f55b443eaf68b7e224454e7e1d">
+    <img src="./img/IDU_indepth3_video_thumbnail.png" alt= "IDU in-depth 3" width="800">
+  </a>
+
+<br>
+
+> :bulb: A quick note on the **parameters** used in the demo<br>
+> It is important to understand that the parameters used in this demo is based
+> on the fact that the raster **cell size** is 100 meters.
+> For example, in the _Select by expression_ tool, 10000 (approx.) is used to
+> select polygons that will be eliminated because that is the area of a single
+> cell in the original raster is 10,000 square meters (i.e., 100 x 100).
+> One must adjust the parameter when a different cell size is in question.
+> A parameter of _10,000_ is certainly not at the right magnitude for a raster
+> with cell size of 10 meters.
 
 </details>
 
