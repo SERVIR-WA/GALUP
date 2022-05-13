@@ -406,6 +406,16 @@ distance raster, and define urban boundary.
 
 </details>
 
+<details>
+  <summary>
+    <b>IDU in-depth explanation: Calculating Urban Clusters (click to watch)</b>
+  </summary>
+
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/88c8a6c697bb4ef98fc1fce0d807b6fb1d">
+    <img src="./img/IDU_indepth1_video_thumbnail.png" alt= "IDU in-depth 1" width="800">
+  </a>
+</details>
+
 ### 4.2 Calculating IDUs
 
 The second part of the IDU workflow focuses on the actual **calculating of the
