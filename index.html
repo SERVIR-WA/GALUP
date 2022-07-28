@@ -1,0 +1,605 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-233743632-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-233743632-1');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="/html/search.html" />
+
+  <meta name="generator" content="sphinx-4.4.0, furo 2022.04.07" />
+  <title>Welcome to the GALUP Training</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="html/_static/styles/furo.css" />
+  <link rel="stylesheet" type="text/css" href="html/_static/styles/furo-extensions.css" />
+  <link rel="stylesheet" type="text/css" href="html/_static/customcss.css" />
+  <!--test add to force nojekyll -->
+
+  <style>
+    /* body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  } */
+    @media not print {
+
+      /* body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  background-color: black;
+    } */
+      /* @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+    --color-code-foreground: #d0d0d0;
+      background-color: black;
+      }
+    }  */
+      @media screen and (max-width: 1200px) {
+        nav.navbegone {
+          display: none;
+        }
+
+        body {
+          padding: 0px;
+        }
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body class="bootstrap">
+
+
+  <script>
+    document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+
+<!-- <script>
+  let frame1 = '<iframe class="strong-shadow" width="710" height="380" src="https://datastudio.google.com/embed/reporting/d4abae97-5b45-4148-b754-e8eab14ce437/page/67PxC" frameborder="0" style="border:0" allowfullscreen></iframe>;;
+  let frame2 = '<iframe class="strong-shadow" width="710" height="380" src="https://datastudio.google.com/embed/reporting/bb70e8fa-9b56-4b2d-8377-40e57ab1d703/page/67PxC" frameborder="0" style="border:0" allowfullscreen></iframe>";
+  if ("theme" == "dark") {
+    document.getElementById('frame').innerHTML= frame1;
+  } else {
+    document.getElementById('frame').innerHTML= frame2;
+  }
+</script> -->
+
+  <!-- navbar with custom css -->
+
+  <!-- renamed classes to edit in my css -->
+  <!-- <nav class="navbar navbegone navbar-main navbar-expand-sm">
+  <div id="navbar-left">
+    <a class="logo-title" href="/html/index.html">
+    <img class="navbar-brand-logo" src="/GithubPagesImages/GALUP-logo-final-color-2020.svg"/>
+      &nbsp; GALUP Training
+    </a>
+  </div>
+  <div class="navbar-center">
+    <ul id="navbar-main-elements" class="navbar-nav">
+      <li class="nav-item">
+      <a class="nav-link" href="/html/index.html">
+        Placeholder 1
+      </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/html/index.html">
+        Placeholder 2
+        </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/index.html">
+          Placeholder 3
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/index.html">
+            Placeholder 4
+            </a>
+            </li>
+    </ul>
+  </div>
+  <div id="navbar-right">
+    <div class="navbar-right-item">
+           <a class="icon-link" href="https://github.com/chjch/pylusat">
+        <img class="icon-middle" src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version"></a>
+      <a class="icon-link" href="https://github.com/SERVIR-WA/GALUP">
+        <i class ="icon-img fa fa-fw fa-github"></i></a>
+      <a class="icon-link" href="https://twitter.com/galupghana">
+          <i class="icon-img fa fa-fw fa-twitter"></i></a>
+    </div>
+  </div>
+</div>
+</nav> -->
+
+  <!-- bootstrap nav -->
+  <!-- <div class="container" id="banner"></div> -->
+  <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
+    <div class="container-lg" id="banner">
+      <!-- <div class="row"> -->
+      <div class="col-lg-2">
+        <a class="navbar-brand" href="#">
+          <img class="navbar-brand-logo" src="GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo"
+            width="45">
+          &nbsp;&nbsp;GALUP Training</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
+        <!-- <div id="navbar-center"> -->
+        <ul class="navbar-nav">
+          <li class="nav-item hov">
+            <a class="nav-link active" aria-current="page" href="html/pylusat.html">Install PyLUSATQ</a>
+          </li>
+          <li class="nav-item hov">
+            <a class="nav-link active" aria-current="page" href="#">Documentation</a>
+          </li>
+          <li class="nav-item hov">
+            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+          </li>
+          <li class="nav-item hov">
+            <a class="nav-link active" aria-current="page" href="#">Publication</a>
+          </li>
+        </ul>
+      </div>
+      <!-- </div> -->
+      <div id="navbar-end">
+        <div class="navbar-end-item navbottom">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/chjch/pylusat">
+                <img src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link linkalign" href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank"
+                title="GitHub"><span><i class="fa fa-fw fa-github"></i></span>
+                <label class="sr-only">GitHub</label></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linkalign" href="https://twitter.com/galupghana" rel="noopener" target="_blank"
+                title="Twitter"><span><i class="fa fa-fw fa-twitter"></i></span>
+                <label class="sr-only">Twitter</label></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </nav>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-toc" viewBox="0 0 24 24">
+      <title>Contents</title>
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+        <path
+          d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z" />
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-sun" viewBox="0 0 24 24">
+      <title>Light mode</title>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-moon" viewBox="0 0 24 24">
+      <title>Dark mode</title>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+      </svg>
+    </symbol>
+    <symbol id="svg-sun-half" viewBox="0 0 24 24">
+      <title>Auto light/dark mode</title>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <circle cx="12" cy="12" r="9" />
+        <path d="M13 12h5" />
+        <path d="M13 15h4" />
+        <path d="M13 18h1" />
+        <path d="M13 9h4" />
+        <path d="M13 6h1" />
+      </svg>
+    </symbol>
+  </svg>
+
+  <input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+  <input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+  <label class="overlay sidebar-overlay" for="__navigation">
+    <div class="visually-hidden">Hide navigation sidebar</div>
+  </label>
+  <label class="overlay toc-overlay" for="__toc">
+    <div class="visually-hidden">Hide table of contents sidebar</div>
+  </label>
+
+
+
+  <div class="container-xl">
+    <header class="mobile-header">
+      <div class="header-left">
+        <label class="nav-overlay-icon" for="__navigation">
+          <div class="visually-hidden">Toggle site navigation sidebar</div>
+          <i class="icon"><svg>
+              <use href="#svg-menu"></use>
+            </svg></i>
+        </label>
+      </div>
+      <div class="header-center">
+        <a href="index.html">
+          <div class="brand">GALUP Training</div>
+        </a>
+      </div>
+      <div class="header-right">
+        <div class="theme-toggle-container theme-toggle-header">
+          <button class="theme-toggle">
+            <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <svg class="theme-icon-when-auto">
+              <use href="#svg-sun-half"></use>
+            </svg>
+            <svg class="theme-icon-when-dark">
+              <use href="#svg-moon"></use>
+            </svg>
+            <svg class="theme-icon-when-light">
+              <use href="#svg-sun"></use>
+            </svg>
+          </button>
+        </div>
+        <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+          <div class="visually-hidden">Toggle table of contents sidebar</div>
+          <i class="icon"><svg>
+              <use href="#svg-toc"></use>
+            </svg></i>
+        </label>
+      </div>
+    </header>
+    <div class="row">
+      <!-- left panel -->
+
+      <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+        <div class="toc-sticky containme">
+          <div class="sidebar-container ">
+            <div class="sidebar-sticky">
+              <a class="sidebar-brand" href=""">
+            <!-- <span class=" sidebar-brand-text">Contents</span> -->
+              </a>
+              <form class="sidebar-search-container" method="get" action="search.html" role="search">
+                <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+                <input type="hidden" name="check_keywords" value="yes">
+                <input type="hidden" name="area" value="default">
+              </form>
+              <div id="searchbox"></div>
+              <div class="sidebar-scroll">
+                <div class="sidebar-tree sidefont">
+                  <ul>
+                    <li class="has-children">
+                      <a class="hov reference internal" href="html/Training1ReadMe.html"><b>Land-Use Suitability
+                          Analysis with QGIS Tools</b></a>
+                      <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch"
+                        type="checkbox" checked>
+                      <label for="toctree-checkbox-1">
+                        <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                            <use href="#svg-arrow-right"></use>
+                          </svg></i>
+                      </label>
+                      <ul>
+                        <li><a class="reference internal hov" href="html/Training1Module1.html">1-1: Software and Data
+                            Preparation</a></li>
+                        <li><a class="reference internal hov" href="html/Training1Module2.html">1-2: Introduction to
+                            LUCIS-OPEN Tools for QGIS</a></li>
+                        <li><a class="reference internal hov" href="html/Training1Module3.html">1-3: Create Suitability
+                            Models with QGIS Graphical Modeler</a></li>
+                        <li><a class="reference internal hov" href="html/Training1Module4.html">1-4: Aggregate Results
+                            to Make Land-Use Decisions</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <a class="hov reference internal" href="html/Training2ReadMe.html"><b>Introduction to Satellite
+                          Remote Sensing</b></a>
+                      <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch"
+                        type="checkbox"><label for="toctree-checkbox-2">
+                        <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                            <use href="#svg-arrow-right"></use>
+                          </svg></i>
+                      </label>
+                      <ul>
+                        <li><a class="reference internal hov" href="html/Training2Module1.html">2-1: Introduction to
+                            Remote Sensing (RS)</a></li>
+                        <li><a class="reference internal hov" href="html/Training2Module2.html">2-2: RS Applications
+                            using Google Earth Engine</a></li>
+                        <li><a class="reference internal hov" href="html/Training2Module3.html">2-3: Common RS Indices
+                            and Environmental Variables</a></li>
+                        <li><a class="reference internal hov" href="html/Training2Module4.html">2-4: Land Cover
+                            Classification</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-children"><a class="hov reference internal"
+                        href="html/Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability
+                          Modeling</b></a>
+                      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch"
+                        type="checkbox"><label for="toctree-checkbox-3">
+                        <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                            <use href="#svg-arrow-right"></use>
+                          </svg></i>
+                      </label>
+                      <ul>
+                        <li> <a class="reference internal hov" href="html/Training3Module1.html">3-1: Integrated
+                            Decision Units (IDUs) for Land Use Suitability Modeling</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                                  </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- main content -->
+      <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
+        <div class="content">
+          <div class="article-container">
+            <a href="#" class="back-to-top muted-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+              </svg>
+              <span>Back to top</span>
+            </a>
+            <div class="content-icon-container">
+              <div class="theme-toggle-container theme-toggle-content">
+                <button class="theme-toggle">
+                  <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+                  <svg class="theme-icon-when-auto">
+                    <use href="#svg-sun-half"></use>
+                  </svg>
+                  <svg class="theme-icon-when-dark">
+                    <use href="#svg-moon"></use>
+                  </svg>
+                  <svg class="theme-icon-when-light">
+                    <use href="#svg-sun"></use>
+                  </svg>
+                </button>
+              </div>
+              <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+                <div class="visually-hidden">Toggle table of contents sidebar</div>
+                <i class="icon"><svg>
+                    <use href="#svg-toc"></use>
+                  </svg></i>
+              </label>
+            </div>
+
+            <article role="main">
+              <section id="welcome-to-galup-s-trainings">
+                <h1>Welcome to the GALUP Training
+                  <a class="headerlink" href="#welcome-to-galup-s-trainings" title="Permalink to this headline">#</a>
+                </h1>
+                <p>The Ghana Land Use Project (GALUP) is committed to building local capacity
+                  in applying tools empowered by Remote Sensing (RS) and Geographic Information
+                  System (GIS) technologies to inform and ensure sustainable land use practices.
+                </p>
+                <div class="sphinx-bs container pb-4 docutils">
+                  <div class="row docutils">
+                    <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+                      <div class="card w-100 strong-shadow docutils">
+                        <!-- put some padding here (img top) or on the div^ -->
+                        <img alt="img-top" class="card-img-top icon-l icon-r card-img-pad"
+                          src="GithubPagesImages/QGIS_logo.svg" />
+                        <div class="card-body text-center docutils">
+                          <p class="card-text"><b>Land-Use Suitability Analysis
+                              with QGIS Tools</b><br><br>
+                            Foundational concepts and techniques used in land-use suitability analysis,
+                            with QGIS tools developed by GALUP.</p><br>
+                        </div>
+                        <p class="card-text text-center">
+                          <a class="no-under sphinx-bs btn text-wrap btn-success reference external"
+                            href="html/Training1ReadMe.html">
+                            <span>Learn More</span></a>
+                        </p>
+                        <br>
+                      </div>
+                    </div>
+
+                    <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+                      <div class="card w-100 strong-shadow docutils">
+                        <img alt="img-top" class="card-img-top icon-l icon-r card-img-pad"
+                          src="GithubPagesImages/remotesensing.svg" />
+                        <div class="card-body text-center docutils">
+                          <p class="card-text">
+                            <b>Introduction to Satellite Remote Sensing</b><br><br>
+                            Use Google Earth Engine (GEE) to learn core concepts in remote
+                            sensing applications for land use planning.
+                          </p>
+                        </div>
+                        <p class="card-text text-center">
+                          <a class="no-under sphinx-bs btn text-wrap btn-success reference external"
+                            href="html/Training2ReadMe.html">
+                            <span>Learn More</span></a>
+                        </p>
+                        <br>
+                      </div>
+                    </div>
+
+
+                    <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+                      <div class="card w-100 strong-shadow docutils">
+                        <img alt="img-top" class="card-img-top icon-l icon-r card-img-pad"
+                          src="GithubPagesImages/landunits.svg" />
+                        <div class="card-body text-center docutils">
+                          <p class="card-text">
+                            <b>Integrated Decision Units for
+                              Land Use Suitability Modeling</b><br><br>
+                            Create <em>integrated decision units</em> (IDUs) using QGIS
+                            tools to facilitate developing land-use scenarios.
+                          </p><br>
+                        </div>
+                        <p class="card-text text-center">
+                          <a class="no-under sphinx-bs btn text-wrap btn-success reference external"
+                            href="html/Training3ReadMe.html">
+                            <span>Learn More</span></a>
+                        </p>
+                        <br>
+                      </div>
+                    </div>
+
+
+                    <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+                      <!-- <div class="card w-100 shadow docutils">
+        <img alt="img-top" class="card-img-top icon-l icon-r card-img-pad" 
+        src="/GithubPagesImages/desktop-outline.svg"/>
+        <div class="card-body text-center docutils">
+          <p class="card-text">
+            <b>Workshop 3:</b> Integrated Decision Units for 
+            Land Use Suitability Modeling
+          </p>
+        </div>
+        <p class="card-text text-center">
+        <a class="sphinx-bs btn text-wrap btn-success reference external" 
+        href="/html/Training3ReadMe.html">
+        <span>Learn More</span></a>
+      </p>
+      <br> -->
+
+
+                    </div>
+                  </div>
+                  <div>
+                    <p id="frame"></p>
+
+                    
+                    <!-- <iframe class="strong-shadow" width="710" height="380" src="https://datastudio.google.com/embed/reporting/d4abae97-5b45-4148-b754-e8eab14ce437/page/67PxC" frameborder="0" style="border:0" allowfullscreen></iframe>' -->
+                    <h3 class="navbottom">
+                      GALUP Training Visitors by Country
+                    </h3>
+                    <iframe class="strong-shadow" width="710" height="380"
+                      src="https://datastudio.google.com/embed/reporting/bb70e8fa-9b56-4b2d-8377-40e57ab1d703/page/67PxC"
+                      frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <p>
+                      Total Visitors Since 5/20/2021: <b>32,937</b>.
+                    </p>
+                  </div>
+              </section>
+            </article>
+          </div>
+          <footer>
+            <div class="related-pages">
+
+
+            </div>
+            <div class="bottom-of-page">
+              <div clagss="left-details">
+                <div class="copyright">
+                  Copyright &#169; 2022, The GALUP Team
+                </div>
+                Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link"
+                  href="https://pradyunsg.me">@pradyunsg</a>'s
+
+                <a href="https://github.com/pradyunsg/furo">Furo</a>
+
+              </div>
+              <div class="right-details">
+                <div class="icons">
+
+                </div>
+              </div>
+            </div>
+
+          </footer>
+
+        </div>
+        <!-- added div to close main tag-->
+      </div>
+
+      <!-- right panel -->
+      <!-- Gave it column size -->
+      <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+        <div class="toc-sticky toc-scroll containme2">
+          <div class="toc-title-container">
+            <span class="toc-title">
+              Useful Links
+            </span>
+          </div>
+          <div class="toc-tree-container">
+            <div class="toc-tree">
+              <ul>
+                <li><a class="reference internal hov" href="#">#</a></li>
+                <li><a class="reference internal hov" href="https://www.nasa.gov/mission_pages/servir/index.html">SERVIR
+                    Program</a></li>
+                <li><a class="reference internal hov" href="https://cersgis.org/">CERSGIS</a></li>
+                <li><a class="reference internal hov" href="https://www.luspa.gov.gh/">Land Use Spatial Planning
+                    Authority (LUSPA)</a></li>
+                <li><a class="reference internal hov" href="https://www.ufl.edu/">University of Florida</a></li>
+                <li><a class="reference internal hov" href="https://abe.ufl.edu/galup/">Department of Agricultural &
+                    Biological Engineering</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+
+
+    </div>
+  </div>
+  </div>
+  <script data-url_root="./" id="documentation_options" src="html/_static/documentation_options.js"></script>
+  <script src="html/_static/jquery.js"></script>
+  <script src="html/_static/underscore.js"></script>
+  <script src="html/_static/doctools.js"></script>
+  <script src="html/_static/scripts/furo.js"></script>
+  <script src="html/_static/bootstrap.js"></script>
+  <script src="html/_static/customjs"></script>
+
+
+
+</body>
+
+</html>

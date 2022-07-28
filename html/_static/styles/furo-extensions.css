@@ -1,0 +1,303 @@
+#furo-sidebar-ad-placement {
+    padding: var(--sidebar-item-spacing-vertical) var(--sidebar-item-spacing-horizontal)
+}
+
+#furo-sidebar-ad-placement .ethical-sidebar {
+    background: var(--color-background-secondary);
+    border: none;
+    box-shadow: none
+}
+
+#furo-sidebar-ad-placement .ethical-sidebar:hover {
+    background: var(--color-background-hover)
+}
+
+#furo-sidebar-ad-placement .ethical-sidebar a {
+    color: var(--color-foreground-primary)
+}
+
+#furo-sidebar-ad-placement .ethical-callout a {
+    color: var(--color-foreground-secondary) !important
+}
+
+#furo-readthedocs-versions {
+    background: transparent;
+    display: block;
+    position: static;
+    width: 100%
+}
+
+#furo-readthedocs-versions .rst-versions {
+    background: #1a1c1e
+}
+
+#furo-readthedocs-versions .rst-current-version {
+    background: var(--color-sidebar-item-background);
+    cursor: unset
+}
+
+#furo-readthedocs-versions .rst-current-version:hover {
+    background: var(--color-sidebar-item-background)
+}
+
+#furo-readthedocs-versions .rst-current-version .fa-book {
+    color: var(--color-foreground-primary)
+}
+
+#furo-readthedocs-versions>.rst-other-versions {
+    padding: 0
+}
+
+#furo-readthedocs-versions>.rst-other-versions small {
+    opacity: 1
+}
+
+#furo-readthedocs-versions .injected .rst-versions {
+    position: unset
+}
+
+#furo-readthedocs-versions:focus-within,
+#furo-readthedocs-versions:hover {
+    box-shadow: 0 0 0 1px var(--color-sidebar-background-border)
+}
+
+#furo-readthedocs-versions:focus-within .rst-current-version,
+#furo-readthedocs-versions:hover .rst-current-version {
+    background: #1a1c1e;
+    font-size: inherit;
+    height: auto;
+    line-height: inherit;
+    padding: 12px;
+    text-align: right
+}
+
+#furo-readthedocs-versions:focus-within .rst-current-version .fa-book,
+#furo-readthedocs-versions:hover .rst-current-version .fa-book {
+    color: #fff;
+    float: left
+}
+
+#furo-readthedocs-versions:focus-within .fa-caret-down,
+#furo-readthedocs-versions:hover .fa-caret-down {
+    display: none
+}
+
+#furo-readthedocs-versions:focus-within .injected,
+#furo-readthedocs-versions:focus-within .rst-current-version,
+#furo-readthedocs-versions:focus-within .rst-other-versions,
+#furo-readthedocs-versions:hover .injected,
+#furo-readthedocs-versions:hover .rst-current-version,
+#furo-readthedocs-versions:hover .rst-other-versions {
+    display: block
+}
+
+#furo-readthedocs-versions:focus-within>.rst-current-version,
+#furo-readthedocs-versions:hover>.rst-current-version {
+    display: none
+}
+
+.highlight:hover button.copybtn {
+    color: var(--color-code-foreground)
+}
+
+.highlight button.copybtn {
+    align-items: center;
+    background-color: var(--color-code-background);
+    border: none;
+    color: var(--color-background-item);
+    cursor: pointer;
+    height: 1.25em;
+    opacity: 1;
+    right: .5rem;
+    top: .625rem;
+    transition: color .3s, opacity .3s;
+    width: 1.25em
+}
+
+.highlight button.copybtn:hover {
+    background-color: var(--color-code-background);
+    color: var(--color-brand-content)
+}
+
+.highlight button.copybtn:after {
+    background-color: transparent;
+    color: var(--color-code-foreground);
+    display: none
+}
+
+.highlight button.copybtn.success {
+    color: #22863a;
+    transition: color 0ms
+}
+
+.highlight button.copybtn.success:after {
+    display: block
+}
+
+.highlight button.copybtn svg {
+    padding: 0
+}
+
+body {
+    --sd-color-primary: var(--color-brand-primary);
+    --sd-color-primary-highlight: var(--color-brand-content);
+    --sd-color-primary-text: var(--color-background-primary);
+    --sd-color-shadow: rgba(0, 0, 0, .05);
+    --sd-color-card-border: var(--color-card-border);
+    --sd-color-card-border-hover: var(--color-brand-content);
+    --sd-color-card-background: var(--color-card-background);
+    --sd-color-card-text: var(--color-foreground-primary);
+    --sd-color-card-header: var(--color-card-marginals-background);
+    --sd-color-card-footer: var(--color-card-marginals-background);
+    --sd-color-tabs-label-active: var(--color-brand-content);
+    --sd-color-tabs-label-hover: var(--color-foreground-muted);
+    --sd-color-tabs-label-inactive: var(--color-foreground-muted);
+    --sd-color-tabs-underline-active: var(--color-brand-content);
+    --sd-color-tabs-underline-hover: var(--color-foreground-border);
+    --sd-color-tabs-underline-inactive: var(--color-background-border);
+    --sd-color-tabs-overline: var(--color-background-border);
+    --sd-color-tabs-underline: var(--color-background-border)
+}
+
+.sd-tab-content {
+    box-shadow: 0 -2px var(--sd-color-tabs-overline), 0 1px var(--sd-color-tabs-underline)
+}
+
+.sd-card {
+    box-shadow: 0 .1rem .25rem var(--sd-color-shadow), 0 0 .0625rem rgba(0, 0, 0, .1)
+}
+
+.sd-shadow-sm {
+    box-shadow: 0 .1rem .25rem var(--sd-color-shadow), 0 0 .0625rem rgba(0, 0, 0, .1) !important
+}
+
+.sd-shadow-md {
+    box-shadow: 0 .3rem .75rem var(--sd-color-shadow), 0 0 .0625rem rgba(0, 0, 0, .1) !important
+}
+
+.sd-shadow-lg {
+    box-shadow: 0 .6rem 1.5rem var(--sd-color-shadow), 0 0 .0625rem rgba(0, 0, 0, .1) !important
+}
+
+.sd-card-hover:hover {
+    transform: none
+}
+
+.sd-cards-carousel {
+    gap: .25rem;
+    padding: .25rem
+}
+
+body {
+    --tabs--label-text: var(--color-foreground-muted);
+    --tabs--label-text--hover: var(--color-foreground-muted);
+    --tabs--label-text--active: var(--color-brand-content);
+    --tabs--label-text--active--hover: var(--color-brand-content);
+    --tabs--label-background: transparent;
+    --tabs--label-background--hover: transparent;
+    --tabs--label-background--active: transparent;
+    --tabs--label-background--active--hover: transparent;
+    --tabs--padding-x: 0.25em;
+    --tabs--margin-x: 1em;
+    --tabs--border: var(--color-background-border);
+    --tabs--label-border: transparent;
+    --tabs--label-border--hover: var(--color-foreground-muted);
+    --tabs--label-border--active: var(--color-brand-content);
+    --tabs--label-border--active--hover: var(--color-brand-content)
+}
+
+@media not print {
+    body[data-theme=dark] {
+        /* --color-problematic: #ee5151;
+        --color-foreground-primary: #ffffffcc;
+        --color-foreground-secondary: #9ca0a5;
+        --color-foreground-muted: #81868d;
+        --color-foreground-border: #666;
+        --color-background-primary: #383838;
+        --color-background-secondary: #1a1c1e;
+        --color-background-hover: #1e2124;
+        --color-background-hover--transparent: #1e212400;
+        --color-background-border: #303335;
+        --color-background-item: #444;
+        --color-announcement-background: #000000dd;
+        --color-announcement-text: #eeebee;
+        --color-brand-primary: #2b8cee;
+        --color-brand-content: #368ce2;
+        --color-highlighted-background: #083563;
+        --color-guilabel-background: #08356380;
+        --color-guilabel-border: #13395f80;
+        --color-api-keyword: var(--color-foreground-secondary);
+        --color-highlight-on-target: #330;
+        --color-admonition-background: #18181a;
+        --color-card-border: var(--color-background-secondary); */
+        --color-card-background: #383838;
+        /* --color-card-marginals-background: var(--color-background-hover) */
+    }
+
+    html body[data-theme=dark] .only-light {
+        display: none !important
+    }
+
+    body[data-theme=dark] .only-dark {
+        display: block !important
+    }
+
+    @media(prefers-color-scheme:dark) {
+        body:not([data-theme=light]) {
+            --color-problematic: #ee5151;
+            --color-foreground-primary: #ffffffcc;
+            --color-foreground-secondary: #9ca0a5;
+            --color-foreground-muted: #81868d;
+            --color-foreground-border: #666;
+            --color-background-primary: #131416;
+            --color-background-secondary: #1a1c1e;
+            --color-background-hover: #1e2124;
+            --color-background-hover--transparent: #1e212400;
+            --color-background-border: #303335;
+            --color-background-item: #444;
+            --color-announcement-background: #000000dd;
+            --color-announcement-text: #eeebee;
+            --color-brand-primary: #2b8cee;
+            --color-brand-content: #368ce2;
+            --color-highlighted-background: #083563;
+            --color-guilabel-background: #08356380;
+            --color-guilabel-border: #13395f80;
+            --color-api-keyword: var(--color-foreground-secondary);
+            --color-highlight-on-target: #330;
+            --color-admonition-background: #18181a;
+            --color-card-border: var(--color-background-secondary);
+            --color-card-background: #18181a;
+            --color-card-marginals-background: var(--color-background-hover);
+            
+        }
+
+        html body:not([data-theme=light]) .only-light {
+            display: none !important
+        }
+
+        body:not([data-theme=light]) .only-dark {
+            display: block !important
+        }
+    }
+}
+
+[role=main] .container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.shadow.docutils {
+    border: none;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .05), 0 0 .0625rem rgba(0, 0, 0, .1) !important
+}
+
+.sphinx-bs .card {
+    background-color: var( --color-card-background);
+    /* color: var(--color-foreground) */
+}
+
+
+
+
+/*# sourceMappingURL=furo-extensions.css.map*/

@@ -1,0 +1,433 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.04.07"/>
+        <title>Module 2 - Remote Sensing Applications using Google Earth Engine - GALUP Training</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/customcss.css"/>
+
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+    <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
+      <div class="container-lg" id="banner">
+        <!-- <div class="row"> -->
+          <div class="col-lg-2">
+            <a class="navbar-brand" href="../index.html">
+            <img class="navbar-brand-logo" src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo" width="45">
+            &nbsp;&nbsp;GALUP Training</a>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
+          <!-- <div id="navbar-center"> -->
+            <ul class="navbar-nav">
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="pylusat.html">Install PyLUSATQ</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Documentation</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Publication</a>
+              </li>
+            </ul>
+          </div>
+      <!-- </div> -->
+      <div id="navbar-end">
+        <div class="navbar-end-item navbottom">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/chjch/pylusat">
+                <img src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link linkalign" href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank" title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+              <label class="sr-only">GitHub</label></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linkalign" href="https://twitter.com/galupghana" rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw fa-twitter"></i></span>
+              <label class="sr-only">Twitter</label></a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="container-xl">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">GALUP  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <div class="row">
+    <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+      <div class="toc-sticky containme">
+      <div class="sidebar-container ">
+        <div class="sidebar-sticky">
+          <a class="sidebar-brand" href="index.html">
+            <!-- <span class="sidebar-brand-text">Contents</span> -->
+          </a>
+          <form class="sidebar-search-container" method="get" action="search.html" role="search">
+            <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+      <div id="searchbox"></div>
+      <div class="sidebar-scroll">
+        <div class="sidebar-tree sidefont">
+          <ul>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training1ReadMe.html"><b>Land-Use Suitability Analysis with QGIS Tools</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox">
+              <label for="toctree-checkbox-1">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              <ul>
+                <li><a class="reference internal hov" href="Training1Module1.html">1-1: Software and Data Preparation</a></li>
+                <li><a class="reference internal hov" href="Training1Module2.html">1-2: Introduction to LUCIS-OPEN Tools for QGIS</a></li>
+                <li><a class="reference internal hov" href="Training1Module3.html">1-3: Create Suitability Models with QGIS Graphical Modeler</a></li>
+                <li><a class="reference internal hov" href="Training1Module4.html">1-4: Aggregate Results to Make Land-Use Decisions</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox" checked><label for="toctree-checkbox-2">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li><a class="reference internal hov" href="Training2Module1.html">2-1: Introduction to Remote Sensing (RS)</a></li>
+                  <li><a class="reference internal hov" href="Training2Module2.html">2-2: RS Applications using Google Earth Engine</a></li>
+                  <li><a class="reference internal hov" href="Training2Module3.html">2-3: Common RS Indices and Environmental Variables</a></li>
+                  <li><a class="reference internal hov" href="Training2Module4.html">2-4: Land Cover Classification</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><a class="hov reference internal" href="Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability Modeling</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"><label for="toctree-checkbox-3">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li> <a class="reference internal hov" href="Training3Module1.html">3-1: Integrated Decision Units (IDUs) for Land Use Suitability Modeling</a>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+   
+      </div>
+       
+      </div>
+    </aside>
+
+  <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-2-remote-sensing-applications-using-google-earth-engine">
+<h1>Module 2 - Remote Sensing Applications using Google Earth Engine<a class="headerlink" href="#module-2-remote-sensing-applications-using-google-earth-engine" title="Permalink to this headline">#</a></h1>
+<p><strong>What will you learn from this module?</strong></p>
+<ul class="simple">
+<li><p>Set up Google Earth Engine (GEE)</p></li>
+<li><p>Familiarize with GEE Interface</p></li>
+<li><p>Download and visualize RS data using Code Editor in GEE</p></li>
+</ul>
+<section id="setting-up-gee">
+<h2>1. Setting up GEE<a class="headerlink" href="#setting-up-gee" title="Permalink to this headline">#</a></h2>
+<p>Please request an account with Google Earth Engine (GEE) as follows:</p>
+<ul class="simple">
+<li><p>Go to the GEE webpage <a class="reference external" href="https://earthengine.google.com/">here</a></p></li>
+<li><p>Select “Sign Up” at the top right of the page and input institution and intention for use (e.g. using remote sensing datasets for land use suitability modeling).</p></li>
+</ul>
+<p>&#128204; Approval may not happen immediately, so please be sure to sign up in advance of the workshop to provide a few days for completion.</p>
+</section>
+<section id="exploring-gee-interface">
+<h2>2. Exploring GEE Interface<a class="headerlink" href="#exploring-gee-interface" title="Permalink to this headline">#</a></h2>
+<p>The video and Figure below show general interface functions for GEE. Further description of the components of the Figure can be found <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/wiki/GEE-Interface">here</a>.</p>
+<p align="center">
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/55447fcbfc2f487ebaae8d1258e829ca1d" target="_blank">
+<img alt="GEE Tutorial" src="https://user-images.githubusercontent.com/84922404/135470199-719878b5-7cb6-4a7a-aacd-e40881cda2e3.JPG" width="800"/>
+</a>
+</p><a class="reference external image-reference" href="https://user-images.githubusercontent.com/84922404/132246323-4b2d7dee-6cdc-4828-aa9a-b3ab4193ffa5.png"><img alt="GEEinterface" src="https://user-images.githubusercontent.com/84922404/132246323-4b2d7dee-6cdc-4828-aa9a-b3ab4193ffa5.png"/></a>
+<p> &#128204;In this workshop, we will be programming in the GEE <a class="reference external" href="https://code.earthengine.google.com/">code editor</a> that uses the JavaScript language. There are extra <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/tutorial_api_01">resources</a> available from Google to introduce the JavaScript Application Programming Interface (API).</p>
+</section>
+<section id="using-gee-to-explore-rs-concepts-from-module-1">
+<h2>3. Using GEE to Explore RS Concepts from Module-1<a class="headerlink" href="#using-gee-to-explore-rs-concepts-from-module-1" title="Permalink to this headline">#</a></h2>
+<section id="downloading-and-visualizing-landsat-data">
+<h3>3.1 Downloading and Visualizing Landsat Data<a class="headerlink" href="#downloading-and-visualizing-landsat-data" title="Permalink to this headline">#</a></h3>
+<p>In the following example, we will use GEE to download and visualize Landsat satellite data in Ghana. Please use the video tutorial in Section 3.2 to follow along.</p>
+<ul>
+<li>Copy the script <a href="https://github.com/SERVIR-WA/GALUP/wiki/Scripts">"01_search_and_display"</a> and paste into the GEE <a href="https://code.earthengine.google.com/">code editor</a>. This is the same script that will be used in Exercise with slight alterations necessary to complete the Exercise.</li>
+<li>The script includes:
+    <ol type="a">
+<li>Defining variables for dates of interest: <b>ST_DATE</b> and <b>EN_DATE</b></li>
+<li>Defining the region of interest using 4 coordinates: <b>Longitude_min</b>, <b>Latitude_min</b>, <b>Longitude_max</b>, <b>Latitude_max</b></li>
+<li>Defining variables for RS data products: Here, data products from <b>Landsat 5, 7, and 8</b> are used.</li>
+<li>Selecting the data product: <b>Landsat 5</b>.</li>
+<li>Filtering the data product by the region and dates of interest, and by the amount of cloud cover.</li>
+<li>Repeating <i>d</i> and <i>e</i> with <b>Landsat 7 &amp; 8</b>.</li>
+<li>Setting the visualization parameters for each product: <b>bands</b>, <b>min</b>, <b>max</b>, <b>gamma</b>.</li>
+<blockquote>
+    For information on Landsat bands, please refer to <a href="/html/Training2Module1.html">Module 1</a>. <br/>
+    The parameters <b>min</b>, <b>max</b>, and <b>gamma</b> describe the RGB visual representation. For more details on these, see <a href="https://developers.google.com/earth-engine/guides/image_visualization">here</a>.
+    </blockquote>
+<li>Mapping the images: Centering, and adding RS data in three layers.</li>
+<li>Exporting images to Google Drive.</li>
+</ol>
+</li>
+</ul></section>
+<section id="video-tutorial-for-the-section-3-1">
+<h3>3.2 Video Tutorial for the Section 3.1<a class="headerlink" href="#video-tutorial-for-the-section-3-1" title="Permalink to this headline">#</a></h3>
+<p>Use the video tutorial to follow along with the example. This may also be useful in completing the exercise.</p>
+<p align="center">
+<a href="https://mediasite.video.ufl.edu/Mediasite/Play/68693a462a914666807e47f992dedde11d" rel="noopener" target="_blank">
+<img alt="GEE Tutorial" src="https://user-images.githubusercontent.com/84922404/140551115-a0e9d6fa-ae4b-4357-99be-0a27b1901394.png" width="800"/>
+</a>
+</p></section>
+</section>
+<section id="exercise-and-post-module-survey-required">
+<h2>Exercise and Post-Module Survey (required)<a class="headerlink" href="#exercise-and-post-module-survey-required" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Please complete and submit <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/Exercises/M2_exercise1.md">Exercise</a> for Module 2.</p></li>
+<li><p>Submit the Post-Module <a class="reference external" href="https://ufl.qualtrics.com/jfe/form/SV_6fIRnsK59HEwZ9k">survey</a>.</p></li>
+</ol>
+</section>
+</section>
+
+<div class="row1">
+  <div class="column1">
+    <strong>Previous Section:</strong><br>
+    <a href="/html/Training2Module1.html">Module 1</a>
+  </div>
+  <div class="column1">
+    <strong>Next Section:</strong><br>
+    <a href="/html/Training2Module3.html">Module 3</a>
+  </div>
+</div>
+
+
+<!-- <section id="id2">
+<h1><a class="headerlink" href="#id2" title="Permalink to this headline"></a></h1>
+<p><strong>Previous Section:</strong> <strong>Next Section:</strong></p>
+<p><span class="raw-html-m2r"><a href="module1.md" title="Module 1">Module 1</a></span> &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; <span class="raw-html-m2r"><a href="module3.md" title="Module 3">Module 3</a></span></p>
+</section> -->
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, The GALUP Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    </div>
+    <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+      <div class="toc-sticky toc-scroll containme2">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal hov" href="#">Module 2 - Remote Sensing Applications using Google Earth Engine</a><ul>
+<li><a class="reference internal hov" href="#setting-up-gee">1. Setting up GEE</a></li>
+<li><a class="reference internal hov" href="#exploring-gee-interface">2. Exploring GEE Interface</a></li>
+<li><a class="reference internal hov" href="#using-gee-to-explore-rs-concepts-from-module-1">3. Using GEE to Explore RS Concepts from Module-1</a><ul>
+<li><a class="reference internal hov" href="#downloading-and-visualizing-landsat-data">3.1 Downloading and Visualizing Landsat Data</a></li>
+<li><a class="reference internal hov" href="#video-tutorial-for-the-section-3-1">3.2 Video Tutorial for the Section 3.1</a></li>
+</ul>
+</li>
+<li><a class="reference internal hov" href="#exercise-and-post-module-survey-required">Exercise and Post-Module Survey (required)</a></li>
+</ul>
+</li>
+<li><a class="reference internal hov" href="#id2"></a></li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

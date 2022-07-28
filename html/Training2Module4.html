@@ -1,0 +1,508 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.04.07"/>
+        <title>Module 4 - Land Cover Classification - GALUP Training</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/customcss.css"/>
+
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+    <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
+      <div class="container-lg" id="banner">
+        <!-- <div class="row"> -->
+          <div class="col-lg-2">
+            <a class="navbar-brand" href="../index.html">
+            <img class="navbar-brand-logo" src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo" width="45">
+            &nbsp;&nbsp;GALUP Training</a>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
+          <!-- <div id="navbar-center"> -->
+            <ul class="navbar-nav">
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="pylusat.html">Install PyLUSATQ</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Documentation</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Publication</a>
+              </li>
+            </ul>
+          </div>
+      <!-- </div> -->
+      <div id="navbar-end">
+        <div class="navbar-end-item navbottom">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/chjch/pylusat">
+                <img src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link linkalign" href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank" title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+              <label class="sr-only">GitHub</label></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linkalign" href="https://twitter.com/galupghana" rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw fa-twitter"></i></span>
+              <label class="sr-only">Twitter</label></a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="container-xl">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">GALUP Training</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <div class="row">
+    <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+      <div class="toc-sticky containme">
+      <div class="sidebar-container ">
+        <div class="sidebar-sticky">
+          <a class="sidebar-brand" href="index.html">
+            <!-- <span class="sidebar-brand-text">Contents</span> -->
+          </a>
+          <form class="sidebar-search-container" method="get" action="search.html" role="search">
+            <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+      <div id="searchbox"></div>
+      <div class="sidebar-scroll">
+        <div class="sidebar-tree sidefont">
+          <ul>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training1ReadMe.html"><b>Land-Use Suitability Analysis with QGIS Tools</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox">
+              <label for="toctree-checkbox-1">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              <ul>
+                <li><a class="reference internal hov" href="Training1Module1.html">1-1: Software and Data Preparation</a></li>
+                <li><a class="reference internal hov" href="Training1Module2.html">1-2: Introduction to LUCIS-OPEN Tools for QGIS</a></li>
+                <li><a class="reference internal hov" href="Training1Module3.html">1-3: Create Suitability Models with QGIS Graphical Modeler</a></li>
+                <li><a class="reference internal hov" href="Training1Module4.html">1-4: Aggregate Results to Make Land-Use Decisions</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox" checked><label for="toctree-checkbox-2">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li><a class="reference internal hov" href="Training2Module1.html">2-1: Introduction to Remote Sensing (RS)</a></li>
+                  <li><a class="reference internal hov" href="Training2Module2.html">2-2: RS Applications using Google Earth Engine</a></li>
+                  <li><a class="reference internal hov" href="Training2Module3.html">2-3: Common RS Indices and Environmental Variables</a></li>
+                  <li><a class="reference internal hov" href="Training2Module4.html">2-4: Land Cover Classification</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><a class="hov reference internal" href="Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability Modeling</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"><label for="toctree-checkbox-3">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li> <a class="reference internal hov" href="Training3Module1.html">3-1: Integrated Decision Units (IDUs) for Land Use Suitability Modeling</a>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+   
+      </div>
+       
+      </div>
+    </aside>
+
+  <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content"">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-4-land-cover-classification">
+<h1>Module 4 - Land Cover Classification<a class="headerlink" href="#module-4-land-cover-classification" title="Permalink to this headline">#</a></h1>
+<p><strong>What will you learn from this module?</strong></p>
+<ul class="simple">
+<li><p>Common methods using RS indices for supervised land cover classification (LCC)</p></li>
+<li><p>LCC systems</p></li>
+<li><p>Classify images in GEE</p></li>
+</ul>
+</section>
+<section id="supervised-image-classification-methods">
+<h1>1. Supervised Image Classification Methods<a class="headerlink" href="#supervised-image-classification-methods" title="Permalink to this headline">#</a></h1>
+<p>These methods identify spectrally similar areas on images by first identifying known classes from training sites and then directing the image processing using those training sites as reference for unknown sites. Following methods are commonly used for LCC:</p>
+<ul class="simple">
+<li><p><strong>Minimum-Distance to the Mean Classifier</strong>: This technique calculates the mean point in digital parameter space, and uses multiple metrics such as Euclidean distance, normalized Euclidean distance, and Mahalanobis distance from that mean to classify unknown image data to known classes, as shown in the Figure below. Additional information is available <a class="reference external" href="https://docs.lib.purdue.edu/larstech/25/">here</a>. (<a class="reference external" href="https://github.com/SERVIR-WA/GALUP/files/7573860/full_phd.pdf">Source</a>)</p></li>
+</ul>
+<p align="center">
+<img alt="CCDC1" src="https://user-images.githubusercontent.com/84922404/142700597-7ae7e638-a789-424e-af22-e432a9bea17f.png" width="600"/>
+</p><ul class="simple">
+<li><p><strong>Classification and Regression Trees (CART)</strong>: This model uses binary decision trees to explain predicted values using a sample of training data with already known classifications. Large amount of data is recommended for good results because the branching process for the decision trees, as shown in the Figure below. Additional information is available <a class="reference external" href="https://wiki.q-researchsoftware.com/wiki/Machine_Learning_-_Classification_And_Regression_Trees_(CART">here</a>). (<a class="reference external" href="https://medium.com/geekculture/decision-trees-with-cart-algorithm-7e179acee8ff">Source</a>)</p></li>
+</ul>
+<p align="center">
+<img alt="CART" src="https://user-images.githubusercontent.com/84922404/142700539-f4e6b3bf-7945-4380-baf8-acfb064ee63f.png" width="600"/>
+</p><ul class="simple">
+<li><p><strong>Random Forest Classifier</strong>: This is an ensemble learning method that creates a multitude of decision trees and takes the average of the trees for classification, as shown in the Figure below. The RF algorithm can also classify variable importance. Additional information is available <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0167865505002242">here</a>. (<a class="reference external" href="https://corporatefinanceinstitute.com/resources/knowledge/other/random-forest/">Source</a>)</p></li>
+</ul>
+<p align="center">
+<img alt="RF" src="https://user-images.githubusercontent.com/84922404/142700553-177ae5ae-169a-4a4d-8238-ff301f27c48e.png" width="600"/>
+</p><ul class="simple">
+<li><p><strong>Support Vector Machine (SVM) Classifier</strong>: These are a collection of non-parametric learning algorithms which find the optimal separating hyperplane between classes by focusing on the training data, as shown in the Figure below. Additional information is available <a class="reference external" href="https://www.tandfonline.com/doi/abs/10.1080/01431160110040323">here</a>. (<a class="reference external" href="https://github.com/SERVIR-WA/GALUP/files/7573858/sensors-21-04283-v3.pdf">Source</a>)</p></li>
+</ul>
+<p align="center">
+<img alt="SVM" src="https://user-images.githubusercontent.com/84922404/142700549-bc4d5f9c-432d-4bf5-b04d-808604b0ff58.png" width="600"/>
+</p><ul class="simple">
+<li><p><strong>Continuous Change Detection and Classification (CCDC)</strong>: This is a general-purpose algorithm that evaluates changes in land cover, land use, or condition over time. The algorithm includes a two-step masking algorithm to eliminate any noisy data caused by snow, clouds, or cloud shadows, as shown in the Figure below. Classification occurs after change is detected in a pixel value. Additional information is available <a class="reference external" href="https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/">here</a>. (<a class="reference external" href="https://sites.bu.edu/measures/project-methods/change-detection-and-classification-algorithm/">Source</a>)</p></li>
+</ul>
+<p align="center">
+<img alt="SVM" src="https://user-images.githubusercontent.com/84922404/142701192-9ccaf49b-f5c1-4a01-b112-0728e5c9e21b.png" width="800"/>
+</p></section>
+<section id="land-cover-classification-systems">
+<h1>2. Land Cover Classification Systems<a class="headerlink" href="#land-cover-classification-systems" title="Permalink to this headline">#</a></h1>
+<ul>
+<li><p>The <strong>International Geosphere–Biosphere Programme (IGBP)</strong> is used by the current MODIS Land Cover <a class="reference external" href="https://modis.gsfc.nasa.gov/data/dataprod/mod12.php">Product</a>. The land cover scheme consists of 17 classes that were decided upon to meet IGBP science projects standards. The scheme considers ground biomass, longevity, and leaf type when creating classes. Additional info: <a class="reference external" href="http://www.igbp.net">http://www.igbp.net</a>. The following (expandable) outline shows the classification scheme for the IGBP Ecosystems Surface Classifications:
+<span class="raw-html-m2r"><ul></ul></span>
+<span class="raw-html-m2r"><details>
+  <summary><b>IGBP (Class, Class name, Description)</b></summary>
+  <ol class="arabic simple">
+  <li><p><strong>Evergreen needleleaf forests</strong> - Lands dominated by needleleaf woody vegetation with a percent cover &gt;60% and height exceeding 2m. Almost all trees remain green all year. Canopy is never without green foliage.</p></li>
+  <li><p><strong>Evergreen broadleaf forests</strong> - Lands dominated by broadleaf woody vegetation with a percent cover &gt;60% and height exceeding 2m. Almost all trees and shrubs remain green year-round. Canopy is never without green foliage.</p></li>
+  <li><p><strong>Deciduous needleleaf forests</strong> - Lands dominated by woody vegetation with a percent cover &gt;60% and height exceeding 2m. Consists of seasonal needleleaf tree communities with an annual cycle of leaf-on and leaf-off periods.</p></li>
+  <li><p><strong>Deciduous broadleaf forests</strong> - Lands dominated by woody vegetation with a percent cover &gt;60% and height exceeding 2m. Consists of broadleaf tree communities with an annual cycle of leaf-on and leaf-off periods</p></li>
+  <li><p><strong>Mixed forests</strong> - Lands dominated by trees with a percent cover &gt;60% and height exceeding 2m. Consists of tree communities with interspersed mixtures or mosaics of the other four forest types. None of the forest types exceeds 60% of landscape.</p></li>
+  <li><p><strong>Closed shrublands</strong> Lands with woody vegetation less than 2m tall and with shrub canopy cover &gt;60%. The shrub foliage can be either evergreen or deciduous.</p></li>
+  <li><p><strong>Open shrublands</strong> - Lands with woody vegetation less than 2m tall and with shrub canopy cover between 10% and 60%. The shrub foliage can be either evergreen or deciduous.</p></li>
+  <li><p><strong>Woody savannas</strong> - Lands with herbaceous and other understory systems, and with forest canopy cover between 30% and 60%. The forest cover height exceeds 2m.</p></li>
+  <li><p><strong>Savannas</strong> - Lands with herbaceous and other understory systems, and with forest canopy cover between 10% and 30%. The forest cover height exceeds 2m.</p></li>
+  <li><p><strong>Grasslands</strong> - Lands with herbaceous types of cover. Tree and shrub cover is less than 10%.</p></li>
+  <li><p><strong>Permanent wetlands</strong> - Lands with a permanent mixture of water and herbaceous or woody vegetation. The vegetation can be present either in salt, brackish, or fresh water.</p></li>
+  <li><p><strong>Croplands</strong> - Lands covered with temporary crops followed by harvest and a bare soil period (e.g., single and multiple cropping systems). Note that perennial woody crops will be classified as the appropriate forest or shrub land cover type.</p></li>
+  <li><p><strong>Urban and built-up lands</strong> - Land covered by buildings and other man-made structures.</p></li>
+  <li><p><strong>Cropland/natural vegetation mosaics</strong> - Lands with a mosaic of croplands, forests, shrubland, and grasslands in which no one component comprises more than 60% of the landscape.</p></li>
+  <li><p><strong>Snow and ice</strong> - Lands under snow/ice cover throughout the year.</p></li>
+  <li><p><strong>Barren</strong> - Lands with exposed soil, sand, rocks, or snow and never have more
+  than 10% vegetated cover during any time of the year.</p></li>
+  <li><p><strong>Water bodies</strong> -  Oceans, seas, lakes, reservoirs, and rivers. Can be either fresh or saltwater bodies.
+  </ol>
+</details></span></p>
+</ul>
+
+</ol>
+<ul>
+<li><p>The <strong>Modified Anderson Level II Land Use/Land Cover Classification System</strong> is used by the US Geological Survey (USGS) to generate National Land Cover Database (NLCD). The Database provides a comprehensive land cover product for the US, that is available for all 50 states and Puerto Rico and updated every 5 years. It is primarily based on Landsat data. Additional information can be obtained at <a class="reference external" href="https://www.mrlc.gov/data/legends/national-land-cover-database-2019-nlcd2019-legend">MRLC</a>.  It consists of 16 classes, as shown in the following outline:
+  <span class="raw-html-m2r"><ul></ul></span>
+  <span class="raw-html-m2r"><details>
+    <summary><b>Modified Anderson LULC (Class, Value, Description)</b></summary>
+    <p><i>Water</i></p>
+    <ul class="simple">
+    <li><p>11 <strong>Open Water</strong> - areas of open water, generally with less than 25% cover of vegetation or soil.</p></li>
+    <li><p>12 <strong>Perennial Ice/Snow</strong> - areas characterized by a perennial cover of ice and/or snow, generally greater than 25% of total cover.</p></li>
+    <p><em>Developed</em></p>
+    <li><p>21  <strong>Developed, Open Space</strong> - areas with a mixture of some constructed materials, but mostly vegetation in the form of lawn grasses. Impervious surfaces account for less than 20% of total cover. These areas most commonly include large-lot single-family housing units, parks, golf courses, and vegetation planted in developed settings for recreation, erosion control, or aesthetic purposes.</p></li>
+    <li><p>22  <strong>Developed, Low Intensity</strong> - areas with a mixture of constructed materials and vegetation. Impervious surfaces account for 20% to 49% percent of total cover. These areas most commonly include single-family housing units.</p></li>
+    <li><p>23  <strong>Developed, Medium Intensity</strong> - areas with a mixture of constructed materials and vegetation. Impervious surfaces account for 50% to 79% of the total cover. These areas most commonly include single-family housing units.</p></li>
+    <li><p>24  <strong>Developed High Intensity</strong> - highly developed areas where people reside or work in high numbers. Examples include apartment complexes, row houses and commercial/industrial. Impervious surfaces account for 80% to 100% of the total cover.</p>
+    <p><em>Barren</em></p>
+    <li><p>31 <strong>Barren Land (Rock/Sand/Clay)</strong> - areas of bedrock, desert pavement, scarps, talus, slides, volcanic material, glacial debris, sand dunes, strip mines, gravel pits and      other accumulations of earthen material. Generally, vegetation accounts for less than 15% of total cover.</p>
+    <p><em>Forest</em></p>
+    <li><p>41  <strong>Deciduous Forest</strong> - areas dominated by trees generally greater than 5 meters tall, and greater than 20% of total vegetation cover. More than 75% of the tree species shed - foliage simultaneously in response to seasonal change.</p></li>
+    <li><p>42  <strong>Evergreen Forest</strong> - areas dominated by trees generally greater than 5 meters tall, and greater than 20% of total vegetation cover. More than 75% of the tree species maintain their leaves all year. Canopy is never without green foliage.</p></li>
+    <li><p>43  <strong>Mixed Forest</strong> - areas dominated by trees generally greater than 5 meters tall, and greater than 20% of total vegetation cover. Neither deciduous nor evergreen species are greater than 75% of total tree cover.</p></li>
+    <p><em>Shrubland</em></p>
+    <li><p>51 <strong>Dwarf Scrub</strong> - Alaska only areas dominated by shrubs less than 20 centimeters tall with shrub canopy typically greater than 20% of total vegetation. This type is often co-associated with grasses, sedges, herbs, and non-vascular vegetation.</p></li>
+    <p>52  <strong>Shrub/Scrub</strong> - areas dominated by shrubs; less than 5 meters tall with shrub canopy typically greater than 20% of total vegetation. This class includes true shrubs, young trees in an early successional stage or trees stunted from environmental conditions.</p>
+    <p><em>Herbaceous</em></p>
+    <li><p>71  <strong>Grassland/Herbaceous</strong> - areas dominated by gramanoid or herbaceous vegetation, generally greater than 80% of total vegetation. These areas are not subject to intensive management such as tilling, but can be utilized for grazing.</p></li>
+    <li><p>72  <strong>Sedge/Herbaceous</strong> - Alaska only areas dominated by sedges and forbs, generally greater than 80% of total vegetation. This type can occur with significant other grasses or other grass like plants, and includes sedge tundra, and sedge tussock tundra.</p></li>
+    <li><p>73  <strong>Lichens</strong> - Alaska only areas dominated by fruticose or foliose lichens generally greater than 80% of total vegetation.</p></li>
+    <li><p>74  <strong>Moss</strong> - Alaska only areas dominated by mosses, generally greater than 80% of total vegetation.</p>
+    <p><em>Planted/Cultivated</em></p>
+    <li><p>81  <strong>Pasture/Hay</strong> - areas of grasses, legumes, or grass-legume mixtures planted for livestock grazing or the production of seed or hay crops, typically on a perennial cycle. Pasture/hay vegetation accounts for greater than 20% of total vegetation.</p></li>
+    <li><p>82  <strong>Cultivated Crops</strong> - areas used for the production of annual crops, such as corn, soybeans, vegetables, tobacco, and cotton, and also perennial woody crops such as orchards and vineyards. Crop vegetation accounts for greater than 20% of total vegetation. This class also includes all land being actively tilled.</p></li>
+    <p><em>Wetlands</em></p>
+    <li><p>90  <strong>Woody Wetlands</strong>- areas where forest or shrubland vegetation accounts for greater than 20% of vegetative cover and the soil or substrate is periodically saturated with or covered with water.</p></li>
+    <li><p>95  <strong>Emergent Herbaceous Wetlands</strong> - areas where perennial herbaceous vegetation accounts for greater than 80% of vegetative cover and the soil or substrate is periodically saturated with or covered with water.</p></li>
+  </ul>
+  </details></span></p>
+  
+<li><p><strong>LCC System for Ghana</strong>: Currently, the best available land cover maps for Ghana are those developed by the USGS at 30 m resolution for three years - 1975, 200, and 2013. The Figure below shows the classification of Ghana for the three years (<a class="reference external" href="https://eros.usgs.gov/westafrica/land-cover/land-use-land-cover-and-trends-ghana">Source</a>).
+&lt;/p&gt;
+<span class="raw-html-m2r"><p align="center">
+<img alt="animated" src="https://user-images.githubusercontent.com/87503837/142496834-09496d67-12e2-44a8-93bc-69001f5dbea9.gif"/>
+</p></span></p>
+<ul></ul></li>
+</ul>
+<p>Efforts are ongoing to develop a harmonized LCC specific for West Africa land covers. The current scheme for the Regional Land Cover Mapping (RLCM) in West Africa is given
+below, and details are available <span class="raw-html-m2r"><a href="https://github.com/SERVIR-WA/GALUP/files/7573319/RLCM.pdf" target="_blank">here</a></span>.</p>
+<span class="raw-html-m2r"><ul></ul></span>
+  <span class="raw-html-m2r"><details>
+   <summary><b>RLCM (Class name, Description)</b></summary>
+  <ul>
+    <li><p><strong>Forêt / Forest</strong> - dense, closed canopy formation of evergreen or semi-evergreen broadleaf vegetation with a multiple strata structure that includes scattered emergent trees. Upper stratum of trees over 30 m tall. Understory composed of evergreen or semievergreen shrubs; herbaceous cover is discontinuous.</p></li>
+    <li><p><strong>Forêt Galerie &amp; Formation Ripicole / Gallery Forest &amp; Riparian Forest</strong> - forest formations forming a band or corridor of dense vegetation along permanent or temporary watercourses; generally closed canopy and similar in structure to forest; their width, extent, and luxuriance depend on the width, and depth of the valleys they follow, as well as the depth and dynamics of the water table. Riparian forest is similar in structure but is found bordering the edges of streams and rivers.</p></li>
+    <li><p><strong>Forêt Dégradée / Degraded Forest</strong> - dense, evergreen broadleaf forest with closed or partially closed canopy whose integrity has been degraded by logging or other forms of exploitation. Degraded forest can also be immature forest, or forest in various stages of regrowth after disturbance. Trees 10 to 30 m tall.</p></li>
+    <li><p><strong>Forêt Claire / Woodland</strong> - open formations of small to medium height trees; tree height over 10 m and tree cover generally between 50 and 75 percent; canopies are often contiguous, with open areas between trees; grass understory can be scattered to dense, often associated with other herbaceous plants.</p></li>
+    <li><p><strong>Forêt Marécageuse / Swamp Forest</strong> - open to dense forests associated with temporarily or permanently waterlogged soils; these forests are generally found in natural depressions, seasonally inundated.</p></li>
+    <li><p><strong>Plantation</strong> - regular stands of trees planted for the purpose of producing food, beverages, vegetable oils, raw materials for industry, wood, or for protection against wind and water erosion.</p></li>
+    <li><p><strong>Mangrove</strong> - coastal forests of stilted shrubs or trees bordering the ocean or coastal estuaries, composed of one or several mangrove species.</p></li>
+    <li><p><strong>Fourré / Thicket</strong> - dense stand of shrubs, often thorny, forming generally impenetrable cover, with minimal or no herbaceous ground cover.</p></li>
+    <li><p><strong>Savane / Savanna</strong> - herbaceous vegetation with mainly grasses that generally exceed 80 cm in height; dominated by annual and perennial grasses typically associated with the Sudan and Guinea zones; ground cover often consumed by annual fires; woody vegetation is usually present. The savanna class includes several major types or subclasses, based on density of shrubs and trees; the land use/land cover maps do not distinguish between shrub savanna, tree savanna, and wooded savanna; nevertheless, it is useful to define them:</p></li>
+    <li><p><strong>Savane Herbacée / Herbaceous Savanna</strong> - continuous herbaceous ground cover; trees and shrubs normally absent; this class is represented on the land use / land cover maps.</p></li>
+    <li><p><strong>Savane Sahélienne / Sahelian Short Grass Savanna</strong> - scattered trees and shrubs (or only shrubs) with a continuous herbaceous understory usually dominated by annual grasses generally associated with the Sahelian zone; woody cover between 1 and 25 percent.</p></li>
+    <li><p><strong>Bowé</strong> – flat, open surfaces that generally occur as lateritic plateaus; the skeletal, ferruginous soils form a hardened, impenetrable surface, generally absent of woody vegetation, but supporting varying quantities of herbaceous cover during the rainy season.</p></li>
+    <li><p><strong>Steppe</strong> - open, discontinuous herbaceous ground cover, often mixed with shrubs and trees; insufficient cover to carry fire; scattered annual grasses accompanied by widely spaced perennials.</p></li>
+    <li><p><strong>Surfaces Sableuses / Sandy Area</strong> – beach sand or shifting mounds of sand, formed by wind; active dunes.</p></li>
+    <li><p><strong>Terrains Rocheux / Rocky Land</strong> - areas of rocky surfaces or outcrops, consisting of rocky peaks, batholiths, talus slopes, crest lines, cliffs, conglomerates, etc.</p></li>
+    <li><p><strong>Sols Dénudés / Bare Soil</strong> - land with little or no vegetation cover, exposing the soil; examples include eroded slopes, gravesl plains, sebkhas, and badlands.</p></li>
+    <li><p><strong>Habitations / Settlements</strong> - built up areas comprising human communities in a village, town or city.</p></li>
+    <li><p><strong>Zone de Culture / Agriculture</strong> - cultivated areas, with crops dependent on rainfall.</p></li>
+    <li><p><strong>Cultures Irriguées / Irrigated Agriculture</strong> - cultivated areas where crops receive water through an irrigation system to support their growth without relying on rainfall.</p></li>
+    <li><p><strong>Cultures des Bas-Fonds et de Décrue / Agriculture in Shallows and Recession</strong> - cultivated areas in depressions or along river banks where crop development occurs as the waters recede during the dry season.</p></li>
+    <li><p><strong>Cultures et Jachères Sous Palmier à Huile / Cropland and Fallow with Oil Palms</strong> - cultivated areas, with scattered oil palms in the fields; crops are mainly dependent on rainfall.</p></li>
+    <li><p><strong>Carrière / Open Mine</strong> - open pit where rock material is mined</p></li>
+    <li><p><strong>Prairie Marécageuse – Vallée Inondable / Wetland – floodplain</strong> - herbaceous or aquatic vegetation in permanent or semi-permanent wetlands and swamps.</p></li>
+    <li><p><strong>Plans D’eau / Water Bodies</strong> - Any area with permanent or semipermanent surface water.
+</ul>
+</section>
+
+<section id="land-cover-classification-in-gee">
+<h1>3. Land cover classification in GEE<a class="headerlink" href="#land-cover-classification-in-gee" title="Permalink to this headline">#</a></h1>
+<p>&#128204; Explanations for SVM, random forests, and CCDC for Google Earth Engine can be found on the GEE guides: <a class="reference external" href="https://developers.google.com/earth-engine/guides/classification">Supervised Classification</a>, <a class="reference external" href="https://gee-ccdc-tools.readthedocs.io/en/latest/">CCDC</a></p>
+</dd>
+</dl>
+<p>The figure below shows the flow diagram of the classification process that will be used in this workshop.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/84922404/142555956-2c22826e-671e-45bf-a6c7-68718c9cde28.png"/>
+</p></section>
+<section id="exercise-and-post-module-survey-required">
+<h1>Exercise and Post-Module Survey (required)<a class="headerlink" href="#exercise-and-post-module-survey-required" title="Permalink to this headline">#</a></h1>
+<ol class="arabic simple">
+<li><p>Please complete and submit <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/blob/master/training/2_rs/Exercises/M4_Exercise1.md">Exercise 1</a> for Module 4.</p></li>
+<li><p>Submit the Post-Module <a class="reference external" href="https://ufl.qualtrics.com/jfe/form/SV_6VxnjyVgVx04GuG">survey</a>.</p></li>
+<li><p>Submit the Post-Training <a class="reference external" href="https://ufl.qualtrics.com/jfe/form/SV_8cvoKZLDrBllPkG">survey</a></p></li>
+</ol>
+<section id="id11">
+<p><strong>Previous Section:</strong></p>
+<p><span class="raw-html-m2r"><a href="module3.md" title="Module 3">Module 3</a></span></p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, The GALUP Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    </div>
+    <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+      <div class="toc-sticky toc-scroll containme2">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal hov" href="#">Module 4 - Land Cover Classification</a></li>
+<li><a class="reference internal hov" href="#supervised-image-classification-methods">1. Supervised Image Classification Methods</a></li>
+<li><a class="reference internal hov" href="#land-cover-classification-systems">2. Land Cover Classification Systems</a></li>
+<li><a class="reference internal hov" href="#land-cover-classification-in-gee">3. Land cover classification in GEE</a></li>
+<li><a class="reference internal hov" href="#exercise-and-post-module-survey-required">Exercise and Post-Module Survey (required)</a><ul>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
