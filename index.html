@@ -309,7 +309,7 @@
               <a class="sidebar-brand" href=""">
             <!-- <span class=" sidebar-brand-text">Contents</span> -->
               </a>
-              <form class="sidebar-search-container" method="get" action="html/search.html" role="search">
+              <form class="sidebar-search-container" method="get" action=cg"html/search.html" role="search">
                 <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
                 <input type="hidden" name="check_keywords" value="yes">
                 <input type="hidden" name="area" value="default">
@@ -396,7 +396,7 @@
             </a>
             <div class="content-icon-container">
               <div class="theme-toggle-container theme-toggle-content">
-                <button class="theme-toggle">
+                <button class="theme-toggle" onClick="window.location.reload();">
                   <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
                   <svg class="theme-icon-when-auto">
                     <use href="#svg-sun-half"></use>
@@ -512,14 +512,13 @@
                     </div>
                   </div>
                   <div>
-                    <p id="frame"></p>
-
-                    
-                    <!-- <iframe class="strong-shadow" width="710" height="380" src="https://datastudio.google.com/embed/reporting/d4abae97-5b45-4148-b754-e8eab14ce437/page/67PxC" frameborder="0" style="border:0" allowfullscreen></iframe>' -->
                     <h3 class="navbottom">
                       GALUP Training Visitors by Country
                     </h3>
-                    <iframe class="strong-shadow" width="710" height="380" src="https://datastudio.google.com/embed/reporting/bb70e8fa-9b56-4b2d-8377-40e57ab1d703/page/67PxC" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div id="lightFrame">
+
+
+                    </div>
                     <p>
                       Total Visitors Since 5/20/2021: <b>32,937</b>.
                     </p>
@@ -594,7 +593,7 @@
   <script src="html/_static/doctools.js"></script>
   <script src="html/_static/scripts/furo.js"></script>
   <script src="html/_static/bootstrap.js"></script>
-  <script src="html/_static/customjs"></script>
+  <script src="html/_static/customjs.js"></script>
 
 
 
