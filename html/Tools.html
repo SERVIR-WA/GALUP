@@ -1,0 +1,650 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.04.07"/>
+        <title>Tools - GALUP documentation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/customcss.css"/>
+
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+
+<nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
+      <div class="container-lg" id="banner">
+        <!-- <div class="row"> -->
+          <div class="col-lg-2">
+            <a class="navbar-brand" href="../index.html">
+            <img class="navbar-brand-logo" src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo" width="45">
+            &nbsp;&nbsp;GALUP Training</a>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
+          <!-- <div id="navbar-center"> -->
+            <ul class="navbar-nav">
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="pylusat.html">Install PyLUSATQ</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="Tools.html">Documentation</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="#">Publication</a>
+              </li>
+            </ul>
+          </div>
+      <!-- </div> -->
+      <div id="navbar-end">
+        <div class="navbar-end-item navbottom">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/chjch/pylusat">
+                <img src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link linkalign" href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank" title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+              <label class="sr-only">GitHub</label></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linkalign" href="https://twitter.com/galupghana" rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw fa-twitter"></i></span>
+              <label class="sr-only">Twitter</label></a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="container-xl">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">GALUP  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <div class="row">
+    <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+      <div class="toc-sticky containme">
+      <div class="sidebar-container ">
+        <div class="sidebar-sticky">
+          <a class="sidebar-brand" href="index.html">
+            <!-- <span class="sidebar-brand-text">Contents</span> -->
+          </a>
+          <form class="sidebar-search-container" method="get" action="search.html" role="search">
+            <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+      <div id="searchbox"></div>
+      <div class="sidebar-scroll">
+        <div class="sidebar-tree sidefont">
+          <ul>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training1ReadMe.html"><b>Land-Use Suitability Analysis with QGIS Tools</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox" checked>
+              <label for="toctree-checkbox-1">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              <ul>
+                <li><a class="reference internal hov" href="Training1Module1.html">1-1: Software and Data Preparation</a></li>
+                <li><a class="reference internal hov" href="Training1Module2.html">1-2: Introduction to LUCIS-OPEN Tools for QGIS</a></li>
+                <li><a class="reference internal hov" href="Training1Module3.html">1-3: Create Suitability Models with QGIS Graphical Modeler</a></li>
+                <li><a class="reference internal hov" href="Training1Module4.html">1-4: Aggregate Results to Make Land-Use Decisions</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"><label for="toctree-checkbox-2">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li><a class="reference internal hov" href="Training2Module1.html">2-1: Introduction to Remote Sensing (RS)</a></li>
+                  <li><a class="reference internal hov" href="Training2Module2.html">2-2: RS Applications using Google Earth Engine</a></li>
+                  <li><a class="reference internal hov" href="Training2Module3.html">2-3: Common RS Indices and Environmental Variables</a></li>
+                  <li><a class="reference internal hov" href="Training2Module4.html">2-4: Land Cover Classification</a></li>
+                </ul>
+            </li>
+            <li class="has-children"><a class="hov reference internal" href="Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability Modeling</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"><label for="toctree-checkbox-3">
+                <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+                <ul>
+                  <li> <a class="reference internal hov" href="Training3Module1.html">3-1: Integrated Decision Units (IDUs) for Land Use Suitability Modeling</a>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+          </script>
+        </div>
+      </div>
+   
+      </div>
+       
+      </div>
+    </aside>
+
+  <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="tools">
+<h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">#</a></h1>
+<p>This chapter introduces the most frequently used LUCIS-OPEN tools in models.
+The following tools are:</p>
+<p><span class="raw-html-m2r"><img src="../GithubPagesImages/images/QGIS_tools.png" vspace="5px"/></span></p>
+<section id="compute-ahp-weights">
+<h2>Compute AHP Weights<a class="headerlink" href="#compute-ahp-weights" title="Permalink to this headline">#</a></h2>
+<p>The tool is used to calculate weights of important criteria for decision making.
+In the Analytic Hierarchy Process (AHP), we arrange these factors,
+once selected, in a hierarchic structure descending from an overall goal to
+criteria, subcriteria and alternatives in successive levels.
+The tool serves two purposes: it provides an overall view of the
+complex relationships inherent in the situation; and helps the decision maker
+assess whether the issues in each level are of the same order of magnitude,
+so he can compare such homogeneous elements accurately.
+The AHP is rigorously concerned with the scaling problem and what sort of
+numbers to use, and how to correctly combine the priorities resulting from them.</p>
+<ul>
+<li><p><strong>Weights generating options</strong>:</p>
+<div class="line-block">
+<div class="line">Weights generating options  | Description                                                                                       |</div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">|</span></a>—————————- <a href="#id3"><span class="problematic" id="id4">|</span></a>———————————————————————————————–    |
+| Defined AHP weights         | Use this option if the relationships between each criteria can be measured by certain scales.     |
+| Random AHP wights           | Use this option if the relationships between each criteria are unclear.                           |</p>
+</li>
+<li><p><strong>List of criteria to weight</strong>:
+Input all criteria involved in decision making.
+The maximum number of criteria in this tool is 10.</p></li>
+<li><p><strong>Comparison table for creating the reciprocal matrix (optional)</strong>:
+The table is used to compare each criteria in scales.
+The scale to use in making the judgments is given in table that you can use values from 1 (equally important) to 9 (extremely important).</p>
+<div class="line-block">
+<div class="line">Intensity of importance | Definition                                                                                                                                        | Explanation                                                                                      |</div>
+</div>
+<p><a href="#id13"><span class="problematic" id="id14">|----------------------------------------------|</span></a>—————————————————————————————————————————————————<a href="#id15"><span class="problematic" id="id16">|--------------------------------------------------------------------------------------------------|</span></a>
+| 1                                            | Equal importance                                                                                                                                  | Two activities contribute equally to the objective                                               |
+| 3                                            | Moderate importance of one  over another                                                                                                          | Experience and judgement strongly favor one activity over another                                |
+| 5                                            | Essential or strong importance                                                                                                                    | Experience and judgement strongly favor one activity over another                                |
+| 7                                            | Very strong importance                                                                                                                            | An activity is strongly favored and its dominance demonstrated  in practice                      |
+| 9                                            | Extreme importance                                                                                                                                | The evidence favoring one activity over another is of the highest  possible order of affirmation |
+| 2,4,6,8                                      | Intermediate values between  the two adjacent judgments                                                                                           | When compromise is needed                                                                        |
+| Reciprocals                                  | If activity i has one of the  above numbers assigned to it when  compared with activity j, then j has  the reciprocal value when compared with i. |                                                                                                  |</p>
+<p>For example, if criteria 1 (row id) is 3 times important than criteria 2
+(column id), criteria 1 is 9 times important than criteria 3, and criteria 2
+is 1/3 times important than criteria 3, the comparison table can be created
+as follows:</p>
+<p><span class="raw-html-m2r"><img alt="comtable" src="../GithubPagesImages/images/QGIS_AHP_Comparison.png" width="300"/></span></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">bulb</dt>
+<dd class="field-odd"><p><strong>How to understand the comparison table</strong><span class="raw-html-m2r"><br/></span></p>
+</dd>
+</dl>
+<p>Usually, AHP elicits pairwise comparison judgments by comparing criteria
+one by one in a matrix.
+In this tool, we only compare different criteria once.
+It means that we only input the value in the upper diagonal part of matrix.</p>
+</div></blockquote>
+<p>In this tool, the value of pair-wise importance must be float.
+When the value is fractions (i.e., 1/3, 1/6, 1/7, and 1/9) whose calculation
+result is a repeating decimal.
+You should put the following float value into the comparison table.</p>
+<p><span class="raw-html-m2r"><img alt="fraction" src="../GithubPagesImages/images/QGIS_AHP_Fraction.svg" width="200"/></span></p>
+<p>The results of the comparisons table will be entered into a matrix
+which is processed mathematically to derive the priorities for all criteria.</p>
+</li>
+<li><p><strong>HTML report</strong>: Output HTML report presents the porioriteis for all
+criteria.
+The consistency index (CI) in here is compared with the same index obtained
+as an average over a large number of reciprocal matrices of the same order
+whose entries are random.
+If the consistency ratio of CI to that from random matrices is
+significantly small (carefully specified to be about 10% or less),
+we accept the estimate. Otherwise, we attempt to improve consistency.</p></li>
+</ul>
+</section>
+<section id="density-of-line-features">
+<h2>Density of Line Features<a class="headerlink" href="#density-of-line-features" title="Permalink to this headline">#</a></h2>
+<p>Calculate density of line features within the specified search radius of each input polygon features.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Line layer</strong>: Input line layer.</p></li>
+<li><p><strong>Cell size for rasterizing line features (optional)</strong>: The size of cells, to which the line features are rasterized. The smaller the value, the more precise the outcome, but the longer time will be taken to run the tool.</p></li>
+<li><p><strong>Search radius (optional)</strong>: The search radius created around the polygons to calculate the density. The default set is 0, which means the calculating area is the area of each polygon feature. Units need to be specified.</p></li>
+<li><p><strong>Areal unit</strong>: The desired area units of the output density values.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="density-of-point-features">
+<h2>Density of Point Features<a class="headerlink" href="#density-of-point-features" title="Permalink to this headline">#</a></h2>
+<p>Calculate density of point features within the specified search radius of each input polygon features.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Point layer</strong>: Input point layer.</p></li>
+<li><p><strong>Population field (optional)</strong>: Field denoting population values for each point. The population field is the count or quantity to be used in the calculation of a continuous surface.</p></li>
+<li><p><strong>Search radius (optional)</strong>: The search radius created around the polygons to calculate the density. The default set is 0, which means the calculating area is the area of each polygon feature. Units need to be specified.</p></li>
+<li><p><strong>Areal unit</strong>: The desired area units of the output density values.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="distance-to-line-features">
+<h2>Distance to Line Features<a class="headerlink" href="#distance-to-line-features" title="Permalink to this headline">#</a></h2>
+<p>Calculate distance for each feature in the input data to its nearest neighbor in the line layer.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Line layer</strong>: Input line layer.</p></li>
+<li><p><strong>Cell size for rasterizing line features (optional)</strong>: The size of cells, to which the line features are rasterized. The smaller the value, the more precise the outcome, but the longer time will be taken to run the tool.</p></li>
+<li><p><strong>Distance method</strong>: Choose between
+<a class="reference external" href="https://www.wikiwand.com/enEuclidean_distance">Euclidean Distance</a> or
+<a class="reference external" href="https://www.wikiwand.com/enTaxicab_geometry">Manhattan Distance</a>.</p></li>
+<li><p><strong>Output data type (optional)</strong>: Choose between <em>integer</em> or <em>float</em>(default) output value.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="distance-to-point-features">
+<h2>Distance to Point Features<a class="headerlink" href="#distance-to-point-features" title="Permalink to this headline">#</a></h2>
+<p>Calculate distance for each feature in the input data to its nearest neighbor in the point dataset.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Point layer</strong>: Input point layer.</p></li>
+<li><p><strong>Distance method</strong>: Choose between
+<a class="reference external" href="https://www.wikiwand.com/enEuclidean_distance">Euclidean Distance</a> or
+<a class="reference external" href="https://www.wikiwand.com/enTaxicab_geometry">Manhattan Distance</a>.</p></li>
+<li><p><strong>Output data type (optional)</strong>: Choose between <em>integer</em> or <em>float</em>(default) output value.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output</strong> Output vector layer.</p></li>
+</ul>
+</section>
+<section id="distance-to-raster-cell">
+<h2>Distance to Raster Cell<a class="headerlink" href="#distance-to-raster-cell" title="Permalink to this headline">#</a></h2>
+<p>Calculate distance for each feature in the input data to its
+nearest cell with the specified value in the raster layer. You must make sure that the specified value is valid, i.e., it exists in the raster layer.</p>
+<ul class="simple">
+<li><p><strong>Input</strong>: Input vector layer.</p></li>
+<li><p><strong>Raster</strong>: Input raster layer.</p></li>
+<li><p><strong>Cell value</strong>: The value of cells, to which distances are calculated.</p></li>
+<li><p><strong>No data (optional)</strong>: Value should be considered as “no data” in the raster layer.</p></li>
+<li><p><strong>Distance method</strong>: Choose between
+<a class="reference external" href="https://www.wikiwand.com/en/Euclidean_distance">Euclidean Distance</a> or
+<a class="reference external" href="https://www.wikiwand.com/en/Taxicab_geometry">Manhattan Distance</a>.</p></li>
+<li><p><strong>Output data format (optional)</strong>: Choose between <em>integer</em> or <em>float</em> (default) output value.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output</strong>: Output vector layer</p></li>
+</ul>
+</section>
+<section id="erase">
+<h2>Erase<a class="headerlink" href="#erase" title="Permalink to this headline">#</a></h2>
+<p>Erase the part in input layer that overlaps with the erase layer.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Erase layer</strong>: The features to be used to erase coincident features in the input.</p></li>
+<li><p><strong>Output</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="inverse-distance-weighting">
+<h2>Inverse Distance Weighting<a class="headerlink" href="#inverse-distance-weighting" title="Permalink to this headline">#</a></h2>
+<p>This function implements an <code class="docutils literal notranslate"><span class="pre">IDW</span> <span class="pre">interpolation</span></code>. The power parameter dictates how fast the influence to a given location by its nearby objects decays. <code class="docutils literal notranslate"><span class="pre">idw_cv</span></code>, a k-fold cross validation method is offered to determine the most appropriate value of the <code class="docutils literal notranslate"><span class="pre">power</span></code> parameter.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer, to which will be assigned the interpolated value.</p></li>
+<li><p><strong>Interpolation layer</strong>: The input features containing the values to be interpolated.</p></li>
+<li><p><strong>Power parameter for interpolation (optional)</strong>: The exponent of distance. This controls the significance of surrounding points on the interpolated value. A higher power results in less influence from distant points. It can be any real number greater than 0, but the most reasonable results will be obtained using values from 0.5 to 3. The default is 2.</p></li>
+<li><p><strong>Number of neighbors (optional)</strong>: An integer value specifying the number of nearest input sample points to be used to perform interpolation. The default is 12points.</p></li>
+<li><p><strong>Search radius (optional)</strong>: Maximum distance used to find neighbors. If not provided, the function will search for all neighbors specified by Number ofNeighbors.</p></li>
+<li><p><strong>Output data type (optional)</strong>: Choose between <em>integer</em> or <em>float</em> (default) output value.</p></li>
+<li><p><strong>Output field name</strong>: Name of the column storing distances in the output layer.</p></li>
+<li><p><strong>Output layer</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="reclassify-field">
+<h2>Reclassify Field<a class="headerlink" href="#reclassify-field" title="Permalink to this headline">#</a></h2>
+<p>Reclassify a field in the input table based on predefined rules and store the translated values in a new field.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>：Input vector layer.</p></li>
+<li><p><strong>Field to reclassify</strong>：Transform specific values or ranges of values in a field to specified classes, i.e. reclassifying values 5 as 100 or values 1 to 5 as 100.</p></li>
+<li><p><strong>Old values</strong>：Old values could be specific values or ranges of values. Specific values or ranges of values should be separated by comma, i.e., for specific values: 1, 2, for ranges of values: 1-5, 5-10. If two ranges are specified, such as 1 to 5 equal to 100 and 5 to 10 equal to 200, the value 5 will usually be assigned to the value 100 and 5.01 will be assigned to 200 as output values.</p></li>
+<li><p><strong>New values</strong>：New values should correspond to Old specific values or Old ranges of values.</p></li>
+<li><p><strong>No data value (optional)</strong>: If any value in fields cannot be covered by defined Old values, those value will be given a new value. The default value is 1.</p></li>
+<li><p><strong>Output column name</strong>: Name of the column storing reclassified new values</p></li>
+<li><p><strong>Output layer</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="rescale-field-linearly">
+<h2>Rescale Field Linearly<a class="headerlink" href="#rescale-field-linearly" title="Permalink to this headline">#</a></h2>
+<p>Rescale values in a field into a new bound.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Input vector layer.</p></li>
+<li><p><strong>Field to rescale</strong>: Transform values in a field to a specified continuous scale, i.e., on a 1 to 9 scale</p></li>
+<li><p><strong>Start/End value for rescaling (optional)</strong>: If Start is less than end, the rescaling is in the same direction as values in the input field, i.e., smaller (bigger) values in the input field correspond to smaller (bigger) values in the output.If argument Start is greater than end, the rescaling is in the reverse direction as values in the input field, i.e., smaller (bigger) values in the input field correspond to bigger (smaller) values in the output.</p></li>
+<li><p><strong>New minimum/maximum (optional)</strong>: Values beyond the specified bound will be assigned to Output minimum and Output maximum, depending on which side they are on, i.e., when start value is less than end, values smaller than start value will be recorded as Output minimum.</p></li>
+<li><p><strong>Output field name</strong>: Name the rescaled field in Input table.</p></li>
+<li><p><strong>Output layer</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="select-by-location">
+<h2>Select by Location<a class="headerlink" href="#select-by-location" title="Permalink to this headline">#</a></h2>
+<p>Select part of the input Layer based on its spatial relationship with the selecting layer.</p>
+<ul>
+<li><p><strong>Input layer</strong>: The features that will be evaluated against the Selection features parameter. The selection will be applied to these Input features.</p></li>
+<li><p><strong>Selection layer</strong>: The features in the Input layer will be selected based on their relationship to the features from this layer.</p></li>
+<li><p><strong>Join option (geometric predicate)</strong>: Defines the criteria used to match rows. The match options are:</p>
+<div class="line-block">
+<div class="line">Join option | Description                                                                                                                                                                                                                                                                                      |</div>
+</div>
+<p><a href="#id17"><span class="problematic" id="id18">|:-----------:|</span></a>————————————————————————————————————————————————————————————————————————————————————————————————–|
+|  Intersect  | The features in the Selection features will be matched if they intersect a Input feature. This is the default option.                                                                                                                                                                            |
+|   Contains  | The features in the Selection features will be matched if a Input feature contains them. For this option, the Input features cannot be points, and the Input features can only be polygons when the Selection features are also polygons.                                                        |
+|    Within   | The features in the Selection features will be matched if a Input feature is within them. It is opposite to Contains. For this option, the Selection features can only be polygons when the Input features are also polygons. Point can be a Selection feature only if point a is Input feature. |</p>
+</li>
+<li><p><strong>Within a distance from selection features</strong>: The distance used to search for input features around any selection features.</p></li>
+<li><p><strong>Output layer</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="spatial-join">
+<h2>Spatial Join<a class="headerlink" href="#spatial-join" title="Permalink to this headline">#</a></h2>
+<p>Join attributes from the join features to the target features based on specified spatial relationship.</p>
+<ul>
+<li><p><strong>Target layer</strong>: Attributes of the target features and the attributes from the joined features are transferred to the output feature class. However, a subset of attributes can be defined in the field map parameter.</p></li>
+<li><p><strong>Join layer</strong>: The attributes from the join features are joined to the attributes of the target features.</p></li>
+<li><p><strong>Join option</strong>: Defines the criteria used to match rows. The match options are:</p>
+<div class="line-block">
+<div class="line">Join option | Description                                                                                                                                                                                                                                                                           |</div>
+</div>
+<p><a href="#id19"><span class="problematic" id="id20">|:-----------:|</span></a>—————————————————————————————————————————————————————————————————————————————————————————————|
+|  Intersect  | The features in the Selection features will be matched if they intersect a Input feature. This is the default option.                                                                                                                                                                 |
+|   Contains  | The features in the join features will be matched if a target feature contains them. The target features must be polygons or polylines. For this option, the target features cannot be points, and the join features can only be polygons when the target features are also polygons. |
+|    Within   | The features in the join features will be matched if a target feature is within them. It is opposite to Contains. For this option, the target features can only be polygons when the join features are also polygons. Point can be join feature only if point is target.              |</p>
+</li>
+<li><p><strong>Columns to join</strong>: A new feature class containing the attributes of join features, i.e.,”<span class="raw-html-m2r"><clm_name></clm_name></span> <span class="raw-html-m2r"><func></func></span>” e.g., “bldg_value sum”. The types of function defaults to [‘first’], other valid functions are [‘last’, ‘sum’, ‘mean’, ‘median’, ‘max’, ‘min’,’std’, ‘var’, ‘count’, ‘size’].</p>
+<div class="line-block">
+<div class="line">Function                 | Description                                                              |</div>
+</div>
+<p><a href="#id21"><span class="problematic" id="id22">|--------------------------|</span></a>————————————————————————–|
+| First                    | Use the columns’ first value.                                            |
+| Last                     | Use the columns’ last value.                                             |
+| Sum                      | Calculate the total of the columns’ values.                              |
+| Mean                     | Calculate the mean (average) of the columns’ values.                     |
+| Median                   | Calculate the median (middle) of the columns’ values.                    |
+| Min                      | Use the minimum value of all columns’ values.                            |
+| Max                      | Use the maximum value of all columns’ values.                            |
+| Std (Standard deviation) | Use the standard deviation classification method on all columns’ values. |
+| Var (Variance)           | Calculates the variance for all records of the specified field.          |
+| Count                    | Find the number of records included in the calculation.                  |</p>
+</li>
+<li><p><strong>Join type</strong>: Determines how joins between the target features and join features will be handled in the output feature class if multiple join features are found that have the same spatial relationship with a single target feature.</p>
+<div class="line-block">
+<div class="line">Join type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |</div>
+</div>
+<p><a href="#id23"><span class="problematic" id="id24">|-------------------------|</span></a>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————|
+|     Join one to one     | If multiple join features are found that have the same spatial relationship with a single target feature, the attributes from the multiple join features will be aggregated. For example, if a point target feature is found within two separate polygon join features, the attributes from the two polygons will be aggregated before being transferred to the output point feature class. If one polygon has an attribute value of 3 and the other has a value of 7, and a Sum merge rule is specified, the aggregated value in the output feature class will be 10. |
+|     Join one to many    | If multiple join features are found that have the same spatial relationship with a single target feature, the output feature class will contain multiple copies (records) of the target feature. For example, if a single point target feature is found within two separate polygon join features, the output feature class will contain two copies of the target feature: one record with the attributes of one polygon, and another record with the attributes of the other polygon.                                                                                 |</p>
+</li>
+<li><p><strong>Output shapefile</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="weighted-sum-of-fields">
+<h2>Weighted Sum of Fields<a class="headerlink" href="#weighted-sum-of-fields" title="Permalink to this headline">#</a></h2>
+<p>Calculate a weighted sum over a set of existing fields within the input layer.</p>
+<ul class="simple">
+<li><p><strong>Input layer</strong>: Vector layer being weighted.</p></li>
+<li><p><strong>Fields</strong>: The field to use for weighting.
+The number of fields (second parameter) must equal to the number of weights (third parameter).</p></li>
+<li><p><strong>Weights</strong>: Weight value by which to multiply the fields. It can be any positive or negative decimal value. Weights should be separated by comma.</p></li>
+<li><p><strong>Output field</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+<section id="zonal-statistics">
+<h2>Zonal Statistics<a class="headerlink" href="#zonal-statistics" title="Permalink to this headline">#</a></h2>
+<p>Calculate statistics on values of raster within the zones of another dataset.</p>
+<ul>
+<li><p><strong>Input layer</strong>: Dataset that defines the zones and sets boundaries according to its geometries. The zones are only  defined by a vector layer.</p></li>
+<li><p><strong>Raster layer</strong>: Raster that contains the values on which to calculate a statistic.</p></li>
+<li><p><strong>Types of statistics</strong>: Statistic type to be calculate. The types of statistics defaults to [‘count’, ‘min’, ‘max’, ‘mean’].Other valid statistics are [‘sum’, ‘std’, ‘median’, ‘majority’,’minority’, ‘unique’, ‘range’].</p>
+<div class="line-block">
+<div class="line">Function                    | Description                                                                                                                                           |</div>
+</div>
+<p><a href="#id9"><span class="problematic" id="id10">|</span></a>————————–   <a href="#id11"><span class="problematic" id="id12">|</span></a>—————————————————————————————————————————————————-   |
+| Count                       | Count the number of cells have value, no data would not be counted.                                                                                   |
+| Min (Minimum)               | Determines the smallest value of all cells in the value raster that belong to the same zone as the output cell.                                       |
+| Max (Maximum)               | Determines the largest value of all cells in the value raster that belong to the same zone as the output cell.                                        |
+| Mean                        | Calculates the average of all cells in the value raster that belong to the same zone as the output cell.                                              |
+| Sum                         | Calculates the total value of all cells in the value raster that belong to the same zone as the output cell.                                          |
+| Std (Standard deviation)    | Calculates the standard deviation of all cells in the value raster that belong to the same zone as the output cell.                                   |
+| Median                      | Determines the median value of all cells in the value raster that belong to the same zone as the output cell.                                         |
+| Majority                    | Determines the value that occurs most often of all cells in the value raster that belong to the same zone as the output cell.                         |
+| Minority                    | Determines the value that occurs least often of all cells in the value raster that belong to the same zone as the output cell.                        |
+| Unique                      | Count the number of unique value in cells.                                                                                                            |
+| Range                       | Calculates the difference between the largest and smallest value of all cells in the value raster that belong to the same zone as the output cell.    |</p>
+</li>
+<li><p><strong>No data value (optional)</strong>: Value should be considered as “no data” in the raster layer.</p></li>
+<li><p><strong>Output layer</strong>: Output vector layer.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, The GALUP Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    </div>
+    <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+      <div class="toc-sticky toc-scroll containme2">
+       <div class="toc-title-container">
+         <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tools</a><ul>
+<li><a class="reference internal" href="#compute-ahp-weights">Compute AHP Weights</a></li>
+<li><a class="reference internal" href="#density-of-line-features">Density of Line Features</a></li>
+<li><a class="reference internal" href="#density-of-point-features">Density of Point Features</a></li>
+<li><a class="reference internal" href="#distance-to-line-features">Distance to Line Features</a></li>
+<li><a class="reference internal" href="#distance-to-point-features">Distance to Point Features</a></li>
+<li><a class="reference internal" href="#distance-to-raster-cell">Distance to Raster Cell</a></li>
+<li><a class="reference internal" href="#erase">Erase</a></li>
+<li><a class="reference internal" href="#inverse-distance-weighting">Inverse Distance Weighting</a></li>
+<li><a class="reference internal" href="#reclassify-field">Reclassify Field</a></li>
+<li><a class="reference internal" href="#rescale-field-linearly">Rescale Field Linearly</a></li>
+<li><a class="reference internal" href="#select-by-location">Select by Location</a></li>
+<li><a class="reference internal" href="#spatial-join">Spatial Join</a></li>
+<li><a class="reference internal" href="#weighted-sum-of-fields">Weighted Sum of Fields</a></li>
+<li><a class="reference internal" href="#zonal-statistics">Zonal Statistics</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
