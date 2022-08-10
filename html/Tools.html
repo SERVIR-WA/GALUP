@@ -297,12 +297,42 @@ The AHP is rigorously concerned with the scaling problem and what sort of
 numbers to use, and how to correctly combine the priorities resulting from them.</p>
 <ul>
 <li><p><strong>Weights generating options</strong>:</p>
-<div class="line-block">
-<div class="line">Weights generating options  | Description                                                                                       |</div>
-</div>
-<p><a href="#id1"><span class="problematic" id="id2">|</span></a>—————————- <a href="#id3"><span class="problematic" id="id4">|</span></a>———————————————————————————————–    |
-| Defined AHP weights         | Use this option if the relationships between each criteria can be measured by certain scales.     |
-| Random AHP wights           | Use this option if the relationships between each criteria are unclear.                           |</p>
+  
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 25%" />
+      <col style="width: 75%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Weights generating options	</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>Defined AHP weights</p>
+        </td>
+        <td>
+          <p>Use this option if the relationships between each criteria can be measured by certain scales.</p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Random AHP wights</p>
+        </td>
+        <td>
+          <p>Use this option if the relationships between each criteria are unclear.</p>
+        </td>
+      </tr>
+      </tbody>
+      </table>
+  
 </li>
 <li><p><strong>List of criteria to weight</strong>:
 Input all criteria involved in decision making.
@@ -310,26 +340,125 @@ The maximum number of criteria in this tool is 10.</p></li>
 <li><p><strong>Comparison table for creating the reciprocal matrix (optional)</strong>:
 The table is used to compare each criteria in scales.
 The scale to use in making the judgments is given in table that you can use values from 1 (equally important) to 9 (extremely important).</p>
-<div class="line-block">
-<div class="line">Intensity of importance | Definition                                                                                                                                        | Explanation                                                                                      |</div>
-</div>
-<p><a href="#id13"><span class="problematic" id="id14">|----------------------------------------------|</span></a>—————————————————————————————————————————————————<a href="#id15"><span class="problematic" id="id16">|--------------------------------------------------------------------------------------------------|</span></a>
-| 1                                            | Equal importance                                                                                                                                  | Two activities contribute equally to the objective                                               |
-| 3                                            | Moderate importance of one  over another                                                                                                          | Experience and judgement strongly favor one activity over another                                |
-| 5                                            | Essential or strong importance                                                                                                                    | Experience and judgement strongly favor one activity over another                                |
-| 7                                            | Very strong importance                                                                                                                            | An activity is strongly favored and its dominance demonstrated  in practice                      |
-| 9                                            | Extreme importance                                                                                                                                | The evidence favoring one activity over another is of the highest  possible order of affirmation |
-| 2,4,6,8                                      | Intermediate values between  the two adjacent judgments                                                                                           | When compromise is needed                                                                        |
-| Reciprocals                                  | If activity i has one of the  above numbers assigned to it when  compared with activity j, then j has  the reciprocal value when compared with i. |                                                                                                  |</p>
+<table class="docutils align-default">
+  <colgroup>
+    <col style="width: 20%" />
+    <col style="width: 50%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <thead>
+    <tr class="row-odd">
+      <th class="head">
+        <p>Intensity of importance</p>
+      </th>
+      <th class="head">
+        <p>Definition</p>
+      </th>
+      <th class="head">
+        <p>Explanation</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row-even">
+      <td>
+        <p>1</p>
+      </td>
+      <td>
+        <p>Equal importance</p>
+      </td>
+      <td>
+        <p>Two activities contribute equally to the objective</p>
+      </td>
+    </tr>
+    <tr class="row-odd">
+      <td>
+        <p>3</p>
+      </td>
+      <td>
+        <p>Moderate importance of one over another</p>
+      </td>
+      <td>
+        <p>Experience and judgement strongly favor one activity over another
+        </p>
+      </td>
+    </tr>
+    <tr class="row-even">
+      <td>
+        <p>5</p>
+      </td>
+      <td>
+        <p>Essential or strong importance</p>
+      </td>
+      <td>
+        <p>Experience and judgement strongly favor one activity over another</p>
+      </td>
+    </tr>
+    <tr class="row-odd">
+      <td>
+        <p>7</p>
+      </td>
+      <td>
+        <p>Very strong importance</p>
+      </td>
+      <td>
+        <p>An activity is strongly favored and its dominance demonstrated in practice</p>
+      </td>
+    </tr>
+    <tr class="row-even">
+      <td>
+        <p>9</p>
+      </td>
+      <td>
+        <p>Extreme importance	</p>
+      </td>
+      <td>
+        <p>The evidence favoring one activity over another is of the highest possible order of affirmation</p>
+      </td>
+    </tr>
+    <tr class="row-even">
+      <td>
+        <p>9</p>
+      </td>
+      <td>
+        <p>Extreme importance	</p>
+      </td>
+      <td>
+        <p>The evidence favoring one activity over another is of the highest possible order of affirmation</p>
+      </td>
+    </tr>
+    <tr class="row-odd">
+      <td>
+        <p>2,4,6,8</p>
+      </td>
+      <td>
+        <p>Intermediate values between the two adjacent judgments</p>
+      </td>
+      <td>
+        <p>When compromise is needed</p>
+      </td>
+    </tr>
+    <tr class="row-even">
+      <td>
+        <p>Reciprocals</p>
+      </td>
+      <td>
+        <p>If activity i has one of the above numbers assigned to it when compared with activity j, then j has the reciprocal value when compared with i.</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <p>For example, if criteria 1 (row id) is 3 times important than criteria 2
 (column id), criteria 1 is 9 times important than criteria 3, and criteria 2
 is 1/3 times important than criteria 3, the comparison table can be created
 as follows:</p>
 <p><span class="raw-html-m2r"><img alt="comtable" src="../GithubPagesImages/images/QGIS_AHP_Comparison.png" width="300"/></span></p>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">bulb</dt>
-<dd class="field-odd"><p><strong>How to understand the comparison table</strong><span class="raw-html-m2r"><br/></span></p>
+<div><p>&#128161; <strong>How to understand the comparison table</strong><span class="raw-html-m2r"><br/></span></p>
 </dd>
 </dl>
 <p>Usually, AHP elicits pairwise comparison judgments by comparing criteria
@@ -482,13 +611,50 @@ nearest cell with the specified value in the raster layer. You must make sure th
 <li><p><strong>Input layer</strong>: The features that will be evaluated against the Selection features parameter. The selection will be applied to these Input features.</p></li>
 <li><p><strong>Selection layer</strong>: The features in the Input layer will be selected based on their relationship to the features from this layer.</p></li>
 <li><p><strong>Join option (geometric predicate)</strong>: Defines the criteria used to match rows. The match options are:</p>
-<div class="line-block">
-<div class="line">Join option | Description                                                                                                                                                                                                                                                                                      |</div>
-</div>
-<p><a href="#id17"><span class="problematic" id="id18">|:-----------:|</span></a>————————————————————————————————————————————————————————————————————————————————————————————————–|
-|  Intersect  | The features in the Selection features will be matched if they intersect a Input feature. This is the default option.                                                                                                                                                                            |
-|   Contains  | The features in the Selection features will be matched if a Input feature contains them. For this option, the Input features cannot be points, and the Input features can only be polygons when the Selection features are also polygons.                                                        |
-|    Within   | The features in the Selection features will be matched if a Input feature is within them. It is opposite to Contains. For this option, the Selection features can only be polygons when the Input features are also polygons. Point can be a Selection feature only if point a is Input feature. |</p>
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 25%" />
+      <col style="width: 75%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Join option</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>Intersect</p>
+        </td>
+        <td>
+          <p>The features in the Selection features will be matched if they intersect a Input feature. This is the default option.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Contains</p>
+        </td>
+        <td>
+          <p>The features in the Selection features will be matched if a Input feature contains them. For this option, the Input features cannot be points, and the Input features can only be polygons when the Selection features are also polygons.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Within</p>
+        </td>
+        <td>
+          <p>The features in the Selection features will be matched if a Input feature is within them. It is opposite to Contains. For this option, the Selection features can only be polygons when the Input features are also polygons. Point can be a Selection feature only if point a is Input feature.</p>
+        </td>
+      </tr>
+      </tbody>
+      </table>
 </li>
 <li><p><strong>Within a distance from selection features</strong>: The distance used to search for input features around any selection features.</p></li>
 <li><p><strong>Output layer</strong>: Output vector layer.</p></li>
@@ -501,39 +667,199 @@ nearest cell with the specified value in the raster layer. You must make sure th
 <li><p><strong>Target layer</strong>: Attributes of the target features and the attributes from the joined features are transferred to the output feature class. However, a subset of attributes can be defined in the field map parameter.</p></li>
 <li><p><strong>Join layer</strong>: The attributes from the join features are joined to the attributes of the target features.</p></li>
 <li><p><strong>Join option</strong>: Defines the criteria used to match rows. The match options are:</p>
-<div class="line-block">
-<div class="line">Join option | Description                                                                                                                                                                                                                                                                           |</div>
-</div>
-<p><a href="#id19"><span class="problematic" id="id20">|:-----------:|</span></a>—————————————————————————————————————————————————————————————————————————————————————————————|
-|  Intersect  | The features in the Selection features will be matched if they intersect a Input feature. This is the default option.                                                                                                                                                                 |
-|   Contains  | The features in the join features will be matched if a target feature contains them. The target features must be polygons or polylines. For this option, the target features cannot be points, and the join features can only be polygons when the target features are also polygons. |
-|    Within   | The features in the join features will be matched if a target feature is within them. It is opposite to Contains. For this option, the target features can only be polygons when the join features are also polygons. Point can be join feature only if point is target.              |</p>
-</li>
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 25%" />
+      <col style="width: 75%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Join option</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>Intersect</p>
+        </td>
+        <td>
+          <p>The features in the Selection features will be matched if they intersect a Input feature. This is the default option.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Contains</p>
+        </td>
+        <td>
+          <p>The features in the join features will be matched if a target feature contains them. The target features must be polygons or polylines. For this option, the target features cannot be points, and the join features can only be polygons when the target features are also polygons.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Within</p>
+        </td>
+        <td>
+          <p>The features in the join features will be matched if a target feature is within them. It is opposite to Contains. For this option, the target features can only be polygons when the join features are also polygons. Point can be join feature only if point is target.
+          </p>
+        </td>
+      </tr>
+      </tbody>
+      </table>
 <li><p><strong>Columns to join</strong>: A new feature class containing the attributes of join features, i.e.,”<span class="raw-html-m2r"><clm_name></clm_name></span> <span class="raw-html-m2r"><func></func></span>” e.g., “bldg_value sum”. The types of function defaults to [‘first’], other valid functions are [‘last’, ‘sum’, ‘mean’, ‘median’, ‘max’, ‘min’,’std’, ‘var’, ‘count’, ‘size’].</p>
-<div class="line-block">
-<div class="line">Function                 | Description                                                              |</div>
-</div>
-<p><a href="#id21"><span class="problematic" id="id22">|--------------------------|</span></a>————————————————————————–|
-| First                    | Use the columns’ first value.                                            |
-| Last                     | Use the columns’ last value.                                             |
-| Sum                      | Calculate the total of the columns’ values.                              |
-| Mean                     | Calculate the mean (average) of the columns’ values.                     |
-| Median                   | Calculate the median (middle) of the columns’ values.                    |
-| Min                      | Use the minimum value of all columns’ values.                            |
-| Max                      | Use the maximum value of all columns’ values.                            |
-| Std (Standard deviation) | Use the standard deviation classification method on all columns’ values. |
-| Var (Variance)           | Calculates the variance for all records of the specified field.          |
-| Count                    | Find the number of records included in the calculation.                  |</p>
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 35%" />
+      <col style="width: 65%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Function</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>First</p>
+        </td>
+        <td>
+          <p>Use the columns' first value.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Last</p>
+        </td>
+        <td>
+          <p>Use the columns' last value.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Sum</p>
+        </td>
+        <td>
+          <p>Calculate the total of the columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Mean</p>
+        </td>
+        <td>
+          <p>Calculate the mean (average) of the columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Median	</p>
+        </td>
+        <td>
+          <p>Calculate the median (middle) of the columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Min</p>
+        </td>
+        <td>
+          <p>Use the minimum value of all columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Max</p>
+        </td>
+        <td>
+          <p>Use the maximum value of all columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Std (Standard deviation)	</p>
+        </td>
+        <td>
+          <p>Use the standard deviation classification method on all columns' values.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Var (Variance)</p>
+        </td>
+        <td>
+          <p>Calculates the variance for all records of the specified field.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Count</p>
+        </td>
+        <td>
+          <p>Find the number of records included in the calculation.
+          </p>
+        </td>
+      </tr>
+      </tbody>
+      </table>
 </li>
 <li><p><strong>Join type</strong>: Determines how joins between the target features and join features will be handled in the output feature class if multiple join features are found that have the same spatial relationship with a single target feature.</p>
-<div class="line-block">
-<div class="line">Join type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |</div>
-</div>
-<p><a href="#id23"><span class="problematic" id="id24">|-------------------------|</span></a>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————|
-|     Join one to one     | If multiple join features are found that have the same spatial relationship with a single target feature, the attributes from the multiple join features will be aggregated. For example, if a point target feature is found within two separate polygon join features, the attributes from the two polygons will be aggregated before being transferred to the output point feature class. If one polygon has an attribute value of 3 and the other has a value of 7, and a Sum merge rule is specified, the aggregated value in the output feature class will be 10. |
-|     Join one to many    | If multiple join features are found that have the same spatial relationship with a single target feature, the output feature class will contain multiple copies (records) of the target feature. For example, if a single point target feature is found within two separate polygon join features, the output feature class will contain two copies of the target feature: one record with the attributes of one polygon, and another record with the attributes of the other polygon.                                                                                 |</p>
-</li>
-<li><p><strong>Output shapefile</strong>: Output vector layer.</p></li>
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 25%" />
+      <col style="width: 75%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Join option</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>Join one to one</p>
+        </td>
+        <td>
+          <p>If multiple join features are found that have the same spatial relationship with a single target feature, the attributes from the multiple join features will be aggregated. For example, if a point target feature is found within two separate polygon join features, the attributes from the two polygons will be aggregated before being transferred to the output point feature class. If one polygon has an attribute value of 3 and the other has a value of 7, and a Sum merge rule is specified, the aggregated value in the output feature class will be 10.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Join one to many</p>
+        </td>
+        <td>
+          <p>If multiple join features are found that have the same spatial relationship with a single target feature, the output feature class will contain multiple copies (records) of the target feature. For example, if a single point target feature is found within two separate polygon join features, the output feature class will contain two copies of the target feature: one record with the attributes of one polygon, and another record with the attributes of the other polygon.
+          </p>
+        </td>
+      </tr>
+      </tbody>
+      </table>
+  <li><p><strong>Output shapefile</strong>: Output vector layer.</p></li>
 </ul>
 </section>
 <section id="weighted-sum-of-fields">
@@ -554,21 +880,124 @@ The number of fields (second parameter) must equal to the number of weights (thi
 <li><p><strong>Input layer</strong>: Dataset that defines the zones and sets boundaries according to its geometries. The zones are only  defined by a vector layer.</p></li>
 <li><p><strong>Raster layer</strong>: Raster that contains the values on which to calculate a statistic.</p></li>
 <li><p><strong>Types of statistics</strong>: Statistic type to be calculate. The types of statistics defaults to [‘count’, ‘min’, ‘max’, ‘mean’].Other valid statistics are [‘sum’, ‘std’, ‘median’, ‘majority’,’minority’, ‘unique’, ‘range’].</p>
-<div class="line-block">
-<div class="line">Function                    | Description                                                                                                                                           |</div>
-</div>
-<p><a href="#id9"><span class="problematic" id="id10">|</span></a>————————–   <a href="#id11"><span class="problematic" id="id12">|</span></a>—————————————————————————————————————————————————-   |
-| Count                       | Count the number of cells have value, no data would not be counted.                                                                                   |
-| Min (Minimum)               | Determines the smallest value of all cells in the value raster that belong to the same zone as the output cell.                                       |
-| Max (Maximum)               | Determines the largest value of all cells in the value raster that belong to the same zone as the output cell.                                        |
-| Mean                        | Calculates the average of all cells in the value raster that belong to the same zone as the output cell.                                              |
-| Sum                         | Calculates the total value of all cells in the value raster that belong to the same zone as the output cell.                                          |
-| Std (Standard deviation)    | Calculates the standard deviation of all cells in the value raster that belong to the same zone as the output cell.                                   |
-| Median                      | Determines the median value of all cells in the value raster that belong to the same zone as the output cell.                                         |
-| Majority                    | Determines the value that occurs most often of all cells in the value raster that belong to the same zone as the output cell.                         |
-| Minority                    | Determines the value that occurs least often of all cells in the value raster that belong to the same zone as the output cell.                        |
-| Unique                      | Count the number of unique value in cells.                                                                                                            |
-| Range                       | Calculates the difference between the largest and smallest value of all cells in the value raster that belong to the same zone as the output cell.    |</p>
+  <table class="docutils align-default">
+    <colgroup>
+      <col style="width: 35%" />
+      <col style="width: 65%" />
+    </colgroup>
+    <thead>
+      <tr class="row-odd">
+        <th class="head">
+          <p>Function</p>
+        </th>
+        <th class="head">
+          <p>Description</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-even">
+        <td>
+          <p>Count</p>
+        </td>
+        <td>
+          <p>Count the number of cells have value, no data would not be counted.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Min (Minimum)</p>
+        </td>
+        <td>
+          <p>Determines the smallest value of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Max (Maximum)</p>
+        </td>
+        <td>
+          <p>Determines the largest value of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Mean</p>
+        </td>
+        <td>
+          <p>Calculates the average of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Sum</p>
+        </td>
+        <td>
+          <p>Calculates the total value of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Std (Standard deviation)</p>
+        </td>
+        <td>
+          <p>Calculates the standard deviation of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Median</p>
+        </td>
+        <td>
+          <p>Determines the median value of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Majority</p>
+        </td>
+        <td>
+          <p>Determines the value that occurs most often of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-even">
+        <td>
+          <p>Minority</p>
+        </td>
+        <td>
+          <p>Determines the value that occurs least often of all cells in the value raster that belong to the same zone as the output cell.
+          </p>
+        </td>
+      </tr>
+      <tr class="row-odd">
+        <td>
+          <p>Unique</p>
+        </td>
+        <td>
+          <p>Count the number of unique value in cells.
+          </p>
+        </td>
+        <tr class="row-even">
+          <td>
+            <p>Range</p>
+          </td>
+          <td>
+            <p>Calculates the difference between the largest and smallest value of all cells in the value raster that belong to the same zone as the output cell.
+            </p>
+          </td>
+        </tr>
+      </tr>
+      </tbody>
+      </table>
+
 </li>
 <li><p><strong>No data value (optional)</strong>: Value should be considered as “no data” in the raster layer.</p></li>
 <li><p><strong>Output layer</strong>: Output vector layer.</p></li>
