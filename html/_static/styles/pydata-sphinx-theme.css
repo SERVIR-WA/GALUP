@@ -11154,13 +11154,12 @@
 
  .navbar .container-xl {
      height: 100%
-     width: 100%
  }
 
  .navbar #navbar-center,
  .navbar #navbar-end,
  .navbar #navbar-start {
-     /* display: flex; */
+     display: flex;
      align-items: center
  }
 
