@@ -16,15 +16,25 @@ a.no-under {
 }
 /* made text smaller and increased line height, copied from Pandas documentatioin */
 
-/* this can and should change with diff themes */
+/* change to give more margin to navbar */
 
 .containme {
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 .containme2 {
-    padding-top: 50px
+    padding-top: 60px
 }
+
+.theme-togle {
+    padding-top: 10px
+}
+
+.content {
+    padding-top: 10px;
+}
+
+/* end padding from navbar */
 
 aside {position: sticky;} 
 
