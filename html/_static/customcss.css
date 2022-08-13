@@ -16,14 +16,14 @@ a.no-under {
 }
 /* made text smaller and increased line height, copied from Pandas documentatioin */
 
-/* change to give more margin to navbar */
+/* change to give more margin to */
 
 .containme {
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
 .containme2 {
-    padding-top: 60px
+    padding-top: 70px
 }
 
 .theme-togle {
@@ -31,7 +31,7 @@ a.no-under {
 }
 
 .content {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /* end padding from navbar */
@@ -306,6 +306,3 @@ ol {
 .sponsors {
     padding: 10px;
 }
-
-/* add badge to navbar */
-
