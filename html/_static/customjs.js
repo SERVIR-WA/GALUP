@@ -21,3 +21,4 @@ else if (bgColor == 'rgb(33, 33, 33)'){
 else {
     x.innerHTML='<p>null</p>'
 }
+// test
