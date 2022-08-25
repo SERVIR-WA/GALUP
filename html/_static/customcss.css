@@ -321,3 +321,17 @@ ol {
     width: 100%;
     height: 100%;
 }
+
+.no-padding {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+h2.no-bottom {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.img-down {
+    margin-top: 5px;
+}
