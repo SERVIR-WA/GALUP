@@ -336,4 +336,17 @@ h2.no-bottom {
     margin-top: 5px;
 }
 
-/* sos */
+/* project item */
+
+.project-item { display: none; }
+
+.project-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+.project-item > a { width: 100%; }
+
+.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+
+.project-item > a:hover img { transform: scale(1.1); }

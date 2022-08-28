@@ -15,39 +15,14 @@
 
     
 
-<!-- 
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  background-color: black;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style> -->
 </head>
 <body>
   <script>
     document.body.dataset.theme = localStorage.getItem("theme") || "auto";
   </script>
 
-  <!-- bootstrap nav -->
   <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
     <div class="container-lg" id="banner">
-      <!-- <div class="row"> -->
         <div class="col-lg-2">
           <a class="navbar-brand" href="../index.html">
           <img class="navbar-brand-logo" src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo" width="45">
@@ -58,7 +33,6 @@
           </button>
         </div>
       <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
-        <!-- <div id="navbar-center"> -->
           <ul class="navbar-nav">
             <li class="nav-item hov">
               <a class="nav-link active" aria-current="page" href="pylusat.html">Install PyLUSATQ</a>
@@ -74,7 +48,6 @@
             </li>
           </ul>
         </div>
-    <!-- </div> -->
     <div id="navbar-end">
       <div class="navbar-end-item navbottom">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -170,7 +143,6 @@
 </label>
 
 
-
 <div class="container-xl">
   <header class="mobile-header">
     <div class="header-left">
@@ -204,7 +176,6 @@
       <div class="sidebar-container ">
         <div class="sidebar-sticky">
           <a class="sidebar-brand" href="index.html">
-            <!-- <span class="sidebar-brand-text">Contents</span> -->
           </a>
           <form class="sidebar-search-container" method="get" action="search.html" role="search">
             <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -305,11 +276,7 @@ and (b) <em>market proximity</em>.</p>
 <p><span class="raw-html-m2r"><img src="../GithubPagesImages/map/m3_aggregation_market_trans.png" width="500"/></span></p>
 <blockquote>
 <div><dl class="field-list simple">
-<!-- <dt class="field-odd">bulb</dt>
-<dd class="field-odd"> -->
 <p>&#128161;Note:<span class="raw-html-m2r"><br/></span></p>
-<!-- </dd>
-</dl> -->
 <p>This “GREEN(good)-RED(bad)” symbology style is a convention that has been
 followed since the early time of land-use suitability modeling.</p>
 </div></blockquote>
@@ -442,20 +409,12 @@ for a detailed introduction to the <strong>Graphical Modeler</strong>.</p>
 </dl>
 </section>
 <blockquote>
-<!-- <div><dl class="field-list simple">
-<dt class="field-odd">books</dt> -->
-<!-- <dd class="field-odd"> -->
 <p>&#128218;“Test Drive” the QGIS Graphical Modeler<span class="raw-html-m2r"><br/></span></p>
 </dd>
 </dl>
 <p>Before we dive into the land-use suitability models, let’s give the graphical modeler a “test drive”.
 See if you can replicate the workflow presented in the video.
 We will use two <span class="raw-html-m2r"><b>algorithms</b></span> (tools):<span class="raw-html-m2r"><br/></span></p>
-<!-- <dl class="simple">
-<dt>:raw-html-m2r:<a href="#id22"><span class="problematic" id="id23">`</span></a>&lt;ul&gt;</dt><dd><p>&lt;li&gt;&lt;a href=”<a class="reference external" href="https://tinyurl.com/3ndzs6n8">https://tinyurl.com/3ndzs6n8</a>”&gt;Buffer&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=”<a class="reference external" href="https://tinyurl.com/cukvw68n">https://tinyurl.com/cukvw68n</a>”&gt;Clip by mask layer&lt;/a&gt;.&lt;/li&gt;</p>
-</dd>
-</dl> -->
 <ul>
   <li><a href="https://docs.qgis.org/3.10/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#qgisbuffer">Buffer</a>, and</li>
   <li><a href="https://docs.qgis.org/3.10/en/docs/user_manual/processing_algs/gdal/rasterextraction.html#gdalcliprasterbymasklayer">Clip by mask layer</a>.</li>
@@ -771,10 +730,7 @@ of the <strong>Soil Condition</strong> model.</p>
 <section id="id6">
 <blockquote>
 <div><dl class="field-list simple">
-<!-- <dt class="field-odd">memo</dt> -->
-<!-- <dd class="field-odd"> -->
 <p><strong> &#128221; Some notes on reclassification and weights</strong></p>
-<!-- </dd> -->
 </dl>
 <ol class="arabic">
 <li><p>Again, the purpose of reclassification is to transform values from its

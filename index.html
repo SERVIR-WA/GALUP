@@ -27,28 +27,12 @@
   <link rel="stylesheet" type="text/css" href="html/_static/styles/furo.css" />
   <link rel="stylesheet" type="text/css" href="html/_static/styles/furo-extensions.css" />
   <link rel="stylesheet" type="text/css" href="html/_static/customcss.css" />
-  <!--test add to force nojekyll -->
+      <link rel="stylesheet" href="_static/styles/style.css">
+
 
   <style>
-    /* body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  } */
     @media not print {
 
-      /* body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  background-color: black;
-    } */
-      /* @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-    --color-code-foreground: #d0d0d0;
-      background-color: black;
-      }
-    }  */
       @media screen and (max-width: 1200px) {
         nav.navbegone {
           display: none;
@@ -72,8 +56,7 @@
     document.body.dataset.theme = localStorage.getItem("theme") || "auto";
   </script>
 
-  <!-- bootstrap nav -->
-  <!-- <div class="container" id="banner"></div> -->
+
   <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
     <div class="container-lg" id="banner">
         <div class="col-lg-2">
@@ -237,14 +220,12 @@
       </div>
     </header>
     <div class="row">
-      <!-- left panel -->
 
       <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
         <div class="toc-sticky containme">
           <div class="sidebar-container ">
             <div class="sidebar-sticky">
               <a class="sidebar-brand" href=""">
-            <!-- <span class=" sidebar-brand-text">Contents</span> -->
               </a>
               <form class="sidebar-search-container" method="get" action="html/search.html" role="search">
                 <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -321,7 +302,6 @@
         </div>
       </aside>
 
-      <!-- main content -->
       <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
         <div class="content">
           <div class="article-container">
@@ -429,23 +409,7 @@
 
 
                     <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-                      <!-- <div class="card w-100 shadow docutils">
-        <img alt="img-top" class="card-img-top icon-l icon-r card-img-pad" 
-        src="/GithubPagesImages/desktop-outline.svg"/>
-        <div class="card-body text-center docutils">
-          <p class="card-text">
-            <b>Workshop 3:</b> Integrated Decision Units for 
-            Land Use Suitability Modeling
-          </p>
-        </div>
-        <p class="card-text text-center">
-        <a class="sphinx-bs btn text-wrap btn-success reference external" 
-        href="/html/Training3ReadMe.html">
-        <span>Learn More</span></a>
-      </p>
-      <br> -->
-
-
+                     
                     </div>
                   </div>
                   <div>
@@ -455,7 +419,7 @@
                       <a class="headerlink" href="#visit" title="Permalink to this headline">#</a>
                       <img class="img-down" style="float: right;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fservir-wa.github.io%2FGALUP%2F&count_bg=%2348C21A&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false"/>
                     </h2>
-                    <div class="wrapper"
+                    <div class="wrapper">
                     <div id="lightFrame">
 
 
