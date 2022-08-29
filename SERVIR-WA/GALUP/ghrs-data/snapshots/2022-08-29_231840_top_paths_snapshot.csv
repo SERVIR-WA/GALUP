@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/SERVIR-WA/GALUP,15,7
+/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module1.md,6,2
+/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module3.md,4,3
+/SERVIR-WA/GALUP/tree/master/training,4,3
+/SERVIR-WA/GALUP/tree/master/training/2_rs,4,3
+/SERVIR-WA/GALUP/tree/master/algorithms,3,2
+/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md,2,2
+/SERVIR-WA/GALUP/blob/master/algorithms/ahp.py,2,1
+/SERVIR-WA/GALUP/blob/master/algorithms/zonal_stats.py,2,1
+/SERVIR-WA/GALUP/blob/master/algorithms/linear_rescale.py,1,1
