@@ -1,12 +1,10 @@
-/* got rid of underlines on */
 a.no-under {
     text-decoration: none;
 }
-/* centered images on card panel */
+
 .icon-l {
     padding-left: 7rem !important
 }
-
 .icon-r {
     padding-right: 7rem !important
 }
@@ -23,15 +21,10 @@ a.no-under {
     padding-top: 70px
 }
 
-.theme-togle {
-    padding-top: 10px
-}
 
 .content {
     padding-top: 20px;
 }
-
-/* end padding from navbar */
 
 aside {position: sticky;} 
 
@@ -60,20 +53,8 @@ p.card-text {
     position: relative;
 }
 
-.hard-left {
-    padding-left: 50px;
-    left: 50px;
-    position: relative;
-}
-
-
 nav.short {
     height: 60px;
-}
-
-.line{
-    display: inline-block;
-    
 }
 
 
@@ -89,11 +70,7 @@ nav * {
     }
 }
 
-.inline-toggle {
-    display: inline;
-    vertical-align: middle;
-    align-items: center;
-}
+
 
 
 @media (min-width: 1400px) {
@@ -149,9 +126,9 @@ body{
     top: 0;
     right: 0;
     left: 0;
-    /* z-index: 1030; */
     background: var(--color-navbar-background);
 }
+
 
 .padme {
     padding-left: 100px;
@@ -226,7 +203,7 @@ ol {
 
 .wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
 }
@@ -248,7 +225,7 @@ h2.no-bottom {
     margin-bottom: 0px;
 }
 
-.img-down {
+.img-downs {
     margin-top: 5px;
 }
 
