@@ -243,7 +243,7 @@ h2.no-bottom {
   .project-item { display: none; }
   
   .project-item.active {
-    display: block;
+    display: inline-table;
     animation: scaleUp 0.25s ease forwards;
   }
   
@@ -326,4 +326,36 @@ h2.no-bottom {
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
   } */
+  
+
+.t-pad {
+   padding: 400px;
+}
+
+/* table styling */
+
+  
+  .project-item2 { display: none; }
+  
+  .project-item2.active {
+    display: inline-table;
+    scale: 90%;    
+}
+  
+  .project-item2 > a { width: 75%; }
+  
+  /* .project-item2 > a:hover .project-img2::before { background: hsla(0, 0%, 0%, 0.5); } */
+  
+  
+  .project-item2 > a:hover .project-item-icon-box2 {
+    --scale: ;
+    opacity: 1;
+  }
+  
+  .project-item-icon-box2 ion-icon { --ionicon-stroke-width: ; }
+  
+  
+  .project-item2 > a:hover img { transform: scale(1.1); }
+  
+
   
