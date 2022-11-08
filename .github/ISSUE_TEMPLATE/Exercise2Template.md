@@ -1,5 +1,5 @@
 ---
-name: Submit Workshop 4 Module 1 exercises
+name: Submit Workshop 4 Module 1 Exercise 2
 about: Please turn in your exercises for the GALUP team to
   review.
 title: 'Module 1 exercise 2 [replace with your name]'
