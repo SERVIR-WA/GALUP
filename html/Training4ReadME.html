@@ -347,8 +347,10 @@
 <div><p><strong>Instructor</strong>: <a class="reference external" href="https://abe.ufl.edu/people/faculty/aditya-singh/">Dr. Aditya Singh</a> (<span class="raw-html-m2r"><ins>aditya01@<i></i>ufl.edu</ins></span>) <span class="raw-html-m2r"><br></span>
 <strong>Date</strong>:<span class="raw-html-m2r"><br></span>
 <strong>Co-authors</strong>:</p>
+</blockquote>
+<h2>Goal</h2>
 <p>The fourth GALUP workshop aims at applying skills learned in the second workshop -Introduction to Remote Sensing using Google Earth Engine (GEE) for further analysis. The participants will learn basics in Time Series Analysis and Change Detection and apply this to land use studies and analysis. This workshop is the second phase toward understanding how RS data can be used for land-use assessments.</p>
-</div></blockquote>
+</div>
 <section id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -383,34 +385,37 @@
   <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
 </p> <br/>
 
-### Data Sources
+<h3>Data Sources</h3>
 Satellite data can be obtained from multiple sources, some important repositories are:
-- <a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a>
-- <a href="https://search.earthdata.nasa.gov/search?ac=true">NASA Earthdata Search</a>
-- <a href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a>
-- <a href="https://scihub.copernicus.eu/dhus/#/home">Copernicus Open Access Hub</a>
-<br>
-
-## 2. Setting up GEE
+<ul> 
+<li><a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a></li>
+<li><a href="https://search.earthdata.nasa.gov/search?ac=true">NASA Earthdata Search</a></li>
+<li><a href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a></li>
+<li><a href="https://scihub.copernicus.eu/dhus/#/home">Copernicus Open Access Hub</a></li>
+</ul>
+<h2>2. Setting up GEE</h2>
 Please request an account with Google Earth Engine (GEE) as follows:
-- Go to the GEE webpage [here](https://earthengine.google.com/)
-- Select “Sign Up” at the top right of the page and input institution and intention for use (e.g. using remote sensing datasets for land use suitability modeling).
+<ul>
+  <li>Go to the GEE webpage <a href='https://earthengine.google.com/'>here</a></li>
+<li>Select “Sign Up” at the top right of the page and input institution and intention for use (e.g. using remote sensing datasets for land use suitability modeling).</li>
+</ul>
+&#128204; Approval may not happen immediately, so please be sure to sign up in advance of the workshop to provide a few days for completion.
 
-:pushpin: Approval may not happen immediately, so please be sure to sign up in advance of the workshop to provide a few days for completion.
+<h2>3. Exploring GEE Interface</h2>
 
-## 3. Exploring GEE Interface
+The figure below shows general interface functions for GEE. Further description of the components of the Figure can be found <a href="(https://github.com/SERVIR-WA/GALUP/wiki/GEE-Interface">here</a>.
 
-The figure below shows general interface functions for GEE. Further description of the components of the Figure can be found [here](https://github.com/SERVIR-WA/GALUP/wiki/GEE-Interface).
+<img src=.../GithubPagesImages/Gee_Interface.png>
 
-![GEEinterface](https://user-images.githubusercontent.com/84922404/132246323-4b2d7dee-6cdc-4828-aa9a-b3ab4193ffa5.png)
+&#128204; In this workshop, we will be programming in the GEE <a href="(https://code.earthengine.google.com/)"> code editor </a> that uses the JavaScript language. There are extra <a href='https://developers.google.com/earth-engine/tutorials/tutorial_api_01'>resources</a> available from Google to introduce the JavaScript Application Programming Interface (API).</p>
 
-:pushpin: In this workshop, we will be programming in the GEE [code editor](https://code.earthengine.google.com/) that uses the JavaScript language. There are extra [resources](https://developers.google.com/earth-engine/tutorials/tutorial_api_01) available from Google to introduce the JavaScript Application Programming Interface (API).
+<h2>4. RS Indices</h2>
 
-## 4. RS Indices
-**Remote sensing indices** (or spectral indices) are arithmentic combinations of reflectance at two or more bands that help provide measurable estimates of the relative abundance of indicators of interest. Vegetation indices (such as the normalized difference vegetation index: NDVI) are the most widely known, but indices can be formulated for tracking burn areas, exposed soil or built-up areas.
-- Spectral/Image indices are generally calculated using simple mathematical transformations (addition, subtraction, division) conducted on satellite bands of specific wavelength regions. Values of image indices can range from -1 - +1 (normalized difference indices), to arbitrary scales for other ratio-based indices. See <a href="https://www.usgs.gov/core-science-systems/nli/landsat/landsat-surface-reflectance-derived-spectral-indices?qt-science_support_page_related_con=0#qt-science_support_page_related_con">this link</a> for a good introduction to indices that can be obtained using Landsat data.
-
-- Some commonly used RS indices include
+<b>Remote sensing indices</b> (or spectral indices) are arithmentic combinations of reflectance at two or more bands that help provide measurable estimates of the relative abundance of indicators of interest. Vegetation indices (such as the normalized difference vegetation index: NDVI) are the most widely known, but indices can be formulated for tracking burn areas, exposed soil or built-up areas.
+<ul>
+<li>Spectral/Image indices are generally calculated using simple mathematical transformations (addition, subtraction, division) conducted on satellite bands of specific wavelength regions. Values of image indices can range from -1 - +1 (normalized difference indices), to arbitrary scales for other ratio-based indices. See <a href="https://www.usgs.gov/core-science-systems/nli/landsat/landsat-surface-reflectance-derived-spectral-indices?qt-science_support_page_related_con=0#qt-science_support_page_related_con">this link</a> for a good introduction to indices that can be obtained using Landsat data.</li>
+<li>Some commonly used RS indices include</li>
+</ul>
       <blockquote>
       Normalized Difference Vegetation Index (NDVI)<br>
       Enhanced Vegetation Index (EVI)<br>
@@ -423,14 +428,15 @@ The figure below shows general interface functions for GEE. Further description 
       </blockquote>
 
 
-- The Table below provides reflectances used to calculate the above indices.
+<Ul>
+  <li>The Table below provides reflectances used to calculate the above indices.</li>
+</Ul> 
 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/87503837/142231637-77253803-79a2-4f34-939a-f8d234d796bb.png" height="50%" width="50%">
 </p><dl class="field-list simple">
-<dt class="field-odd">pushpin</dt>
-<dd class="field-odd"><p>A database of remote sensing indices and their respective sensors and areas of application are compiled <a class="reference external" href="https://www.indexdatabase.de/">here</a>.</p>
+  <p>&#128204;A database of remote sensing indices and their respective sensors and areas of application are compiled <a class="reference external" href="https://www.indexdatabase.de/">here</a>.</p>
 </dd>
 </dl>
 </section>
@@ -547,8 +553,6 @@ Module 2 - <a class="reference external" href="module2.md">Change Detection</a><
           </div>
         </div>
       </div>
-      
-      
     </aside>
   </div>
   </div>
