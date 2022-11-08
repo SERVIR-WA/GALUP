@@ -1,0 +1,561 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>Workshop 4: Introduction to Remote Sensing - II - GALUP documentation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+        <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <link rel="stylesheet" type="text/css" href="_static/customcss.css"/>
+    
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+    <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top
+    navbar-themed">
+    <div class="container-lg" id="banner">
+    <!-- <div class="row"> -->
+    <div class="col-lg-2">
+    <a class="navbar-brand" href="../index.html">
+    <img class="navbar-brand-logo"
+    src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo"
+    width="45">
+    &nbsp;&nbsp;GALUP Training</a>
+    <button class="navbar-toggler" type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+    <div class="left collapse navbar-collapse padme navbottom"
+    id="navbarNav">
+    <!-- <div id="navbar-center"> -->
+    <ul class="navbar-nav">
+    <li class="nav-item hov">
+    <a class="nav-link active" aria-current="page"
+    href="pylusat.html">Install PyLUSATQ</a>
+    </li>
+    <li class="nav-item hov">
+    <a class="nav-link active" aria-current="page"
+    href="">Documentation</a>
+    </li>
+    <li class="nav-item hov">
+    <a class="nav-link active" aria-current="page"
+    href="#">Gallery</a>
+    </li>
+    <li class="nav-item hov">
+    <a class="nav-link active" aria-current="page"
+    href="#">Publication</a>
+    </li>
+    </ul>
+    </div>
+    <!-- </div> -->
+    <div id="navbar-end">
+    <div class="navbar-end-item navbottom">
+    <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/chjch/pylusat">
+    <img
+    src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+    </a>
+    </li>
+    <li class="nav-item ">
+    <a class="nav-link linkalign"
+    href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank"
+    title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+    <label class="sr-only">GitHub</label></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link linkalign" href="https://twitter.com/galupghana"
+    rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw
+    fa-twitter"></i></span>
+    <label class="sr-only">Twitter</label></a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class=”container-xl”>
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">GALUP  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <div class="row">
+    <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+      <div class="toc-sticky containme">
+      <div class="sidebar-container ">
+      <div class="sidebar-sticky">
+      <a class="sidebar-brand" href="index.html">
+      <!-- <span class="sidebar-brand-text">Contents</span> -->
+      </a>
+      <form class="sidebar-search-container" method="get"
+      action="search.html" role="search">
+      <input class="sidebar-search" placeholder=Search name="q"
+      aria-label="Search">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+      </form>
+      <div id="searchbox"></div>
+      <div class="sidebar-scroll">
+      <div class="sidebar-tree sidefont">
+      <ul>
+      <li class="has-children">
+      <a class="hov reference internal"
+      href="Training1ReadMe.html"><b>Land-Use Suitability Analysis with QGIS
+      Tools</b></a>
+      <input class="toctree-checkbox" id="toctree-checkbox-1"
+      name="toctree-checkbox-1" role="switch" type="checkbox">
+      <label for="toctree-checkbox-1">
+      <div class="visually-hidden">Toggle child pages in
+      navigation</div><i class="icon"><svg><use
+      href="#svg-arrow-right"></use></svg></i></label>
+      <ul>
+      <li><a class="reference internal hov"
+      href="Training1Module1.html">1-1: Software and Data Preparation</a></li>
+      <li><a class="reference internal hov"
+      href="Training1Module2.html">1-2: Introduction to LUCIS-OPEN Tools for
+      QGIS</a></li>
+      <li><a class="reference internal hov"
+      href="Training1Module3.html">1-3: Create Suitability Models with QGIS Graphical
+      Modeler</a></li>
+      <li><a class="reference internal hov"
+      href="Training1Module4.html">1-4: Aggregate Results to Make Land-Use
+      Decisions</a></li>
+      </ul>
+      </li>
+      <li class="has-children">
+      <a class="hov reference internal"
+      href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing</b></a>
+      <input class="toctree-checkbox" id="toctree-checkbox-2"
+      name="toctree-checkbox-2" role="switch" type="checkbox"><label
+      for="toctree-checkbox-2">
+      <div class="visually-hidden">Toggle child pages in
+      navigation</div><i class="icon"><svg><use
+      href="#svg-arrow-right"></use></svg></i></label>
+      <ul>
+      <li><a class="reference internal hov"
+      href="Training2Module1.html">2-1: Introduction to Remote Sensing (RS)</a></li>
+      <li><a class="reference internal hov"
+      href="Training2Module2.html">2-2: RS Applications using Google Earth
+      Engine</a></li>
+      <li><a class="reference internal hov"
+      href="Training2Module3.html">2-3: Common RS Indices and Environmental
+      Variables</a></li>
+      <li><a class="reference internal hov"
+      href="Training2Module4.html">2-4: Land Cover Classification</a></li>
+      </ul>
+      </li>
+      <li class="has-children"><a class="hov reference internal"
+      href="Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability
+      Modeling</b></a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3"
+      name="toctree-checkbox-3" role="switch" type="checkbox"><label
+      for="toctree-checkbox-3">
+      <div class="visually-hidden">Toggle child pages in
+      navigation</div><i class="icon"><svg><use
+      href="#svg-arrow-right"></use></svg></i></label>
+      <ul>
+      <li> <a class="reference internal hov"
+      href="Training3Module1.html">3-1: Integrated Decision Units (IDUs) for Land Use
+      Suitability Modeling</a>
+      </li>
+      </ul>
+      </li>
+      <li class="has-children">
+        <a class="hov reference internal"
+        href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing - II</b></a>
+        <input class="toctree-checkbox" id="toctree-checkbox-2"
+        name="toctree-checkbox-2" role="switch" type="checkbox" checked><label
+        for="toctree-checkbox-2">
+        <div class="visually-hidden">Toggle child pages in
+        navigation</div><i class="icon"><svg><use
+        href="#svg-arrow-right"></use></svg></i></label>
+        <ul>
+        <li><a class="reference internal hov"
+        href="Training2Module1.html">placeholder</a></li>
+        <li><a class="reference internal hov"
+        href="Training2Module2.html">placeholder</a></li>
+        <li><a class="reference internal hov"
+        href="Training2Module3.html">placeholder</a></li>
+        <li><a class="reference internal hov"
+        href="Training2Module4.html">placeholder</a></li>
+        </ul>
+        </li>
+      </ul>
+      </script>
+      </div>
+      </div>
+      </div>
+      </div>
+      </aside
+
+      <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
+        <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="workshop-4-introduction-to-remote-sensing-ii">
+<h1>Workshop 4: Introduction to Remote Sensing - II<a class="headerlink" href="#workshop-4-introduction-to-remote-sensing-ii" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p><strong>Instructor</strong>: <a class="reference external" href="https://abe.ufl.edu/people/faculty/aditya-singh/">Dr. Aditya Singh</a> (<span class="raw-html-m2r"><ins>aditya01@<i></i>ufl.edu</ins></span>) <span class="raw-html-m2r"><br></span>
+<strong>Date</strong>:<span class="raw-html-m2r"><br></span>
+<strong>Co-authors</strong>:</p>
+<p>The fourth GALUP workshop aims at applying skills learned in the second workshop -Introduction to Remote Sensing using Google Earth Engine (GEE) for further analysis. The participants will learn basics in Time Series Analysis and Change Detection and apply this to land use studies and analysis. This workshop is the second phase toward understanding how RS data can be used for land-use assessments.</p>
+</div></blockquote>
+<section id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Time Series Analysis <span class="raw-html-m2r"><br></span></p></li>
+<li><p>Land cover change detection <span class="raw-html-m2r"><br></span></p></li>
+<li><p>Advanced spatial analysis <span class="raw-html-m2r"><br></span></p></li>
+</ul>
+</section>
+</section>
+<section id="a-recap-of-introduction-to-satellite-remote-sensing-i">
+<h1>A recap of Introduction to Satellite Remote Sensing I<a class="headerlink" href="#a-recap-of-introduction-to-satellite-remote-sensing-i" title="Permalink to this headline">#</a></h1>
+<section id="what-did-we-learn">
+<h2>1. What did we learn<a class="headerlink" href="#what-did-we-learn" title="Permalink to this headline">#</a></h2>
+<section id="what-is-remote-sensing">
+<h3>What is Remote Sensing<a class="headerlink" href="#what-is-remote-sensing" title="Permalink to this headline">#</a></h3>
+<p><strong>Remote sensing</strong> is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation<span class="raw-html-m2r"><sup>1</sup></span>. Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during World War II. Since then, detectors have been expanded to obtain information from most of the bands in the EM spectrum, with a variety of applications spanning from military use to agriculture. <span class="raw-html-m2r"><br></span></p>
+</section>
+<section id="types-of-resolutions-br">
+<h3>Types of Resolutions: <span class="raw-html-m2r"><br></span><a class="headerlink" href="#types-of-resolutions-br" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Spatial resolution</strong> describes how far apart two targets have to be so that they are detected as separate signals.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>Temporal resolution</strong> describes how often a sensor observes the same target . <span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>Radiometric resolution</strong> describes the number of wavelengths observed. For example, in the Figures below, a multispectral sensor observing about 10s of discrete bands and a hyperspectral sensor observing 100s of bands in the optical/NIR region.<span class="raw-html-m2r"><br></span></p></li>
+</ul>
+<p><span class="raw-html-m2r"><br/></span></p>
+<p align="center"> <b> Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right) </b> <p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87503837/133636464-24493df3-1c5d-405f-b7ec-10fe64cec5e7.png" width="400" height="220"><img src="https://user-images.githubusercontent.com/87503837/133636485-93336e1a-214b-4897-b1ca-c1206879b4e1.png" width="400" height="220">
+ </p><p><span class="raw-html-m2r"><br/></span></p>
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/87503837/130195843-a8aea0e9-def9-40c4-80ce-b562fd56e918.png"/>
+</p> <br/>
+
+### Data Sources
+Satellite data can be obtained from multiple sources, some important repositories are:
+- <a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a>
+- <a href="https://search.earthdata.nasa.gov/search?ac=true">NASA Earthdata Search</a>
+- <a href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a>
+- <a href="https://scihub.copernicus.eu/dhus/#/home">Copernicus Open Access Hub</a>
+<br>
+
+## 2. Setting up GEE
+Please request an account with Google Earth Engine (GEE) as follows:
+- Go to the GEE webpage [here](https://earthengine.google.com/)
+- Select “Sign Up” at the top right of the page and input institution and intention for use (e.g. using remote sensing datasets for land use suitability modeling).
+
+:pushpin: Approval may not happen immediately, so please be sure to sign up in advance of the workshop to provide a few days for completion.
+
+## 3. Exploring GEE Interface
+
+The figure below shows general interface functions for GEE. Further description of the components of the Figure can be found [here](https://github.com/SERVIR-WA/GALUP/wiki/GEE-Interface).
+
+![GEEinterface](https://user-images.githubusercontent.com/84922404/132246323-4b2d7dee-6cdc-4828-aa9a-b3ab4193ffa5.png)
+
+:pushpin: In this workshop, we will be programming in the GEE [code editor](https://code.earthengine.google.com/) that uses the JavaScript language. There are extra [resources](https://developers.google.com/earth-engine/tutorials/tutorial_api_01) available from Google to introduce the JavaScript Application Programming Interface (API).
+
+## 4. RS Indices
+**Remote sensing indices** (or spectral indices) are arithmentic combinations of reflectance at two or more bands that help provide measurable estimates of the relative abundance of indicators of interest. Vegetation indices (such as the normalized difference vegetation index: NDVI) are the most widely known, but indices can be formulated for tracking burn areas, exposed soil or built-up areas.
+- Spectral/Image indices are generally calculated using simple mathematical transformations (addition, subtraction, division) conducted on satellite bands of specific wavelength regions. Values of image indices can range from -1 - +1 (normalized difference indices), to arbitrary scales for other ratio-based indices. See <a href="https://www.usgs.gov/core-science-systems/nli/landsat/landsat-surface-reflectance-derived-spectral-indices?qt-science_support_page_related_con=0#qt-science_support_page_related_con">this link</a> for a good introduction to indices that can be obtained using Landsat data.
+
+- Some commonly used RS indices include
+      <blockquote>
+      Normalized Difference Vegetation Index (NDVI)<br>
+      Enhanced Vegetation Index (EVI)<br>
+      Soil Adjusted Vegetation Index (SAVI)<br>
+      Modified Soil Adjusted Vegetation Index (MSAVI)<br>
+      Normalized Difference Moisture Index (NDMI)<br>
+      Normalized Burn Ratio (NBR)<br>
+      Normalized Burn Ratio 2 (NBR2)<br>
+      Normalized Difference Snow Index (NDSI)<br>
+      </blockquote>
+
+
+- The Table below provides reflectances used to calculate the above indices.
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87503837/142231637-77253803-79a2-4f34-939a-f8d234d796bb.png" height="50%" width="50%">
+</p><dl class="field-list simple">
+<dt class="field-odd">pushpin</dt>
+<dd class="field-odd"><p>A database of remote sensing indices and their respective sensors and areas of application are compiled <a class="reference external" href="https://www.indexdatabase.de/">here</a>.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="a-recap-video">
+<h2>5. A Recap Video<a class="headerlink" href="#a-recap-video" title="Permalink to this headline">#</a></h2>
+<p align="center">
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/fdf9ea02f3f247969e0a56bd8a1909411d" target="_blank">
+    <img src="https://user-images.githubusercontent.com/85199074/200466106-3a918af2-601f-4d38-867e-6cdf50bd79f7.png" alt= "GEE Tutorial" width="800">
+  </a>
+</p><p><strong>Recap ‘search_and_display’ and ‘image_indices_environmental_data’</strong></p>
+<ul class="simple">
+<li><p>Define a <strong>geometry of interest</strong></p></li>
+<li><p><strong>ST_DATE and EN_DATE</strong> give time range</p></li>
+<li><p><strong>IMG_L#</strong> give image collection</p></li>
+<li><p><strong>filterBounds</strong> filters by area of interest</p></li>
+<li><p><strong>filterDate</strong> filters by time range</p></li>
+<li><p><strong>filterMetadata(‘CLOUD_COVER’)</strong> filters cloudy images out</p></li>
+<li><p><strong>visParams</strong> provides visualization parameters to determine the color display of the output image</p></li>
+<li><p><strong>Map.centerObject</strong> centers the focus of the map on the area of interest</p></li>
+<li><p><strong>Map.addLayer</strong> adds an image or image collection to the map</p></li>
+</ul>
+<p>Functions of getLSAT, cloudMask, getNDVI are defined with input and filters</p>
+<ul class="simple">
+<li><p><strong>getLSAT</strong> has inputs of a Landsat image collection, geometry, start date, and end date. It retrieves the Landsat image collection and filters it by geometry, time range and cloud cover. The cloud cover is filtered through a cloud mask. Band names of the images in the collection are selected and renamed to be clearer, and Landsat 8 images have a different order of band names since its bands differ slightly from 5 and 7.</p></li>
+<li><p><strong>cloudMask</strong> has an input of an image and is used in get LSAT and extracts quality bits and ensures that cloudy data is removed from the image collection</p></li>
+<li><p><strong>getNDVI</strong> has an input of an image and selects NIR and Red bands from the image given. It then calculates the normalized difference of these values and returns an image with NDVI</p></li>
+</ul>
+<p>In the main part of the code, and <strong>Landsat image (IMG_LT)</strong> is created and the <strong>median image extracted (MED_LT)</strong>. Then an index (e.g., NDVI) is selected from the <strong>image collection (IMG_IND)</strong>, and the <strong>median image of the index collection is extracted (MED_IND)</strong>. These images are mapped, and a chart is created to show the index over time. This process can be conducted on NDVI, elevation, or land surface temperature</p>
+</section>
+<section id="assignment-submission-and-help">
+<h2>6. Assignment Submission and Help<a class="headerlink" href="#assignment-submission-and-help" title="Permalink to this headline">#</a></h2>
+<p>The participants will have to sign into their GitHub accounts to submit assignments. Below is a video explaining how to submit the module assignments and how to request help through GitHub. Note: It may be convenient to open videos in the workshop in a new tab or window to easily navigate the GitHub page.</p>
+<p align="center">
+  <a href="https://mediasite.video.ufl.edu/Mediasite/Play/9741afe237094a77aff3acbf6c2df8a91d" target="_blank">
+    <img src="https://user-images.githubusercontent.com/84922404/139679866-11650dd6-855f-4420-82c1-fa0f4071ee37.png" alt= "GEE Tutorial" width="800">
+  </a>
+</p></section>
+<section id="pre-workshop-exercise">
+<h2>7. Pre-Workshop Exercise<a class="headerlink" href="#pre-workshop-exercise" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Please complete the <a class="reference external" href="https://github.com/ecodynlab/GALUP/blob/main/ExercisesM2/Exercise0.md">[Exercise 0]</a></p></li>
+<li><p>Please submit your exercise <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=Achidago&amp;labels=Exercise+W4M0&amp;template=Exercise0Template.md&amp;title=Workshop+4+exercise+0+%5Breplace+with+your+name%5D">[here]</a></p></li>
+</ul>
+</section>
+<section id="what-s-next">
+<h2>8. What’s Next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">#</a></h2>
+<p>Module 1 - <a class="reference external" href="module1.md">Time Series Analysis</a>
+Module 2 - <a class="reference external" href="module2.md">Change Detection</a></p>
+</section>
+<section id="other-resources">
+<h2>9. Other Resources<a class="headerlink" href="#other-resources" title="Permalink to this headline">#</a></h2>
+<p>Kindly refer to Workshop 2 - <a class="reference external" href="https://servir-wa.github.io/GALUP/html/Training2ReadMe.html">Introduction to Satelite Remote Senisng I</a></p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, The GALUP Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+      </div>
+    </div>
+    <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+      <div class="toc-sticky toc-scroll containme2">
+      <div class="toc-title-container">
+      <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Workshop 4: Introduction to Remote Sensing - II</a><ul>
+<li><a class="reference internal" href="#objectives">Objectives</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-recap-of-introduction-to-satellite-remote-sensing-i">A recap of Introduction to Satellite Remote Sensing I</a><ul>
+<li><a class="reference internal" href="#what-did-we-learn">1. What did we learn</a><ul>
+<li><a class="reference internal" href="#what-is-remote-sensing">What is Remote Sensing</a></li>
+<li><a class="reference internal" href="#types-of-resolutions-br">Types of Resolutions: <span class="raw-html-m2r"><br></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-recap-video">5. A Recap Video</a></li>
+<li><a class="reference internal" href="#assignment-submission-and-help">6. Assignment Submission and Help</a></li>
+<li><a class="reference internal" href="#pre-workshop-exercise">7. Pre-Workshop Exercise</a></li>
+<li><a class="reference internal" href="#what-s-next">8. What’s Next?</a></li>
+<li><a class="reference internal" href="#other-resources">9. Other Resources</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
