@@ -294,25 +294,25 @@
 <h1>Workshop 4: Introduction to Remote Sensing II<a class="headerlink" href="#workshop-4-introduction-to-remote-sensing-ii" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div><p><strong>Instructor</strong>: <a class="reference external" href="https://abe.ufl.edu/people/faculty/aditya-singh/">Dr. Aditya Singh</a> (<span class="raw-html-m2r"><ins>aditya01@<i></i>ufl.edu</ins></span>) <span class="raw-html-m2r"><br></span>
-<strong>Co-authors</strong>: Silas Achidago (<u>s.achidago@ufl.edu</u>), Julie Peeling (<u>juliepeeling@ufl.edu</u>)</p>
+<strong>Co-authors</strong>: Silas Achidago (<u>s.achidago@ufl.edu</u>) and Julie Peeling (<u>juliepeeling@ufl.edu</u>)</p>
 </blockquote>
 <h2>Goal</h2>
-<p>The fourth GALUP workshop aims at applying skills learned in the second workshop -Introduction to Remote Sensing using Google Earth Engine (GEE) for further analysis. The participants will learn basics in Time Series Analysis and Change Detection and apply this to land use studies and analysis. This workshop is the second phase toward understanding how RS data can be used for land-use assessments.</p>
+<p>The fourth GALUP workshop aims at applying skills learned in the second workshop -Introduction to Remote Sensing I using Google Earth Engine (GEE) for further analysis. The participants will learn basics in Time Series Analysis and Change Detection and apply this to land use studies. This workshop is the second phase toward understanding how Remote Sensing data can be used for land-use assessments.</p>
 <section id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Time Series Analysis <span class="raw-html-m2r"><br></span></p></li>
-<li><p>Change detection <span class="raw-html-m2r"><br></span></p></li>
+<li><p>Change Detection <span class="raw-html-m2r"><br></span></p></li>
 </ul>
 </section>
 </section>
 <section id="a-recap-of-introduction-to-satellite-remote-sensing-i">
-<h1>A Recap of <a href="https://servir-wa.github.io/GALUP/html/Training2ReadMe.html">Introduction to Satellite Remote Sensing I</a><a class="headerlink" href="#a-recap-of-introduction-to-satellite-remote-sensing-i" title="Permalink to this headline">#</a></h1>
+<h1>Recap - <a href="https://servir-wa.github.io/GALUP/html/Training2ReadMe.html">Introduction to Satellite Remote Sensing I</a><a class="headerlink" href="#a-recap-of-introduction-to-satellite-remote-sensing-i" title="Permalink to this headline">#</a></h1>
 <section id="what-did-we-learn">
 <h2>1. What Have We Learned So Far<a class="headerlink" href="#what-did-we-learn" title="Permalink to this headline">#</a></h2>
 <section id="what-is-remote-sensing">
 <h3>What is Remote Sensing<a class="headerlink" href="#what-is-remote-sensing" title="Permalink to this headline">#</a></h3>
-<p><strong>Remote sensing</strong> is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation<span class="raw-html-m2r"><sup>1</sup></span>. Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during World War II. Since then, detectors have been expanded to obtain information from most of the bands in the EM spectrum, with a variety of applications spanning from military use to agriculture. <span class="raw-html-m2r"><br></span></p>
+<p><strong>Remote Sensing (RS)</strong> is the science and art of obtaining information about an object, area, or phenomenon through the analysis of data acquired by a device that is not in contact with the object, area, or phenomenon under investigation. Modern day remote sensing started with the advent of radar, sonar, and thermal infrared detection systems during World War II. Since then, detectors have been expanded to obtain information from most of the bands in the electromagnetic spectrum, with a variety of applications spanning from military use to agriculture. <span class="raw-html-m2r"><br></span></p>
 </section>
 <section id="types-of-resolutions-br">
 <h3>Types of Resolutions: <span class="raw-html-m2r"></span><a class="headerlink" href="#types-of-resolutions-br" title="Permalink to this headline">#</a></h3>
@@ -320,7 +320,7 @@
 <li><p><strong>Spatial resolution</strong> describes how far apart two targets have to be so that they are detected as separate signals.<span class="raw-html-m2r"><br></span></p></li>
 <li><p><strong>Temporal resolution</strong> describes how often a sensor observes the same target. <span class="raw-html-m2r"><br></span></p></li>
 <li><p><strong>Spectral resolution</strong> describes the number of wavelengths observed. For example, in the Figures below, a multispectral sensor collects data in about 5-10 discrete bands, and a hyperspectral sensor samples the same spectrum across over 200 bands in the optical-NIR-SWIR spectrum.</p></li>
-<li><strong>Radiometric resolution</strong>resolution describes the level of digitization of a recorded signal. For example, a 1-bit image can resolve two gray levels (i.e. 0 = black, 1 = white), an 8-bit image (for e.g., Landsat 4, 5) can resolve 256 gray levels, a 12-bit image (e.g., Landsat 8) can resolve 4096 gray levels.</li>
+<li><strong>Radiometric resolution</strong> describes the level of digitization of a recorded signal. For example, a 1-bit image can resolve two gray levels (i.e. 0 = black, 1 = white), an 8-bit image (for e.g., Landsat 4, 5) can resolve 256 gray levels, a 12-bit image (e.g., Landsat 8) can resolve 4096 gray levels.</li>
 </ul>
 <p><span class="raw-html-m2r"><br/></span></p>
 <p align="center"> <b> Spectral sampling: Multispectral sensors (left) and Hyperspectral sensors (right) </b> <p>
@@ -357,13 +357,13 @@ Please request an account with Google Earth Engine (GEE) as follows:
 
 <img src=../GithubPagesImages/GEE_Interface.png>
 
-&#128204; In this workshop, we will be writing code in the GEE <a href="https://code.earthengine.google.com"> code editor</a> that uses JavaScript language. There are extra <a href='https://developers.google.com/earth-engine/tutorials/tutorial_api_01'>resources</a> available from Googleon the JavaScript Application Programming Interface (API).</p>
+&#128204; In this workshop, we will be writing codes in the GEE <a href="https://code.earthengine.google.com"> code editor</a> that uses JavaScript language. There are extra <a href='https://developers.google.com/earth-engine/tutorials/tutorial_api_01'>resources</a> available from Google on the JavaScript Application Programming Interface (API).</p>
 </section>
 
 <section id="indices">
-<h2>4. RS Indices<a class="headerlink" href="#indices" title="Permalink to this headline">#</a></h2>
+<h2>4. Remote Sensing Indices<a class="headerlink" href="#indices" title="Permalink to this headline">#</a></h2>
 
-<b>Remote sensing indices</b> (or spectral indices) are arithmentic combinations of reflectance at two or more bands that help provide measurable estimates of the relative abundance of indicators of interest. Vegetation indices (such as the normalized difference vegetation index: NDVI) are the most widely known, but indices can be formulated for tracking burn areas, exposed soil or built-up areas.
+<p><b>Remote sensing indices</b> (or spectral indices) are arithmentic combinations of reflectance at two or more bands that help provide measurable estimates of the relative abundance of indicators of interest. Vegetation indices (such as the normalized difference vegetation index: NDVI) are the most widely known, but indices can be formulated for tracking burn areas, exposed soil or built-up areas.</p>
 <ul>
 <li>Spectral/Image indices are generally calculated using simple mathematical transformations (addition, subtraction, division) conducted on satellite bands of specific wavelength regions. Values of image indices can range from -1 - +1 (normalized difference indices), to arbitrary scales for other ratio-based indices. See <a href="https://www.usgs.gov/core-science-systems/nli/landsat/landsat-surface-reflectance-derived-spectral-indices?qt-science_support_page_related_con=0#qt-science_support_page_related_con">this link</a> for a good introduction to indices that can be obtained using Landsat data.</li>
 <!-- <li>Some commonly used RS indices include</li>
@@ -398,11 +398,11 @@ Please request an account with Google Earth Engine (GEE) as follows:
   </a>
 </p><p><strong>Steps involved for searching and displaying image and environmental data and calculating image indices:</strong></p>
 <ul class="simple">
-<li><p>Define a <strong>geometry of interest</strong> by either drawing on the map, or importing a ESRI shapefile as an asset</p></li>
-<li><p>Define variables <strong>ST_DATE and EN_DATE</strong> to denote the time range of interest</p></li>
+<li><p>Define a <strong>geometry of interest</strong> by either drawing on the map, or importing an ESRI shapefile as an asset</p></li>
+<li><p>Define variables <strong>ST_DATE </strong> and <strong>EN_DATE</strong> to denote the time range of interest</p></li>
 <li><p>The variable <strong>IMG_L#</strong> will contain the image collection returned</p></li>
 <li><p>The function <strong>filterBounds</strong> filters all images to only those that intersect the geometry of interest</p></li>
-<li><p>The function <strong>filterDate</strong> filterDate filters all images returned by the time range specified by <strong>ST_DATE </strong>and <strong>EN_DATE</strong></p></li>
+<li><p>The function <strong>filterDate</strong> filters all images returned by the time range specified by <strong>ST_DATE </strong>and <strong>EN_DATE</strong></p></li>
 <li><p>The function <strong>filterMetadata(‘CLOUD_COVER’)</strong> looks up the metadata stored in the images, and filters images with <strong>'‘CLOUD_COVER’</strong> beyond the specified limit</p></li>
 <li><p>The variable <strong>visParams</strong> provides visualization parameters to determine display of the output image</p></li>
 <li><p>The function <strong>Map.centerObject</strong> centers the focus of the map on the area of interest</p></li>
@@ -410,8 +410,8 @@ Please request an account with Google Earth Engine (GEE) as follows:
 </ul>
 <p>Description of functions used in the script:</p>
 <ul class="simple">
-<li><p>The user-defined function <strong>getLSAT</strong> takes an ImageCollection of Landsat images, start and dates as variables. It retrieves the Landsat ImageCollection and filters it by geometry, time range and cloud cover. The cloud cover is filtered through a cloud masking function defined below (<strong>cloudMask</strong>) Band names of the images in the collection are renamed to be consistent between Landsat 4, 5, 7 and 8.</p></li>
-<li><p>The user-defined function <strong>cloudMask</strong> takes a Landsat Image as input, extract the image QA/QC bitmap, and masks out cloudy or shadowed pixel.</p></li>
+<li><p>The user-defined function <strong>getLSAT</strong> takes an ImageCollection of Landsat images, start and dates as variables. It retrieves the Landsat ImageCollection and filters it by geometry, time range, and cloud cover. The cloud cover is filtered through a cloud masking function defined below (<strong>cloudMask</strong>) Band names of the images in the collection are renamed to be consistent between Landsat 4, 5, 7 and 8.</p></li>
+<li><p>The user-defined function <strong>cloudMask</strong> takes a Landsat Image as input, extracts the image QA/QC bitmap, and masks out cloudy or shadowed pixels.</p></li>
 <li><p>The user-defined <strong>getNDVI</strong> takes a Landsat image as input, selects the NIR and Red bands, and calculates and returns the normalized difference index.</p></li>
 </ul>
 <p>Overall flow of the script:</p>
@@ -434,7 +434,7 @@ Please request an account with Google Earth Engine (GEE) as follows:
 <h2>7. Pre-Workshop Exercise<a class="headerlink" href="#pre-workshop-exercise" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Please complete the <a class="reference external" href="https://github.com/ecodynlab/GALUP/blob/main/ExercisesM2/Exercise0.md">[Exercise 0]</a></p></li>
-<li><p>Please submit your exercise <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=Achidago&labels=Exercise+W4M0&template=w4m0-exercise-submission.md&title=Workshop+4+exercise+0+%5Breplace+with+your+name%5D">[here]</a></p></li>
+<li><p>Please submit your exercise before November 16 <a class="reference external" href="https://github.com/SERVIR-WA/GALUP/issues/new?assignees=Achidago&labels=Exercise+W4M0&template=w4m0-exercise-submission.md&title=Workshop+4+exercise+0+%5Breplace+with+your+name%5D">[here]</a></p></li>
 </ul>
 </section>
 <section id="what-s-next">
