@@ -288,7 +288,7 @@
 <ul class="simple">
 <li><p>Time Series Analysis Concept and Fundamentals</p></li>
 <li><p>Time Series Analysis Methods</p></li>
-<li><p>Techniques for Time Series Analysis in GEE</p></li>
+<li><p>Techniques for Time Series Analysis in GEE (Google Earth Engine)</p></li>
 </ul>
 <section id="introduction-to-time-series-analysis">
 <h2>1. Introduction to Time Series Analysis<a class="headerlink" href="#introduction-to-time-series-analysis" title="Permalink to this heading">#</a></h2>
@@ -303,9 +303,9 @@
 <p align="center">
 <img src="https://www.mdpi.com/urbansci/urbansci-03-00026/article_deploy/html/images/urbansci-03-00026-g006.png"/>
 </p>
-<sub> Landcover changes for Greater Accra Metropolitan Area (GAMA) from the year 1991 to 2015.</sub>
+<sub> Landcover changes for Greater Accra Metropolitan Area (GAMA) from the year 1991 to 2015.
 
-(<a href="https://www.mdpi.com/2413-8851/3/1/26#">Source</a>)<br/>
+(<a href="https://www.mdpi.com/2413-8851/3/1/26#">Source</a>)<br/></sub>
 
 
 <h2> 2. Basics of Time Series Analysis<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h2>
@@ -315,28 +315,25 @@
 <li><strong>Spatio-temporal data</strong> are data that describe the state of objects or processes across both space and time.</li>
 </ul>
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/87503837/151854688-12a69e04-c870-4273-88e6-4c30e7b9d7d5.png"/>
-</p><p>(<a class="reference external" href="https://doi.org/10.1186/s40965-017-0038-z">Source</a>)<span class="raw-html-m2r"><br/></span>
-MODIS NDVI and EVI</p>
+<img src="https://user-images.githubusercontent.com/87503837/151854688-12a69e04-c870-4273-88e6-4c30e7b9d7d5.png"/><br>
+<sub>MODIS NDVI and EVI (<a class="reference external" href="https://doi.org/10.1186/s40965-017-0038-z">Source</a>)</sub>
 <p><strong>Using Remote Sensing to Conduct Time Series Analysis:</strong></p>
 <ul class="simple">
-<li><p>In the context of remote sensing, time series analysis allow us to measure and quantify changes in spatio-temporal processes from space,</p></li>
+<li><p>In the context of remote sensing, time series analysis allows us to measure and quantify changes in spatio-temporal processes from space.</p></li>
 <li><p>For effective monitoring to occur, data needs to: 1) have suitable spatial and spectral resolution to detect the phenomena, and 2) have a frequent-enough repeat interval to detect change.</p></li>
-<li><p>Assuming the object is detectable using a specific sensor, the timing of acquisition needs to be tuned to the rate of the process being studied. For example, discrete event detections (such as floods or fires) can be conducted by collecting images before and after that event has occurred. Images need to be spaced close in time for assessing rapidly changing phenomena, such as vegetation greenup after rain. For monitoring long-term changes, data can be aggregated over the time domain of interest, and then assessed on annual or monthly bases (urban expansion, temperature rise).</p></li>
+<li><p>Assuming the object is detectable using a specific sensor, the timing of acquisition needs to be tuned to the rate of the process being studied. For example, discrete event detections (such as floods or fires) can be conducted by collecting images before and after that event has occurred. Images need to be closely spaced in time for assessing rapidly changing phenomena, such as vegetation greenup after rain. For monitoring long-term changes, data can be aggregated over the time domain of interest, and then assessed on annual or monthly basis (urban expansion, temperature rise, etc.).</p></li>
 <li><p>The availability of satellite data over different spatio-temporal resolutions therefore limits the kinds of proceses that can be studied.</p></li>
 <li><p>Some trends may need to be decomposed into their underlying components for generating insights into the dynamics. For example, temperature usually has a strong seasonal component in addition to potentially annual components in some regions.</p></li>
 </ul>
 <p><strong>Types of Time Series Analysis</strong></p>
 <ul class="simple">
 <li><p><strong>Land cover trends:</strong>
-At the simplest, the relative change in the proportion of land cover types across time. When land cover maps are available, the user can calculate the proportions of landcover, and potentially aggregate them over administrative regions to generate a picture of differing trends in urbanization, agricultural expansion, or deforestation etc. Estimates of trends of land cover change are generally important for administrative and management applications.</p></li>
+At the simplest, it is the relative change in the proportion of land cover types across time. When land cover maps are available, the user can calculate the proportions of landcover, and potentially aggregate them over administrative regions to generate a picture of differing trends in urbanization, agricultural expansion, or deforestation etc. Estimates of trends of land cover change are generally important for administrative and management applications.</p></li>
 </ul>
 <p><span class="raw-html-m2r"><p align="center">
 <img src="https://www.mdpi.com/land/land-09-00300/article_deploy/html/images/land-09-00300-g003.png"/>
 </p></span>
-<span class="raw-html-m2r"><sub> Maps showing land cover change (LCC) characteristics in Kumasi (1986–2018)a. </sub></span></p>
-<p>(<a class="reference external" href="https://www.mdpi.com/2073-445X/9/9/300/htm#">Source</a>)<span class="raw-html-m2r"><br/></span></p>
+<sub> Maps showing land cover change (LCC) characteristics in Kumasi (1986–2018) (<a class="reference external" href="https://www.mdpi.com/2073-445X/9/9/300/htm#">Source</a>)</sub></sub>
 <ul class="simple">
 <li><p><strong>Seasonal/Annual Trends:</strong>
 Whereas land cover change can be considered a ‘discrete’ change in the state of a pixel or parcel of land, many processes vary continuously across both time and space. Temperature is a good example. Time series of temperature measurements can be analyzed for both seasonal variation (i.e. minimum/maximum annual temperature) or when strung together across many years, as annual trends (i.e. climate change).</p></li>
@@ -344,26 +341,25 @@ Whereas land cover change can be considered a ‘discrete’ change in the state
 <p><span class="raw-html-m2r"><p align="center">
 <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs12665-022-10481-y/MediaObjects/12665_2022_10481_Fig9_HTML.png?as=webp"/>
 </p></span>
-<span class="raw-html-m2r"><sub> Temperature analysis over the study period (1970–2020) in Southwestern Ghana </sub></span></p>
-<p>(<a class="reference external" href="https://link.springer.com/article/10.1007/s12665-022-10481-y/figures/9">Source</a>)<span class="raw-html-m2r"><br/></span></p>
+<span class="raw-html-m2r"><sub> Temperature analysis over the study period (1970–2020) in Southwestern Ghana (<a class="reference external" href="https://link.springer.com/article/10.1007/s12665-022-10481-y/figures/9">Source</a>)<span class="raw-html-m2r"><br/></span></p>
 </section>
 <section id="methods-for-change-mapping-and-time-series-analysis">
 <h2>3. Methods for Change Mapping and Time Series Analysis<a class="headerlink" href="#methods-for-change-mapping-and-time-series-analysis" title="Permalink to this heading">#</a></h2>
-<p>Several approaches can followed depending on the application context, for example:</p>
+<p>Several approaches can be followed depending on the application context, for example:</p>
 <ul class="simple">
 <li><p><strong>Linear Models</strong> -
 Linear time series analysis techniques are predicated on the assumption that the underlying process changes at a constant rate. For example, assessing the annual rate of change in land surface temperature across a city. In general, this involves fitting a straight line through time series of the observations of interest and evaluating the magnitude and direction of the slope of the fit.</p></li>
 <li><p><strong>Nonlinear Models</strong> -
 Nonlinear time series models are employed when the time series cannot be adequately described by a straight line. For example, indicators of vegetation greenness usually have a strong seasonal component. Fitting a straight line through the data ignores intra-annual variations that might be important.
-<strong>Harmonic models</strong>, also termed spectral analysis or Fourier analysis, allow the decomposition of the periodic signal into a series of sinusoidal functions, each defined by unique amplitude and phase values. See <a class="reference external" href="https://www.isprs.org/proceedings/xxxiii/congress/part4/384_xxxiii-part4.pdf">this paper</a> for an excellent example.<span class="raw-html-m2r"><br/></span>
-<strong>Breakpoint Models</strong> - Allow the automatic detection of breaks in time series data, and potentially the fitting of different linear and nonlinear models on either side of the break.</p></li>
+<li><strong>Harmonic Models</strong>, also termed spectral analysis or Fourier analysis, allow the decomposition of the periodic signal into a series of sinusoidal functions, each defined by unique amplitude and phase values. See <a class="reference external" href="https://www.isprs.org/proceedings/xxxiii/congress/part4/384_xxxiii-part4.pdf">this paper</a> for an excellent example.<span class="raw-html-m2r"><br/></span></li>
+<li><strong>Breakpoint Models</strong> - Allows the automatic detection of breaks in time series data, and potentially the fitting of different linear and nonlinear models on either side of the break.</p></li>
 </ul>
 </section>
 <section id="time-series-analysis-in-gee">
 <h2>4. Time Series Analysis in GEE<a class="headerlink" href="#time-series-analysis-in-gee" title="Permalink to this heading">#</a></h2>
 <p>GEE has the functionality to derive both linear and harmonic trends from satellite imagery and environmental data. The techniques can be mixed and matched to model both simple trends, and to decompose complex trends into seasonal and annual components, and to detect and fit breakpoint models.
-For the purposes of this training, we will focus on developing estimates of simple linear trends across regions. The user is directed to documentation on <a class="reference external" href="https://gee-ccdc-tools.readthedocs.io/en/latest/">CCDC</a> for a more complex treatment of harmonic time series components for land cover mapping, and to <a class="reference external" href="https://emapr.github.io/LT-GEE/">LandTrendr</a> for utilizing breakpoints for detection landcover change.
-We will follow the following steps:</p>
+For the purposes of this training, we will focus on developing estimates of simple linear trends across regions. The user is directed to documentation on <a class="reference external" href="https://gee-ccdc-tools.readthedocs.io/en/latest/">CCDC</a> for a more complex treatment of harmonic time series components for land cover mapping, and to <a class="reference external" href="https://emapr.github.io/LT-GEE/">LandTrendr</a> for utilizing breakpoints for detecting landcover change.
+We will follow the steps below:</p>
 <ul class="simple">
 <li><p>Identify and collect a time series of interest,</p></li>
 <li><p>Find a location of interest, extract a time series and plot a chart,</p></li>
@@ -372,24 +368,22 @@ We will follow the following steps:</p>
 <span class="raw-html-m2r"><p align="center">
 <img src="https://developers.google.com/static/earth-engine/images/Charts_image_collection_05.svg"/>
 </p></span>
-<span class="raw-html-m2r"><sub> Example chart of time series NDVI data from MODIS plotted in GEE from 2010 to 2019. </sub></span></p></li>
-</ul>
-<p>(<a class="reference external" href="https://developers.google.com/earth-engine/guides/charts_image_collection">Source</a>)<span class="raw-html-m2r"><br/></span></p>
+<span class="raw-html-m2r"><sub> Example chart of time series NDVI data from MODIS plotted in GEE from 2010 to 2019. (<a class="reference external" href="https://developers.google.com/earth-engine/guides/charts_image_collection">Source</a>)<span class="raw-html-m2r"><br/></span></p>
 </section>
 <section id="excercises-br">
-<h2>5. Excercises<span class="raw-html-m2r"><br/></span><a class="headerlink" href="#excercises-br" title="Permalink to this heading">#</a></h2>
+<h2>5. Exercises<span class="raw-html-m2r"></span><a class="headerlink" href="#excercises-br" title="Permalink to this heading">#</a></h2>
 <p><strong>5.1 Extracting and exploring time series</strong><span class="raw-html-m2r"><br/></span></p>
 <ul class="simple">
 <li><p>In this example, we will use GEE to extract a single time series from an ImageCollection and will open it in Microsoft Excel (or software of your choice).  We will manually fit a linear trendline to this time series and extract the slope.</p></li>
 <li><p>If needed, use <a class="reference external" href="https://github.com/ecodynlab/GALUP/wiki/Scripts#02_image_indices_environmental_data">this script</a> to refresh your skills in finding, filtering, and clipping images,</p></li>
 <li><p>Copy the script <a class="reference external" href="https://github.com/ecodynlab/GALUP/wiki/Scripts#03_time_series_analysis_example">Time Series Analysis Example</a> and paste into GEE editor,</p></li>
-<li><p>variables <strong>ST_DATE</strong> and <strong>EN_DATE</strong> specify the start and end dates,</p></li>
-<li><p>variable <strong>MOD13Q1</strong> is the MODIS 16-day 500m Global NDVI/EVI product</p></li>
-<li><p>variable <strong>imgNDV</strong> filters all MODIS Data to get NDVI images and clip them to the region of interest.</p></li>
-<li><p>variable <strong>imgPET</strong> similarly filters all MOD16A2 Data to get PET images and clip them to the region of interest.</p></li>
-<li><p>the print statements let you inspect the contents of these image collecetions in the console.</p></li>
+<li><p>Variables <strong>ST_DATE</strong> and <strong>EN_DATE</strong> specify the start and end dates,</p></li>
+<li><p>Variable <strong>MOD13Q1</strong> is the MODIS 16-day 500m Global NDVI/EVI product</p></li>
+<li><p>Variable <strong>imgNDV</strong> filters all MODIS Data to get NDVI images and clip them to the region of interest.</p></li>
+<li><p>Variable <strong>imgPET</strong> similarly filters all MOD16A2 Data to get PET images and clip them to the region of interest.</p></li>
+<li><p>The print statements let you inspect the contents of these image collecetions in the console.</p></li>
 <li><p>On the charts generated in the console, click on the upper right corner to open the chart in a new window.</p></li>
-<li><p>Download the chart as an CSV sheet by clicking on the button in the upper right corner.</p></li>
+<li><p>Download the chart as a CSV sheet by clicking on the button in the upper right corner.</p></li>
 <li><p>Open this CSV in Microsoft Excel and fit a trendline to it.</p></li>
 <li><p>Please complete <a class="reference external" href="https://github.com/ecodynlab/GALUP/blob/main/ExercisesM2/Exercise1.md">Exercise 1</a></p></li>
 </ul>
@@ -397,17 +391,17 @@ We will follow the following steps:</p>
 <ul class="simple">
 <li><p>In this example, we will fit linear trends to all pixels across a large region and will assess how trends vary geographically for different parameters.</p></li>
 <li><p>Copy the script <a class="reference external" href="https://github.com/ecodynlab/GALUP/wiki/Scripts#04_time_series_linear_fit">Linear Time Series Fitting</a> and paste into GEE editor,</p></li>
-<li><p>variables <strong>ST_DATE</strong> and <strong>EN_DATE</strong> specify the start and end dates,</p></li>
-<li><p>function <strong>createTimeBand</strong> adds a ‘time band’ to any image. Think of this as adding the date column to your excel sheet. This will form the X-axis.</p></li>
-<li><p>variables <strong>ERA5_temp</strong> and <strong>ERA5_rain</strong> collect ERA5 reanalysis climatological data, filter dates set above, clip them to the region of interest, and add the time band.</p></li>
-<li><p>variable <strong>linearFitTemp</strong> fits the linear fitting ‘reducer’ to the stack of images. A ‘reducer’ is a function that takes information from all bands and computes a certain metric from it. Common reducers include mean, median, min, and max. The <strong>linearFit</strong> reducer fits a linear regression model for every stack of pixels against the time band, and outputs the scale (slope), and the offset (intercept) of the fitting line.</p></li>
+<li><p>Variables <strong>ST_DATE</strong> and <strong>EN_DATE</strong> specify the start and end dates,</p></li>
+<li><p>Function <strong>createTimeBand</strong> adds a ‘time band’ to any image. Think of this as adding the date column to your excel sheet. This will form the X-axis.</p></li>
+<li><p>Variables <strong>ERA5_temp</strong> and <strong>ERA5_rain</strong> collect ERA5 reanalysis climatological data, filter dates set above, clip them to the region of interest, and add the time band.</p></li>
+<li><p>Variable <strong>linearFitTemp</strong> fits the linear fitting ‘reducer’ to the stack of images. A ‘reducer’ is a function that takes information from all bands and computes a certain metric from it. Common reducers include mean, median, min, and max. The <strong>linearFit</strong> reducer fits a linear regression model for every stack of pixels against the time band, and outputs the scale (slope), and the offset (intercept) of the fitting line.</p></li>
 <li><p>Inspect the respective histograms to find the best visualization parameters for the map displayed.</p></li>
 <li><p>Please complete <a class="reference external" href="https://github.com/ecodynlab/GALUP/blob/main/ExercisesM2/Exercise2.md">Exercise 2</a></p></li>
 </ul>
 </section>
 <section id="what-s-next">
 <h2>6. What’s Next?<a class="headerlink" href="#what-s-next" title="Permalink to this heading">#</a></h2>
-<p>Module 2 - <a class="reference external" href="module2.md">Change Detection</a></p>
+<p>Module 2 - Change Detection</a></p>
 </section>
 <section id="other-useful-resources">
 <h2>7. Other Useful Resources<a class="headerlink" href="#other-useful-resources" title="Permalink to this heading">#</a></h2>
