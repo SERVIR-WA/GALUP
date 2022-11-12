@@ -40,7 +40,74 @@
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
-    
+
+<nav class="navbar shadow navbegone navbar-expand-lg short fixed-top
+navbar-themed">
+<div class="container-lg" id="banner">
+<!-- <div class="row"> -->
+<div class="col-lg-2">
+<a class="navbar-brand" href="../index.html">
+<img class="navbar-brand-logo"
+src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo"
+width="45">
+&nbsp;&nbsp;GALUP Training</a>
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav" aria-controls="navbarNav"
+aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+<div class="left collapse navbar-collapse padme navbottom"
+id="navbarNav">
+<!-- <div id="navbar-center"> -->
+<ul class="navbar-nav">
+<li class="nav-item hov">
+<a class="nav-link active" aria-current="page"
+href="pylusat.html">Install PyLUSATQ</a>
+</li>
+<li class="nav-item hov">
+<a class="nav-link active" aria-current="page"
+href="">Documentation</a>
+</li>
+<li class="nav-item hov">
+<a class="nav-link active" aria-current="page"
+href="#">Gallery</a>
+</li>
+<li class="nav-item hov">
+<a class="nav-link active" aria-current="page"
+href="#">Publication</a>
+</li>
+</ul>
+</div>
+<!-- </div> -->
+<div id="navbar-end">
+<div class="navbar-end-item navbottom">
+<ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/chjch/pylusat">
+<img
+src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+</a>
+</li>
+<li class="nav-item ">
+<a class="nav-link linkalign"
+href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank"
+title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+<label class="sr-only">GitHub</label></a>
+</li>
+<li class="nav-item">
+<a class="nav-link linkalign" href="https://twitter.com/galupghana"
+rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw
+fa-twitter"></i></span>
+<label class="sr-only">Twitter</label></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
@@ -114,8 +181,9 @@
 
 
 
-<div class="page">
-  <header class="mobile-header">
+<div class=”container-xl”>
+    <header class="mobile-header">
+      <div class="row">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
         <div class="visually-hidden">Toggle site navigation sidebar</div>
@@ -140,30 +208,69 @@
       </label>
     </div>
   </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
-  
-  <span class="sidebar-brand-text">GALUP  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  
-</div>
-</div>
-
+  <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+    <div class="toc-sticky containme">
+    <div class="sidebar-container ">
+      <div class="sidebar-sticky">
+        <a class="sidebar-brand" href="index.html">
+        </a>
+        <form class="sidebar-search-container" method="get" action="search.html" role="search">
+          <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+          <input type="hidden" name="check_keywords" value="yes">
+          <input type="hidden" name="area" value="default">
+        </form>
+    <div id="searchbox"></div>
+    <div class="sidebar-scroll">
+      <div class="sidebar-tree sidefont">
+        <ul>
+          <li class="has-children">
+            <a class="hov reference internal" href="Training1ReadMe.html"><b>Land-Use Suitability Analysis with QGIS Tools</b></a>
+            <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox">
+            <label for="toctree-checkbox-1">
+            <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+            <ul>
+              <li><a class="reference internal hov" href="Training1Module1.html">1-1: Software and Data Preparation</a></li>
+              <li><a class="reference internal hov" href="Training1Module2.html">1-2: Introduction to LUCIS-OPEN Tools for QGIS</a></li>
+              <li><a class="reference internal hov" href="Training1Module3.html">1-3: Create Suitability Models with QGIS Graphical Modeler</a></li>
+              <li><a class="reference internal hov" href="Training1Module4.html">1-4: Aggregate Results to Make Land-Use Decisions</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a class="hov reference internal" href="Training2ReadMe.html"><b>Introduction to Satellite Remote Sensing I</b></a>
+            <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"><label for="toctree-checkbox-2">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              <ul>
+                <li><a class="reference internal hov" href="Training2Module1.html">2-1: Introduction to Remote Sensing (RS)</a></li>
+                <li><a class="reference internal hov" href="Training2Module2.html">2-2: RS Applications using Google Earth Engine</a></li>
+                <li><a class="reference internal hov" href="Training2Module3.html">2-3: Common RS Indices and Environmental Variables</a></li>
+                <li><a class="reference internal hov" href="Training2Module4.html">2-4: Land Cover Classification</a></li>
+              </ul>
+          </li>
+          <li class="has-children"><a class="hov reference internal" href="Training3ReadMe.html"><b>Integrated Decision Units for Land Use Suitability Modeling</b></a>
+            <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox" ><label for="toctree-checkbox-3">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              <ul>
+                <li> <a class="reference internal hov" href="Training3Module1.html">3-1: Integrated Decision Units (IDUs) for Land Use Suitability Modeling</a>
+                </li>
+              </ul>
+          </li>
+          <ul>
+            <li class="has-children">
+              <a class="hov reference internal" href="Training4ReadME.html"><b>Introduction to Remote Sensing II</b></a>
+              <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox" checked>
+              <label for="toctree-checkbox-4">
+              <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+              
+        </ul>
       </div>
-      
+      </div>
+    </div>
+ 
+    </div>
+     
     </div>
   </aside>
-  <div class="main">
-    <div class="content">
+  <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">    <div class="content">
       <div class="article-container">
         <a href="#" class="back-to-top muted-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -327,6 +434,7 @@ We will follow the following steps:</p>
       </div>
       <footer>
         
+        
         <div class="related-pages">
           
           
@@ -349,13 +457,12 @@ We will follow the following steps:</p>
         </div>
         
       </footer>
+      </div>
     </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
+    <aside class="toc-drawer d-none d-xl-block col-xl-2 bd-toc">
+      <div class="toc-sticky toc-scroll containme2">
+      <div class="toc-title-container">
+      <span class="toc-title">
             Contents
           </span>
         </div>
@@ -372,20 +479,15 @@ We will follow the following steps:</p>
 </ul>
 </li>
 </ul>
-
-          </div>
-        </div>
-      </div>
-      
-      
-    </aside>
-  </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
-</html>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div><script data-url_root="./" id="documentation_options" src="./_customsearch/documentation_options.js"></script>
+<script src="./_customsearch/jquery.js"></script>
+<script src="./_customsearch/underscore.js"></script>
+<script src="./_customsearch/doctools.js"></script>
+<script src="./_customsearch/furo.js"></script>
+</body>
