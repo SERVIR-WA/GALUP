@@ -292,7 +292,7 @@
 </ul>
 <section id="introduction-to-time-series-analysis">
 <h2>1. Introduction to Time Series Analysis<a class="headerlink" href="#introduction-to-time-series-analysis" title="Permalink to this heading">#</a></h2>
-<p>Geospatial <strong>Time series analysis</strong> techniques help monitor and quantify landscape changes across time and space. Mapping temporal changes can provide information on the rates, causes, and consequences or dynamic processes such as urbanization, land degradation, phenology, and trends in environmental parameters such as rainfall and temperature. <span class="raw-html-m2r"><br/></span></p>
+<p>Geospatial <strong>Time series analysis</strong> techniques help monitor and quantify landscape changes across time and space. Mapping temporal changes provides information on the impact of urbanization, land degradation, phenology, and environmental parameter trends like rainfall and temperature. <span class="raw-html-m2r"><br/></span></p>
 <p><strong>Common Applications of Time Series Analysis:</strong></p>
 <ul class="simple">
 <li><p>Identifying urban expansion,</p></li>
@@ -321,8 +321,8 @@
 MODIS NDVI and EVI</p>
 <p><strong>Using Remote Sensing to Conduct Time Series Analysis:</strong></p>
 <ul class="simple">
-<li><p>In the context of remote sensing, time series analyses allow us to measure and quantify changes in spatio-temporal processes from space,</p></li>
-<li><p>For effective monitoring to occur, data need to: 1) have suitable spatial and spectral resolution to detect the phenomena, and 2) have a frequent-enough repeat interval to detect change.</p></li>
+<li><p>In the context of remote sensing, time series analysis allow us to measure and quantify changes in spatio-temporal processes from space,</p></li>
+<li><p>For effective monitoring to occur, data needs to: 1) have suitable spatial and spectral resolution to detect the phenomena, and 2) have a frequent-enough repeat interval to detect change.</p></li>
 <li><p>Assuming the object is detectable using a specific sensor, the timing of acquisition needs to be tuned to the rate of the process being studied. For example, discrete event detections (such as floods or fires) can be conducted by collecting images before and after that event has occurred. Images need to be spaced close in time for assessing rapidly changing phenomena, such as vegetation greenup after rain. For monitoring long-term changes, data can be aggregated over the time domain of interest, and then assessed on annual or monthly bases (urban expansion, temperature rise).</p></li>
 <li><p>The availability of satellite data over different spatio-temporal resolutions therefore limits the kinds of proceses that can be studied.</p></li>
 <li><p>Some trends may need to be decomposed into their underlying components for generating insights into the dynamics. For example, temperature usually has a strong seasonal component in addition to potentially annual components in some regions.</p></li>
@@ -362,7 +362,7 @@ Nonlinear time series models are employed when the time series cannot be adequat
 <section id="time-series-analysis-in-gee">
 <h2>4. Time Series Analysis in GEE<a class="headerlink" href="#time-series-analysis-in-gee" title="Permalink to this heading">#</a></h2>
 <p>GEE has the functionality to derive both linear and harmonic trends from satellite imagery and environmental data. The techniques can be mixed and matched to model both simple trends, and to decompose complex trends into seasonal and annual components, and to detect and fit breakpoint models.
-For the purposes of this training, we will focus on developing estimates of simple linear trends across regions. The user is directed to documentation on <a class="reference external" href="https://gee-ccdc-tools.readthedocs.io/en/latest/">**CCDC**</a> for a more complex treatment of harmonic time series components for land cover mapping, and to <a class="reference external" href="https://emapr.github.io/LT-GEE/">**LandTrendr**</a> for utilizing breakpoints for detection landcover change.
+For the purposes of this training, we will focus on developing estimates of simple linear trends across regions. The user is directed to documentation on <a class="reference external" href="https://gee-ccdc-tools.readthedocs.io/en/latest/">CCDC</a> for a more complex treatment of harmonic time series components for land cover mapping, and to <a class="reference external" href="https://emapr.github.io/LT-GEE/">LandTrendr</a> for utilizing breakpoints for detection landcover change.
 We will follow the following steps:</p>
 <ul class="simple">
 <li><p>Identify and collect a time series of interest,</p></li>
