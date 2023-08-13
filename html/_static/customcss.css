@@ -22,11 +22,29 @@ a.no-under {
 }
 
 
-.content {
-    padding-top: 20px;
+@media (max-width: 67em){
+    .sidebar-drawer {
+    height: 100vh;
+    left: -20em;
+    position: fixed;
+    top: 0;
+    width: 15em;
+    }
+    .content {
+        padding-top: 0px;
+    }
+    .bd-sidebar{
+        background-color: white;
+    }
 }
 
-aside {position: sticky;} 
+@media (min-width: 68em){
+    .content {
+        padding-top: 20px;
+    }
+}
+
+/* aside {position: sticky;}  */
 
 .stickme {
     position: -webkit-sticky;
