@@ -36,12 +36,28 @@ a.no-under {
     .bd-sidebar{
         background-color: white;
     }
-}
+    .containme {
+        padding-top: 0px
+    }
+    img {
+        display: block;
+    }
+    table {
+        table-layout: fixed;
+    }
+    td{
+        overflow: hidden; 
+        width: 100%;
+        text-overflow: ellipsis; 
+        word-wrap: break-word;
+    }
+    }
 
 @media (min-width: 68em){
     .content {
         padding-top: 20px;
     }
+    
 }
 
 /* aside {position: sticky;}  */
