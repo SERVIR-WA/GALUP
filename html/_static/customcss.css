@@ -1,3 +1,7 @@
+body {
+    zoom: 70%;
+}
+
 a.no-under {
     text-decoration: none;
 }
