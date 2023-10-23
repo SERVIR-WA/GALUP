@@ -4,3 +4,4 @@ __pycache__
 *.ipynb
 .vscode/
 *.ini
+.DS_Store
