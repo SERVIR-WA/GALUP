@@ -5,3 +5,4 @@ __pycache__
 .vscode/
 *.ini
 .DS_Store
+.venv/
