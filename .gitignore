@@ -6,3 +6,5 @@ __pycache__
 *.ini
 .DS_Store
 .venv/
+.doctrees/
+.buildinfo
