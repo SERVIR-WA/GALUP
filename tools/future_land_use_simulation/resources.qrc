@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/urb_demand" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

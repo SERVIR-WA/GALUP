@@ -16,7 +16,7 @@ input data are provided.
 Specific objectives of this workshop include:
 
 - Understand key concepts of IDU and why it is useful to land use planning
-- Capable of using **16 tools** in QGIS involved in the process
+- Learn to use **16 tools** in QGIS involved in the process
 - Independently create IDUs for different regions
 
 ## An Integral Part of Land-Use Planning
