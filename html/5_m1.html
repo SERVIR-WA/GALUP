@@ -6,13 +6,13 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Module 1 - Software and Data Preparation - GALUP documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css?v=2a6c4383" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css?v=45cf7dbc" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css?v=d290406d" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+        <title>Module 1 - Software and Data Preparation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="_static/customcss.css"/>
     
     
 
@@ -44,6 +44,56 @@
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+    <nav class="navbar shadow navbegone navbar-expand-lg short fixed-top navbar-themed">
+      <div class="container-lg" id="banner">
+          <div class="col-lg-2">
+            <a class="navbar-brand" href="../index.html">
+            <img class="navbar-brand-logo" src="../GithubPagesImages/GALUP-logo-final-color-2020.svg" alt="GALUP Logo" width="45">
+            &nbsp;&nbsp;GALUP Training</a>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        <div class="left collapse navbar-collapse padme navbottom" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="html/pylusat.html">Install PyLUSATQ</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="html/Tools.html">Documentation</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="html/Gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item hov">
+                <a class="nav-link active" aria-current="page" href="html/Publication.html">Publication</a>
+              </li>
+            </ul>
+          </div>
+      <div id="navbar-end">
+        <div class="navbar-end-item navbottom">
+          <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/chjch/pylusat">
+                <img src="https://img.shields.io/pypi/v/pylusat?color=br&label=pylusat%20version">
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link linkalign" href="https://github.com/SERVIR-WA/GALUP" rel="noopener" target="_blank" title="GitHub"><span><i class ="fa fa-fw fa-github"></i></span>
+              <label class="sr-only">GitHub</label></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linkalign" href="https://twitter.com/galupghana" rel="noopener" target="_blank" title="Twitter"><span><i class="fa fa-fw fa-twitter"></i></span>
+              <label class="sr-only">Twitter</label></a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+    </nav>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
@@ -117,7 +167,7 @@
 
 
 
-<div class="page">
+<div class="container-xl page">
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
@@ -143,29 +193,114 @@
       </label>
     </div>
   </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
-  
-  <span class="sidebar-brand-text">GALUP  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  
-</div>
-</div>
+  <div class="row">
+    <aside class="sidebar-drawer col-12 col-md-3 bd-sidebar">
+      <div class="toc-sticky containme">
+        <div class="sidebar-container ">
+          <div class="sidebar-sticky">
+            <a class="sidebar-brand" href="index.html">
+            </a>
+            <form class="sidebar-search-container" method="get" action="search.html" role="search">
+              <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+              <input type="hidden" name="check_keywords" value="yes">
+              <input type="hidden" name="area" value="default">
+            </form>
+            <div id="searchbox"></div>
+            <div class="sidebar-scroll">
+              <div class="sidebar-tree sidefont">
+                <ul>
+                  <li class="has-children">
+                    <a class="hov reference internal" href="Training1ReadMe.html"><b>Land-Use Suitability Analysis
+                        with QGIS Tools</b></a>
+                    <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch"
+                      type="checkbox">
+                    <label for="toctree-checkbox-1">
+                      <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                          <use href="#svg-arrow-right"></use>
+                        </svg></i>
+                    </label>
+                    <ul>
+                      <li><a class="reference internal hov" href="Training1Module1.html">1-1: Software and Data
+                          Preparation</a></li>
+                      <li><a class="reference internal hov" href="Training1Module2.html">1-2: Introduction to
+                          LUCIS-OPEN Tools for QGIS</a></li>
+                      <li><a class="reference internal hov" href="Training1Module3.html">1-3: Create Suitability
+                          Models with QGIS Graphical Modeler</a></li>
+                      <li><a class="reference internal hov" href="Training1Module4.html">1-4: Aggregate Results to
+                          Make Land-Use Decisions</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a class="hov reference internal" href="Training2ReadMe.html"><b>Introduction to Satellite Remote
+                        Sensing</b></a>
+                    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch"
+                      type="checkbox"><label for="toctree-checkbox-2">
+                      <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                          <use href="#svg-arrow-right"></use>
+                        </svg></i>
+                    </label>
+                    <ul>
+                      <li><a class="reference internal hov" href="Training2Module1.html">2-1: Introduction to Remote
+                          Sensing (RS)</a></li>
+                      <li><a class="reference internal hov" href="Training2Module2.html">2-2: RS Applications using
+                          Google Earth Engine</a></li>
+                      <li><a class="reference internal hov" href="Training2Module3.html">2-3: Common RS Indices and
+                          Environmental Variables</a></li>
+                      <li><a class="reference internal hov" href="Training2Module4.html">2-4: Land Cover
+                          Classification</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a class="hov reference internal" href="Training3ReadMe.html"><b>Integrated
+                        Decision Units for Land Use Suitability Modeling</b></a>
+                    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch"
+                      type="checkbox"><label for="toctree-checkbox-3">
+                      <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                          <use href="#svg-arrow-right"></use>
+                        </svg></i>
+                    </label>
+                    <ul>
+                      <li> <a class="reference internal hov" href="Training3Module1.html">3-1: Integrated Decision
+                          Units (IDUs) for Land Use Suitability Modeling</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a class="hov reference internal" href="Training4ReadME.html"><b>Introduction to Remote Sensing II</b></a>
+                    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox">
+                    <label for="toctree-checkbox-4">
+                      <div class="visually-hidden">Toggle child pages in navigation</div>
+                      <i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i>
+                    </label>
+                    <ul>
+                      <li><a class="reference internal hov" href="Training4Module1.html">4-1: Time Series Analysis</a></li>
+                      <li><a class="reference internal hov" href="Training4Module2.html">4-2: Change Detection</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a class="hov reference internal" href="5_chobe_README.html">
+                      <b>OPEN-LUCIS Training for the Chobe Distict</b>
+                    </a>
+                    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch"
+                      type="checkbox" checked><label for="toctree-checkbox-5">
+                      <div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg>
+                          <use href="#svg-arrow-right"></use>
+                        </svg></i>
+                    </label>
+                    <ul>
+                      <li> <a class="reference internal hov" href="5_m1.html">5-1: Software Installation and Introduction</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
-      
-    </div>
-  </aside>
-  <div class="main">
+    </aside>
+  <div class="main col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content">
     <div class="content">
       <div class="article-container">
         <a href="#" class="back-to-top muted-link">
@@ -201,14 +336,12 @@
 <section id="software-installation">
 <h2>1. Software Installation<a class="headerlink" href="#software-installation" title="Link to this heading">#</a></h2>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">pushpin<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Note on installation:<span class="raw-html-m2r"><br></span></p>
-</dd>
-</dl>
+<div>
+<p>&#128204;&nbsp;&nbsp;Note on installation:</p>
 <p>To set up your computer, please <strong>download</strong> and <strong>install</strong> <a class="reference external" href="https://download.qgis.org/downloads/windows/3/3.20/QGIS-OSGeo4W-3.20.0-2.msi">QGIS 3.20</a>. We recommend all participants for the Chobe Open-LUCIS (COL) training to use this version of QGIS for consistency. The latest version of <strong>QGIS</strong> and other resources can be found <a class="reference external" href="https://qgis.org/en/site/">here</a>. Please follow the <a class="reference external" href="https://servir-wa.github.io/GALUP/html/pylusat.html">instruction</a> to install the <strong>Python for Land-use Suitability Analysis Tools</strong> (PyLUSAT), which must be installed
 before we can successfully start the COL training. The PyLUSAT tools to be loaded and run for this training were developed by GALUP.</p>
-</div></blockquote>
+</div>
+</blockquote>
 </section>
 <section id="gis-datasets">
 <h2>2. GIS Datasets<a class="headerlink" href="#gis-datasets" title="Link to this heading">#</a></h2>
@@ -228,25 +361,25 @@ section at <code class="docutils literal notranslate"><span class="pre">GALUP-ma
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>3</p></td>
+<tr class="row-even"><td><p>1</p></td>
 <td><p>BWA_Healthsites.shp</p></td>
 <td><p>vector</p></td>
 <td><p>point</p></td>
 <td><p>Health facilities in Botswana</p></td>
 </tr>
-<tr class="row-odd"><td><p>4</p></td>
+<tr class="row-odd"><td><p>2</p></td>
 <td><p>BWA_Roads_PrimarySecondary2023.shp</p></td>
 <td><p>vector</p></td>
 <td><p>line</p></td>
 <td><p>Primary and secondary roads in Botswana</p></td>
 </tr>
-<tr class="row-even"><td><p>1</p></td>
+<tr class="row-even"><td><p>3</p></td>
 <td><p>BWA_ADM_2021.shp</p></td>
 <td><p>vector</p></td>
 <td><p>polygon</p></td>
 <td><p>Districts of Botswana</p></td>
 </tr>
-<tr class="row-odd"><td><p>2</p></td>
+<tr class="row-odd"><td><p>4</p></td>
 <td><p>BWA_Population_Density.tif</p></td>
 <td><p>raster</p></td>
 <td><p>tiff</p></td>
@@ -267,18 +400,18 @@ section at <code class="docutils literal notranslate"><span class="pre">GALUP-ma
 this <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/overview.html">page</a>.</p>
 <p>Moreover, you can customize the GUI by dragging and moving <em>Panels</em> and
 <em>Toolbars</em> to the place you prefer (see the animation below).</p>
-<a class="reference external image-reference" href="../../../img/gif/m1_custom_guiBW.gif"><img alt="gui_custom" src="../../../img/gif/m1_custom_guiBW.gif" /></a>
+<a class="reference external image-reference" href="../GithubPagesImages/gif/m1_custom_guiBW.gif"><img alt="gui_custom" src="../GithubPagesImages/gif/m1_custom_guiBW.gif" /></a>
 <section id="add-data-to-map-canvas">
-<h3>3.1 Add Data to <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html">*Map Canvas*</a><a class="headerlink" href="#add-data-to-map-canvas" title="Link to this heading">#</a></h3>
+<h3>3.1 Add Data to <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/basic_map/mapviewnavigation.html">Map Canvas</a><a class="headerlink" href="#add-data-to-map-canvas" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>The primary way to add data to QGIS Map Canvas is by <strong>Drag-and-Drop</strong>
 items in the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/introduction/browser.html?#the-browser-panel">Browser panel</a>.</p></li>
 <li><p>Another way to add data is by
-<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#loading-a-layer-from-a-file">**loading layer from a file**</a>.<span class="raw-html-m2r"><br></span> <span class="raw-html-m2r"><br></span>
-..</p>
+<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/managing_data_source/opening_data.html?#loading-a-layer-from-a-file">loading layer from a file</a>.<span class="raw-html-m2r"><br></span> <span class="raw-html-m2r"><br></span>
+</p>
 <blockquote>
 <div><dl class="field-list simple">
-<dt class="field-odd">pushpin<span class="colon">:</span></dt>
+<dt class="field-odd">&#128204;<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Use Favorites to quickly get to the data you used frequently:<span class="raw-html-m2r"><br></span></p>
 </dd>
 </dl>
@@ -290,13 +423,23 @@ the Favorites, you can also <code class="docutils literal notranslate"><span cla
 <li><p>Now, lets load <em>Districts of Botswana</em>, <em>Road Network</em>, and <em>Health Facility</em>
 to Map Canvas, as shown in below.</p></li>
 </ol>
-<div align="center">
-
-|               Add Data to Map Canvas            |
-|:-------------------------------------------------:|
-| <img src="../../../img/map/m1_AddDataBW.png" width="500"> |
-
-</div></section>
+<div>
+  <table class="docutils align-default">
+    <thead>
+      <th class="head align-center">
+      <p>Add Data to Map Canvas</p>
+      </th>
+    </thead>
+      <tbody>
+      <tr class="row-odd">
+      <td>
+        <img src="../GithubPagesImages/map/m1_AddDataBW.png" width="500"> 
+      </td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+</section>
 <section id="check-data-in-the-attribute-table">
 <h3>3.2 Check data in the <em>Attribute Table</em><a class="headerlink" href="#check-data-in-the-attribute-table" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html?highlight=attribute#introducing-the-attribute-table-interface">Attribute Table</a> displays
@@ -309,11 +452,22 @@ includes: 1) the title of the layer, 2) the total number of the features in
 the layer, 3) the number of features are filtered, and 4) the number of
 features are selected.</p></li>
 </ul>
-<div align="center">
+<div>
 
-|               Attribute Table           |
-|:-------------------------------------------------:|
-| <img src="../../../img/gui/window/m1_attribute_tableBW.png" width="600"> |
+  <table class="docutils align-default">
+    <thead>
+      <th class="head align-center">
+      <p>Attribute Table</p>
+      </th>
+    </thead>
+      <tbody>
+      <tr class="row-odd">
+      <td>
+        <img src="../GithubPagesImages/gui/window/m1_attribute_tableBW.png" width="500"> 
+      </td>
+      </tr>
+      </tbody>
+  </table>
 
 </div></section>
 <section id="change-symbology-of-a-layer">
@@ -332,13 +486,48 @@ broken into categories (the image in the middle is using region column).</p></li
 option to present the data, if you have numeric data you want
 to symbolize (the image on the right is using the population column).</p></li>
 </ul>
+<div>
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 33.3" />
+    <col style="width: 33.3%" />
+    <col style="width: 33.4%" />
+    </colgroup>
+    <thead>
+    <tr class="row-odd">
+    <th class="head">
+    <p>Single Symbology</p>
+    </th>
+    <th class="head">
+    <p>Categorized Symbology</p>
+    </th>
+    <th class="head">
+      <p>Graduated Symbology</p>
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row-even">
+    <td>
+      <img src="../GithubPagesImages/map/m1_SingleBW.png"> 
+    </td>
+    <td>
+      <img src="../GithubPagesImages/map/m1_CategorizedBW.png">
+    </td>
+    <td>
+      <img src="../GithubPagesImages/map/m1_GraduatedBW.png">
+    </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
 </section>
 <section id="add-a-basemap-to-map-canvas">
 <h3>3.4 Add a <em>Basemap</em> to Map Canvas<a class="headerlink" href="#add-a-basemap-to-map-canvas" title="Link to this heading">#</a></h3>
 <p>A <a class="reference external" href="https://rdkb.sgrc.selkirk.ca/Help/Content/Client_APIs/SV_User/SVU_AboutBaseMaps.htm">Basemap</a>
 is a layer with geographic information that serves as a background. A base map
 provides context for additional layers that are overlaid on top of the base map.
-In this module, we use <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin">**QuickMapServices**</a>, a QGIS
+In this module, we use <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin">QuickMapServices</a>, a QGIS
 <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html">Plugin</a>,
 to add basemap to Map Canvas.</p>
 <ol class="arabic">
@@ -350,14 +539,25 @@ and click <code class="docutils literal notranslate"><span class="pre">Manage</s
 <em>More Services</em> tab, and click <em>Get contributed pack</em> to get more basemaps.
 For details, please check out this <a class="reference external" href="https://opengislab.com/blog/2018/4/15/add-basemaps-in-qgis-30">tutorial</a>.</p></li>
 <li><p>Choose one basemap from the <strong>QuickMapServices</strong> and add it to Map Canvas.</p>
-<a class="reference external image-reference" href="../../../img/gui/menu/qms_web_icons.png"><img alt="icons" src="../../../img/gui/menu/qms_web_icons.png" /></a>
+<a class="reference external image-reference" href="../GithubPagesImages/gui/menu/qms_web_icons.png"><img alt="icons" src="../GithubPagesImages/gui/menu/qms_web_icons.png" /></a>
 </li>
 </ol>
-<div align="center">
+<div>
 
-|                Layer with a Basemap                  |
-|:-------------------------------------------------:|
-| <img src="../../../img/map/m1_basemapBW.jpeg" alt= "basemap" width="400"> |
+  <table class="docutils align-default">
+    <thead>
+      <th class="head align-center">
+      <p>Layer with a Basemap </p>
+      </th>
+    </thead>
+      <tbody>
+      <tr class="row-odd">
+      <td>
+        <img src="../GithubPagesImages/map/m1_basemapBW.jpeg" width="500"> 
+      </td>
+      </tr>
+      </tbody>
+  </table>
 
 </div></section>
 <section id="create-a-layout-to-print-your-map">
@@ -365,20 +565,20 @@ For details, please check out this <a class="reference external" href="https://o
 <p>After setting up the map, you are now ready to <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#ls-using-print-layout">layout</a> your map and print it (as a pdf file)
 to share with your colleagues.</p>
 <ul class="simple">
-<li><p>Open the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-the-layout-manager">**Layout Manager**</a> window, click the <em>Create…</em> button, and
+<li><p>Open the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-the-layout-manager">Layout Manager</a> window, click the <em>Create…</em> button, and
 name your map and click <em>OK</em> to open the map window.</p></li>
-<li><p>In the map window, click the <cite>``Add Item`</cite> &lt;<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu">https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu</a>&gt;`_ button on the main menu bar, and
+<li><p>In the map window, click the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#add-item-menu"><cite>Add Item</cite></a> button on the main menu bar, and
 click add map.</p></li>
-<li><p>In order to have a decent map, you need: 1) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-title">**Title**</a> for your map, 2) a
-<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-legend">**Legend**</a>
-to identify the elements in the map, 3) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_scale_bar.html?#the-scale-bar-item">**Scale Bar**</a>
-to indicates the scale of the map, 4) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_image.html?#the-picture-and-the-north-arrow-items">**North Arrow**</a> to
+<li><p>In order to have a decent map, you need: 1) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-title">Title</a> for your map, 2) a
+<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/training_manual/map_composer/map_composer.html#basic-fa-adding-a-legend">Legend</a>
+to identify the elements in the map, 3) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_scale_bar.html?#the-scale-bar-item">Scale Bar</a>
+to indicates the scale of the map, 4) a <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_image.html?#the-picture-and-the-north-arrow-items">North Arrow</a> to
 indicate the direction. You can add these items under the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Item</span></code> button.</p></li>
 <li><p>After you finishing all the layout of your map, click the <code class="docutils literal notranslate"><span class="pre">Layout</span></code> button on
-the main menu bar, and click <cite>``Export as PDF…`</cite> &lt;<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/create_output.html#export-layout-pdf">https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/create_output.html#export-layout-pdf</a>&gt;`_ to export your map. (If the basemap cannot be rendered
+the main menu bar, and click <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/create_output.html#export-layout-pdf"><cite>Export as PDF…</cite> </a>to export your map. (If the basemap cannot be rendered
 in the PDF file, try a lower <em>dpi</em> (e.g., 150 dpi) in the
-<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#export-settings">**Export Setting**</a>
-in the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel">**Layout Panel**</a>.)</p></li>
+<a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#export-settings">Export Setting</a>
+in the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/overview_composer.html#the-layout-panel">Layout Panel</a>.</p></li>
 <li><p>See the example map in PDF file <a class="reference external" href="https://github.com/mogaetkpp/GALUP/tree/master/training/1_lu/pdf_maps/BWLayoutPrint.pdf">here</a>.</p></li>
 </ul>
 </section>
@@ -471,6 +671,7 @@ in the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/us
       
       
     </aside>
+    </div>
   </div>
 </div><script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
