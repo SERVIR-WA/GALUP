@@ -46,7 +46,7 @@ The following datasets are used in this exercises:
    Select the ![graduated](../../../img/gui/icon/rendererGraduatedSymbol.svg)
    Graduated style.
    Choose the [_Natural Breaks (Jenks)_](http://wiki.gis.com/wiki/index.php?title=Jenks_Natural_Breaks_Classification&oldid=763049).
-   Specify the _HF\_Dis_ field as **Value**, then choose the _Reds_ color ramp
+   Specify the _POI_Dis_ field as **Value**, then choose the _Reds_ color ramp
    with 5 classes. Click **Apply**.
 6. Click **OK** on the **Symbology** tab.
 7. Create a _Layout_, then add _Legend_, _Scale bar_, and _North Arrow_ to the
