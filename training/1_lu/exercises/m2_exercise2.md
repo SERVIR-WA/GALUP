@@ -4,30 +4,30 @@
 
 This exercise will practice:
 
-- [Distance to Point Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#22-distance-to-point-features)
+- [Distance to Point Features](https://github.com/mogaetkpp/GALUP/blob/master/training/1_lu/modules/module2.md#22-distance-to-point-features)
 
 ## 2. Description
 
-The distance to health facilities in a district is one common measure of that area's accessibility to medical resources.
-Twifo-Heman-Lower-Denkyira (THLD) district, we want to build a healthcare center to improve all Integrated Decision Units' (IDUs) accessibility to the medical resource.
-In the first step of the healthcare center location selection, we need to find out those areas with relatively less access to health facilities by measuring the distances to those facilities.
-In this exercise, we will visualize the distance to Health Facilities in the THLD district by using the [Distance to Point Features](https://github.com/SERVIR-WA/GALUP/blob/master/training/1_lu/modules/module2.md#22-distance-to-point-features) tool.
+The distance to a point of interest in a district is one common measure of that area's accessibility to tourism resources.
+In the Pandamatenga Landscape, we want to explore busisness opportunuties and build a tourism facicility to improve all Integrated Decision Units' (IDUs) accessibility to points of interest.
+In the first step of the tourism facility location selection, we need to find out those areas with relatively less access to points of interst by measuring the distances to those points.
+In this exercise, we will visualize the distance to Points of Interest in the Panadamatenga landscape by using the [Distance to Point Features](https://github.com/mogaetkpp/GALUP/blob/master/training/1_lu/modules/module2.md#22-distance-to-point-features) tool.
 
 ## 3. GIS Dataset
 
 The following datasets are used in this exercises:
 
-- _Health\_Facilities.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> Health facilities in THLD District`
-- _THLD\_poly.shp_ at
-`GALUP-master -> training -> 1_lu -> datasets -> IDUs in the THLD District`
-
+- _PND_POI.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Points of Interest in Pandamatenga Landscape`
+- _PND_IDUs.shp_ at
+`GALUP-master -> training -> 1_lu -> datasets -> Pandamatenga Landscape IDUs`
+	
 ## 4. Instruction
 
-1. Locate _Health\_Facilities.shp_ and _THLD\_poly.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
+1. Locate _PND_POI.shp_ and _PND_IDUs.shp_ in the **_Browser Panel_** and add them to **_Map Canvas_**.
 2. In the **_Processing Toolbox_** panel, locate the
-   **<ins>Distance to Point Features</ins>** tool under **_Scripts_**
-   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20">.
+   **<ins>Distance to Point Features</ins>** tool under **_PyLUSATQ_**
+   <img src="../../../img/gui/icon/processingScript.svg" alt= "scripts" width="20"> <img src="../../../img/gui/icon/PyLUSATQ.svg" alt= "scripts" width="20">.
 3. **Double Click** to open the tool and set parameters as follows:
    <ol type="a">
       <li><b>Input layer</b>: THLD_poly,</li>
