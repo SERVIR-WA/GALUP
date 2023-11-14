@@ -43,17 +43,17 @@ follows.
 <a id="modis"></a>
 | value |  Land Cover Types                     | Suitability |
 |-------|---------------------------------------|-------------|
-|  1    |  Open Herbaceous Vegetation           |      5      |
-|  2    |  Cropland                             |      1      |
+|  1    |  Open Herbaceous Vegetation           |      9      |
+|  2    |  Cropland                             |      9      |
 |  3    |  Built-up                             |      1      |
-|  4    |  Water Bodies Seasonal                |      5      |
-|  5    |  Open Herbaceous Wetland              |      7      |
-|  6    |  Closed Woodland                      |      1      |
-|  7    |  Closed Bushland                      |      9      |
-|  8    |  Sparse Forest/Woodland               |      1      |
-|  9    |  Sparse/Open Bushland/Shrubs          |      3      |
-|  10   |  Open Woodland/Bushland               |      3      |
-|  11   |  Open Bushland/Shrubs                 |      3      |
+|  4    |  Water Bodies Seasonal                |      1      |
+|  5    |  Open Herbaceous Wetland              |      1      |
+|  6    |  Closed Woodland                      |      5      |
+|  7    |  Closed Bushland                      |      5      |
+|  8    |  Sparse Forest/Woodland               |      9      |
+|  9    |  Sparse/Open Bushland/Shrubs          |      9      |
+|  10   |  Open Woodland/Bushland               |      9      |
+|  11   |  Open Bushland/Shrubs                 |      7      |
 
 ### 2.2 Model Datasets
 
