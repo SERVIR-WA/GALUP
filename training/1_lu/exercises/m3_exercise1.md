@@ -28,10 +28,10 @@ According to Scopesi et al. (2020)<sup><a href="#ref1">1</a></sup>,
 | Slope (percent rise) | Suitability |
 |----------------------|-------------|
 | 0-2                  | 9           |
-| 2-4                  | 7           |
-| 4-6                  | 5           |
-| 6-9                  | 3           |
-
+| 2-8                  | 7           |
+| 8-15                 | 5           |
+| 15-25                | 3           |
+| 25-45                | 1           |
 
 From the land cover's perspective, it is important that agricultural
 activities are not in conflict with existing built-up areas and conserved
@@ -43,17 +43,15 @@ follows.
 <a id="modis"></a>
 | value |  Land Cover Types                     | Suitability |
 |-------|---------------------------------------|-------------|
-|  1    |  Open Herbaceous Vegetation           |      9      |
-|  2    |  Cropland                             |      9      |
-|  3    |  Built-up                             |      1      |
-|  4    |  Water Bodies Seasonal                |      1      |
-|  5    |  Open Herbaceous Wetland              |      1      |
-|  6    |  Closed Woodland                      |      5      |
-|  7    |  Closed Bushland                      |      5      |
-|  8    |  Sparse Forest/Woodland               |      9      |
-|  9    |  Sparse/Open Bushland/Shrubs          |      9      |
-|  10   |  Open Woodland/Bushland               |      9      |
-|  11   |  Open Bushland/Shrubs                 |      7      |
+|  1    |  Open forest, unknown                 |      5      |
+|  2    |  Closed forest, unknown               |      1      |
+|  3    |  Closed forest, evergreen broad leaf  |      1      |
+|  4    |  Open forest, evergreen broad leaf    |      5      |
+|  5    |  Shrubs                               |      7      |
+|  6    |  Urban / built up                     |      1      |
+|  7    |  Herbaceous vegetation                |      9      |
+|  8    |  Closed forest, deciduous broad leaf  |      1      |
+|  9    |  Herbaceous wetland                   |      3      |
 
 ### 2.2 Model Datasets
 
