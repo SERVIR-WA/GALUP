@@ -37,7 +37,7 @@ The following datasets are used in the landscape condition model:
 
 ## 3. Instruction
 
-![marketmodelmap](../../../img/qgm/model/Market Proximity Graphic.svg)
+![marketmodelmap](../../../img/qgm/model/Market_Graphic.svg)
 
 1. Locate _LargeCity\_pt.shp_, _MiddleCity\_pt.shp_, _SmallCity\_pt.shp_ and
    _THLD\_poly.shp_ in the **_Browser Panel_** and add them to
