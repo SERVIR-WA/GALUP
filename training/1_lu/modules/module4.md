@@ -212,7 +212,7 @@ each purpose as follows:
 
 After constructing the matrices,
 [Compute AHP Weights](https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights)
-in LUCIS-OPEN tools will be used to calculate local priorities for each matrix.
+in OPEN-LUCIS tools will be used to calculate local priorities for each matrix.
 
 The third step is to establish the global priorities of the suitable land use
 preference.
@@ -241,22 +241,22 @@ land was the least important in the three land-use types.
 ### 3.1 The structure of the row crops goal
 
 Recall, in Module 3, we have created four models to analyze
-**Suitability of Row Crops** including (1) _landscape condition_,
+**Crop Farming Suitability** including (1) _landscape condition_,
 (2) _soil condition_, (3) _market proximity_, and
 (4) _transport accessibility_.
 These models are in fact integral components of the LUCIS's hierarchical
 structure.
-Together, they constitute the Row Crops goal, one of the goals under the
+Together, they constitute the Crop Farming goal, one of the goals under the
 agricultural land uses.
 The following diagram reflects the models are organized to form the 3-tier
 hierarchy of LUCIS.
 
 <img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400">
 
-The row crops **goal** consists of two **objectives**,
+The crop farming **goal** consists of two **objectives**,
 (1)_physical suitability_ and (2) _economic suitability_, the same as described
 before in [Section 1.1](#11-the-lucis-workflow).
-From the **physical** perspective, we assess suitability for row crops
+From the **physical** perspective, we assess suitability for crop
 production based on the attributes (or conditions) that is native to the land.
 Thus, [Landscape Condition](https://tinyurl.com/3tysra42) and
 [Soil Condition](https://tinyurl.com/swvpj3pv) are under the first objective.
