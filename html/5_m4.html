@@ -1,0 +1,714 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Module 4 - Making Land-Use Decisions using the OPEN-LUCIS Framework - GALUP documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css?v=2a6c4383" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css?v=45cf7dbc" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css?v=d290406d" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">GALUP  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">GALUP  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-4-making-land-use-decisions-using-the-open-lucis-framework">
+<h1>Module 4 - Making Land-Use Decisions using the OPEN-LUCIS Framework<a class="headerlink" href="#module-4-making-land-use-decisions-using-the-open-lucis-framework" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#module-4---making-land-use-decisions-using-the-lucis-framework">Module 4 - Making Land-Use Decisions using the LUCIS Framework</a></p>
+<ul>
+<li><p><a class="reference external" href="#1-the-lucis-philosophy">1. The LUCIS Philosophy</a></p>
+<ul>
+<li><p><a class="reference external" href="#11-the-lucis-workflow">1.1 The LUCIS workflow</a></p></li>
+<li><p><a class="reference external" href="#12-an-example-of-the-hierarchical-structure-of-lucis">1.2 An example of the hierarchical structure of LUCIS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#2-analytic-hierarchy-process">2. Analytic Hierarchy Process</a></p></li>
+<li><p><a class="reference external" href="#3-how-the-row-crops-models-fit-into-lucis">3. How the Row Crops Models fit into LUCIS</a></p>
+<ul>
+<li><p><a class="reference external" href="#31-the-structure-of-the-row-crops-goal">3.1 The structure of the row crops goal</a></p></li>
+<li><p><a class="reference external" href="#32-the-bottom-up-strategy-to-obtain-the-final-suitability">3.2 The bottom-up strategy to obtain the final suitability</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#4-weighting-methods-for-mua">4. Weighting Methods for MUA</a></p>
+<ul>
+<li><p><a class="reference external" href="#41-applying-preference-or-expert-knowledge">4.1 Applying preference or expert knowledge</a></p></li>
+<li><p><a class="reference external" href="#42-the-rank-sum-method">4.2 The rank sum method</a></p></li>
+<li><p><a class="reference external" href="#43-the-rank-reciprocal-method">4.3 The rank reciprocal method</a></p></li>
+<li><p><a class="reference external" href="#44-the-rank-exponential-method">4.4 The rank exponential method</a></p></li>
+<li><p><a class="reference external" href="#45-weights-generated-by-ahp">4.5 Weights generated by AHP</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#5-exercises-and-surveys">5. Exercises and Surveys</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="id1">
+<h2>1. The LUCIS Philosophy<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>When making land-use decisions in a planning process, a common situation faced
+by planners is the <strong>land-use conflicts</strong> arisen from the different values and
+motivations of the stakeholder groups who are interested in one of the three
+broad land-use categories: (1) <strong>*agricultural*** land uses, (2) ***urban***
+land uses, and (3) ***conservation*** land.
+The **Land-Use Conflict Identification Strategy</strong> (LUCIS) is a
+<em>goal-driven GIS model</em> based on the theories of suitability analysis
+introduced in <a class="reference external" href="module3.md">Module 3</a>.
+LUCIS aims at producing a <em>spatial representation</em> of
+<span class="raw-html-m2r"><ins>probable patterns</ins></span> of future land-use scenario by identifying
+conflicts in different land-use categories and carefully addressing them.</p>
+<section id="id2">
+<h3>1.1 The LUCIS workflow<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>The diagram below shows the general process of the LUCIS Framework.</p>
+<a class="reference external image-reference" href="../../../img/dgrm/lucis_workflow.svg"><img alt="lucis_workflow" src="../../../img/dgrm/lucis_workflow.svg" /></a>
+<dl class="field-list simple">
+<dt class="field-odd">small_blue_diamond<span class="colon">:</span></dt>
+<dd class="field-odd"><p>First, planners meet with the <em>stakeholders</em> of the</p>
+</dd>
+</dl>
+<p>project and ask them about their <strong>values</strong> and <strong>opinions</strong>.
+As mentioned before, the stakeholders here are <span class="raw-html-m2r"><ins>groups of people</ins></span>
+whose interests fall into one of the three land-use categories, i.e.,
+<em>agriculture</em>, <em>conservation</em>, and <em>urban space</em>.
+For example, agricultural stakeholders might include members of the local
+farm bureau or a cattlemen and ranchers group.
+Urban development stakeholders might include representatives of the
+homebuilders and real estate associations.
+Conservation interests might be represented by members of locally active
+conservation organizations, or non-governmental organization (NGO).</p>
+<dl class="field-list simple">
+<dt class="field-odd">small_blue_diamond<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Second, the <em>values</em> and <em>interests</em> are carefully sorted</p>
+</dd>
+</dl>
+<p>to develop a <a href="#id3"><span class="problematic" id="id4">**</span></a><em>three-tire hierarchical structure</em>** formed by <em>goals</em>,
+<em>objectives</em>, and <em>sub-objectives</em>.</p>
+<ol class="arabic simple">
+<li><p><span class="raw-html-m2r"><ins>Goals</ins></span> are directly distilled from the stakeholders’ interests in
+three general purposes—<em>agricultural productions</em>,
+<em>socioeconomic activities</em>, and <em>ecological functions</em>—which, in turn,
+correspond to the three broad land-use categories: <a href="#id5"><span class="problematic" id="id6">**</span></a><em>agricultural</em>** land
+uses, <a href="#id7"><span class="problematic" id="id8">**</span></a><em>urban</em>** land uses, and <a href="#id9"><span class="problematic" id="id10">**</span></a><em>conservational</em>** land.</p></li>
+<li><p><span class="raw-html-m2r"><ins>Objectives</ins></span> are defined to help accomplish individual goals.</p>
+<ul class="simple">
+<li><p>For <a href="#id11"><span class="problematic" id="id12">**</span></a><em>agricultural</em>** and <a href="#id13"><span class="problematic" id="id14">**</span></a><em>urban</em>** land uses, we usually conceptualize
+objectives through two perspectives:</p>
+<ul>
+<li><p>Physical suitability</p></li>
+<li><p>Economic suitability</p></li>
+</ul>
+</li>
+<li><p>For <a href="#id15"><span class="problematic" id="id16">**</span></a><em>conservation</em>** land, we focus on the ecological significance of
+the land from two aspects:</p>
+<ul>
+<li><p>Existing ecological value</p></li>
+<li><p>Potential ecological value</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="raw-html-m2r"><ins>Sub-objectives</ins></span> are a group of statements that can help assess
+their respective <em>objectives</em>, which are the base analytical units of the
+LUCIS framework.
+The modeling of sub-objective is referred to as
+<a href="#id17"><span class="problematic" id="id18">**</span></a><em>Single Utility Assignment</em>** (SUA), the assignment of utility values for
+individual features in a single layer of spatial data.
+Here, <em>utility values</em> are the units by which suitability is measured, i.e.,
+a value ranged from 1 to 9 indicating lowest to highest suitability.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">small_blue_diamond<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Then, dataset preparation will be conducted according to</p>
+</dd>
+</dl>
+<p>the data requirements for modeling <strong>sub-objectives</strong>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">small_blue_diamond<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <strong>Analytic Hierarchy Process</strong> (AHP), a Multi-Criteria</p>
+</dd>
+</dl>
+<p>Decision Making (MCDM) algorithm, is chosen by LUCIS to merge results from the
+bottom to the top of the hierarchical structure of LUCIS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">small_blue_diamond<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Finally, after deriving the overall suitability for urban,</p>
+</dd>
+</dl>
+<p>agriculture, and conservation, the suitability values are transformed into
+<strong>preferences</strong>.`
+Each land unit will have a specific combination of the collapsed preference
+values, <em>1</em> (low), <em>2</em> (medium), and <em>3</em> (high), which are used to identify
+area of potential land-use conflicts.</p>
+</section>
+<section id="id19">
+<h3>1.2 An example of the hierarchical structure of LUCIS<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>This section presents a concrete example of LUCIS’s hierarchical structure,
+i.e., <strong>goals</strong>, <strong>objectives</strong> and <strong>sub-objectives</strong>.
+The most critical component of a land-use plan is that it must
+<span class="raw-html-m2r"><ins>accommodate the projected population growth</ins></span>.
+In this example, we will use the Chobe District and look at the
+projected population in year 2035.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/plot/ChobePop.png" alt= "pop_pro" width="800"></span></p>
+<p>&gt;</p>
+<blockquote>
+<div><p>Chobe, Botswana — statistics 2023
+<a class="reference external" href="https://zhujiworld.com/bw/515662-chobe/">https://zhujiworld.com/bw/515662-chobe/</a>
+Accessed: 2023-11-21</p>
+</div></blockquote>
+<p>We can distill a <strong>goal</strong> from this intent for <em>socioeconomic activities</em>.
+As shown in the Chobe District Population Projection by 2035 chart above, the two
+dotted lines are two scenarios representing the upper and lower
+<em>confidence interval</em> of the population projection by 2035.
+The middle solid line is the general scenario which indicates that there would
+be 26,000 people in the Chobe District by 2035.
+Therefore, the goal is to develop more residential land uses in the
+Chobe District to <em>address the housing demands</em>.</p>
+<p>The <strong>objectives</strong> and <strong>sub-objectives</strong> are specified in the following table
+and the hierarchy relationship between goal, objectives and sub-objectives is
+shown by the following diagram:</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">bulb<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Note:<span class="raw-html-m2r"><br></span></p>
+</dd>
+</dl>
+<p>The goal, objectives, and sub-objectives are denoted by the numbers in the
+hierarchy map.</p>
+</div></blockquote>
+<p>We want to develop objectives for the residential land use goal to accommodate
+the future population growth.
+Considering the physical suitability aspect, we have four <em>sub-objectives</em>.
+For the economic objective, we have five <em>sub-objectives</em>.</p>
+</section>
+</section>
+<section id="id20">
+<h2>2. Analytic Hierarchy Process<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://tinyurl.com/4bs2xxmm">Analytic Hierarchy Process</a> (AHP) is a
+structured technique for organizing and analyzing complex decisions.
+AHP is a widely applied method for Multi-Criteria Decision Making (MCDM)
+problems.
+It is based on solving an <a class="reference external" href="https://tinyurl.com/e3s5xxuy">eigenvalue equation</a>:
+<span class="raw-html-m2r"><img src="../../../img/eqn/AHP.svg" alt= "AHP equation" width="80"></span>,
+where <a href="#id22"><span class="problematic" id="id23">**</span></a><em>A</em>** is a <em>reciprocal matrix</em> formed by pairwise comparisons.</p>
+<p>Without going too far on the mathematical details of AHP, the rest of this
+section presents an example of how AHP can be used in making land-use
+decisions.
+<strong>Imagine</strong> that five stakeholders were asked about their personal opinions
+towards the three broad land-use categories.
+These stakeholders include a farmer, a property developer, a government
+official, a representative of a non-governmental organization (NGO), and a
+homeowner.
+The decision-making intends to decide the preference of three land-use types:
+<em>agricultural</em> land uses, <em>urban</em> land uses, and <em>conservational</em> land.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/dgrm/lucis_AHP_structure.svg" alt= "RowCrops_model" width="650"></span></p>
+<p>The first step of AHP is to structure the intention as a hierarchy.
+In the first level is the overall goal of land-use preferences.
+In the second level are the five stakeholders who have interests in
+land development, and the third level are the three land use types which are
+to be evaluated by each stakeholders in the second level.</p>
+<p>The second step is the elicitation of pairwise comparison judgments.
+The elements to be compared are the different land-use types
+for which one is more important in future land development according to
+each stakeholder in level 2.
+The scale to use in making the judgments is given in the following table.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_ahp_Intensityofimportance.svg" alt= "RowCrops_model" width="600"></span></p>
+<blockquote>
+<div><p>Saaty, T. L. (1990).
+<em>How to make a decision: The analytic hierarchy process</em>.
+European Journal of Operational Research, 48(1), 9-26.
+<a class="reference external" href="https://doi.org/10.1016/0377-2217(90)90057-I">https://doi.org/10.1016/0377-2217(90)90057-I</a></p>
+</div></blockquote>
+<p>Land-use types are compared on a scale from 1 (equally important) to 9
+(extremely important).
+Thus there will be five 3 X 3 matrices of judgments since there are
+five elements in level 2, and 3 land-use types to be pairwise compared
+for each element.
+Then, the pairwise values (1–9) are entered in the cells of five matrices.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">bulb<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Why judgments are given in the form of paired comparisons</strong><span class="raw-html-m2r"><br></span></p>
+</dd>
+</dl>
+<p>The most effective way to concentrate judgment is to take a pair of
+elements and compare them on a single property without concern for other
+properties or other elements.
+This is why paired comparisons in combination with the hierarchical structure
+are useful in deriving measurement.</p>
+</div></blockquote>
+<p>To understand the judgments, a brief description of each stakeholder’s
+interests are shown below:</p>
+<ol class="arabic simple">
+<li><p>The <strong>farmer</strong> wants to protect farmers’ interests in the district to have
+enough agricultural land for future development.</p></li>
+<li><p>The <strong>property developer</strong> wants to optimize developers’ interests during
+the process of developing the district that he wish urban land could
+occupy the most of area in the district.</p></li>
+<li><p>The <strong>government official</strong> wishes to develop more urban land in the future,
+whereas the straitened financial circumstances do not allow government to
+sustain too many urban infrastructure facilities.</p></li>
+<li><p>The <strong>NGO</strong>‘s representative has focused on forest conservation in this
+district for many years, and NGO wishes the conservation land could cover
+more closed forests.</p></li>
+<li><p>The <strong>homeowner</strong> wants to have more convenient transportation and better
+living condition.
+However, he also indicates that agricultural land is equally important as
+urban land since many residents are taking agricultural production for
+a living.</p></li>
+</ol>
+<p>Therefore, the five stakeholders would like to assign land-use suitability for
+each purpose as follows:</p>
+<p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_ahp_localprioritytable.svg" alt= "RowCrops_model" width="800"></span></p>
+<p>After constructing the matrices,
+<a class="reference external" href="https://github.com/SERVIR-WA/GALUP/wiki/Tools#compute-ahp-weights">Compute AHP Weights</a>
+in OPEN-LUCIS tools will be used to calculate local priorities for each matrix.</p>
+<p>The third step is to establish the global priorities of the suitable land use
+preference.
+In this case, opinions from each stakeholder are viewed as equally important.
+When arranging the elements in the second level into a matrix and comparing
+them one by one for the relative importance of the elements concerning the
+overall goal, each of the five stakeholders will receive the same priority of
+20%.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_ahp_prioritytable.svg" alt= "RowCrops_model" width="700"></span></p>
+<p>The table lays out the local priorities of land-use types with respect to
+each stakeholder in a matrix and multiply each column of vectors by
+the priority of the corresponding stakeholder and add across each row
+which results in the desired vector of land-use importance in the table.
+In this case, urban land uses are the most favorable type in this district.
+Agricultural land use was less desirable than urban land use, and Conservation
+land was the least important in the three land-use types.</p>
+<dl class="simple">
+<dt>:raw-html-m2r:<a href="#id24"><span class="problematic" id="id25">`</span></a>&lt;a href=”<a class="reference external" href="https://mediasite.video.ufl.edu/Mediasite/Play/395c68b11a7d487b9bbdd1f6b10a477a1d">https://mediasite.video.ufl.edu/Mediasite/Play/395c68b11a7d487b9bbdd1f6b10a477a1d</a>”&gt;</dt><dd><p>&lt;img src=”../../../img/timg/m4_ahp.png” alt=”ahp video” width=”800”&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;`</p>
+</section>
+<section id="id26">
+<h2>3. How the Row Crops Models fit into LUCIS<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<section id="id27">
+<h3>3.1 The structure of the row crops goal<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<p>Recall, in Module 3, we have created four models to analyze
+<strong>Suitability of Row Crops</strong> including (1) <em>landscape condition</em>,
+(2) <em>soil condition</em>, (3) <em>market proximity</em>, and
+(4) <em>transport accessibility</em>.
+These models are in fact integral components of the LUCIS’s hierarchical
+structure.
+Together, they constitute the Row Crops goal, one of the goals under the
+agricultural land uses.
+The following diagram reflects the models are organized to form the 3-tier
+hierarchy of LUCIS.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/dgrm/RowCrops_model.svg" alt= "RowCrops_model" width="400"></span></p>
+<p>The row crops <strong>goal</strong> consists of two <strong>objectives</strong>,
+(1)<em>physical suitability</em> and (2) <em>economic suitability</em>, the same as described
+before in <a class="reference external" href="#11-the-lucis-workflow">Section 1.1</a>.
+From the <strong>physical</strong> perspective, we assess suitability for row crops
+production based on the attributes (or conditions) that is native to the land.
+Thus, <a class="reference external" href="https://tinyurl.com/3tysra42">Landscape Condition</a> and
+<a class="reference external" href="https://tinyurl.com/swvpj3pv">Soil Condition</a> are under the first objective.
+From an <strong>economic</strong> stand point, we evaluate suitability for growing row crops
+based on the <em>cost-effectiveness</em> of distributing them from a given IDU.
+Therefore, we developed
+<a class="reference external" href="https://tinyurl.com/2c6prn2m">*Transport Accessibility*</a> and
+<a class="reference external" href="https://tinyurl.com/jxuptxmn">*Market Proximity*</a> models as sub-objectives of
+the second objective.</p>
+</section>
+<section id="id28">
+<h3>3.2 The bottom-up strategy to obtain the final suitability<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<p>The most intuitive approach to combine results of individual sub-objectives is
+by assigning weights.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">bulb<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Why a middle tier of objectives is needed</strong>?<span class="raw-html-m2r"><br></span></p>
+</dd>
+</dl>
+<p>In <a class="reference external" href="#11-the-lucis-workflow">Section 1.1</a>, we mentioned that the process of
+modeling sub-objective is called <em>single utility assignment</em>, or SUA.
+Modeling an objective often requires to evaluate more than a single factor.
+Therefore, correspondingly, such process is referred to as
+<strong>Multiple Utility Assignment</strong> (MUA).
+But, it is critical to make sure that a MUA maintains a <a href="#id30"><span class="problematic" id="id31">**</span></a><em>cohesive</em>**
+subject by itself, and its components are <a href="#id32"><span class="problematic" id="id33">**</span></a><em>coherent</em>** and all contribute
+to that subject.
+For example, if we don’t create a middle tier for objectives under the row
+crops goals, mixing the four sub-objectives makes little sense conceptually
+and operationally.
+In other words, it is logical to assign weights between market proximity and
+transport accessibility since they are both proximity related.
+But, it would seem wrong, like comparing an apple with an orange, to assign
+weights between soil condition and market proximity as they are measuring two
+totally different things.</p>
+</div></blockquote>
+<p>The logic explained above set the rules for how to combine from sub-objectives
+to objectives and to goals.
+In a nutshell, the process is a series of “Weighted Sum” starting from the
+bottom tier (sub-objectives) to the middle tier (objectives), and to the
+top tier (goals).
+Note that, different branch cannot be mixed.
+They can only be combined when their branches merged.
+For example, we can use the following weights to get the final suitability of
+row crops.</p>
+<ol class="arabic simple">
+<li><p>Under economic suitability, add <em>market proximity</em> and
+<em>transport accessibility</em> by using a 30% and 70% weight, respectively.</p></li>
+<li><p>Under physical suitability, add <em>soil condition</em> and <em>landscape condition</em>
+with 60% and 40% weights, respectively.</p></li>
+<li><p>Finally, after getting physical and economic suitability, the two objectives
+gets added with a 70% and 30% weight, respectively.</p></li>
+</ol>
+<p>The final suitability according to the above weights is shown below:</p>
+<p><span class="raw-html-m2r"><img src="../../../img/map/m3_aggregation_market_transBW.png" alt= "RowCrops_model" width="600"></span></p>
+</section>
+</section>
+<section id="id34">
+<h2>4. Weighting Methods for MUA<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<p>As mentioned above, the combination of multiple SUA layers is called
+<em>Multiple utility Assignment</em> (MUA).
+The MUA assignment process is often referred to as weighted overlay, which, as
+the name implies, combines layers using <em>weights</em> or <em>percentage of influence</em>.
+A couple of weighting methods are presented below.
+In the exercises, we will see how we can apply various methods to combine
+results from individual SUAs.</p>
+<section id="id35">
+<h3>4.1 Applying preference or expert knowledge<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
+<p>The naïve approach for determining weights is based on preference or expert
+knowledge.
+For example, in the objective of <em>economic suitability</em>, one may want to
+assign a higher weight to transport accessibility than market proximity since
+nowadays accessibility to transportation networks is more vital than closeness
+to the markets as most of the cultivated crops are not sold locally or even
+within the region.</p>
+<p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_weight_preference.svg" alt= "weight preference" width="380"></span><span class="raw-html-m2r"><br></span></p>
+<p><span class="raw-html-m2r"><img src="../../../img/eqn/m4_preference_eqn.svg" alt= "preference eg" width="600"></span></p>
+</section>
+<section id="id36">
+<h3>4.2 The rank sum method<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
+<p>The rank sum method is a simple method to assign weights by arranging the
+criteria (layers) in rank order where the value 1 signifies most important,
+2 next important, and so on, to the nth important criteria.
+Next, subtract each layer’s ranking from the total number of layers and add 1
+to produce the inverse rank value.
+Finally, divide each of the layer’s inverse rank value by the sum of the
+inverse rankings for all layers to produce the weight value for each layer.</p>
+<p align="center">
+   <img " src="../../../img/eqn/rank_sum.svg" alt= "rank sum eqn">
+</p><p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_weight_rank_sum.svg" alt= "rank sum tbl" width="570"></span>
+<span class="raw-html-m2r"><img src="../../../img/eqn/m4_rank_sum_eqn.svg" alt= "rank sum eg" width="600"></span></p>
+</section>
+<section id="id37">
+<h3>4.3 The rank reciprocal method<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<p>This method of developing weights requires the modeler to reciprocate
+each layer value, then divide the individual reciprocal values by the sum of
+all reciprocal values.</p>
+<p align="center">
+   <img src="../../../img/eqn/rank_reciprocal.svg" alt= "rank reciprocal eqn">
+</p><p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_weight_rank_reciprocal.svg" alt= "rank reciprocal tbl" width="650"></span><span class="raw-html-m2r"><br></span></p>
+<p><span class="raw-html-m2r"><img src="../../../img/eqn/m4_rank_reciprocal_eqn.svg" alt= "rank reciprocal eg" width="600"></span></p>
+</section>
+<section id="id38">
+<h3>4.4 The rank exponential method<a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
+<p>The rank exponential method uses essentially the same methodology as the rank
+sum method, but allows the modeler to exponentially raise the individual
+ranking values, which separates the weighted values farther apart than either
+the rank sum or rank reciprocal methods.
+Each individual ranking value is then divided by the sum of all the exponential
+values.</p>
+<p align="center">
+   <img src="../../../img/eqn/rank_exponential.svg" alt= "rank exp eqn">
+</p><p><span class="raw-html-m2r"><img src="../../../img/qgm/algtbl/m4_weight_rank_exponential.svg" alt= "rank exp tbl" width="750"></span><span class="raw-html-m2r"><br></span></p>
+<p><span class="raw-html-m2r"><img src="../../../img/eqn/m4_rank_exponential_eqn.svg" alt= "rank exp eg" width="600"></span></p>
+<p>Comparison of the three ranking methods described here indicates that the
+<em>rank sum</em> method tends to keep the criteria weightings closer together, or
+more <a href="#id39"><span class="problematic" id="id40">**</span></a><em>clustered</em><a href="#id41"><span class="problematic" id="id42">**</span></a>, than the other methods, while the <em>rank exponential</em>
+method <a href="#id43"><span class="problematic" id="id44">**</span></a><em>exaggerates the extreme</em>** criteria more than the rank sum or
+<em>rank reciprocal</em>.</p>
+<blockquote>
+<div><p>Malczewski, J. (1999).
+GIS and multicriteria decision analysis. New York: John Wiley &amp; Sons, Inc.</p>
+</div></blockquote>
+</section>
+<section id="id45">
+<h3>4.5 Weights generated by AHP<a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
+<p>As introduced before, AHP is a weighting method based on pairwise comparisons.
+Compared to other weighting methods mentioned above, AHP is more mathematically
+involved and sophisticated.
+In LUCIS, it is usually used in determining weights for different goals, which
+we will see in Exercise 2.
+Also, please note for AHP to work mathematically, there has to be at least
+<strong>3</strong> criteria participating in the pairwise comparisons.
+Such minimum number requirement stops the use of AHP in certain scenarios.
+For example, in the row crop model described in
+<a class="reference external" href="#3-how-the-row-crops-models-fit-into-lucis">Section 3</a>, AHP is not applicable
+for determining weights between the two sub-objectives under either objectives.</p>
+</section>
+</section>
+<section id="id46">
+<h2>5. Exercises and Surveys<a class="headerlink" href="#id46" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Exercise 1：Please replicate the AHP calculations discussed in
+<a class="reference external" href="#2-analytic-hierarchy-process">Section 2</a>.
+Use the <a href="#id47"><span class="problematic" id="id48">**</span></a><em>Compute AHP Weights</em>** tool to solve the five matrices.
+Please create an Excel file to store the results of each (local) priority
+vector.
+Calculate the final <a href="#id49"><span class="problematic" id="id50">**</span></a><em>priority vector</em><a href="#id51"><span class="problematic" id="id52">**</span></a>, and submit the Excel file.</p></li>
+<li><p>Please complete <a class="reference external" href="../exercises/m4_exercise2.md">exercise 2</a>.</p></li>
+<li><p>Please submit your exercises <a class="reference external" href="https://tinyurl.com/427mtu9t">here</a>.</p></li>
+<li><p>Please complete the post-training survey for your overall experiences with
+the CHOBE OPEN-LUCIS Training on Land-Use Suitability Analysis with QGIS Tools
+<a class="reference external" href="https://tinyurl.com/2m6cm4e8">here</a>.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, The GALUP Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Module 4 - Making Land-Use Decisions using the OPEN-LUCIS Framework</a><ul>
+<li><a class="reference internal" href="#id1">1. The LUCIS Philosophy</a><ul>
+<li><a class="reference internal" href="#id2">1.1 The LUCIS workflow</a></li>
+<li><a class="reference internal" href="#id19">1.2 An example of the hierarchical structure of LUCIS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">2. Analytic Hierarchy Process</a></li>
+<li><a class="reference internal" href="#id26">3. How the Row Crops Models fit into LUCIS</a><ul>
+<li><a class="reference internal" href="#id27">3.1 The structure of the row crops goal</a></li>
+<li><a class="reference internal" href="#id28">3.2 The bottom-up strategy to obtain the final suitability</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">4. Weighting Methods for MUA</a><ul>
+<li><a class="reference internal" href="#id35">4.1 Applying preference or expert knowledge</a></li>
+<li><a class="reference internal" href="#id36">4.2 The rank sum method</a></li>
+<li><a class="reference internal" href="#id37">4.3 The rank reciprocal method</a></li>
+<li><a class="reference internal" href="#id38">4.4 The rank exponential method</a></li>
+<li><a class="reference internal" href="#id45">4.5 Weights generated by AHP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">5. Exercises and Surveys</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
